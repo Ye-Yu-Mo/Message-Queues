@@ -1,0 +1,7 @@
+<map id="muduo::net::TcpConnection" name="muduo::net::TcpConnection">
+<area shape="rect" id="Node000001" title="TCP connection, for both client and server usage." alt="" coords="91,93,289,119"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,13,164,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,44,176,91,173,95,109,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="188,5,403,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="261,56,207,95,204,91,257,51"/>
+</map>

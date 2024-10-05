@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::Logger::Impl类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1_logger_1_1_impl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="classmuduo_1_1_logger_1_1_impl-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::Logger::Impl类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+muduo::Logger::Impl 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_logger_1_1_impl__coll__graph.png" border="0" usemap="#amuduo_1_1_logger_1_1_impl_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1_logger_1_1_impl_coll__map" id="amuduo_1_1_logger_1_1_impl_coll__map">
+<area shape="rect" title=" " alt="" coords="845,184,1001,209"/>
+<area shape="rect" href="classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="545,81,695,107"/>
+<area shape="poly" title=" " alt="" coords="673,109,885,181,884,186,671,114"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="252,5,387,31"/>
+<area shape="poly" title=" " alt="" coords="388,31,426,41,572,79,570,84,425,46,386,36"/>
+<area shape="rect" title=" " alt="" coords="218,55,421,95"/>
+<area shape="poly" title=" " alt="" coords="434,80,545,87,545,92,434,85"/>
+<area shape="rect" title=" " alt="" coords="213,119,425,159"/>
+<area shape="poly" title=" " alt="" coords="439,119,545,103,545,108,440,124"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html" title=" " alt="" coords="547,184,693,209"/>
+<area shape="poly" title=" " alt="" coords="707,194,845,194,845,199,707,199"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,213,164,239"/>
+<area shape="poly" title=" " alt="" coords="178,218,547,198,547,203,178,224"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html" title=" " alt="" coords="223,234,416,274"/>
+<area shape="poly" title=" " alt="" coords="178,234,223,240,222,245,178,240"/>
+<area shape="poly" title=" " alt="" coords="429,241,498,227,522,218,562,207,563,212,524,223,499,233,430,246"/>
+<area shape="rect" href="classmuduo_1_1_logger_1_1_source_file.html" title=" " alt="" coords="523,233,717,259"/>
+<area shape="poly" title=" " alt="" coords="727,229,821,214,860,207,861,212,822,219,728,234"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a315f5e830825f7fcefb019e71c5ab20a" id="r_a315f5e830825f7fcefb019e71c5ab20a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> <a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">Logger::LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a315f5e830825f7fcefb019e71c5ab20a">LogLevel</a></td></tr>
+<tr class="separator:a315f5e830825f7fcefb019e71c5ab20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:abb501b5be96619b08a405bc1a00c6460" id="r_abb501b5be96619b08a405bc1a00c6460"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#abb501b5be96619b08a405bc1a00c6460">Impl</a> (<a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">LogLevel</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">level</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">old_errno</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1_logger_1_1_source_file.html">SourceFile</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">file</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">line</a>)</td></tr>
+<tr class="separator:abb501b5be96619b08a405bc1a00c6460"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfea2e7cf3b06c7666d120cca6ea64df" id="r_adfea2e7cf3b06c7666d120cca6ea64df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#adfea2e7cf3b06c7666d120cca6ea64df">formatTime</a> ()</td></tr>
+<tr class="separator:adfea2e7cf3b06c7666d120cca6ea64df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7c10f2e9afb8b73d6aad9544360631" id="r_a4b7c10f2e9afb8b73d6aad9544360631"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a4b7c10f2e9afb8b73d6aad9544360631">finish</a> ()</td></tr>
+<tr class="separator:a4b7c10f2e9afb8b73d6aad9544360631"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a6ef9b1b5d3e9d06f78195f78dcff052a" id="r_a6ef9b1b5d3e9d06f78195f78dcff052a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a6ef9b1b5d3e9d06f78195f78dcff052a">time_</a></td></tr>
+<tr class="separator:a6ef9b1b5d3e9d06f78195f78dcff052a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa961952f12ca51660fa2e63119c26b24" id="r_aa961952f12ca51660fa2e63119c26b24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_log_stream.html">LogStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#aa961952f12ca51660fa2e63119c26b24">stream_</a></td></tr>
+<tr class="separator:aa961952f12ca51660fa2e63119c26b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42fa0d9fec22bd50a758dbf0d7d865c6" id="r_a42fa0d9fec22bd50a758dbf0d7d865c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">LogLevel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a42fa0d9fec22bd50a758dbf0d7d865c6">level_</a></td></tr>
+<tr class="separator:a42fa0d9fec22bd50a758dbf0d7d865c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604cb16febaeb3e89b946e3874a06fdf" id="r_a604cb16febaeb3e89b946e3874a06fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a604cb16febaeb3e89b946e3874a06fdf">line_</a></td></tr>
+<tr class="separator:a604cb16febaeb3e89b946e3874a06fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40671d87f71181a8733389e8954de462" id="r_a40671d87f71181a8733389e8954de462"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_logger_1_1_source_file.html">SourceFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html#a40671d87f71181a8733389e8954de462">basename_</a></td></tr>
+<tr class="separator:a40671d87f71181a8733389e8954de462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a315f5e830825f7fcefb019e71c5ab20a" name="a315f5e830825f7fcefb019e71c5ab20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315f5e830825f7fcefb019e71c5ab20a">&#9670;&#160;</a></span>LogLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> <a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">Logger::LogLevel</a> <a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">muduo::Logger::Impl::LogLevel</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="abb501b5be96619b08a405bc1a00c6460" name="abb501b5be96619b08a405bc1a00c6460"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb501b5be96619b08a405bc1a00c6460">&#9670;&#160;</a></span>Impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::Logger::Impl::Impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">LogLevel</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>old_errno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1_logger_1_1_source_file.html">SourceFile</a> &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4b7c10f2e9afb8b73d6aad9544360631" name="a4b7c10f2e9afb8b73d6aad9544360631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7c10f2e9afb8b73d6aad9544360631">&#9670;&#160;</a></span>finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::Logger::Impl::finish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adfea2e7cf3b06c7666d120cca6ea64df" name="adfea2e7cf3b06c7666d120cca6ea64df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfea2e7cf3b06c7666d120cca6ea64df">&#9670;&#160;</a></span>formatTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::Logger::Impl::formatTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a40671d87f71181a8733389e8954de462" name="a40671d87f71181a8733389e8954de462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40671d87f71181a8733389e8954de462">&#9670;&#160;</a></span>basename_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_logger_1_1_source_file.html">SourceFile</a> muduo::Logger::Impl::basename_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42fa0d9fec22bd50a758dbf0d7d865c6" name="a42fa0d9fec22bd50a758dbf0d7d865c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42fa0d9fec22bd50a758dbf0d7d865c6">&#9670;&#160;</a></span>level_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_logger.html#a564d1bf369294c437b3367ef3a2d9123">LogLevel</a> muduo::Logger::Impl::level_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a604cb16febaeb3e89b946e3874a06fdf" name="a604cb16febaeb3e89b946e3874a06fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604cb16febaeb3e89b946e3874a06fdf">&#9670;&#160;</a></span>line_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Logger::Impl::line_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa961952f12ca51660fa2e63119c26b24" name="aa961952f12ca51660fa2e63119c26b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa961952f12ca51660fa2e63119c26b24">&#9670;&#160;</a></span>stream_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_log_stream.html">LogStream</a> muduo::Logger::Impl::stream_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ef9b1b5d3e9d06f78195f78dcff052a" name="a6ef9b1b5d3e9d06f78195f78dcff052a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef9b1b5d3e9d06f78195f78dcff052a">&#9670;&#160;</a></span>time_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a> muduo::Logger::Impl::time_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_logger.html">Logger</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_logger_1_1_impl.html">Impl</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

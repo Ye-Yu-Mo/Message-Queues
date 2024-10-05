@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/Thread.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_thread_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">Thread.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_atomic_8h_source.html">muduo/base/Atomic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_count_down_latch_8h_source.html">muduo/base/CountDownLatch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_types_8h_source.html">muduo/base/Types.h</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Thread.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_thread_8h__incl.png" border="0" usemap="#athird_2muduo_2include_2muduo_2base_2_thread_8h" alt=""/></div>
+<map name="athird_2muduo_2include_2muduo_2base_2_thread_8h" id="athird_2muduo_2include_2muduo_2base_2_thread_8h">
+<area shape="rect" title=" " alt="" coords="552,5,719,45"/>
+<area shape="rect" href="_atomic_8h.html" title=" " alt="" coords="46,240,210,265"/>
+<area shape="poly" title=" " alt="" coords="552,38,445,58,388,74,333,96,278,127,226,164,150,232,146,228,223,160,275,123,331,91,386,69,444,52,551,32"/>
+<area shape="rect" href="_count_down_latch_8h.html" title=" " alt="" coords="344,93,572,119"/>
+<area shape="poly" title=" " alt="" coords="594,48,498,90,496,85,592,43"/>
+<area shape="rect" href="_types_8h.html" title=" " alt="" coords="317,387,472,412"/>
+<area shape="poly" title=" " alt="" coords="644,45,656,104,664,178,664,254,662,301,654,321,637,341,612,356,575,369,486,388,485,383,574,363,610,351,634,337,649,318,656,300,658,254,658,178,651,105,638,46"/>
+<area shape="rect" title=" " alt="" coords="539,313,623,339"/>
+<area shape="poly" title=" " alt="" coords="635,46,588,300,583,299,630,45"/>
+<area shape="rect" title=" " alt="" coords="699,93,786,119"/>
+<area shape="poly" title=" " alt="" coords="663,43,717,83,714,87,660,48"/>
+<area shape="rect" title=" " alt="" coords="810,93,888,119"/>
+<area shape="poly" title=" " alt="" coords="688,43,805,86,804,91,686,48"/>
+<area shape="rect" href="noncopyable_8h.html" title=" " alt="" coords="27,313,228,339"/>
+<area shape="poly" title=" " alt="" coords="130,266,130,300,125,300,125,266"/>
+<area shape="rect" title=" " alt="" coords="47,460,118,485"/>
+<area shape="poly" title=" " alt="" coords="83,268,46,286,30,299,17,315,10,332,8,349,18,386,39,420,62,448,58,452,35,423,14,388,3,350,5,330,12,312,26,295,43,281,81,263"/>
+<area shape="rect" href="_condition_8h.html" title=" " alt="" coords="392,167,572,192"/>
+<area shape="poly" title=" " alt="" coords="465,118,477,153,471,154,460,120"/>
+<area shape="rect" href="_mutex_8h.html" title=" " alt="" coords="303,240,462,265"/>
+<area shape="poly" title=" " alt="" coords="435,121,406,140,393,153,383,168,377,197,379,226,374,227,371,197,379,166,389,150,403,136,432,116"/>
+<area shape="poly" title=" " alt="" coords="468,194,411,234,408,230,465,190"/>
+<area shape="poly" title=" " alt="" coords="493,191,567,300,563,303,488,194"/>
+<area shape="poly" title=" " alt="" coords="342,268,182,312,181,307,341,263"/>
+<area shape="rect" href="_current_thread_8h.html" title=" " alt="" coords="304,313,514,339"/>
+<area shape="poly" title=" " alt="" coords="389,265,402,300,397,302,384,267"/>
+<area shape="rect" title=" " alt="" coords="241,460,316,485"/>
+<area shape="poly" title=" " alt="" coords="353,268,321,287,306,299,294,315,280,348,275,383,277,446,271,447,269,383,275,346,289,312,302,296,318,282,351,263"/>
+<area shape="poly" title=" " alt="" coords="415,263,536,306,535,311,413,268"/>
+<area shape="poly" title=" " alt="" coords="409,340,402,374,397,373,404,338"/>
+<area shape="poly" title=" " alt="" coords="345,415,132,463,130,458,344,409"/>
+<area shape="rect" title=" " alt="" coords="348,460,419,485"/>
+<area shape="poly" title=" " alt="" coords="395,413,390,447,385,446,390,412"/>
+<area shape="rect" title=" " alt="" coords="444,460,502,485"/>
+<area shape="poly" title=" " alt="" coords="409,410,452,449,448,453,405,414"/>
+<area shape="poly" title=" " alt="" coords="377,414,310,455,308,450,374,410"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_thread_8h__dep__incl.png" border="0" usemap="#athird_2muduo_2include_2muduo_2base_2_thread_8hdep" alt=""/></div>
+<map name="athird_2muduo_2include_2muduo_2base_2_thread_8hdep" id="athird_2muduo_2include_2muduo_2base_2_thread_8hdep">
+<area shape="rect" title=" " alt="" coords="256,5,423,45"/>
+<area shape="rect" href="_async_logging_8h.html" title=" " alt="" coords="5,93,217,133"/>
+<area shape="poly" title=" " alt="" coords="277,53,162,96,160,91,275,48"/>
+<area shape="rect" href="_thread_pool_8h.html" title=" " alt="" coords="242,93,437,133"/>
+<area shape="poly" title=" " alt="" coords="342,59,342,93,337,93,337,59"/>
+<area shape="rect" href="_event_loop_thread_8h.html" title=" " alt="" coords="461,93,687,133"/>
+<area shape="poly" title=" " alt="" coords="405,48,524,91,522,96,403,53"/>
+</map>
+</div>
+</div>
+<p><a href="_thread_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_thread.html">muduo::Thread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemuduo" id="r_namespacemuduo"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo.html">muduo</a></td></tr>
+<tr class="memdesc:namespacemuduo"><td class="mdescLeft">&#160;</td><td class="mdescRight">The most common stuffs. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_thread_8h.html">Thread.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

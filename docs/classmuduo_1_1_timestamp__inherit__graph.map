@@ -1,0 +1,9 @@
+<map id="muduo::Timestamp" name="muduo::Timestamp">
+<area shape="rect" id="Node000001" title="Time stamp in UTC, in microseconds resolution." alt="" coords="265,63,415,88"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="44,5,179,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,31,218,41,292,60,291,65,217,46,178,36"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="10,55,213,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,73,265,73,265,78,227,78"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,119,217,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,113,293,86,294,91,197,118"/>
+</map>

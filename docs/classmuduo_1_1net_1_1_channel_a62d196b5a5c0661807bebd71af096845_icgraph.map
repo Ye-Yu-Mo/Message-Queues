@@ -1,0 +1,13 @@
+<map id="muduo::net::Channel::update" name="muduo::net::Channel::update">
+<area shape="rect" id="Node000001" title=" " alt="" coords="211,133,368,173"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_channel.html#a54aca45acfa3005eddefac404e08c5ba" title=" " alt="" coords="5,5,163,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,126,211,92,161,60,138,48,140,43,164,55,214,88,257,122"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_channel.html#a124d22a8da854f7dfba5e15e81e2e659" title=" " alt="" coords="5,69,163,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,132,148,112,149,107,212,127"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_channel.html#a5f03555dac516b1eb4358dbfa985c6cc" title=" " alt="" coords="5,133,163,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,156,163,156,163,151,197,151"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_channel.html#a6cdf2ccc199108c4f8971765bd1d8b11" title=" " alt="" coords="5,197,163,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="212,180,149,200,148,195,210,175"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_channel.html#aded82c2793b72f768e47d57a9a998a55" title=" " alt="" coords="5,261,163,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="257,185,214,219,164,252,140,264,138,259,161,247,211,214,253,180"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="muduo::net::HttpServer::setHttpCallback" name="muduo::net::HttpServer::setHttpCallback">
+<area shape="rect" id="Node000001" title="Not thread safe, callback be registered before calling start()." alt="" coords="5,22,180,62"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="228,29,387,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="180,39,214,39,214,45,180,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="272,31,265,21,269,11,283,5,307,3,337,6,349,15,346,20,335,11,307,8,285,10,273,15,270,20,277,28"/>
+</map>

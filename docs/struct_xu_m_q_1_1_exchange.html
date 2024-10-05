@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::Exchange结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('struct_xu_m_q_1_1_exchange.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="struct_xu_m_q_1_1_exchange-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::Exchange结构体 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>交换机结构体对象  
+ <a href="struct_xu_m_q_1_1_exchange.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="exchange_8hpp_source.html">exchange.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a17e29f12a30254ded84236a4762dcdfa" id="r_a17e29f12a30254ded84236a4762dcdfa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">ptr</a> = std::shared_ptr&lt; <a class="el" href="struct_xu_m_q_1_1_exchange.html">Exchange</a> &gt;</td></tr>
+<tr class="memdesc:a17e29f12a30254ded84236a4762dcdfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用智能指针管理交换机对象  <br /></td></tr>
+<tr class="separator:a17e29f12a30254ded84236a4762dcdfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aebab07b329db3587039b69d95a19e4c7" id="r_aebab07b329db3587039b69d95a19e4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#aebab07b329db3587039b69d95a19e4c7">Exchange</a> ()</td></tr>
+<tr class="memdesc:aebab07b329db3587039b69d95a19e4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">无参构造  <br /></td></tr>
+<tr class="separator:aebab07b329db3587039b69d95a19e4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac19abdae484cb9d9738bda8084eb18cc" id="r_ac19abdae484cb9d9738bda8084eb18cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#ac19abdae484cb9d9738bda8084eb18cc">Exchange</a> (const std::string &amp;ename, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> etype, bool edurable, bool eauto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;eargs)</td></tr>
+<tr class="memdesc:ac19abdae484cb9d9738bda8084eb18cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机结构构造函数  <br /></td></tr>
+<tr class="separator:ac19abdae484cb9d9738bda8084eb18cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c43a2bd55d4f0ed9477314d2f517412" id="r_a0c43a2bd55d4f0ed9477314d2f517412"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a0c43a2bd55d4f0ed9477314d2f517412">setArgs</a> (const std::string &amp;str_args)</td></tr>
+<tr class="memdesc:a0c43a2bd55d4f0ed9477314d2f517412"><td class="mdescLeft">&#160;</td><td class="mdescRight">解析字符串并存储到映射成员中  <br /></td></tr>
+<tr class="separator:a0c43a2bd55d4f0ed9477314d2f517412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4592927797f070863f763a9c4486621b" id="r_a4592927797f070863f763a9c4486621b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b">getArgs</a> ()</td></tr>
+<tr class="memdesc:a4592927797f070863f763a9c4486621b"><td class="mdescLeft">&#160;</td><td class="mdescRight">将映射成员转化为字符串  <br /></td></tr>
+<tr class="separator:a4592927797f070863f763a9c4486621b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a32ff26f347b31ced61678b0346763c31" id="r_a32ff26f347b31ced61678b0346763c31"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">name</a></td></tr>
+<tr class="memdesc:a32ff26f347b31ced61678b0346763c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机名称  <br /></td></tr>
+<tr class="separator:a32ff26f347b31ced61678b0346763c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fa49a24961b8f8182a6a7bccfce9a6" id="r_a35fa49a24961b8f8182a6a7bccfce9a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">type</a></td></tr>
+<tr class="memdesc:a35fa49a24961b8f8182a6a7bccfce9a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机类型  <br /></td></tr>
+<tr class="separator:a35fa49a24961b8f8182a6a7bccfce9a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad563d5bc1cb47f97d054f8c09f4cad39" id="r_ad563d5bc1cb47f97d054f8c09f4cad39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">durable</a></td></tr>
+<tr class="memdesc:ad563d5bc1cb47f97d054f8c09f4cad39"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据持久化标志  <br /></td></tr>
+<tr class="separator:ad563d5bc1cb47f97d054f8c09f4cad39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04b28bac2d6177070e4f9f03f564131e" id="r_a04b28bac2d6177070e4f9f03f564131e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">auto_delete</a></td></tr>
+<tr class="memdesc:a04b28bac2d6177070e4f9f03f564131e"><td class="mdescLeft">&#160;</td><td class="mdescRight">自动删除标志  <br /></td></tr>
+<tr class="separator:a04b28bac2d6177070e4f9f03f564131e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58c437c1e9477f0802a6279c7c99ae0e" id="r_a58c437c1e9477f0802a6279c7c99ae0e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">args</a></td></tr>
+<tr class="memdesc:a58c437c1e9477f0802a6279c7c99ae0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">其他参数  <br /></td></tr>
+<tr class="separator:a58c437c1e9477f0802a6279c7c99ae0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>交换机结构体对象 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a17e29f12a30254ded84236a4762dcdfa" name="a17e29f12a30254ded84236a4762dcdfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e29f12a30254ded84236a4762dcdfa">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">XuMQ::Exchange::ptr</a> =  std::shared_ptr&lt;<a class="el" href="struct_xu_m_q_1_1_exchange.html">Exchange</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用智能指针管理交换机对象 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aebab07b329db3587039b69d95a19e4c7" name="aebab07b329db3587039b69d95a19e4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebab07b329db3587039b69d95a19e4c7">&#9670;&#160;</a></span>Exchange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::Exchange::Exchange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>无参构造 </p>
+
+</div>
+</div>
+<a id="ac19abdae484cb9d9738bda8084eb18cc" name="ac19abdae484cb9d9738bda8084eb18cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac19abdae484cb9d9738bda8084eb18cc">&#9670;&#160;</a></span>Exchange() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::Exchange::Exchange </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a>&#160;</td>
+          <td class="paramname"><em>etype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>edurable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>eauto_delete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>eargs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>交换机结构构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ename</td><td>交换机名称 </td></tr>
+    <tr><td class="paramname">etype</td><td>交换机类型 </td></tr>
+    <tr><td class="paramname">edurable</td><td>数据持久化标志 </td></tr>
+    <tr><td class="paramname">eauto_delete</td><td>自动删除标志 </td></tr>
+    <tr><td class="paramname">eargs</td><td>其他参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4592927797f070863f763a9c4486621b" name="a4592927797f070863f763a9c4486621b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4592927797f070863f763a9c4486621b">&#9670;&#160;</a></span>getArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::Exchange::getArgs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将映射成员转化为字符串 </p>
+<dl class="section return"><dt>返回</dt><dd>转化成的字符串 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>字符串格式为'key=value&amp;key=value...' </dd></dl>
+
+</div>
+</div>
+<a id="a0c43a2bd55d4f0ed9477314d2f517412" name="a0c43a2bd55d4f0ed9477314d2f517412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c43a2bd55d4f0ed9477314d2f517412">&#9670;&#160;</a></span>setArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Exchange::setArgs </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str_args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>解析字符串并存储到映射成员中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str_args</td><td>从数据库获取的字符串 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>args存储键值对 在数据库中会使用格式字符串进行存储 格式为'key=val&amp;key=val...' </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_xu_m_q_1_1_exchange_a0c43a2bd55d4f0ed9477314d2f517412_cgraph.png" border="0" usemap="#astruct_xu_m_q_1_1_exchange_a0c43a2bd55d4f0ed9477314d2f517412_cgraph" alt=""/></div>
+<map name="astruct_xu_m_q_1_1_exchange_a0c43a2bd55d4f0ed9477314d2f517412_cgraph" id="astruct_xu_m_q_1_1_exchange_a0c43a2bd55d4f0ed9477314d2f517412_cgraph">
+<area shape="rect" title="解析字符串并存储到映射成员中" alt="" coords="5,5,195,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1" title="将字符串分割为多个子字符串" alt="" coords="243,5,409,31"/>
+<area shape="poly" title=" " alt="" coords="195,15,229,15,229,21,195,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a58c437c1e9477f0802a6279c7c99ae0e" name="a58c437c1e9477f0802a6279c7c99ae0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c437c1e9477f0802a6279c7c99ae0e">&#9670;&#160;</a></span>args</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, std::string&gt; XuMQ::Exchange::args</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>其他参数 </p>
+
+</div>
+</div>
+<a id="a04b28bac2d6177070e4f9f03f564131e" name="a04b28bac2d6177070e4f9f03f564131e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b28bac2d6177070e4f9f03f564131e">&#9670;&#160;</a></span>auto_delete</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::Exchange::auto_delete</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自动删除标志 </p>
+
+</div>
+</div>
+<a id="ad563d5bc1cb47f97d054f8c09f4cad39" name="ad563d5bc1cb47f97d054f8c09f4cad39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad563d5bc1cb47f97d054f8c09f4cad39">&#9670;&#160;</a></span>durable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::Exchange::durable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数据持久化标志 </p>
+
+</div>
+</div>
+<a id="a32ff26f347b31ced61678b0346763c31" name="a32ff26f347b31ced61678b0346763c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ff26f347b31ced61678b0346763c31">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::Exchange::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>交换机名称 </p>
+
+</div>
+</div>
+<a id="a35fa49a24961b8f8182a6a7bccfce9a6" name="a35fa49a24961b8f8182a6a7bccfce9a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fa49a24961b8f8182a6a7bccfce9a6">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> XuMQ::Exchange::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>交换机类型 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="struct_xu_m_q_1_1_exchange.html">Exchange</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

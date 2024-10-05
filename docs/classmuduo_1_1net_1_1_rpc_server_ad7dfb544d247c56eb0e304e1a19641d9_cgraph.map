@@ -1,0 +1,5 @@
+<map id="muduo::net::RpcServer::setThreadNum" name="muduo::net::RpcServer::setThreadNum">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,176,45"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_tcp_server.html#a4499545af1192a2dcb2918d25f9468b3" title="Set the number of threads for handling input." alt="" coords="224,5,391,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,23,210,23,210,28,177,28"/>
+</map>

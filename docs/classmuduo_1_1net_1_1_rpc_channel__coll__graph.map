@@ -1,0 +1,16 @@
+<map id="muduo::net::RpcChannel" name="muduo::net::RpcChannel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1040,57,1221,83"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="729,5,942,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="922,30,1058,55,1058,60,921,36"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_protobuf_codec_lite_t.html" title=" " alt="" coords="728,118,943,158"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="955,114,1015,101,1088,80,1090,85,1017,106,956,119"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_protobuf_codec_lite.html" title=" " alt="" coords="245,125,468,151"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="482,135,728,135,728,141,482,141"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,67,164,92"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="158,92,298,123,296,128,157,98"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1detail_1_1_atomic_integer_t.html" title=" " alt="" coords="492,50,704,90"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="178,75,492,69,492,75,178,80"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="55,125,114,151"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="128,135,245,135,245,141,128,141"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="718,67,1040,67,1040,73,718,73"/>
+</map>

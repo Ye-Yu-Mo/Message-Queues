@@ -1,0 +1,6 @@
+<map id="muduo::addTime" name="muduo::addTime">
+<area shape="rect" id="Node000001" title="Add seconds to given timestamp." alt="" coords="5,29,137,55"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="185,29,344,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,39,172,39,172,45,138,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="233,31,226,21,230,11,243,5,265,3,291,6,302,15,299,19,289,11,265,8,244,10,234,15,231,20,237,28"/>
+</map>

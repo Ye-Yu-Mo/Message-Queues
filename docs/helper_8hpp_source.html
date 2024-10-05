@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: common/helper.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('helper_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">helper.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="helper_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;sqlite3.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;cerrno&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="logger_8hpp.html">logger.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_xu_m_q.html">   43</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html">   57</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">   72</a></span>        <span class="keyword">typedef</span> int (*<a class="code hl_typedef" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">SqliteCallback</a>)(<span class="keywordtype">void</span> *, int, <span class="keywordtype">char</span> **, <span class="keywordtype">char</span> **);</div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#a3c136f5fdf09c586ca1c021b249d819a">   79</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a3c136f5fdf09c586ca1c021b249d819a">SqliteHelper</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">_dbfile</a>(dbfile), <a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>(nullptr)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">   90</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">open</a>(<span class="keywordtype">int</span> safe_level = SQLITE_OPEN_FULLMUTEX)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordtype">int</span> ret = sqlite3_open_v2(<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">_dbfile</a>.c_str(), &amp;<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE | safe_level, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">if</span> (ret != SQLITE_OK)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;打开SQLite数据库失败: %s&quot;</span>, sqlite3_errmsg(<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">  109</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(<span class="keyword">const</span> std::string &amp;sql, <a class="code hl_typedef" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">SqliteCallback</a> cb, <span class="keywordtype">void</span> *arg)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordtype">int</span> ret = sqlite3_exec(<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>, sql.c_str(), cb, arg, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span> (ret != SQLITE_OK)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s--执行语句失败: %s&quot;</span>, sql.c_str(), sqlite3_errmsg(<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>));</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8">  124</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8">close</a>()</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            sqlite3_close_v2(<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">  130</a></span>        std::string <a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">_dbfile</a>; </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">  131</a></span>        sqlite3 *<a class="code hl_variable" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a>;   </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    };</div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="};">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_str_helper.html">  140</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_str_helper.html">StrHelper</a></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">  152</a></span>        <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">split</a>(<span class="keyword">const</span> std::string &amp;str, <span class="keyword">const</span> std::string &amp;sep, std::vector&lt;std::string&gt; &amp;result)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="comment">// 从0位置查找指定字符的位置</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="comment">// 从上次查找的位置向后继续查找指定位置</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordtype">size_t</span> pos, idx = 0;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <span class="keywordflow">while</span> (idx &lt; str.size())</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                pos = str.find(sep, idx);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keywordflow">if</span> (pos == std::string::npos) <span class="comment">// 没找到</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    result.push_back(str.substr(idx));</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <span class="keywordflow">return</span> result.size();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                <span class="keywordflow">if</span> (pos == idx) <span class="comment">// 位置相同则数据无效</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    idx += sep.size();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                result.push_back(str.substr(idx, pos - idx));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                idx = pos + sep.size();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">return</span> result.size();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="};">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_u_u_i_d_helper.html">  183</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_u_u_i_d_helper.html">UUIDHelper</a></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6">  194</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6">uuid</a>()</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            std::random_device rd;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            std::mt19937_64 generator(rd());                         <span class="comment">// 生成机器随机数作为种子 使用梅森旋转算法生成伪随机数</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            std::uniform_int_distribution&lt;int&gt; distribution(0, 255); <span class="comment">// 范围取到0~255</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            std::stringstream ss;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 8; i++)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                ss &lt;&lt; std::setw(2) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::hex &lt;&lt; distribution(generator); <span class="comment">// 转为16进制字符串 不满两位自动补0</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordflow">if</span> (i == 3 || i == 5 || i == 7)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                    ss &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keyword">static</span> std::atomic&lt;size_t&gt; seq(1); <span class="comment">// 定义原子类型整数</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="keywordtype">size_t</span> num = seq.fetch_add(1);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 7; i &gt;= 0; i--)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                ss &lt;&lt; std::setw(2) &lt;&lt; std::setfill(<span class="charliteral">&#39;0&#39;</span>) &lt;&lt; std::hex &lt;&lt; ((num &gt;&gt; i * 8) &amp; 0xff);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                <span class="keywordflow">if</span> (i == 6)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    ss &lt;&lt; <span class="charliteral">&#39;-&#39;</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">return</span> ss.str();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        }</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00225" data-start="{" data-end="};">
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html">  225</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_file_helper.html">FileHelper</a></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#afa79ac5f3cd0ad29a79f24e03c907f91">  234</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#afa79ac5f3cd0ad29a79f24e03c907f91">FileHelper</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>(filename)</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        {</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00244" data-start="{" data-end="}">
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e">  244</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e">exists</a>()</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            <span class="keyword">struct </span>stat st;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">return</span> (stat(<a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str(), &amp;st) == 0);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102">  255</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102">size</a>()</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keyword">struct </span>stat st;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <span class="keywordtype">int</span> ret = stat(<a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str(), &amp;st);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">if</span> (ret &lt; 0)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordflow">return</span> st.st_size;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00270" data-start="{" data-end="}">
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f">  270</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f">read</a>(std::string &amp;body)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keywordtype">size_t</span> fsize = <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102">size</a>();</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            body.resize(fsize);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f">read</a>(&amp;body[0], 0, fsize);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00285" data-start="{" data-end="}">
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#aa28a60ed49d638c6bd0b3944b934e329">  285</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#aa28a60ed49d638c6bd0b3944b934e329">read</a>(<span class="keywordtype">char</span> *body, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="comment">// 打开文件</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            std::ifstream ifs(<a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>, std::ios::binary | std::ios::in); <span class="comment">// 二进制形式打开</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">if</span> (ifs.is_open() == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s:文件打开失败!&quot;</span>, <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str());</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="comment">// 跳转文件读写位置</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>            ifs.seekg(offset, std::ios::beg);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            <span class="comment">// 读取文件数据</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            ifs.read(body, len);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">if</span> (ifs.good() == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s:文件读取数据失败!&quot;</span>, <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str());</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                ifs.close();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="comment">// 关闭文件</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            ifs.close();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00315" data-start="{" data-end="}">
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a">  315</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a">write</a>(<span class="keyword">const</span> std::string &amp;body)</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a">write</a>(body.c_str(), 0, body.size());</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00328" data-start="{" data-end="}">
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#ac7c94fa35d8403064bb43511759abc0e">  328</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#ac7c94fa35d8403064bb43511759abc0e">write</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *body, <span class="keywordtype">size_t</span> offset, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            <span class="comment">// 打开文件</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            std::fstream fs(<a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>, std::ios::binary | std::ios::in | std::ios::out); <span class="comment">// 二进制形式打开</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordflow">if</span> (fs.is_open() == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s:文件打开失败!&quot;</span>, <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str());</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="comment">// 跳转文件指定位置</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            fs.seekp(offset, std::ios::beg);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <span class="comment">// 写入数据</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            fs.write(body, len);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">if</span> (fs.good() == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s:文件读取数据失败!&quot;</span>, <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str());</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                fs.close();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>            }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            <span class="comment">// 关闭文件</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00357" data-start="{" data-end="}">
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">  357</a></span>        <span class="keyword">static</span> std::string <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">parentDirectory</a>(<span class="keyword">const</span> std::string &amp;filename)</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            <span class="keywordtype">size_t</span> pos = filename.find_last_of(<span class="stringliteral">&quot;/\\&quot;</span>);</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            <span class="keywordflow">if</span> (pos == std::string::npos)</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            {</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>                <span class="keywordflow">return</span> <span class="stringliteral">&quot;.&quot;</span>;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            }</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            std::string path = filename.substr(0, pos);</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">return</span> path;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00374" data-start="{" data-end="}">
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1">  374</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1">rename</a>(<span class="keyword">const</span> std::string &amp;nname)</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        {</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">return</span> (<a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1">::rename</a>(<a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>.c_str(), nname.c_str()) == 0);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00385" data-start="{" data-end="}">
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3">  385</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3">createFile</a>(<span class="keyword">const</span> std::string filename)</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        {</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>            std::fstream ofs(filename, std::ios::binary | std::ios::out);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>            <span class="keywordflow">if</span> (ofs.is_open() == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            {</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;%s:文件创建失败!&quot;</span>, filename.c_str());</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>            }</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>            ofs.close();</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00403" data-start="{" data-end="}">
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a">  403</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a">removeFile</a>(<span class="keyword">const</span> std::string filename)</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        {</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            <span class="keywordflow">return</span> (::remove(filename.c_str()) == 0);</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00414" data-start="{" data-end="}">
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">  414</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">createDirectory</a>(<span class="keyword">const</span> std::string &amp;pathname)</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordtype">size_t</span> pos = 0, idx = 0; <span class="comment">// pos表示&#39;/&#39;的位置，idx表示起始位置</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            <span class="keywordflow">while</span> (idx &lt; pathname.size())</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            {</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>                pos = pathname.find_first_of(<span class="stringliteral">&quot;/\\&quot;</span>, idx); <span class="comment">// 找第一个&#39;/&#39;</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>                <span class="keywordflow">if</span> (pos == std::string::npos)             <span class="comment">// 如果没有任何目录，直接创建</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>                {</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>                    <span class="keywordflow">return</span> (mkdir(pathname.c_str(), 0775) == 0);</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>                }</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>                std::string parent_dir = pathname.substr(0, pos + 1); <span class="comment">// 找到父级目录</span></div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="class_xu_m_q_1_1_file_helper.html">FileHelper</a>(parent_dir).<a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e">exists</a>() == <span class="keyword">true</span>)          <span class="comment">// 如果存在则直接找下一个</span></div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                {</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                    idx = pos + 1;</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                }</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                mkdir(parent_dir.c_str(), 0775);</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                idx = pos + 1;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            }</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00442" data-start="{" data-end="}">
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a1614d194b00ddd4449a82016c00ce4b3">  442</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a1614d194b00ddd4449a82016c00ce4b3">removeDirectory</a>(<span class="keyword">const</span> std::string &amp;pathname)</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        {</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span> </div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>            std::string cmd = <span class="stringliteral">&quot;rmdir /s /q \&quot;&quot;</span> + pathname + <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>            std::string cmd = <span class="stringliteral">&quot;rm -rf &quot;</span> + pathname;</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>            <span class="keywordflow">return</span> (system(cmd.c_str()) != -1);</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        }</div>
+</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">  454</a></span>        std::string <a class="code hl_variable" href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">_filename</a>; </div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    };</div>
+</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>}</div>
+</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html">XuMQ::FileHelper</a></div><div class="ttdoc">文件操作帮助类</div><div class="ttdef"><b>Definition</b> helper.hpp:226</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a0f802521391b758249b06df7b569368a"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a">XuMQ::FileHelper::removeFile</a></div><div class="ttdeci">static bool removeFile(const std::string filename)</div><div class="ttdoc">删除文件</div><div class="ttdef"><b>Definition</b> helper.hpp:403</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a1614d194b00ddd4449a82016c00ce4b3"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a1614d194b00ddd4449a82016c00ce4b3">XuMQ::FileHelper::removeDirectory</a></div><div class="ttdeci">static bool removeDirectory(const std::string &amp;pathname)</div><div class="ttdoc">删除目录</div><div class="ttdef"><b>Definition</b> helper.hpp:442</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a1f0e0ceaeebfd7cfe6c173912bd6463c"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a1f0e0ceaeebfd7cfe6c173912bd6463c">XuMQ::FileHelper::_filename</a></div><div class="ttdeci">std::string _filename</div><div class="ttdoc">操作的文件名</div><div class="ttdef"><b>Definition</b> helper.hpp:454</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a22fd9192e7f58d40e0188a4f619b9bad"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">XuMQ::FileHelper::createDirectory</a></div><div class="ttdeci">static bool createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录</div><div class="ttdef"><b>Definition</b> helper.hpp:414</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a28643d0c0fa7088e7afa86f4f048b2f9"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">XuMQ::FileHelper::parentDirectory</a></div><div class="ttdeci">static std::string parentDirectory(const std::string &amp;filename)</div><div class="ttdoc">获取文件的父目录</div><div class="ttdef"><b>Definition</b> helper.hpp:357</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a4b0f0646d1cfaf32c0973582db595cf3"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3">XuMQ::FileHelper::createFile</a></div><div class="ttdeci">static bool createFile(const std::string filename)</div><div class="ttdoc">创建新文件</div><div class="ttdef"><b>Definition</b> helper.hpp:385</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a69d92b4cd80a4ce7544faafebd1d42c1"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1">XuMQ::FileHelper::rename</a></div><div class="ttdeci">bool rename(const std::string &amp;nname)</div><div class="ttdoc">重命名文件</div><div class="ttdef"><b>Definition</b> helper.hpp:374</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a7ac4e13733fde87e0aaf31039bf61102"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102">XuMQ::FileHelper::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdoc">获取文件大小</div><div class="ttdef"><b>Definition</b> helper.hpp:255</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a9a1942e32bcf93fa90ada07371331b1e"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e">XuMQ::FileHelper::exists</a></div><div class="ttdeci">bool exists()</div><div class="ttdoc">检查文件是否存在</div><div class="ttdef"><b>Definition</b> helper.hpp:244</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_aa28a60ed49d638c6bd0b3944b934e329"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#aa28a60ed49d638c6bd0b3944b934e329">XuMQ::FileHelper::read</a></div><div class="ttdeci">bool read(char *body, size_t offset, size_t len)</div><div class="ttdoc">从指定位置读取文件内容</div><div class="ttdef"><b>Definition</b> helper.hpp:285</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_abade7c0c4c34cbc93fc19aa55aa1be7a"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a">XuMQ::FileHelper::write</a></div><div class="ttdeci">bool write(const std::string &amp;body)</div><div class="ttdoc">写入字符串到文件</div><div class="ttdef"><b>Definition</b> helper.hpp:315</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_ac7c94fa35d8403064bb43511759abc0e"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#ac7c94fa35d8403064bb43511759abc0e">XuMQ::FileHelper::write</a></div><div class="ttdeci">bool write(const char *body, size_t offset, size_t len)</div><div class="ttdoc">从指定位置写入数据到文件</div><div class="ttdef"><b>Definition</b> helper.hpp:328</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_ad971857da8011569e70450927174b15f"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f">XuMQ::FileHelper::read</a></div><div class="ttdeci">bool read(std::string &amp;body)</div><div class="ttdoc">读取文件内容</div><div class="ttdef"><b>Definition</b> helper.hpp:270</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_afa79ac5f3cd0ad29a79f24e03c907f91"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#afa79ac5f3cd0ad29a79f24e03c907f91">XuMQ::FileHelper::FileHelper</a></div><div class="ttdeci">FileHelper(const std::string &amp;filename)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> helper.hpp:234</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html">XuMQ::SqliteHelper</a></div><div class="ttdoc">SQLite 数据库操作助手类</div><div class="ttdef"><b>Definition</b> helper.hpp:58</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a35e6fce01c14c6e9ec8a550e736d236a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">XuMQ::SqliteHelper::_handler</a></div><div class="ttdeci">sqlite3 * _handler</div><div class="ttdoc">SQLite 数据库句柄</div><div class="ttdef"><b>Definition</b> helper.hpp:131</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a3c136f5fdf09c586ca1c021b249d819a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a3c136f5fdf09c586ca1c021b249d819a">XuMQ::SqliteHelper::SqliteHelper</a></div><div class="ttdeci">SqliteHelper(const std::string &amp;dbfile)</div><div class="ttdoc">SqliteHelper 构造函数</div><div class="ttdef"><b>Definition</b> helper.hpp:79</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a9228afe2e214e707afdf56640d7bc76a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">XuMQ::SqliteHelper::exec</a></div><div class="ttdeci">bool exec(const std::string &amp;sql, SqliteCallback cb, void *arg)</div><div class="ttdoc">执行 SQL 语句</div><div class="ttdef"><b>Definition</b> helper.hpp:109</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a9e34e9525a504b7b47ca6c31b68b8b86"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">XuMQ::SqliteHelper::_dbfile</a></div><div class="ttdeci">std::string _dbfile</div><div class="ttdoc">数据库文件路径</div><div class="ttdef"><b>Definition</b> helper.hpp:130</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ac8e660e745afaafc72b82937ae81c1e8"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8">XuMQ::SqliteHelper::close</a></div><div class="ttdeci">void close()</div><div class="ttdoc">关闭数据库</div><div class="ttdef"><b>Definition</b> helper.hpp:124</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ad9b30fb069cfdb091fa01bc7649a55f3"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">XuMQ::SqliteHelper::SqliteCallback</a></div><div class="ttdeci">int(* SqliteCallback)(void *, int, char **, char **)</div><div class="ttdoc">SQLite 回调函数类型</div><div class="ttdef"><b>Definition</b> helper.hpp:72</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ae30429cd2d883fe24a616a65a547783b"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">XuMQ::SqliteHelper::open</a></div><div class="ttdeci">bool open(int safe_level=SQLITE_OPEN_FULLMUTEX)</div><div class="ttdoc">打开数据库</div><div class="ttdef"><b>Definition</b> helper.hpp:90</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_str_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_str_helper.html">XuMQ::StrHelper</a></div><div class="ttdoc">字符串处理助手类</div><div class="ttdef"><b>Definition</b> helper.hpp:141</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_str_helper_html_a09130ed2c6b196410499a6184c9a36e1"><div class="ttname"><a href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">XuMQ::StrHelper::split</a></div><div class="ttdeci">static size_t split(const std::string &amp;str, const std::string &amp;sep, std::vector&lt; std::string &gt; &amp;result)</div><div class="ttdoc">将字符串分割为多个子字符串</div><div class="ttdef"><b>Definition</b> helper.hpp:152</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_u_u_i_d_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_u_u_i_d_helper.html">XuMQ::UUIDHelper</a></div><div class="ttdoc">提供生成 UUID 的工具类。</div><div class="ttdef"><b>Definition</b> helper.hpp:184</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_u_u_i_d_helper_html_a3a2f276cefd117e432757ac0943ccab6"><div class="ttname"><a href="class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6">XuMQ::UUIDHelper::uuid</a></div><div class="ttdeci">static std::string uuid()</div><div class="ttdoc">生成一个随机 UUID。</div><div class="ttdef"><b>Definition</b> helper.hpp:194</div></div>
+<div class="ttc" id="alogger_8hpp_html"><div class="ttname"><a href="logger_8hpp.html">logger.hpp</a></div><div class="ttdoc">异步日志器初始化</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> helper.hpp:44</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="helper_8hpp.html">helper.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

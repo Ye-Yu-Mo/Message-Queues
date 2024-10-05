@@ -1,0 +1,20 @@
+<map id="muduo::Logger::Impl" name="muduo::Logger::Impl">
+<area shape="rect" id="Node000001" title=" " alt="" coords="845,184,1001,209"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="545,81,695,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="673,109,885,181,884,186,671,114"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="252,5,387,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="388,31,426,41,572,79,570,84,425,46,386,36"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="218,55,421,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="434,80,545,87,545,92,434,85"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="213,119,425,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="439,119,545,103,545,108,440,124"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1_log_stream.html" title=" " alt="" coords="547,184,693,209"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="707,194,845,194,845,199,707,199"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,213,164,239"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="178,218,547,198,547,203,178,224"/>
+<area shape="rect" id="Node000008" href="$classmuduo_1_1detail_1_1_fixed_buffer.html" title=" " alt="" coords="223,234,416,274"/>
+<area shape="poly" id="edge8_Node000008_Node000007" title=" " alt="" coords="178,234,223,240,222,245,178,240"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="429,241,498,227,522,218,562,207,563,212,524,223,499,233,430,246"/>
+<area shape="rect" id="Node000009" href="$classmuduo_1_1_logger_1_1_source_file.html" title=" " alt="" coords="523,233,717,259"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="727,229,821,214,860,207,861,212,822,219,728,234"/>
+</map>

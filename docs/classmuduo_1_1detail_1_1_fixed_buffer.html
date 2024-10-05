@@ -1,0 +1,977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::detail::FixedBuffer&lt; SIZE &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1detail_1_1_fixed_buffer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmuduo_1_1detail_1_1_fixed_buffer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::detail::FixedBuffer&lt; SIZE &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_log_stream_8h_source.html">LogStream.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::detail::FixedBuffer&lt; SIZE &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer__inherit__graph.png" border="0" usemap="#amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_inherit__map" id="amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,199,119"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="23,5,181,31"/>
+<area shape="poly" title=" " alt="" coords="105,44,105,79,99,79,99,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::detail::FixedBuffer&lt; SIZE &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer__coll__graph.png" border="0" usemap="#amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_coll__map" id="amuduo_1_1detail_1_1_fixed_buffer_3_01_s_i_z_e_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,79,199,119"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="23,5,181,31"/>
+<area shape="poly" title=" " alt="" coords="105,44,105,79,99,79,99,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5f8869de3355a16a6878c681fba57095" id="r_a5f8869de3355a16a6878c681fba57095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095">FixedBuffer</a> ()</td></tr>
+<tr class="separator:a5f8869de3355a16a6878c681fba57095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660d05de16c2019ec142a8ae7907e7ad" id="r_a660d05de16c2019ec142a8ae7907e7ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad">~FixedBuffer</a> ()</td></tr>
+<tr class="separator:a660d05de16c2019ec142a8ae7907e7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99a9a72c8e0d4a205634bd84699200a" id="r_ad99a9a72c8e0d4a205634bd84699200a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:ad99a9a72c8e0d4a205634bd84699200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4544a9fef0572f635169a2f7461359" id="r_aee4544a9fef0572f635169a2f7461359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aee4544a9fef0572f635169a2f7461359">data</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:aee4544a9fef0572f635169a2f7461359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af564cacb3550d9b1eeebca488a5cff59" id="r_af564cacb3550d9b1eeebca488a5cff59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">length</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:af564cacb3550d9b1eeebca488a5cff59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac05dce903a81988b7cc36b0747edae74" id="r_ac05dce903a81988b7cc36b0747edae74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ac05dce903a81988b7cc36b0747edae74">current</a> ()</td></tr>
+<tr class="separator:ac05dce903a81988b7cc36b0747edae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05324c53f272297abb7ce70c0c6f6be3" id="r_a05324c53f272297abb7ce70c0c6f6be3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3">avail</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a05324c53f272297abb7ce70c0c6f6be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a32db228abb439db70e82433b6e73c" id="r_af2a32db228abb439db70e82433b6e73c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af2a32db228abb439db70e82433b6e73c">add</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:af2a32db228abb439db70e82433b6e73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b15cde6a9fd32e95c9f7ca780dd614" id="r_a73b15cde6a9fd32e95c9f7ca780dd614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a73b15cde6a9fd32e95c9f7ca780dd614">reset</a> ()</td></tr>
+<tr class="separator:a73b15cde6a9fd32e95c9f7ca780dd614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f0ebee9b060a71d3cc49be59145906" id="r_a21f0ebee9b060a71d3cc49be59145906"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a21f0ebee9b060a71d3cc49be59145906">bzero</a> ()</td></tr>
+<tr class="separator:a21f0ebee9b060a71d3cc49be59145906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042e5ea985c317cf568bbc9aaf53da62" id="r_a042e5ea985c317cf568bbc9aaf53da62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a042e5ea985c317cf568bbc9aaf53da62">debugString</a> ()</td></tr>
+<tr class="separator:a042e5ea985c317cf568bbc9aaf53da62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59b7853e11e7c8833cced09e87b42e0c" id="r_a59b7853e11e7c8833cced09e87b42e0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">setCookie</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(*<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">cookie</a>)())</td></tr>
+<tr class="separator:a59b7853e11e7c8833cced09e87b42e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacc230228370d4c6000d97ed5b83140" id="r_aaacc230228370d4c6000d97ed5b83140"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aaacc230228370d4c6000d97ed5b83140">toString</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:aaacc230228370d4c6000d97ed5b83140"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa8116c1c73f05530b10a799d2fa4b5" id="r_a7aa8116c1c73f05530b10a799d2fa4b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a7aa8116c1c73f05530b10a799d2fa4b5">toStringPiece</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a7aa8116c1c73f05530b10a799d2fa4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a4b8c605465f7baf2933f716a104ec74b" id="r_a4b8c605465f7baf2933f716a104ec74b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b">end</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a4b8c605465f7baf2933f716a104ec74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmuduo_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmuduo_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></td></tr>
+<tr class="memitem:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae1b6f048685091082c44d8be220239ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae1b6f048685091082c44d8be220239ac">noncopyable</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable" id="r_aaeb67fffc76d7ea9227b8cf8ca8fae0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#aaeb67fffc76d7ea9227b8cf8ca8fae0a">operator=</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae0ca7ea7b61e7ef8b82582063c09b901"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae0ca7ea7b61e7ef8b82582063c09b901">noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ac12e02f31699cca2d17ba01d35648ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ac12e02f31699cca2d17ba01d35648ff5">~noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a213e7856719f1538e551247ce99814e5" id="r_a213e7856719f1538e551247ce99814e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5">cookieStart</a> ()</td></tr>
+<tr class="separator:a213e7856719f1538e551247ce99814e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2261d7cad23ff6764bf51c398c8c5141" id="r_a2261d7cad23ff6764bf51c398c8c5141"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141">cookieEnd</a> ()</td></tr>
+<tr class="separator:a2261d7cad23ff6764bf51c398c8c5141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a728075cbe4b4eec9bb604e07e397ccaa" id="r_a728075cbe4b4eec9bb604e07e397ccaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a728075cbe4b4eec9bb604e07e397ccaa">cookie_</a> )()</td></tr>
+<tr class="separator:a728075cbe4b4eec9bb604e07e397ccaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d61720725e5f2168ca22f3c375e6e64" id="r_a8d61720725e5f2168ca22f3c375e6e64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a> [<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a>]</td></tr>
+<tr class="separator:a8d61720725e5f2168ca22f3c375e6e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf2c406cdd967599fca5520703a36f3" id="r_a9bf2c406cdd967599fca5520703a36f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a></td></tr>
+<tr class="separator:a9bf2c406cdd967599fca5520703a36f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a5f8869de3355a16a6878c681fba57095" name="a5f8869de3355a16a6878c681fba57095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8869de3355a16a6878c681fba57095">&#9670;&#160;</a></span>FixedBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::FixedBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a5f8869de3355a16a6878c681fba57095_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a5f8869de3355a16a6878c681fba57095_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a5f8869de3355a16a6878c681fba57095_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a5f8869de3355a16a6878c681fba57095_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,199,77"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5" title=" " alt="" coords="247,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="198,42,233,37,233,43,199,47"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c" title=" " alt="" coords="247,69,440,109"/>
+<area shape="poly" title=" " alt="" coords="199,67,233,72,233,77,198,73"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="488,77,647,102"/>
+<area shape="poly" title=" " alt="" coords="440,87,474,87,474,92,440,92"/>
+<area shape="poly" title=" " alt="" coords="531,78,523,68,527,58,542,52,567,50,599,54,611,63,608,67,597,59,567,55,543,57,531,62,528,68,535,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a660d05de16c2019ec142a8ae7907e7ad" name="a660d05de16c2019ec142a8ae7907e7ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660d05de16c2019ec142a8ae7907e7ad">&#9670;&#160;</a></span>~FixedBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::~<a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">FixedBuffer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a660d05de16c2019ec142a8ae7907e7ad_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a660d05de16c2019ec142a8ae7907e7ad_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a660d05de16c2019ec142a8ae7907e7ad_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a660d05de16c2019ec142a8ae7907e7ad_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,199,77"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141" title=" " alt="" coords="247,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="198,42,233,37,233,43,199,47"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c" title=" " alt="" coords="247,69,440,109"/>
+<area shape="poly" title=" " alt="" coords="199,67,233,72,233,77,198,73"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="488,77,647,102"/>
+<area shape="poly" title=" " alt="" coords="440,87,474,87,474,92,440,92"/>
+<area shape="poly" title=" " alt="" coords="531,78,523,68,527,58,542,52,567,50,599,54,611,63,608,67,597,59,567,55,543,57,531,62,528,68,535,75"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="af2a32db228abb439db70e82433b6e73c" name="af2a32db228abb439db70e82433b6e73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a32db228abb439db70e82433b6e73c">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a>&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_af2a32db228abb439db70e82433b6e73c_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_af2a32db228abb439db70e82433b6e73c_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_af2a32db228abb439db70e82433b6e73c_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_af2a32db228abb439db70e82433b6e73c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,231,55"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="279,29,437,55"/>
+<area shape="poly" title=" " alt="" coords="231,39,265,39,265,45,231,45"/>
+<area shape="poly" title=" " alt="" coords="319,31,311,21,315,11,331,5,358,3,392,7,405,16,401,20,390,11,358,8,332,10,319,15,316,20,323,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad99a9a72c8e0d4a205634bd84699200a" name="ad99a9a72c8e0d4a205634bd84699200a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad99a9a72c8e0d4a205634bd84699200a">&#9670;&#160;</a></span>append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,47,199,87"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3" title=" " alt="" coords="247,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="198,48,233,42,233,47,199,53"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="264,94,423,119"/>
+<area shape="poly" title=" " alt="" coords="199,80,253,89,252,94,198,85"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b" title=" " alt="" coords="488,13,713,38"/>
+<area shape="poly" title=" " alt="" coords="440,23,474,23,474,28,440,28"/>
+<area shape="poly" title=" " alt="" coords="304,96,296,86,300,76,316,70,343,67,377,71,390,81,387,85,375,76,343,73,318,75,304,80,301,85,308,92"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_ad99a9a72c8e0d4a205634bd84699200a_icgraph">
+<area shape="rect" title=" " alt="" coords="484,122,677,162"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06" title=" " alt="" coords="220,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="545,115,495,78,435,44,402,33,404,28,437,40,498,74,548,111"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977" title=" " alt="" coords="205,55,436,80"/>
+<area shape="poly" title=" " alt="" coords="514,120,435,94,389,83,391,77,437,89,516,115"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee" title=" " alt="" coords="205,104,436,129"/>
+<area shape="poly" title=" " alt="" coords="470,134,436,131,436,125,471,129"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3" title=" " alt="" coords="205,153,436,179"/>
+<area shape="poly" title=" " alt="" coords="471,155,436,158,436,153,470,149"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155" title=" " alt="" coords="205,203,436,228"/>
+<area shape="poly" title=" " alt="" coords="512,169,437,193,386,205,384,200,435,187,510,164"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f" title=" " alt="" coords="205,252,436,277"/>
+<area shape="poly" title=" " alt="" coords="547,173,497,209,437,242,399,255,397,249,435,237,494,205,543,169"/>
+<area shape="rect" href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d" title=" " alt="" coords="5,5,157,31"/>
+<area shape="poly" title=" " alt="" coords="206,21,158,21,158,15,206,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05324c53f272297abb7ce70c0c6f6be3" name="a05324c53f272297abb7ce70c0c6f6be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05324c53f272297abb7ce70c0c6f6be3">&#9670;&#160;</a></span>avail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::avail </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,199,45"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b" title=" " alt="" coords="247,13,472,38"/>
+<area shape="poly" title=" " alt="" coords="199,23,233,23,233,28,199,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a05324c53f272297abb7ce70c0c6f6be3_icgraph">
+<area shape="rect" title=" " alt="" coords="725,122,919,162"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a" title=" " alt="" coords="484,122,677,162"/>
+<area shape="poly" title=" " alt="" coords="712,145,678,145,678,139,712,139"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06" title=" " alt="" coords="220,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="545,115,495,78,435,44,402,33,404,28,437,40,498,74,548,111"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977" title=" " alt="" coords="205,55,436,80"/>
+<area shape="poly" title=" " alt="" coords="514,120,435,94,389,83,391,77,437,89,516,115"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee" title=" " alt="" coords="205,104,436,129"/>
+<area shape="poly" title=" " alt="" coords="470,134,436,131,436,125,471,129"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3" title=" " alt="" coords="205,153,436,179"/>
+<area shape="poly" title=" " alt="" coords="471,155,436,158,436,153,470,149"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155" title=" " alt="" coords="205,203,436,228"/>
+<area shape="poly" title=" " alt="" coords="512,169,437,193,386,205,384,200,435,187,510,164"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f" title=" " alt="" coords="205,252,436,277"/>
+<area shape="poly" title=" " alt="" coords="547,173,497,209,437,242,399,255,397,249,435,237,494,205,543,169"/>
+<area shape="rect" href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d" title=" " alt="" coords="5,5,157,31"/>
+<area shape="poly" title=" " alt="" coords="206,21,158,21,158,15,206,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21f0ebee9b060a71d3cc49be59145906" name="a21f0ebee9b060a71d3cc49be59145906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f0ebee9b060a71d3cc49be59145906">&#9670;&#160;</a></span>bzero()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::bzero </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a21f0ebee9b060a71d3cc49be59145906_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a21f0ebee9b060a71d3cc49be59145906_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a21f0ebee9b060a71d3cc49be59145906_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a21f0ebee9b060a71d3cc49be59145906_cgraph">
+<area shape="rect" title=" " alt="" coords="5,22,199,62"/>
+<area shape="rect" href="namespacemuduo.html#a8f6d784bddb9d3e0774a665b147758bc" title=" " alt="" coords="247,29,385,55"/>
+<area shape="poly" title=" " alt="" coords="199,39,233,39,233,45,199,45"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="433,29,592,55"/>
+<area shape="poly" title=" " alt="" coords="386,39,420,39,420,45,386,45"/>
+<area shape="poly" title=" " alt="" coords="481,31,474,21,477,11,491,5,513,3,539,6,551,15,547,19,537,11,513,8,492,10,481,15,479,20,485,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2261d7cad23ff6764bf51c398c8c5141" name="a2261d7cad23ff6764bf51c398c8c5141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2261d7cad23ff6764bf51c398c8c5141">&#9670;&#160;</a></span>cookieEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::cookieEnd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a2261d7cad23ff6764bf51c398c8c5141_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a2261d7cad23ff6764bf51c398c8c5141_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a2261d7cad23ff6764bf51c398c8c5141_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a2261d7cad23ff6764bf51c398c8c5141_icgraph">
+<area shape="rect" title=" " alt="" coords="247,5,440,45"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" title=" " alt="" coords="233,28,199,28,199,23,233,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a213e7856719f1538e551247ce99814e5" name="a213e7856719f1538e551247ce99814e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a213e7856719f1538e551247ce99814e5">&#9670;&#160;</a></span>cookieStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::cookieStart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a213e7856719f1538e551247ce99814e5_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a213e7856719f1538e551247ce99814e5_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a213e7856719f1538e551247ce99814e5_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a213e7856719f1538e551247ce99814e5_icgraph">
+<area shape="rect" title=" " alt="" coords="247,5,440,45"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" title=" " alt="" coords="233,28,199,28,199,23,233,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac05dce903a81988b7cc36b0747edae74" name="ac05dce903a81988b7cc36b0747edae74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac05dce903a81988b7cc36b0747edae74">&#9670;&#160;</a></span>current()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> * <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::current </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee4544a9fef0572f635169a2f7461359" name="aee4544a9fef0572f635169a2f7461359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4544a9fef0572f635169a2f7461359">&#9670;&#160;</a></span>data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> * <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::data </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a042e5ea985c317cf568bbc9aaf53da62" name="a042e5ea985c317cf568bbc9aaf53da62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042e5ea985c317cf568bbc9aaf53da62">&#9670;&#160;</a></span>debugString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> * <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::debugString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b8c605465f7baf2933f716a104ec74b" name="a4b8c605465f7baf2933f716a104ec74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8c605465f7baf2933f716a104ec74b">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> * <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a4b8c605465f7baf2933f716a104ec74b_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a4b8c605465f7baf2933f716a104ec74b_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a4b8c605465f7baf2933f716a104ec74b_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a4b8c605465f7baf2933f716a104ec74b_icgraph">
+<area shape="rect" title=" " alt="" coords="967,129,1192,155"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3" title=" " alt="" coords="725,122,919,162"/>
+<area shape="poly" title=" " alt="" coords="953,145,919,145,919,139,953,139"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a" title=" " alt="" coords="484,122,677,162"/>
+<area shape="poly" title=" " alt="" coords="712,145,678,145,678,139,712,139"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06" title=" " alt="" coords="220,5,421,31"/>
+<area shape="poly" title=" " alt="" coords="545,115,495,78,435,44,402,33,404,28,437,40,498,74,548,111"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977" title=" " alt="" coords="205,55,436,80"/>
+<area shape="poly" title=" " alt="" coords="514,120,435,94,389,83,391,77,437,89,516,115"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee" title=" " alt="" coords="205,104,436,129"/>
+<area shape="poly" title=" " alt="" coords="470,134,436,131,436,125,471,129"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3" title=" " alt="" coords="205,153,436,179"/>
+<area shape="poly" title=" " alt="" coords="471,155,436,158,436,153,470,149"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155" title=" " alt="" coords="205,203,436,228"/>
+<area shape="poly" title=" " alt="" coords="512,169,437,193,386,205,384,200,435,187,510,164"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f" title=" " alt="" coords="205,252,436,277"/>
+<area shape="poly" title=" " alt="" coords="547,173,497,209,437,242,399,255,397,249,435,237,494,205,543,169"/>
+<area shape="rect" href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d" title=" " alt="" coords="5,5,157,31"/>
+<area shape="poly" title=" " alt="" coords="206,21,158,21,158,15,206,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af564cacb3550d9b1eeebca488a5cff59" name="af564cacb3550d9b1eeebca488a5cff59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af564cacb3550d9b1eeebca488a5cff59">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::length </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_af564cacb3550d9b1eeebca488a5cff59_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_af564cacb3550d9b1eeebca488a5cff59_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_af564cacb3550d9b1eeebca488a5cff59_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_af564cacb3550d9b1eeebca488a5cff59_icgraph">
+<area shape="rect" title=" " alt="" coords="247,37,440,77"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aaacc230228370d4c6000d97ed5b83140" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" title=" " alt="" coords="233,45,199,41,199,36,234,40"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a7aa8116c1c73f05530b10a799d2fa4b5" title=" " alt="" coords="5,69,199,109"/>
+<area shape="poly" title=" " alt="" coords="234,75,199,79,199,74,233,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73b15cde6a9fd32e95c9f7ca780dd614" name="a73b15cde6a9fd32e95c9f7ca780dd614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b15cde6a9fd32e95c9f7ca780dd614">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a73b15cde6a9fd32e95c9f7ca780dd614_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a73b15cde6a9fd32e95c9f7ca780dd614_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a73b15cde6a9fd32e95c9f7ca780dd614_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a73b15cde6a9fd32e95c9f7ca780dd614_icgraph">
+<area shape="rect" title=" " alt="" coords="279,5,472,45"/>
+<area shape="rect" href="classmuduo_1_1_log_stream.html#aec58cfb3642c4aa236f5fa1b45c57e2b" title=" " alt="" coords="5,13,231,38"/>
+<area shape="poly" title=" " alt="" coords="265,28,231,28,231,23,265,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a59b7853e11e7c8833cced09e87b42e0c" name="a59b7853e11e7c8833cced09e87b42e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59b7853e11e7c8833cced09e87b42e0c">&#9670;&#160;</a></span>setCookie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::setCookie </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(*)()&#160;</td>
+          <td class="paramname"><em>cookie</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,22,199,62"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="247,29,405,55"/>
+<area shape="poly" title=" " alt="" coords="199,39,233,39,233,45,199,45"/>
+<area shape="poly" title=" " alt="" coords="289,31,282,21,286,11,301,5,326,3,358,7,370,16,366,20,356,11,326,8,302,10,289,15,287,20,294,27"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_icgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_icgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a59b7853e11e7c8833cced09e87b42e0c_icgraph">
+<area shape="rect" title=" " alt="" coords="247,37,440,77"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095" title=" " alt="" coords="5,5,199,45"/>
+<area shape="poly" title=" " alt="" coords="233,45,199,41,199,36,234,40"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad" title=" " alt="" coords="5,69,199,109"/>
+<area shape="poly" title=" " alt="" coords="234,75,199,79,199,74,233,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaacc230228370d4c6000d97ed5b83140" name="aaacc230228370d4c6000d97ed5b83140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacc230228370d4c6000d97ed5b83140">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_aaacc230228370d4c6000d97ed5b83140_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_aaacc230228370d4c6000d97ed5b83140_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_aaacc230228370d4c6000d97ed5b83140_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_aaacc230228370d4c6000d97ed5b83140_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,199,45"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59" title=" " alt="" coords="247,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="199,23,233,23,233,28,199,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7aa8116c1c73f05530b10a799d2fa4b5" name="a7aa8116c1c73f05530b10a799d2fa4b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa8116c1c73f05530b10a799d2fa4b5">&#9670;&#160;</a></span>toStringPiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::toStringPiece </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1detail_1_1_fixed_buffer_a7aa8116c1c73f05530b10a799d2fa4b5_cgraph.png" border="0" usemap="#aclassmuduo_1_1detail_1_1_fixed_buffer_a7aa8116c1c73f05530b10a799d2fa4b5_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1detail_1_1_fixed_buffer_a7aa8116c1c73f05530b10a799d2fa4b5_cgraph" id="aclassmuduo_1_1detail_1_1_fixed_buffer_a7aa8116c1c73f05530b10a799d2fa4b5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,199,45"/>
+<area shape="rect" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59" title=" " alt="" coords="247,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="199,23,233,23,233,28,199,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a728075cbe4b4eec9bb604e07e397ccaa" name="a728075cbe4b4eec9bb604e07e397ccaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728075cbe4b4eec9bb604e07e397ccaa">&#9670;&#160;</a></span>cookie_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(* <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::cookie_) ()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bf2c406cdd967599fca5520703a36f3" name="a9bf2c406cdd967599fca5520703a36f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf2c406cdd967599fca5520703a36f3">&#9670;&#160;</a></span>cur_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a>* <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::cur_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d61720725e5f2168ca22f3c375e6e64" name="a8d61720725e5f2168ca22f3c375e6e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d61720725e5f2168ca22f3c375e6e64">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> SIZE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> <a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a> &gt;::data_[<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="namespacemuduo_1_1detail.html">detail</a></li><li class="navelem"><a class="el" href="classmuduo_1_1detail_1_1_fixed_buffer.html">FixedBuffer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

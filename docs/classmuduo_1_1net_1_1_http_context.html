@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::net::HttpContext类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1net_1_1_http_context.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmuduo_1_1net_1_1_http_context-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::net::HttpContext类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_http_context_8h_source.html">HttpContext.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::net::HttpContext 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1net_1_1_http_context__inherit__graph.png" border="0" usemap="#amuduo_1_1net_1_1_http_context_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1net_1_1_http_context_inherit__map" id="amuduo_1_1net_1_1_http_context_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,188,104"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="29,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="99,44,99,79,94,79,94,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::net::HttpContext 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1net_1_1_http_context__coll__graph.png" border="0" usemap="#amuduo_1_1net_1_1_http_context_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1net_1_1_http_context_coll__map" id="amuduo_1_1net_1_1_http_context_coll__map">
+<area shape="rect" title=" " alt="" coords="5,285,188,311"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="8,13,143,38"/>
+<area shape="poly" title=" " alt="" coords="80,51,98,285,93,285,75,52"/>
+<area shape="rect" href="classmuduo_1_1net_1_1_http_request.html" title=" " alt="" coords="129,197,315,223"/>
+<area shape="poly" title=" " alt="" coords="95,47,215,196,211,199,91,50"/>
+<area shape="rect" href="classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="163,95,313,120"/>
+<area shape="poly" title=" " alt="" coords="112,42,216,92,214,97,110,46"/>
+<area shape="poly" title=" " alt="" coords="195,233,115,287,112,283,192,228"/>
+<area shape="rect" title=" " alt="" coords="337,95,395,120"/>
+<area shape="poly" title=" " alt="" coords="360,134,349,156,333,175,311,190,286,200,284,195,308,185,330,171,345,153,356,132"/>
+<area shape="poly" title=" " alt="" coords="237,134,226,198,221,197,231,133"/>
+<area shape="rect" title=" " alt="" coords="167,5,370,45"/>
+<area shape="poly" title=" " alt="" coords="259,59,245,95,240,93,254,57"/>
+<area shape="rect" title=" " alt="" coords="395,5,607,45"/>
+<area shape="poly" title=" " alt="" coords="426,52,277,97,275,92,425,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a235d5fd76864d6744d70623e57be0b67" id="r_a235d5fd76864d6744d70623e57be0b67"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">HttpRequestParseState</a> { <a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">kExpectRequestLine</a>
+, <a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624">kExpectHeaders</a>
+, <a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc">kExpectBody</a>
+, <a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2">kGotAll</a>
+ }</td></tr>
+<tr class="separator:a235d5fd76864d6744d70623e57be0b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4d4514c821d1b8f3f45e3ec847c27c31" id="r_a4d4514c821d1b8f3f45e3ec847c27c31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a4d4514c821d1b8f3f45e3ec847c27c31">HttpContext</a> ()</td></tr>
+<tr class="separator:a4d4514c821d1b8f3f45e3ec847c27c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7bf1bd8301fc43c09bfa8eab9b09cc" id="r_a6a7bf1bd8301fc43c09bfa8eab9b09cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a6a7bf1bd8301fc43c09bfa8eab9b09cc">parseRequest</a> (<a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a> receiveTime)</td></tr>
+<tr class="separator:a6a7bf1bd8301fc43c09bfa8eab9b09cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a0d194f48f12a425e2eae90617c3b1" id="r_a48a0d194f48f12a425e2eae90617c3b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a48a0d194f48f12a425e2eae90617c3b1">gotAll</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a48a0d194f48f12a425e2eae90617c3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f46424de12c8901cbb762552f05a3f6" id="r_a2f46424de12c8901cbb762552f05a3f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a2f46424de12c8901cbb762552f05a3f6">reset</a> ()</td></tr>
+<tr class="separator:a2f46424de12c8901cbb762552f05a3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd07acecc68ba62d5edeae75f5fef41" id="r_adbd07acecc68ba62d5edeae75f5fef41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#adbd07acecc68ba62d5edeae75f5fef41">request</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:adbd07acecc68ba62d5edeae75f5fef41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75f42790ea40952f059ed319902bfbb" id="r_ad75f42790ea40952f059ed319902bfbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#ad75f42790ea40952f059ed319902bfbb">request</a> ()</td></tr>
+<tr class="separator:ad75f42790ea40952f059ed319902bfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a76e6188ef4316b196d02e3bf6c236d78" id="r_a76e6188ef4316b196d02e3bf6c236d78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a76e6188ef4316b196d02e3bf6c236d78">processRequestLine</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *begin, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *end)</td></tr>
+<tr class="separator:a76e6188ef4316b196d02e3bf6c236d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8e245d3e5d1840ed88942b8e417b812c" id="r_a8e245d3e5d1840ed88942b8e417b812c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">HttpRequestParseState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">state_</a></td></tr>
+<tr class="separator:a8e245d3e5d1840ed88942b8e417b812c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e0fc17c4e255c0fba114fe6a3a6790" id="r_a17e0fc17c4e255c0fba114fe6a3a6790"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">request_</a></td></tr>
+<tr class="separator:a17e0fc17c4e255c0fba114fe6a3a6790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classmuduo_1_1copyable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmuduo_1_1copyable')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classmuduo_1_1copyable.html">muduo::copyable</a></td></tr>
+<tr class="memitem:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable" id="r_a782312a20f5d677a1f7d2574d92fb264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a782312a20f5d677a1f7d2574d92fb264">copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable" id="r_a19c4bdacfc5e35c20452dfcaa299ef54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a19c4bdacfc5e35c20452dfcaa299ef54">~copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a235d5fd76864d6744d70623e57be0b67" name="a235d5fd76864d6744d70623e57be0b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235d5fd76864d6744d70623e57be0b67">&#9670;&#160;</a></span>HttpRequestParseState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">enum</a> <a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">muduo::net::HttpContext::HttpRequestParseState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc" name="a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc"></a>kExpectRequestLine&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624" name="a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624"></a>kExpectHeaders&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc" name="a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc"></a>kExpectBody&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2" name="a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2"></a>kGotAll&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4d4514c821d1b8f3f45e3ec847c27c31" name="a4d4514c821d1b8f3f45e3ec847c27c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4514c821d1b8f3f45e3ec847c27c31">&#9670;&#160;</a></span>HttpContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::net::HttpContext::HttpContext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a48a0d194f48f12a425e2eae90617c3b1" name="a48a0d194f48f12a425e2eae90617c3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a0d194f48f12a425e2eae90617c3b1">&#9670;&#160;</a></span>gotAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::net::HttpContext::gotAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a7bf1bd8301fc43c09bfa8eab9b09cc" name="a6a7bf1bd8301fc43c09bfa8eab9b09cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7bf1bd8301fc43c09bfa8eab9b09cc">&#9670;&#160;</a></span>parseRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::net::HttpContext::parseRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>&#160;</td>
+          <td class="paramname"><em>receiveTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76e6188ef4316b196d02e3bf6c236d78" name="a76e6188ef4316b196d02e3bf6c236d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76e6188ef4316b196d02e3bf6c236d78">&#9670;&#160;</a></span>processRequestLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::net::HttpContext::processRequestLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>begin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad75f42790ea40952f059ed319902bfbb" name="ad75f42790ea40952f059ed319902bfbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75f42790ea40952f059ed319902bfbb">&#9670;&#160;</a></span>request() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> &amp; muduo::net::HttpContext::request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbd07acecc68ba62d5edeae75f5fef41" name="adbd07acecc68ba62d5edeae75f5fef41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd07acecc68ba62d5edeae75f5fef41">&#9670;&#160;</a></span>request() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> &amp; muduo::net::HttpContext::request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f46424de12c8901cbb762552f05a3f6" name="a2f46424de12c8901cbb762552f05a3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f46424de12c8901cbb762552f05a3f6">&#9670;&#160;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::net::HttpContext::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1net_1_1_http_context_a2f46424de12c8901cbb762552f05a3f6_cgraph.png" border="0" usemap="#aclassmuduo_1_1net_1_1_http_context_a2f46424de12c8901cbb762552f05a3f6_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1net_1_1_http_context_a2f46424de12c8901cbb762552f05a3f6_cgraph" id="aclassmuduo_1_1net_1_1_http_context_a2f46424de12c8901cbb762552f05a3f6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,188,45"/>
+<area shape="rect" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="708,34,867,59"/>
+<area shape="poly" title=" " alt="" coords="188,20,236,19,448,16,541,20,660,28,695,31,694,37,660,33,541,25,448,22,236,24,188,25"/>
+<area shape="rect" href="classmuduo_1_1net_1_1_http_request.html#a32644325593428b6a7e73f315864af4b" title=" " alt="" coords="236,33,421,73"/>
+<area shape="poly" title=" " alt="" coords="189,34,223,38,222,43,188,39"/>
+<area shape="poly" title=" " alt="" coords="751,36,743,26,747,16,762,10,787,7,818,11,830,20,827,24,816,16,787,13,764,15,751,20,749,25,755,32"/>
+<area shape="poly" title=" " alt="" coords="422,49,694,45,694,51,422,55"/>
+<area shape="rect" href="classmuduo_1_1_timestamp.html#a71631d5eb0b83125c2bfac43014c8f74" title=" " alt="" coords="469,85,660,110"/>
+<area shape="poly" title=" " alt="" coords="422,68,483,79,482,85,421,73"/>
+<area shape="poly" title=" " alt="" coords="621,82,717,60,718,65,622,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a17e0fc17c4e255c0fba114fe6a3a6790" name="a17e0fc17c4e255c0fba114fe6a3a6790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e0fc17c4e255c0fba114fe6a3a6790">&#9670;&#160;</a></span>request_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> muduo::net::HttpContext::request_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e245d3e5d1840ed88942b8e417b812c" name="a8e245d3e5d1840ed88942b8e417b812c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e245d3e5d1840ed88942b8e417b812c">&#9670;&#160;</a></span>state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">HttpRequestParseState</a> muduo::net::HttpContext::state_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="namespacemuduo_1_1net.html">net</a></li><li class="navelem"><a class="el" href="classmuduo_1_1net_1_1_http_context.html">HttpContext</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

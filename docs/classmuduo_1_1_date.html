@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::Date类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1_date.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmuduo_1_1_date-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::Date类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> in Gregorian calendar.  
+ <a href="classmuduo_1_1_date.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_date_8h_source.html">Date.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::Date 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date__inherit__graph.png" border="0" usemap="#amuduo_1_1_date_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1_date_inherit__map" id="amuduo_1_1_date_inherit__map">
+<area shape="rect" title="Date in Gregorian calendar." alt="" coords="19,79,126,104"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="5,5,140,31"/>
+<area shape="poly" title=" " alt="" coords="75,44,75,79,70,79,70,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::Date 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date__coll__graph.png" border="0" usemap="#amuduo_1_1_date_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1_date_coll__map" id="amuduo_1_1_date_coll__map">
+<area shape="rect" title="Date in Gregorian calendar." alt="" coords="19,79,126,104"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="5,5,140,31"/>
+<area shape="poly" title=" " alt="" coords="75,44,75,79,70,79,70,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmuduo_1_1_date_1_1_year_month_day.html">YearMonthDay</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6155c206dca006183485b3e6f969f317" id="r_a6155c206dca006183485b3e6f969f317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a6155c206dca006183485b3e6f969f317">Date</a> ()</td></tr>
+<tr class="memdesc:a6155c206dca006183485b3e6f969f317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constucts an invalid <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a>.  <br /></td></tr>
+<tr class="separator:a6155c206dca006183485b3e6f969f317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9601fe4649d699e17f20fdce71dec566" id="r_a9601fe4649d699e17f20fdce71dec566"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a9601fe4649d699e17f20fdce71dec566">Date</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="classmuduo_1_1_date.html#ad4ffb86873dde9f9aa823c8907014d38">year</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="classmuduo_1_1_date.html#a0e37caa84db85397ec7f210b42a4aaf7">month</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="classmuduo_1_1_date.html#a146585a0b4cfb27334032680b8321799">day</a>)</td></tr>
+<tr class="memdesc:a9601fe4649d699e17f20fdce71dec566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constucts a yyyy-mm-dd <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a>.  <br /></td></tr>
+<tr class="separator:a9601fe4649d699e17f20fdce71dec566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f373155c6873fefdc050b287530059" id="r_ae6f373155c6873fefdc050b287530059"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#ae6f373155c6873fefdc050b287530059">Date</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">julianDayNum</a>)</td></tr>
+<tr class="memdesc:ae6f373155c6873fefdc050b287530059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constucts a <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> from Julian Day Number.  <br /></td></tr>
+<tr class="separator:ae6f373155c6873fefdc050b287530059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac258209ccc62ded7ac11518793809da6" id="r_ac258209ccc62ded7ac11518793809da6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#ac258209ccc62ded7ac11518793809da6">Date</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">tm</a> &amp;)</td></tr>
+<tr class="memdesc:ac258209ccc62ded7ac11518793809da6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constucts a <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> from struct tm  <br /></td></tr>
+<tr class="separator:ac258209ccc62ded7ac11518793809da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752653c760267e0e78c8ce29bc869f7b" id="r_a752653c760267e0e78c8ce29bc869f7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a752653c760267e0e78c8ce29bc869f7b">swap</a> (<a class="el" href="classmuduo_1_1_date.html">Date</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">that</a>)</td></tr>
+<tr class="separator:a752653c760267e0e78c8ce29bc869f7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa5de5e68cacb4ed73f9f56aa87d908b" id="r_aaa5de5e68cacb4ed73f9f56aa87d908b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#aaa5de5e68cacb4ed73f9f56aa87d908b">valid</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:aaa5de5e68cacb4ed73f9f56aa87d908b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aca1b50c805502774bebb317fe14e29" id="r_a8aca1b50c805502774bebb317fe14e29"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a8aca1b50c805502774bebb317fe14e29">toIsoString</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="memdesc:a8aca1b50c805502774bebb317fe14e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts to yyyy-mm-dd format.  <br /></td></tr>
+<tr class="separator:a8aca1b50c805502774bebb317fe14e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6e55d2d005bb365bb989f860409d27" id="r_a4f6e55d2d005bb365bb989f860409d27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_1_1_year_month_day.html">YearMonthDay</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a4f6e55d2d005bb365bb989f860409d27">yearMonthDay</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a4f6e55d2d005bb365bb989f860409d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ffb86873dde9f9aa823c8907014d38" id="r_ad4ffb86873dde9f9aa823c8907014d38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#ad4ffb86873dde9f9aa823c8907014d38">year</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:ad4ffb86873dde9f9aa823c8907014d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e37caa84db85397ec7f210b42a4aaf7" id="r_a0e37caa84db85397ec7f210b42a4aaf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a0e37caa84db85397ec7f210b42a4aaf7">month</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a0e37caa84db85397ec7f210b42a4aaf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a146585a0b4cfb27334032680b8321799" id="r_a146585a0b4cfb27334032680b8321799"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a146585a0b4cfb27334032680b8321799">day</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a146585a0b4cfb27334032680b8321799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab597d4a8ccea4c7842e71a8fb45e8f9b" id="r_ab597d4a8ccea4c7842e71a8fb45e8f9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#ab597d4a8ccea4c7842e71a8fb45e8f9b">weekDay</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:ab597d4a8ccea4c7842e71a8fb45e8f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa765a20ef529abb1f10d84022cd8dba9" id="r_aa765a20ef529abb1f10d84022cd8dba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#aa765a20ef529abb1f10d84022cd8dba9">julianDayNumber</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:aa765a20ef529abb1f10d84022cd8dba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a1f09328201e9422f3232346d5c164403" id="r_a1f09328201e9422f3232346d5c164403"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a1f09328201e9422f3232346d5c164403">kDaysPerWeek</a> = 7</td></tr>
+<tr class="separator:a1f09328201e9422f3232346d5c164403"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3a766ff08b8d1894c13b10d79132669" id="r_ac3a766ff08b8d1894c13b10d79132669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#ac3a766ff08b8d1894c13b10d79132669">kJulianDayOf1970_01_01</a></td></tr>
+<tr class="separator:ac3a766ff08b8d1894c13b10d79132669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a806dda975b572b07e8603785d59ea82b" id="r_a806dda975b572b07e8603785d59ea82b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_date.html#a806dda975b572b07e8603785d59ea82b">julianDayNumber_</a></td></tr>
+<tr class="separator:a806dda975b572b07e8603785d59ea82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classmuduo_1_1copyable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmuduo_1_1copyable')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classmuduo_1_1copyable.html">muduo::copyable</a></td></tr>
+<tr class="memitem:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable" id="r_a782312a20f5d677a1f7d2574d92fb264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a782312a20f5d677a1f7d2574d92fb264">copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable" id="r_a19c4bdacfc5e35c20452dfcaa299ef54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a19c4bdacfc5e35c20452dfcaa299ef54">~copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p><a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> in Gregorian calendar. </p>
+<p>This class is immutable. It's recommended to pass it by value, since it's passed in register on x64. </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6155c206dca006183485b3e6f969f317" name="a6155c206dca006183485b3e6f969f317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6155c206dca006183485b3e6f969f317">&#9670;&#160;</a></span>Date() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::Date::Date </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constucts an invalid <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a>. </p>
+
+</div>
+</div>
+<a id="a9601fe4649d699e17f20fdce71dec566" name="a9601fe4649d699e17f20fdce71dec566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9601fe4649d699e17f20fdce71dec566">&#9670;&#160;</a></span>Date() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::Date::Date </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>year</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>month</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>day</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constucts a yyyy-mm-dd <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a>. </p>
+<p>1 &lt;= month &lt;= 12 </p>
+
+</div>
+</div>
+<a id="ae6f373155c6873fefdc050b287530059" name="ae6f373155c6873fefdc050b287530059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f373155c6873fefdc050b287530059">&#9670;&#160;</a></span>Date() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::Date::Date </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>julianDayNum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constucts a <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> from Julian Day Number. </p>
+
+</div>
+</div>
+<a id="ac258209ccc62ded7ac11518793809da6" name="ac258209ccc62ded7ac11518793809da6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac258209ccc62ded7ac11518793809da6">&#9670;&#160;</a></span>Date() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::Date::Date </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">tm</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constucts a <a class="el" href="classmuduo_1_1_date.html" title="Date in Gregorian calendar.">Date</a> from struct tm </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a146585a0b4cfb27334032680b8321799" name="a146585a0b4cfb27334032680b8321799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a146585a0b4cfb27334032680b8321799">&#9670;&#160;</a></span>day()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::day </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date_a146585a0b4cfb27334032680b8321799_cgraph.png" border="0" usemap="#aclassmuduo_1_1_date_a146585a0b4cfb27334032680b8321799_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1_date_a146585a0b4cfb27334032680b8321799_cgraph" id="aclassmuduo_1_1_date_a146585a0b4cfb27334032680b8321799_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,144,31"/>
+<area shape="rect" href="classmuduo_1_1_date.html#a4f6e55d2d005bb365bb989f860409d27" title=" " alt="" coords="192,5,403,31"/>
+<area shape="poly" title=" " alt="" coords="144,15,178,15,178,21,144,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa765a20ef529abb1f10d84022cd8dba9" name="aa765a20ef529abb1f10d84022cd8dba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa765a20ef529abb1f10d84022cd8dba9">&#9670;&#160;</a></span>julianDayNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::julianDayNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date_aa765a20ef529abb1f10d84022cd8dba9_icgraph.png" border="0" usemap="#aclassmuduo_1_1_date_aa765a20ef529abb1f10d84022cd8dba9_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1_date_aa765a20ef529abb1f10d84022cd8dba9_icgraph" id="aclassmuduo_1_1_date_aa765a20ef529abb1f10d84022cd8dba9_icgraph">
+<area shape="rect" title=" " alt="" coords="205,31,433,56"/>
+<area shape="rect" href="namespacemuduo.html#a16d6a8ea1b5e79c94c59f96137b8d26d" title=" " alt="" coords="11,5,152,31"/>
+<area shape="poly" title=" " alt="" coords="191,32,152,28,153,23,192,27"/>
+<area shape="rect" href="namespacemuduo.html#a0a048e90c15864ab82a55b148bebd144" title=" " alt="" coords="5,55,157,80"/>
+<area shape="poly" title=" " alt="" coords="192,59,158,62,158,57,191,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e37caa84db85397ec7f210b42a4aaf7" name="a0e37caa84db85397ec7f210b42a4aaf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e37caa84db85397ec7f210b42a4aaf7">&#9670;&#160;</a></span>month()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::month </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date_a0e37caa84db85397ec7f210b42a4aaf7_cgraph.png" border="0" usemap="#aclassmuduo_1_1_date_a0e37caa84db85397ec7f210b42a4aaf7_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1_date_a0e37caa84db85397ec7f210b42a4aaf7_cgraph" id="aclassmuduo_1_1_date_a0e37caa84db85397ec7f210b42a4aaf7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,161,31"/>
+<area shape="rect" href="classmuduo_1_1_date.html#a4f6e55d2d005bb365bb989f860409d27" title=" " alt="" coords="209,5,420,31"/>
+<area shape="poly" title=" " alt="" coords="161,15,196,15,196,21,161,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a752653c760267e0e78c8ce29bc869f7b" name="a752653c760267e0e78c8ce29bc869f7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752653c760267e0e78c8ce29bc869f7b">&#9670;&#160;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::Date::swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>that</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8aca1b50c805502774bebb317fe14e29" name="a8aca1b50c805502774bebb317fe14e29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aca1b50c805502774bebb317fe14e29">&#9670;&#160;</a></span>toIsoString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string muduo::Date::toIsoString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts to yyyy-mm-dd format. </p>
+
+</div>
+</div>
+<a id="aaa5de5e68cacb4ed73f9f56aa87d908b" name="aaa5de5e68cacb4ed73f9f56aa87d908b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa5de5e68cacb4ed73f9f56aa87d908b">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::Date::valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab597d4a8ccea4c7842e71a8fb45e8f9b" name="ab597d4a8ccea4c7842e71a8fb45e8f9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab597d4a8ccea4c7842e71a8fb45e8f9b">&#9670;&#160;</a></span>weekDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::weekDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4ffb86873dde9f9aa823c8907014d38" name="ad4ffb86873dde9f9aa823c8907014d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ffb86873dde9f9aa823c8907014d38">&#9670;&#160;</a></span>year()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::year </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date_ad4ffb86873dde9f9aa823c8907014d38_cgraph.png" border="0" usemap="#aclassmuduo_1_1_date_ad4ffb86873dde9f9aa823c8907014d38_cgraph" alt=""/></div>
+<map name="aclassmuduo_1_1_date_ad4ffb86873dde9f9aa823c8907014d38_cgraph" id="aclassmuduo_1_1_date_ad4ffb86873dde9f9aa823c8907014d38_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,148,31"/>
+<area shape="rect" href="classmuduo_1_1_date.html#a4f6e55d2d005bb365bb989f860409d27" title=" " alt="" coords="196,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="148,15,182,15,182,21,148,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4f6e55d2d005bb365bb989f860409d27" name="a4f6e55d2d005bb365bb989f860409d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6e55d2d005bb365bb989f860409d27">&#9670;&#160;</a></span>yearMonthDay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_1_1_year_month_day.html">YearMonthDay</a> muduo::Date::yearMonthDay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_date_a4f6e55d2d005bb365bb989f860409d27_icgraph.png" border="0" usemap="#aclassmuduo_1_1_date_a4f6e55d2d005bb365bb989f860409d27_icgraph" alt=""/></div>
+<map name="aclassmuduo_1_1_date_a4f6e55d2d005bb365bb989f860409d27_icgraph" id="aclassmuduo_1_1_date_a4f6e55d2d005bb365bb989f860409d27_icgraph">
+<area shape="rect" title=" " alt="" coords="209,55,420,80"/>
+<area shape="rect" href="classmuduo_1_1_date.html#a146585a0b4cfb27334032680b8321799" title=" " alt="" coords="14,5,153,31"/>
+<area shape="poly" title=" " alt="" coords="241,54,143,33,144,28,242,49"/>
+<area shape="rect" href="classmuduo_1_1_date.html#a0e37caa84db85397ec7f210b42a4aaf7" title=" " alt="" coords="5,55,161,80"/>
+<area shape="poly" title=" " alt="" coords="195,70,161,70,161,65,195,65"/>
+<area shape="rect" href="classmuduo_1_1_date.html#ad4ffb86873dde9f9aa823c8907014d38" title=" " alt="" coords="12,104,155,129"/>
+<area shape="poly" title=" " alt="" coords="242,85,144,107,143,101,241,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a806dda975b572b07e8603785d59ea82b" name="a806dda975b572b07e8603785d59ea82b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806dda975b572b07e8603785d59ea82b">&#9670;&#160;</a></span>julianDayNumber_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::julianDayNumber_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f09328201e9422f3232346d5c164403" name="a1f09328201e9422f3232346d5c164403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f09328201e9422f3232346d5c164403">&#9670;&#160;</a></span>kDaysPerWeek</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::kDaysPerWeek = 7</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3a766ff08b8d1894c13b10d79132669" name="ac3a766ff08b8d1894c13b10d79132669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3a766ff08b8d1894c13b10d79132669">&#9670;&#160;</a></span>kJulianDayOf1970_01_01</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::Date::kJulianDayOf1970_01_01</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_date.html">Date</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

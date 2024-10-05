@@ -1,0 +1,9 @@
+<map id="XuMQ::Message_Payload::CopyFrom" name="XuMQ::Message_Payload::CopyFrom">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,191,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message___payload.html#a7e32d7654f3f4502e5d287294807a789" title=" " alt="" coords="239,5,424,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,42,225,37,226,43,192,47"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message___payload.html#a7256fc9c65ee21e318a79fd1188f624c" title=" " alt="" coords="239,69,424,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,67,226,72,225,77,191,73"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_basic_properties.html#a8c5335d4d1ef6080232bbbda4297edff" title=" " alt="" coords="472,5,643,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,23,458,23,458,28,424,28"/>
+</map>

@@ -1,0 +1,666 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: curl::Curl类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classcurl_1_1_curl.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classcurl_1_1_curl-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">curl::Curl类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_curl_8h_source.html">Curl.h</a>&gt;</code></p>
+<div class="dynheader">
+类 curl::Curl 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcurl_1_1_curl__inherit__graph.png" border="0" usemap="#acurl_1_1_curl_inherit__map" alt="Inheritance graph"/></div>
+<map name="acurl_1_1_curl_inherit__map" id="acurl_1_1_curl_inherit__map">
+<area shape="rect" title=" " alt="" coords="45,79,125,104"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+curl::Curl 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classcurl_1_1_curl__coll__graph.png" border="0" usemap="#acurl_1_1_curl_coll__map" alt="Collaboration graph"/></div>
+<map name="acurl_1_1_curl_coll__map" id="acurl_1_1_curl_coll__map">
+<area shape="rect" title=" " alt="" coords="996,14,1076,39"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="267,23,425,48"/>
+<area shape="poly" title=" " alt="" coords="419,18,449,14,585,5,691,3,933,14,996,19,996,24,933,20,691,9,585,10,450,20,420,23"/>
+<area shape="rect" href="classmuduo_1_1net_1_1_event_loop.html" title="Reactor, at most one per thread." alt="" coords="585,99,757,124"/>
+<area shape="poly" title=" " alt="" coords="415,49,616,96,615,101,414,54"/>
+<area shape="rect" href="classmuduo_1_1net_1_1_channel.html" title="A selectable I/O channel." alt="" coords="957,103,1115,128"/>
+<area shape="poly" title=" " alt="" coords="439,30,706,30,838,37,893,43,934,52,983,74,1021,101,1018,105,981,79,932,57,892,48,838,42,706,35,439,36"/>
+<area shape="poly" title=" " alt="" coords="739,93,995,33,996,38,740,98"/>
+<area shape="poly" title=" " alt="" coords="734,125,782,133,857,138,933,133,980,126,981,131,934,138,857,143,781,138,733,130"/>
+<area shape="rect" href="classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="271,99,421,124"/>
+<area shape="poly" title=" " alt="" coords="434,109,585,109,585,114,434,114"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="44,42,179,67"/>
+<area shape="poly" title=" " alt="" coords="179,68,218,77,295,96,294,101,217,82,178,73"/>
+<area shape="rect" title=" " alt="" coords="10,92,213,132"/>
+<area shape="poly" title=" " alt="" coords="226,109,271,109,271,114,226,114"/>
+<area shape="rect" title=" " alt="" coords="5,156,217,196"/>
+<area shape="poly" title=" " alt="" coords="198,149,298,122,299,127,199,154"/>
+<area shape="poly" title=" " alt="" coords="943,118,781,117,757,116,758,111,781,112,943,113"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:acde872d2fd8aead6effc9ffecf5d284a" id="r_acde872d2fd8aead6effc9ffecf5d284a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284a">Option</a> { <a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284aae4bb68ab504b81a43baa8154925c6ae3">kCURLnossl</a> = 0
+, <a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284aaff5cea3f723d7e671100138927e1104a">kCURLssl</a> = 1
+ }</td></tr>
+<tr class="separator:acde872d2fd8aead6effc9ffecf5d284a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af88af25f0b268a3fbce635f8edfb4e18" id="r_af88af25f0b268a3fbce635f8edfb4e18"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#af88af25f0b268a3fbce635f8edfb4e18">Curl</a> (<a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a> *loop)</td></tr>
+<tr class="separator:af88af25f0b268a3fbce635f8edfb4e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a255b28a5fbc665e3bce816b64f298d0c" id="r_a255b28a5fbc665e3bce816b64f298d0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a255b28a5fbc665e3bce816b64f298d0c">~Curl</a> ()</td></tr>
+<tr class="separator:a255b28a5fbc665e3bce816b64f298d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34169bbd64dcf866fa25387d28562c72" id="r_a34169bbd64dcf866fa25387d28562c72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecurl.html#a08bb996287bbbcf47cefc28c0eeccd2d">RequestPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a34169bbd64dcf866fa25387d28562c72">getUrl</a> (<a class="el" href="classmuduo_1_1_string_arg.html">muduo::StringArg</a> url)</td></tr>
+<tr class="separator:a34169bbd64dcf866fa25387d28562c72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66790488f3a70c46335d429d99aea0ef" id="r_a66790488f3a70c46335d429d99aea0ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a66790488f3a70c46335d429d99aea0ef">getCurlm</a> ()</td></tr>
+<tr class="separator:a66790488f3a70c46335d429d99aea0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b8b36f4441aa28a047d1d257dab59da" id="r_a6b8b36f4441aa28a047d1d257dab59da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a6b8b36f4441aa28a047d1d257dab59da">getLoop</a> ()</td></tr>
+<tr class="separator:a6b8b36f4441aa28a047d1d257dab59da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5a9bf63211d4b86dbffaf8d208955f5e" id="r_a5a9bf63211d4b86dbffaf8d208955f5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a5a9bf63211d4b86dbffaf8d208955f5e">initialize</a> (<a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284a">Option</a> opt=<a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284aae4bb68ab504b81a43baa8154925c6ae3">kCURLnossl</a>)</td></tr>
+<tr class="separator:a5a9bf63211d4b86dbffaf8d208955f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a8bcb9c474819757ffd175eb60ae29755" id="r_a8bcb9c474819757ffd175eb60ae29755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a8bcb9c474819757ffd175eb60ae29755">onTimer</a> ()</td></tr>
+<tr class="separator:a8bcb9c474819757ffd175eb60ae29755"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a0f5d1bd182b13704e3b4e1adc58069" id="r_a6a0f5d1bd182b13704e3b4e1adc58069"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a6a0f5d1bd182b13704e3b4e1adc58069">onRead</a> (int fd)</td></tr>
+<tr class="separator:a6a0f5d1bd182b13704e3b4e1adc58069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0cce76f7f3f541185b9828180001df" id="r_a7e0cce76f7f3f541185b9828180001df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a7e0cce76f7f3f541185b9828180001df">onWrite</a> (int fd)</td></tr>
+<tr class="separator:a7e0cce76f7f3f541185b9828180001df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05847ddf7ce5ec05675d09ee9fb29764" id="r_a05847ddf7ce5ec05675d09ee9fb29764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a05847ddf7ce5ec05675d09ee9fb29764">checkFinish</a> ()</td></tr>
+<tr class="separator:a05847ddf7ce5ec05675d09ee9fb29764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmuduo_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmuduo_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></td></tr>
+<tr class="memitem:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae1b6f048685091082c44d8be220239ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae1b6f048685091082c44d8be220239ac">noncopyable</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable" id="r_aaeb67fffc76d7ea9227b8cf8ca8fae0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#aaeb67fffc76d7ea9227b8cf8ca8fae0a">operator=</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae0ca7ea7b61e7ef8b82582063c09b901"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae0ca7ea7b61e7ef8b82582063c09b901">noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ac12e02f31699cca2d17ba01d35648ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ac12e02f31699cca2d17ba01d35648ff5">~noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a0e835b89e4f18ad177cf01bfe64bcbb3" id="r_a0e835b89e4f18ad177cf01bfe64bcbb3"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a0e835b89e4f18ad177cf01bfe64bcbb3">socketCallback</a> (<a class="el" href="_curl_8h.html#ace655e3633b6533591283994d6b5cdda">CURL</a> *, int, int, void *, void *)</td></tr>
+<tr class="separator:a0e835b89e4f18ad177cf01bfe64bcbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a204114f0ca70ef613f263d9eb17d7b35" id="r_a204114f0ca70ef613f263d9eb17d7b35"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a204114f0ca70ef613f263d9eb17d7b35">timerCallback</a> (<a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a> *, long, void *)</td></tr>
+<tr class="separator:a204114f0ca70ef613f263d9eb17d7b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8a15786bf98d4e49ba643de989fffce1" id="r_a8a15786bf98d4e49ba643de989fffce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a8a15786bf98d4e49ba643de989fffce1">loop_</a></td></tr>
+<tr class="separator:a8a15786bf98d4e49ba643de989fffce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0504074dc44ebb12305d3500e9d623" id="r_aea0504074dc44ebb12305d3500e9d623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#aea0504074dc44ebb12305d3500e9d623">curlm_</a></td></tr>
+<tr class="separator:aea0504074dc44ebb12305d3500e9d623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19267c8067d779c2b04283f3684a645" id="r_ae19267c8067d779c2b04283f3684a645"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#ae19267c8067d779c2b04283f3684a645">runningHandles_</a></td></tr>
+<tr class="separator:ae19267c8067d779c2b04283f3684a645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e79d413d95ff2ca9853c0ea04e95cf7" id="r_a8e79d413d95ff2ca9853c0ea04e95cf7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcurl_1_1_curl.html#a8e79d413d95ff2ca9853c0ea04e95cf7">prevRunningHandles_</a></td></tr>
+<tr class="separator:a8e79d413d95ff2ca9853c0ea04e95cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="acde872d2fd8aead6effc9ffecf5d284a" name="acde872d2fd8aead6effc9ffecf5d284a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde872d2fd8aead6effc9ffecf5d284a">&#9670;&#160;</a></span>Option</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284a">curl::Curl::Option</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="acde872d2fd8aead6effc9ffecf5d284aae4bb68ab504b81a43baa8154925c6ae3" name="acde872d2fd8aead6effc9ffecf5d284aae4bb68ab504b81a43baa8154925c6ae3"></a>kCURLnossl&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="acde872d2fd8aead6effc9ffecf5d284aaff5cea3f723d7e671100138927e1104a" name="acde872d2fd8aead6effc9ffecf5d284aaff5cea3f723d7e671100138927e1104a"></a>kCURLssl&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="af88af25f0b268a3fbce635f8edfb4e18" name="af88af25f0b268a3fbce635f8edfb4e18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88af25f0b268a3fbce635f8edfb4e18">&#9670;&#160;</a></span>Curl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">curl::Curl::Curl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a> *&#160;</td>
+          <td class="paramname"><em>loop</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a255b28a5fbc665e3bce816b64f298d0c" name="a255b28a5fbc665e3bce816b64f298d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a255b28a5fbc665e3bce816b64f298d0c">&#9670;&#160;</a></span>~Curl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">curl::Curl::~Curl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a05847ddf7ce5ec05675d09ee9fb29764" name="a05847ddf7ce5ec05675d09ee9fb29764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05847ddf7ce5ec05675d09ee9fb29764">&#9670;&#160;</a></span>checkFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void curl::Curl::checkFinish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66790488f3a70c46335d429d99aea0ef" name="a66790488f3a70c46335d429d99aea0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66790488f3a70c46335d429d99aea0ef">&#9670;&#160;</a></span>getCurlm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a> * curl::Curl::getCurlm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b8b36f4441aa28a047d1d257dab59da" name="a6b8b36f4441aa28a047d1d257dab59da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b8b36f4441aa28a047d1d257dab59da">&#9670;&#160;</a></span>getLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a> * curl::Curl::getLoop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34169bbd64dcf866fa25387d28562c72" name="a34169bbd64dcf866fa25387d28562c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34169bbd64dcf866fa25387d28562c72">&#9670;&#160;</a></span>getUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacecurl.html#a08bb996287bbbcf47cefc28c0eeccd2d">RequestPtr</a> curl::Curl::getUrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_string_arg.html">muduo::StringArg</a>&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a9bf63211d4b86dbffaf8d208955f5e" name="a5a9bf63211d4b86dbffaf8d208955f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a9bf63211d4b86dbffaf8d208955f5e">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void curl::Curl::initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284a">Option</a>&#160;</td>
+          <td class="paramname"><em>opt</em> = <code><a class="el" href="classcurl_1_1_curl.html#acde872d2fd8aead6effc9ffecf5d284aae4bb68ab504b81a43baa8154925c6ae3">kCURLnossl</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a0f5d1bd182b13704e3b4e1adc58069" name="a6a0f5d1bd182b13704e3b4e1adc58069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a0f5d1bd182b13704e3b4e1adc58069">&#9670;&#160;</a></span>onRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void curl::Curl::onRead </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bcb9c474819757ffd175eb60ae29755" name="a8bcb9c474819757ffd175eb60ae29755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bcb9c474819757ffd175eb60ae29755">&#9670;&#160;</a></span>onTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void curl::Curl::onTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e0cce76f7f3f541185b9828180001df" name="a7e0cce76f7f3f541185b9828180001df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0cce76f7f3f541185b9828180001df">&#9670;&#160;</a></span>onWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void curl::Curl::onWrite </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e835b89e4f18ad177cf01bfe64bcbb3" name="a0e835b89e4f18ad177cf01bfe64bcbb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e835b89e4f18ad177cf01bfe64bcbb3">&#9670;&#160;</a></span>socketCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int curl::Curl::socketCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_curl_8h.html#ace655e3633b6533591283994d6b5cdda">CURL</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a204114f0ca70ef613f263d9eb17d7b35" name="a204114f0ca70ef613f263d9eb17d7b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204114f0ca70ef613f263d9eb17d7b35">&#9670;&#160;</a></span>timerCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int curl::Curl::timerCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="aea0504074dc44ebb12305d3500e9d623" name="aea0504074dc44ebb12305d3500e9d623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea0504074dc44ebb12305d3500e9d623">&#9670;&#160;</a></span>curlm_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_curl_8h.html#a5ad3a82c3de54ee92ce4ddb052d18036">CURLM</a>* curl::Curl::curlm_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a15786bf98d4e49ba643de989fffce1" name="a8a15786bf98d4e49ba643de989fffce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a15786bf98d4e49ba643de989fffce1">&#9670;&#160;</a></span>loop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a>* curl::Curl::loop_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e79d413d95ff2ca9853c0ea04e95cf7" name="a8e79d413d95ff2ca9853c0ea04e95cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e79d413d95ff2ca9853c0ea04e95cf7">&#9670;&#160;</a></span>prevRunningHandles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int curl::Curl::prevRunningHandles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae19267c8067d779c2b04283f3684a645" name="ae19267c8067d779c2b04283f3684a645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae19267c8067d779c2b04283f3684a645">&#9670;&#160;</a></span>runningHandles_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int curl::Curl::runningHandles_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacecurl.html">curl</a></li><li class="navelem"><a class="el" href="classcurl_1_1_curl.html">Curl</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

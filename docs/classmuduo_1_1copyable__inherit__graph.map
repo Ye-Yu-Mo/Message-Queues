@@ -1,0 +1,21 @@
+<map id="muduo::copyable" name="muduo::copyable">
+<area shape="rect" id="Node000001" title="A tag class emphasises the objects are copyable." alt="" coords="5,203,140,228"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1_date.html" title="Date in Gregorian calendar." alt="" coords="232,5,339,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,189,97,155,119,115,149,74,186,40,208,28,231,21,232,26,210,33,190,44,153,78,124,117,101,157,86,191"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1_time_zone.html" title=" " alt="" coords="215,55,356,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="87,190,128,138,156,112,187,89,213,77,215,82,189,94,159,116,132,142,92,193"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="211,104,360,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="99,192,139,164,187,138,220,127,221,132,189,143,142,169,102,196"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_buffer.html" title="A buffer class modeled after org.jboss.netty.buffer.ChannelBuffer" alt="" coords="214,153,357,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="141,197,229,176,230,181,142,202"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_http_context.html" title=" " alt="" coords="194,203,377,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="154,213,194,213,194,218,154,218"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1net_1_1_http_request.html" title=" " alt="" coords="193,252,378,277"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="142,229,230,249,229,255,141,234"/>
+<area shape="rect" id="Node000008" href="$classmuduo_1_1net_1_1_http_response.html" title=" " alt="" coords="188,301,383,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="103,234,143,261,189,286,225,299,223,304,187,291,140,266,100,239"/>
+<area shape="rect" id="Node000009" href="$classmuduo_1_1net_1_1_inet_address.html" title="Wrapper of sockaddr_in." alt="" coords="195,351,376,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="92,238,133,288,159,314,189,336,217,348,215,353,187,340,156,318,129,292,88,241"/>
+<area shape="rect" id="Node000010" href="$classmuduo_1_1net_1_1_timer_id.html" title="An opaque identifier, for canceling Timer." alt="" coords="208,400,363,425"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="86,240,102,274,125,313,154,352,190,385,213,398,211,402,186,390,150,356,120,316,97,276,82,242"/>
+</map>

@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/Xulog/logs/util.hpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('util_8hpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">util.hpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>实用工具类的实现  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+util.hpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="util_8hpp__incl.png" border="0" usemap="#athird_2_xulog_2logs_2util_8hpp" alt=""/></div>
+<map name="athird_2_xulog_2logs_2util_8hpp" id="athird_2_xulog_2logs_2util_8hpp">
+<area shape="rect" title="实用工具类的实现" alt="" coords="50,5,227,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,85,104"/>
+<area shape="poly" title=" " alt="" coords="125,33,73,72,70,68,122,29"/>
+<area shape="rect" title=" " alt="" coords="109,79,168,104"/>
+<area shape="poly" title=" " alt="" coords="141,31,141,65,136,65,136,31"/>
+<area shape="rect" title=" " alt="" coords="192,79,277,104"/>
+<area shape="poly" title=" " alt="" coords="156,29,209,68,206,72,153,33"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="util_8hpp__dep__incl.png" border="0" usemap="#athird_2_xulog_2logs_2util_8hppdep" alt=""/></div>
+<map name="athird_2_xulog_2logs_2util_8hppdep" id="athird_2_xulog_2logs_2util_8hppdep">
+<area shape="rect" title="实用工具类的实现" alt="" coords="223,5,400,31"/>
+<area shape="rect" href="buffer_8hpp.html" title="实现异步日志缓冲区" alt="" coords="8,79,201,104"/>
+<area shape="poly" title=" " alt="" coords="266,38,139,81,137,76,264,33"/>
+<area shape="rect" href="third_2_xulog_2logs_2logger_8hpp.html" title="日志器模块的实现" alt="" coords="209,225,405,251"/>
+<area shape="poly" title=" " alt="" coords="292,42,279,60,268,80,260,106,258,128,260,150,267,176,281,203,298,224,294,227,276,206,262,178,255,151,252,128,255,105,264,78,274,57,288,39"/>
+<area shape="rect" href="message_8hpp.html" title="日志消息类的实现" alt="" coords="277,79,492,104"/>
+<area shape="poly" title=" " alt="" coords="335,38,375,77,371,80,331,42"/>
+<area shape="rect" href="sink_8hpp.html" title="日志落地模块的实现" alt="" coords="501,152,684,177"/>
+<area shape="poly" title=" " alt="" coords="388,31,447,49,506,76,531,94,553,114,586,150,582,153,549,118,527,98,503,81,445,54,387,36"/>
+<area shape="rect" href="looper_8hpp.html" title="实现异步工作器" alt="" coords="5,152,201,177"/>
+<area shape="poly" title=" " alt="" coords="107,118,106,152,101,152,102,118"/>
+<area shape="poly" title=" " alt="" coords="150,179,275,223,273,228,148,184"/>
+<area shape="rect" href="_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="219,299,396,324"/>
+<area shape="poly" title=" " alt="" coords="310,264,310,299,305,299,305,264"/>
+<area shape="rect" href="common_2logger_8hpp.html" title="异步日志器初始化" alt="" coords="232,372,383,397"/>
+<area shape="poly" title=" " alt="" coords="310,338,310,372,305,372,305,338"/>
+<area shape="rect" href="helper_8hpp.html" title="工具类封装" alt="" coords="289,445,440,471"/>
+<area shape="poly" title=" " alt="" coords="327,406,357,444,353,447,323,410"/>
+<area shape="rect" href="exchange_8hpp.html" title=" " alt="" coords="172,519,331,544"/>
+<area shape="poly" title=" " alt="" coords="297,411,280,446,257,519,252,517,276,444,292,409"/>
+<area shape="poly" title=" " alt="" coords="336,480,271,521,268,516,333,476"/>
+<area shape="rect" href="mqfiletest_8cpp.html" title=" " alt="" coords="355,519,499,544"/>
+<area shape="poly" title=" " alt="" coords="386,479,419,517,415,520,382,483"/>
+<area shape="rect" href="format_8hpp.html" title="日志格式化器类的定义" alt="" coords="277,152,477,177"/>
+<area shape="poly" title=" " alt="" coords="384,118,381,152,375,152,379,117"/>
+<area shape="poly" title=" " alt="" coords="358,189,320,227,317,223,354,185"/>
+<area shape="poly" title=" " alt="" coords="534,183,354,228,353,223,533,178"/>
+</map>
+</div>
+</div>
+<p><a href="util_8hpp_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_util_1_1_date.html">Xulog::Util::Date</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">时间相关的实用工具类  <a href="class_xulog_1_1_util_1_1_date.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xulog_1_1_util_1_1_file.html">Xulog::Util::File</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">文件操作相关的实用工具类  <a href="class_xulog_1_1_util_1_1_file.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespace_xulog" id="r_namespace_xulog"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xulog.html">Xulog</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_xulog_1_1_util" id="r_namespace_xulog_1_1_util"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xulog_1_1_util.html">Xulog::Util</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>实用工具类的实现 </p>
+<p>本文件提供了一些实用工具类，包括获取系统时间、判断文件是否存在、获取文件路径和创建目录的功能。 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_3d51c71fbe3232da15b63057f4c30ad5.html">Xulog</a></li><li class="navelem"><a class="el" href="dir_2517dc2a62df3eff651c1026a8c8daa7.html">logs</a></li><li class="navelem"><a class="el" href="util_8hpp.html">util.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

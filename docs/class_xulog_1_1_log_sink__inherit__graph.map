@@ -1,0 +1,9 @@
+<map id="Xulog::LogSink" name="Xulog::LogSink">
+<area shape="rect" id="Node000001" title="抽象日志落地基类" alt="" coords="171,5,289,31"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_file_sink.html" title="文件日志落地实现" alt="" coords="5,79,124,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,38,93,81,91,76,190,34"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_roll_sink_by_size.html" title="基于文件大小的滚动文件日志落地实现" alt="" coords="148,79,312,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="233,44,233,79,227,79,227,44"/>
+<area shape="rect" id="Node000004" href="$class_xulog_1_1_stdout_sink.html" title="标准输出日志落地实现" alt="" coords="336,79,473,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="272,33,377,76,375,81,270,38"/>
+</map>

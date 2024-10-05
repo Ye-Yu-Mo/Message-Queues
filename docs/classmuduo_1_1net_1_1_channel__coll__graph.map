@@ -1,0 +1,17 @@
+<map id="muduo::net::Channel" name="muduo::net::Channel">
+<area shape="rect" id="Node000001" title="A selectable I/O channel." alt="" coords="267,22,424,47"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_event_loop.html" title="Reactor, at most one per thread." alt="" coords="624,51,796,77"/>
+<area shape="poly" id="edge8_Node000003_Node000001" title=" " alt="" coords="438,20,517,16,600,23,644,34,682,49,680,54,642,39,600,28,517,21,438,25"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="32,38,191,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,42,266,37,267,43,205,47"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="205,53,267,56,624,61,624,67,267,61,205,59"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="610,59,424,44,425,38,610,53"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1_timestamp.html" title="Time stamp in UTC, in microseconds resolution." alt="" coords="271,131,420,157"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="433,140,515,133,599,116,648,97,687,75,690,79,650,101,601,121,516,139,434,146"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="44,94,179,119"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="193,117,271,129,270,135,192,122"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="10,144,213,184"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="226,152,270,148,271,153,227,157"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,208,217,248"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="194,201,216,193,314,154,316,159,218,199,195,206"/>
+</map>

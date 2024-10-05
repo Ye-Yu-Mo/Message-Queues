@@ -1,0 +1,10 @@
+<map id="muduo::net::Buffer::appendInt8" name="muduo::net::Buffer::appendInt8">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,59,148,99"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#a532812baf409f12b9edca095c4d272cd" title=" " alt="" coords="196,29,339,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,65,182,60,183,65,148,70"/>
+<area shape="rect" id="Node000003" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="387,66,545,91"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="149,78,196,79,339,79,373,78,373,84,339,84,196,84,148,83"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="231,30,229,20,235,11,248,5,267,3,290,6,302,13,299,17,288,11,267,8,249,10,239,15,235,21,237,28"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="339,57,374,62,373,68,338,62"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="433,67,427,58,430,48,444,42,466,39,493,43,504,52,501,56,491,48,466,45,445,47,434,51,432,57,438,64"/>
+</map>

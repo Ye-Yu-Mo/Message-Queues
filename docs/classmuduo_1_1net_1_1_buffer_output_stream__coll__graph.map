@@ -1,0 +1,9 @@
+<map id="muduo::net::BufferOutputStream" name="muduo::net::BufferOutputStream">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,183,212,223"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,189,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,133,117,182,112,183,102,134"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer.html" title="A buffer class modeled after org.jboss.netty.buffer.ChannelBuffer" alt="" coords="214,87,357,113"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,122,151,185,149,180,253,118"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="218,5,353,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="288,44,288,87,283,87,283,44"/>
+</map>

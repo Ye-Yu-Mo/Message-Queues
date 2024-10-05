@@ -1,0 +1,7 @@
+<map id="muduo::net::sockets::hostToNetwork32" name="muduo::net::sockets::hostToNetwork32">
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,37,349,77"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#ae2dd449ac0adeb47ddb46e470eef7233" title="Append int32_t using network endian" alt="" coords="5,5,148,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,45,148,40,149,34,183,40"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer.html#a3334de5d3aa75426bbc2c4dcca084871" title="Prepend int32_t using network endian" alt="" coords="5,69,148,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,75,149,80,148,75,182,69"/>
+</map>

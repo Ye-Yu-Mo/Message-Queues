@@ -1,0 +1,6 @@
+<map id="XuMQ::FileHelper::read" name="XuMQ::FileHelper::read">
+<area shape="rect" id="Node000001" title="读取文件内容" alt="" coords="5,29,177,55"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="56,31,48,21,52,11,67,5,91,3,122,6,134,15,131,20,120,11,91,8,68,10,56,15,53,20,60,28"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="225,29,395,55"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="177,39,212,39,212,45,177,45"/>
+</map>

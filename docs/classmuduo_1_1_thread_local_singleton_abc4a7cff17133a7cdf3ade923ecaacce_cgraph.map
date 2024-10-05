@@ -1,0 +1,9 @@
+<map id="muduo::ThreadLocalSingleton::instance" name="muduo::ThreadLocalSingleton::instance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,22,220,62"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="531,29,689,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,36,268,35,483,35,517,36,517,41,483,41,268,41,220,42"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1_thread_local_singleton_1_1_deleter.html#a18d61d9e3ff4eb347dcb3855c7059211" title=" " alt="" coords="268,50,483,90"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="220,51,255,54,254,60,220,56"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="572,31,564,21,568,11,584,5,610,3,643,7,656,16,652,20,641,11,610,8,585,10,571,15,569,20,576,27"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="483,55,517,50,517,56,483,60"/>
+</map>

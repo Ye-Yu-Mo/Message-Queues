@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/Timestamp.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_timestamp_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Timestamp.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_timestamp_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef MUDUO_BASE_TIMESTAMP_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define MUDUO_BASE_TIMESTAMP_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="copyable_8h.html">muduo/base/copyable.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">muduo/base/Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;boost/operators.hpp&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmuduo_1_1copyable.html">muduo::copyable</a>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                  <span class="keyword">public</span> boost::equality_comparable&lt;Timestamp&gt;,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                  <span class="keyword">public</span> boost::less_than_comparable&lt;Timestamp&gt;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795">   31</a></span>  <a class="code hl_function" href="classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795">Timestamp</a>()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    : <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a>(0)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#afbb29d35ad8940b77b8059e1221b55e0">   40</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#afbb29d35ad8940b77b8059e1221b55e0">Timestamp</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">microSecondsSinceEpochArg</a>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    : <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">microSecondsSinceEpochArg</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a71631d5eb0b83125c2bfac43014c8f74">   45</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a71631d5eb0b83125c2bfac43014c8f74">swap</a>(<a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">that</a>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::swap(<a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a>, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">that</a>.microSecondsSinceEpoch_);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// default copy/assignment/dtor are Okay</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a7f558747d33d5d9b70dd41865aa60718">   52</a></span>  <span class="keywordtype">string</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a7f558747d33d5d9b70dd41865aa60718">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a32d4867a45029f3492cf77e135d4b508">   53</a></span>  <span class="keywordtype">string</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a32d4867a45029f3492cf77e135d4b508">toFormattedString</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">showMicroseconds</a> = <span class="keyword">true</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a2462f9bb64bf5b47958d81a33cd73456">   55</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a2462f9bb64bf5b47958d81a33cd73456">valid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a> &gt; 0; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// for internal usage.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a4a40934002803cca2be3afb3b0d0c27c">   58</a></span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a4a40934002803cca2be3afb3b0d0c27c">microSecondsSinceEpoch</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a>; }</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#ae4f26ead2d918f39070f757ca6ed6716">   59</a></span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#ae4f26ead2d918f39070f757ca6ed6716">secondsSinceEpoch</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">  </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a> / <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">kMicroSecondsPerSecond</a>); }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a71c72f5ee4e214b98ffee0e9611b731d">   65</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a71c72f5ee4e214b98ffee0e9611b731d">now</a>();</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a9e8c678f60a46561a68c992465fc4b28">   66</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a9e8c678f60a46561a68c992465fc4b28">invalid</a>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795">Timestamp</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a6dfde87bbcbe80b18c2748635023f86c">   71</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a6dfde87bbcbe80b18c2748635023f86c">fromUnixTime</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">t</a>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a6dfde87bbcbe80b18c2748635023f86c">fromUnixTime</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">t</a>, 0);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a13d5d3cec2e0ae6b9f1c0f10b60b391b">   76</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#a13d5d3cec2e0ae6b9f1c0f10b60b391b">fromUnixTime</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">t</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">microseconds</a>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795">Timestamp</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a><span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">t</a>) * <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">kMicroSecondsPerSecond</a> + <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">microseconds</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">   81</a></span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">kMicroSecondsPerSecond</a> = 1000 * 1000;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">   84</a></span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">microSecondsSinceEpoch_</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="namespacemuduo.html#a7cdae651f87c159c785591256d06740e">   87</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemuduo.html#a16d6a8ea1b5e79c94c59f96137b8d26d">operator&lt;</a>(<a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">lhs</a>, <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rhs</a>)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">lhs</a>.microSecondsSinceEpoch() &lt; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rhs</a>.microSecondsSinceEpoch();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="namespacemuduo.html#abf794c2f7edbea7af7ae48632eef1b84">   92</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemuduo.html#a0a048e90c15864ab82a55b148bebd144">operator==</a>(<a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">lhs</a>, <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rhs</a>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">lhs</a>.microSecondsSinceEpoch() == <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rhs</a>.microSecondsSinceEpoch();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="namespacemuduo.html#a6f7c17d86f2474f297b3b9e54b500907">  104</a></span><span class="keyword">inline</span> <span class="keywordtype">double</span> <a class="code hl_function" href="namespacemuduo.html#a6f7c17d86f2474f297b3b9e54b500907">timeDifference</a>(<a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">high</a>, <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">low</a>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">diff</a> = <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">high</a>.microSecondsSinceEpoch() - <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">low</a>.microSecondsSinceEpoch();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">diff</a>) / <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">Timestamp::kMicroSecondsPerSecond</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="namespacemuduo.html#a4c4a0e85f7b5c4056878cd7cf26a83cb">  115</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a4c4a0e85f7b5c4056878cd7cf26a83cb">addTime</a>(<a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">timestamp</a>, <span class="keywordtype">double</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">seconds</a>)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>{</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delta</a> = <span class="keyword">static_cast&lt;</span><a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a><span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">seconds</a> * <a class="code hl_variable" href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">Timestamp::kMicroSecondsPerSecond</a>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">timestamp</a>.microSecondsSinceEpoch() + <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delta</a>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif  </span><span class="comment">// MUDUO_BASE_TIMESTAMP_H</span></div>
+<div class="ttc" id="a_types_8h_html"><div class="ttname"><a href="_types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html"><div class="ttname"><a href="classmuduo_1_1_timestamp.html">muduo::Timestamp</a></div><div class="ttdoc">Time stamp in UTC, in microseconds resolution.</div><div class="ttdef"><b>Definition</b> Timestamp.h:26</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a13d5d3cec2e0ae6b9f1c0f10b60b391b"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a13d5d3cec2e0ae6b9f1c0f10b60b391b">muduo::Timestamp::fromUnixTime</a></div><div class="ttdeci">static Timestamp fromUnixTime(time_t t, int microseconds)</div><div class="ttdef"><b>Definition</b> Timestamp.h:76</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a2462f9bb64bf5b47958d81a33cd73456"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a2462f9bb64bf5b47958d81a33cd73456">muduo::Timestamp::valid</a></div><div class="ttdeci">bool valid() const</div><div class="ttdef"><b>Definition</b> Timestamp.h:55</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a32d4867a45029f3492cf77e135d4b508"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a32d4867a45029f3492cf77e135d4b508">muduo::Timestamp::toFormattedString</a></div><div class="ttdeci">string toFormattedString(bool showMicroseconds=true) const</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a45f53784a1ded5a85dca411bfdda3067"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a45f53784a1ded5a85dca411bfdda3067">muduo::Timestamp::kMicroSecondsPerSecond</a></div><div class="ttdeci">static const int kMicroSecondsPerSecond</div><div class="ttdef"><b>Definition</b> Timestamp.h:81</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a4a40934002803cca2be3afb3b0d0c27c"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a4a40934002803cca2be3afb3b0d0c27c">muduo::Timestamp::microSecondsSinceEpoch</a></div><div class="ttdeci">int64_t microSecondsSinceEpoch() const</div><div class="ttdef"><b>Definition</b> Timestamp.h:58</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a6dfde87bbcbe80b18c2748635023f86c"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a6dfde87bbcbe80b18c2748635023f86c">muduo::Timestamp::fromUnixTime</a></div><div class="ttdeci">static Timestamp fromUnixTime(time_t t)</div><div class="ttdef"><b>Definition</b> Timestamp.h:71</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a71631d5eb0b83125c2bfac43014c8f74"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a71631d5eb0b83125c2bfac43014c8f74">muduo::Timestamp::swap</a></div><div class="ttdeci">void swap(Timestamp &amp;that)</div><div class="ttdef"><b>Definition</b> Timestamp.h:45</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a71c72f5ee4e214b98ffee0e9611b731d"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a71c72f5ee4e214b98ffee0e9611b731d">muduo::Timestamp::now</a></div><div class="ttdeci">static Timestamp now()</div><div class="ttdoc">Get time of now.</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a7f558747d33d5d9b70dd41865aa60718"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a7f558747d33d5d9b70dd41865aa60718">muduo::Timestamp::toString</a></div><div class="ttdeci">string toString() const</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_a9e8c678f60a46561a68c992465fc4b28"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#a9e8c678f60a46561a68c992465fc4b28">muduo::Timestamp::invalid</a></div><div class="ttdeci">static Timestamp invalid()</div><div class="ttdef"><b>Definition</b> Timestamp.h:66</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_aada14b88415a9bcde8cf5fc8a1f4a18a"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#aada14b88415a9bcde8cf5fc8a1f4a18a">muduo::Timestamp::microSecondsSinceEpoch_</a></div><div class="ttdeci">int64_t microSecondsSinceEpoch_</div><div class="ttdef"><b>Definition</b> Timestamp.h:84</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_ae4f26ead2d918f39070f757ca6ed6716"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#ae4f26ead2d918f39070f757ca6ed6716">muduo::Timestamp::secondsSinceEpoch</a></div><div class="ttdeci">time_t secondsSinceEpoch() const</div><div class="ttdef"><b>Definition</b> Timestamp.h:59</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_ae8d2d2d7a295a59ac9bce9a5b0b35795"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795">muduo::Timestamp::Timestamp</a></div><div class="ttdeci">Timestamp()</div><div class="ttdoc">Constucts an invalid Timestamp.</div><div class="ttdef"><b>Definition</b> Timestamp.h:31</div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html_afbb29d35ad8940b77b8059e1221b55e0"><div class="ttname"><a href="classmuduo_1_1_timestamp.html#afbb29d35ad8940b77b8059e1221b55e0">muduo::Timestamp::Timestamp</a></div><div class="ttdeci">Timestamp(int64_t microSecondsSinceEpochArg)</div><div class="ttdoc">Constucts a Timestamp at specific time</div><div class="ttdef"><b>Definition</b> Timestamp.h:40</div></div>
+<div class="ttc" id="aclassmuduo_1_1copyable_html"><div class="ttname"><a href="classmuduo_1_1copyable.html">muduo::copyable</a></div><div class="ttdoc">A tag class emphasises the objects are copyable.</div><div class="ttdef"><b>Definition</b> copyable.h:11</div></div>
+<div class="ttc" id="acopyable_8h_html"><div class="ttname"><a href="copyable_8h.html">copyable.h</a></div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+<div class="ttc" id="anamespacemuduo_html_a0a048e90c15864ab82a55b148bebd144"><div class="ttname"><a href="namespacemuduo.html#a0a048e90c15864ab82a55b148bebd144">muduo::operator==</a></div><div class="ttdeci">bool operator==(Date x, Date y)</div><div class="ttdef"><b>Definition</b> Date.h:112</div></div>
+<div class="ttc" id="anamespacemuduo_html_a16d6a8ea1b5e79c94c59f96137b8d26d"><div class="ttname"><a href="namespacemuduo.html#a16d6a8ea1b5e79c94c59f96137b8d26d">muduo::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(Date x, Date y)</div><div class="ttdef"><b>Definition</b> Date.h:107</div></div>
+<div class="ttc" id="anamespacemuduo_html_a4c4a0e85f7b5c4056878cd7cf26a83cb"><div class="ttname"><a href="namespacemuduo.html#a4c4a0e85f7b5c4056878cd7cf26a83cb">muduo::addTime</a></div><div class="ttdeci">Timestamp addTime(Timestamp timestamp, double seconds)</div><div class="ttdoc">Add seconds to given timestamp.</div><div class="ttdef"><b>Definition</b> Timestamp.h:115</div></div>
+<div class="ttc" id="anamespacemuduo_html_a6f7c17d86f2474f297b3b9e54b500907"><div class="ttname"><a href="namespacemuduo.html#a6f7c17d86f2474f297b3b9e54b500907">muduo::timeDifference</a></div><div class="ttdeci">double timeDifference(Timestamp high, Timestamp low)</div><div class="ttdoc">Gets time difference of two timestamps, result in seconds.</div><div class="ttdef"><b>Definition</b> Timestamp.h:104</div></div>
+<div class="ttc" id="anamespacemuduo_html_a72cbcf425db108335295456e8ff9c12b"><div class="ttname"><a href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">muduo::implicit_cast</a></div><div class="ttdeci">To implicit_cast(From const &amp;f)</div><div class="ttdef"><b>Definition</b> Types.h:80</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_timestamp_8h.html">Timestamp.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

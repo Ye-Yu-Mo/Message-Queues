@@ -1,0 +1,11 @@
+<map id="muduo::net::EventLoop::assertInLoopThread" name="muduo::net::EventLoop::assertInLoopThread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,177,77"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_event_loop.html#a9a9c60c6ee38944df4be5b98c5ab371f" title=" " alt="" coords="225,5,400,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,42,212,37,212,43,178,48"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_event_loop.html#a91225dcd4c4e639adf55706324ec057d" title=" " alt="" coords="227,69,399,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,67,214,72,213,78,177,72"/>
+<area shape="rect" id="Node000004" href="$namespacemuduo_1_1_current_thread.html#a27129392a2d642e96188636257bf13ca" title=" " alt="" coords="448,77,641,102"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="399,87,434,87,434,92,399,92"/>
+<area shape="rect" id="Node000005" href="$namespacemuduo_1_1_current_thread.html#a09cc852243e579266304c5e31f744929" title=" " alt="" coords="689,69,857,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="642,87,676,87,676,92,642,92"/>
+</map>

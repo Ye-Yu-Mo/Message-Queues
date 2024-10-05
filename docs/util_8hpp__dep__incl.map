@@ -1,0 +1,29 @@
+<map id="third/Xulog/logs/util.hpp" name="third/Xulog/logs/util.hpp">
+<area shape="rect" id="Node000001" title="实用工具类的实现" alt="" coords="223,5,400,31"/>
+<area shape="rect" id="Node000002" href="$buffer_8hpp.html" title="实现异步日志缓冲区" alt="" coords="8,79,201,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="266,38,139,81,137,76,264,33"/>
+<area shape="rect" id="Node000004" href="$third_2_xulog_2logs_2logger_8hpp.html" title="日志器模块的实现" alt="" coords="209,225,405,251"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="292,42,279,60,268,80,260,106,258,128,260,150,267,176,281,203,298,224,294,227,276,206,262,178,255,151,252,128,255,105,264,78,274,57,288,39"/>
+<area shape="rect" id="Node000010" href="$message_8hpp.html" title="日志消息类的实现" alt="" coords="277,79,492,104"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="335,38,375,77,371,80,331,42"/>
+<area shape="rect" id="Node000012" href="$sink_8hpp.html" title="日志落地模块的实现" alt="" coords="501,152,684,177"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="388,31,447,49,506,76,531,94,553,114,586,150,582,153,549,118,527,98,503,81,445,54,387,36"/>
+<area shape="rect" id="Node000003" href="$looper_8hpp.html" title="实现异步工作器" alt="" coords="5,152,201,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="107,118,106,152,101,152,102,118"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,179,275,223,273,228,148,184"/>
+<area shape="rect" id="Node000005" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="219,299,396,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="310,264,310,299,305,299,305,264"/>
+<area shape="rect" id="Node000006" href="$common_2logger_8hpp.html" title="异步日志器初始化" alt="" coords="232,372,383,397"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="310,338,310,372,305,372,305,338"/>
+<area shape="rect" id="Node000007" href="$helper_8hpp.html" title="工具类封装" alt="" coords="289,445,440,471"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="327,406,357,444,353,447,323,410"/>
+<area shape="rect" id="Node000008" href="$exchange_8hpp.html" title=" " alt="" coords="172,519,331,544"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="297,411,280,446,257,519,252,517,276,444,292,409"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="336,480,271,521,268,516,333,476"/>
+<area shape="rect" id="Node000009" href="$mqfiletest_8cpp.html" title=" " alt="" coords="355,519,499,544"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="386,479,419,517,415,520,382,483"/>
+<area shape="rect" id="Node000011" href="$format_8hpp.html" title="日志格式化器类的定义" alt="" coords="277,152,477,177"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="384,118,381,152,375,152,379,117"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="358,189,320,227,317,223,354,185"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="534,183,354,228,353,223,533,178"/>
+</map>

@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/GzipFile.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_gzip_file_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GzipFile.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_gzip_file_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_string_piece_8h.html">muduo/base/StringPiece.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="noncopyable_8h.html">muduo/base/noncopyable.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;zlib.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a> : <a class="code hl_class" href="classmuduo_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a77121bfaab4d945c9be404ec6ace4f69">   18</a></span>  <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a77121bfaab4d945c9be404ec6ace4f69">GzipFile</a>(<a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>&amp;&amp; rhs) noexcept</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    : <a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>(rhs.file_)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    rhs.file_ = NULL;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  }</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#af0fbd40b320f72e97d96cecd63c7579b">   24</a></span>  <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#af0fbd40b320f72e97d96cecd63c7579b">~GzipFile</a>()</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      ::gzclose(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  }</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a4f04e7916a0980e2f37e4aeb99f1f9a6">   32</a></span>  <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>&amp; <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a4f04e7916a0980e2f37e4aeb99f1f9a6">operator=</a>(<a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>&amp;&amp; rhs) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a5d848c7b95d8bd8772cc8b24d86efd6c">swap</a>(rhs);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#aa6cbca881675d0af1e0205346bd75044">   38</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#aa6cbca881675d0af1e0205346bd75044">valid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a> != NULL; }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a5d848c7b95d8bd8772cc8b24d86efd6c">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a5d848c7b95d8bd8772cc8b24d86efd6c">swap</a>(<a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>&amp; rhs) { std::swap(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>, rhs.<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#if ZLIB_VERNUM &gt;= 0x1240</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">bool</span> setBuffer(<span class="keywordtype">int</span> size) { return ::gzbuffer(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>, size) == 0; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="comment">// return the number of uncompressed bytes actually read, 0 for eof, -1 for error</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a45ab216cbc14bddc108533ccb45be1dd">   45</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a45ab216cbc14bddc108533ccb45be1dd">read</a>(<span class="keywordtype">void</span>* buf, <span class="keywordtype">int</span> len) { return ::gzread(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>, buf, len); }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">// return the number of uncompressed bytes actually written</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a5af141743a8bde5370571b0dfad80c8a">   48</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a5af141743a8bde5370571b0dfad80c8a">write</a>(<a class="code hl_class" href="classmuduo_1_1_string_piece.html">StringPiece</a> buf) { return ::gzwrite(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>, buf.<a class="code hl_function" href="classmuduo_1_1_string_piece.html#a3881eb3a42aad5c711350faff1b191bc">data</a>(), buf.<a class="code hl_function" href="classmuduo_1_1_string_piece.html#a72508dd18e69ad4fc3740791ee299ae1">size</a>()); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// number of uncompressed bytes</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a7342bbafef8e8488275a76846f389f9c">   51</a></span>  off_t <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a7342bbafef8e8488275a76846f389f9c">tell</a>()<span class="keyword"> const </span>{ return ::gztell(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>); }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#if ZLIB_VERNUM &gt;= 0x1240</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="comment">// number of compressed bytes</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  off_t offset()<span class="keyword"> const </span>{ return ::gzoffset(<a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>); }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// int flush(int f) { return ::gzflush(file_, f); }</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a76736446755de8597047df90339aec8a">   60</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a76736446755de8597047df90339aec8a">openForRead</a>(<a class="code hl_class" href="classmuduo_1_1_string_arg.html">StringArg</a> filename)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>(::gzopen(filename.<a class="code hl_function" href="classmuduo_1_1_string_arg.html#ac7619284eaab21e7ea01c39db2f52d64">c_str</a>(), <span class="stringliteral">&quot;rbe&quot;</span>));</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  }</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#ab9af505351a82f41d9fb60fff945a4dd">   65</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#ab9af505351a82f41d9fb60fff945a4dd">openForAppend</a>(<a class="code hl_class" href="classmuduo_1_1_string_arg.html">StringArg</a> filename)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>(::gzopen(filename.<a class="code hl_function" href="classmuduo_1_1_string_arg.html#ac7619284eaab21e7ea01c39db2f52d64">c_str</a>(), <span class="stringliteral">&quot;abe&quot;</span>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a14534b18fe77998f9b0aa23fa2dedfdc">   70</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a14534b18fe77998f9b0aa23fa2dedfdc">openForWriteExclusive</a>(<a class="code hl_class" href="classmuduo_1_1_string_arg.html">StringArg</a> filename)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>(::gzopen(filename.<a class="code hl_function" href="classmuduo_1_1_string_arg.html#ac7619284eaab21e7ea01c39db2f52d64">c_str</a>(), <span class="stringliteral">&quot;wbxe&quot;</span>));</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#aee934b26abd391c21fea3a09297e869e">   75</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#aee934b26abd391c21fea3a09297e869e">openForWriteTruncate</a>(<a class="code hl_class" href="classmuduo_1_1_string_arg.html">StringArg</a> filename)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_gzip_file.html">GzipFile</a>(::gzopen(filename.<a class="code hl_function" href="classmuduo_1_1_string_arg.html#ac7619284eaab21e7ea01c39db2f52d64">c_str</a>(), <span class="stringliteral">&quot;wbe&quot;</span>));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a2d4089aa52021f04ba4a39c013c19aa5">   81</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classmuduo_1_1_gzip_file.html#a2d4089aa52021f04ba4a39c013c19aa5">GzipFile</a>(gzFile file)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    : <a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>(file)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">   86</a></span>  gzFile <a class="code hl_variable" href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">file_</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="ttc" id="a_string_piece_8h_html"><div class="ttname"><a href="_string_piece_8h.html">StringPiece.h</a></div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html">muduo::GzipFile</a></div><div class="ttdef"><b>Definition</b> GzipFile.h:16</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a14534b18fe77998f9b0aa23fa2dedfdc"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a14534b18fe77998f9b0aa23fa2dedfdc">muduo::GzipFile::openForWriteExclusive</a></div><div class="ttdeci">static GzipFile openForWriteExclusive(StringArg filename)</div><div class="ttdef"><b>Definition</b> GzipFile.h:70</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a2d4089aa52021f04ba4a39c013c19aa5"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a2d4089aa52021f04ba4a39c013c19aa5">muduo::GzipFile::GzipFile</a></div><div class="ttdeci">GzipFile(gzFile file)</div><div class="ttdef"><b>Definition</b> GzipFile.h:81</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a45ab216cbc14bddc108533ccb45be1dd"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a45ab216cbc14bddc108533ccb45be1dd">muduo::GzipFile::read</a></div><div class="ttdeci">int read(void *buf, int len)</div><div class="ttdef"><b>Definition</b> GzipFile.h:45</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a4f04e7916a0980e2f37e4aeb99f1f9a6"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a4f04e7916a0980e2f37e4aeb99f1f9a6">muduo::GzipFile::operator=</a></div><div class="ttdeci">GzipFile &amp; operator=(GzipFile &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> GzipFile.h:32</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a5af141743a8bde5370571b0dfad80c8a"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a5af141743a8bde5370571b0dfad80c8a">muduo::GzipFile::write</a></div><div class="ttdeci">int write(StringPiece buf)</div><div class="ttdef"><b>Definition</b> GzipFile.h:48</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a5d848c7b95d8bd8772cc8b24d86efd6c"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a5d848c7b95d8bd8772cc8b24d86efd6c">muduo::GzipFile::swap</a></div><div class="ttdeci">void swap(GzipFile &amp;rhs)</div><div class="ttdef"><b>Definition</b> GzipFile.h:39</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a7342bbafef8e8488275a76846f389f9c"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a7342bbafef8e8488275a76846f389f9c">muduo::GzipFile::tell</a></div><div class="ttdeci">off_t tell() const</div><div class="ttdef"><b>Definition</b> GzipFile.h:51</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a76736446755de8597047df90339aec8a"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a76736446755de8597047df90339aec8a">muduo::GzipFile::openForRead</a></div><div class="ttdeci">static GzipFile openForRead(StringArg filename)</div><div class="ttdef"><b>Definition</b> GzipFile.h:60</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a77121bfaab4d945c9be404ec6ace4f69"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a77121bfaab4d945c9be404ec6ace4f69">muduo::GzipFile::GzipFile</a></div><div class="ttdeci">GzipFile(GzipFile &amp;&amp;rhs) noexcept</div><div class="ttdef"><b>Definition</b> GzipFile.h:18</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_a878f19acf3c71bdef4d7e3f07db8b762"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#a878f19acf3c71bdef4d7e3f07db8b762">muduo::GzipFile::file_</a></div><div class="ttdeci">gzFile file_</div><div class="ttdef"><b>Definition</b> GzipFile.h:86</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_aa6cbca881675d0af1e0205346bd75044"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#aa6cbca881675d0af1e0205346bd75044">muduo::GzipFile::valid</a></div><div class="ttdeci">bool valid() const</div><div class="ttdef"><b>Definition</b> GzipFile.h:38</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_ab9af505351a82f41d9fb60fff945a4dd"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#ab9af505351a82f41d9fb60fff945a4dd">muduo::GzipFile::openForAppend</a></div><div class="ttdeci">static GzipFile openForAppend(StringArg filename)</div><div class="ttdef"><b>Definition</b> GzipFile.h:65</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_aee934b26abd391c21fea3a09297e869e"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#aee934b26abd391c21fea3a09297e869e">muduo::GzipFile::openForWriteTruncate</a></div><div class="ttdeci">static GzipFile openForWriteTruncate(StringArg filename)</div><div class="ttdef"><b>Definition</b> GzipFile.h:75</div></div>
+<div class="ttc" id="aclassmuduo_1_1_gzip_file_html_af0fbd40b320f72e97d96cecd63c7579b"><div class="ttname"><a href="classmuduo_1_1_gzip_file.html#af0fbd40b320f72e97d96cecd63c7579b">muduo::GzipFile::~GzipFile</a></div><div class="ttdeci">~GzipFile()</div><div class="ttdef"><b>Definition</b> GzipFile.h:24</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_arg_html"><div class="ttname"><a href="classmuduo_1_1_string_arg.html">muduo::StringArg</a></div><div class="ttdef"><b>Definition</b> StringPiece.h:53</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_arg_html_ac7619284eaab21e7ea01c39db2f52d64"><div class="ttname"><a href="classmuduo_1_1_string_arg.html#ac7619284eaab21e7ea01c39db2f52d64">muduo::StringArg::c_str</a></div><div class="ttdeci">const char * c_str() const</div><div class="ttdef"><b>Definition</b> StringPiece.h:63</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_piece_html"><div class="ttname"><a href="classmuduo_1_1_string_piece.html">muduo::StringPiece</a></div><div class="ttdef"><b>Definition</b> StringPiece.h:69</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_piece_html_a3881eb3a42aad5c711350faff1b191bc"><div class="ttname"><a href="classmuduo_1_1_string_piece.html#a3881eb3a42aad5c711350faff1b191bc">muduo::StringPiece::data</a></div><div class="ttdeci">const char * data() const</div><div class="ttdef"><b>Definition</b> StringPiece.h:96</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_piece_html_a72508dd18e69ad4fc3740791ee299ae1"><div class="ttname"><a href="classmuduo_1_1_string_piece.html#a72508dd18e69ad4fc3740791ee299ae1">muduo::StringPiece::size</a></div><div class="ttdeci">int size() const</div><div class="ttdef"><b>Definition</b> StringPiece.h:97</div></div>
+<div class="ttc" id="aclassmuduo_1_1noncopyable_html"><div class="ttname"><a href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></div><div class="ttdef"><b>Definition</b> noncopyable.h:8</div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+<div class="ttc" id="anoncopyable_8h_html"><div class="ttname"><a href="noncopyable_8h.html">noncopyable.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_gzip_file_8h.html">GzipFile.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

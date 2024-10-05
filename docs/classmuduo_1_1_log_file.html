@@ -1,0 +1,646 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::LogFile类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1_log_file.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#pri-static-attribs">静态 Private 属性</a> &#124;
+<a href="classmuduo_1_1_log_file-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::LogFile类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_log_file_8h_source.html">LogFile.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::LogFile 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_log_file__inherit__graph.png" border="0" usemap="#amuduo_1_1_log_file_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1_log_file_inherit__map" id="amuduo_1_1_log_file_inherit__map">
+<area shape="rect" title=" " alt="" coords="24,79,145,104"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="87,44,87,79,82,79,82,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::LogFile 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_log_file__coll__graph.png" border="0" usemap="#amuduo_1_1_log_file_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1_log_file_coll__map" id="amuduo_1_1_log_file_coll__map">
+<area shape="rect" title=" " alt="" coords="91,93,212,119"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="104,40,144,91,140,94,100,43"/>
+<area shape="rect" title=" " alt="" coords="189,5,247,31"/>
+<area shape="poly" title=" " alt="" coords="203,43,163,94,159,91,198,40"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a02238679a2da1883dbf00ac364899c1a" id="r_a02238679a2da1883dbf00ac364899c1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a02238679a2da1883dbf00ac364899c1a">LogFile</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">basename</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">off_t</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rollSize</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">threadSafe</a>=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">true</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">flushInterval</a>=3, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">checkEveryN</a>=1024)</td></tr>
+<tr class="separator:a02238679a2da1883dbf00ac364899c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94fd83b01531e5e23ebd8d73539b70b" id="r_ae94fd83b01531e5e23ebd8d73539b70b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#ae94fd83b01531e5e23ebd8d73539b70b">~LogFile</a> ()</td></tr>
+<tr class="separator:ae94fd83b01531e5e23ebd8d73539b70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62bf1af6ca849a3dcae5a34c35dcdb4" id="r_ac62bf1af6ca849a3dcae5a34c35dcdb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#ac62bf1af6ca849a3dcae5a34c35dcdb4">append</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">logline</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:ac62bf1af6ca849a3dcae5a34c35dcdb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0639505b26bb029b4c8daa82ef5ddf61" id="r_a0639505b26bb029b4c8daa82ef5ddf61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a0639505b26bb029b4c8daa82ef5ddf61">flush</a> ()</td></tr>
+<tr class="separator:a0639505b26bb029b4c8daa82ef5ddf61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd1a31d92d546cdc00c48f7cc9ab32f" id="r_abfd1a31d92d546cdc00c48f7cc9ab32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#abfd1a31d92d546cdc00c48f7cc9ab32f">rollFile</a> ()</td></tr>
+<tr class="separator:abfd1a31d92d546cdc00c48f7cc9ab32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a3b43888ff16207ed913de961c86365e5" id="r_a3b43888ff16207ed913de961c86365e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a3b43888ff16207ed913de961c86365e5">append_unlocked</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">logline</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:a3b43888ff16207ed913de961c86365e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmuduo_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmuduo_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></td></tr>
+<tr class="memitem:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae1b6f048685091082c44d8be220239ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae1b6f048685091082c44d8be220239ac">noncopyable</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable" id="r_aaeb67fffc76d7ea9227b8cf8ca8fae0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#aaeb67fffc76d7ea9227b8cf8ca8fae0a">operator=</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae0ca7ea7b61e7ef8b82582063c09b901"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae0ca7ea7b61e7ef8b82582063c09b901">noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ac12e02f31699cca2d17ba01d35648ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ac12e02f31699cca2d17ba01d35648ff5">~noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:abc4576724cb2f9d43048db9894cfb6b8" id="r_abc4576724cb2f9d43048db9894cfb6b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#abc4576724cb2f9d43048db9894cfb6b8">getLogFileName</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">basename</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> *now)</td></tr>
+<tr class="separator:abc4576724cb2f9d43048db9894cfb6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ae2fe5813a13035e4fcf5e3035d516184" id="r_ae2fe5813a13035e4fcf5e3035d516184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#ae2fe5813a13035e4fcf5e3035d516184">basename_</a></td></tr>
+<tr class="separator:ae2fe5813a13035e4fcf5e3035d516184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7707930cf213af6f371186177caee08" id="r_aa7707930cf213af6f371186177caee08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">off_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#aa7707930cf213af6f371186177caee08">rollSize_</a></td></tr>
+<tr class="separator:aa7707930cf213af6f371186177caee08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d2b8886038861830d21e8db14cf89e7" id="r_a0d2b8886038861830d21e8db14cf89e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a0d2b8886038861830d21e8db14cf89e7">flushInterval_</a></td></tr>
+<tr class="separator:a0d2b8886038861830d21e8db14cf89e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2230ef831be51f470353f5046c4b05" id="r_adf2230ef831be51f470353f5046c4b05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#adf2230ef831be51f470353f5046c4b05">checkEveryN_</a></td></tr>
+<tr class="separator:adf2230ef831be51f470353f5046c4b05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bfad0646ee4f64de515f1f2c5c2a8db" id="r_a9bfad0646ee4f64de515f1f2c5c2a8db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a9bfad0646ee4f64de515f1f2c5c2a8db">count_</a></td></tr>
+<tr class="separator:a9bfad0646ee4f64de515f1f2c5c2a8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35867511d9746c70150d41964a8df43b" id="r_a35867511d9746c70150d41964a8df43b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">MutexLock</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a35867511d9746c70150d41964a8df43b">mutex_</a></td></tr>
+<tr class="separator:a35867511d9746c70150d41964a8df43b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21dbf35e6df51c949d9cc96c4ee8fc23" id="r_a21dbf35e6df51c949d9cc96c4ee8fc23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a21dbf35e6df51c949d9cc96c4ee8fc23">startOfPeriod_</a></td></tr>
+<tr class="separator:a21dbf35e6df51c949d9cc96c4ee8fc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f6fab6d6fe9ff8a9baeed5456bdbad" id="r_af8f6fab6d6fe9ff8a9baeed5456bdbad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#af8f6fab6d6fe9ff8a9baeed5456bdbad">lastRoll_</a></td></tr>
+<tr class="separator:af8f6fab6d6fe9ff8a9baeed5456bdbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa6fa98e19061faf3881d66786d01b2" id="r_a2fa6fa98e19061faf3881d66786d01b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a2fa6fa98e19061faf3881d66786d01b2">lastFlush_</a></td></tr>
+<tr class="separator:a2fa6fa98e19061faf3881d66786d01b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c0780115f5cc5405f55248f93334b6" id="r_a36c0780115f5cc5405f55248f93334b6"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classmuduo_1_1_file_util_1_1_append_file.html">FileUtil::AppendFile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a36c0780115f5cc5405f55248f93334b6">file_</a></td></tr>
+<tr class="separator:a36c0780115f5cc5405f55248f93334b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+静态 Private 属性</h2></td></tr>
+<tr class="memitem:a479484251925ece11fd748c1331346fd" id="r_a479484251925ece11fd748c1331346fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_log_file.html#a479484251925ece11fd748c1331346fd">kRollPerSeconds_</a> = 60*60*24</td></tr>
+<tr class="separator:a479484251925ece11fd748c1331346fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a02238679a2da1883dbf00ac364899c1a" name="a02238679a2da1883dbf00ac364899c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02238679a2da1883dbf00ac364899c1a">&#9670;&#160;</a></span>LogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::LogFile::LogFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">off_t</a>&#160;</td>
+          <td class="paramname"><em>rollSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td>
+          <td class="paramname"><em>threadSafe</em> = <code><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">true</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>flushInterval</em> = <code>3</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>checkEveryN</em> = <code>1024</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae94fd83b01531e5e23ebd8d73539b70b" name="ae94fd83b01531e5e23ebd8d73539b70b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae94fd83b01531e5e23ebd8d73539b70b">&#9670;&#160;</a></span>~LogFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::LogFile::~LogFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac62bf1af6ca849a3dcae5a34c35dcdb4" name="ac62bf1af6ca849a3dcae5a34c35dcdb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac62bf1af6ca849a3dcae5a34c35dcdb4">&#9670;&#160;</a></span>append()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::LogFile::append </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>logline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b43888ff16207ed913de961c86365e5" name="a3b43888ff16207ed913de961c86365e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b43888ff16207ed913de961c86365e5">&#9670;&#160;</a></span>append_unlocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::LogFile::append_unlocked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>logline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0639505b26bb029b4c8daa82ef5ddf61" name="a0639505b26bb029b4c8daa82ef5ddf61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0639505b26bb029b4c8daa82ef5ddf61">&#9670;&#160;</a></span>flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::LogFile::flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc4576724cb2f9d43048db9894cfb6b8" name="abc4576724cb2f9d43048db9894cfb6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc4576724cb2f9d43048db9894cfb6b8">&#9670;&#160;</a></span>getLogFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> string muduo::LogFile::getLogFileName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;&#160;</td>
+          <td class="paramname"><em>basename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> *&#160;</td>
+          <td class="paramname"><em>now</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfd1a31d92d546cdc00c48f7cc9ab32f" name="abfd1a31d92d546cdc00c48f7cc9ab32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfd1a31d92d546cdc00c48f7cc9ab32f">&#9670;&#160;</a></span>rollFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::LogFile::rollFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ae2fe5813a13035e4fcf5e3035d516184" name="ae2fe5813a13035e4fcf5e3035d516184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fe5813a13035e4fcf5e3035d516184">&#9670;&#160;</a></span>basename_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string muduo::LogFile::basename_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf2230ef831be51f470353f5046c4b05" name="adf2230ef831be51f470353f5046c4b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2230ef831be51f470353f5046c4b05">&#9670;&#160;</a></span>checkEveryN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::LogFile::checkEveryN_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bfad0646ee4f64de515f1f2c5c2a8db" name="a9bfad0646ee4f64de515f1f2c5c2a8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfad0646ee4f64de515f1f2c5c2a8db">&#9670;&#160;</a></span>count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::LogFile::count_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36c0780115f5cc5405f55248f93334b6" name="a36c0780115f5cc5405f55248f93334b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c0780115f5cc5405f55248f93334b6">&#9670;&#160;</a></span>file_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classmuduo_1_1_file_util_1_1_append_file.html">FileUtil::AppendFile</a>&gt; muduo::LogFile::file_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d2b8886038861830d21e8db14cf89e7" name="a0d2b8886038861830d21e8db14cf89e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2b8886038861830d21e8db14cf89e7">&#9670;&#160;</a></span>flushInterval_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::LogFile::flushInterval_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a479484251925ece11fd748c1331346fd" name="a479484251925ece11fd748c1331346fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479484251925ece11fd748c1331346fd">&#9670;&#160;</a></span>kRollPerSeconds_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::LogFile::kRollPerSeconds_ = 60*60*24</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fa6fa98e19061faf3881d66786d01b2" name="a2fa6fa98e19061faf3881d66786d01b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa6fa98e19061faf3881d66786d01b2">&#9670;&#160;</a></span>lastFlush_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> muduo::LogFile::lastFlush_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8f6fab6d6fe9ff8a9baeed5456bdbad" name="af8f6fab6d6fe9ff8a9baeed5456bdbad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f6fab6d6fe9ff8a9baeed5456bdbad">&#9670;&#160;</a></span>lastRoll_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> muduo::LogFile::lastRoll_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35867511d9746c70150d41964a8df43b" name="a35867511d9746c70150d41964a8df43b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35867511d9746c70150d41964a8df43b">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">MutexLock</a>&gt; muduo::LogFile::mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7707930cf213af6f371186177caee08" name="aa7707930cf213af6f371186177caee08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7707930cf213af6f371186177caee08">&#9670;&#160;</a></span>rollSize_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">off_t</a> muduo::LogFile::rollSize_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21dbf35e6df51c949d9cc96c4ee8fc23" name="a21dbf35e6df51c949d9cc96c4ee8fc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21dbf35e6df51c949d9cc96c4ee8fc23">&#9670;&#160;</a></span>startOfPeriod_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">time_t</a> muduo::LogFile::startOfPeriod_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_log_file.html">LogFile</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

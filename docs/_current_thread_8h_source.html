@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/CurrentThread.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_current_thread_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CurrentThread.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_current_thread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef MUDUO_BASE_CURRENTTHREAD_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define MUDUO_BASE_CURRENTTHREAD_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">muduo/base/Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html">   13</a></span><span class="keyword">namespace </span>CurrentThread</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="comment">// internal</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">extern</span> __thread <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a56e5fed033e56de7c0e3cdee993a6cdb">t_cachedTid</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">extern</span> __thread <span class="keywordtype">char</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a2674b08f1776196576cd4c2f0e7eb5a6">t_tidString</a>[32];</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">extern</span> __thread <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a79874f1b0648ba56cd10f77eb5e647d2">t_tidStringLength</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">extern</span> __thread <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#aca3a99204d32730119b1558212ebe3f3">t_threadName</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#a09cc852243e579266304c5e31f744929">   20</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a09cc852243e579266304c5e31f744929">cacheTid</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#a27129392a2d642e96188636257bf13ca">   22</a></span>  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a27129392a2d642e96188636257bf13ca">tid</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (__builtin_expect(<a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a56e5fed033e56de7c0e3cdee993a6cdb">t_cachedTid</a> == 0, 0))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a09cc852243e579266304c5e31f744929">cacheTid</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a56e5fed033e56de7c0e3cdee993a6cdb">t_cachedTid</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  }</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#a7291e740eaf34fdbc1af56b93fca990b">   31</a></span>  <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a7291e740eaf34fdbc1af56b93fca990b">tidString</a>() <span class="comment">// for logging</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a2674b08f1776196576cd4c2f0e7eb5a6">t_tidString</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#a8f000c3381de23423f1c582b116f8b81">   36</a></span>  <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a8f000c3381de23423f1c582b116f8b81">tidStringLength</a>() <span class="comment">// for logging</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#a79874f1b0648ba56cd10f77eb5e647d2">t_tidStringLength</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#a35515e31ff67fde7ccfa63db17f341d6">   41</a></span>  <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#a35515e31ff67fde7ccfa63db17f341d6">name</a>()</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacemuduo_1_1_current_thread.html#aca3a99204d32730119b1558212ebe3f3">t_threadName</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  }</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#ad8869cd6e09d4440fae5d6698558b3a5">   46</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#ad8869cd6e09d4440fae5d6698558b3a5">isMainThread</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#ab625c2286c356d09b66b9ab043946fd1">   48</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#ab625c2286c356d09b66b9ab043946fd1">sleepUsec</a>(int64_t usec);  <span class="comment">// for testing</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1_current_thread.html#adb3a86b79370bd58610e2b8942980edf">   50</a></span>  <span class="keywordtype">string</span> <a class="code hl_function" href="namespacemuduo_1_1_current_thread.html#adb3a86b79370bd58610e2b8942980edf">stackTrace</a>(<span class="keywordtype">bool</span> demangle);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}  <span class="comment">// namespace CurrentThread</span></div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif  </span><span class="comment">// MUDUO_BASE_CURRENTTHREAD_H</span></div>
+<div class="ttc" id="a_types_8h_html"><div class="ttname"><a href="_types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a09cc852243e579266304c5e31f744929"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a09cc852243e579266304c5e31f744929">muduo::CurrentThread::cacheTid</a></div><div class="ttdeci">void cacheTid()</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a2674b08f1776196576cd4c2f0e7eb5a6"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a2674b08f1776196576cd4c2f0e7eb5a6">muduo::CurrentThread::t_tidString</a></div><div class="ttdeci">__thread char t_tidString[32]</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a27129392a2d642e96188636257bf13ca"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a27129392a2d642e96188636257bf13ca">muduo::CurrentThread::tid</a></div><div class="ttdeci">int tid()</div><div class="ttdef"><b>Definition</b> CurrentThread.h:22</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a35515e31ff67fde7ccfa63db17f341d6"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a35515e31ff67fde7ccfa63db17f341d6">muduo::CurrentThread::name</a></div><div class="ttdeci">const char * name()</div><div class="ttdef"><b>Definition</b> CurrentThread.h:41</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a56e5fed033e56de7c0e3cdee993a6cdb"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a56e5fed033e56de7c0e3cdee993a6cdb">muduo::CurrentThread::t_cachedTid</a></div><div class="ttdeci">__thread int t_cachedTid</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a7291e740eaf34fdbc1af56b93fca990b"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a7291e740eaf34fdbc1af56b93fca990b">muduo::CurrentThread::tidString</a></div><div class="ttdeci">const char * tidString()</div><div class="ttdef"><b>Definition</b> CurrentThread.h:31</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a79874f1b0648ba56cd10f77eb5e647d2"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a79874f1b0648ba56cd10f77eb5e647d2">muduo::CurrentThread::t_tidStringLength</a></div><div class="ttdeci">__thread int t_tidStringLength</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_a8f000c3381de23423f1c582b116f8b81"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#a8f000c3381de23423f1c582b116f8b81">muduo::CurrentThread::tidStringLength</a></div><div class="ttdeci">int tidStringLength()</div><div class="ttdef"><b>Definition</b> CurrentThread.h:36</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_ab625c2286c356d09b66b9ab043946fd1"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#ab625c2286c356d09b66b9ab043946fd1">muduo::CurrentThread::sleepUsec</a></div><div class="ttdeci">void sleepUsec(int64_t usec)</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_aca3a99204d32730119b1558212ebe3f3"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#aca3a99204d32730119b1558212ebe3f3">muduo::CurrentThread::t_threadName</a></div><div class="ttdeci">__thread const char * t_threadName</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_ad8869cd6e09d4440fae5d6698558b3a5"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#ad8869cd6e09d4440fae5d6698558b3a5">muduo::CurrentThread::isMainThread</a></div><div class="ttdeci">bool isMainThread()</div></div>
+<div class="ttc" id="anamespacemuduo_1_1_current_thread_html_adb3a86b79370bd58610e2b8942980edf"><div class="ttname"><a href="namespacemuduo_1_1_current_thread.html#adb3a86b79370bd58610e2b8942980edf">muduo::CurrentThread::stackTrace</a></div><div class="ttdeci">string stackTrace(bool demangle)</div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_current_thread_8h.html">CurrentThread.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

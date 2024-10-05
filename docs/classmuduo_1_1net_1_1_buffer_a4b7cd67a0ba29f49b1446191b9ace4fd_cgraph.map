@@ -1,0 +1,28 @@
+<map id="muduo::net::Buffer::append" name="muduo::net::Buffer::append">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,251,148,291"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#a11cbc065511062e5330a0f72f05661e5" title=" " alt="" coords="208,56,351,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,249,246,104,249,108,101,252"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#a6cf98bbe1baa7550b890c0d202e98d7a" title=" " alt="" coords="196,196,363,236"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,249,191,237,192,242,149,254"/>
+<area shape="rect" id="Node000005" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="601,286,760,311"/>
+<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="149,288,231,307,332,324,442,333,498,332,553,328,626,313,627,318,554,333,498,338,442,338,331,329,230,312,147,293"/>
+<area shape="rect" id="Node000010" href="$classmuduo_1_1net_1_1_buffer.html#ac32912e5d6c5f9bf828264aca1353011" title=" " alt="" coords="411,279,553,319"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="148,273,397,290,397,296,148,278"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer.html#ac432f0aeef9000203b7de41e08ce39a7" title=" " alt="" coords="609,5,752,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,64,595,33,596,39,351,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="363,227,554,264,620,280,618,285,553,269,362,232"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_buffer.html#a61202747347053befe66f56d9c47e55c" title=" " alt="" coords="411,113,553,153"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="328,194,418,156,421,161,330,198"/>
+<area shape="rect" id="Node000009" href="$classmuduo_1_1net_1_1_buffer.html#a38d2fbb29a60db59fb0c42fc98db083d" title=" " alt="" coords="609,197,752,237"/>
+<area shape="poly" id="edge12_Node000004_Node000009" title=" " alt="" coords="363,214,596,214,596,220,363,219"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="648,287,641,278,645,268,658,262,681,259,708,263,719,272,716,276,706,268,681,265,660,267,649,271,646,277,652,284"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="510,111,552,83,600,55,613,49,615,53,603,60,555,88,513,115"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="503,152,547,197,603,247,646,277,643,281,600,251,543,201,499,155"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1net_1_1_buffer.html#af993d20fb4189cecf9c7ead2becc2467" title=" " alt="" coords="607,133,755,173"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="554,138,593,142,593,147,553,143"/>
+<area shape="rect" id="Node000008" href="$classmuduo_1_1net_1_1_buffer.html#a84024d63fb91dd0d8213559739ef2557" title=" " alt="" coords="609,69,752,109"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="553,115,595,106,596,111,554,120"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="529,151,602,183,618,190,616,194,600,188,527,156"/>
+<area shape="poly" id="edge14_Node000010_Node000005" title=" " alt="" coords="554,296,588,296,588,301,554,301"/>
+<area shape="poly" id="edge15_Node000010_Node000009" title=" " alt="" coords="531,276,600,247,616,240,619,245,602,252,533,281"/>
+</map>

@@ -139,6 +139,7 @@ namespace XuMQ
      */
     class StrHelper
     {
+        public:
         /**
          * @brief 将字符串分割为多个子字符串
          * @param str 要分割的字符串

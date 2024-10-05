@@ -1,0 +1,37 @@
+var classmuduo_1_1net_1_1_protobuf_codec_lite =
+[
+    [ "ErrorCallback", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4", null ],
+    [ "ProtobufMessageCallback", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2", null ],
+    [ "RawMessageCallback", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12", null ],
+    [ "ErrorCode", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45", [
+      [ "kNoError", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a5e21bf82cf65cada2901e5b2d937d35f", null ],
+      [ "kInvalidLength", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aa89d9338e5c84099d5c61f46958f4c88", null ],
+      [ "kCheckSumError", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aa4043dd12143b7a17f8e37ecbe188d8f", null ],
+      [ "kInvalidNameLen", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a9b3f23a104bf5c8063a6cd302157ead6", null ],
+      [ "kUnknownMessageType", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a1ef30b4d0733e1f7cf33c3e71b2f4e2f", null ],
+      [ "kParseError", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aaa42c8c4865f93357442024c70eed40b", null ]
+    ] ],
+    [ "ProtobufCodecLite", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a67d51f997cebbc4ff6a6b80f5acae6d2", null ],
+    [ "~ProtobufCodecLite", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a8eb07ccd7f125ba599a7d0c804f13c5a", null ],
+    [ "asInt32", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a732b211274f59f7563c10619d4bd2562", null ],
+    [ "checksum", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a5820eb8b98df7429107b36db0b369398", null ],
+    [ "defaultErrorCallback", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#ae84ec6ea65b5fe62287a959f10fc04e9", null ],
+    [ "errorCodeToString", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a5d136281406082530c1803f9d5c5c50d", null ],
+    [ "fillEmptyBuffer", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#af09cb99c1ef9cb8c74eb6b95aa87386e", null ],
+    [ "onMessage", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4a4a0ac2e2d1aa50a680802e7fac2374", null ],
+    [ "parse", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#aebf10a551a0f6974245b679c02eadfd6", null ],
+    [ "parseFromBuffer", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#ac7cff08e58db34fce249bc40fa1adeaa", null ],
+    [ "send", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a11e848b98085e4236c408de6ec659cac", null ],
+    [ "serializeToBuffer", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a0512815fd5102ace0c80cdbe1285f121", null ],
+    [ "tag", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a7ec8fd825676cb9c7ac2bec604c0ca43", null ],
+    [ "validateChecksum", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a32d467b9cf3443e32b2964fe347b0047", null ],
+    [ "errorCallback_", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a67c2c76c1a807d1f46d613496932d4e1", null ],
+    [ "kChecksumLen", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a140b20ca40206857aa338f457f1a1487", null ],
+    [ "kHeaderLen", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#ad447533880ffa92e41657ee041ef4b2a", null ],
+    [ "kMaxMessageLen", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a91606efa21ec61d43ded9a86cb6f77a0", null ],
+    [ "kMinMessageLen", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4a16227d04a4fd40a43de33f32e40c65", null ],
+    [ "messageCallback_", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#af526bd3b4c85e1ce9dcbd1049c7e28a9", null ],
+    [ "prototype_", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#a8cf980d2d8c20463c85d2a3451b88442", null ],
+    [ "rawCb_", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#acfd6252c6756de81d4443c6273362c4a", null ],
+    [ "tag_", "classmuduo_1_1net_1_1_protobuf_codec_lite.html#ac3b4a03422681fac5a753e82074d1562", null ]
+];

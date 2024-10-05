@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/net/http/HttpContext.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_http_context_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">HttpContext.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_http_context_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2010, Shuo Chen.  All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// http://code.google.com/p/muduo/</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// This is an internal header file, you should not include this.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef MUDUO_NET_HTTP_HTTPCONTEXT_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define MUDUO_NET_HTTP_HTTPCONTEXT_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="copyable_8h.html">muduo/base/copyable.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_http_request_8h.html">muduo/net/http/HttpRequest.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>net</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">class </span>Buffer;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1net_1_1_http_context.html">HttpContext</a> : <span class="keyword">public</span> <a class="code hl_class" href="classmuduo_1_1copyable.html">muduo::copyable</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">   28</a></span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">HttpRequestParseState</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">   30</a></span>    <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">kExpectRequestLine</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624">   31</a></span>    <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624">kExpectHeaders</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc">   32</a></span>    <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc">kExpectBody</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2">   33</a></span>    <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2">kGotAll</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  };</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a4d4514c821d1b8f3f45e3ec847c27c31">   36</a></span>  <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#a4d4514c821d1b8f3f45e3ec847c27c31">HttpContext</a>()</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    : <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">state_</a>(<a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">kExpectRequestLine</a>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// default copy-ctor, dtor and assignment are fine</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="comment">// return false if any error</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a6a7bf1bd8301fc43c09bfa8eab9b09cc">   44</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#a6a7bf1bd8301fc43c09bfa8eab9b09cc">parseRequest</a>(<a class="code hl_class" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a>* <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="code hl_class" href="classmuduo_1_1_timestamp.html">Timestamp</a> receiveTime);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a48a0d194f48f12a425e2eae90617c3b1">   46</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#a48a0d194f48f12a425e2eae90617c3b1">gotAll</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">  </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">state_</a> == <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2">kGotAll</a>; }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a2f46424de12c8901cbb762552f05a3f6">   49</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#a2f46424de12c8901cbb762552f05a3f6">reset</a>()</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">state_</a> = <a class="code hl_enumvalue" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">kExpectRequestLine</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">dummy</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">request_</a>.<a class="code hl_function" href="classmuduo_1_1net_1_1_http_request.html#a32644325593428b6a7e73f315864af4b">swap</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">dummy</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#adbd07acecc68ba62d5edeae75f5fef41">   56</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a>&amp; <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#adbd07acecc68ba62d5edeae75f5fef41">request</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">  </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">request_</a>; }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#ad75f42790ea40952f059ed319902bfbb">   59</a></span>  <a class="code hl_class" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a>&amp; <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#ad75f42790ea40952f059ed319902bfbb">request</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  { <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">request_</a>; }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a76e6188ef4316b196d02e3bf6c236d78">   63</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classmuduo_1_1net_1_1_http_context.html#a76e6188ef4316b196d02e3bf6c236d78">processRequestLine</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* begin, <span class="keyword">const</span> <span class="keywordtype">char</span>* end);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">   65</a></span>  <a class="code hl_enumeration" href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">HttpRequestParseState</a> <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">state_</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">   66</a></span>  <a class="code hl_class" href="classmuduo_1_1net_1_1_http_request.html">HttpRequest</a> <a class="code hl_variable" href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">request_</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}  <span class="comment">// namespace net</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#endif  </span><span class="comment">// MUDUO_NET_HTTP_HTTPCONTEXT_H</span></div>
+<div class="ttc" id="a_http_request_8h_html"><div class="ttname"><a href="_http_request_8h.html">HttpRequest.h</a></div></div>
+<div class="ttc" id="aclassmuduo_1_1_timestamp_html"><div class="ttname"><a href="classmuduo_1_1_timestamp.html">muduo::Timestamp</a></div><div class="ttdoc">Time stamp in UTC, in microseconds resolution.</div><div class="ttdef"><b>Definition</b> Timestamp.h:26</div></div>
+<div class="ttc" id="aclassmuduo_1_1copyable_html"><div class="ttname"><a href="classmuduo_1_1copyable.html">muduo::copyable</a></div><div class="ttdoc">A tag class emphasises the objects are copyable.</div><div class="ttdef"><b>Definition</b> copyable.h:11</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_buffer_html"><div class="ttname"><a href="classmuduo_1_1net_1_1_buffer.html">muduo::net::Buffer</a></div><div class="ttdoc">A buffer class modeled after org.jboss.netty.buffer.ChannelBuffer</div><div class="ttdef"><b>Definition</b> Buffer.h:43</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html">muduo::net::HttpContext</a></div><div class="ttdef"><b>Definition</b> HttpContext.h:26</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a17e0fc17c4e255c0fba114fe6a3a6790"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a17e0fc17c4e255c0fba114fe6a3a6790">muduo::net::HttpContext::request_</a></div><div class="ttdeci">HttpRequest request_</div><div class="ttdef"><b>Definition</b> HttpContext.h:66</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a235d5fd76864d6744d70623e57be0b67"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67">muduo::net::HttpContext::HttpRequestParseState</a></div><div class="ttdeci">HttpRequestParseState</div><div class="ttdef"><b>Definition</b> HttpContext.h:29</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a3fce960ef1fd8f83fe65b56c7a5d72cc">muduo::net::HttpContext::kExpectBody</a></div><div class="ttdeci">@ kExpectBody</div><div class="ttdef"><b>Definition</b> HttpContext.h:32</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67a59c6f5f74c860468a600b3603370b624">muduo::net::HttpContext::kExpectHeaders</a></div><div class="ttdeci">@ kExpectHeaders</div><div class="ttdef"><b>Definition</b> HttpContext.h:31</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67aaf511cfa148f87684909263aa75d7fcc">muduo::net::HttpContext::kExpectRequestLine</a></div><div class="ttdeci">@ kExpectRequestLine</div><div class="ttdef"><b>Definition</b> HttpContext.h:30</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a235d5fd76864d6744d70623e57be0b67ae0ee4d7e1451de5b375d11a3afc423c2">muduo::net::HttpContext::kGotAll</a></div><div class="ttdeci">@ kGotAll</div><div class="ttdef"><b>Definition</b> HttpContext.h:33</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a2f46424de12c8901cbb762552f05a3f6"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a2f46424de12c8901cbb762552f05a3f6">muduo::net::HttpContext::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> HttpContext.h:49</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a48a0d194f48f12a425e2eae90617c3b1"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a48a0d194f48f12a425e2eae90617c3b1">muduo::net::HttpContext::gotAll</a></div><div class="ttdeci">bool gotAll() const</div><div class="ttdef"><b>Definition</b> HttpContext.h:46</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a4d4514c821d1b8f3f45e3ec847c27c31"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a4d4514c821d1b8f3f45e3ec847c27c31">muduo::net::HttpContext::HttpContext</a></div><div class="ttdeci">HttpContext()</div><div class="ttdef"><b>Definition</b> HttpContext.h:36</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a6a7bf1bd8301fc43c09bfa8eab9b09cc"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a6a7bf1bd8301fc43c09bfa8eab9b09cc">muduo::net::HttpContext::parseRequest</a></div><div class="ttdeci">bool parseRequest(Buffer *buf, Timestamp receiveTime)</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a76e6188ef4316b196d02e3bf6c236d78"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a76e6188ef4316b196d02e3bf6c236d78">muduo::net::HttpContext::processRequestLine</a></div><div class="ttdeci">bool processRequestLine(const char *begin, const char *end)</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_a8e245d3e5d1840ed88942b8e417b812c"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#a8e245d3e5d1840ed88942b8e417b812c">muduo::net::HttpContext::state_</a></div><div class="ttdeci">HttpRequestParseState state_</div><div class="ttdef"><b>Definition</b> HttpContext.h:65</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_ad75f42790ea40952f059ed319902bfbb"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#ad75f42790ea40952f059ed319902bfbb">muduo::net::HttpContext::request</a></div><div class="ttdeci">HttpRequest &amp; request()</div><div class="ttdef"><b>Definition</b> HttpContext.h:59</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_context_html_adbd07acecc68ba62d5edeae75f5fef41"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_context.html#adbd07acecc68ba62d5edeae75f5fef41">muduo::net::HttpContext::request</a></div><div class="ttdeci">const HttpRequest &amp; request() const</div><div class="ttdef"><b>Definition</b> HttpContext.h:56</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_request_html"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_request.html">muduo::net::HttpRequest</a></div><div class="ttdef"><b>Definition</b> HttpRequest.h:28</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_http_request_html_a32644325593428b6a7e73f315864af4b"><div class="ttname"><a href="classmuduo_1_1net_1_1_http_request.html#a32644325593428b6a7e73f315864af4b">muduo::net::HttpRequest::swap</a></div><div class="ttdeci">void swap(HttpRequest &amp;that)</div><div class="ttdef"><b>Definition</b> HttpRequest.h:165</div></div>
+<div class="ttc" id="acopyable_8h_html"><div class="ttname"><a href="copyable_8h.html">copyable.h</a></div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+<div class="ttc" id="anamespacemuduo_html_a72cbcf425db108335295456e8ff9c12b"><div class="ttname"><a href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">muduo::implicit_cast</a></div><div class="ttdeci">To implicit_cast(From const &amp;f)</div><div class="ttdef"><b>Definition</b> Types.h:80</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_e44f64d656da23dd24f2779409002425.html">net</a></li><li class="navelem"><a class="el" href="dir_9ff85f60e07f9d3224d308dd05726bcd.html">http</a></li><li class="navelem"><a class="el" href="_http_context_8h.html">HttpContext.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

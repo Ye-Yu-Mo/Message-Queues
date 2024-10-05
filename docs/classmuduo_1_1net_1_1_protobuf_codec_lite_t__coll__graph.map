@@ -1,0 +1,9 @@
+<map id="muduo::net::ProtobufCodecLiteT&lt; MSG, TAG, CODEC &gt;" name="muduo::net::ProtobufCodecLiteT&lt; MSG, TAG, CODEC &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,181,253,221"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_protobuf_codec_lite.html" title=" " alt="" coords="40,93,263,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,132,154,181,149,181,149,132"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,40,144,91,140,94,100,43"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,5,247,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="203,43,163,94,159,91,198,40"/>
+</map>

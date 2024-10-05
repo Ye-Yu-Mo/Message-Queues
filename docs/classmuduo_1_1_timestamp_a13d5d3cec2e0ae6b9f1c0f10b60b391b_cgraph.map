@@ -1,0 +1,8 @@
+<map id="muduo::Timestamp::fromUnixTime" name="muduo::Timestamp::fromUnixTime">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,256,80"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="340,29,499,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,54,326,47,326,53,256,59"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1_timestamp.html#ae8d2d2d7a295a59ac9bce9a5b0b35795" title="Constucts an invalid Timestamp." alt="" coords="304,79,535,104"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="256,75,291,78,290,83,256,80"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="373,31,363,21,368,11,387,5,419,3,461,7,472,12,476,18,471,21,469,16,460,12,419,8,388,10,372,15,368,20,377,27"/>
+</map>

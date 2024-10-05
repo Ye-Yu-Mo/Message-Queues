@@ -1,0 +1,25 @@
+<map id="muduo::net::Buffer::prependableBytes" name="muduo::net::Buffer::prependableBytes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="645,101,793,141"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#a2e5c88e6cb5e97e20f561849bdccbbd9" title=" " alt="" coords="455,37,597,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,99,586,80,588,75,646,94"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer.html#a61202747347053befe66f56d9c47e55c" title=" " alt="" coords="455,101,597,141"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="631,124,597,124,597,119,631,119"/>
+<area shape="rect" id="Node000008" href="$classmuduo_1_1net_1_1_buffer.html#a23c277efdf894fb69e80339ca197eaeb" title=" " alt="" coords="455,197,597,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="667,150,568,200,566,195,665,145"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#a6cf98bbe1baa7550b890c0d202e98d7a" title=" " alt="" coords="240,69,407,109"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,111,406,105,407,100,441,105"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_buffer.html#a4b7cd67a0ba29f49b1446191b9ace4fd" title=" " alt="" coords="27,5,170,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="238,68,169,48,170,43,240,63"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_buffer_output_stream.html#a8d7da7a858bae5a285421fe66e665841" title=" " alt="" coords="5,69,192,109"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="226,92,192,92,192,87,226,87"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1net_1_1_buffer.html#a1e71fc469d6300073b9e9f7946fb0296" title=" " alt="" coords="27,133,170,173"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="240,116,170,136,169,131,238,111"/>
+<area shape="rect" id="Node000009" href="$classmuduo_1_1net_1_1_buffer.html#a85cc24587930c05b6853e4bb05b26ed0" title=" " alt="" coords="252,133,395,173"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="448,196,386,176,388,171,450,191"/>
+<area shape="rect" id="Node000010" href="$classmuduo_1_1net_1_1_buffer.html#a3334de5d3aa75426bbc2c4dcca084871" title="Prepend int32_t using network endian" alt="" coords="252,197,395,237"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="440,220,395,220,395,215,440,215"/>
+<area shape="rect" id="Node000011" href="$classmuduo_1_1net_1_1_buffer.html#a59cddcef5dc3681554e356995213f1e7" title="Prepend int64_t using network endian" alt="" coords="252,261,395,301"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="450,244,388,264,386,259,448,239"/>
+<area shape="rect" id="Node000012" href="$classmuduo_1_1net_1_1_buffer.html#af68ed0251fd3857d794f1e2aeab0290c" title=" " alt="" coords="252,325,395,365"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="495,249,455,283,408,316,384,328,382,323,405,311,452,279,492,245"/>
+</map>

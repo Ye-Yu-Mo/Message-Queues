@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/net/Callbacks.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_callbacks_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">Callbacks.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_timestamp_8h_source.html">muduo/base/Timestamp.h</a>&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Callbacks.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_callbacks_8h__incl.png" border="0" usemap="#athird_2muduo_2include_2muduo_2net_2_callbacks_8h" alt=""/></div>
+<map name="athird_2muduo_2include_2muduo_2net_2_callbacks_8h" id="athird_2muduo_2include_2muduo_2net_2_callbacks_8h">
+<area shape="rect" title=" " alt="" coords="361,5,536,45"/>
+<area shape="rect" href="_timestamp_8h.html" title=" " alt="" coords="189,93,381,119"/>
+<area shape="poly" title=" " alt="" coords="411,48,322,90,320,85,408,43"/>
+<area shape="rect" title=" " alt="" coords="405,93,492,119"/>
+<area shape="poly" title=" " alt="" coords="451,46,451,79,446,79,446,46"/>
+<area shape="rect" title=" " alt="" coords="517,93,594,119"/>
+<area shape="poly" title=" " alt="" coords="476,43,530,83,527,87,473,48"/>
+<area shape="rect" href="copyable_8h.html" title=" " alt="" coords="5,167,183,192"/>
+<area shape="poly" title=" " alt="" coords="255,121,139,164,137,159,253,116"/>
+<area shape="rect" href="_types_8h.html" title=" " alt="" coords="207,167,362,192"/>
+<area shape="poly" title=" " alt="" coords="287,119,287,153,282,153,282,119"/>
+<area shape="rect" title=" " alt="" coords="386,167,538,192"/>
+<area shape="poly" title=" " alt="" coords="314,116,422,159,420,164,312,121"/>
+<area shape="rect" title=" " alt="" coords="109,240,180,265"/>
+<area shape="poly" title=" " alt="" coords="263,194,181,236,178,231,261,190"/>
+<area shape="rect" title=" " alt="" coords="204,240,275,265"/>
+<area shape="poly" title=" " alt="" coords="279,194,256,230,252,227,275,191"/>
+<area shape="rect" title=" " alt="" coords="299,240,358,265"/>
+<area shape="poly" title=" " alt="" coords="294,191,317,227,312,230,290,194"/>
+<area shape="rect" title=" " alt="" coords="382,240,457,265"/>
+<area shape="poly" title=" " alt="" coords="308,190,386,231,384,236,305,194"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="_callbacks_8h__dep__incl.png" border="0" usemap="#athird_2muduo_2include_2muduo_2net_2_callbacks_8hdep" alt=""/></div>
+<map name="athird_2muduo_2include_2muduo_2net_2_callbacks_8hdep" id="athird_2muduo_2include_2muduo_2net_2_callbacks_8hdep">
+<area shape="rect" title=" " alt="" coords="293,5,467,45"/>
+<area shape="rect" href="_curl_8h.html" title=" " alt="" coords="5,101,157,141"/>
+<area shape="poly" title=" " alt="" coords="307,52,142,103,141,98,306,47"/>
+<area shape="rect" href="_event_loop_8h.html" title=" " alt="" coords="182,101,362,141"/>
+<area shape="poly" title=" " alt="" coords="350,56,296,103,292,99,346,52"/>
+<area shape="rect" href="_tcp_connection_8h.html" title=" " alt="" coords="386,101,593,141"/>
+<area shape="poly" title=" " alt="" coords="414,52,469,99,466,103,411,56"/>
+<area shape="rect" href="_protobuf_codec_lite_8h.html" title=" " alt="" coords="617,93,775,148"/>
+<area shape="poly" title=" " alt="" coords="458,47,618,94,616,99,456,52"/>
+<area shape="rect" href="_tcp_client_8h.html" title=" " alt="" coords="216,203,387,243"/>
+<area shape="poly" title=" " alt="" coords="443,150,338,206,335,201,441,145"/>
+<area shape="rect" href="_tcp_server_8h.html" title=" " alt="" coords="411,203,586,243"/>
+<area shape="poly" title=" " alt="" coords="495,154,500,203,494,204,490,154"/>
+<area shape="rect" href="_http_server_8h.html" title=" " alt="" coords="200,306,411,346"/>
+<area shape="poly" title=" " alt="" coords="452,252,343,308,340,304,449,247"/>
+<area shape="rect" href="_rpc_server_8h.html" title=" " alt="" coords="435,299,589,353"/>
+<area shape="poly" title=" " alt="" coords="506,257,511,298,506,299,500,257"/>
+<area shape="rect" href="_inspector_8h.html" title=" " alt="" coords="194,401,417,441"/>
+<area shape="poly" title=" " alt="" coords="308,360,308,401,303,401,303,360"/>
+<area shape="rect" href="_rpc_codec_8h.html" title=" " alt="" coords="619,196,773,251"/>
+<area shape="poly" title=" " alt="" coords="699,162,699,196,693,196,693,162"/>
+<area shape="rect" href="_rpc_channel_8h.html" title=" " alt="" coords="619,299,773,353"/>
+<area shape="poly" title=" " alt="" coords="699,264,699,299,693,299,693,264"/>
+</map>
+</div>
+</div>
+<p><a href="_callbacks_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemuduo" id="r_namespacemuduo"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo.html">muduo</a></td></tr>
+<tr class="memdesc:namespacemuduo"><td class="mdescLeft">&#160;</td><td class="mdescRight">The most common stuffs. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemuduo_1_1net" id="r_namespacemuduo_1_1net"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html">muduo::net</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a03dd52847401b55d1829f552f8812f71" id="r_a03dd52847401b55d1829f552f8812f71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::shared_ptr&lt; <a class="el" href="classmuduo_1_1net_1_1_tcp_connection.html">TcpConnection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">muduo::net::TcpConnectionPtr</a></td></tr>
+<tr class="separator:a03dd52847401b55d1829f552f8812f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091900370387469b443a45ec8f6533ef" id="r_a091900370387469b443a45ec8f6533ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a091900370387469b443a45ec8f6533ef">muduo::net::TimerCallback</a></td></tr>
+<tr class="separator:a091900370387469b443a45ec8f6533ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e234cdc8a9b4326ac250de60e2217f" id="r_a97e234cdc8a9b4326ac250de60e2217f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a97e234cdc8a9b4326ac250de60e2217f">muduo::net::ConnectionCallback</a></td></tr>
+<tr class="separator:a97e234cdc8a9b4326ac250de60e2217f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961a60c8b34e671c6130d7f0eafb147e" id="r_a961a60c8b34e671c6130d7f0eafb147e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a961a60c8b34e671c6130d7f0eafb147e">muduo::net::CloseCallback</a></td></tr>
+<tr class="separator:a961a60c8b34e671c6130d7f0eafb147e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb722249659d03e65b1d7c0bcddf72a" id="r_a7bb722249659d03e65b1d7c0bcddf72a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a7bb722249659d03e65b1d7c0bcddf72a">muduo::net::WriteCompleteCallback</a></td></tr>
+<tr class="separator:a7bb722249659d03e65b1d7c0bcddf72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98cfc54605dc94f79ac46bc3b51b24f3" id="r_a98cfc54605dc94f79ac46bc3b51b24f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a98cfc54605dc94f79ac46bc3b51b24f3">muduo::net::HighWaterMarkCallback</a></td></tr>
+<tr class="separator:a98cfc54605dc94f79ac46bc3b51b24f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05dd9b14c86cc5a5305fe6fdb1f56884" id="r_a05dd9b14c86cc5a5305fe6fdb1f56884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a05dd9b14c86cc5a5305fe6fdb1f56884">muduo::net::MessageCallback</a></td></tr>
+<tr class="separator:a05dd9b14c86cc5a5305fe6fdb1f56884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a4291b4d78ab824b44c72ae981dad074d" id="r_a4291b4d78ab824b44c72ae981dad074d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </td></tr>
+<tr class="memitem:a4291b4d78ab824b44c72ae981dad074d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemuduo.html#a4291b4d78ab824b44c72ae981dad074d">muduo::get_pointer</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> std::shared_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; &amp;ptr)</td></tr>
+<tr class="separator:a4291b4d78ab824b44c72ae981dad074d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec502e867b40a3bf6c6ee07e56390717" id="r_aec502e867b40a3bf6c6ee07e56390717"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </td></tr>
+<tr class="memitem:aec502e867b40a3bf6c6ee07e56390717"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemuduo.html#aec502e867b40a3bf6c6ee07e56390717">muduo::get_pointer</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> std::unique_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; &amp;ptr)</td></tr>
+<tr class="separator:aec502e867b40a3bf6c6ee07e56390717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf3be19cb4aeabe6f6f7a2407d7d62c" id="r_adbf3be19cb4aeabe6f6f7a2407d7d62c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">To</a> , <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">From</a> &gt; </td></tr>
+<tr class="memitem:adbf3be19cb4aeabe6f6f7a2407d7d62c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">inline</a> ::std::shared_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">To</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacemuduo.html#adbf3be19cb4aeabe6f6f7a2407d7d62c">muduo::down_pointer_cast</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::std::shared_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">From</a> &gt; &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">f</a>)</td></tr>
+<tr class="separator:adbf3be19cb4aeabe6f6f7a2407d7d62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d4cd57249902f889bfecb4bad7847d" id="r_a74d4cd57249902f889bfecb4bad7847d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#a74d4cd57249902f889bfecb4bad7847d">muduo::net::defaultConnectionCallback</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">conn</a>)</td></tr>
+<tr class="separator:a74d4cd57249902f889bfecb4bad7847d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea01f500af8f956edd6649639937508" id="r_abea01f500af8f956edd6649639937508"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo_1_1net.html#abea01f500af8f956edd6649639937508">muduo::net::defaultMessageCallback</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">conn</a>, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *buffer, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a> receiveTime)</td></tr>
+<tr class="separator:abea01f500af8f956edd6649639937508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_e44f64d656da23dd24f2779409002425.html">net</a></li><li class="navelem"><a class="el" href="_callbacks_8h.html">Callbacks.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

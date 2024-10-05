@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::TimeZone类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1_time_zone.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="classmuduo_1_1_time_zone-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::TimeZone类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_time_zone_8h_source.html">TimeZone.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::TimeZone 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_time_zone__inherit__graph.png" border="0" usemap="#amuduo_1_1_time_zone_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1_time_zone_inherit__map" id="amuduo_1_1_time_zone_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,147,104"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="9,5,143,31"/>
+<area shape="poly" title=" " alt="" coords="79,44,79,79,73,79,73,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::TimeZone 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_time_zone__coll__graph.png" border="0" usemap="#amuduo_1_1_time_zone_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1_time_zone_coll__map" id="amuduo_1_1_time_zone_coll__map">
+<area shape="rect" title=" " alt="" coords="5,79,147,104"/>
+<area shape="rect" href="classmuduo_1_1copyable.html" title="A tag class emphasises the objects are copyable." alt="" coords="9,5,143,31"/>
+<area shape="poly" title=" " alt="" coords="79,44,79,79,73,79,73,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac88703e78be1c32c26ee6cd5d4798673" id="r_ac88703e78be1c32c26ee6cd5d4798673"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#ac88703e78be1c32c26ee6cd5d4798673">TimeZone</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac88703e78be1c32c26ee6cd5d4798673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000c74997a868d4e29dadabc6da158a2" id="r_a000c74997a868d4e29dadabc6da158a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a000c74997a868d4e29dadabc6da158a2">TimeZone</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">eastOfUtc</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">tzname</a>)</td></tr>
+<tr class="separator:a000c74997a868d4e29dadabc6da158a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8c6504dfbc9bf0424a8d19959f8f6a" id="r_a5b8c6504dfbc9bf0424a8d19959f8f6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a5b8c6504dfbc9bf0424a8d19959f8f6a">valid</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a5b8c6504dfbc9bf0424a8d19959f8f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc990d5fbe66d761ca8a3b5247255072" id="r_afc990d5fbe66d761ca8a3b5247255072"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#afc990d5fbe66d761ca8a3b5247255072">toLocalTime</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> secondsSinceEpoch, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">utcOffset</a>=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">nullptr</a>) <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:afc990d5fbe66d761ca8a3b5247255072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9a0a654c1bdb69ed40e10ce7a69f529" id="r_ab9a0a654c1bdb69ed40e10ce7a69f529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#ab9a0a654c1bdb69ed40e10ce7a69f529">fromLocalTime</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> &amp;, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">postTransition</a>=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">false</a>) <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:ab9a0a654c1bdb69ed40e10ce7a69f529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ae9ae517fff6ef853c9d8eaf7a1ef1983" id="r_ae9ae517fff6ef853c9d8eaf7a1ef1983"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#ae9ae517fff6ef853c9d8eaf7a1ef1983">UTC</a> ()</td></tr>
+<tr class="separator:ae9ae517fff6ef853c9d8eaf7a1ef1983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8418c77943aed147500f7fbfe4eb543e" id="r_a8418c77943aed147500f7fbfe4eb543e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a8418c77943aed147500f7fbfe4eb543e">China</a> ()</td></tr>
+<tr class="separator:a8418c77943aed147500f7fbfe4eb543e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a55f4b7056f388c0339c0168be82176" id="r_a0a55f4b7056f388c0339c0168be82176"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a0a55f4b7056f388c0339c0168be82176">loadZoneFile</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">zonefile</a>)</td></tr>
+<tr class="separator:a0a55f4b7056f388c0339c0168be82176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce503c67b4c616b9afa0deaa93c524b" id="r_a8ce503c67b4c616b9afa0deaa93c524b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a8ce503c67b4c616b9afa0deaa93c524b">toUtcTime</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> secondsSinceEpoch)</td></tr>
+<tr class="separator:a8ce503c67b4c616b9afa0deaa93c524b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e19cd8abd1f16f867bd04c6701fffe6" id="r_a6e19cd8abd1f16f867bd04c6701fffe6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a6e19cd8abd1f16f867bd04c6701fffe6">fromUtcTime</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> &amp;)</td></tr>
+<tr class="separator:a6e19cd8abd1f16f867bd04c6701fffe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:ab3433d7e478803577d29cbb628983de8" id="r_ab3433d7e478803577d29cbb628983de8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#ab3433d7e478803577d29cbb628983de8">TimeZone</a> (std::unique_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">Data</a> &gt; data)</td></tr>
+<tr class="separator:ab3433d7e478803577d29cbb628983de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a6da6d95268a68bc8136b6533b5fb1445" id="r_a6da6d95268a68bc8136b6533b5fb1445"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">Data</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a6da6d95268a68bc8136b6533b5fb1445">data_</a></td></tr>
+<tr class="separator:a6da6d95268a68bc8136b6533b5fb1445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a67d75548244a2baf6fbef9f1a7d9d36e" id="r_a67d75548244a2baf6fbef9f1a7d9d36e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">class</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_time_zone.html#a67d75548244a2baf6fbef9f1a7d9d36e">TimeZoneTestPeer</a></td></tr>
+<tr class="separator:a67d75548244a2baf6fbef9f1a7d9d36e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_methods_classmuduo_1_1copyable"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classmuduo_1_1copyable')"><img src="closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="classmuduo_1_1copyable.html">muduo::copyable</a></td></tr>
+<tr class="memitem:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable" id="r_a782312a20f5d677a1f7d2574d92fb264"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a782312a20f5d677a1f7d2574d92fb264">copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a782312a20f5d677a1f7d2574d92fb264 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable" id="r_a19c4bdacfc5e35c20452dfcaa299ef54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1copyable.html#a19c4bdacfc5e35c20452dfcaa299ef54">~copyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a19c4bdacfc5e35c20452dfcaa299ef54 inherit pro_methods_classmuduo_1_1copyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ac88703e78be1c32c26ee6cd5d4798673" name="ac88703e78be1c32c26ee6cd5d4798673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88703e78be1c32c26ee6cd5d4798673">&#9670;&#160;</a></span>TimeZone() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::TimeZone::TimeZone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a000c74997a868d4e29dadabc6da158a2" name="a000c74997a868d4e29dadabc6da158a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000c74997a868d4e29dadabc6da158a2">&#9670;&#160;</a></span>TimeZone() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::TimeZone::TimeZone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>eastOfUtc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>tzname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3433d7e478803577d29cbb628983de8" name="ab3433d7e478803577d29cbb628983de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3433d7e478803577d29cbb628983de8">&#9670;&#160;</a></span>TimeZone() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::TimeZone::TimeZone </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">Data</a> &gt;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8418c77943aed147500f7fbfe4eb543e" name="a8418c77943aed147500f7fbfe4eb543e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8418c77943aed147500f7fbfe4eb543e">&#9670;&#160;</a></span>China()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a> muduo::TimeZone::China </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9a0a654c1bdb69ed40e10ce7a69f529" name="ab9a0a654c1bdb69ed40e10ce7a69f529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9a0a654c1bdb69ed40e10ce7a69f529">&#9670;&#160;</a></span>fromLocalTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> muduo::TimeZone::fromLocalTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td>
+          <td class="paramname"><em>postTransition</em> = <code><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">false</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e19cd8abd1f16f867bd04c6701fffe6" name="a6e19cd8abd1f16f867bd04c6701fffe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e19cd8abd1f16f867bd04c6701fffe6">&#9670;&#160;</a></span>fromUtcTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> muduo::TimeZone::fromUtcTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a55f4b7056f388c0339c0168be82176" name="a0a55f4b7056f388c0339c0168be82176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a55f4b7056f388c0339c0168be82176">&#9670;&#160;</a></span>loadZoneFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a> muduo::TimeZone::loadZoneFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>zonefile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc990d5fbe66d761ca8a3b5247255072" name="afc990d5fbe66d761ca8a3b5247255072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc990d5fbe66d761ca8a3b5247255072">&#9670;&#160;</a></span>toLocalTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> muduo::TimeZone::toLocalTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a>&#160;</td>
+          <td class="paramname"><em>secondsSinceEpoch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> *&#160;</td>
+          <td class="paramname"><em>utcOffset</em> = <code><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">nullptr</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ce503c67b4c616b9afa0deaa93c524b" name="a8ce503c67b4c616b9afa0deaa93c524b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce503c67b4c616b9afa0deaa93c524b">&#9670;&#160;</a></span>toUtcTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">struct</a> <a class="el" href="structmuduo_1_1_date_time.html">DateTime</a> muduo::TimeZone::toUtcTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a>&#160;</td>
+          <td class="paramname"><em>secondsSinceEpoch</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9ae517fff6ef853c9d8eaf7a1ef1983" name="ae9ae517fff6ef853c9d8eaf7a1ef1983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ae517fff6ef853c9d8eaf7a1ef1983">&#9670;&#160;</a></span>UTC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a> muduo::TimeZone::UTC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b8c6504dfbc9bf0424a8d19959f8f6a" name="a5b8c6504dfbc9bf0424a8d19959f8f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8c6504dfbc9bf0424a8d19959f8f6a">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::TimeZone::valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="a67d75548244a2baf6fbef9f1a7d9d36e" name="a67d75548244a2baf6fbef9f1a7d9d36e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d75548244a2baf6fbef9f1a7d9d36e">&#9670;&#160;</a></span>TimeZoneTestPeer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">friend</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">class</a> TimeZoneTestPeer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a6da6d95268a68bc8136b6533b5fb1445" name="a6da6d95268a68bc8136b6533b5fb1445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da6d95268a68bc8136b6533b5fb1445">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">Data</a>&gt; muduo::TimeZone::data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_time_zone.html">TimeZone</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

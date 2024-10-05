@@ -1,0 +1,9 @@
+<map id="muduo::net::Buffer::ensureWritableBytes" name="muduo::net::Buffer::ensureWritableBytes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="240,69,407,109"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#a4b7cd67a0ba29f49b1446191b9ace4fd" title=" " alt="" coords="27,5,170,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,68,169,48,170,43,240,63"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer_output_stream.html#a8d7da7a858bae5a285421fe66e665841" title=" " alt="" coords="5,69,192,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,92,192,92,192,87,226,87"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#a1e71fc469d6300073b9e9f7946fb0296" title=" " alt="" coords="27,133,170,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="240,116,170,136,169,131,238,111"/>
+</map>

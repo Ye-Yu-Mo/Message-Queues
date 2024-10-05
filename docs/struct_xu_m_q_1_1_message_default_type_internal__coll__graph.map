@@ -1,0 +1,19 @@
+<map id="XuMQ::MessageDefaultTypeInternal" name="XuMQ::MessageDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,563,211,603"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message.html" title=" " alt="" coords="45,475,171,500"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,514,111,562,105,562,105,514"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="8,5,189,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,59,89,119,89,400,95,441,106,474,101,475,90,442,84,401,84,119,90,59"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_message___payload.html" title=" " alt="" coords="125,299,310,324"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="108,58,129,140,145,188,165,235,187,269,209,297,205,300,182,272,160,237,140,190,123,142,102,60"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_basic_properties.html" title=" " alt="" coords="183,108,353,133"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="146,50,248,106,246,110,143,54"/>
+<area shape="rect" id="Node000004" href="$struct_xu_m_q_1_1_message_1_1_impl__.html" title=" " alt="" coords="128,387,299,412"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,423,124,476,121,472,187,419"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="219,338,217,386,211,386,213,338"/>
+<area shape="rect" id="Node000006" href="$struct_xu_m_q_1_1_message___payload_1_1_impl__.html" title=" " alt="" coords="175,196,361,236"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="254,249,226,300,221,297,249,247"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="271,147,271,196,265,196,265,147"/>
+<area shape="rect" id="Node000008" href="$struct_xu_m_q_1_1_basic_properties_1_1_impl__.html" title=" " alt="" coords="213,5,384,45"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="291,59,274,108,269,107,286,57"/>
+</map>

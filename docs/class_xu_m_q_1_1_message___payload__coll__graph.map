@@ -1,0 +1,12 @@
+<map id="XuMQ::Message_Payload" name="XuMQ::Message_Payload">
+<area shape="rect" id="Node000001" title=" " alt="" coords="25,299,210,324"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,59,119,298,114,299,96,60"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_basic_properties.html" title=" " alt="" coords="141,108,312,133"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="135,51,212,106,209,110,132,56"/>
+<area shape="rect" id="Node000003" href="$struct_xu_m_q_1_1_message___payload_1_1_impl__.html" title=" " alt="" coords="134,196,319,236"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,247,133,300,129,296,192,243"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="229,147,229,196,224,196,224,147"/>
+<area shape="rect" id="Node000005" href="$struct_xu_m_q_1_1_basic_properties_1_1_impl__.html" title=" " alt="" coords="211,5,381,45"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="276,58,238,109,233,106,272,55"/>
+</map>

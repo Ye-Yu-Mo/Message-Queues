@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/LogStream.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_log_stream_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LogStream.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_log_stream_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef MUDUO_BASE_LOGSTREAM_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define MUDUO_BASE_LOGSTREAM_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="noncopyable_8h.html">muduo/base/noncopyable.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_string_piece_8h.html">muduo/base/StringPiece.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8h.html">muduo/base/Types.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;string.h&gt;</span> <span class="comment">// memcpy</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>detail</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1detail.html#a0878aad3641e4b6342cd780c46e163fd">   21</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemuduo_1_1detail.html#a0878aad3641e4b6342cd780c46e163fd">kSmallBuffer</a> = 4000;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="namespacemuduo_1_1detail.html#a41510868404669fa9b0d1c480fb9b2ce">   22</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacemuduo_1_1detail.html#a41510868404669fa9b0d1c480fb9b2ce">kLargeBuffer</a> = 4000*1000;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> SIZE&gt;</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1detail_1_1_fixed_buffer.html">FixedBuffer</a> : <a class="code hl_class" href="classmuduo_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095">   28</a></span>  <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095">FixedBuffer</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a>(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">setCookie</a>(<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5">cookieStart</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad">   34</a></span>  <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad">~FixedBuffer</a>()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">setCookie</a>(<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141">cookieEnd</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="comment">/*restrict*/</span> buf, <span class="keywordtype">size_t</span> len)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// FIXME: append partially</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">implicit_cast&lt;size_t&gt;</a>(<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3">avail</a>()) &gt; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">memcpy</a>(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a>, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a> += <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aee4544a9fef0572f635169a2f7461359">   49</a></span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aee4544a9fef0572f635169a2f7461359">data</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">   50</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">length</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a> - <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>); }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// write to data_ directly</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ac05dce903a81988b7cc36b0747edae74">   53</a></span>  <span class="keywordtype">char</span>* <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ac05dce903a81988b7cc36b0747edae74">current</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a>; }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3">   54</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3">avail</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b">end</a>() - <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a>); }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af2a32db228abb439db70e82433b6e73c">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af2a32db228abb439db70e82433b6e73c">add</a>(<span class="keywordtype">size_t</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>) { <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a> += <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a73b15cde6a9fd32e95c9f7ca780dd614">   57</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a73b15cde6a9fd32e95c9f7ca780dd614">reset</a>() { <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a> = <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>; }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a21f0ebee9b060a71d3cc49be59145906">   58</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a21f0ebee9b060a71d3cc49be59145906">bzero</a>() { <a class="code hl_function" href="namespacemuduo.html#a8f6d784bddb9d3e0774a665b147758bc">memZero</a>(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>, <span class="keyword">sizeof</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>); }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// for used by GDB</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a042e5ea985c317cf568bbc9aaf53da62">   61</a></span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a042e5ea985c317cf568bbc9aaf53da62">debugString</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">   62</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">setCookie</a>(<span class="keywordtype">void</span> (*<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">cookie</a>)()) { <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a728075cbe4b4eec9bb604e07e397ccaa">cookie_</a> = <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">cookie</a>; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// for used by unit test</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aaacc230228370d4c6000d97ed5b83140">   64</a></span>  <span class="keywordtype">string</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#aaacc230228370d4c6000d97ed5b83140">toString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> string(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>, <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">length</a>()); }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a7aa8116c1c73f05530b10a799d2fa4b5">   65</a></span>  <a class="code hl_class" href="classmuduo_1_1_string_piece.html">StringPiece</a> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a7aa8116c1c73f05530b10a799d2fa4b5">toStringPiece</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_class" href="classmuduo_1_1_string_piece.html">StringPiece</a>(<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>, <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">length</a>()); }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b">   68</a></span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b">end</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a> + <span class="keyword">sizeof</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// Must be outline function for cookies.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5">   70</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5">cookieStart</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141">   71</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141">cookieEnd</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a728075cbe4b4eec9bb604e07e397ccaa">   73</a></span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> (*<a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a728075cbe4b4eec9bb604e07e397ccaa">cookie_</a>)();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">   74</a></span>  <span class="keywordtype">char</span> <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">data_</a>[<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">SIZE</a>];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">   75</a></span>  <span class="keywordtype">char</span>* <a class="code hl_variable" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">cur_</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}  <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html">   80</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1_log_stream.html">LogStream</a> : <a class="code hl_class" href="classmuduo_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a87178eb621c5c67f62ca3753c0358b11">   82</a></span>  <span class="keyword">typedef</span> <a class="code hl_class" href="classmuduo_1_1_log_stream.html">LogStream</a> <a class="code hl_typedef" href="classmuduo_1_1_log_stream.html#a87178eb621c5c67f62ca3753c0358b11">self</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ab134d79ffdc5b5d6ac5012c97e7efb08">   84</a></span>  <span class="keyword">typedef</span> <a class="code hl_class" href="classmuduo_1_1detail_1_1_fixed_buffer.html">detail::FixedBuffer&lt;detail::kSmallBuffer&gt;</a> <a class="code hl_typedef" href="classmuduo_1_1_log_stream.html#ab134d79ffdc5b5d6ac5012c97e7efb08">Buffer</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977">   86</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977">operator&lt;&lt;</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a> ? <span class="stringliteral">&quot;1&quot;</span> : <span class="stringliteral">&quot;0&quot;</span>, 1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a185d4b5d00177cefc4bbf8f173ca2e67">   92</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a185d4b5d00177cefc4bbf8f173ca2e67">operator&lt;&lt;</a>(<span class="keywordtype">short</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a23b2542ed0d68b3c5a3f16a3be5f54c3">   93</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a23b2542ed0d68b3c5a3f16a3be5f54c3">operator&lt;&lt;</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#aa17348425c4a305657dfeb9f204ab808">   94</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#aa17348425c4a305657dfeb9f204ab808">operator&lt;&lt;</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ad432aaccbf10cd0979fb84b99bb2a258">   95</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#ad432aaccbf10cd0979fb84b99bb2a258">operator&lt;&lt;</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a545cf51247dd0cb235c0df5d0dbcb56d">   96</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a545cf51247dd0cb235c0df5d0dbcb56d">operator&lt;&lt;</a>(<span class="keywordtype">long</span>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a8acb15ee7c25279dd5cc121473aca9f1">   97</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a8acb15ee7c25279dd5cc121473aca9f1">operator&lt;&lt;</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ae167b039873503f2690d1a3b08349e46">   98</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#ae167b039873503f2690d1a3b08349e46">operator&lt;&lt;</a>(<span class="keywordtype">long</span> <span class="keywordtype">long</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ae4ccc2df2908262f5b66df76ad27601b">   99</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#ae4ccc2df2908262f5b66df76ad27601b">operator&lt;&lt;</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a6a941d20f4922b05f507e0296b96f0cd">  101</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a6a941d20f4922b05f507e0296b96f0cd">operator&lt;&lt;</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>*);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a45754065e0df4badaefa5e9fd61b55cf">  103</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a45754065e0df4badaefa5e9fd61b55cf">operator&lt;&lt;</a>(<span class="keywordtype">float</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    *<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">this &lt;&lt; static_cast&lt;double&gt;</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#afd460b9fe3e7106f7c81a9e14549eae9">  108</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#afd460b9fe3e7106f7c81a9e14549eae9">operator&lt;&lt;</a>(<span class="keywordtype">double</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="comment">// self&amp; operator&lt;&lt;(long double);</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee">  111</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee">operator&lt;&lt;</a>(<span class="keywordtype">char</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(&amp;<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>, 1);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="comment">// self&amp; operator&lt;&lt;(signed char);</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// self&amp; operator&lt;&lt;(unsigned char);</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3">  120</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3">operator&lt;&lt;</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>      <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">strlen</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>));</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<span class="stringliteral">&quot;(null)&quot;</span>, 6);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  }</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a5b8b2433add9f957895cf2d51989ae5d">  133</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a5b8b2433add9f957895cf2d51989ae5d">operator&lt;&lt;</a>(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">operator&lt;&lt;(reinterpret_cast&lt;const char*&gt;</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">str</a>));</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  }</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155">  138</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155">operator&lt;&lt;</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>.c_str(), <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>.size());</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f">  144</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f">operator&lt;&lt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmuduo_1_1_string_piece.html">StringPiece</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>.data(), <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>.size());</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a03af8aa1cb5e21f056eaf3cbdad4220d">  150</a></span>  <a class="code hl_class" href="classmuduo_1_1_log_stream.html">self</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a03af8aa1cb5e21f056eaf3cbdad4220d">operator&lt;&lt;</a>(<span class="keyword">const</span> <a class="code hl_class" href="classmuduo_1_1detail_1_1_fixed_buffer.html">Buffer</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    *<span class="keyword">this</span> &lt;&lt; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">v</a>.toStringPiece();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06">  156</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06">append</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, <span class="keywordtype">int</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>) { <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">append</a>(data, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>); }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a49a002c0b1a62905cb0851f594f9cfb2">  157</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classmuduo_1_1detail_1_1_fixed_buffer.html">Buffer</a>&amp; <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a49a002c0b1a62905cb0851f594f9cfb2">buffer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>; }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#aec58cfb3642c4aa236f5fa1b45c57e2b">  158</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_log_stream.html#aec58cfb3642c4aa236f5fa1b45c57e2b">resetBuffer</a>() { <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>.<a class="code hl_function" href="classmuduo_1_1detail_1_1_fixed_buffer.html#a73b15cde6a9fd32e95c9f7ca780dd614">reset</a>(); }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a0dd8f53b70afa33f429e3a5632d3cd37">  161</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a0dd8f53b70afa33f429e3a5632d3cd37">staticCheck</a>();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a4e48179183596466b3def8c5ec4ef66c">  164</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1_log_stream.html#a4e48179183596466b3def8c5ec4ef66c">formatInteger</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">  166</a></span>  <a class="code hl_class" href="classmuduo_1_1detail_1_1_fixed_buffer.html">Buffer</a> <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">buffer_</a>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classmuduo_1_1_log_stream.html#ad3ef50e42e1c857b31ab709e24e83aab">  168</a></span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classmuduo_1_1_log_stream.html#ad3ef50e42e1c857b31ab709e24e83aab">kMaxNumericSize</a> = 48;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="};">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html">  171</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1_fmt.html">Fmt</a> <span class="comment">// : noncopyable</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html#ab30fb482e0658e3f25601a1808e790ac">  175</a></span>  <a class="code hl_function" href="classmuduo_1_1_fmt.html#ab30fb482e0658e3f25601a1808e790ac">Fmt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">fmt</a>, <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">val</a>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html#a6bc4e1c4e4f8d61b165a5da41d6b3978">  177</a></span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classmuduo_1_1_fmt.html#a6bc4e1c4e4f8d61b165a5da41d6b3978">data</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_fmt.html#a8876229606c2f6183185b025117d7b4e">buf_</a>; }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html#ab1b5ae1c4040a1c68ba5e65798278471">  178</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classmuduo_1_1_fmt.html#ab1b5ae1c4040a1c68ba5e65798278471">length</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classmuduo_1_1_fmt.html#a8ebc7e5dbcc89f1017d8c4f7a306af60">length_</a>; }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html#a8876229606c2f6183185b025117d7b4e">  181</a></span>  <span class="keywordtype">char</span> <a class="code hl_variable" href="classmuduo_1_1_fmt.html#a8876229606c2f6183185b025117d7b4e">buf_</a>[32];</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classmuduo_1_1_fmt.html#a8ebc7e5dbcc89f1017d8c4f7a306af60">  182</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classmuduo_1_1_fmt.html#a8ebc7e5dbcc89f1017d8c4f7a306af60">length_</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>};</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d">  185</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classmuduo_1_1_log_stream.html">LogStream</a>&amp; <a class="code hl_function" href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d">operator&lt;&lt;</a>(<a class="code hl_class" href="classmuduo_1_1_log_stream.html">LogStream</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">s</a>, <span class="keyword">const</span> <a class="code hl_class" href="classmuduo_1_1_fmt.html">Fmt</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">fmt</a>)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>{</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">s</a>.<a class="code hl_function" href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06">append</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">fmt</a>.data(), <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">fmt</a>.length());</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">s</a>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}</div>
+</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">// Format quantity n in SI units (k, M, G, T, P, E).</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">// The returned string is atmost 5 characters long.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">// Requires n &gt;= 0</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="namespacemuduo.html#a2530c171cac6dda7399a9eb5805e01fa">  194</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespacemuduo.html#a2530c171cac6dda7399a9eb5805e01fa">formatSI</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">n</a>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">// Format quantity n in IEC (binary) units (Ki, Mi, Gi, Ti, Pi, Ei).</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">// The returned string is atmost 6 characters long.</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">// Requires n &gt;= 0</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="namespacemuduo.html#a2ad8a8650556c05bae4c4f449ac6d106">  199</a></span><span class="keywordtype">string</span> <a class="code hl_function" href="namespacemuduo.html#a2ad8a8650556c05bae4c4f449ac6d106">formatIEC</a>(<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int64_t</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">n</a>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="preprocessor">#endif  </span><span class="comment">// MUDUO_BASE_LOGSTREAM_H</span></div>
+<div class="ttc" id="a_string_piece_8h_html"><div class="ttname"><a href="_string_piece_8h.html">StringPiece.h</a></div></div>
+<div class="ttc" id="a_types_8h_html"><div class="ttname"><a href="_types_8h.html">Types.h</a></div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html"><div class="ttname"><a href="classmuduo_1_1_fmt.html">muduo::Fmt</a></div><div class="ttdef"><b>Definition</b> LogStream.h:172</div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html_a6bc4e1c4e4f8d61b165a5da41d6b3978"><div class="ttname"><a href="classmuduo_1_1_fmt.html#a6bc4e1c4e4f8d61b165a5da41d6b3978">muduo::Fmt::data</a></div><div class="ttdeci">const char * data() const</div><div class="ttdef"><b>Definition</b> LogStream.h:177</div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html_a8876229606c2f6183185b025117d7b4e"><div class="ttname"><a href="classmuduo_1_1_fmt.html#a8876229606c2f6183185b025117d7b4e">muduo::Fmt::buf_</a></div><div class="ttdeci">char buf_[32]</div><div class="ttdef"><b>Definition</b> LogStream.h:181</div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html_a8ebc7e5dbcc89f1017d8c4f7a306af60"><div class="ttname"><a href="classmuduo_1_1_fmt.html#a8ebc7e5dbcc89f1017d8c4f7a306af60">muduo::Fmt::length_</a></div><div class="ttdeci">int length_</div><div class="ttdef"><b>Definition</b> LogStream.h:182</div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html_ab1b5ae1c4040a1c68ba5e65798278471"><div class="ttname"><a href="classmuduo_1_1_fmt.html#ab1b5ae1c4040a1c68ba5e65798278471">muduo::Fmt::length</a></div><div class="ttdeci">int length() const</div><div class="ttdef"><b>Definition</b> LogStream.h:178</div></div>
+<div class="ttc" id="aclassmuduo_1_1_fmt_html_ab30fb482e0658e3f25601a1808e790ac"><div class="ttname"><a href="classmuduo_1_1_fmt.html#ab30fb482e0658e3f25601a1808e790ac">muduo::Fmt::Fmt</a></div><div class="ttdeci">Fmt(const char *fmt, T val)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html"><div class="ttname"><a href="classmuduo_1_1_log_stream.html">muduo::LogStream</a></div><div class="ttdef"><b>Definition</b> LogStream.h:81</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a03af8aa1cb5e21f056eaf3cbdad4220d"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a03af8aa1cb5e21f056eaf3cbdad4220d">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const Buffer &amp;v)</div><div class="ttdef"><b>Definition</b> LogStream.h:150</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a0dd8f53b70afa33f429e3a5632d3cd37"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a0dd8f53b70afa33f429e3a5632d3cd37">muduo::LogStream::staticCheck</a></div><div class="ttdeci">void staticCheck()</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a179ebb6581916516b683252d9766d785"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a179ebb6581916516b683252d9766d785">muduo::LogStream::buffer_</a></div><div class="ttdeci">Buffer buffer_</div><div class="ttdef"><b>Definition</b> LogStream.h:166</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a185d4b5d00177cefc4bbf8f173ca2e67"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a185d4b5d00177cefc4bbf8f173ca2e67">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(short)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a23b2542ed0d68b3c5a3f16a3be5f54c3"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a23b2542ed0d68b3c5a3f16a3be5f54c3">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(unsigned short)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a2c0ae1c8d32cf4132698416f33cc0155"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a2c0ae1c8d32cf4132698416f33cc0155">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const string &amp;v)</div><div class="ttdef"><b>Definition</b> LogStream.h:138</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a45754065e0df4badaefa5e9fd61b55cf"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a45754065e0df4badaefa5e9fd61b55cf">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(float v)</div><div class="ttdef"><b>Definition</b> LogStream.h:103</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a49a002c0b1a62905cb0851f594f9cfb2"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a49a002c0b1a62905cb0851f594f9cfb2">muduo::LogStream::buffer</a></div><div class="ttdeci">const Buffer &amp; buffer() const</div><div class="ttdef"><b>Definition</b> LogStream.h:157</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a4e48179183596466b3def8c5ec4ef66c"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a4e48179183596466b3def8c5ec4ef66c">muduo::LogStream::formatInteger</a></div><div class="ttdeci">void formatInteger(T)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a540c1acc3e15f694a86c3200fa040f6f"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a540c1acc3e15f694a86c3200fa040f6f">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const StringPiece &amp;v)</div><div class="ttdef"><b>Definition</b> LogStream.h:144</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a545cf51247dd0cb235c0df5d0dbcb56d"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a545cf51247dd0cb235c0df5d0dbcb56d">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(long)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a5b8b2433add9f957895cf2d51989ae5d"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a5b8b2433add9f957895cf2d51989ae5d">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const unsigned char *str)</div><div class="ttdef"><b>Definition</b> LogStream.h:133</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a609a11046dc6a5179c72c400f5591977"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a609a11046dc6a5179c72c400f5591977">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(bool v)</div><div class="ttdef"><b>Definition</b> LogStream.h:86</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a6a941d20f4922b05f507e0296b96f0cd"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a6a941d20f4922b05f507e0296b96f0cd">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const void *)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a77ccac626a8a14b32f8e23203bf2c5ee"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a77ccac626a8a14b32f8e23203bf2c5ee">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(char v)</div><div class="ttdef"><b>Definition</b> LogStream.h:111</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a87178eb621c5c67f62ca3753c0358b11"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a87178eb621c5c67f62ca3753c0358b11">muduo::LogStream::self</a></div><div class="ttdeci">LogStream self</div><div class="ttdef"><b>Definition</b> LogStream.h:82</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_a8acb15ee7c25279dd5cc121473aca9f1"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#a8acb15ee7c25279dd5cc121473aca9f1">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(unsigned long)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_aa17348425c4a305657dfeb9f204ab808"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#aa17348425c4a305657dfeb9f204ab808">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(int)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ab134d79ffdc5b5d6ac5012c97e7efb08"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ab134d79ffdc5b5d6ac5012c97e7efb08">muduo::LogStream::Buffer</a></div><div class="ttdeci">detail::FixedBuffer&lt; detail::kSmallBuffer &gt; Buffer</div><div class="ttdef"><b>Definition</b> LogStream.h:84</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_acf64af855a1bbfb39fce7e0dd2b9f7e3"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#acf64af855a1bbfb39fce7e0dd2b9f7e3">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(const char *str)</div><div class="ttdef"><b>Definition</b> LogStream.h:120</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ad3ef50e42e1c857b31ab709e24e83aab"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ad3ef50e42e1c857b31ab709e24e83aab">muduo::LogStream::kMaxNumericSize</a></div><div class="ttdeci">static const int kMaxNumericSize</div><div class="ttdef"><b>Definition</b> LogStream.h:168</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ad432aaccbf10cd0979fb84b99bb2a258"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ad432aaccbf10cd0979fb84b99bb2a258">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(unsigned int)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ad8dedf16b5732be7605243d196764e06"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ad8dedf16b5732be7605243d196764e06">muduo::LogStream::append</a></div><div class="ttdeci">void append(const char *data, int len)</div><div class="ttdef"><b>Definition</b> LogStream.h:156</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ae167b039873503f2690d1a3b08349e46"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ae167b039873503f2690d1a3b08349e46">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(long long)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_ae4ccc2df2908262f5b66df76ad27601b"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#ae4ccc2df2908262f5b66df76ad27601b">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(unsigned long long)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_aec58cfb3642c4aa236f5fa1b45c57e2b"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#aec58cfb3642c4aa236f5fa1b45c57e2b">muduo::LogStream::resetBuffer</a></div><div class="ttdeci">void resetBuffer()</div><div class="ttdef"><b>Definition</b> LogStream.h:158</div></div>
+<div class="ttc" id="aclassmuduo_1_1_log_stream_html_afd460b9fe3e7106f7c81a9e14549eae9"><div class="ttname"><a href="classmuduo_1_1_log_stream.html#afd460b9fe3e7106f7c81a9e14549eae9">muduo::LogStream::operator&lt;&lt;</a></div><div class="ttdeci">self &amp; operator&lt;&lt;(double)</div></div>
+<div class="ttc" id="aclassmuduo_1_1_string_piece_html"><div class="ttname"><a href="classmuduo_1_1_string_piece.html">muduo::StringPiece</a></div><div class="ttdef"><b>Definition</b> StringPiece.h:69</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html">muduo::detail::FixedBuffer</a></div><div class="ttdef"><b>Definition</b> LogStream.h:26</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a042e5ea985c317cf568bbc9aaf53da62"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a042e5ea985c317cf568bbc9aaf53da62">muduo::detail::FixedBuffer::debugString</a></div><div class="ttdeci">const char * debugString()</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a05324c53f272297abb7ce70c0c6f6be3"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a05324c53f272297abb7ce70c0c6f6be3">muduo::detail::FixedBuffer::avail</a></div><div class="ttdeci">int avail() const</div><div class="ttdef"><b>Definition</b> LogStream.h:54</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a213e7856719f1538e551247ce99814e5"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a213e7856719f1538e551247ce99814e5">muduo::detail::FixedBuffer::cookieStart</a></div><div class="ttdeci">static void cookieStart()</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a21f0ebee9b060a71d3cc49be59145906"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a21f0ebee9b060a71d3cc49be59145906">muduo::detail::FixedBuffer::bzero</a></div><div class="ttdeci">void bzero()</div><div class="ttdef"><b>Definition</b> LogStream.h:58</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a2261d7cad23ff6764bf51c398c8c5141"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a2261d7cad23ff6764bf51c398c8c5141">muduo::detail::FixedBuffer::cookieEnd</a></div><div class="ttdeci">static void cookieEnd()</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a4b8c605465f7baf2933f716a104ec74b"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a4b8c605465f7baf2933f716a104ec74b">muduo::detail::FixedBuffer::end</a></div><div class="ttdeci">const char * end() const</div><div class="ttdef"><b>Definition</b> LogStream.h:68</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a59b7853e11e7c8833cced09e87b42e0c"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a59b7853e11e7c8833cced09e87b42e0c">muduo::detail::FixedBuffer::setCookie</a></div><div class="ttdeci">void setCookie(void(*cookie)())</div><div class="ttdef"><b>Definition</b> LogStream.h:62</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a5f8869de3355a16a6878c681fba57095"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a5f8869de3355a16a6878c681fba57095">muduo::detail::FixedBuffer::FixedBuffer</a></div><div class="ttdeci">FixedBuffer()</div><div class="ttdef"><b>Definition</b> LogStream.h:28</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a660d05de16c2019ec142a8ae7907e7ad"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a660d05de16c2019ec142a8ae7907e7ad">muduo::detail::FixedBuffer::~FixedBuffer</a></div><div class="ttdeci">~FixedBuffer()</div><div class="ttdef"><b>Definition</b> LogStream.h:34</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a728075cbe4b4eec9bb604e07e397ccaa"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a728075cbe4b4eec9bb604e07e397ccaa">muduo::detail::FixedBuffer::cookie_</a></div><div class="ttdeci">void(* cookie_)()</div><div class="ttdef"><b>Definition</b> LogStream.h:73</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a73b15cde6a9fd32e95c9f7ca780dd614"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a73b15cde6a9fd32e95c9f7ca780dd614">muduo::detail::FixedBuffer::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition</b> LogStream.h:57</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a7aa8116c1c73f05530b10a799d2fa4b5"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a7aa8116c1c73f05530b10a799d2fa4b5">muduo::detail::FixedBuffer::toStringPiece</a></div><div class="ttdeci">StringPiece toStringPiece() const</div><div class="ttdef"><b>Definition</b> LogStream.h:65</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a8d61720725e5f2168ca22f3c375e6e64"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a8d61720725e5f2168ca22f3c375e6e64">muduo::detail::FixedBuffer::data_</a></div><div class="ttdeci">char data_[SIZE]</div><div class="ttdef"><b>Definition</b> LogStream.h:74</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_a9bf2c406cdd967599fca5520703a36f3"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#a9bf2c406cdd967599fca5520703a36f3">muduo::detail::FixedBuffer::cur_</a></div><div class="ttdeci">char * cur_</div><div class="ttdef"><b>Definition</b> LogStream.h:75</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_aaacc230228370d4c6000d97ed5b83140"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#aaacc230228370d4c6000d97ed5b83140">muduo::detail::FixedBuffer::toString</a></div><div class="ttdeci">string toString() const</div><div class="ttdef"><b>Definition</b> LogStream.h:64</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_ac05dce903a81988b7cc36b0747edae74"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#ac05dce903a81988b7cc36b0747edae74">muduo::detail::FixedBuffer::current</a></div><div class="ttdeci">char * current()</div><div class="ttdef"><b>Definition</b> LogStream.h:53</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_ad99a9a72c8e0d4a205634bd84699200a"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#ad99a9a72c8e0d4a205634bd84699200a">muduo::detail::FixedBuffer::append</a></div><div class="ttdeci">void append(const char *buf, size_t len)</div><div class="ttdef"><b>Definition</b> LogStream.h:39</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_aee4544a9fef0572f635169a2f7461359"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#aee4544a9fef0572f635169a2f7461359">muduo::detail::FixedBuffer::data</a></div><div class="ttdeci">const char * data() const</div><div class="ttdef"><b>Definition</b> LogStream.h:49</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_af2a32db228abb439db70e82433b6e73c"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#af2a32db228abb439db70e82433b6e73c">muduo::detail::FixedBuffer::add</a></div><div class="ttdeci">void add(size_t len)</div><div class="ttdef"><b>Definition</b> LogStream.h:55</div></div>
+<div class="ttc" id="aclassmuduo_1_1detail_1_1_fixed_buffer_html_af564cacb3550d9b1eeebca488a5cff59"><div class="ttname"><a href="classmuduo_1_1detail_1_1_fixed_buffer.html#af564cacb3550d9b1eeebca488a5cff59">muduo::detail::FixedBuffer::length</a></div><div class="ttdeci">int length() const</div><div class="ttdef"><b>Definition</b> LogStream.h:50</div></div>
+<div class="ttc" id="aclassmuduo_1_1noncopyable_html"><div class="ttname"><a href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></div><div class="ttdef"><b>Definition</b> noncopyable.h:8</div></div>
+<div class="ttc" id="anamespacemuduo_1_1detail_html_a0878aad3641e4b6342cd780c46e163fd"><div class="ttname"><a href="namespacemuduo_1_1detail.html#a0878aad3641e4b6342cd780c46e163fd">muduo::detail::kSmallBuffer</a></div><div class="ttdeci">const int kSmallBuffer</div><div class="ttdef"><b>Definition</b> LogStream.h:21</div></div>
+<div class="ttc" id="anamespacemuduo_1_1detail_html_a41510868404669fa9b0d1c480fb9b2ce"><div class="ttname"><a href="namespacemuduo_1_1detail.html#a41510868404669fa9b0d1c480fb9b2ce">muduo::detail::kLargeBuffer</a></div><div class="ttdeci">const int kLargeBuffer</div><div class="ttdef"><b>Definition</b> LogStream.h:22</div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+<div class="ttc" id="anamespacemuduo_html_a2530c171cac6dda7399a9eb5805e01fa"><div class="ttname"><a href="namespacemuduo.html#a2530c171cac6dda7399a9eb5805e01fa">muduo::formatSI</a></div><div class="ttdeci">string formatSI(int64_t n)</div></div>
+<div class="ttc" id="anamespacemuduo_html_a2ad8a8650556c05bae4c4f449ac6d106"><div class="ttname"><a href="namespacemuduo.html#a2ad8a8650556c05bae4c4f449ac6d106">muduo::formatIEC</a></div><div class="ttdeci">string formatIEC(int64_t n)</div></div>
+<div class="ttc" id="anamespacemuduo_html_a72cbcf425db108335295456e8ff9c12b"><div class="ttname"><a href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">muduo::implicit_cast</a></div><div class="ttdeci">To implicit_cast(From const &amp;f)</div><div class="ttdef"><b>Definition</b> Types.h:80</div></div>
+<div class="ttc" id="anamespacemuduo_html_a8f6d784bddb9d3e0774a665b147758bc"><div class="ttname"><a href="namespacemuduo.html#a8f6d784bddb9d3e0774a665b147758bc">muduo::memZero</a></div><div class="ttdeci">void memZero(void *p, size_t n)</div><div class="ttdef"><b>Definition</b> Types.h:20</div></div>
+<div class="ttc" id="anamespacemuduo_html_afed513a4ecd76211d662b6534c04c45d"><div class="ttname"><a href="namespacemuduo.html#afed513a4ecd76211d662b6534c04c45d">muduo::operator&lt;&lt;</a></div><div class="ttdeci">LogStream &amp; operator&lt;&lt;(LogStream &amp;s, const Fmt &amp;fmt)</div><div class="ttdef"><b>Definition</b> LogStream.h:185</div></div>
+<div class="ttc" id="anoncopyable_8h_html"><div class="ttname"><a href="noncopyable_8h.html">noncopyable.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_log_stream_8h.html">LogStream.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

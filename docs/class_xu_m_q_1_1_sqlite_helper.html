@@ -1,0 +1,431 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::SqliteHelper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_sqlite_helper.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_sqlite_helper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::SqliteHelper类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>SQLite 数据库操作助手类  
+ <a href="class_xu_m_q_1_1_sqlite_helper.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="helper_8hpp_source.html">helper.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:ad9b30fb069cfdb091fa01bc7649a55f3" id="r_ad9b30fb069cfdb091fa01bc7649a55f3"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">SqliteCallback</a>) (void *, int, char **, char **)</td></tr>
+<tr class="memdesc:ad9b30fb069cfdb091fa01bc7649a55f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLite 回调函数类型  <br /></td></tr>
+<tr class="separator:ad9b30fb069cfdb091fa01bc7649a55f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a3c136f5fdf09c586ca1c021b249d819a" id="r_a3c136f5fdf09c586ca1c021b249d819a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a3c136f5fdf09c586ca1c021b249d819a">SqliteHelper</a> (const std::string &amp;dbfile)</td></tr>
+<tr class="memdesc:a3c136f5fdf09c586ca1c021b249d819a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类">SqliteHelper</a> 构造函数  <br /></td></tr>
+<tr class="separator:a3c136f5fdf09c586ca1c021b249d819a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30429cd2d883fe24a616a65a547783b" id="r_ae30429cd2d883fe24a616a65a547783b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">open</a> (int safe_level=SQLITE_OPEN_FULLMUTEX)</td></tr>
+<tr class="memdesc:ae30429cd2d883fe24a616a65a547783b"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开数据库  <br /></td></tr>
+<tr class="separator:ae30429cd2d883fe24a616a65a547783b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9228afe2e214e707afdf56640d7bc76a" id="r_a9228afe2e214e707afdf56640d7bc76a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a> (const std::string &amp;sql, <a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">SqliteCallback</a> cb, void *arg)</td></tr>
+<tr class="memdesc:a9228afe2e214e707afdf56640d7bc76a"><td class="mdescLeft">&#160;</td><td class="mdescRight">执行 SQL 语句  <br /></td></tr>
+<tr class="separator:a9228afe2e214e707afdf56640d7bc76a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8e660e745afaafc72b82937ae81c1e8" id="r_ac8e660e745afaafc72b82937ae81c1e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8">close</a> ()</td></tr>
+<tr class="memdesc:ac8e660e745afaafc72b82937ae81c1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭数据库  <br /></td></tr>
+<tr class="separator:ac8e660e745afaafc72b82937ae81c1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a9e34e9525a504b7b47ca6c31b68b8b86" id="r_a9e34e9525a504b7b47ca6c31b68b8b86"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">_dbfile</a></td></tr>
+<tr class="memdesc:a9e34e9525a504b7b47ca6c31b68b8b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库文件路径  <br /></td></tr>
+<tr class="separator:a9e34e9525a504b7b47ca6c31b68b8b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e6fce01c14c6e9ec8a550e736d236a" id="r_a35e6fce01c14c6e9ec8a550e736d236a"><td class="memItemLeft" align="right" valign="top">sqlite3 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">_handler</a></td></tr>
+<tr class="memdesc:a35e6fce01c14c6e9ec8a550e736d236a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLite 数据库句柄  <br /></td></tr>
+<tr class="separator:a35e6fce01c14c6e9ec8a550e736d236a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>SQLite 数据库操作助手类 </p>
+<p>此类封装了 SQLite 数据库的基本操作，包括创建/打开数据库、 执行 SQL 语句和关闭数据库的功能。</p>
+<p>主要功能：</p><ul>
+<li>创建和打开数据库</li>
+<li>执行 SQL 语句（包括表操作和数据操作）</li>
+<li>关闭数据库 </li>
+</ul>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="ad9b30fb069cfdb091fa01bc7649a55f3" name="ad9b30fb069cfdb091fa01bc7649a55f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b30fb069cfdb091fa01bc7649a55f3">&#9670;&#160;</a></span>SqliteCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::SqliteHelper::SqliteCallback</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SQLite 回调函数类型 </p>
+<p>回调函数用于处理 SQLite 执行 SQL 语句后的结果。</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>用户自定义参数 </td></tr>
+    <tr><td class="paramname">count</td><td>返回的列数 </td></tr>
+    <tr><td class="paramname">values</td><td>返回的列值 </td></tr>
+    <tr><td class="paramname">names</td><td>返回的列名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>整数值，表示处理结果 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a3c136f5fdf09c586ca1c021b249d819a" name="a3c136f5fdf09c586ca1c021b249d819a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c136f5fdf09c586ca1c021b249d819a">&#9670;&#160;</a></span>SqliteHelper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::SqliteHelper::SqliteHelper </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dbfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类">SqliteHelper</a> 构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbfile</td><td>数据库文件路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>使用给定的数据库文件路径初始化 <a class="el" href="class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类">SqliteHelper</a> 对象。 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac8e660e745afaafc72b82937ae81c1e8" name="ac8e660e745afaafc72b82937ae81c1e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8e660e745afaafc72b82937ae81c1e8">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::SqliteHelper::close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭数据库 </p>
+<p>该方法关闭打开的 SQLite 数据库。 </p>
+
+</div>
+</div>
+<a id="a9228afe2e214e707afdf56640d7bc76a" name="a9228afe2e214e707afdf56640d7bc76a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9228afe2e214e707afdf56640d7bc76a">&#9670;&#160;</a></span>exec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::SqliteHelper::exec </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sql</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3">SqliteCallback</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>执行 SQL 语句 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sql</td><td>要执行的 SQL 语句 </td></tr>
+    <tr><td class="paramname">cb</td><td>回调函数，用于处理结果 </td></tr>
+    <tr><td class="paramname">arg</td><td>用户自定义参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回 true，失败返回 false</dd></dl>
+<p>该方法执行指定的 SQL 语句，如果失败则记录错误日志。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_sqlite_helper_a9228afe2e214e707afdf56640d7bc76a_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_sqlite_helper_a9228afe2e214e707afdf56640d7bc76a_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_sqlite_helper_a9228afe2e214e707afdf56640d7bc76a_icgraph" id="aclass_xu_m_q_1_1_sqlite_helper_a9228afe2e214e707afdf56640d7bc76a_icgraph">
+<area shape="rect" title="执行 SQL 语句" alt="" coords="472,133,621,173"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7" title="创建一张表" alt="" coords="243,5,424,45"/>
+<area shape="poly" title=" " alt="" coords="513,126,471,92,423,60,398,48,400,43,425,55,475,88,516,122"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc" title="新增一个交换机" alt="" coords="243,69,424,109"/>
+<area shape="poly" title=" " alt="" coords="465,132,400,112,401,107,467,127"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff" title="获取所有交换机 从数据库加载到内存" alt="" coords="243,133,424,173"/>
+<area shape="poly" title=" " alt="" coords="458,156,424,156,424,151,458,151"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e" title="移除一个交换机" alt="" coords="243,197,424,237"/>
+<area shape="poly" title=" " alt="" coords="467,180,401,200,400,195,465,175"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#a1b314e2c1f7e66e3ca61b15e7bca2a4e" title="移除一张表" alt="" coords="243,261,424,301"/>
+<area shape="poly" title=" " alt="" coords="516,184,475,219,425,252,400,264,398,259,423,247,471,215,513,180"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="9,5,191,45"/>
+<area shape="poly" title=" " alt="" coords="229,28,191,28,191,23,229,23"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_manager.html#a09768797e5456f6c3882cc6a150d8084" title="声明交换机" alt="" coords="5,69,195,109"/>
+<area shape="poly" title=" " alt="" coords="229,92,195,92,195,87,229,87"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b" title="交换机数据内存管理类 构造函数" alt="" coords="5,133,195,173"/>
+<area shape="poly" title=" " alt="" coords="229,156,195,156,195,151,229,151"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129" title="删除交换机" alt="" coords="5,197,195,237"/>
+<area shape="poly" title=" " alt="" coords="229,220,195,220,195,215,229,215"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594" title="清除交换机数据" alt="" coords="5,261,195,301"/>
+<area shape="poly" title=" " alt="" coords="229,284,195,284,195,279,229,279"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae30429cd2d883fe24a616a65a547783b" name="ae30429cd2d883fe24a616a65a547783b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30429cd2d883fe24a616a65a547783b">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::SqliteHelper::open </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>safe_level</em> = <code>SQLITE_OPEN_FULLMUTEX</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打开数据库 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">safe_level</td><td>线程安全级别（默认为 SQLITE_OPEN_FULLMUTEX） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回 true，失败返回 false</dd></dl>
+<p>该方法尝试打开指定的 SQLite 数据库，如果失败则记录错误日志。 </p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_sqlite_helper_ae30429cd2d883fe24a616a65a547783b_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_sqlite_helper_ae30429cd2d883fe24a616a65a547783b_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_sqlite_helper_ae30429cd2d883fe24a616a65a547783b_icgraph" id="aclass_xu_m_q_1_1_sqlite_helper_ae30429cd2d883fe24a616a65a547783b_icgraph">
+<area shape="rect" title="打开数据库" alt="" coords="235,5,384,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="5,5,187,45"/>
+<area shape="poly" title=" " alt="" coords="221,28,187,28,187,23,221,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a9e34e9525a504b7b47ca6c31b68b8b86" name="a9e34e9525a504b7b47ca6c31b68b8b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e34e9525a504b7b47ca6c31b68b8b86">&#9670;&#160;</a></span>_dbfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::SqliteHelper::_dbfile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数据库文件路径 </p>
+
+</div>
+</div>
+<a id="a35e6fce01c14c6e9ec8a550e736d236a" name="a35e6fce01c14c6e9ec8a550e736d236a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e6fce01c14c6e9ec8a550e736d236a">&#9670;&#160;</a></span>_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sqlite3* XuMQ::SqliteHelper::_handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SQLite 数据库句柄 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

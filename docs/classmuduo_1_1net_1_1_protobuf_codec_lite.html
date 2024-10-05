@@ -1,0 +1,973 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::net::ProtobufCodecLite类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1net_1_1_protobuf_codec_lite.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmuduo_1_1net_1_1_protobuf_codec_lite-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::net::ProtobufCodecLite类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_protobuf_codec_lite_8h_source.html">ProtobufCodecLite.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::net::ProtobufCodecLite 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1net_1_1_protobuf_codec_lite__inherit__graph.png" border="0" usemap="#amuduo_1_1net_1_1_protobuf_codec_lite_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1net_1_1_protobuf_codec_lite_inherit__map" id="amuduo_1_1net_1_1_protobuf_codec_lite_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,228,104"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="37,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="119,44,119,79,114,79,114,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::net::ProtobufCodecLite 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1net_1_1_protobuf_codec_lite__coll__graph.png" border="0" usemap="#amuduo_1_1net_1_1_protobuf_codec_lite_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1net_1_1_protobuf_codec_lite_coll__map" id="amuduo_1_1net_1_1_protobuf_codec_lite_coll__map">
+<area shape="rect" title=" " alt="" coords="40,93,263,119"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="5,5,164,31"/>
+<area shape="poly" title=" " alt="" coords="104,40,144,91,140,94,100,43"/>
+<area shape="rect" title=" " alt="" coords="189,5,247,31"/>
+<area shape="poly" title=" " alt="" coords="203,43,163,94,159,91,198,40"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a36fd325b6368847309c407fd51b52e45" id="r_a36fd325b6368847309c407fd51b52e45"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a> { <br />
+&#160;&#160;<a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a5e21bf82cf65cada2901e5b2d937d35f">kNoError</a> = 0
+, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aa89d9338e5c84099d5c61f46958f4c88">kInvalidLength</a>
+, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aa4043dd12143b7a17f8e37ecbe188d8f">kCheckSumError</a>
+, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a9b3f23a104bf5c8063a6cd302157ead6">kInvalidNameLen</a>
+, <br />
+&#160;&#160;<a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45a1ef30b4d0733e1f7cf33c3e71b2f4e2f">kUnknownMessageType</a>
+, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45aaa42c8c4865f93357442024c70eed40b">kParseError</a>
+<br />
+ }</td></tr>
+<tr class="separator:a36fd325b6368847309c407fd51b52e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4620c9404e307d75dcd96eb7579a0f12" id="r_a4620c9404e307d75dcd96eb7579a0f12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a>, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a></td></tr>
+<tr class="separator:a4620c9404e307d75dcd96eb7579a0f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0e22b3b2118f0e0a49c0032da97c6f2" id="r_ab0e22b3b2118f0e0a49c0032da97c6f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a56e4fa8f6fe7f977220c826455b8ba68">MessagePtr</a> &amp;, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">ProtobufMessageCallback</a></td></tr>
+<tr class="separator:ab0e22b3b2118f0e0a49c0032da97c6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab458f1fa82fb7532afcbff47031ae4" id="r_a9ab458f1fa82fb7532afcbff47031ae4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">ErrorCallback</a></td></tr>
+<tr class="separator:a9ab458f1fa82fb7532afcbff47031ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a67d51f997cebbc4ff6a6b80f5acae6d2" id="r_a67d51f997cebbc4ff6a6b80f5acae6d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a67d51f997cebbc4ff6a6b80f5acae6d2">ProtobufCodecLite</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">prototype</a>, <a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">tagArg</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">ProtobufMessageCallback</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">messageCb</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">rawCb</a>=<a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a>(), <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">ErrorCallback</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">errorCb</a>=<a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ae84ec6ea65b5fe62287a959f10fc04e9">defaultErrorCallback</a>)</td></tr>
+<tr class="separator:a67d51f997cebbc4ff6a6b80f5acae6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb07ccd7f125ba599a7d0c804f13c5a" id="r_a8eb07ccd7f125ba599a7d0c804f13c5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a8eb07ccd7f125ba599a7d0c804f13c5a">~ProtobufCodecLite</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:a8eb07ccd7f125ba599a7d0c804f13c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec8fd825676cb9c7ac2bec604c0ca43" id="r_a7ec8fd825676cb9c7ac2bec604c0ca43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a7ec8fd825676cb9c7ac2bec604c0ca43">tag</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a7ec8fd825676cb9c7ac2bec604c0ca43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11e848b98085e4236c408de6ec659cac" id="r_a11e848b98085e4236c408de6ec659cac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a11e848b98085e4236c408de6ec659cac">send</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">conn</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">message</a>)</td></tr>
+<tr class="separator:a11e848b98085e4236c408de6ec659cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4a0ac2e2d1aa50a680802e7fac2374" id="r_a4a4a0ac2e2d1aa50a680802e7fac2374"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4a4a0ac2e2d1aa50a680802e7fac2374">onMessage</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">conn</a>, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a> receiveTime)</td></tr>
+<tr class="separator:a4a4a0ac2e2d1aa50a680802e7fac2374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7cff08e58db34fce249bc40fa1adeaa" id="r_ac7cff08e58db34fce249bc40fa1adeaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ac7cff08e58db34fce249bc40fa1adeaa">parseFromBuffer</a> (<a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, google::protobuf::Message *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">message</a>)</td></tr>
+<tr class="separator:ac7cff08e58db34fce249bc40fa1adeaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0512815fd5102ace0c80cdbe1285f121" id="r_a0512815fd5102ace0c80cdbe1285f121"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a0512815fd5102ace0c80cdbe1285f121">serializeToBuffer</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> google::protobuf::Message &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">message</a>, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>)</td></tr>
+<tr class="separator:a0512815fd5102ace0c80cdbe1285f121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf10a551a0f6974245b679c02eadfd6" id="r_aebf10a551a0f6974245b679c02eadfd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#aebf10a551a0f6974245b679c02eadfd6">parse</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>, ::google::protobuf::Message *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">message</a>)</td></tr>
+<tr class="separator:aebf10a551a0f6974245b679c02eadfd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af09cb99c1ef9cb8c74eb6b95aa87386e" id="r_af09cb99c1ef9cb8c74eb6b95aa87386e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#af09cb99c1ef9cb8c74eb6b95aa87386e">fillEmptyBuffer</a> (<a class="el" href="classmuduo_1_1net_1_1_buffer.html">muduo::net::Buffer</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> google::protobuf::Message &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">message</a>)</td></tr>
+<tr class="separator:af09cb99c1ef9cb8c74eb6b95aa87386e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a5d136281406082530c1803f9d5c5c50d" id="r_a5d136281406082530c1803f9d5c5c50d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a5d136281406082530c1803f9d5c5c50d">errorCodeToString</a> (<a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">errorCode</a>)</td></tr>
+<tr class="separator:a5d136281406082530c1803f9d5c5c50d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5820eb8b98df7429107b36db0b369398" id="r_a5820eb8b98df7429107b36db0b369398"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a5820eb8b98df7429107b36db0b369398">checksum</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:a5820eb8b98df7429107b36db0b369398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32d467b9cf3443e32b2964fe347b0047" id="r_a32d467b9cf3443e32b2964fe347b0047"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a32d467b9cf3443e32b2964fe347b0047">validateChecksum</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">len</a>)</td></tr>
+<tr class="separator:a32d467b9cf3443e32b2964fe347b0047"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732b211274f59f7563c10619d4bd2562" id="r_a732b211274f59f7563c10619d4bd2562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a732b211274f59f7563c10619d4bd2562">asInt32</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">buf</a>)</td></tr>
+<tr class="separator:a732b211274f59f7563c10619d4bd2562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84ec6ea65b5fe62287a959f10fc04e9" id="r_ae84ec6ea65b5fe62287a959f10fc04e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ae84ec6ea65b5fe62287a959f10fc04e9">defaultErrorCallback</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>)</td></tr>
+<tr class="separator:ae84ec6ea65b5fe62287a959f10fc04e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ad447533880ffa92e41657ee041ef4b2a" id="r_ad447533880ffa92e41657ee041ef4b2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ad447533880ffa92e41657ee041ef4b2a">kHeaderLen</a> = <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">sizeof</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>)</td></tr>
+<tr class="separator:ad447533880ffa92e41657ee041ef4b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140b20ca40206857aa338f457f1a1487" id="r_a140b20ca40206857aa338f457f1a1487"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a140b20ca40206857aa338f457f1a1487">kChecksumLen</a> = <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">sizeof</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>)</td></tr>
+<tr class="separator:a140b20ca40206857aa338f457f1a1487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91606efa21ec61d43ded9a86cb6f77a0" id="r_a91606efa21ec61d43ded9a86cb6f77a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a91606efa21ec61d43ded9a86cb6f77a0">kMaxMessageLen</a> = 64*1024*1024</td></tr>
+<tr class="separator:a91606efa21ec61d43ded9a86cb6f77a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a8cf980d2d8c20463c85d2a3451b88442" id="r_a8cf980d2d8c20463c85d2a3451b88442"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a8cf980d2d8c20463c85d2a3451b88442">prototype_</a></td></tr>
+<tr class="separator:a8cf980d2d8c20463c85d2a3451b88442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b4a03422681fac5a753e82074d1562" id="r_ac3b4a03422681fac5a753e82074d1562"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ac3b4a03422681fac5a753e82074d1562">tag_</a></td></tr>
+<tr class="separator:ac3b4a03422681fac5a753e82074d1562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af526bd3b4c85e1ce9dcbd1049c7e28a9" id="r_af526bd3b4c85e1ce9dcbd1049c7e28a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">ProtobufMessageCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#af526bd3b4c85e1ce9dcbd1049c7e28a9">messageCallback_</a></td></tr>
+<tr class="separator:af526bd3b4c85e1ce9dcbd1049c7e28a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd6252c6756de81d4443c6273362c4a" id="r_acfd6252c6756de81d4443c6273362c4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#acfd6252c6756de81d4443c6273362c4a">rawCb_</a></td></tr>
+<tr class="separator:acfd6252c6756de81d4443c6273362c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c2c76c1a807d1f46d613496932d4e1" id="r_a67c2c76c1a807d1f46d613496932d4e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">ErrorCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a67c2c76c1a807d1f46d613496932d4e1">errorCallback_</a></td></tr>
+<tr class="separator:a67c2c76c1a807d1f46d613496932d4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a16227d04a4fd40a43de33f32e40c65" id="r_a4a16227d04a4fd40a43de33f32e40c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4a16227d04a4fd40a43de33f32e40c65">kMinMessageLen</a></td></tr>
+<tr class="separator:a4a16227d04a4fd40a43de33f32e40c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pub_methods_classmuduo_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmuduo_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></td></tr>
+<tr class="memitem:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae1b6f048685091082c44d8be220239ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae1b6f048685091082c44d8be220239ac">noncopyable</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable" id="r_aaeb67fffc76d7ea9227b8cf8ca8fae0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#aaeb67fffc76d7ea9227b8cf8ca8fae0a">operator=</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae0ca7ea7b61e7ef8b82582063c09b901"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae0ca7ea7b61e7ef8b82582063c09b901">noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ac12e02f31699cca2d17ba01d35648ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ac12e02f31699cca2d17ba01d35648ff5">~noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a9ab458f1fa82fb7532afcbff47031ae4" name="a9ab458f1fa82fb7532afcbff47031ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab458f1fa82fb7532afcbff47031ae4">&#9670;&#160;</a></span>ErrorCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a>&amp;, <a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a>*, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>, <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>)&gt; <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">muduo::net::ProtobufCodecLite::ErrorCallback</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0e22b3b2118f0e0a49c0032da97c6f2" name="ab0e22b3b2118f0e0a49c0032da97c6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0e22b3b2118f0e0a49c0032da97c6f2">&#9670;&#160;</a></span>ProtobufMessageCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a>&amp;, <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a56e4fa8f6fe7f977220c826455b8ba68">MessagePtr</a>&amp;, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>)&gt; <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">muduo::net::ProtobufCodecLite::ProtobufMessageCallback</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4620c9404e307d75dcd96eb7579a0f12" name="a4620c9404e307d75dcd96eb7579a0f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4620c9404e307d75dcd96eb7579a0f12">&#9670;&#160;</a></span>RawMessageCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typedef</a> std::function&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a>&amp;, <a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a>, <a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>)&gt; <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">muduo::net::ProtobufCodecLite::RawMessageCallback</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a36fd325b6368847309c407fd51b52e45" name="a36fd325b6368847309c407fd51b52e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36fd325b6368847309c407fd51b52e45">&#9670;&#160;</a></span>ErrorCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">enum</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">muduo::net::ProtobufCodecLite::ErrorCode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45a5e21bf82cf65cada2901e5b2d937d35f" name="a36fd325b6368847309c407fd51b52e45a5e21bf82cf65cada2901e5b2d937d35f"></a>kNoError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45aa89d9338e5c84099d5c61f46958f4c88" name="a36fd325b6368847309c407fd51b52e45aa89d9338e5c84099d5c61f46958f4c88"></a>kInvalidLength&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45aa4043dd12143b7a17f8e37ecbe188d8f" name="a36fd325b6368847309c407fd51b52e45aa4043dd12143b7a17f8e37ecbe188d8f"></a>kCheckSumError&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45a9b3f23a104bf5c8063a6cd302157ead6" name="a36fd325b6368847309c407fd51b52e45a9b3f23a104bf5c8063a6cd302157ead6"></a>kInvalidNameLen&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45a1ef30b4d0733e1f7cf33c3e71b2f4e2f" name="a36fd325b6368847309c407fd51b52e45a1ef30b4d0733e1f7cf33c3e71b2f4e2f"></a>kUnknownMessageType&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a36fd325b6368847309c407fd51b52e45aaa42c8c4865f93357442024c70eed40b" name="a36fd325b6368847309c407fd51b52e45aaa42c8c4865f93357442024c70eed40b"></a>kParseError&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a67d51f997cebbc4ff6a6b80f5acae6d2" name="a67d51f997cebbc4ff6a6b80f5acae6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67d51f997cebbc4ff6a6b80f5acae6d2">&#9670;&#160;</a></span>ProtobufCodecLite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::net::ProtobufCodecLite::ProtobufCodecLite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message *&#160;</td>
+          <td class="paramname"><em>prototype</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a>&#160;</td>
+          <td class="paramname"><em>tagArg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">ProtobufMessageCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>messageCb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>rawCb</em> = <code><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">ErrorCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>errorCb</em> = <code><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ae84ec6ea65b5fe62287a959f10fc04e9">defaultErrorCallback</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8eb07ccd7f125ba599a7d0c804f13c5a" name="a8eb07ccd7f125ba599a7d0c804f13c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb07ccd7f125ba599a7d0c804f13c5a">&#9670;&#160;</a></span>~ProtobufCodecLite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a> muduo::net::ProtobufCodecLite::~ProtobufCodecLite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a732b211274f59f7563c10619d4bd2562" name="a732b211274f59f7563c10619d4bd2562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732b211274f59f7563c10619d4bd2562">&#9670;&#160;</a></span>asInt32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a> muduo::net::ProtobufCodecLite::asInt32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5820eb8b98df7429107b36db0b369398" name="a5820eb8b98df7429107b36db0b369398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5820eb8b98df7429107b36db0b369398">&#9670;&#160;</a></span>checksum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a> muduo::net::ProtobufCodecLite::checksum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae84ec6ea65b5fe62287a959f10fc04e9" name="ae84ec6ea65b5fe62287a959f10fc04e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84ec6ea65b5fe62287a959f10fc04e9">&#9670;&#160;</a></span>defaultErrorCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::net::ProtobufCodecLite::defaultErrorCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d136281406082530c1803f9d5c5c50d" name="a5d136281406082530c1803f9d5c5c50d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d136281406082530c1803f9d5c5c50d">&#9670;&#160;</a></span>errorCodeToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp; muduo::net::ProtobufCodecLite::errorCodeToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a>&#160;</td>
+          <td class="paramname"><em>errorCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af09cb99c1ef9cb8c74eb6b95aa87386e" name="af09cb99c1ef9cb8c74eb6b95aa87386e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af09cb99c1ef9cb8c74eb6b95aa87386e">&#9670;&#160;</a></span>fillEmptyBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::net::ProtobufCodecLite::fillEmptyBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_buffer.html">muduo::net::Buffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> google::protobuf::Message &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a4a0ac2e2d1aa50a680802e7fac2374" name="a4a4a0ac2e2d1aa50a680802e7fac2374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4a0ac2e2d1aa50a680802e7fac2374">&#9670;&#160;</a></span>onMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::net::ProtobufCodecLite::onMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_timestamp.html">Timestamp</a>&#160;</td>
+          <td class="paramname"><em>receiveTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebf10a551a0f6974245b679c02eadfd6" name="aebf10a551a0f6974245b679c02eadfd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf10a551a0f6974245b679c02eadfd6">&#9670;&#160;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a36fd325b6368847309c407fd51b52e45">ErrorCode</a> muduo::net::ProtobufCodecLite::parse </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::google::protobuf::Message *&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7cff08e58db34fce249bc40fa1adeaa" name="ac7cff08e58db34fce249bc40fa1adeaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7cff08e58db34fce249bc40fa1adeaa">&#9670;&#160;</a></span>parseFromBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::net::ProtobufCodecLite::parseFromBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_string_piece.html">StringPiece</a>&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">google::protobuf::Message *&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11e848b98085e4236c408de6ec659cac" name="a11e848b98085e4236c408de6ec659cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11e848b98085e4236c408de6ec659cac">&#9670;&#160;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> muduo::net::ProtobufCodecLite::send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo_1_1net.html#a03dd52847401b55d1829f552f8812f71">TcpConnectionPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0512815fd5102ace0c80cdbe1285f121" name="a0512815fd5102ace0c80cdbe1285f121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0512815fd5102ace0c80cdbe1285f121">&#9670;&#160;</a></span>serializeToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">virtual</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::net::ProtobufCodecLite::serializeToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> google::protobuf::Message &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1net_1_1_buffer.html">Buffer</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec8fd825676cb9c7ac2bec604c0ca43" name="a7ec8fd825676cb9c7ac2bec604c0ca43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec8fd825676cb9c7ac2bec604c0ca43">&#9670;&#160;</a></span>tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string &amp; muduo::net::ProtobufCodecLite::tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32d467b9cf3443e32b2964fe347b0047" name="a32d467b9cf3443e32b2964fe347b0047"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d467b9cf3443e32b2964fe347b0047">&#9670;&#160;</a></span>validateChecksum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">static</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> muduo::net::ProtobufCodecLite::validateChecksum </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">char</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a67c2c76c1a807d1f46d613496932d4e1" name="a67c2c76c1a807d1f46d613496932d4e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c2c76c1a807d1f46d613496932d4e1">&#9670;&#160;</a></span>errorCallback_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a9ab458f1fa82fb7532afcbff47031ae4">ErrorCallback</a> muduo::net::ProtobufCodecLite::errorCallback_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a140b20ca40206857aa338f457f1a1487" name="a140b20ca40206857aa338f457f1a1487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140b20ca40206857aa338f457f1a1487">&#9670;&#160;</a></span>kChecksumLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::net::ProtobufCodecLite::kChecksumLen = <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">sizeof</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad447533880ffa92e41657ee041ef4b2a" name="ad447533880ffa92e41657ee041ef4b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad447533880ffa92e41657ee041ef4b2a">&#9670;&#160;</a></span>kHeaderLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::net::ProtobufCodecLite::kHeaderLen = <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">sizeof</a>(<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int32_t</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91606efa21ec61d43ded9a86cb6f77a0" name="a91606efa21ec61d43ded9a86cb6f77a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91606efa21ec61d43ded9a86cb6f77a0">&#9670;&#160;</a></span>kMaxMessageLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::net::ProtobufCodecLite::kMaxMessageLen = 64*1024*1024</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a16227d04a4fd40a43de33f32e40c65" name="a4a16227d04a4fd40a43de33f32e40c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a16227d04a4fd40a43de33f32e40c65">&#9670;&#160;</a></span>kMinMessageLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> muduo::net::ProtobufCodecLite::kMinMessageLen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af526bd3b4c85e1ce9dcbd1049c7e28a9" name="af526bd3b4c85e1ce9dcbd1049c7e28a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af526bd3b4c85e1ce9dcbd1049c7e28a9">&#9670;&#160;</a></span>messageCallback_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#ab0e22b3b2118f0e0a49c0032da97c6f2">ProtobufMessageCallback</a> muduo::net::ProtobufCodecLite::messageCallback_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cf980d2d8c20463c85d2a3451b88442" name="a8cf980d2d8c20463c85d2a3451b88442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf980d2d8c20463c85d2a3451b88442">&#9670;&#160;</a></span>prototype_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> ::google::protobuf::Message* muduo::net::ProtobufCodecLite::prototype_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfd6252c6756de81d4443c6273362c4a" name="acfd6252c6756de81d4443c6273362c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfd6252c6756de81d4443c6273362c4a">&#9670;&#160;</a></span>rawCb_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html#a4620c9404e307d75dcd96eb7579a0f12">RawMessageCallback</a> muduo::net::ProtobufCodecLite::rawCb_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3b4a03422681fac5a753e82074d1562" name="ac3b4a03422681fac5a753e82074d1562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b4a03422681fac5a753e82074d1562">&#9670;&#160;</a></span>tag_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> string muduo::net::ProtobufCodecLite::tag_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="namespacemuduo_1_1net.html">net</a></li><li class="navelem"><a class="el" href="classmuduo_1_1net_1_1_protobuf_codec_lite.html">ProtobufCodecLite</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

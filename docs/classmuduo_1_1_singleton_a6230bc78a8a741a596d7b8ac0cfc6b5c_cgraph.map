@@ -1,0 +1,12 @@
+<map id="muduo::Singleton::instance" name="muduo::Singleton::instance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,204,31"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="707,31,865,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,12,413,11,536,14,659,22,696,26,696,31,658,27,536,20,413,16,204,17"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1_singleton.html#ab7c3ee53f2cb0c142276e5de5a4c2270" title=" " alt="" coords="252,31,417,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="205,26,239,30,238,35,204,32"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="749,32,742,22,746,12,761,6,786,4,818,8,830,17,826,21,816,13,786,9,762,11,749,16,747,22,754,29"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="418,41,693,41,693,46,418,46"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1_singleton.html#a03181ba3a8149e0c7ba0e731335df8da" title=" " alt="" coords="465,81,659,107"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="393,54,492,76,491,81,392,59"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="619,79,715,56,716,62,620,84"/>
+</map>

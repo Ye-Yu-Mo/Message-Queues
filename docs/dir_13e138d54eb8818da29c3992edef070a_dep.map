@@ -1,0 +1,9 @@
+<map id="test" name="test">
+<area shape="rect" id="node1" href="dir_13e138d54eb8818da29c3992edef070a.html" title="test" alt="" coords="60,5,107,31"/>
+<area shape="rect" id="node2" href="dir_41e1742e44e2de38b3bc91f993fed282.html" title="server" alt="" coords="5,79,68,104"/>
+<area shape="poly" id="edge1" href="dir_000005_000003.html" alt="" coords="78,32,54,69,50,66,73,30"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000005_000003.html" title="1" alt="" coords="57,61,66,75"/>
+<area shape="rect" id="node3" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html" title="common" alt="" coords="92,79,171,104"/>
+<area shape="poly" id="edge2" href="dir_000005_000000.html" alt="" coords="93,30,118,66,114,69,89,33"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000005_000000.html" title="1" alt="" coords="116,51,125,66"/>
+</map>

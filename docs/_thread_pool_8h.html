@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/base/ThreadPool.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_thread_pool_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a>  </div>
+  <div class="headertitle"><div class="title">ThreadPool.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_condition_8h_source.html">muduo/base/Condition.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_mutex_8h_source.html">muduo/base/Mutex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_thread_8h_source.html">muduo/base/Thread.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_types_8h_source.html">muduo/base/Types.h</a>&quot;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+ThreadPool.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="_thread_pool_8h__incl.png" border="0" usemap="#athird_2muduo_2include_2muduo_2base_2_thread_pool_8h" alt=""/></div>
+<map name="athird_2muduo_2include_2muduo_2base_2_thread_pool_8h" id="athird_2muduo_2include_2muduo_2base_2_thread_pool_8h">
+<area shape="rect" title=" " alt="" coords="607,5,802,45"/>
+<area shape="rect" href="_condition_8h.html" title=" " alt="" coords="332,240,512,265"/>
+<area shape="poly" title=" " alt="" coords="697,47,652,118,619,158,580,194,534,221,486,239,484,234,531,216,576,190,615,155,648,115,692,44"/>
+<area shape="rect" href="_mutex_8h.html" title=" " alt="" coords="209,313,368,339"/>
+<area shape="poly" title=" " alt="" coords="608,38,475,54,326,81,257,98,195,119,147,142,115,168,105,189,107,209,118,229,137,248,190,281,245,306,243,311,187,286,134,252,114,232,101,211,99,188,111,165,144,137,193,114,255,93,325,76,474,49,607,33"/>
+<area shape="rect" href="_types_8h.html" title=" " alt="" coords="354,460,509,485"/>
+<area shape="poly" title=" " alt="" coords="718,44,743,103,754,140,758,178,758,328,752,363,735,393,709,417,676,435,639,450,600,460,523,471,522,466,599,455,638,444,674,431,705,413,730,390,747,362,753,327,753,178,749,141,738,104,713,47"/>
+<area shape="rect" href="_thread_8h.html" title=" " alt="" coords="446,93,609,119"/>
+<area shape="poly" title=" " alt="" coords="663,48,567,90,565,85,661,43"/>
+<area shape="rect" title=" " alt="" coords="793,93,856,119"/>
+<area shape="poly" title=" " alt="" coords="735,43,797,84,794,88,732,48"/>
+<area shape="rect" title=" " alt="" coords="880,93,943,119"/>
+<area shape="poly" title=" " alt="" coords="755,43,869,86,867,91,753,48"/>
+<area shape="poly" title=" " alt="" coords="402,268,324,309,321,304,399,263"/>
+<area shape="rect" title=" " alt="" coords="561,387,645,412"/>
+<area shape="poly" title=" " alt="" coords="438,264,580,376,576,380,435,268"/>
+<area shape="rect" href="_current_thread_8h.html" title=" " alt="" coords="326,387,537,412"/>
+<area shape="poly" title=" " alt="" coords="313,336,397,378,395,383,310,341"/>
+<area shape="rect" title=" " alt="" coords="265,533,339,559"/>
+<area shape="poly" title=" " alt="" coords="292,339,303,519,298,519,287,339"/>
+<area shape="rect" href="noncopyable_8h.html" title=" " alt="" coords="49,387,251,412"/>
+<area shape="poly" title=" " alt="" coords="268,341,186,383,184,378,265,336"/>
+<area shape="poly" title=" " alt="" coords="340,336,548,383,547,388,339,341"/>
+<area shape="poly" title=" " alt="" coords="434,412,434,446,429,446,429,412"/>
+<area shape="rect" title=" " alt="" coords="53,533,124,559"/>
+<area shape="poly" title=" " alt="" coords="377,488,138,537,137,532,376,483"/>
+<area shape="rect" title=" " alt="" coords="472,533,543,559"/>
+<area shape="poly" title=" " alt="" coords="445,483,487,522,483,526,442,487"/>
+<area shape="rect" title=" " alt="" coords="389,533,447,559"/>
+<area shape="poly" title=" " alt="" coords="432,486,425,520,420,519,427,485"/>
+<area shape="poly" title=" " alt="" coords="412,488,337,529,334,524,409,483"/>
+<area shape="poly" title=" " alt="" coords="565,116,609,135,655,163,676,181,692,202,703,225,707,251,707,327,705,356,696,377,682,396,660,414,628,434,593,449,523,467,522,462,592,444,626,429,656,410,678,392,692,375,700,354,702,327,702,252,698,227,688,204,672,185,652,167,607,140,563,121"/>
+<area shape="poly" title=" " alt="" coords="543,117,563,138,580,166,598,222,607,279,609,332,608,373,603,373,604,332,601,280,593,223,576,168,559,141,539,121"/>
+<area shape="rect" href="_atomic_8h.html" title=" " alt="" coords="5,313,169,339"/>
+<area shape="poly" title=" " alt="" coords="446,111,355,115,257,124,170,141,137,154,115,169,95,198,86,233,84,269,86,299,81,300,78,269,80,233,90,196,111,165,135,149,168,136,256,119,355,109,446,105"/>
+<area shape="rect" href="_count_down_latch_8h.html" title=" " alt="" coords="125,167,353,192"/>
+<area shape="poly" title=" " alt="" coords="482,121,300,166,299,161,480,116"/>
+<area shape="rect" title=" " alt="" coords="377,167,464,192"/>
+<area shape="poly" title=" " alt="" coords="512,121,451,161,448,157,509,116"/>
+<area shape="rect" title=" " alt="" coords="489,167,566,192"/>
+<area shape="poly" title=" " alt="" coords="530,119,530,153,525,153,525,119"/>
+<area shape="poly" title=" " alt="" coords="75,341,55,361,39,388,35,405,34,423,42,460,57,493,74,520,69,523,52,496,37,461,29,424,30,405,34,386,51,358,71,337"/>
+<area shape="poly" title=" " alt="" coords="100,337,133,374,129,378,96,341"/>
+<area shape="poly" title=" " alt="" coords="270,190,380,232,378,237,268,195"/>
+<area shape="poly" title=" " alt="" coords="246,192,283,300,278,301,241,193"/>
+</map>
+</div>
+</div>
+<p><a href="_thread_pool_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_thread_pool.html">muduo::ThreadPool</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacemuduo" id="r_namespacemuduo"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemuduo.html">muduo</a></td></tr>
+<tr class="memdesc:namespacemuduo"><td class="mdescLeft">&#160;</td><td class="mdescRight">The most common stuffs. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_265aefb7879566865f151522aff00ec7.html">base</a></li><li class="navelem"><a class="el" href="_thread_pool_8h.html">ThreadPool.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: common/msg.pb.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('msg_8pb_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">msg.pb.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;google/protobuf/port_def.inc&gt;</code><br />
+<code>#include &lt;google/protobuf/port_undef.inc&gt;</code><br />
+<code>#include &lt;google/protobuf/io/coded_stream.h&gt;</code><br />
+<code>#include &lt;google/protobuf/arena.h&gt;</code><br />
+<code>#include &lt;google/protobuf/arenastring.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_message_util.h&gt;</code><br />
+<code>#include &lt;google/protobuf/metadata_lite.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_message_reflection.h&gt;</code><br />
+<code>#include &lt;google/protobuf/message.h&gt;</code><br />
+<code>#include &lt;google/protobuf/repeated_field.h&gt;</code><br />
+<code>#include &lt;google/protobuf/extension_set.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_enum_reflection.h&gt;</code><br />
+<code>#include &lt;google/protobuf/unknown_field_set.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+msg.pb.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8pb_8h__incl.png" border="0" usemap="#acommon_2msg_8pb_8h" alt=""/></div>
+<map name="acommon_2msg_8pb_8h" id="acommon_2msg_8pb_8h">
+<area shape="rect" title=" " alt="" coords="1162,5,1305,31"/>
+<area shape="rect" title=" " alt="" coords="5,86,64,111"/>
+<area shape="poly" title=" " alt="" coords="1162,22,929,25,615,33,303,51,174,64,77,81,70,83,68,78,75,76,173,59,302,46,614,28,929,20,1162,17"/>
+<area shape="rect" title=" " alt="" coords="88,86,147,111"/>
+<area shape="poly" title=" " alt="" coords="1162,23,944,26,654,35,367,53,248,65,159,81,152,83,151,78,158,76,248,60,366,47,654,30,944,21,1162,17"/>
+<area shape="rect" title=" " alt="" coords="171,79,325,119"/>
+<area shape="poly" title=" " alt="" coords="1162,23,812,38,579,55,339,81,339,76,578,50,811,33,1161,18"/>
+<area shape="rect" title=" " alt="" coords="349,79,504,119"/>
+<area shape="poly" title=" " alt="" coords="1162,25,883,42,703,59,518,81,517,76,703,53,883,37,1162,20"/>
+<area shape="rect" title=" " alt="" coords="528,79,669,119"/>
+<area shape="poly" title=" " alt="" coords="1162,27,951,46,819,62,683,81,682,76,819,56,951,41,1162,22"/>
+<area shape="rect" title=" " alt="" coords="693,86,872,111"/>
+<area shape="poly" title=" " alt="" coords="1165,33,884,81,857,86,856,81,884,76,1164,28"/>
+<area shape="rect" title=" " alt="" coords="897,86,1111,111"/>
+<area shape="poly" title=" " alt="" coords="1201,33,1051,84,1050,79,1199,28"/>
+<area shape="rect" title=" " alt="" coords="1136,79,1331,119"/>
+<area shape="poly" title=" " alt="" coords="1236,31,1236,65,1231,65,1231,31"/>
+<area shape="rect" title=" " alt="" coords="1355,79,1547,119"/>
+<area shape="poly" title=" " alt="" coords="1266,28,1387,72,1385,77,1264,33"/>
+<area shape="rect" title=" " alt="" coords="1571,79,1765,119"/>
+<area shape="poly" title=" " alt="" coords="1297,28,1558,75,1557,80,1296,33"/>
+<area shape="rect" title=" " alt="" coords="1789,86,1989,111"/>
+<area shape="poly" title=" " alt="" coords="1305,23,1517,45,1778,76,1812,81,1811,86,1777,81,1516,50,1305,28"/>
+<area shape="rect" title=" " alt="" coords="2013,79,2200,119"/>
+<area shape="poly" title=" " alt="" coords="1305,20,1604,38,1799,54,2000,76,2000,81,1799,60,1604,43,1305,25"/>
+<area shape="rect" title=" " alt="" coords="2225,79,2418,119"/>
+<area shape="poly" title=" " alt="" coords="1305,18,1688,34,1945,51,2211,76,2211,81,1945,56,1687,39,1305,24"/>
+<area shape="rect" title=" " alt="" coords="2443,79,2637,119"/>
+<area shape="poly" title=" " alt="" coords="1305,17,1497,21,1773,30,2096,47,2429,76,2429,81,2096,53,1773,35,1497,26,1305,23"/>
+<area shape="rect" title=" " alt="" coords="2662,79,2850,119"/>
+<area shape="poly" title=" " alt="" coords="1305,16,1528,18,1858,25,2247,43,2449,58,2649,76,2648,81,2449,63,2247,49,1858,31,1528,23,1305,22"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8pb_8h__dep__incl.png" border="0" usemap="#acommon_2msg_8pb_8hdep" alt=""/></div>
+<map name="acommon_2msg_8pb_8hdep" id="acommon_2msg_8pb_8hdep">
+<area shape="rect" title=" " alt="" coords="98,5,241,31"/>
+<area shape="rect" href="msg_8pb_8cc.html" title=" " alt="" coords="5,79,155,104"/>
+<area shape="poly" title=" " alt="" coords="146,41,96,81,93,76,143,37"/>
+<area shape="rect" href="exchange_8hpp.html" title=" " alt="" coords="179,79,338,104"/>
+<area shape="poly" title=" " alt="" coords="196,37,246,76,242,81,193,41"/>
+<area shape="rect" href="mqexchangetest_8cpp.html" title=" " alt="" coords="165,152,352,177"/>
+<area shape="poly" title=" " alt="" coords="261,118,261,152,256,152,256,118"/>
+</map>
+</div>
+</div>
+<p><a href="msg_8pb_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_table_struct__msg__2eproto.html">TableStruct_msg_2eproto</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_basic_properties.html">XuMQ::BasicProperties</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_basic_properties_1_1_impl__.html">XuMQ::BasicProperties::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html">XuMQ::Message_Payload</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_message___payload_1_1_impl__.html">XuMQ::Message_Payload::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_message_1_1_impl__.html">XuMQ::Message::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__proto__enum_3_01_1_1_xu_m_q_1_1_exchange_type_01_4.html">is_proto_enum&lt; ::XuMQ::ExchangeType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__proto__enum_3_01_1_1_xu_m_q_1_1_delivery_mode_01_4.html">is_proto_enum&lt; ::XuMQ::DeliveryMode &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceinternal" id="r_namespaceinternal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinternal.html">internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_xu_m_q" id="r_namespace_xu_m_q"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a2b4922f6589b42c1a644e8b00341284b" id="r_a2b4922f6589b42c1a644e8b00341284b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#a2b4922f6589b42c1a644e8b00341284b">PROTOBUF_INTERNAL_EXPORT_msg_2eproto</a></td></tr>
+<tr class="separator:a2b4922f6589b42c1a644e8b00341284b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a4816a5c6a665a9846a019871c6310c7d" id="r_a4816a5c6a665a9846a019871c6310c7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">XuMQ::ExchangeType</a> : int { <br />
+&#160;&#160;<a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da663837940118a6f44ae3cffba0b7396b">XuMQ::UNKNOWTYPE</a> = 0
+, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da6e18e7eb745d443ce711ef9f8d8f266b">XuMQ::DIRECT</a> = 1
+, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7dac1ddc7302c1649da01979aaf9a78397c">XuMQ::FANOUT</a> = 2
+, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7daa084eda8370385e513bc0599d3cc5811">XuMQ::TOPIC</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7daa5e0ea98977de98625e5d4264f155d29">XuMQ::ExchangeType_INT_MIN_SENTINEL_DO_NOT_USE_</a> = std::numeric_limits&lt;int32_t&gt;::min()
+, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da5cb83eacac883351df992b3a23317bc9">XuMQ::ExchangeType_INT_MAX_SENTINEL_DO_NOT_USE_</a> = std::numeric_limits&lt;int32_t&gt;::max()
+<br />
+ }</td></tr>
+<tr class="separator:a4816a5c6a665a9846a019871c6310c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f608e8c800bb6737ae004b82a037614" id="r_a0f608e8c800bb6737ae004b82a037614"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">XuMQ::DeliveryMode</a> : int { <br />
+&#160;&#160;<a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a457929c044f0ea902e54568f57dffa20">XuMQ::UNKNOWMODE</a> = 0
+, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a1575dc12622e36c0efa8a0fd8024e996">XuMQ::UNDURABLE</a> = 1
+, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a5dc49c69b5e2ddae023a20edd108e785">XuMQ::DURABLE</a> = 2
+, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a73785b8fad265e73c6e97eedd299da12">XuMQ::DeliveryMode_INT_MIN_SENTINEL_DO_NOT_USE_</a> = std::numeric_limits&lt;int32_t&gt;::min()
+, <br />
+&#160;&#160;<a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a7efa0db034ba790efb017d779fb4139a">XuMQ::DeliveryMode_INT_MAX_SENTINEL_DO_NOT_USE_</a> = std::numeric_limits&lt;int32_t&gt;::max()
+<br />
+ }</td></tr>
+<tr class="separator:a0f608e8c800bb6737ae004b82a037614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98" id="r_aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NAMESPACE_OPEN <a class="el" href="class_xu_m_q_1_1_basic_properties.html">::XuMQ::BasicProperties</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98">Arena::CreateMaybeMessage&lt;::XuMQ::BasicProperties &gt;</a> (Arena *)</td></tr>
+<tr class="separator:aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e8baa1d64daf9cbbba76b424182b4a" id="r_a50e8baa1d64daf9cbbba76b424182b4a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a50e8baa1d64daf9cbbba76b424182b4a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_message.html">::XuMQ::Message</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#a50e8baa1d64daf9cbbba76b424182b4a">Arena::CreateMaybeMessage&lt;::XuMQ::Message &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a50e8baa1d64daf9cbbba76b424182b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb6d1387781f0c2ca4b777f866e60a7" id="r_afdb6d1387781f0c2ca4b777f866e60a7"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:afdb6d1387781f0c2ca4b777f866e60a7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_message___payload.html">::XuMQ::Message_Payload</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#afdb6d1387781f0c2ca4b777f866e60a7">Arena::CreateMaybeMessage&lt;::XuMQ::Message_Payload &gt;</a> (Arena *)</td></tr>
+<tr class="separator:afdb6d1387781f0c2ca4b777f866e60a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94172775e5713861e3987c3498000805" id="r_a94172775e5713861e3987c3498000805"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a94172775e5713861e3987c3498000805">XuMQ::ExchangeType_IsValid</a> (int value)</td></tr>
+<tr class="separator:a94172775e5713861e3987c3498000805"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c971809592dd833986ea839c7117091" id="r_a2c971809592dd833986ea839c7117091"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c971809592dd833986ea839c7117091">XuMQ::ExchangeType_descriptor</a> ()</td></tr>
+<tr class="separator:a2c971809592dd833986ea839c7117091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19551a42380bad0bd8e9da78d7713864" id="r_a19551a42380bad0bd8e9da78d7713864"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a19551a42380bad0bd8e9da78d7713864"><td class="memTemplItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a19551a42380bad0bd8e9da78d7713864">XuMQ::ExchangeType_Name</a> (T enum_t_value)</td></tr>
+<tr class="separator:a19551a42380bad0bd8e9da78d7713864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4000c7e369b91bccbc052ec146a44004" id="r_a4000c7e369b91bccbc052ec146a44004"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a4000c7e369b91bccbc052ec146a44004">XuMQ::ExchangeType_Parse</a> (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> *value)</td></tr>
+<tr class="separator:a4000c7e369b91bccbc052ec146a44004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8471a456dc9ff20e672496443a8e1ecc" id="r_a8471a456dc9ff20e672496443a8e1ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a8471a456dc9ff20e672496443a8e1ecc">XuMQ::DeliveryMode_IsValid</a> (int value)</td></tr>
+<tr class="separator:a8471a456dc9ff20e672496443a8e1ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95aa4d1e125ff418c1889c4bfa8adebe" id="r_a95aa4d1e125ff418c1889c4bfa8adebe"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a95aa4d1e125ff418c1889c4bfa8adebe">XuMQ::DeliveryMode_descriptor</a> ()</td></tr>
+<tr class="separator:a95aa4d1e125ff418c1889c4bfa8adebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb33d9f6f89ddc80ac3a1a8725e20742" id="r_abb33d9f6f89ddc80ac3a1a8725e20742"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abb33d9f6f89ddc80ac3a1a8725e20742"><td class="memTemplItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#abb33d9f6f89ddc80ac3a1a8725e20742">XuMQ::DeliveryMode_Name</a> (T enum_t_value)</td></tr>
+<tr class="separator:abb33d9f6f89ddc80ac3a1a8725e20742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae51bc0fa5f83234e4f1d74487bf2854f" id="r_ae51bc0fa5f83234e4f1d74487bf2854f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ae51bc0fa5f83234e4f1d74487bf2854f">XuMQ::DeliveryMode_Parse</a> (::PROTOBUF_NAMESPACE_ID::ConstStringParam name, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a> *value)</td></tr>
+<tr class="separator:ae51bc0fa5f83234e4f1d74487bf2854f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ab70d4b712bb69753d94ff01b8456eb" id="r_a1ab70d4b712bb69753d94ff01b8456eb"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a1ab70d4b712bb69753d94ff01b8456eb"><td class="memTemplItemLeft" align="right" valign="top">const EnumDescriptor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#a1ab70d4b712bb69753d94ff01b8456eb">GetEnumDescriptor&lt; ::XuMQ::ExchangeType &gt;</a> ()</td></tr>
+<tr class="separator:a1ab70d4b712bb69753d94ff01b8456eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c02984a3d0b97c613d2afd8d09e437" id="r_ac9c02984a3d0b97c613d2afd8d09e437"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ac9c02984a3d0b97c613d2afd8d09e437"><td class="memTemplItemLeft" align="right" valign="top">const EnumDescriptor *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#ac9c02984a3d0b97c613d2afd8d09e437">GetEnumDescriptor&lt; ::XuMQ::DeliveryMode &gt;</a> ()</td></tr>
+<tr class="separator:ac9c02984a3d0b97c613d2afd8d09e437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a073f6f3024513351592c0dc9cf770511" id="r_a073f6f3024513351592c0dc9cf770511"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="msg_8pb_8h.html#a073f6f3024513351592c0dc9cf770511">descriptor_table_msg_2eproto</a></td></tr>
+<tr class="separator:a073f6f3024513351592c0dc9cf770511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0aff534d6a141e6eb553bc20cf68df" id="r_aee0aff534d6a141e6eb553bc20cf68df"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#aee0aff534d6a141e6eb553bc20cf68df">XuMQ::ExchangeType_MIN</a> = <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da663837940118a6f44ae3cffba0b7396b">UNKNOWTYPE</a></td></tr>
+<tr class="separator:aee0aff534d6a141e6eb553bc20cf68df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e0bbec536a93a55900c987e5510944" id="r_ab2e0bbec536a93a55900c987e5510944"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ab2e0bbec536a93a55900c987e5510944">XuMQ::ExchangeType_MAX</a> = <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7daa084eda8370385e513bc0599d3cc5811">TOPIC</a></td></tr>
+<tr class="separator:ab2e0bbec536a93a55900c987e5510944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5648bf7ee97db9af26596b6e4839a5a3" id="r_a5648bf7ee97db9af26596b6e4839a5a3"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a5648bf7ee97db9af26596b6e4839a5a3">XuMQ::ExchangeType_ARRAYSIZE</a> = <a class="el" href="namespace_xu_m_q.html#ab2e0bbec536a93a55900c987e5510944">ExchangeType_MAX</a> + 1</td></tr>
+<tr class="separator:a5648bf7ee97db9af26596b6e4839a5a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d59c091a7c17e8dcbf03ef01831b7e2" id="r_a0d59c091a7c17e8dcbf03ef01831b7e2"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a0d59c091a7c17e8dcbf03ef01831b7e2">XuMQ::DeliveryMode_MIN</a> = <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a457929c044f0ea902e54568f57dffa20">UNKNOWMODE</a></td></tr>
+<tr class="separator:a0d59c091a7c17e8dcbf03ef01831b7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a68167fd12001c392dfb64ba06cd62" id="r_a41a68167fd12001c392dfb64ba06cd62"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a41a68167fd12001c392dfb64ba06cd62">XuMQ::DeliveryMode_MAX</a> = <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a5dc49c69b5e2ddae023a20edd108e785">DURABLE</a></td></tr>
+<tr class="separator:a41a68167fd12001c392dfb64ba06cd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91e7f144cf9ee19df8185bd66af20ad" id="r_af91e7f144cf9ee19df8185bd66af20ad"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#af91e7f144cf9ee19df8185bd66af20ad">XuMQ::DeliveryMode_ARRAYSIZE</a> = <a class="el" href="namespace_xu_m_q.html#a41a68167fd12001c392dfb64ba06cd62">DeliveryMode_MAX</a> + 1</td></tr>
+<tr class="separator:af91e7f144cf9ee19df8185bd66af20ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a2b4922f6589b42c1a644e8b00341284b" name="a2b4922f6589b42c1a644e8b00341284b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4922f6589b42c1a644e8b00341284b">&#9670;&#160;</a></span>PROTOBUF_INTERNAL_EXPORT_msg_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROTOBUF_INTERNAL_EXPORT_msg_2eproto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98" name="aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::BasicProperties &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_OPEN <a class="el" href="class_xu_m_q_1_1_basic_properties.html">::XuMQ::BasicProperties</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1_basic_properties.html">::XuMQ::BasicProperties</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8pb_8h_aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98_icgraph.png" border="0" usemap="#amsg_8pb_8h_aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98_icgraph" alt=""/></div>
+<map name="amsg_8pb_8h_aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98_icgraph" id="amsg_8pb_8h_aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98_icgraph">
+<area shape="rect" title=" " alt="" coords="508,5,712,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a6a9b800031dd6b063a1bbd03bbdc4a77" title=" " alt="" coords="239,5,460,45"/>
+<area shape="poly" title=" " alt="" coords="494,28,460,28,460,23,494,23"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a346520217ed8feaf7b1e13923248ff0c" title=" " alt="" coords="5,5,191,45"/>
+<area shape="poly" title=" " alt="" coords="225,28,191,28,191,23,225,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a50e8baa1d64daf9cbbba76b424182b4a" name="a50e8baa1d64daf9cbbba76b424182b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e8baa1d64daf9cbbba76b424182b4a">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::Message &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_message.html">::XuMQ::Message</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1_message.html">::XuMQ::Message</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdb6d1387781f0c2ca4b777f866e60a7" name="afdb6d1387781f0c2ca4b777f866e60a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdb6d1387781f0c2ca4b777f866e60a7">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::Message_Payload &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_message___payload.html">::XuMQ::Message_Payload</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1_message___payload.html">::XuMQ::Message_Payload</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="msg_8pb_8h_afdb6d1387781f0c2ca4b777f866e60a7_icgraph.png" border="0" usemap="#amsg_8pb_8h_afdb6d1387781f0c2ca4b777f866e60a7_icgraph" alt=""/></div>
+<map name="amsg_8pb_8h_afdb6d1387781f0c2ca4b777f866e60a7_icgraph" id="amsg_8pb_8h_afdb6d1387781f0c2ca4b777f866e60a7_icgraph">
+<area shape="rect" title=" " alt="" coords="485,5,704,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message.html#abaf72ecf3f82a1ea4417077bfe63f3fa" title=" " alt="" coords="245,5,437,45"/>
+<area shape="poly" title=" " alt="" coords="472,28,437,28,437,23,472,23"/>
+<area shape="rect" href="class_xu_m_q_1_1_message.html#a3cabfbe063e62fd0f83b8c29dd42cde9" title=" " alt="" coords="5,5,197,45"/>
+<area shape="poly" title=" " alt="" coords="232,28,197,28,197,23,232,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac9c02984a3d0b97c613d2afd8d09e437" name="ac9c02984a3d0b97c613d2afd8d09e437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9c02984a3d0b97c613d2afd8d09e437">&#9670;&#160;</a></span>GetEnumDescriptor&lt; ::XuMQ::DeliveryMode &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EnumDescriptor * GetEnumDescriptor&lt; <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">::XuMQ::DeliveryMode</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ab70d4b712bb69753d94ff01b8456eb" name="a1ab70d4b712bb69753d94ff01b8456eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ab70d4b712bb69753d94ff01b8456eb">&#9670;&#160;</a></span>GetEnumDescriptor&lt; ::XuMQ::ExchangeType &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const EnumDescriptor * GetEnumDescriptor&lt; <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">::XuMQ::ExchangeType</a> &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a073f6f3024513351592c0dc9cf770511" name="a073f6f3024513351592c0dc9cf770511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a073f6f3024513351592c0dc9cf770511">&#9670;&#160;</a></span>descriptor_table_msg_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_msg_2eproto</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="msg_8pb_8h.html">msg.pb.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

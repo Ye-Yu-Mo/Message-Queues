@@ -1,0 +1,31 @@
+<map id="muduo::net::Buffer::shrink" name="muduo::net::Buffer::shrink">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,164,148,204"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1net_1_1_buffer.html#a6cf98bbe1baa7550b890c0d202e98d7a" title=" " alt="" coords="196,164,363,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,181,182,181,182,187,149,187"/>
+<area shape="rect" id="Node000003" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="601,89,760,114"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="146,161,195,149,300,131,406,118,588,103,588,108,406,123,301,137,197,155,147,166"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1net_1_1_buffer.html#a84024d63fb91dd0d8213559739ef2557" title=" " alt="" coords="609,349,752,389"/>
+<area shape="poly" id="edge12_Node000001_Node000007" title=" " alt="" coords="89,203,105,234,129,270,160,306,197,335,246,358,298,374,351,384,405,390,508,390,596,382,596,387,508,396,405,395,350,390,296,379,244,363,195,340,156,310,125,273,101,236,85,205"/>
+<area shape="rect" id="Node000009" href="$classmuduo_1_1net_1_1_buffer.html#ab50979a3b6225dd9e1e5be063d5d179c" title=" " alt="" coords="411,5,553,45"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="89,162,132,110,161,83,195,62,245,42,297,30,349,23,397,20,397,25,350,28,298,35,246,47,197,66,164,88,135,114,93,166"/>
+<area shape="rect" id="Node000010" href="$classmuduo_1_1net_1_1_buffer.html#a87f195db1ad2af1cfbeee5240e4ec144" title=" " alt="" coords="208,285,351,325"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="112,202,235,276,232,281,110,206"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,164,604,114,605,119,363,170"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#a61202747347053befe66f56d9c47e55c" title=" " alt="" coords="411,221,553,261"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="351,201,398,215,397,220,350,207"/>
+<area shape="rect" id="Node000008" href="$classmuduo_1_1net_1_1_buffer.html#a38d2fbb29a60db59fb0c42fc98db083d" title=" " alt="" coords="609,157,752,197"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="363,180,596,176,596,181,363,185"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="648,90,641,80,645,70,658,64,681,62,708,66,719,74,716,79,706,70,681,67,660,69,649,74,646,80,652,87"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="504,219,548,182,600,143,641,118,643,123,603,148,551,187,508,223"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_buffer.html#ac432f0aeef9000203b7de41e08ce39a7" title=" " alt="" coords="609,285,752,325"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="546,259,606,279,604,284,544,264"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_buffer.html#af993d20fb4189cecf9c7ead2becc2467" title=" " alt="" coords="607,221,755,261"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="554,239,593,239,593,244,554,244"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="537,259,555,271,571,288,580,304,588,320,603,335,610,340,607,345,600,339,584,323,575,307,566,291,552,275,534,264"/>
+<area shape="poly" id="edge9_Node000004_Node000008" title=" " alt="" coords="544,219,604,199,606,204,546,224"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="536,43,634,81,632,86,534,48"/>
+<area shape="poly" id="edge18_Node000010_Node000007" title=" " alt="" coords="351,322,411,335,506,349,596,359,595,365,506,355,410,340,350,327"/>
+<area shape="rect" id="Node000011" href="$classmuduo_1_1net_1_1_buffer.html#a03734b887cd80b0030d96aec8c88701b" title=" " alt="" coords="411,285,553,325"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="351,303,397,303,397,308,351,308"/>
+<area shape="poly" id="edge17_Node000011_Node000005" title=" " alt="" coords="554,303,595,303,595,308,554,308"/>
+</map>

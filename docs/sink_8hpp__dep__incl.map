@@ -1,0 +1,16 @@
+<map id="third/Xulog/logs/sink.hpp" name="third/Xulog/logs/sink.hpp">
+<area shape="rect" id="Node000001" title="日志落地模块的实现" alt="" coords="49,5,232,31"/>
+<area shape="rect" id="Node000002" href="$third_2_xulog_2logs_2logger_8hpp.html" title="日志器模块的实现" alt="" coords="43,79,239,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,44,143,79,138,79,138,44"/>
+<area shape="rect" id="Node000003" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="52,152,229,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,118,143,152,138,152,138,118"/>
+<area shape="rect" id="Node000004" href="$common_2logger_8hpp.html" title="异步日志器初始化" alt="" coords="65,225,216,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="143,191,143,225,138,225,138,191"/>
+<area shape="rect" id="Node000005" href="$helper_8hpp.html" title="工具类封装" alt="" coords="123,299,273,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="161,260,191,297,187,300,156,263"/>
+<area shape="rect" id="Node000006" href="$exchange_8hpp.html" title=" " alt="" coords="5,372,164,397"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="130,264,112,300,90,372,85,371,108,298,125,261"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="169,334,105,374,102,370,166,329"/>
+<area shape="rect" id="Node000007" href="$mqfiletest_8cpp.html" title=" " alt="" coords="189,372,333,397"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="219,333,253,370,249,374,215,336"/>
+</map>

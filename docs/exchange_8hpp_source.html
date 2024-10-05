@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: server/exchange.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('exchange_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">exchange.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="exchange_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../common/logger.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../common/helper.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../common/msg.pb.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_xu_m_q_1_1_exchange.html">Exchange</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">   17</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">ptr</a> = std::shared_ptr&lt;Exchange&gt;;             </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">   18</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">name</a>;                                  </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">   19</a></span>        <a class="code hl_enumeration" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">type</a>;                                 </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">   20</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">durable</a>;                                      </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">   21</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">auto_delete</a>;                                  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">   22</a></span>        std::unordered_map&lt;std::string, std::string&gt; <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">args</a>; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#aebab07b329db3587039b69d95a19e4c7">   25</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_exchange.html#aebab07b329db3587039b69d95a19e4c7">Exchange</a>() {}</div>
+<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#ac19abdae484cb9d9738bda8084eb18cc">   32</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_exchange.html#ac19abdae484cb9d9738bda8084eb18cc">Exchange</a>(<span class="keyword">const</span> std::string &amp;ename,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 <a class="code hl_enumeration" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> etype,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                 <span class="keywordtype">bool</span> edurable,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                 <span class="keywordtype">bool</span> eauto_delete,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                 std::unordered_map&lt;std::string, std::string&gt; &amp;eargs)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            : <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">name</a>(ename), <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">type</a>(etype), <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">durable</a>(edurable), <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">auto_delete</a>(eauto_delete), <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">args</a>(eargs)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="}">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a0c43a2bd55d4f0ed9477314d2f517412">   46</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="struct_xu_m_q_1_1_exchange.html#a0c43a2bd55d4f0ed9477314d2f517412">setArgs</a>(<span class="keyword">const</span> std::string &amp;str_args)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            std::vector&lt;std::string&gt; sub_args;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <a class="code hl_function" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">StrHelper::split</a>(str_args, <span class="stringliteral">&quot;&amp;&quot;</span>, sub_args);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;str : sub_args)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordtype">size_t</span> pos = str.find(<span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                std::string key = str.substr(0, pos);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                std::string value = str.substr(pos + 1);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">args</a>.insert(std::make_pair(key, value));</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b">   63</a></span>        std::string <a class="code hl_function" href="struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b">getArgs</a>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            std::string result;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;arg : <a class="code hl_variable" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">args</a>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                result += (arg.first + <span class="stringliteral">&quot;=&quot;</span> + arg.second + <span class="stringliteral">&quot;&amp;&quot;</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">if</span> (!result.empty())</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                result.pop_back(); <span class="comment">// 去除最后一个&#39;&amp;&#39;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="};">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html">   78</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_exchange_mapper.html">ExchangeMapper</a></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">   81</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">ExchangeMap</a> = std::unordered_map&lt;std::string, Exchange::ptr&gt;; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c">   86</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c">ExchangeMapper</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>(dbfile)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            std::string path = <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">FileHelper::parentDirectory</a>(dbfile);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">FileHelper::createDirectory</a>(path);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            assert(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">open</a>());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7">createTable</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7">   95</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7">createTable</a>()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define CREATE_TABLE &quot;create table if not exists exchange_table(name varchar(32) primary key,\</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">            type tinyint, durable tinyint,\</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">            auto_delete tinyint, args varchar(128));&quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(<a class="code hl_define" href="exchange_8hpp.html#a6e393e5adf34980c34b99e9850258a2d">CREATE_TABLE</a>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;创建交换机数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                abort();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a1b314e2c1f7e66e3ca61b15e7bca2a4e">  108</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a1b314e2c1f7e66e3ca61b15e7bca2a4e">removeTable</a>()</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#define DROP_TABLE &quot;drop table if exists exchange_table;&quot;</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(<a class="code hl_define" href="exchange_8hpp.html#a89b2b1c320bae703ff85d227fd622bbb">DROP_TABLE</a>, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;删除交换机数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                abort();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc">  121</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc">insert</a>(<a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &amp;exchange)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#define INSERT_SQL &quot;insert into exchange_table values(&#39;%s&#39;, %d, %d, %d, &#39;%s&#39;);&quot;</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            sprintf(sql_str, <a class="code hl_define" href="exchange_8hpp.html#aec5920e76cdbf6faf457dac6ef960666">INSERT_SQL</a>, exchange-&gt;name.c_str(), exchange-&gt;type, exchange-&gt;durable,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    exchange-&gt;auto_delete, exchange-&gt;getArgs().c_str());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;插入数据失败!&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e">  133</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e">remove</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#define DELETE_SQL &quot;delete from exchange_table where name = &#39;%s&#39;;&quot;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            sprintf(sql_str, <a class="code hl_define" href="exchange_8hpp.html#a84ab34300d719abd3bd1e820384415e3">DELETE_SQL</a>, name.c_str());</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;删除数据失败!&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff">  145</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">ExchangeMap</a> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff">recovery</a>()</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">ExchangeMap</a> result;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#define SELECT_SQL &quot;select * from exchange_table;&quot;</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(<a class="code hl_define" href="exchange_8hpp.html#ac151d13213b3632094eb2210ecb6e771">SELECT_SQL</a>, <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a9b5cf7092783db6481116c740c6b5401">selectCallback</a>, &amp;result);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a9b5cf7092783db6481116c740c6b5401">  160</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a9b5cf7092783db6481116c740c6b5401">selectCallback</a>(<span class="keywordtype">void</span> *arg, <span class="keywordtype">int</span> numcol, <span class="keywordtype">char</span> **row, <span class="keywordtype">char</span> **fields)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">ExchangeMap</a> *result = (<a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">ExchangeMap</a> *)arg;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keyword">auto</span> exp = std::make_shared&lt;Exchange&gt;();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            exp-&gt;name = row[0];</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            exp-&gt;type = (<a class="code hl_enumeration" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">XuMQ::ExchangeType</a>)std::stoi(row[1]);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            exp-&gt;durable = (bool)std::stoi(row[2]);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            exp-&gt;auto_delete = (bool)std::stoi(row[3]);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">if</span> (row[4])</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                exp-&gt;setArgs(row[4]);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            result-&gt;insert(std::make_pair(exp-&gt;name, exp));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        }</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">  175</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">_sql_helper</a>; </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    };</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html">  180</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_exchange_manager.html">ExchangeManager</a></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">  183</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">ExchangeMap</a> = std::unordered_map&lt;std::string, Exchange::ptr&gt;; </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a7335bc08ad536ef5969a8efe0155fb17">  184</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_manager.html#a7335bc08ad536ef5969a8efe0155fb17">ptr</a> = std::shared_ptr&lt;ExchangeManager&gt;;                       </div>
+<div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b">  187</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b">ExchangeManager</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>(dbfile)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a> = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff">recovery</a>();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a09768797e5456f6c3882cc6a150d8084">  198</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a09768797e5456f6c3882cc6a150d8084">declareExchange</a>(<span class="keyword">const</span> std::string &amp;name,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                             <a class="code hl_enumeration" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> type,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                             <span class="keywordtype">bool</span> durable,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                             <span class="keywordtype">bool</span> auto_delete,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                             std::unordered_map&lt;std::string, std::string&gt; &amp;args)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.find(name);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.end())</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keyword">auto</span> exp = std::make_shared&lt;Exchange&gt;(name, type, durable, auto_delete, args);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">if</span> (durable)</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc">insert</a>(exp);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.insert(std::make_pair(name, exp));</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129">  215</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129">deleteExchange</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.find(name);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.end())</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.erase(name);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            <span class="keywordflow">if</span> (it-&gt;second-&gt;durable == <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e">remove</a>(name);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a65ad81a7a5879367a3aca2ecc8840490">  228</a></span>        <a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a65ad81a7a5879367a3aca2ecc8840490">selectExchange</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.find(name);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.end())</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a>();</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a5c8ab89bcf0bdeb1a776664f93d35cee">  239</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a5c8ab89bcf0bdeb1a776664f93d35cee">exists</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.find(name);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.end())</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594">  248</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594">clear</a>()</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_exchange_mapper.html#a1b314e2c1f7e66e3ca61b15e7bca2a4e">removeTable</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.clear();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#acf99369008edd4feb7ed1b9dbfecda63">  256</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_exchange_manager.html#acf99369008edd4feb7ed1b9dbfecda63">size</a>()</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>.size();</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        }</div>
+</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">  263</a></span>        std::mutex <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">_mutex</a>;      </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">  264</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_exchange_mapper.html">ExchangeMapper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a>; </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">  265</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">ExchangeMap</a> <a class="code hl_variable" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a>; </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    };</div>
+</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html">XuMQ::ExchangeManager</a></div><div class="ttdoc">交换机数据内存管理类</div><div class="ttdef"><b>Definition</b> exchange.hpp:181</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a036296f317be2e5eebe5a2dd87ea45dc"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">XuMQ::ExchangeManager::_mapper</a></div><div class="ttdeci">ExchangeMapper _mapper</div><div class="ttdoc">持久化交换机管理类</div><div class="ttdef"><b>Definition</b> exchange.hpp:264</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a064006de93e6089cf11286aaf4db894b"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">XuMQ::ExchangeManager::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> exchange.hpp:263</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a09768797e5456f6c3882cc6a150d8084"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a09768797e5456f6c3882cc6a150d8084">XuMQ::ExchangeManager::declareExchange</a></div><div class="ttdeci">void declareExchange(const std::string &amp;name, ExchangeType type, bool durable, bool auto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;args)</div><div class="ttdoc">声明交换机</div><div class="ttdef"><b>Definition</b> exchange.hpp:198</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a102211b74bac8f8af7089a542055e594"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594">XuMQ::ExchangeManager::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清除交换机数据</div><div class="ttdef"><b>Definition</b> exchange.hpp:248</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a1a1e3417f01da5a89de8897d5a1721f8"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">XuMQ::ExchangeManager::ExchangeMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Exchange::ptr &gt; ExchangeMap</div><div class="ttdoc">交换机映射表</div><div class="ttdef"><b>Definition</b> exchange.hpp:183</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a4e3ca72572d7ef4f1fd7c582b336115b"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b">XuMQ::ExchangeManager::ExchangeManager</a></div><div class="ttdeci">ExchangeManager(const std::string &amp;dbfile)</div><div class="ttdoc">交换机数据内存管理类 构造函数</div><div class="ttdef"><b>Definition</b> exchange.hpp:187</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a5c8ab89bcf0bdeb1a776664f93d35cee"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a5c8ab89bcf0bdeb1a776664f93d35cee">XuMQ::ExchangeManager::exists</a></div><div class="ttdeci">bool exists(const std::string &amp;name)</div><div class="ttdoc">判断交换机是否存在</div><div class="ttdef"><b>Definition</b> exchange.hpp:239</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a60370a38087d700d71ecd7479f66a129"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129">XuMQ::ExchangeManager::deleteExchange</a></div><div class="ttdeci">void deleteExchange(const std::string &amp;name)</div><div class="ttdoc">删除交换机</div><div class="ttdef"><b>Definition</b> exchange.hpp:215</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a65ad81a7a5879367a3aca2ecc8840490"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a65ad81a7a5879367a3aca2ecc8840490">XuMQ::ExchangeManager::selectExchange</a></div><div class="ttdeci">Exchange::ptr selectExchange(const std::string &amp;name)</div><div class="ttdoc">获取指定交换机</div><div class="ttdef"><b>Definition</b> exchange.hpp:228</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_a7335bc08ad536ef5969a8efe0155fb17"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#a7335bc08ad536ef5969a8efe0155fb17">XuMQ::ExchangeManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ExchangeManager &gt; ptr</div><div class="ttdoc">交换机数据内存管理指针</div><div class="ttdef"><b>Definition</b> exchange.hpp:184</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_acf821a4bb2bfe70f9637304a2fd1d3fd"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">XuMQ::ExchangeManager::_exchanges</a></div><div class="ttdeci">ExchangeMap _exchanges</div><div class="ttdoc">全部交换机信息</div><div class="ttdef"><b>Definition</b> exchange.hpp:265</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_manager_html_acf99369008edd4feb7ed1b9dbfecda63"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_manager.html#acf99369008edd4feb7ed1b9dbfecda63">XuMQ::ExchangeManager::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdoc">获取交换机数量</div><div class="ttdef"><b>Definition</b> exchange.hpp:256</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html">XuMQ::ExchangeMapper</a></div><div class="ttdef"><b>Definition</b> exchange.hpp:79</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a02b9ecf2252ffb135449127fe31f053e"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e">XuMQ::ExchangeMapper::remove</a></div><div class="ttdeci">void remove(const std::string &amp;name)</div><div class="ttdoc">移除一个交换机</div><div class="ttdef"><b>Definition</b> exchange.hpp:133</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a12af18161c38ec2a98fe75f27cf0e9e7"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7">XuMQ::ExchangeMapper::createTable</a></div><div class="ttdeci">void createTable()</div><div class="ttdoc">创建一张表</div><div class="ttdef"><b>Definition</b> exchange.hpp:95</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a1b314e2c1f7e66e3ca61b15e7bca2a4e"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a1b314e2c1f7e66e3ca61b15e7bca2a4e">XuMQ::ExchangeMapper::removeTable</a></div><div class="ttdeci">void removeTable()</div><div class="ttdoc">移除一张表</div><div class="ttdef"><b>Definition</b> exchange.hpp:108</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a33047288bbcf1a5a529692fd619fd173"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">XuMQ::ExchangeMapper::_sql_helper</a></div><div class="ttdeci">SqliteHelper _sql_helper</div><div class="ttdoc">数据库操作对象</div><div class="ttdef"><b>Definition</b> exchange.hpp:175</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a796b3a0a7b892b697808eb9efd2d1a39"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a796b3a0a7b892b697808eb9efd2d1a39">XuMQ::ExchangeMapper::ExchangeMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Exchange::ptr &gt; ExchangeMap</div><div class="ttdoc">交换机映射表</div><div class="ttdef"><b>Definition</b> exchange.hpp:81</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_a9b5cf7092783db6481116c740c6b5401"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#a9b5cf7092783db6481116c740c6b5401">XuMQ::ExchangeMapper::selectCallback</a></div><div class="ttdeci">static int selectCallback(void *arg, int numcol, char **row, char **fields)</div><div class="ttdoc">select语句的回调函数 将获取到的数据存入参数中</div><div class="ttdef"><b>Definition</b> exchange.hpp:160</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_ab1447b28ed7887890aa9421803bf8fdc"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc">XuMQ::ExchangeMapper::insert</a></div><div class="ttdeci">void insert(Exchange::ptr &amp;exchange)</div><div class="ttdoc">新增一个交换机</div><div class="ttdef"><b>Definition</b> exchange.hpp:121</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_ab8322c18a98bc820da000603cbdf88ff"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff">XuMQ::ExchangeMapper::recovery</a></div><div class="ttdeci">ExchangeMap recovery()</div><div class="ttdoc">获取所有交换机 从数据库加载到内存</div><div class="ttdef"><b>Definition</b> exchange.hpp:145</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_exchange_mapper_html_af65edea32e008c8ddbe8810761670d5c"><div class="ttname"><a href="class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c">XuMQ::ExchangeMapper::ExchangeMapper</a></div><div class="ttdeci">ExchangeMapper(const std::string &amp;dbfile)</div><div class="ttdoc">交换机持久化管理类 构造函数</div><div class="ttdef"><b>Definition</b> exchange.hpp:86</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a22fd9192e7f58d40e0188a4f619b9bad"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">XuMQ::FileHelper::createDirectory</a></div><div class="ttdeci">static bool createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录</div><div class="ttdef"><b>Definition</b> helper.hpp:414</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a28643d0c0fa7088e7afa86f4f048b2f9"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">XuMQ::FileHelper::parentDirectory</a></div><div class="ttdeci">static std::string parentDirectory(const std::string &amp;filename)</div><div class="ttdoc">获取文件的父目录</div><div class="ttdef"><b>Definition</b> helper.hpp:357</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html">XuMQ::SqliteHelper</a></div><div class="ttdoc">SQLite 数据库操作助手类</div><div class="ttdef"><b>Definition</b> helper.hpp:58</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a9228afe2e214e707afdf56640d7bc76a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">XuMQ::SqliteHelper::exec</a></div><div class="ttdeci">bool exec(const std::string &amp;sql, SqliteCallback cb, void *arg)</div><div class="ttdoc">执行 SQL 语句</div><div class="ttdef"><b>Definition</b> helper.hpp:109</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ae30429cd2d883fe24a616a65a547783b"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">XuMQ::SqliteHelper::open</a></div><div class="ttdeci">bool open(int safe_level=SQLITE_OPEN_FULLMUTEX)</div><div class="ttdoc">打开数据库</div><div class="ttdef"><b>Definition</b> helper.hpp:90</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_str_helper_html_a09130ed2c6b196410499a6184c9a36e1"><div class="ttname"><a href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">XuMQ::StrHelper::split</a></div><div class="ttdeci">static size_t split(const std::string &amp;str, const std::string &amp;sep, std::vector&lt; std::string &gt; &amp;result)</div><div class="ttdoc">将字符串分割为多个子字符串</div><div class="ttdef"><b>Definition</b> helper.hpp:152</div></div>
+<div class="ttc" id="aexchange_8hpp_html_a6e393e5adf34980c34b99e9850258a2d"><div class="ttname"><a href="exchange_8hpp.html#a6e393e5adf34980c34b99e9850258a2d">CREATE_TABLE</a></div><div class="ttdeci">#define CREATE_TABLE</div></div>
+<div class="ttc" id="aexchange_8hpp_html_a84ab34300d719abd3bd1e820384415e3"><div class="ttname"><a href="exchange_8hpp.html#a84ab34300d719abd3bd1e820384415e3">DELETE_SQL</a></div><div class="ttdeci">#define DELETE_SQL</div></div>
+<div class="ttc" id="aexchange_8hpp_html_a89b2b1c320bae703ff85d227fd622bbb"><div class="ttname"><a href="exchange_8hpp.html#a89b2b1c320bae703ff85d227fd622bbb">DROP_TABLE</a></div><div class="ttdeci">#define DROP_TABLE</div></div>
+<div class="ttc" id="aexchange_8hpp_html_ac151d13213b3632094eb2210ecb6e771"><div class="ttname"><a href="exchange_8hpp.html#ac151d13213b3632094eb2210ecb6e771">SELECT_SQL</a></div><div class="ttdeci">#define SELECT_SQL</div></div>
+<div class="ttc" id="aexchange_8hpp_html_aec5920e76cdbf6faf457dac6ef960666"><div class="ttname"><a href="exchange_8hpp.html#aec5920e76cdbf6faf457dac6ef960666">INSERT_SQL</a></div><div class="ttdeci">#define INSERT_SQL</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> helper.hpp:44</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a4816a5c6a665a9846a019871c6310c7d"><div class="ttname"><a href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">XuMQ::ExchangeType</a></div><div class="ttdeci">ExchangeType</div><div class="ttdef"><b>Definition</b> msg.pb.h:66</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html">XuMQ::Exchange</a></div><div class="ttdoc">交换机结构体对象</div><div class="ttdef"><b>Definition</b> exchange.hpp:16</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a04b28bac2d6177070e4f9f03f564131e"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">XuMQ::Exchange::auto_delete</a></div><div class="ttdeci">bool auto_delete</div><div class="ttdoc">自动删除标志</div><div class="ttdef"><b>Definition</b> exchange.hpp:21</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a0c43a2bd55d4f0ed9477314d2f517412"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a0c43a2bd55d4f0ed9477314d2f517412">XuMQ::Exchange::setArgs</a></div><div class="ttdeci">void setArgs(const std::string &amp;str_args)</div><div class="ttdoc">解析字符串并存储到映射成员中</div><div class="ttdef"><b>Definition</b> exchange.hpp:46</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a17e29f12a30254ded84236a4762dcdfa"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">XuMQ::Exchange::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Exchange &gt; ptr</div><div class="ttdoc">使用智能指针管理交换机对象</div><div class="ttdef"><b>Definition</b> exchange.hpp:17</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a32ff26f347b31ced61678b0346763c31"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">XuMQ::Exchange::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">交换机名称</div><div class="ttdef"><b>Definition</b> exchange.hpp:18</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a35fa49a24961b8f8182a6a7bccfce9a6"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">XuMQ::Exchange::type</a></div><div class="ttdeci">ExchangeType type</div><div class="ttdoc">交换机类型</div><div class="ttdef"><b>Definition</b> exchange.hpp:19</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a4592927797f070863f763a9c4486621b"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b">XuMQ::Exchange::getArgs</a></div><div class="ttdeci">std::string getArgs()</div><div class="ttdoc">将映射成员转化为字符串</div><div class="ttdef"><b>Definition</b> exchange.hpp:63</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a58c437c1e9477f0802a6279c7c99ae0e"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">XuMQ::Exchange::args</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; args</div><div class="ttdoc">其他参数</div><div class="ttdef"><b>Definition</b> exchange.hpp:22</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_ac19abdae484cb9d9738bda8084eb18cc"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#ac19abdae484cb9d9738bda8084eb18cc">XuMQ::Exchange::Exchange</a></div><div class="ttdeci">Exchange(const std::string &amp;ename, ExchangeType etype, bool edurable, bool eauto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;eargs)</div><div class="ttdoc">交换机结构构造函数</div><div class="ttdef"><b>Definition</b> exchange.hpp:32</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_ad563d5bc1cb47f97d054f8c09f4cad39"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">XuMQ::Exchange::durable</a></div><div class="ttdeci">bool durable</div><div class="ttdoc">数据持久化标志</div><div class="ttdef"><b>Definition</b> exchange.hpp:20</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_aebab07b329db3587039b69d95a19e4c7"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#aebab07b329db3587039b69d95a19e4c7">XuMQ::Exchange::Exchange</a></div><div class="ttdeci">Exchange()</div><div class="ttdoc">无参构造</div><div class="ttdef"><b>Definition</b> exchange.hpp:25</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="exchange_8hpp.html">exchange.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

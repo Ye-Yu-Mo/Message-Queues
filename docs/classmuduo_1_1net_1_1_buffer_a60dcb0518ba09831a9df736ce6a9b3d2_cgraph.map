@@ -1,0 +1,15 @@
+<map id="muduo::net::Buffer::peekInt64" name="muduo::net::Buffer::peekInt64">
+<area shape="rect" id="Node000001" title="Peek int64_t from network endian" alt="" coords="5,82,148,122"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="397,29,556,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,80,146,55,195,35,243,27,292,23,384,26,384,31,292,28,244,32,197,41,148,60,107,84"/>
+<area shape="rect" id="Node000003" href="$namespacemuduo_1_1net_1_1sockets.html#a590d67f0a8d4f8ff19462c08ebfb99b0" title=" " alt="" coords="196,50,349,90"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="148,88,182,82,183,87,149,93"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#a03734b887cd80b0030d96aec8c88701b" title=" " alt="" coords="201,114,344,154"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="149,111,188,117,187,123,148,116"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_buffer.html#a84024d63fb91dd0d8213559739ef2557" title=" " alt="" coords="201,178,344,218"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="114,120,197,164,211,170,209,175,195,168,112,125"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="443,31,436,21,440,11,454,5,477,3,505,6,516,16,513,20,503,11,477,8,455,10,444,15,441,20,448,28"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="349,57,383,52,384,57,350,62"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_buffer.html#ac432f0aeef9000203b7de41e08ce39a7" title=" " alt="" coords="405,114,548,154"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="344,131,392,131,392,137,344,137"/>
+</map>

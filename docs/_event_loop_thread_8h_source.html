@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: third/muduo/include/muduo/net/EventLoopThread.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_event_loop_thread_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EventLoopThread.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_event_loop_thread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2010, Shuo Chen.  All rights reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// http://code.google.com/p/muduo/</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Use of this source code is governed by a BSD-style license</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// that can be found in the License file.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Author: Shuo Chen (chenshuo at chenshuo dot com)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// This is a public header file, it must only include public header files.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef MUDUO_NET_EVENTLOOPTHREAD_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define MUDUO_NET_EVENTLOOPTHREAD_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_condition_8h.html">muduo/base/Condition.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_mutex_8h.html">muduo/base/Mutex.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="_thread_8h.html">muduo/base/Thread.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemuduo.html">muduo</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span>net</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">class </span>EventLoop;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classmuduo_1_1net_1_1_event_loop_thread.html">EventLoopThread</a> : <a class="code hl_class" href="classmuduo_1_1noncopyable.html">noncopyable</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">   28</a></span>  <span class="keyword">typedef</span> std::function&lt;<a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>(<a class="code hl_class" href="classmuduo_1_1net_1_1_event_loop.html">EventLoop</a>*)&gt; <a class="code hl_typedef" href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">ThreadInitCallback</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#a6638178c9fadc21384e2c85e4b0677c2">   30</a></span>  <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#a6638178c9fadc21384e2c85e4b0677c2">EventLoopThread</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">ThreadInitCallback</a>&amp; <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">cb</a> = <a class="code hl_typedef" href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">ThreadInitCallback</a>(),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                  <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; name = <span class="keywordtype">string</span>());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#aeb94fbc4fc1d9f354907510d363ea86f">   32</a></span>  <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#aeb94fbc4fc1d9f354907510d363ea86f">~EventLoopThread</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#ad1bd14fbeec141b25330d97ca7175307">   33</a></span>  <a class="code hl_class" href="classmuduo_1_1net_1_1_event_loop.html">EventLoop</a>* <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#ad1bd14fbeec141b25330d97ca7175307">startLoop</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#a56b4503e44cee780b407f0111405728f">   36</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#a56b4503e44cee780b407f0111405728f">threadFunc</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#afa8a836d30be17444bb8334db279280b">   38</a></span>  <a class="code hl_class" href="classmuduo_1_1net_1_1_event_loop.html">EventLoop</a>* loop_ <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#afa8a836d30be17444bb8334db279280b">GUARDED_BY</a>(<a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#a92d944bac0a16e1575420bbc729a60a2">mutex_</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#ab9faf5403c6b3f48b2076194076c32d3">   39</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#ab9faf5403c6b3f48b2076194076c32d3">exiting_</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#af06fd0720b8ee7f009011faf3fc7a265">   40</a></span>  <a class="code hl_class" href="classmuduo_1_1_thread.html">Thread</a> <a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#af06fd0720b8ee7f009011faf3fc7a265">thread_</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#a92d944bac0a16e1575420bbc729a60a2">   41</a></span>  <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">MutexLock</a> <a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#a92d944bac0a16e1575420bbc729a60a2">mutex_</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#ac026a8f6233250d0d6a53ad371a3fd1c">   42</a></span>  <a class="code hl_class" href="classmuduo_1_1_condition.html">Condition</a> <a class="code hl_function" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">cond_</a> <a class="code hl_function" href="classmuduo_1_1net_1_1_event_loop_thread.html#ac026a8f6233250d0d6a53ad371a3fd1c">GUARDED_BY</a>(<a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#a92d944bac0a16e1575420bbc729a60a2">mutex_</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmuduo_1_1net_1_1_event_loop_thread.html#a1ebe138d8a6f86a612130e6d014bf604">   43</a></span>  <a class="code hl_typedef" href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">ThreadInitCallback</a> <a class="code hl_variable" href="classmuduo_1_1net_1_1_event_loop_thread.html#a1ebe138d8a6f86a612130e6d014bf604">callback_</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}  <span class="comment">// namespace net</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}  <span class="comment">// namespace muduo</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif  </span><span class="comment">// MUDUO_NET_EVENTLOOPTHREAD_H</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="ttc" id="a_condition_8h_html"><div class="ttname"><a href="_condition_8h.html">Condition.h</a></div></div>
+<div class="ttc" id="a_mutex_8h_html"><div class="ttname"><a href="_mutex_8h.html">Mutex.h</a></div></div>
+<div class="ttc" id="a_thread_8h_html"><div class="ttname"><a href="_thread_8h.html">Thread.h</a></div></div>
+<div class="ttc" id="aclassmuduo_1_1_condition_html"><div class="ttname"><a href="classmuduo_1_1_condition.html">muduo::Condition</a></div><div class="ttdef"><b>Definition</b> Condition.h:17</div></div>
+<div class="ttc" id="aclassmuduo_1_1_thread_html"><div class="ttname"><a href="classmuduo_1_1_thread.html">muduo::Thread</a></div><div class="ttdef"><b>Definition</b> Thread.h:21</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_html"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop.html">muduo::net::EventLoop</a></div><div class="ttdoc">Reactor, at most one per thread.</div><div class="ttdef"><b>Definition</b> EventLoop.h:40</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html">muduo::net::EventLoopThread</a></div><div class="ttdef"><b>Definition</b> EventLoopThread.h:26</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_a1ebe138d8a6f86a612130e6d014bf604"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#a1ebe138d8a6f86a612130e6d014bf604">muduo::net::EventLoopThread::callback_</a></div><div class="ttdeci">ThreadInitCallback callback_</div><div class="ttdef"><b>Definition</b> EventLoopThread.h:43</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_a56b4503e44cee780b407f0111405728f"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#a56b4503e44cee780b407f0111405728f">muduo::net::EventLoopThread::threadFunc</a></div><div class="ttdeci">void threadFunc()</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_a6638178c9fadc21384e2c85e4b0677c2"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#a6638178c9fadc21384e2c85e4b0677c2">muduo::net::EventLoopThread::EventLoopThread</a></div><div class="ttdeci">EventLoopThread(const ThreadInitCallback &amp;cb=ThreadInitCallback(), const string &amp;name=string())</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_a92d944bac0a16e1575420bbc729a60a2"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#a92d944bac0a16e1575420bbc729a60a2">muduo::net::EventLoopThread::mutex_</a></div><div class="ttdeci">MutexLock mutex_</div><div class="ttdef"><b>Definition</b> EventLoopThread.h:41</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_ab9faf5403c6b3f48b2076194076c32d3"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#ab9faf5403c6b3f48b2076194076c32d3">muduo::net::EventLoopThread::exiting_</a></div><div class="ttdeci">bool exiting_</div><div class="ttdef"><b>Definition</b> EventLoopThread.h:39</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_ac026a8f6233250d0d6a53ad371a3fd1c"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#ac026a8f6233250d0d6a53ad371a3fd1c">muduo::net::EventLoopThread::GUARDED_BY</a></div><div class="ttdeci">Condition cond_ GUARDED_BY(mutex_)</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_accbd7cc0dd6ccec5d37d081e394dc9a3"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#accbd7cc0dd6ccec5d37d081e394dc9a3">muduo::net::EventLoopThread::ThreadInitCallback</a></div><div class="ttdeci">std::function&lt; void(EventLoop *)&gt; ThreadInitCallback</div><div class="ttdef"><b>Definition</b> EventLoopThread.h:28</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_ad1bd14fbeec141b25330d97ca7175307"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#ad1bd14fbeec141b25330d97ca7175307">muduo::net::EventLoopThread::startLoop</a></div><div class="ttdeci">EventLoop * startLoop()</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_aeb94fbc4fc1d9f354907510d363ea86f"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#aeb94fbc4fc1d9f354907510d363ea86f">muduo::net::EventLoopThread::~EventLoopThread</a></div><div class="ttdeci">~EventLoopThread()</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_af06fd0720b8ee7f009011faf3fc7a265"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#af06fd0720b8ee7f009011faf3fc7a265">muduo::net::EventLoopThread::thread_</a></div><div class="ttdeci">Thread thread_</div><div class="ttdef"><b>Definition</b> EventLoopThread.h:40</div></div>
+<div class="ttc" id="aclassmuduo_1_1net_1_1_event_loop_thread_html_afa8a836d30be17444bb8334db279280b"><div class="ttname"><a href="classmuduo_1_1net_1_1_event_loop_thread.html#afa8a836d30be17444bb8334db279280b">muduo::net::EventLoopThread::GUARDED_BY</a></div><div class="ttdeci">EventLoop *loop_ GUARDED_BY(mutex_)</div></div>
+<div class="ttc" id="aclassmuduo_1_1noncopyable_html"><div class="ttname"><a href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></div><div class="ttdef"><b>Definition</b> noncopyable.h:8</div></div>
+<div class="ttc" id="anamespacemuduo_html"><div class="ttname"><a href="namespacemuduo.html">muduo</a></div><div class="ttdoc">The most common stuffs.</div><div class="ttdef"><b>Definition</b> AsyncLogging.h:20</div></div>
+<div class="ttc" id="anamespacemuduo_html_a72cbcf425db108335295456e8ff9c12b"><div class="ttname"><a href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">muduo::implicit_cast</a></div><div class="ttdeci">To implicit_cast(From const &amp;f)</div><div class="ttdef"><b>Definition</b> Types.h:80</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_30efafad49404b27c7a8c0189efd1d72.html">third</a></li><li class="navelem"><a class="el" href="dir_4eb4247969aafc83dc7ba5a4bb9a3b2c.html">muduo</a></li><li class="navelem"><a class="el" href="dir_bd6edd779c2db4e6048b4a93dd201f65.html">include</a></li><li class="navelem"><a class="el" href="dir_9401ae9691b6ee84145260633a2feac7.html">muduo</a></li><li class="navelem"><a class="el" href="dir_e44f64d656da23dd24f2779409002425.html">net</a></li><li class="navelem"><a class="el" href="_event_loop_thread_8h.html">EventLoopThread.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

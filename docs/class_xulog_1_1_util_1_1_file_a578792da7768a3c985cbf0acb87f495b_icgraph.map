@@ -1,0 +1,7 @@
+<map id="Xulog::Util::File::path" name="Xulog::Util::File::path">
+<area shape="rect" id="Node000001" title="获取文件路径" alt="" coords="231,35,389,60"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_file_sink.html#a089bc3708abdab8fc5663b5859d7df1b" title="构造函数" alt="" coords="5,5,183,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,37,183,33,183,27,218,32"/>
+<area shape="rect" id="Node000003" href="$class_xulog_1_1_roll_sink_by_size.html#aa55e0780ab91807ea6b1695f56c71fb3" title="构造函数" alt="" coords="12,55,176,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="217,62,176,67,176,62,217,57"/>
+</map>

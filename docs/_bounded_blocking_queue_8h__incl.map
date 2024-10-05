@@ -1,0 +1,29 @@
+<map id="third/muduo/include/muduo/base/BoundedBlockingQueue.h" name="third/muduo/include/muduo/base/BoundedBlockingQueue.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="509,5,732,60"/>
+<area shape="rect" id="Node000002" href="$_condition_8h.html" title=" " alt="" coords="467,108,647,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="603,62,576,99,571,95,599,58"/>
+<area shape="rect" id="Node000003" href="$_mutex_8h.html" title=" " alt="" coords="353,181,512,207"/>
+<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="524,62,487,82,456,110,442,138,436,168,431,167,437,136,452,106,484,78,522,58"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="278,401,353,427"/>
+<area shape="poly" id="edge15_Node000001_Node000009" title=" " alt="" coords="641,59,671,118,683,155,687,193,687,269,685,282,677,295,651,318,612,339,564,357,459,387,367,406,366,401,458,382,563,352,610,334,648,313,673,291,680,280,682,268,682,193,678,156,666,120,636,61"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="723,108,905,133"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="681,58,777,100,775,105,679,63"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="538,136,466,177,463,172,535,131"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="560,255,644,280"/>
+<area shape="poly" id="edge12_Node000002_Node000011" title=" " alt="" coords="563,133,597,241,592,242,558,135"/>
+<area shape="rect" id="Node000004" href="$_current_thread_8h.html" title=" " alt="" coords="49,255,259,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,209,213,254,212,249,387,204"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="391,209,354,227,337,240,324,256,311,289,306,324,308,359,312,388,307,388,302,359,301,324,306,287,320,253,334,236,351,223,388,204"/>
+<area shape="rect" id="Node000010" href="$noncopyable_8h.html" title=" " alt="" coords="335,255,536,280"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="436,207,437,241,432,241,430,207"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="461,204,563,247,561,252,459,209"/>
+<area shape="rect" id="Node000005" href="$_types_8h.html" title=" " alt="" coords="77,328,231,353"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="157,280,157,314,151,314,151,280"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,401,76,427"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="137,356,72,396,69,392,134,351"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="100,401,171,427"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="153,354,144,389,139,388,148,353"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="195,401,254,427"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="168,352,206,390,202,394,164,356"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="181,351,278,393,275,398,179,356"/>
+</map>

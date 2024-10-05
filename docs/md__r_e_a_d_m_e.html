@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: Message-Queues</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Message-Queues</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+项目介绍</h1>
+<p>在分布式系统中，跨主机之间的消费者模型是一个非常普遍的需求，通常会把阻塞队列封装成一个独立的服务器程序，并且添加上更多的功能，也就是消息队列（Message Queue，MQ）</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+开发环境</h1>
+<ul>
+<li>Ubuntu 22.04(WSL)</li>
+<li>VS Code/Vim</li>
+<li>g++/gdb</li>
+<li>Makefile</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+技术选型</h1>
+<ul>
+<li>开发主语言: C++</li>
+<li>序列化框架: <a href="https://github.com/protocolbuffers/protobuf">Protobuf</a> 二进制序列化框架</li>
+<li>网络通信: <a href="https://github.com/chenshuo/muduo">muduo网络库</a> + 自定义应用层协议</li>
+<li>数据库: <a href="https://github.com/sqlite/sqlite">SQLite3</a></li>
+<li>单元测试框架: <a href="https://github.com/google/googletest">Gtest</a></li>
+<li>日志系统: <a href="https://github.com/Ye-Yu-Mo/LogSystem">Xulog</a></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+需求分析</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+核心概念</h2>
+<ul>
+<li>生产者-Producer</li>
+<li>消费者-Consumer</li>
+<li>中间人-Broker</li>
+<li>发布-Publish</li>
+<li>订阅-Subscribe</li>
+</ul>
+<p>生产者与消费者模型</p>
+<p><img src="https://s2.loli.net/2024/10/03/npBkOAHi4WT2tmq.png" alt="null.png" class="inline"/></p>
+<p>这里的消息队列服务器是中间人服务器, 就是作为整个系统最核心的部分, 负责消息的存储和转发</p>
+<p>在AMQP中, 存在下面的概念</p>
+<blockquote class="doxtable">
+<p>&zwj;AMQP(Advanced Message Queuing Protocol-高级消息队列协议)是一个提供统一消息服务的应用层标准高级消息队列协议, 是为面向消息的中间件设计, 使得遵从该规范的客户端应用和消息中间件服务器的全功能互操作称为可能 </p>
+</blockquote>
+<ul>
+<li>虚拟机-VirtualHost: 类似于MySQL中的数据库或者Docker搭建的虚拟容器, 是一个逻辑上的集合, 一个消息队列服务器中可以有多个虚拟机</li>
+<li>交换机-Exchange: 消息是先被生产者发布给中间人的交换机上的, 交换机根据不同的规则, 将消息转发给相应的队列</li>
+<li>队列-Queue: 是真正用来存储信息的部分, 起到一定的分类作用, 让消费者决定订阅哪一个队列, 再将相应的信息推送给消费者</li>
+<li>绑定-Binding: Exchange和Queue之间的关联关系, 他们之间是多对多的关系, 使用一个关联表将这两个概念连接起来</li>
+<li>消息-Message: 传递的内容</li>
+</ul>
+<p>中间人服务器架构示意图如下</p>
+<p><img src="https://s2.loli.net/2024/10/03/SmqsxOVf4rz5wZE.png" alt="null _1_.png" class="inline"/></p>
+<p>消息流程图如下</p>
+<p><img src="https://s2.loli.net/2024/10/03/PQIBjTeS2dora5m.png" alt="null _2_.png" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+核心API</h2>
+<p>对于BrokerServer来说, 核心API如下</p>
+<ul>
+<li>创建交换机-exchangeDeclare</li>
+<li>销毁交换机-exchangeDelete</li>
+<li>创建队列-queueDeclare</li>
+<li>销毁队列-queueDelete</li>
+<li>创建绑定-queueBind</li>
+<li>解除绑定-queueUnbind</li>
+<li>发布消息-basicPublish</li>
+<li>订阅消息-basicConsume</li>
+<li>确认消息-basicAck</li>
+<li>取消订阅-basicCancel</li>
+</ul>
+<p>ProducerClient和ConsumerClient通过网络的方式远程调用这些API实现消费者生产者模型</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+交换机类型</h2>
+<ul>
+<li>Direct-直接交换: 指定被该交换机绑定的队列名(完全匹配)</li>
+<li>Fanout-广播交换: 复制发布到该交换机的所有队列</li>
+<li>Topic-主题交换: 队列在创建时指定了一个bindingKey, 当交换机收到一个消息时, 该消息内部存在一个字符串routingKey, 当routingKey与bindKey满足一定条件时, 把消息存到该队列中</li>
+</ul>
+<blockquote class="doxtable">
+<p>&zwj;匹配样例 </p>
+</blockquote>
+<p>binding_key: news.music.# 约定字符: 数字\字母\ '_' \ '.' \ '#' \ '*' routing_key: news.music.pop 约定字符: 数字\字母\ '_' \ '.'</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+网络通信</h2>
+<p>作为服务器客户端架构, 通过网络通信让客户端能够操作服务器</p>
+<ul>
+<li>创建Connection</li>
+<li>关闭Connection</li>
+<li>创建Channel</li>
+<li>关闭Channel</li>
+<li>创建队列</li>
+<li>销毁队列</li>
+<li>创建交换机</li>
+<li>销毁交换机</li>
+<li>创建绑定</li>
+<li>解除绑定</li>
+<li>发布信息</li>
+<li>订阅消息</li>
+<li>确认消息</li>
+<li>取消订阅</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+消息应答</h2>
+<p>被消费的信息需要进行应答, 有两种方式</p>
+<ul>
+<li>自动应答: 消费者只要消费了消息, 就认为应答完毕, BrokerServer直接删除消息</li>
+<li>手动应答: 消费者调用应答接口, 当BrokerServer收到应答请求时, 才删除消息</li>
+</ul>
+<p>手动应答是为了确保消息确实被处理成功, 在可靠性要求高的情况下可以使用</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+模块划分</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+服务端模块</h2>
+<h3><a class="anchor" id="autotoc_md12"></a>
+持久化数据管理中心</h3>
+<p>在数据管理模块中主要管理交换机, 队列, 队列绑定, 消息等部分的数据</p>
+<ol type="1">
+<li>交换机数据管理<ul>
+<li>管理信息:<ul>
+<li>名称(唯一标识)</li>
+<li>类型(三种类型)</li>
+<li>持久化标志</li>
+<li>自动删除标志(TODO:当所有客户端退出时, 自动删除交换机)</li>
+<li>其他参数(当前未使用, 保留扩展)</li>
+</ul>
+</li>
+<li>管理操作:<ul>
+<li>创建交换机(有则OK, 没有则创建)</li>
+<li>删除交换机(需要删除绑定信息)</li>
+<li>获取指定名称的交换机</li>
+<li>获取当前交换机数量(测试用)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列数据管理<ul>
+<li>管理信息:<ul>
+<li>名称(唯一标识)</li>
+<li>持久化存储标志</li>
+<li>独占标志(只允许当前客户端订阅)</li>
+<li>自动删除标志(TODO:所有客户端退出后, 自动删除队列)</li>
+<li>其他参数(保留扩展)</li>
+</ul>
+</li>
+<li>管理操作:<ul>
+<li>创建队列</li>
+<li>删除队列</li>
+<li>获取指定队列信息</li>
+<li>获取队列数量</li>
+<li>获取所有队列名称(当系统重启, 需要重新加载历史消息数据, 以队列为单位存储到文件中)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列绑定数据管理<ul>
+<li>管理信息:<ul>
+<li>交换机名称</li>
+<li>队列名称</li>
+<li>binding_key(主题交换和直接交换的匹配规则)</li>
+</ul>
+</li>
+<li>管理操作:<ul>
+<li>添加绑定</li>
+<li>解除绑定</li>
+<li>获取交换机所有绑定信息(删除交换机时, 删除绑定信息; 交换机收到消息时, 需要查找所有绑定队列)</li>
+<li>获取队列所有绑定信息(删除队列时, 删除绑定信息)</li>
+<li>获取绑定信息数量(测试用)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>消息数据管理</li>
+</ol>
+<p>分别实现增删查的管理, 并实现持久化存储, 以内存存储为主, 确保查找信息处理信息的速度, 以硬盘存储为辅, 确保服务器重启之后, 以前的信息仍然存在</p>
+<p>管理信息:</p><ul>
+<li>消息属性<ul>
+<li>ID(唯一标识)</li>
+<li>持久化标识(受队列持久化的影响)</li>
+<li>routing_key(与binding_key进行比对分配队列)</li>
+</ul>
+</li>
+<li>消息主体(内容)</li>
+<li>存储偏移量(服务端): 以队列为单位存储在文件中, 是当前消息相对于文件起始位置的偏移量</li>
+<li>消息长度(服务端): 从偏移量位置取出指定长度的消息(避免粘包)</li>
+<li>有效标志(服务端): 标识当前消息是否被删除(回收时(阈值为50%, 总数据量在200以上时触发)统一整理文件存储; 重启时只加载有效消息)</li>
+<li>消息管理<ul>
+<li>管理方式: 以队列为单元进行管理</li>
+<li>管理数据<ul>
+<li>消息链表(所有待推送消息)</li>
+<li>待确认消息hash(等待确认回复, 收到确认时, 才会真正删除消息)</li>
+<li>持久化消息hash(持久化存储中存在垃圾回收操作, 需要同步内存中硬盘数据的消息位置)</li>
+<li>持久化有效消息数量</li>
+<li>持久化总消息数量</li>
+</ul>
+</li>
+<li>管理操作<ul>
+<li>向队列新增消息</li>
+<li>获取队首消息, 获取消息后, 将消息在待推送链表中删除, 加入到待确认消息中</li>
+<li>确认消息, 从待确认消息中移除, 删除相应的持久化数据</li>
+<li>恢复历史消息, 构造函数中, 重启进行</li>
+<li>垃圾回收(消息持久化子模块完成)</li>
+<li>删除队列相关消息文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列消息管理<ul>
+<li>初始化队列消息结构</li>
+<li>移除队列消息结构</li>
+<li>向队列新增消息</li>
+<li>恢复队列历史消息</li>
+</ul>
+</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md13"></a>
+虚拟机管理模块</h3>
+<p>交换机/队列/绑定/消息都是虚拟机单元的一部分, 因此虚拟机是对上述模块的整合</p>
+<p>管理信息:</p><ul>
+<li>交换机数据管理句柄</li>
+<li>队列数据管理句柄</li>
+<li>绑定信息管理句柄</li>
+<li>消息数据管理句柄</li>
+</ul>
+<p>管理操作:</p><ul>
+<li>声明\删除交换机(需要删除绑定信息)</li>
+<li>声明\删除队列(需要删除绑定信息和消息数据)</li>
+<li>绑定\解绑队列</li>
+<li>获取指定队列的消息</li>
+<li>确认消息</li>
+<li>获取交换机的所有绑定信息</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md14"></a>
+交换路由模块</h3>
+<p>消息发布是将消息传达到交换机中, 交换机再决定分发到队列中去</p>
+<p>分为直接交换, 广播交换, 主题交换</p>
+<p>交换路由模块是专门负责匹配过程</p>
+<p>管理操作:</p><ul>
+<li>获取匹配结果</li>
+<li>判断格式是否符合规定</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md15"></a>
+消费者管理模块</h3>
+<p>消费者指订阅了消息队列的客户端, 当队列中有消息会自动推送给客户端</p>
+<p>订阅消息指的是订阅一整个队列的消息</p>
+<p>消费者信息:</p><ul>
+<li>消费者标识-tag</li>
+<li>订阅队列名称</li>
+<li>自动确认标志</li>
+<li>消费处理回调函数指针(队列有消息后, 通过对应函数处理)</li>
+</ul>
+<p>消费者管理:</p><ul>
+<li>以队列为单位进行管理</li>
+<li>消费者链表(当前队列的所有消费者信息), RR轮转, 每次取出下一个消费者进行推送, 一条消息只需要被一个客户端处理</li>
+<li>操作:<ul>
+<li>新增消费者</li>
+<li>获取消费者</li>
+<li>删除消费者</li>
+<li>获取队列消费者数量</li>
+<li>是否为空</li>
+</ul>
+</li>
+</ul>
+<p>管理操作:</p><ul>
+<li>初始化队列消费者结构</li>
+<li>删除队列消费者结构</li>
+<li>向指定队列添加消费者</li>
+<li>获取指定队列消费者</li>
+<li>删除指定队列消费者</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md16"></a>
+信道管理模块</h3>
+<p>同一个连接(Connection)中可以有多个通信通道(Channel)</p>
+<p>某个客户端关闭通信实质上是关闭信道,并非关闭连接</p>
+<p>当信道关闭时, 服务端会将客户端的订阅取消</p>
+<p>每一个信道在用户看来是独立的</p>
+<p>管理信息:</p><ul>
+<li>信道ID</li>
+<li>信道关联的虚拟机句柄</li>
+<li>信道关联的消费者句柄</li>
+<li>工作线程池句柄(信道发布消息到指定队列, 从指定队列获取消费者, 对信息进行消费)</li>
+</ul>
+<p>管理操作:</p><ul>
+<li>声明\删除交换机</li>
+<li>声明\删除队列</li>
+<li>绑定\解绑队列交换机</li>
+<li>发布\确认\订阅\取消订阅消息队列</li>
+</ul>
+<p>外部操作:</p><ul>
+<li>创建\关闭信道</li>
+<li>获取指定信道的句柄</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md17"></a>
+连接管理模块</h3>
+<p>网络通信连接的管理</p>
+<p>连接关闭时, 需要将信道全部关闭</p>
+<p>muduo实现底层通信, 需要加上信道进行二次封装</p>
+<p>管理数据:</p><ul>
+<li>muduo库的通信连接</li>
+<li>当前连接关联的信道管理句柄</li>
+</ul>
+<p>连接操作:</p><ul>
+<li>创建\关闭信道</li>
+</ul>
+<p>管理操作:</p><ul>
+<li>新增\关闭连接</li>
+<li>获取指定连接的句柄</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md18"></a>
+BrokerServer模块</h3>
+<p>是以上所有模块的整合, 形成一个服务器, 向外提供服务</p>
+<p>管理信息:</p><ul>
+<li>虚拟机管理模块句柄</li>
+<li>消费者管理模块句柄</li>
+<li>连接管理模块句柄</li>
+<li>工作线程池句柄</li>
+<li>muduo库通信所需元素</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md19"></a>
+客户端模块</h2>
+<h3><a class="anchor" id="autotoc_md20"></a>
+消费者管理</h3>
+<p>订阅客户端订阅一个队列时, 就是创建了一个消费者</p>
+<ul>
+<li>消费者标识</li>
+<li>订阅的队列名称</li>
+<li>自动确认标志</li>
+<li>消息回调处理函数指针</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md21"></a>
+信道管理模块</h3>
+<p>与服务端信道一一对应, 服务端信道提供的服务器, 客户端都有, 客户端再为用户提供服务</p>
+<p>向服务端的请求都是通过信道完成的</p>
+<p>与服务端类似</p>
+<ul>
+<li>信道ID</li>
+<li>消费者管理句柄</li>
+<li>线程池句柄</li>
+<li>信道关联连接</li>
+<li>创建\关闭信道</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md22"></a>
+连接管理模块</h3>
+<p>客户端连接的管理本质上是对客户端TcpClient的二次封装和管理</p>
+<p>客户端对用户是透明的, 用户是通过连接创建信道, 通过信道完成相应的服务</p>
+<p>管理操作:</p><ul>
+<li>连接服务器</li>
+<li>创建信道</li>
+<li>关闭信道</li>
+<li>关闭连接</li>
+</ul>
+<p>管理信息:</p><ul>
+<li>管理线程池句柄</li>
+<li>连接关联的信道管理句柄</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md23"></a>
+异步工作池模块</h3>
+<p>TcpClient需要一个EventLoopThread模块进行IO事件监控</p>
+<p>收到推送消息后, 需要线程池对推送来的消息进行处理</p>
+<h3><a class="anchor" id="autotoc_md24"></a>
+客户端模块</h3>
+<p>封装实现订阅客户端/发布客户端</p>
+<h1><a class="anchor" id="autotoc_md25"></a>
+模块关系图</h1>
+<p><img src="https://s2.loli.net/2024/10/03/bgqxMvCPpHr9ksn.png" alt="null _3_.png" class="inline"/></p>
+<h1><a class="anchor" id="autotoc_md26"></a>
+TODO</h1>
+<ul>
+<li>VirtualHost的创建删除</li>
+<li>客户端主动拉取消息功能</li>
+<li>服务端交换机检测到当前所有客户端退出, 自动删除交换机\队列 </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

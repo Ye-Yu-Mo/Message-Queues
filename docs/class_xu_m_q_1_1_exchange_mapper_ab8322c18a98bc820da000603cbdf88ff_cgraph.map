@@ -1,0 +1,7 @@
+<map id="XuMQ::ExchangeMapper::recovery" name="XuMQ::ExchangeMapper::recovery">
+<area shape="rect" id="Node000001" title="获取所有交换机 从数据库加载到内存" alt="" coords="5,37,187,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="251,5,400,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,42,236,35,237,40,187,47"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_mapper.html#a9b5cf7092783db6481116c740c6b5401" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="235,69,416,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,67,221,72,221,77,187,73"/>
+</map>

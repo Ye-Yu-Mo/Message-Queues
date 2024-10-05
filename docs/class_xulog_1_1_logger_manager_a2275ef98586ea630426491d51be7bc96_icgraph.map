@@ -1,0 +1,11 @@
+<map id="Xulog::LoggerManager::getInstance" name="Xulog::LoggerManager::getInstance">
+<area shape="rect" id="Node000001" title="获取日志器管理器的实例" alt="" coords="453,63,621,103"/>
+<area shape="rect" id="Node000002" href="$class_xulog_1_1_global_logger_build.html#a25da47faf4e8b739812865970755ef79" title="构建日志器" alt="" coords="219,5,405,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="444,62,391,48,392,43,445,57"/>
+<area shape="rect" id="Node000003" href="$namespace_xulog.html#a41e363ba050c15f3b4e1d157354d59c3" title="获取指定名称的日志器" alt="" coords="246,70,378,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="440,85,378,85,378,80,440,80"/>
+<area shape="rect" id="Node000005" href="$namespace_xulog.html#a4021d741c10f89db517006134fcffa63" title="获取默认日志器" alt="" coords="243,119,381,145"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="441,107,371,122,370,117,439,101"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_log_init.html#a1340b30126554326b5ffe7d60fb7ca40" title="LogInit 构造函数" alt="" coords="5,70,171,95"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="232,85,171,85,171,80,232,80"/>
+</map>

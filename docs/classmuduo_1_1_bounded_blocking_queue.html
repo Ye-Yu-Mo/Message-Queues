@@ -1,0 +1,512 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: muduo::BoundedBlockingQueue&lt; T &gt; 模板类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.01</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classmuduo_1_1_bounded_blocking_queue.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="classmuduo_1_1_bounded_blocking_queue-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">muduo::BoundedBlockingQueue&lt; T &gt; 模板类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_bounded_blocking_queue_8h_source.html">BoundedBlockingQueue.h</a>&gt;</code></p>
+<div class="dynheader">
+类 muduo::BoundedBlockingQueue&lt; T &gt; 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_bounded_blocking_queue__inherit__graph.png" border="0" usemap="#amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_inherit__map" id="amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,79,273,104"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="60,5,219,31"/>
+<area shape="poly" title=" " alt="" coords="142,44,142,79,137,79,137,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+muduo::BoundedBlockingQueue&lt; T &gt; 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmuduo_1_1_bounded_blocking_queue__coll__graph.png" border="0" usemap="#amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_coll__map" id="amuduo_1_1_bounded_blocking_queue_3_01_t_01_4_coll__map">
+<area shape="rect" title=" " alt="" coords="5,79,273,104"/>
+<area shape="rect" href="classmuduo_1_1noncopyable.html" title=" " alt="" coords="60,5,219,31"/>
+<area shape="poly" title=" " alt="" coords="142,44,142,79,137,79,137,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ae1c9ce563c18292c7a5fbd9909ea9e6e" id="r_ae1c9ce563c18292c7a5fbd9909ea9e6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#ae1c9ce563c18292c7a5fbd9909ea9e6e">BoundedBlockingQueue</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">maxSize</a>)</td></tr>
+<tr class="separator:ae1c9ce563c18292c7a5fbd9909ea9e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375c461ab8d4f92de5ac868db99fb697" id="r_a375c461ab8d4f92de5ac868db99fb697"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a375c461ab8d4f92de5ac868db99fb697">put</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">x</a>)</td></tr>
+<tr class="separator:a375c461ab8d4f92de5ac868db99fb697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82f74a0667d7377d7893fe83e05a7e4" id="r_ab82f74a0667d7377d7893fe83e05a7e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#ab82f74a0667d7377d7893fe83e05a7e4">put</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &amp;&amp;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">x</a>)</td></tr>
+<tr class="separator:ab82f74a0667d7377d7893fe83e05a7e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcae0ce75261fd36bb4ee783c5561a8f" id="r_afcae0ce75261fd36bb4ee783c5561a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#afcae0ce75261fd36bb4ee783c5561a8f">take</a> ()</td></tr>
+<tr class="separator:afcae0ce75261fd36bb4ee783c5561a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1971c45d804e732e0fde8a545e482caf" id="r_a1971c45d804e732e0fde8a545e482caf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a1971c45d804e732e0fde8a545e482caf">empty</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a1971c45d804e732e0fde8a545e482caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d5324a005b7dac25317ae38e60c92c" id="r_a76d5324a005b7dac25317ae38e60c92c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a76d5324a005b7dac25317ae38e60c92c">full</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a76d5324a005b7dac25317ae38e60c92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834797b6e71573ee91dd2cb8570f8404" id="r_a834797b6e71573ee91dd2cb8570f8404"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a834797b6e71573ee91dd2cb8570f8404">size</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a834797b6e71573ee91dd2cb8570f8404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b8834c0f8f2f713448a9174da4207c9" id="r_a4b8834c0f8f2f713448a9174da4207c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a4b8834c0f8f2f713448a9174da4207c9">capacity</a> () <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a></td></tr>
+<tr class="separator:a4b8834c0f8f2f713448a9174da4207c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:abd744a27cbe68544db6961900c42d9eb" id="r_abd744a27cbe68544db6961900c42d9eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_condition.html">Condition</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">notEmpty_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#abd744a27cbe68544db6961900c42d9eb">GUARDED_BY</a> (<a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>)</td></tr>
+<tr class="separator:abd744a27cbe68544db6961900c42d9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa941786cfbef7370836813bd457c1fa7" id="r_aa941786cfbef7370836813bd457c1fa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmuduo_1_1_condition.html">Condition</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">notFull_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#aa941786cfbef7370836813bd457c1fa7">GUARDED_BY</a> (<a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>)</td></tr>
+<tr class="separator:aa941786cfbef7370836813bd457c1fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850aaef49dbb2129a7d7f847161736f8" id="r_a850aaef49dbb2129a7d7f847161736f8"><td class="memItemLeft" align="right" valign="top">boost::circular_buffer&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">queue_</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a850aaef49dbb2129a7d7f847161736f8">GUARDED_BY</a> (<a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>)</td></tr>
+<tr class="separator:a850aaef49dbb2129a7d7f847161736f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmuduo_1_1noncopyable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmuduo_1_1noncopyable')"><img src="closed.png" alt="-"/>&#160;Private 成员函数 继承自 <a class="el" href="classmuduo_1_1noncopyable.html">muduo::noncopyable</a></td></tr>
+<tr class="memitem:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae1b6f048685091082c44d8be220239ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae1b6f048685091082c44d8be220239ac">noncopyable</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:ae1b6f048685091082c44d8be220239ac inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable" id="r_aaeb67fffc76d7ea9227b8cf8ca8fae0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#aaeb67fffc76d7ea9227b8cf8ca8fae0a">operator=</a> (<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="classmuduo_1_1noncopyable.html">noncopyable</a> &amp;)=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">delete</a></td></tr>
+<tr class="separator:aaeb67fffc76d7ea9227b8cf8ca8fae0a inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ae0ca7ea7b61e7ef8b82582063c09b901"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ae0ca7ea7b61e7ef8b82582063c09b901">noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ae0ca7ea7b61e7ef8b82582063c09b901 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable" id="r_ac12e02f31699cca2d17ba01d35648ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1noncopyable.html#ac12e02f31699cca2d17ba01d35648ff5">~noncopyable</a> ()=<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">default</a></td></tr>
+<tr class="separator:ac12e02f31699cca2d17ba01d35648ff5 inherit pub_methods_classmuduo_1_1noncopyable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a7166cc3a7c78ef3acbf71814bf96f972" id="r_a7166cc3a7c78ef3acbf71814bf96f972"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">MutexLock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a></td></tr>
+<tr class="separator:a7166cc3a7c78ef3acbf71814bf96f972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="ae1c9ce563c18292c7a5fbd9909ea9e6e" name="ae1c9ce563c18292c7a5fbd9909ea9e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1c9ce563c18292c7a5fbd9909ea9e6e">&#9670;&#160;</a></span>BoundedBlockingQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::BoundedBlockingQueue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">int</a>&#160;</td>
+          <td class="paramname"><em>maxSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a4b8834c0f8f2f713448a9174da4207c9" name="a4b8834c0f8f2f713448a9174da4207c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8834c0f8f2f713448a9174da4207c9">&#9670;&#160;</a></span>capacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::capacity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1971c45d804e732e0fde8a545e482caf" name="a1971c45d804e732e0fde8a545e482caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1971c45d804e732e0fde8a545e482caf">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76d5324a005b7dac25317ae38e60c92c" name="a76d5324a005b7dac25317ae38e60c92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d5324a005b7dac25317ae38e60c92c">&#9670;&#160;</a></span>full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">bool</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::full </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd744a27cbe68544db6961900c42d9eb" name="abd744a27cbe68544db6961900c42d9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd744a27cbe68544db6961900c42d9eb">&#9670;&#160;</a></span>GUARDED_BY() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_condition.html">Condition</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">notEmpty_</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::GUARDED_BY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa941786cfbef7370836813bd457c1fa7" name="aa941786cfbef7370836813bd457c1fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa941786cfbef7370836813bd457c1fa7">&#9670;&#160;</a></span>GUARDED_BY() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmuduo_1_1_condition.html">Condition</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">notFull_</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::GUARDED_BY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a850aaef49dbb2129a7d7f847161736f8" name="a850aaef49dbb2129a7d7f847161736f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850aaef49dbb2129a7d7f847161736f8">&#9670;&#160;</a></span>GUARDED_BY() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boost::circular_buffer&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">queue_</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::GUARDED_BY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html#a7166cc3a7c78ef3acbf71814bf96f972">mutex_</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a375c461ab8d4f92de5ac868db99fb697" name="a375c461ab8d4f92de5ac868db99fb697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375c461ab8d4f92de5ac868db99fb697">&#9670;&#160;</a></span>put() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">const</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab82f74a0667d7377d7893fe83e05a7e4" name="ab82f74a0667d7377d7893fe83e05a7e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82f74a0667d7377d7893fe83e05a7e4">&#9670;&#160;</a></span>put() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">void</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a834797b6e71573ee91dd2cb8570f8404" name="a834797b6e71573ee91dd2cb8570f8404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834797b6e71573ee91dd2cb8570f8404">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">size_t</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcae0ce75261fd36bb4ee783c5561a8f" name="afcae0ce75261fd36bb4ee783c5561a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcae0ce75261fd36bb4ee783c5561a8f">&#9670;&#160;</a></span>take()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::take </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a7166cc3a7c78ef3acbf71814bf96f972" name="a7166cc3a7c78ef3acbf71814bf96f972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7166cc3a7c78ef3acbf71814bf96f972">&#9670;&#160;</a></span>mutex_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">typename</a> <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">MutexLock</a> <a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">muduo::BoundedBlockingQueue</a>&lt; <a class="el" href="namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b">T</a> &gt;::mutex_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacemuduo.html">muduo</a></li><li class="navelem"><a class="el" href="classmuduo_1_1_bounded_blocking_queue.html">BoundedBlockingQueue</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

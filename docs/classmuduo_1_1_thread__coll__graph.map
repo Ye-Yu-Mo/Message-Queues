@@ -1,0 +1,13 @@
+<map id="muduo::Thread" name="muduo::Thread">
+<area shape="rect" id="Node000001" title=" " alt="" coords="170,183,290,208"/>
+<area shape="rect" id="Node000002" href="$classmuduo_1_1noncopyable.html" title=" " alt="" coords="39,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,38,38,56,15,81,8,100,15,119,29,135,46,149,86,170,129,183,170,189,169,194,128,188,84,175,44,154,26,139,10,121,3,100,10,79,35,52,65,34"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1_count_down_latch.html" title=" " alt="" coords="25,87,211,113"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="121,44,121,87,115,87,115,44"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1detail_1_1_atomic_integer_t.html" title=" " alt="" coords="235,80,447,120"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="163,33,289,77,287,82,162,38"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="470,87,529,113"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="469,122,430,142,386,161,338,176,291,186,290,181,336,171,384,156,428,137,467,117"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="144,120,218,180,215,185,141,124"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="309,131,246,184,242,180,306,127"/>
+</map>

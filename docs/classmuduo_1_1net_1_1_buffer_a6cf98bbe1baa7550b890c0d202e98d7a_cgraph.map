@@ -1,0 +1,18 @@
+<map id="muduo::net::Buffer::ensureWritableBytes" name="muduo::net::Buffer::ensureWritableBytes">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,143,172,183"/>
+<area shape="rect" id="Node000002" href="$namespacemuduo.html#a72cbcf425db108335295456e8ff9c12b" title=" " alt="" coords="411,29,569,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,141,433,56,435,61,157,146"/>
+<area shape="rect" id="Node000003" href="$classmuduo_1_1net_1_1_buffer.html#a61202747347053befe66f56d9c47e55c" title=" " alt="" coords="220,143,363,183"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="173,161,206,161,206,166,173,166"/>
+<area shape="rect" id="Node000007" href="$classmuduo_1_1net_1_1_buffer.html#a38d2fbb29a60db59fb0c42fc98db083d" title=" " alt="" coords="419,271,561,311"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="153,181,414,265,413,270,151,186"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="457,31,451,21,454,11,468,5,490,3,517,6,528,15,525,19,515,11,490,8,469,10,458,15,456,20,462,28"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="311,141,354,103,409,65,426,57,429,62,412,70,357,107,314,145"/>
+<area shape="rect" id="Node000004" href="$classmuduo_1_1net_1_1_buffer.html#ac432f0aeef9000203b7de41e08ce39a7" title=" " alt="" coords="419,79,561,119"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="353,141,414,121,415,126,355,146"/>
+<area shape="rect" id="Node000005" href="$classmuduo_1_1net_1_1_buffer.html#af993d20fb4189cecf9c7ead2becc2467" title=" " alt="" coords="416,143,564,183"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="363,161,402,161,402,166,363,166"/>
+<area shape="rect" id="Node000006" href="$classmuduo_1_1net_1_1_buffer.html#a84024d63fb91dd0d8213559739ef2557" title=" " alt="" coords="419,207,561,247"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="355,181,415,201,414,206,353,186"/>
+<area shape="poly" id="edge8_Node000003_Node000007" title=" " alt="" coords="315,181,358,219,412,257,423,263,420,268,409,262,355,223,312,185"/>
+</map>

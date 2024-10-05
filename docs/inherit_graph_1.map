@@ -1,0 +1,9 @@
+<map id="类继承关系图" name="类继承关系图">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,47,187,87"/>
+<area shape="rect" id="Node000001" href="$class_xu_m_q_1_1_basic_properties.html" title=" " alt="" coords="242,5,413,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="200,42,267,28,268,33,201,48"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message.html" title=" " alt="" coords="264,55,391,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="200,65,264,65,264,70,200,70"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message___payload.html" title=" " alt="" coords="235,104,420,129"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="201,87,268,101,267,107,200,92"/>
+</map>
