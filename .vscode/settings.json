@@ -130,6 +130,12 @@
     "cinttypes": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "charconv": "cpp",
+    "format": "cpp",
+    "shared_mutex": "cpp",
+    "span": "cpp",
+    "stdfloat": "cpp",
+    "*.ipp": "cpp"
   }
 }
