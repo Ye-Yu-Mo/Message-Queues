@@ -1,0 +1,7 @@
+<map id="XuMQ::MsgQueueMapper::selectCallback" name="XuMQ::MsgQueueMapper::selectCallback">
+<area shape="rect" id="Node000001" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="483,5,669,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb" title="获取所有消息队列 从数据库加载到内存" alt="" coords="248,5,435,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,28,435,28,435,23,469,23"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_msg_queue_manager.html#aebd0cd056b11b7698be01985080c3568" title="消息队列数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,28,200,28,200,23,234,23"/>
+</map>

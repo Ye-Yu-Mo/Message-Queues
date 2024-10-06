@@ -1,12 +1,17 @@
 <map id="common/logger.hpp" name="common/logger.hpp">
-<area shape="rect" id="Node000001" title="异步日志器初始化" alt="" coords="79,5,230,31"/>
-<area shape="rect" id="Node000002" href="$helper_8hpp.html" title="工具类封装" alt="" coords="137,79,287,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,40,205,77,201,80,170,43"/>
-<area shape="rect" id="Node000003" href="$exchange_8hpp.html" title=" " alt="" coords="19,152,178,177"/>
-<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="144,44,126,80,104,152,99,151,122,78,139,41"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,114,119,154,116,150,180,109"/>
-<area shape="rect" id="Node000005" href="$mqfiletest_8cpp.html" title=" " alt="" coords="203,152,347,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="233,113,267,150,263,154,229,116"/>
+<area shape="rect" id="Node000001" title="异步日志器初始化" alt="" coords="199,5,350,31"/>
+<area shape="rect" id="Node000002" href="$helper_8hpp.html" title="工具类封装" alt="" coords="199,79,350,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,44,277,79,272,79,272,44"/>
+<area shape="rect" id="Node000003" href="$exchange_8hpp.html" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="19,152,178,177"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="246,40,188,81,145,120,111,154,108,150,141,116,185,77,243,36"/>
+<area shape="rect" id="Node000005" href="$queue_8hpp.html" title=" " alt="" coords="371,152,506,177"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="307,36,363,77,402,116,431,150,427,153,398,119,360,81,304,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="235,112,128,154,126,149,233,107"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="315,107,413,149,411,154,313,112"/>
+<area shape="rect" id="Node000007" href="$mqfiletest_8cpp.html" title=" " alt="" coords="203,152,347,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="277,118,277,152,272,152,272,118"/>
 <area shape="rect" id="Node000004" href="$mqexchangetest_8cpp.html" title=" " alt="" coords="5,225,192,251"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,191,101,225,96,225,96,191"/>
+<area shape="rect" id="Node000006" href="$mqqueuetest_8cpp.html" title=" " alt="" coords="357,225,521,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="441,191,441,225,436,225,436,191"/>
 </map>

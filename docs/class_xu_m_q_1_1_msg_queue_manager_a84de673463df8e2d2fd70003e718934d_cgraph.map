@@ -1,0 +1,7 @@
+<map id="XuMQ::MsgQueueManager::clear" name="XuMQ::MsgQueueManager::clear">
+<area shape="rect" id="Node000001" title="清除消息队列" alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170" title="移除一张表" alt="" coords="248,5,435,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="483,5,632,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="435,23,469,23,469,28,435,28"/>
+</map>

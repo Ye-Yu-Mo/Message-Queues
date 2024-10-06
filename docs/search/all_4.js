@@ -1,7 +1,7 @@
 var searchData=
 [
   ['chk_5f_0',['chk_',['../msg_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10',1,'CHK_:&#160;msg.pb.cc'],['../msg_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10',1,'CHK_:&#160;msg.pb.cc'],['../msg_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10',1,'CHK_:&#160;msg.pb.cc']]],
-  ['clear_1',['clear',['../class_xu_m_q_1_1_basic_properties.html#a8c5335d4d1ef6080232bbbda4297edff',1,'XuMQ::BasicProperties::Clear()'],['../class_xu_m_q_1_1_message___payload.html#a7e32d7654f3f4502e5d287294807a789',1,'XuMQ::Message_Payload::Clear()'],['../class_xu_m_q_1_1_message.html#a4725f3ef9411cf6b274f67b207a01708',1,'XuMQ::Message::Clear()'],['../class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594',1,'XuMQ::ExchangeManager::clear()']]],
+  ['clear_1',['clear',['../class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d',1,'XuMQ::MsgQueueManager::clear()'],['../class_xu_m_q_1_1_message.html#a4725f3ef9411cf6b274f67b207a01708',1,'XuMQ::Message::Clear()'],['../class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594',1,'XuMQ::ExchangeManager::clear()'],['../class_xu_m_q_1_1_basic_properties.html#a8c5335d4d1ef6080232bbbda4297edff',1,'XuMQ::BasicProperties::Clear()'],['../class_xu_m_q_1_1_message___payload.html#a7e32d7654f3f4502e5d287294807a789',1,'XuMQ::Message_Payload::Clear() final']]],
   ['clear_5fbody_2',['clear_body',['../class_xu_m_q_1_1_message___payload.html#a33625a045480f19b3d678d6cf8e1029b',1,'XuMQ::Message_Payload']]],
   ['clear_5fdelivery_5fmode_3',['clear_delivery_mode',['../class_xu_m_q_1_1_basic_properties.html#ac31e321565b7c23c217402a00ff0ba64',1,'XuMQ::BasicProperties']]],
   ['clear_5fid_4',['clear_id',['../class_xu_m_q_1_1_basic_properties.html#a89ca67423e448d4bab1d21f65dccd5aa',1,'XuMQ::BasicProperties']]],
@@ -12,9 +12,8 @@ var searchData=
   ['clear_5frouting_5fkey_9',['clear_routing_key',['../class_xu_m_q_1_1_basic_properties.html#a10e53776af80b0a79c2b57b6c82618e3',1,'XuMQ::BasicProperties']]],
   ['clear_5fvalid_10',['clear_valid',['../class_xu_m_q_1_1_message.html#a37b6def5d197d8f36c33b0f9c28afac7',1,'XuMQ::Message']]],
   ['close_11',['close',['../class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8',1,'XuMQ::SqliteHelper']]],
-  ['copyfrom_12',['copyfrom',['../class_xu_m_q_1_1_message.html#a949e6070913bf14fc93973f241fe2e98',1,'XuMQ::Message::CopyFrom()'],['../class_xu_m_q_1_1_message___payload.html#aa71ffa565b95893849c8ddcf815a61b9',1,'XuMQ::Message_Payload::CopyFrom()'],['../class_xu_m_q_1_1_basic_properties.html#ad09ac87de65216c804a2634ee8585771',1,'XuMQ::BasicProperties::CopyFrom()']]],
-  ['create_5ftable_13',['CREATE_TABLE',['../exchange_8hpp.html#a6e393e5adf34980c34b99e9850258a2d',1,'exchange.hpp']]],
-  ['createdirectory_14',['createDirectory',['../class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad',1,'XuMQ::FileHelper']]],
-  ['createfile_15',['createFile',['../class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3',1,'XuMQ::FileHelper']]],
-  ['createtable_16',['createTable',['../class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7',1,'XuMQ::ExchangeMapper']]]
+  ['copyfrom_12',['copyfrom',['../class_xu_m_q_1_1_basic_properties.html#ad09ac87de65216c804a2634ee8585771',1,'XuMQ::BasicProperties::CopyFrom()'],['../class_xu_m_q_1_1_message___payload.html#aa71ffa565b95893849c8ddcf815a61b9',1,'XuMQ::Message_Payload::CopyFrom()'],['../class_xu_m_q_1_1_message.html#a949e6070913bf14fc93973f241fe2e98',1,'XuMQ::Message::CopyFrom()']]],
+  ['createdirectory_13',['createDirectory',['../class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad',1,'XuMQ::FileHelper']]],
+  ['createfile_14',['createFile',['../class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3',1,'XuMQ::FileHelper']]],
+  ['createtable_15',['createtable',['../class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7',1,'XuMQ::ExchangeMapper::createTable()'],['../class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e',1,'XuMQ::MsgQueueMapper::createTable()']]]
 ];

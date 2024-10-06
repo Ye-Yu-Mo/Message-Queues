@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="472,5,653,45"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff" title="获取所有交换机 从数据库加载到内存" alt="" coords="243,5,424,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,28,424,28,424,23,458,23"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b" title="交换机数据内存管理类 构造函数" alt="" coords="5,5,195,45"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b" title="交换机数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,5,195,45"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,28,195,28,195,23,229,23"/>
 </map>

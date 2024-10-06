@@ -8,5 +8,5 @@ var searchData=
   ['exchangetype_5fname_5',['ExchangeType_Name',['../namespace_xu_m_q.html#a19551a42380bad0bd8e9da78d7713864',1,'XuMQ']]],
   ['exchangetype_5fparse_6',['ExchangeType_Parse',['../namespace_xu_m_q.html#a4000c7e369b91bccbc052ec146a44004',1,'XuMQ']]],
   ['exec_7',['exec',['../class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a',1,'XuMQ::SqliteHelper']]],
-  ['exists_8',['exists',['../class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e',1,'XuMQ::FileHelper::exists()'],['../class_xu_m_q_1_1_exchange_manager.html#a5c8ab89bcf0bdeb1a776664f93d35cee',1,'XuMQ::ExchangeManager::exists()']]]
+  ['exists_8',['exists',['../class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e',1,'XuMQ::FileHelper::exists()'],['../class_xu_m_q_1_1_exchange_manager.html#a5c8ab89bcf0bdeb1a776664f93d35cee',1,'XuMQ::ExchangeManager::exists()'],['../class_xu_m_q_1_1_msg_queue_manager.html#aadd1e61acda763b386131fda7f14a96d',1,'XuMQ::MsgQueueManager::exists()']]]
 ];

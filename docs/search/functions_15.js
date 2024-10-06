@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['valid_0',['valid',['../class_xu_m_q_1_1_message.html#a48177d387b98b24a7a3146d858e69b6b',1,'XuMQ::Message::valid()'],['../classmuduo_1_1_date.html#aaa5de5e68cacb4ed73f9f56aa87d908b',1,'muduo::Date::valid()'],['../classmuduo_1_1_gzip_file.html#aa6cbca881675d0af1e0205346bd75044',1,'muduo::GzipFile::valid()'],['../classmuduo_1_1_timestamp.html#a2462f9bb64bf5b47958d81a33cd73456',1,'muduo::Timestamp::valid()'],['../classmuduo_1_1_time_zone.html#a5b8c6504dfbc9bf0424a8d19959f8f6a',1,'muduo::TimeZone::valid()']]],
-  ['validatechecksum_1',['validateChecksum',['../classmuduo_1_1net_1_1_protobuf_codec_lite.html#a32d467b9cf3443e32b2964fe347b0047',1,'muduo::net::ProtobufCodecLite']]],
-  ['value_2',['value',['../classmuduo_1_1_thread_local.html#a69908aa1f275248a524ff9cee5109b84',1,'muduo::ThreadLocal']]]
+  ['_7ebasicproperties_0',['~BasicProperties',['../class_xu_m_q_1_1_basic_properties.html#ad61a3d3e3971ffe42cb901838a46c996',1,'XuMQ::BasicProperties']]],
+  ['_7ebasicpropertiesdefaulttypeinternal_1',['~BasicPropertiesDefaultTypeInternal',['../struct_xu_m_q_1_1_basic_properties_default_type_internal.html#a20da497eeb5977f1fa1ef7c34bcddfa1',1,'XuMQ::BasicPropertiesDefaultTypeInternal']]],
+  ['_7emessage_2',['~Message',['../class_xu_m_q_1_1_message.html#a08576bf67bea1220e3d365114f5233b2',1,'XuMQ::Message']]],
+  ['_7emessage_5fpayload_3',['~Message_Payload',['../class_xu_m_q_1_1_message___payload.html#a75efd2d985380b5559421e98803e9d62',1,'XuMQ::Message_Payload']]],
+  ['_7emessage_5fpayloaddefaulttypeinternal_4',['~Message_PayloadDefaultTypeInternal',['../struct_xu_m_q_1_1_message___payload_default_type_internal.html#a21b4874cd61d9c2f98f3a759308c0d67',1,'XuMQ::Message_PayloadDefaultTypeInternal']]],
+  ['_7emessagedefaulttypeinternal_5',['~MessageDefaultTypeInternal',['../struct_xu_m_q_1_1_message_default_type_internal.html#ae35a29c55ea9366985c8b6be208cedf5',1,'XuMQ::MessageDefaultTypeInternal']]]
 ];

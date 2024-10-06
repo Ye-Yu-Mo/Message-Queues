@@ -1,7 +1,9 @@
 <map id="XuMQ::FileHelper::parentDirectory" name="XuMQ::FileHelper::parentDirectory">
-<area shape="rect" id="Node000001" title="获取文件的父目录" alt="" coords="235,35,420,75"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="5,5,187,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,44,186,39,187,34,221,39"/>
-<area shape="rect" id="Node000003" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="69,70,123,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,70,124,82,123,77,221,65"/>
+<area shape="rect" id="Node000001" title="获取文件的父目录" alt="" coords="240,63,425,103"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="8,5,189,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,62,180,48,182,43,238,57"/>
+<area shape="rect" id="Node000003" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,70,126,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,85,126,85,126,80,226,80"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094" title="消息队列持久化管理类 构造函数" alt="" coords="5,120,192,160"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="238,109,182,123,180,117,236,103"/>
 </map>

@@ -1,0 +1,415 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: server/queue.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('queue_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">queue.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="queue_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../common/logger.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../common/helper.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../common/msg.pb.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html">   15</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_xu_m_q_1_1_msg_queue.html">MsgQueue</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">   17</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">ptr</a> = std::shared_ptr&lt;MsgQueue&gt;;             </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7">   18</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7">name</a>;                                  </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a10174a2dfb8cba0a2b20f7dc36f8c9d8">   19</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a10174a2dfb8cba0a2b20f7dc36f8c9d8">durable</a>;                                      </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3">   20</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3">exclusive</a>;                                    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">   21</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">auto_delete</a>;                                  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">   22</a></span>        std::unordered_map&lt;std::string, std::string&gt; <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">args</a>; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#ae93fe02f20e3b3c8f18b0ee74df5275d">   24</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_msg_queue.html#ae93fe02f20e3b3c8f18b0ee74df5275d">MsgQueue</a>() {}</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a5ec98f6a1ee5a0abcb06df8be4671662">   31</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_msg_queue.html#a5ec98f6a1ee5a0abcb06df8be4671662">MsgQueue</a>(<span class="keyword">const</span> std::string &amp;qname,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                 <span class="keywordtype">bool</span> qdurable,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 <span class="keywordtype">bool</span> qexclusive,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                 <span class="keywordtype">bool</span> qauto_delete,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                 std::unordered_map&lt;std::string, std::string&gt; &amp;qargs) : <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7">name</a>(qname), <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a10174a2dfb8cba0a2b20f7dc36f8c9d8">durable</a>(qdurable), <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3">exclusive</a>(qexclusive),</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                                                        <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">auto_delete</a>(qauto_delete), <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">args</a>(qargs)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a0aab5b0ec307ce45776c56192d7ff428">   44</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="struct_xu_m_q_1_1_msg_queue.html#a0aab5b0ec307ce45776c56192d7ff428">setArgs</a>(<span class="keyword">const</span> std::string &amp;str_args)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            std::vector&lt;std::string&gt; sub_args;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <a class="code hl_function" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">StrHelper::split</a>(str_args, <span class="stringliteral">&quot;&amp;&quot;</span>, sub_args);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;str : sub_args)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordtype">size_t</span> pos = str.find(<span class="charliteral">&#39;=&#39;</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                std::string key = str.substr(0, pos);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                std::string value = str.substr(pos + 1);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">args</a>.insert(std::make_pair(key, value));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_msg_queue.html#a375d991fc89414224d7db5d139a533dd">   60</a></span>        std::string <a class="code hl_function" href="struct_xu_m_q_1_1_msg_queue.html#a375d991fc89414224d7db5d139a533dd">getArgs</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            std::string result;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;arg : <a class="code hl_variable" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">args</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                result += (arg.first + <span class="stringliteral">&quot;=&quot;</span> + arg.second + <span class="stringliteral">&quot;&amp;&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keywordflow">if</span> (!result.empty())</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                result.pop_back(); <span class="comment">// 去除最后一个&#39;&amp;&#39;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    };</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">   72</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> = std::unordered_map&lt;std::string, MsgQueue::ptr&gt;; </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="};">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html">   75</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094">   81</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094">MsgQueueMapper</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>(dbfile)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            std::string path = <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">FileHelper::parentDirectory</a>(dbfile);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">FileHelper::createDirectory</a>(path);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            assert(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">open</a>());</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e">createTable</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e">   90</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e">createTable</a>()</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *CREATE_TABLE = <span class="stringliteral">&quot;create table if not exists queue_table(name varchar(32) primary key,\</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="stringliteral">            durable tinyint, exclusive tinyint,\</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="stringliteral">            auto_delete tinyint, args varchar(128));&quot;</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(CREATE_TABLE, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;创建消息队列数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                abort();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170">  103</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170">removeTable</a>()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DROP_TABLE = <span class="stringliteral">&quot;drop table if exists queue_table;&quot;</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(DROP_TABLE, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;删除消息队列数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                abort();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#a794a7c685feb7e857f9008745595475a">  116</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a794a7c685feb7e857f9008745595475a">insert</a>(<a class="code hl_typedef" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> &amp;queue)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *INSERT_SQL = <span class="stringliteral">&quot;insert into queue_table values(&#39;%s&#39;, %d, %d, %d, &#39;%s&#39;);&quot;</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            sprintf(sql_str, INSERT_SQL, queue-&gt;name.c_str(), queue-&gt;durable, queue-&gt;exclusive,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    queue-&gt;auto_delete, queue-&gt;getArgs().c_str());</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;插入数据失败!&quot;</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#a9a5c5bf798cab6ca30d9a8a734221b66">  133</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a9a5c5bf798cab6ca30d9a8a734221b66">remove</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DELETE_SQL = <span class="stringliteral">&quot;delete from queue_table where name = &#39;%s&#39;;&quot;</span>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            sprintf(sql_str, DELETE_SQL, name.c_str());</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;删除数据失败!&quot;</span>);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb">  149</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb">recovery</a>()</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> result;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *SELECT_SQL = <span class="stringliteral">&quot;select * from queue_table;&quot;</span>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(SELECT_SQL, <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8">selectCallback</a>, &amp;result);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8">  164</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8">selectCallback</a>(<span class="keywordtype">void</span> *arg, <span class="keywordtype">int</span> numcol, <span class="keywordtype">char</span> **row, <span class="keywordtype">char</span> **fields)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> *result = (<a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> *)arg;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keyword">auto</span> <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a> = std::make_shared&lt;MsgQueue&gt;();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;name = row[0];</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;durable = (bool)std::stoi(row[1]);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;exclusive = (bool)std::stoi(row[2]);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;auto_delete = (bool)std::stoi(row[3]);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordflow">if</span> (row[4])</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;setArgs(row[4]);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            result-&gt;insert(std::make_pair(<a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>-&gt;name, <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>));</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">  179</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">_sql_helper</a>; </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="};">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html">  183</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_msg_queue_manager.html">MsgQueueManager</a></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6">  186</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6">ptr</a> = std::shared_ptr&lt;MsgQueueManager&gt;; </div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#aebd0cd056b11b7698be01985080c3568">  189</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#aebd0cd056b11b7698be01985080c3568">MsgQueueManager</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>(dbfile)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a> = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb">recovery</a>();</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#a0c5f37ee8190b1bee6b8ecb844663fc4">  201</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#a0c5f37ee8190b1bee6b8ecb844663fc4">declareQueue</a>(<span class="keyword">const</span> std::string &amp;qname,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                          <span class="keywordtype">bool</span> qdurable,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                          <span class="keywordtype">bool</span> qexclusive,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                          <span class="keywordtype">bool</span> qauto_delete,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                          std::unordered_map&lt;std::string, std::string&gt; &amp;qargs)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.find(qname);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.end())</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keyword">auto</span> <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a> = std::make_shared&lt;MsgQueue&gt;(qname, qdurable, qexclusive, qauto_delete, qargs);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">if</span> (qdurable)</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a794a7c685feb7e857f9008745595475a">insert</a>(<a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.insert(std::make_pair(qname, <a class="code hl_variable" href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a>));</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1">  223</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1">deleteQueue</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.find(name);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.end())</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.erase(name);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">if</span> (it-&gt;second-&gt;durable == <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a9a5c5bf798cab6ca30d9a8a734221b66">remove</a>(name);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00236" data-start="{" data-end="}">
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#a8c21f8cc07dc211e7a6b3ed429770c86">  236</a></span>        <a class="code hl_typedef" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#a8c21f8cc07dc211e7a6b3ed429770c86">selectQueue</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.find(name);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.end())</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a>();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec">  247</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> &amp;<a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec">allQueue</a>()</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00255" data-start="{" data-end="}">
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#aadd1e61acda763b386131fda7f14a96d">  255</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#aadd1e61acda763b386131fda7f14a96d">exists</a>(<span class="keyword">const</span> std::string &amp;name)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.find(name);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.end())</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#ae67fa86d40b98ad8eb72c3b761008ccf">  265</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#ae67fa86d40b98ad8eb72c3b761008ccf">size</a>()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.size();</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00271" data-start="{" data-end="}">
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d">  271</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d">clear</a>()</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170">removeTable</a>();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>.clear();</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        }</div>
+</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">  279</a></span>        std::mutex <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a>;      </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">  280</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a>; </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">  281</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> <a class="code hl_variable" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a>;       </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    };</div>
+</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a22fd9192e7f58d40e0188a4f619b9bad"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">XuMQ::FileHelper::createDirectory</a></div><div class="ttdeci">static bool createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录</div><div class="ttdef"><b>Definition</b> helper.hpp:414</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a28643d0c0fa7088e7afa86f4f048b2f9"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">XuMQ::FileHelper::parentDirectory</a></div><div class="ttdeci">static std::string parentDirectory(const std::string &amp;filename)</div><div class="ttdoc">获取文件的父目录</div><div class="ttdef"><b>Definition</b> helper.hpp:357</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html">XuMQ::MsgQueueManager</a></div><div class="ttdoc">消息队列数据内存管理类</div><div class="ttdef"><b>Definition</b> queue.hpp:184</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_a0c5f37ee8190b1bee6b8ecb844663fc4"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#a0c5f37ee8190b1bee6b8ecb844663fc4">XuMQ::MsgQueueManager::declareQueue</a></div><div class="ttdeci">bool declareQueue(const std::string &amp;qname, bool qdurable, bool qexclusive, bool qauto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;qargs)</div><div class="ttdoc">声明消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:201</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_a461c7f6d1a110d8bcfdbfbbaf02d79c6"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6">XuMQ::MsgQueueManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; MsgQueueManager &gt; ptr</div><div class="ttdoc">消息队列数据内存管理指针</div><div class="ttdef"><b>Definition</b> queue.hpp:186</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_a84de673463df8e2d2fd70003e718934d"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d">XuMQ::MsgQueueManager::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清除消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:271</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_a8c21f8cc07dc211e7a6b3ed429770c86"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#a8c21f8cc07dc211e7a6b3ed429770c86">XuMQ::MsgQueueManager::selectQueue</a></div><div class="ttdeci">MsgQueue::ptr selectQueue(const std::string &amp;name)</div><div class="ttdoc">获取指定消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:236</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_aadd1e61acda763b386131fda7f14a96d"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#aadd1e61acda763b386131fda7f14a96d">XuMQ::MsgQueueManager::exists</a></div><div class="ttdeci">bool exists(const std::string &amp;name)</div><div class="ttdoc">判断消息队列是否存在</div><div class="ttdef"><b>Definition</b> queue.hpp:255</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_ac7449a94eb2cf7f7bbb8edf309a52947"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">XuMQ::MsgQueueManager::_mapper</a></div><div class="ttdeci">MsgQueueMapper _mapper</div><div class="ttdoc">持久化消息队列管理类</div><div class="ttdef"><b>Definition</b> queue.hpp:280</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_ac85cb1637471f4c11ab652736d810cec"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec">XuMQ::MsgQueueManager::allQueue</a></div><div class="ttdeci">QueueMap &amp; allQueue()</div><div class="ttdoc">获取所有队列</div><div class="ttdef"><b>Definition</b> queue.hpp:247</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_ac90480dc7ff8fb669feda8e290d2aefe"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">XuMQ::MsgQueueManager::_queues</a></div><div class="ttdeci">QueueMap _queues</div><div class="ttdoc">全部消息队列信息</div><div class="ttdef"><b>Definition</b> queue.hpp:281</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_ad512849d260b95474d9ef4a9621a6ef5"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">XuMQ::MsgQueueManager::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> queue.hpp:279</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_ae67fa86d40b98ad8eb72c3b761008ccf"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#ae67fa86d40b98ad8eb72c3b761008ccf">XuMQ::MsgQueueManager::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdoc">获取消息队列数量</div><div class="ttdef"><b>Definition</b> queue.hpp:265</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_aebd0cd056b11b7698be01985080c3568"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#aebd0cd056b11b7698be01985080c3568">XuMQ::MsgQueueManager::MsgQueueManager</a></div><div class="ttdeci">MsgQueueManager(const std::string &amp;dbfile)</div><div class="ttdoc">消息队列数据内存管理类 构造函数 从数据库中恢复数据</div><div class="ttdef"><b>Definition</b> queue.hpp:189</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_manager_html_afa992390752f2c157de6e0d1b87b79e1"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1">XuMQ::MsgQueueManager::deleteQueue</a></div><div class="ttdeci">void deleteQueue(const std::string &amp;name)</div><div class="ttdoc">删除消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:223</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html">XuMQ::MsgQueueMapper</a></div><div class="ttdoc">消息队列持久化管理类 将数据存储在sqlite数据库中</div><div class="ttdef"><b>Definition</b> queue.hpp:76</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_a06a80a962586277aafe05d00a575c170"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170">XuMQ::MsgQueueMapper::removeTable</a></div><div class="ttdeci">void removeTable()</div><div class="ttdoc">移除一张表</div><div class="ttdef"><b>Definition</b> queue.hpp:103</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_a393fd804e2b90b122ed207ae95542dc8"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8">XuMQ::MsgQueueMapper::selectCallback</a></div><div class="ttdeci">static int selectCallback(void *arg, int numcol, char **row, char **fields)</div><div class="ttdoc">select语句的回调函数 将获取到的数据存入参数中</div><div class="ttdef"><b>Definition</b> queue.hpp:164</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_a3a4b6fb4b50b4e5e3ef4f45fc160cd8e"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e">XuMQ::MsgQueueMapper::createTable</a></div><div class="ttdeci">void createTable()</div><div class="ttdoc">创建一张表</div><div class="ttdef"><b>Definition</b> queue.hpp:90</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_a794a7c685feb7e857f9008745595475a"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#a794a7c685feb7e857f9008745595475a">XuMQ::MsgQueueMapper::insert</a></div><div class="ttdeci">bool insert(MsgQueue::ptr &amp;queue)</div><div class="ttdoc">新增一个消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:116</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_a9a5c5bf798cab6ca30d9a8a734221b66"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#a9a5c5bf798cab6ca30d9a8a734221b66">XuMQ::MsgQueueMapper::remove</a></div><div class="ttdeci">bool remove(const std::string &amp;name)</div><div class="ttdoc">移除一个消息队列</div><div class="ttdef"><b>Definition</b> queue.hpp:133</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_aad3e8a18b45f048697b366f4e38c7c0e"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">XuMQ::MsgQueueMapper::_sql_helper</a></div><div class="ttdeci">SqliteHelper _sql_helper</div><div class="ttdoc">数据库操作对象</div><div class="ttdef"><b>Definition</b> queue.hpp:179</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_ad6565be12a1db7f40856c71830504094"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094">XuMQ::MsgQueueMapper::MsgQueueMapper</a></div><div class="ttdeci">MsgQueueMapper(const std::string &amp;dbfile)</div><div class="ttdoc">消息队列持久化管理类 构造函数</div><div class="ttdef"><b>Definition</b> queue.hpp:81</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_msg_queue_mapper_html_adea925a891462d23b84df8803b178cdb"><div class="ttname"><a href="class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb">XuMQ::MsgQueueMapper::recovery</a></div><div class="ttdeci">QueueMap recovery()</div><div class="ttdoc">获取所有消息队列 从数据库加载到内存</div><div class="ttdef"><b>Definition</b> queue.hpp:149</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html">XuMQ::SqliteHelper</a></div><div class="ttdoc">SQLite 数据库操作助手类</div><div class="ttdef"><b>Definition</b> helper.hpp:58</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a9228afe2e214e707afdf56640d7bc76a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">XuMQ::SqliteHelper::exec</a></div><div class="ttdeci">bool exec(const std::string &amp;sql, SqliteCallback cb, void *arg)</div><div class="ttdoc">执行 SQL 语句</div><div class="ttdef"><b>Definition</b> helper.hpp:109</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ae30429cd2d883fe24a616a65a547783b"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">XuMQ::SqliteHelper::open</a></div><div class="ttdeci">bool open(int safe_level=SQLITE_OPEN_FULLMUTEX)</div><div class="ttdoc">打开数据库</div><div class="ttdef"><b>Definition</b> helper.hpp:90</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_str_helper_html_a09130ed2c6b196410499a6184c9a36e1"><div class="ttname"><a href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1">XuMQ::StrHelper::split</a></div><div class="ttdeci">static size_t split(const std::string &amp;str, const std::string &amp;sep, std::vector&lt; std::string &gt; &amp;result)</div><div class="ttdoc">将字符串分割为多个子字符串</div><div class="ttdef"><b>Definition</b> helper.hpp:152</div></div>
+<div class="ttc" id="amqqueuetest_8cpp_html_abbd52a50dc838305e32464719ba095c5"><div class="ttname"><a href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a></div><div class="ttdeci">XuMQ::MsgQueueManager::ptr mqp</div><div class="ttdef"><b>Definition</b> mqqueuetest.cpp:4</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> helper.hpp:44</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_ade8f8bc46e29f4519c0cd10e79b0cbbb"><div class="ttname"><a href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">XuMQ::QueueMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, MsgQueue::ptr &gt; QueueMap</div><div class="ttdoc">消息队列映射表 消息队列名称-&gt;消息队列指针</div><div class="ttdef"><b>Definition</b> queue.hpp:72</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html">XuMQ::MsgQueue</a></div><div class="ttdoc">消息队列结构体</div><div class="ttdef"><b>Definition</b> queue.hpp:16</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a0aab5b0ec307ce45776c56192d7ff428"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a0aab5b0ec307ce45776c56192d7ff428">XuMQ::MsgQueue::setArgs</a></div><div class="ttdeci">void setArgs(const std::string &amp;str_args)</div><div class="ttdoc">解析字符串并存储到映射成员中</div><div class="ttdef"><b>Definition</b> queue.hpp:44</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a10174a2dfb8cba0a2b20f7dc36f8c9d8"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a10174a2dfb8cba0a2b20f7dc36f8c9d8">XuMQ::MsgQueue::durable</a></div><div class="ttdeci">bool durable</div><div class="ttdoc">持久化标志</div><div class="ttdef"><b>Definition</b> queue.hpp:19</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a11c5660cc6ccaf1f766f0a0fc714a73f"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">XuMQ::MsgQueue::args</a></div><div class="ttdeci">std::unordered_map&lt; std::string, std::string &gt; args</div><div class="ttdoc">其他参数</div><div class="ttdef"><b>Definition</b> queue.hpp:22</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a1eb86f7a1bf63c66c54614ac7996c787"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">XuMQ::MsgQueue::auto_delete</a></div><div class="ttdeci">bool auto_delete</div><div class="ttdoc">自动删除标志</div><div class="ttdef"><b>Definition</b> queue.hpp:21</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a375d991fc89414224d7db5d139a533dd"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a375d991fc89414224d7db5d139a533dd">XuMQ::MsgQueue::getArgs</a></div><div class="ttdeci">std::string getArgs()</div><div class="ttdoc">将映射成员转化为字符串</div><div class="ttdef"><b>Definition</b> queue.hpp:60</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a3b7e30539232ff0a5a8a68e281f3af06"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">XuMQ::MsgQueue::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; MsgQueue &gt; ptr</div><div class="ttdoc">消息队列指针</div><div class="ttdef"><b>Definition</b> queue.hpp:17</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a5ec98f6a1ee5a0abcb06df8be4671662"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a5ec98f6a1ee5a0abcb06df8be4671662">XuMQ::MsgQueue::MsgQueue</a></div><div class="ttdeci">MsgQueue(const std::string &amp;qname, bool qdurable, bool qexclusive, bool qauto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;qargs)</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> queue.hpp:31</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_a932ad5aa9a12fb97647048f595f64bf3"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3">XuMQ::MsgQueue::exclusive</a></div><div class="ttdeci">bool exclusive</div><div class="ttdoc">独占标志</div><div class="ttdef"><b>Definition</b> queue.hpp:20</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_abf4ef1e180d26f79fc50672365f857b7"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7">XuMQ::MsgQueue::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">消息队列名称</div><div class="ttdef"><b>Definition</b> queue.hpp:18</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_msg_queue_html_ae93fe02f20e3b3c8f18b0ee74df5275d"><div class="ttname"><a href="struct_xu_m_q_1_1_msg_queue.html#ae93fe02f20e3b3c8f18b0ee74df5275d">XuMQ::MsgQueue::MsgQueue</a></div><div class="ttdeci">MsgQueue()</div><div class="ttdoc">无参构造</div><div class="ttdef"><b>Definition</b> queue.hpp:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="queue_8hpp.html">queue.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

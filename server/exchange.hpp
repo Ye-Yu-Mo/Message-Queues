@@ -1,4 +1,11 @@
-
+/**
+ * @file exchange.hpp
+ * @brief 交换机管理模块，定义了交换机的结构、持久化以及内存管理功能
+ *
+ * 该模块定义了交换机的基本结构（Exchange），以及交换机的持久化类（ExchangeMapper）
+ * 和内存管理类（ExchangeManager）。实现了交换机的声明、删除、持久化等操作，并通过SQLite
+ * 数据库实现数据的持久化。
+ */
 #pragma once
 #include "../common/logger.hpp"
 #include "../common/helper.hpp"
@@ -37,7 +44,6 @@ namespace XuMQ
             : name(ename), type(etype), durable(edurable), auto_delete(eauto_delete), args(eargs)
         {
         }
-
         /// @brief 解析字符串并存储到映射成员中
         /// @param str_args 从数据库获取的字符串
         /// @note
@@ -55,7 +61,6 @@ namespace XuMQ
                 args.insert(std::make_pair(key, value));
             }
         }
-
         /// @brief 将映射成员转化为字符串
         /// @return 转化成的字符串
         /// @note
@@ -72,14 +77,12 @@ namespace XuMQ
             return result;
         }
     };
-
+    using ExchangeMap = std::unordered_map<std::string, Exchange::ptr>; ///< 交换机映射表 交换机名称->交换机对象指针
     /// @class ExchangerMapper
     /// @brief 交换机持久化管理类 将数据存储在sqlite数据库中
     class ExchangeMapper
     {
     public:
-        using ExchangeMap = std::unordered_map<std::string, Exchange::ptr>; ///< 交换机映射表
-
         /// @brief 交换机持久化管理类 构造函数
         /// @param dbfile 数据库名称
         /// @note 如果数据库不存在则自动创建
@@ -94,9 +97,9 @@ namespace XuMQ
         /// @brief 创建一张表
         void createTable()
         {
-#define CREATE_TABLE "create table if not exists exchange_table(name varchar(32) primary key,\
+            const char *CREATE_TABLE = "create table if not exists exchange_table(name varchar(32) primary key,\
             type tinyint, durable tinyint,\
-            auto_delete tinyint, args varchar(128));"
+            auto_delete tinyint, args varchar(128));";
             bool ret = _sql_helper.exec(CREATE_TABLE, nullptr, nullptr);
             if (ret == false)
             {
@@ -107,7 +110,7 @@ namespace XuMQ
         /// @brief 移除一张表
         void removeTable()
         {
-#define DROP_TABLE "drop table if exists exchange_table;"
+            const char *DROP_TABLE = "drop table if exists exchange_table;";
             bool ret = _sql_helper.exec(DROP_TABLE, nullptr, nullptr);
             if (ret == false)
             {
@@ -118,34 +121,44 @@ namespace XuMQ
         /// @brief 新增一个交换机
         /// @param exchange 交换机对象指针
         /// @see Exchange::ptr
-        void insert(Exchange::ptr &exchange)
+        /// @return 插入成功返回true 插入失败输出日志并返回false
+        bool insert(Exchange::ptr &exchange)
         {
-#define INSERT_SQL "insert into exchange_table values('%s', %d, %d, %d, '%s');"
+            const char *INSERT_SQL = "insert into exchange_table values('%s', %d, %d, %d, '%s');";
             char sql_str[4096] = {0};
             sprintf(sql_str, INSERT_SQL, exchange->name.c_str(), exchange->type, exchange->durable,
                     exchange->auto_delete, exchange->getArgs().c_str());
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
+            {
                 error(logger, "插入数据失败!");
+                return false;
+            }
+            return true;
         }
         /// @brief 移除一个交换机
         /// @param name 交换机名称
-        void remove(const std::string &name)
+        /// @return 删除成功返回true 删除失败输出日志并返回false
+        bool remove(const std::string &name)
         {
-#define DELETE_SQL "delete from exchange_table where name = '%s';"
+            const char *DELETE_SQL = "delete from exchange_table where name = '%s';";
             char sql_str[4096] = {0};
             sprintf(sql_str, DELETE_SQL, name.c_str());
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
+            {
                 error(logger, "删除数据失败!");
+                return false;
+            }
+            return true;
         }
         /// @brief 获取所有交换机 从数据库加载到内存
         /// @return 一张映射表 交换机名称->交换机对象指针
-        /// @see Exchange::ptr
+        /// @see Exchange::ptr ExchangeManager
         ExchangeMap recovery()
         {
             ExchangeMap result;
-#define SELECT_SQL "select * from exchange_table;"
+            const char *SELECT_SQL = "select * from exchange_table;";
             _sql_helper.exec(SELECT_SQL, selectCallback, &result);
             return result;
         }
@@ -174,15 +187,13 @@ namespace XuMQ
     private:
         SqliteHelper _sql_helper; ///< 数据库操作对象
     };
-
     /// @class ExchangeManager
     /// @brief 交换机数据内存管理类
     class ExchangeManager
     {
     public:
-        using ExchangeMap = std::unordered_map<std::string, Exchange::ptr>; ///< 交换机映射表
-        using ptr = std::shared_ptr<ExchangeManager>;                       ///< 交换机数据内存管理指针
-        /// @brief 交换机数据内存管理类 构造函数
+        using ptr = std::shared_ptr<ExchangeManager>; ///< 交换机数据内存管理指针
+        /// @brief 交换机数据内存管理类 构造函数 从数据库中恢复数据
         /// @param dbfile 数据库名称
         ExchangeManager(const std::string &dbfile)
             : _mapper(dbfile)
@@ -195,7 +206,8 @@ namespace XuMQ
         /// @param durable 数据持久化标志
         /// @param auto_delete 自动删除标志
         /// @param args 其他参数
-        void declareExchange(const std::string &name,
+        /// @return 声明成功返回true 失败返回false
+        bool declareExchange(const std::string &name,
                              ExchangeType type,
                              bool durable,
                              bool auto_delete,
@@ -204,11 +216,16 @@ namespace XuMQ
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _exchanges.find(name);
             if (it != _exchanges.end())
-                return;
+                return true;
             auto exp = std::make_shared<Exchange>(name, type, durable, auto_delete, args);
             if (durable)
-                _mapper.insert(exp);
+            {
+                bool ret = _mapper.insert(exp);
+                if (ret == false)
+                    return false;
+            }
             _exchanges.insert(std::make_pair(name, exp));
+            return true;
         }
         /// @brief 删除交换机
         /// @param name 交换机名称

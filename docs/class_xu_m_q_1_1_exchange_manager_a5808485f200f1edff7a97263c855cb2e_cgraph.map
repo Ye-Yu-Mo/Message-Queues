@@ -1,0 +1,7 @@
+<map id="XuMQ::ExchangeManager::declareExchange" name="XuMQ::ExchangeManager::declareExchange">
+<area shape="rect" id="Node000001" title="声明交换机" alt="" coords="5,5,195,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#ab572b6e512d9e382e3143b1b04de4417" title="新增一个交换机" alt="" coords="243,5,424,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,23,229,23,229,28,195,28"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="472,5,621,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="424,23,458,23,458,28,424,28"/>
+</map>

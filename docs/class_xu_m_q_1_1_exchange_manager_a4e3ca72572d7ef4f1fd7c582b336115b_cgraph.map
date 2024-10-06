@@ -1,5 +1,5 @@
 <map id="XuMQ::ExchangeManager::ExchangeManager" name="XuMQ::ExchangeManager::ExchangeManager">
-<area shape="rect" id="Node000001" title="交换机数据内存管理类 构造函数" alt="" coords="5,37,195,77"/>
+<area shape="rect" id="Node000001" title="交换机数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,37,195,77"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff" title="获取所有交换机 从数据库加载到内存" alt="" coords="243,37,424,77"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,55,229,55,229,60,195,60"/>
 <area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="488,5,637,45"/>

@@ -4,6 +4,10 @@ var hierarchy =
     [ "XuMQ::Message::_Internal", "class_xu_m_q_1_1_message_1_1___internal.html", null ],
     [ "XuMQ::Message_Payload::_Internal", "class_xu_m_q_1_1_message___payload_1_1___internal.html", null ],
     [ "XuMQ::BasicPropertiesDefaultTypeInternal", "struct_xu_m_q_1_1_basic_properties_default_type_internal.html", null ],
+    [ "testing::Environment", null, [
+      [ "ExchangeTest", "class_exchange_test.html", null ],
+      [ "QueueTest", "class_queue_test.html", null ]
+    ] ],
     [ "XuMQ::Exchange", "struct_xu_m_q_1_1_exchange.html", null ],
     [ "XuMQ::ExchangeManager", "class_xu_m_q_1_1_exchange_manager.html", null ],
     [ "XuMQ::ExchangeMapper", "class_xu_m_q_1_1_exchange_mapper.html", null ],
@@ -20,6 +24,9 @@ var hierarchy =
     ] ],
     [ "XuMQ::Message_PayloadDefaultTypeInternal", "struct_xu_m_q_1_1_message___payload_default_type_internal.html", null ],
     [ "XuMQ::MessageDefaultTypeInternal", "struct_xu_m_q_1_1_message_default_type_internal.html", null ],
+    [ "XuMQ::MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", null ],
+    [ "XuMQ::MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", null ],
+    [ "XuMQ::MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", null ],
     [ "XuMQ::SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", null ],
     [ "XuMQ::StrHelper", "class_xu_m_q_1_1_str_helper.html", null ],
     [ "TableStruct_msg_2eproto", "struct_table_struct__msg__2eproto.html", null ],

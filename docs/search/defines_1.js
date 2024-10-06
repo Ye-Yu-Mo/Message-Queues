@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['delete_5fsql_0',['DELETE_SQL',['../exchange_8hpp.html#a84ab34300d719abd3bd1e820384415e3',1,'exchange.hpp']]],
-  ['drop_5ftable_1',['DROP_TABLE',['../exchange_8hpp.html#a89b2b1c320bae703ff85d227fd622bbb',1,'exchange.hpp']]]
+  ['protobuf_5finternal_5fexport_5fmsg_5f2eproto_0',['PROTOBUF_INTERNAL_EXPORT_msg_2eproto',['../msg_8pb_8h.html#a2b4922f6589b42c1a644e8b00341284b',1,'msg.pb.h']]]
 ];

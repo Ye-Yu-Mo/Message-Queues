@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
 <a href="#enum-members">枚举</a> &#124;
 <a href="#func-members">函数</a> &#124;
 <a href="#var-members">变量</a>  </div>
@@ -133,6 +134,15 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_message_default_type_internal.html">MessageDefaultTypeInternal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_msg_queue.html">MsgQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体  <a href="struct_xu_m_q_1_1_msg_queue.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html">MsgQueueManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列数据内存管理类  <a href="class_xu_m_q_1_1_msg_queue_manager.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列持久化管理类 将数据存储在sqlite数据库中  <a href="class_xu_m_q_1_1_msg_queue_mapper.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SQLite 数据库操作助手类  <a href="class_xu_m_q_1_1_sqlite_helper.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +152,15 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_u_u_i_d_helper.html">UUIDHelper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">提供生成 UUID 的工具类。  <a href="class_xu_m_q_1_1_u_u_i_d_helper.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a2c80cb23e6fa300bd31a9226e982be18" id="r_a2c80cb23e6fa300bd31a9226e982be18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
+<tr class="memdesc:a2c80cb23e6fa300bd31a9226e982be18"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表 交换机名称-&gt;交换机对象指针  <br /></td></tr>
+<tr class="separator:a2c80cb23e6fa300bd31a9226e982be18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8f8bc46e29f4519c0cd10e79b0cbbb" id="r_ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> &gt;</td></tr>
+<tr class="memdesc:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列映射表 消息队列名称-&gt;消息队列指针  <br /></td></tr>
+<tr class="separator:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 枚举</h2></td></tr>
@@ -215,6 +234,39 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:af91e7f144cf9ee19df8185bd66af20ad" id="r_af91e7f144cf9ee19df8185bd66af20ad"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#af91e7f144cf9ee19df8185bd66af20ad">DeliveryMode_ARRAYSIZE</a> = <a class="el" href="namespace_xu_m_q.html#a41a68167fd12001c392dfb64ba06cd62">DeliveryMode_MAX</a> + 1</td></tr>
 <tr class="separator:af91e7f144cf9ee19df8185bd66af20ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="a2c80cb23e6fa300bd31a9226e982be18" name="a2c80cb23e6fa300bd31a9226e982be18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c80cb23e6fa300bd31a9226e982be18">&#9670;&#160;</a></span>ExchangeMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">XuMQ::ExchangeMap</a> = typedef std::unordered_map&lt;std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>交换机映射表 交换机名称-&gt;交换机对象指针 </p>
+
+</div>
+</div>
+<a id="ade8f8bc46e29f4519c0cd10e79b0cbbb" name="ade8f8bc46e29f4519c0cd10e79b0cbbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8f8bc46e29f4519c0cd10e79b0cbbb">&#9670;&#160;</a></span>QueueMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">XuMQ::QueueMap</a> = typedef std::unordered_map&lt;std::string, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息队列映射表 消息队列名称-&gt;消息队列指针 </p>
+
+</div>
+</div>
 <h2 class="groupheader">枚举类型说明</h2>
 <a id="a0f608e8c800bb6737ae004b82a037614" name="a0f608e8c800bb6737ae004b82a037614"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0f608e8c800bb6737ae004b82a037614">&#9670;&#160;</a></span>DeliveryMode</h2>

@@ -1,0 +1,5 @@
+<map id="XuMQ::MsgQueueMapper::remove" name="XuMQ::MsgQueueMapper::remove">
+<area shape="rect" id="Node000001" title="移除一个消息队列" alt="" coords="248,5,435,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1" title="删除消息队列" alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,28,200,28,200,23,234,23"/>
+</map>

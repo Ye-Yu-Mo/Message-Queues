@@ -1,5 +1,7 @@
 <map id="XuMQ::SqliteHelper::open" name="XuMQ::SqliteHelper::open">
-<area shape="rect" id="Node000001" title="打开数据库" alt="" coords="235,5,384,45"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="5,5,187,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,28,187,28,187,23,221,23"/>
+<area shape="rect" id="Node000001" title="打开数据库" alt="" coords="240,37,389,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="8,5,189,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,47,189,41,190,36,227,42"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094" title="消息队列持久化管理类 构造函数" alt="" coords="5,69,192,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,73,192,78,192,73,226,68"/>
 </map>

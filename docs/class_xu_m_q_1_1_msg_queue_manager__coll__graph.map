@@ -1,0 +1,7 @@
+<map id="XuMQ::MsgQueueManager" name="XuMQ::MsgQueueManager">
+<area shape="rect" id="Node000001" title="消息队列数据内存管理类" alt="" coords="5,181,200,207"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_mapper.html" title="消息队列持久化管理类 将数据存储在sqlite数据库中" alt="" coords="9,93,196,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,133,105,181,100,181,100,133"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="28,5,177,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,45,105,93,100,93,100,45"/>
+</map>

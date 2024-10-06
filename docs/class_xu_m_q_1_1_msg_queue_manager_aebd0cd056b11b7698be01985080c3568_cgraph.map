@@ -1,0 +1,9 @@
+<map id="XuMQ::MsgQueueManager::MsgQueueManager" name="XuMQ::MsgQueueManager::MsgQueueManager">
+<area shape="rect" id="Node000001" title="消息队列数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,37,200,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb" title="获取所有消息队列 从数据库加载到内存" alt="" coords="248,37,435,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,55,234,55,234,60,200,60"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="501,5,651,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="434,42,487,35,488,40,435,47"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="483,69,669,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="435,67,469,72,469,77,434,73"/>
+</map>

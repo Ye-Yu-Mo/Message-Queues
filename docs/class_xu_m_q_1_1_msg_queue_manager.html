@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::MsgQueueManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_msg_queue_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_msg_queue_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::MsgQueueManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>消息队列数据内存管理类  
+ <a href="class_xu_m_q_1_1_msg_queue_manager.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="queue_8hpp_source.html">queue.hpp</a>&gt;</code></p>
+<div class="dynheader">
+XuMQ::MsgQueueManager 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_msg_queue_manager__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1_msg_queue_manager_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1_msg_queue_manager_coll__map" id="a_xu_m_q_1_1_msg_queue_manager_coll__map">
+<area shape="rect" title="消息队列数据内存管理类" alt="" coords="5,181,200,207"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html" title="消息队列持久化管理类 将数据存储在sqlite数据库中" alt="" coords="9,93,196,119"/>
+<area shape="poly" title=" " alt="" coords="105,133,105,181,100,181,100,133"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="28,5,177,31"/>
+<area shape="poly" title=" " alt="" coords="105,45,105,93,100,93,100,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a461c7f6d1a110d8bcfdbfbbaf02d79c6" id="r_a461c7f6d1a110d8bcfdbfbbaf02d79c6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html">MsgQueueManager</a> &gt;</td></tr>
+<tr class="memdesc:a461c7f6d1a110d8bcfdbfbbaf02d79c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列数据内存管理指针  <br /></td></tr>
+<tr class="separator:a461c7f6d1a110d8bcfdbfbbaf02d79c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aebd0cd056b11b7698be01985080c3568" id="r_aebd0cd056b11b7698be01985080c3568"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#aebd0cd056b11b7698be01985080c3568">MsgQueueManager</a> (const std::string &amp;dbfile)</td></tr>
+<tr class="memdesc:aebd0cd056b11b7698be01985080c3568"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列数据内存管理类 构造函数 从数据库中恢复数据  <br /></td></tr>
+<tr class="separator:aebd0cd056b11b7698be01985080c3568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5f37ee8190b1bee6b8ecb844663fc4" id="r_a0c5f37ee8190b1bee6b8ecb844663fc4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#a0c5f37ee8190b1bee6b8ecb844663fc4">declareQueue</a> (const std::string &amp;qname, bool qdurable, bool qexclusive, bool qauto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;qargs)</td></tr>
+<tr class="memdesc:a0c5f37ee8190b1bee6b8ecb844663fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明消息队列  <br /></td></tr>
+<tr class="separator:a0c5f37ee8190b1bee6b8ecb844663fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa992390752f2c157de6e0d1b87b79e1" id="r_afa992390752f2c157de6e0d1b87b79e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1">deleteQueue</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:afa992390752f2c157de6e0d1b87b79e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除消息队列  <br /></td></tr>
+<tr class="separator:afa992390752f2c157de6e0d1b87b79e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c21f8cc07dc211e7a6b3ed429770c86" id="r_a8c21f8cc07dc211e7a6b3ed429770c86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#a8c21f8cc07dc211e7a6b3ed429770c86">selectQueue</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a8c21f8cc07dc211e7a6b3ed429770c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定消息队列  <br /></td></tr>
+<tr class="separator:a8c21f8cc07dc211e7a6b3ed429770c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac85cb1637471f4c11ab652736d810cec" id="r_ac85cb1637471f4c11ab652736d810cec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec">allQueue</a> ()</td></tr>
+<tr class="memdesc:ac85cb1637471f4c11ab652736d810cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有队列  <br /></td></tr>
+<tr class="separator:ac85cb1637471f4c11ab652736d810cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadd1e61acda763b386131fda7f14a96d" id="r_aadd1e61acda763b386131fda7f14a96d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#aadd1e61acda763b386131fda7f14a96d">exists</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:aadd1e61acda763b386131fda7f14a96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断消息队列是否存在  <br /></td></tr>
+<tr class="separator:aadd1e61acda763b386131fda7f14a96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae67fa86d40b98ad8eb72c3b761008ccf" id="r_ae67fa86d40b98ad8eb72c3b761008ccf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ae67fa86d40b98ad8eb72c3b761008ccf">size</a> ()</td></tr>
+<tr class="memdesc:ae67fa86d40b98ad8eb72c3b761008ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取消息队列数量  <br /></td></tr>
+<tr class="separator:ae67fa86d40b98ad8eb72c3b761008ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84de673463df8e2d2fd70003e718934d" id="r_a84de673463df8e2d2fd70003e718934d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d">clear</a> ()</td></tr>
+<tr class="memdesc:a84de673463df8e2d2fd70003e718934d"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除消息队列  <br /></td></tr>
+<tr class="separator:a84de673463df8e2d2fd70003e718934d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ad512849d260b95474d9ef4a9621a6ef5" id="r_ad512849d260b95474d9ef4a9621a6ef5"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">_mutex</a></td></tr>
+<tr class="memdesc:ad512849d260b95474d9ef4a9621a6ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
+<tr class="separator:ad512849d260b95474d9ef4a9621a6ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7449a94eb2cf7f7bbb8edf309a52947" id="r_ac7449a94eb2cf7f7bbb8edf309a52947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">_mapper</a></td></tr>
+<tr class="memdesc:ac7449a94eb2cf7f7bbb8edf309a52947"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久化消息队列管理类  <br /></td></tr>
+<tr class="separator:ac7449a94eb2cf7f7bbb8edf309a52947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90480dc7ff8fb669feda8e290d2aefe" id="r_ac90480dc7ff8fb669feda8e290d2aefe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">_queues</a></td></tr>
+<tr class="memdesc:ac90480dc7ff8fb669feda8e290d2aefe"><td class="mdescLeft">&#160;</td><td class="mdescRight">全部消息队列信息  <br /></td></tr>
+<tr class="separator:ac90480dc7ff8fb669feda8e290d2aefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>消息队列数据内存管理类 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a461c7f6d1a110d8bcfdbfbbaf02d79c6" name="a461c7f6d1a110d8bcfdbfbbaf02d79c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461c7f6d1a110d8bcfdbfbbaf02d79c6">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6">XuMQ::MsgQueueManager::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html">MsgQueueManager</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息队列数据内存管理指针 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aebd0cd056b11b7698be01985080c3568" name="aebd0cd056b11b7698be01985080c3568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebd0cd056b11b7698be01985080c3568">&#9670;&#160;</a></span>MsgQueueManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::MsgQueueManager::MsgQueueManager </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dbfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>消息队列数据内存管理类 构造函数 从数据库中恢复数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbfile</td><td>数据库名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_msg_queue_manager_aebd0cd056b11b7698be01985080c3568_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_msg_queue_manager_aebd0cd056b11b7698be01985080c3568_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_msg_queue_manager_aebd0cd056b11b7698be01985080c3568_cgraph" id="aclass_xu_m_q_1_1_msg_queue_manager_aebd0cd056b11b7698be01985080c3568_cgraph">
+<area shape="rect" title="消息队列数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,37,200,77"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html#adea925a891462d23b84df8803b178cdb" title="获取所有消息队列 从数据库加载到内存" alt="" coords="248,37,435,77"/>
+<area shape="poly" title=" " alt="" coords="200,55,234,55,234,60,200,60"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="501,5,651,45"/>
+<area shape="poly" title=" " alt="" coords="434,42,487,35,488,40,435,47"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html#a393fd804e2b90b122ed207ae95542dc8" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="483,69,669,109"/>
+<area shape="poly" title=" " alt="" coords="435,67,469,72,469,77,434,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac85cb1637471f4c11ab652736d810cec" name="ac85cb1637471f4c11ab652736d810cec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac85cb1637471f4c11ab652736d810cec">&#9670;&#160;</a></span>allQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> &amp; XuMQ::MsgQueueManager::allQueue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取所有队列 </p>
+<dl class="section return"><dt>返回</dt><dd>消息队列映射表 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb" title="消息队列映射表 消息队列名称-&gt;消息队列指针">QueueMap</a> </dd></dl>
+
+</div>
+</div>
+<a id="a84de673463df8e2d2fd70003e718934d" name="a84de673463df8e2d2fd70003e718934d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84de673463df8e2d2fd70003e718934d">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::MsgQueueManager::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清除消息队列 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_msg_queue_manager_a84de673463df8e2d2fd70003e718934d_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_msg_queue_manager_a84de673463df8e2d2fd70003e718934d_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_msg_queue_manager_a84de673463df8e2d2fd70003e718934d_cgraph" id="aclass_xu_m_q_1_1_msg_queue_manager_a84de673463df8e2d2fd70003e718934d_cgraph">
+<area shape="rect" title="清除消息队列" alt="" coords="5,5,200,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html#a06a80a962586277aafe05d00a575c170" title="移除一张表" alt="" coords="248,5,435,45"/>
+<area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="483,5,632,45"/>
+<area shape="poly" title=" " alt="" coords="435,23,469,23,469,28,435,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0c5f37ee8190b1bee6b8ecb844663fc4" name="a0c5f37ee8190b1bee6b8ecb844663fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5f37ee8190b1bee6b8ecb844663fc4">&#9670;&#160;</a></span>declareQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MsgQueueManager::declareQueue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>qdurable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>qexclusive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>qauto_delete</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unordered_map&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>qargs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>声明消息队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qname</td><td>消息队列名称 </td></tr>
+    <tr><td class="paramname">qdurable</td><td>数据持久化标志 </td></tr>
+    <tr><td class="paramname">qexclusive</td><td>独占标志 </td></tr>
+    <tr><td class="paramname">qauto_delete</td><td>自动删除标志 </td></tr>
+    <tr><td class="paramname">qargs</td><td>其他参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>声明成功返回true </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_msg_queue_manager_a0c5f37ee8190b1bee6b8ecb844663fc4_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_msg_queue_manager_a0c5f37ee8190b1bee6b8ecb844663fc4_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_msg_queue_manager_a0c5f37ee8190b1bee6b8ecb844663fc4_cgraph" id="aclass_xu_m_q_1_1_msg_queue_manager_a0c5f37ee8190b1bee6b8ecb844663fc4_cgraph">
+<area shape="rect" title="声明消息队列" alt="" coords="5,5,200,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html#a794a7c685feb7e857f9008745595475a" title="新增一个消息队列" alt="" coords="248,5,435,45"/>
+<area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="483,5,632,45"/>
+<area shape="poly" title=" " alt="" coords="435,23,469,23,469,28,435,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa992390752f2c157de6e0d1b87b79e1" name="afa992390752f2c157de6e0d1b87b79e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa992390752f2c157de6e0d1b87b79e1">&#9670;&#160;</a></span>deleteQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::MsgQueueManager::deleteQueue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除消息队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>消息队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_msg_queue_manager_afa992390752f2c157de6e0d1b87b79e1_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_msg_queue_manager_afa992390752f2c157de6e0d1b87b79e1_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_msg_queue_manager_afa992390752f2c157de6e0d1b87b79e1_cgraph" id="aclass_xu_m_q_1_1_msg_queue_manager_afa992390752f2c157de6e0d1b87b79e1_cgraph">
+<area shape="rect" title="删除消息队列" alt="" coords="5,5,200,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_msg_queue_mapper.html#a9a5c5bf798cab6ca30d9a8a734221b66" title="移除一个消息队列" alt="" coords="248,5,435,45"/>
+<area shape="poly" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="483,5,632,45"/>
+<area shape="poly" title=" " alt="" coords="435,23,469,23,469,28,435,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aadd1e61acda763b386131fda7f14a96d" name="aadd1e61acda763b386131fda7f14a96d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadd1e61acda763b386131fda7f14a96d">&#9670;&#160;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MsgQueueManager::exists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断消息队列是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>消息队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>存在则返回true 不存在返回false </dd></dl>
+
+</div>
+</div>
+<a id="a8c21f8cc07dc211e7a6b3ed429770c86" name="a8c21f8cc07dc211e7a6b3ed429770c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c21f8cc07dc211e7a6b3ed429770c86">&#9670;&#160;</a></span>selectQueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> XuMQ::MsgQueueManager::selectQueue </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定消息队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>消息队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消息队列对象指针 </dd></dl>
+
+</div>
+</div>
+<a id="ae67fa86d40b98ad8eb72c3b761008ccf" name="ae67fa86d40b98ad8eb72c3b761008ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae67fa86d40b98ad8eb72c3b761008ccf">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::MsgQueueManager::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取消息队列数量 </p>
+<dl class="section return"><dt>返回</dt><dd>消息队列数量 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac7449a94eb2cf7f7bbb8edf309a52947" name="ac7449a94eb2cf7f7bbb8edf309a52947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7449a94eb2cf7f7bbb8edf309a52947">&#9670;&#160;</a></span>_mapper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a> XuMQ::MsgQueueManager::_mapper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>持久化消息队列管理类 </p>
+
+</div>
+</div>
+<a id="ad512849d260b95474d9ef4a9621a6ef5" name="ad512849d260b95474d9ef4a9621a6ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad512849d260b95474d9ef4a9621a6ef5">&#9670;&#160;</a></span>_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex XuMQ::MsgQueueManager::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>互斥锁 </p>
+
+</div>
+</div>
+<a id="ac90480dc7ff8fb669feda8e290d2aefe" name="ac90480dc7ff8fb669feda8e290d2aefe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90480dc7ff8fb669feda8e290d2aefe">&#9670;&#160;</a></span>_queues</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> XuMQ::MsgQueueManager::_queues</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全部消息队列信息 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html">MsgQueueManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

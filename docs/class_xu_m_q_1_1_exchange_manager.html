@@ -124,9 +124,6 @@ XuMQ::ExchangeManager 的协作图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
-<tr class="memitem:a1a1e3417f01da5a89de8897d5a1721f8" id="r_a1a1e3417f01da5a89de8897d5a1721f8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
-<tr class="memdesc:a1a1e3417f01da5a89de8897d5a1721f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表  <br /></td></tr>
-<tr class="separator:a1a1e3417f01da5a89de8897d5a1721f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7335bc08ad536ef5969a8efe0155fb17" id="r_a7335bc08ad536ef5969a8efe0155fb17"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a7335bc08ad536ef5969a8efe0155fb17">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_exchange_manager.html">ExchangeManager</a> &gt;</td></tr>
 <tr class="memdesc:a7335bc08ad536ef5969a8efe0155fb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机数据内存管理指针  <br /></td></tr>
 <tr class="separator:a7335bc08ad536ef5969a8efe0155fb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,11 +131,11 @@ Public 类型</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:a4e3ca72572d7ef4f1fd7c582b336115b" id="r_a4e3ca72572d7ef4f1fd7c582b336115b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a4e3ca72572d7ef4f1fd7c582b336115b">ExchangeManager</a> (const std::string &amp;dbfile)</td></tr>
-<tr class="memdesc:a4e3ca72572d7ef4f1fd7c582b336115b"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机数据内存管理类 构造函数  <br /></td></tr>
+<tr class="memdesc:a4e3ca72572d7ef4f1fd7c582b336115b"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机数据内存管理类 构造函数 从数据库中恢复数据  <br /></td></tr>
 <tr class="separator:a4e3ca72572d7ef4f1fd7c582b336115b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09768797e5456f6c3882cc6a150d8084" id="r_a09768797e5456f6c3882cc6a150d8084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a09768797e5456f6c3882cc6a150d8084">declareExchange</a> (const std::string &amp;name, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> type, bool durable, bool auto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;args)</td></tr>
-<tr class="memdesc:a09768797e5456f6c3882cc6a150d8084"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明交换机  <br /></td></tr>
-<tr class="separator:a09768797e5456f6c3882cc6a150d8084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5808485f200f1edff7a97263c855cb2e" id="r_a5808485f200f1edff7a97263c855cb2e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a5808485f200f1edff7a97263c855cb2e">declareExchange</a> (const std::string &amp;name, <a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> type, bool durable, bool auto_delete, std::unordered_map&lt; std::string, std::string &gt; &amp;args)</td></tr>
+<tr class="memdesc:a5808485f200f1edff7a97263c855cb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">声明交换机  <br /></td></tr>
+<tr class="separator:a5808485f200f1edff7a97263c855cb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60370a38087d700d71ecd7479f66a129" id="r_a60370a38087d700d71ecd7479f66a129"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129">deleteExchange</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:a60370a38087d700d71ecd7479f66a129"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除交换机  <br /></td></tr>
 <tr class="separator:a60370a38087d700d71ecd7479f66a129"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,29 +160,13 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a036296f317be2e5eebe5a2dd87ea45dc" id="r_a036296f317be2e5eebe5a2dd87ea45dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_exchange_mapper.html">ExchangeMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">_mapper</a></td></tr>
 <tr class="memdesc:a036296f317be2e5eebe5a2dd87ea45dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久化交换机管理类  <br /></td></tr>
 <tr class="separator:a036296f317be2e5eebe5a2dd87ea45dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf821a4bb2bfe70f9637304a2fd1d3fd" id="r_acf821a4bb2bfe70f9637304a2fd1d3fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">ExchangeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a></td></tr>
+<tr class="memitem:acf821a4bb2bfe70f9637304a2fd1d3fd" id="r_acf821a4bb2bfe70f9637304a2fd1d3fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#acf821a4bb2bfe70f9637304a2fd1d3fd">_exchanges</a></td></tr>
 <tr class="memdesc:acf821a4bb2bfe70f9637304a2fd1d3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">全部交换机信息  <br /></td></tr>
 <tr class="separator:acf821a4bb2bfe70f9637304a2fd1d3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>交换机数据内存管理类 </p>
 </div><h2 class="groupheader">成员类型定义说明</h2>
-<a id="a1a1e3417f01da5a89de8897d5a1721f8" name="a1a1e3417f01da5a89de8897d5a1721f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a1e3417f01da5a89de8897d5a1721f8">&#9670;&#160;</a></span>ExchangeMap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">XuMQ::ExchangeManager::ExchangeMap</a> =  std::unordered_map&lt;std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>交换机映射表 </p>
-
-</div>
-</div>
 <a id="a7335bc08ad536ef5969a8efe0155fb17" name="a7335bc08ad536ef5969a8efe0155fb17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7335bc08ad536ef5969a8efe0155fb17">&#9670;&#160;</a></span>ptr</h2>
 
@@ -227,7 +208,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>交换机数据内存管理类 构造函数 </p>
+<p>交换机数据内存管理类 构造函数 从数据库中恢复数据 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">dbfile</td><td>数据库名称 </td></tr>
@@ -239,7 +220,7 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_exchange_manager_a4e3ca72572d7ef4f1fd7c582b336115b_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_exchange_manager_a4e3ca72572d7ef4f1fd7c582b336115b_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_exchange_manager_a4e3ca72572d7ef4f1fd7c582b336115b_cgraph" id="aclass_xu_m_q_1_1_exchange_manager_a4e3ca72572d7ef4f1fd7c582b336115b_cgraph">
-<area shape="rect" title="交换机数据内存管理类 构造函数" alt="" coords="5,37,195,77"/>
+<area shape="rect" title="交换机数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,37,195,77"/>
 <area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff" title="获取所有交换机 从数据库加载到内存" alt="" coords="243,37,424,77"/>
 <area shape="poly" title=" " alt="" coords="195,55,229,55,229,60,195,60"/>
 <area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="488,5,637,45"/>
@@ -291,8 +272,8 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a09768797e5456f6c3882cc6a150d8084" name="a09768797e5456f6c3882cc6a150d8084"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09768797e5456f6c3882cc6a150d8084">&#9670;&#160;</a></span>declareExchange()</h2>
+<a id="a5808485f200f1edff7a97263c855cb2e" name="a5808485f200f1edff7a97263c855cb2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5808485f200f1edff7a97263c855cb2e">&#9670;&#160;</a></span>declareExchange()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +282,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void XuMQ::ExchangeManager::declareExchange </td>
+          <td class="memname">bool XuMQ::ExchangeManager::declareExchange </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -354,13 +335,14 @@ Private 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>返回</dt><dd>声明成功返回true 失败返回false </dd></dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_xu_m_q_1_1_exchange_manager_a09768797e5456f6c3882cc6a150d8084_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_exchange_manager_a09768797e5456f6c3882cc6a150d8084_cgraph" alt=""/></div>
-<map name="aclass_xu_m_q_1_1_exchange_manager_a09768797e5456f6c3882cc6a150d8084_cgraph" id="aclass_xu_m_q_1_1_exchange_manager_a09768797e5456f6c3882cc6a150d8084_cgraph">
+<div class="center"><img src="class_xu_m_q_1_1_exchange_manager_a5808485f200f1edff7a97263c855cb2e_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_exchange_manager_a5808485f200f1edff7a97263c855cb2e_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_exchange_manager_a5808485f200f1edff7a97263c855cb2e_cgraph" id="aclass_xu_m_q_1_1_exchange_manager_a5808485f200f1edff7a97263c855cb2e_cgraph">
 <area shape="rect" title="声明交换机" alt="" coords="5,5,195,45"/>
-<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#ab1447b28ed7887890aa9421803bf8fdc" title="新增一个交换机" alt="" coords="243,5,424,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#ab572b6e512d9e382e3143b1b04de4417" title="新增一个交换机" alt="" coords="243,5,424,45"/>
 <area shape="poly" title=" " alt="" coords="195,23,229,23,229,28,195,28"/>
 <area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="472,5,621,45"/>
 <area shape="poly" title=" " alt="" coords="424,23,458,23,458,28,424,28"/>
@@ -406,7 +388,7 @@ Private 属性</h2></td></tr>
 <div class="center"><img src="class_xu_m_q_1_1_exchange_manager_a60370a38087d700d71ecd7479f66a129_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_exchange_manager_a60370a38087d700d71ecd7479f66a129_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_exchange_manager_a60370a38087d700d71ecd7479f66a129_cgraph" id="aclass_xu_m_q_1_1_exchange_manager_a60370a38087d700d71ecd7479f66a129_cgraph">
 <area shape="rect" title="删除交换机" alt="" coords="5,5,195,45"/>
-<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#a02b9ecf2252ffb135449127fe31f053e" title="移除一个交换机" alt="" coords="243,5,424,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_exchange_mapper.html#aac794f0197ef805cfbdff1cd5d6f19f8" title="移除一个交换机" alt="" coords="243,5,424,45"/>
 <area shape="poly" title=" " alt="" coords="195,23,229,23,229,28,195,28"/>
 <area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="472,5,621,45"/>
 <area shape="poly" title=" " alt="" coords="424,23,458,23,458,28,424,28"/>
@@ -524,7 +506,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a1a1e3417f01da5a89de8897d5a1721f8">ExchangeMap</a> XuMQ::ExchangeManager::_exchanges</td>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a> XuMQ::ExchangeManager::_exchanges</td>
         </tr>
       </table>
   </td>

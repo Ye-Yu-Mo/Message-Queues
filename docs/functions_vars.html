@@ -107,15 +107,16 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>_handler&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a35e6fce01c14c6e9ec8a550e736d236a">XuMQ::SqliteHelper</a></li>
 <li>_impl_&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_basic_properties.html#aff7ae08ad715ed7929a1a6571648037f">XuMQ::BasicProperties</a>, <a class="el" href="class_xu_m_q_1_1_message.html#a17c5abf824d697961084f209b02072c2">XuMQ::Message</a>, <a class="el" href="class_xu_m_q_1_1_message___payload.html#a27b3a99df47cdafebe393d505d98f0f9">XuMQ::Message_Payload</a></li>
 <li>_instance&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_basic_properties_default_type_internal.html#ac365786ef978640e548e32cbc4677bf3">XuMQ::BasicPropertiesDefaultTypeInternal</a>, <a class="el" href="struct_xu_m_q_1_1_message___payload_default_type_internal.html#a6fe6ea902a5606d80bb7fec3ac562365">XuMQ::Message_PayloadDefaultTypeInternal</a>, <a class="el" href="struct_xu_m_q_1_1_message_default_type_internal.html#a98940485795b9a1c8cf82fbca8969ac2">XuMQ::MessageDefaultTypeInternal</a></li>
-<li>_mapper&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">XuMQ::ExchangeManager</a></li>
-<li>_mutex&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">XuMQ::ExchangeManager</a></li>
-<li>_sql_helper&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">XuMQ::ExchangeMapper</a></li>
+<li>_mapper&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a036296f317be2e5eebe5a2dd87ea45dc">XuMQ::ExchangeManager</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac7449a94eb2cf7f7bbb8edf309a52947">XuMQ::MsgQueueManager</a></li>
+<li>_mutex&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">XuMQ::ExchangeManager</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">XuMQ::MsgQueueManager</a></li>
+<li>_queues&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">XuMQ::MsgQueueManager</a></li>
+<li>_sql_helper&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">XuMQ::ExchangeMapper</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">XuMQ::MsgQueueMapper</a></li>
 </ul>
 
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>args&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">XuMQ::Exchange</a></li>
-<li>auto_delete&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">XuMQ::Exchange</a></li>
+<li>args&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">XuMQ::MsgQueue</a></li>
+<li>auto_delete&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">XuMQ::MsgQueue</a></li>
 </ul>
 
 
@@ -126,7 +127,12 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>delivery_mode_&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_basic_properties_1_1_impl__.html#abf56fc67e46d4d5a2cd4b6e5887a35c2">XuMQ::BasicProperties::Impl_</a></li>
-<li>durable&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">XuMQ::Exchange</a></li>
+<li>durable&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#ad563d5bc1cb47f97d054f8c09f4cad39">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a10174a2dfb8cba0a2b20f7dc36f8c9d8">XuMQ::MsgQueue</a></li>
+</ul>
+
+
+<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>exclusive&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3">XuMQ::MsgQueue</a></li>
 </ul>
 
 
@@ -146,7 +152,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 
 <h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
-<li>name&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">XuMQ::Exchange</a></li>
+<li>name&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a32ff26f347b31ced61678b0346763c31">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7">XuMQ::MsgQueue</a></li>
 </ul>
 
 

@@ -1,10 +1,12 @@
 <map id="XuMQ::FileHelper::exists" name="XuMQ::FileHelper::exists">
-<area shape="rect" id="Node000001" title="检查文件是否存在" alt="" coords="467,42,649,67"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad" title="创建目录" alt="" coords="235,5,419,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,44,419,40,419,34,453,39"/>
-<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="69,70,123,95"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="453,64,124,84,123,78,453,58"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="5,5,187,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,28,187,28,187,23,221,23"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="233,51,124,79,123,73,232,46"/>
+<area shape="rect" id="Node000001" title="检查文件是否存在" alt="" coords="472,106,655,131"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad" title="创建目录" alt="" coords="240,69,424,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="458,108,424,104,425,98,459,103"/>
+<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="71,134,126,159"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="458,128,126,148,126,142,458,122"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="8,5,189,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="244,68,171,48,173,43,246,63"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="237,115,127,143,125,138,236,110"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094" title="消息队列持久化管理类 构造函数" alt="" coords="5,69,192,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="226,92,192,92,192,87,226,87"/>
 </map>

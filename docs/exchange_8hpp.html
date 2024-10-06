@@ -99,10 +99,13 @@ $(document).ready(function(){initNavTree('exchange_8hpp.html',''); initResizable
   <div class="summary">
 <a href="#nested-classes">类</a> &#124;
 <a href="#namespaces">命名空间</a> &#124;
-<a href="#define-members">宏定义</a>  </div>
+<a href="#typedef-members">类型定义</a>  </div>
   <div class="headertitle"><div class="title">exchange.hpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>交换机管理模块，定义了交换机的结构、持久化以及内存管理功能  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="logger_8hpp_source.html">../common/logger.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="helper_8hpp_source.html">../common/helper.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="msg_8pb_8h_source.html">../common/msg.pb.h</a>&quot;</code><br />
@@ -115,7 +118,7 @@ exchange.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="exchange_8hpp__incl.png" border="0" usemap="#aserver_2exchange_8hpp" alt=""/></div>
 <map name="aserver_2exchange_8hpp" id="aserver_2exchange_8hpp">
-<area shape="rect" title=" " alt="" coords="2623,5,2782,31"/>
+<area shape="rect" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="2623,5,2782,31"/>
 <area shape="rect" href="logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,159,168,185"/>
 <area shape="poly" title=" " alt="" coords="2623,22,2211,25,1605,34,984,52,724,65,528,81,420,97,314,118,143,158,141,153,313,113,420,92,528,76,724,60,984,46,1605,29,2211,20,2623,17"/>
 <area shape="rect" href="helper_8hpp.html" title="工具类封装" alt="" coords="835,79,997,104"/>
@@ -198,7 +201,7 @@ exchange.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="exchange_8hpp__dep__incl.png" border="0" usemap="#aserver_2exchange_8hppdep" alt=""/></div>
 <map name="aserver_2exchange_8hppdep" id="aserver_2exchange_8hppdep">
-<area shape="rect" title=" " alt="" coords="19,5,178,31"/>
+<area shape="rect" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="19,5,178,31"/>
 <area shape="rect" href="mqexchangetest_8cpp.html" title=" " alt="" coords="5,79,192,104"/>
 <area shape="poly" title=" " alt="" coords="101,44,101,79,96,79,96,44"/>
 </map>
@@ -222,91 +225,16 @@ exchange.hpp 的引用(Include)关系图:</div>
 <tr class="memitem:namespace_xu_m_q" id="r_namespace_xu_m_q"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-宏定义</h2></td></tr>
-<tr class="memitem:a6e393e5adf34980c34b99e9850258a2d" id="r_a6e393e5adf34980c34b99e9850258a2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exchange_8hpp.html#a6e393e5adf34980c34b99e9850258a2d">CREATE_TABLE</a>&#160;&#160;&#160;&quot;create table if not exists exchange_table(name varchar(32) primary key,\            type tinyint, durable tinyint,\            auto_delete tinyint, args varchar(128));&quot;</td></tr>
-<tr class="separator:a6e393e5adf34980c34b99e9850258a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89b2b1c320bae703ff85d227fd622bbb" id="r_a89b2b1c320bae703ff85d227fd622bbb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exchange_8hpp.html#a89b2b1c320bae703ff85d227fd622bbb">DROP_TABLE</a>&#160;&#160;&#160;&quot;drop table if exists exchange_table;&quot;</td></tr>
-<tr class="separator:a89b2b1c320bae703ff85d227fd622bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5920e76cdbf6faf457dac6ef960666" id="r_aec5920e76cdbf6faf457dac6ef960666"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exchange_8hpp.html#aec5920e76cdbf6faf457dac6ef960666">INSERT_SQL</a>&#160;&#160;&#160;&quot;insert into exchange_table values('%s', %d, %d, %d, '%s');&quot;</td></tr>
-<tr class="separator:aec5920e76cdbf6faf457dac6ef960666"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84ab34300d719abd3bd1e820384415e3" id="r_a84ab34300d719abd3bd1e820384415e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exchange_8hpp.html#a84ab34300d719abd3bd1e820384415e3">DELETE_SQL</a>&#160;&#160;&#160;&quot;delete from exchange_table where name = '%s';&quot;</td></tr>
-<tr class="separator:a84ab34300d719abd3bd1e820384415e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac151d13213b3632094eb2210ecb6e771" id="r_ac151d13213b3632094eb2210ecb6e771"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="exchange_8hpp.html#ac151d13213b3632094eb2210ecb6e771">SELECT_SQL</a>&#160;&#160;&#160;&quot;select * from exchange_table;&quot;</td></tr>
-<tr class="separator:ac151d13213b3632094eb2210ecb6e771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:a2c80cb23e6fa300bd31a9226e982be18" id="r_a2c80cb23e6fa300bd31a9226e982be18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">XuMQ::ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
+<tr class="memdesc:a2c80cb23e6fa300bd31a9226e982be18"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表 交换机名称-&gt;交换机对象指针  <br /></td></tr>
+<tr class="separator:a2c80cb23e6fa300bd31a9226e982be18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">宏定义说明</h2>
-<a id="a6e393e5adf34980c34b99e9850258a2d" name="a6e393e5adf34980c34b99e9850258a2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e393e5adf34980c34b99e9850258a2d">&#9670;&#160;</a></span>CREATE_TABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CREATE_TABLE&#160;&#160;&#160;&quot;create table if not exists exchange_table(name varchar(32) primary key,\            type tinyint, durable tinyint,\            auto_delete tinyint, args varchar(128));&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a84ab34300d719abd3bd1e820384415e3" name="a84ab34300d719abd3bd1e820384415e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84ab34300d719abd3bd1e820384415e3">&#9670;&#160;</a></span>DELETE_SQL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DELETE_SQL&#160;&#160;&#160;&quot;delete from exchange_table where name = '%s';&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a89b2b1c320bae703ff85d227fd622bbb" name="a89b2b1c320bae703ff85d227fd622bbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89b2b1c320bae703ff85d227fd622bbb">&#9670;&#160;</a></span>DROP_TABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DROP_TABLE&#160;&#160;&#160;&quot;drop table if exists exchange_table;&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aec5920e76cdbf6faf457dac6ef960666" name="aec5920e76cdbf6faf457dac6ef960666"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec5920e76cdbf6faf457dac6ef960666">&#9670;&#160;</a></span>INSERT_SQL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INSERT_SQL&#160;&#160;&#160;&quot;insert into exchange_table values('%s', %d, %d, %d, '%s');&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac151d13213b3632094eb2210ecb6e771" name="ac151d13213b3632094eb2210ecb6e771"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac151d13213b3632094eb2210ecb6e771">&#9670;&#160;</a></span>SELECT_SQL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SELECT_SQL&#160;&#160;&#160;&quot;select * from exchange_table;&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>交换机管理模块，定义了交换机的结构、持久化以及内存管理功能 </p>
+<p>该模块定义了交换机的基本结构（Exchange），以及交换机的持久化类（ExchangeMapper） 和内存管理类（ExchangeManager）。实现了交换机的声明、删除、持久化等操作，并通过SQLite 数据库实现数据的持久化。 </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

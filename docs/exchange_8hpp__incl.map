@@ -1,5 +1,5 @@
 <map id="server/exchange.hpp" name="server/exchange.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="2623,5,2782,31"/>
+<area shape="rect" id="Node000001" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="2623,5,2782,31"/>
 <area shape="rect" id="Node000002" href="$logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,159,168,185"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2623,22,2211,25,1605,34,984,52,724,65,528,81,420,97,314,118,143,158,141,153,313,113,420,92,528,76,724,60,984,46,1605,29,2211,20,2623,17"/>
 <area shape="rect" id="Node000004" href="$helper_8hpp.html" title="工具类封装" alt="" coords="835,79,997,104"/>
