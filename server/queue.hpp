@@ -1,3 +1,13 @@
+/**
+ * @file queue.hpp
+ * @brief 消息队列模块的定义和实现
+ *
+ * 本文件定义了消息队列的结构体 `MsgQueue` 及其管理类 `MsgQueueMapper` 和 `MsgQueueManager`。
+ * 
+ * `MsgQueue` 结构体用于表示一个消息队列，包含其属性和相关操作。
+ * `MsgQueueMapper` 类负责持久化管理，将消息队列信息存储在 SQLite 数据库中。
+ * `MsgQueueManager` 类负责在内存中管理消息队列，并提供相应的操作接口。
+ */
 
 #pragma once
 #include "../common/logger.hpp"
@@ -122,7 +132,7 @@ namespace XuMQ
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
             {
-                error(logger, "插入数据失败!");
+                error(logger, "数据库: 插入消息队列失败!");
                 return false;
             }
             return true;
@@ -138,7 +148,7 @@ namespace XuMQ
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
             {
-                error(logger, "删除数据失败!");
+                error(logger, "数据库: 删除消息队列失败!");
                 return false;
             }
             return true;
@@ -197,7 +207,7 @@ namespace XuMQ
         /// @param qexclusive 独占标志
         /// @param qauto_delete 自动删除标志
         /// @param qargs 其他参数
-        /// @return 声明成功返回true
+        /// @return 声明成功返回true 失败返回false
         bool declareQueue(const std::string &qname,
                           bool qdurable,
                           bool qexclusive,

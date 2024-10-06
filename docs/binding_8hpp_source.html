@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: server/binding.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('binding_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">binding.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="binding_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;../common/logger.hpp&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;../common/helper.hpp&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../common/msg.pb.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html">   25</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_xu_m_q_1_1_binding.html">Binding</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">   27</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">ptr</a> = std::shared_ptr&lt;Binding&gt;; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#aac885ac4d4169859aed2f33b73d53e6d">   28</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#aac885ac4d4169859aed2f33b73d53e6d">exchange_name</a>;            </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#aeb411f44ef74f18b63da51509a25de85">   29</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#aeb411f44ef74f18b63da51509a25de85">msgqueue_name</a>;            </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#ac457cef292144fa21ee44ef84048b8d3">   30</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#ac457cef292144fa21ee44ef84048b8d3">binding_key</a>;              </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#a556ddccd61c68722c783ab2c40e32fe3">   32</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_binding.html#a556ddccd61c68722c783ab2c40e32fe3">Binding</a>() {}</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_binding.html#aab53ab374f3cbbaf06bf2cf198cca793">   37</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_binding.html#aab53ab374f3cbbaf06bf2cf198cca793">Binding</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname, <span class="keyword">const</span> std::string &amp;key)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            : <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#aac885ac4d4169859aed2f33b73d53e6d">exchange_name</a>(ename), <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#aeb411f44ef74f18b63da51509a25de85">msgqueue_name</a>(qname), <a class="code hl_variable" href="struct_xu_m_q_1_1_binding.html#ac457cef292144fa21ee44ef84048b8d3">binding_key</a>(key) {}</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">   43</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> = std::unordered_map&lt;std::string, Binding::ptr&gt;;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">   55</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> = std::unordered_map&lt;std::string, MsgQueueBindingMap&gt;;</div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html">   58</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_binding_mapper.html">BindingMapper</a></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98">   64</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98">BindingMapper</a>(<span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            : <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>(dbfile)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            std::string path = <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">FileHelper::parentDirectory</a>(dbfile);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <a class="code hl_function" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">FileHelper::createDirectory</a>(path);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            assert(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">open</a>());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c">createTable</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c">   73</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c">createTable</a>()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *CREATE_TABLE = <span class="stringliteral">&quot;create table if not exists binding_table(exchange_name varchar(32), msgqueue_name varchar(32), binding_key varchar(128));&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(CREATE_TABLE, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;创建绑定信息数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                abort();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#a7b854bc8a5fa8f3bbc262905a1c67823">   84</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a7b854bc8a5fa8f3bbc262905a1c67823">removeTable</a>()</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DROP_TABLE = <span class="stringliteral">&quot;drop table if exists binding_table;&quot;</span>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(DROP_TABLE, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                fatal(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;删除绑定信息数据库表失败!&quot;</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                abort();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#a5e63c28ff05c747ee9fac05d2613e7ce">   97</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a5e63c28ff05c747ee9fac05d2613e7ce">insert</a>(<a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> &amp;binding)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *INSERT_SQL = <span class="stringliteral">&quot;insert into binding_table values(&#39;%s&#39;, &#39;%s&#39;, &#39;%s&#39;);&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            sprintf(sql_str, INSERT_SQL, binding-&gt;exchange_name.c_str(),</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                    binding-&gt;msgqueue_name.c_str(), binding-&gt;binding_key.c_str());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;数据库: 插入绑定信息失败!&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#a706f0d0142d82477a170db7d9e57409a">  115</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a706f0d0142d82477a170db7d9e57409a">remove</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DELETE_SQL = <span class="stringliteral">&quot;delete from binding_table where exchange_name = &#39;%s&#39; \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="stringliteral">            and msgqueue_name = &#39;%s&#39;;&quot;</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            sprintf(sql_str, DELETE_SQL, ename.c_str(), qname.c_str());</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;数据库: 删除绑定信息失败!&quot;</span>);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b">  132</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b">removeExchangeBindings</a>(<span class="keyword">const</span> std::string &amp;ename)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DELETE_SQL = <span class="stringliteral">&quot;delete from binding_table where exchange_name = &#39;%s&#39;;&quot;</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            sprintf(sql_str, DELETE_SQL, ename.c_str());</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;数据库: 删除交换机绑定信息失败!&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#aabac40c1c7251e8819501783c2a3e777">  148</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#aabac40c1c7251e8819501783c2a3e777">removeQueueBindings</a>(<span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *DELETE_SQL = <span class="stringliteral">&quot;delete from binding_table where msgqueue_name = &#39;%s&#39;;&quot;</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordtype">char</span> sql_str[4096] = {0};</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            sprintf(sql_str, DELETE_SQL, qname.c_str());</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(sql_str, <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;数据库: 删除消息队列绑定信息失败!&quot;</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05">  164</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05">recovery</a>()</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> result;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keyword">const</span> <span class="keywordtype">char</span> *SELECT_SQL = <span class="stringliteral">&quot;select * from binding_table;&quot;</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">exec</a>(SELECT_SQL, <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f">selectCallback</a>, &amp;result);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        }</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00179" data-start="{" data-end="}">
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f">  179</a></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f">selectCallback</a>(<span class="keywordtype">void</span> *arg, <span class="keywordtype">int</span> numcol, <span class="keywordtype">char</span> **row, <span class="keywordtype">char</span> **fields)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> *result = (<a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> *)arg;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> bp = std::make_shared&lt;Binding&gt;(row[0], row[1], row[2]);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <a class="code hl_typedef" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> &amp;qmap = (*result)[bp-&gt;exchange_name];</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            qmap.insert(std::make_pair(bp-&gt;msgqueue_name, bp));</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">  193</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a>; </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    };</div>
+</div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="};">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html">  197</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_binding_manager.html">BindingManager</a></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#ae829ac37a0788d65473d9a35edc94fae">  200</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_binding_manager.html#ae829ac37a0788d65473d9a35edc94fae">ptr</a> = std::shared_ptr&lt;BindingManager&gt;; </div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4">  203</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4">BindingManager</a>(<span class="keyword">const</span> std::string &amp;dbfile) : <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>(dbfile) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a> = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05">recovery</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#aa20a9e261cf940b3292d9e60e8e87eca">  213</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#aa20a9e261cf940b3292d9e60e8e87eca">bind</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname, <span class="keyword">const</span> std::string &amp;key, <span class="keywordtype">bool</span> durable)</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="comment">// 加锁 构造一个队列信息绑定对象 添加映射关系</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.find(ename);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.end() &amp;&amp; it-&gt;second.find(qname) != it-&gt;second.end()) <span class="comment">// 绑定信息已经存在</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> bp = std::make_shared&lt;Binding&gt;(ename, qname, key);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>            <span class="keywordflow">if</span> (durable)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>            {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a5e63c28ff05c747ee9fac05d2613e7ce">insert</a>(bp);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            <span class="keyword">auto</span> &amp;qbmap = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>[ename];</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            qbmap.insert(std::make_pair(qname, bp));</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855">  234</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855">unbind</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keyword">auto</span> eit = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.find(ename);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span> (eit == <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.end()) <span class="comment">// 没有交换机的绑定信息</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keyword">auto</span> qit = eit-&gt;second.find(qname); <span class="comment">// 没有交换机对应队列的绑定信息</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keywordflow">if</span> (qit == eit-&gt;second.end())</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a706f0d0142d82477a170db7d9e57409a">remove</a>(ename, qname);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>[ename].erase(qname);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a57f5f588abf5ae70b43651a378a9d5ff">  248</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a57f5f588abf5ae70b43651a378a9d5ff">removeExchangeBindings</a>(<span class="keyword">const</span> std::string &amp;ename)</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b">removeExchangeBindings</a>(ename);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.erase(ename);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a6ce68afa19bf82b0347a1dbbf8ee2d59">  256</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a6ce68afa19bf82b0347a1dbbf8ee2d59">removeMsgQueueBindings</a>(<span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#aabac40c1c7251e8819501783c2a3e777">removeQueueBindings</a>(qname);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;binding : <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>) <span class="comment">// 遍历所有交换机</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                binding.second.erase(qname);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00266" data-start="{" data-end="}">
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a2cac15b2f93390d7a564491dc20f3dc6">  266</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a2cac15b2f93390d7a564491dc20f3dc6">getExchangeBindings</a>(<span class="keyword">const</span> std::string &amp;ename)</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            <span class="keyword">auto</span> eit = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.find(ename);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            <span class="keywordflow">if</span> (eit == <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.end())</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a>();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keywordflow">return</span> eit-&gt;second;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="foldopen" id="foldopen00279" data-start="{" data-end="}">
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#ad367fbb642f1b1b6c4d99e86a8f9f897">  279</a></span>        <a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#ad367fbb642f1b1b6c4d99e86a8f9f897">getBinding</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            <span class="keyword">auto</span> eit = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.find(ename);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">if</span> (eit == <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.end())</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a>();</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keyword">auto</span> qit = eit-&gt;second.find(qname);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            <span class="keywordflow">if</span> (qit == eit-&gt;second.end())</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a>();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">return</span> qit-&gt;second;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a03aac1d80f9255cfd74f6a9c916bc35d">  294</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a03aac1d80f9255cfd74f6a9c916bc35d">exists</a>(<span class="keyword">const</span> std::string &amp;ename, <span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>            <span class="keyword">auto</span> eit = <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.find(ename);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">if</span> (eit == <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.end())</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keyword">auto</span> qit = eit-&gt;second.find(qname);</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">if</span> (qit == eit-&gt;second.end())</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00307" data-start="{" data-end="}">
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a1a533b1f8263a49f0aad3c4a63eaba14">  307</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a1a533b1f8263a49f0aad3c4a63eaba14">size</a>()</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            <span class="keywordtype">size_t</span> total_size = 0;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;it : <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>)</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                total_size += it.second.size();</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">return</span> total_size;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00316" data-start="{" data-end="}">
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a76a1b50abcd8258267ec5141919401fb">  316</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_binding_manager.html#a76a1b50abcd8258267ec5141919401fb">clear</a>()</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>.<a class="code hl_function" href="class_xu_m_q_1_1_binding_mapper.html#a7b854bc8a5fa8f3bbc262905a1c67823">removeTable</a>();</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>.clear();</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        }</div>
+</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">  324</a></span>        std::mutex <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">_mutex</a>;     </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">  325</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1_binding_mapper.html">BindingMapper</a> <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">_mapper</a>; </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">  326</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> <a class="code hl_variable" href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">_bindings</a>;  </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    };</div>
+</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html">XuMQ::BindingManager</a></div><div class="ttdoc">绑定信息内存管理类</div><div class="ttdef"><b>Definition</b> binding.hpp:198</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a03aac1d80f9255cfd74f6a9c916bc35d"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a03aac1d80f9255cfd74f6a9c916bc35d">XuMQ::BindingManager::exists</a></div><div class="ttdeci">bool exists(const std::string &amp;ename, const std::string &amp;qname)</div><div class="ttdoc">判断绑定信息是否存在</div><div class="ttdef"><b>Definition</b> binding.hpp:294</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a1a533b1f8263a49f0aad3c4a63eaba14"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a1a533b1f8263a49f0aad3c4a63eaba14">XuMQ::BindingManager::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdoc">获取绑定信息数量</div><div class="ttdef"><b>Definition</b> binding.hpp:307</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a237195bfbf25414cfc3ca1ac0577a8d2"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a237195bfbf25414cfc3ca1ac0577a8d2">XuMQ::BindingManager::_bindings</a></div><div class="ttdeci">BindingMap _bindings</div><div class="ttdoc">绑定映射表</div><div class="ttdef"><b>Definition</b> binding.hpp:326</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a2cac15b2f93390d7a564491dc20f3dc6"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a2cac15b2f93390d7a564491dc20f3dc6">XuMQ::BindingManager::getExchangeBindings</a></div><div class="ttdeci">MsgQueueBindingMap getExchangeBindings(const std::string &amp;ename)</div><div class="ttdoc">获取指定交换机的绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:266</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a57f5f588abf5ae70b43651a378a9d5ff"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a57f5f588abf5ae70b43651a378a9d5ff">XuMQ::BindingManager::removeExchangeBindings</a></div><div class="ttdeci">void removeExchangeBindings(const std::string &amp;ename)</div><div class="ttdoc">移除指定交换机的所有绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:248</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a6ce68afa19bf82b0347a1dbbf8ee2d59"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a6ce68afa19bf82b0347a1dbbf8ee2d59">XuMQ::BindingManager::removeMsgQueueBindings</a></div><div class="ttdeci">void removeMsgQueueBindings(const std::string &amp;qname)</div><div class="ttdoc">移除指定消息队列的所有绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:256</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a76a1b50abcd8258267ec5141919401fb"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a76a1b50abcd8258267ec5141919401fb">XuMQ::BindingManager::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清除绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:316</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a81d9bf7a934a52954075cd3b826b8bbe"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a81d9bf7a934a52954075cd3b826b8bbe">XuMQ::BindingManager::_mapper</a></div><div class="ttdeci">BindingMapper _mapper</div><div class="ttdoc">绑定信息持久化管理类</div><div class="ttdef"><b>Definition</b> binding.hpp:325</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a89de37822a9c9af6e527925b3e52d1b2"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">XuMQ::BindingManager::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> binding.hpp:324</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a8b0aeffb8866b4b39c5957d0fd77f855"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855">XuMQ::BindingManager::unbind</a></div><div class="ttdeci">void unbind(const std::string &amp;ename, const std::string &amp;qname)</div><div class="ttdoc">解除绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:234</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_a9f465027655437a0124501e9b6614bf4"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4">XuMQ::BindingManager::BindingManager</a></div><div class="ttdeci">BindingManager(const std::string &amp;dbfile)</div><div class="ttdoc">绑定信息数据内存管理类 构造函数 从数据库中恢复数据</div><div class="ttdef"><b>Definition</b> binding.hpp:203</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_aa20a9e261cf940b3292d9e60e8e87eca"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#aa20a9e261cf940b3292d9e60e8e87eca">XuMQ::BindingManager::bind</a></div><div class="ttdeci">bool bind(const std::string &amp;ename, const std::string &amp;qname, const std::string &amp;key, bool durable)</div><div class="ttdoc">添加绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:213</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_ad367fbb642f1b1b6c4d99e86a8f9f897"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#ad367fbb642f1b1b6c4d99e86a8f9f897">XuMQ::BindingManager::getBinding</a></div><div class="ttdeci">Binding::ptr getBinding(const std::string &amp;ename, const std::string &amp;qname)</div><div class="ttdoc">获取绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:279</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html_ae829ac37a0788d65473d9a35edc94fae"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html#ae829ac37a0788d65473d9a35edc94fae">XuMQ::BindingManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; BindingManager &gt; ptr</div><div class="ttdoc">绑定信息内存管理类指针</div><div class="ttdef"><b>Definition</b> binding.hpp:200</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html">XuMQ::BindingMapper</a></div><div class="ttdoc">绑定信息持久化管理类</div><div class="ttdef"><b>Definition</b> binding.hpp:59</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_a47a75e781d871bd450e443821eb6891f"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f">XuMQ::BindingMapper::selectCallback</a></div><div class="ttdeci">static int selectCallback(void *arg, int numcol, char **row, char **fields)</div><div class="ttdoc">select语句的回调函数 将获取到的数据存入参数中</div><div class="ttdef"><b>Definition</b> binding.hpp:179</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_a5e63c28ff05c747ee9fac05d2613e7ce"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#a5e63c28ff05c747ee9fac05d2613e7ce">XuMQ::BindingMapper::insert</a></div><div class="ttdeci">bool insert(Binding::ptr &amp;binding)</div><div class="ttdoc">新增一个绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:97</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_a706f0d0142d82477a170db7d9e57409a"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#a706f0d0142d82477a170db7d9e57409a">XuMQ::BindingMapper::remove</a></div><div class="ttdeci">bool remove(const std::string &amp;ename, const std::string &amp;qname)</div><div class="ttdoc">移除一个绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:115</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_a7b854bc8a5fa8f3bbc262905a1c67823"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#a7b854bc8a5fa8f3bbc262905a1c67823">XuMQ::BindingMapper::removeTable</a></div><div class="ttdeci">void removeTable()</div><div class="ttdoc">移除一张表</div><div class="ttdef"><b>Definition</b> binding.hpp:84</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_a940a0d0189048fb02dde7ae2b82fb50b"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b">XuMQ::BindingMapper::removeExchangeBindings</a></div><div class="ttdeci">bool removeExchangeBindings(const std::string &amp;ename)</div><div class="ttdoc">移除交换机绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:132</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_aabac40c1c7251e8819501783c2a3e777"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#aabac40c1c7251e8819501783c2a3e777">XuMQ::BindingMapper::removeQueueBindings</a></div><div class="ttdeci">bool removeQueueBindings(const std::string &amp;qname)</div><div class="ttdoc">移除消息队列绑定信息</div><div class="ttdef"><b>Definition</b> binding.hpp:148</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_ac6284ddc379299f44c843036c4721d3d"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">XuMQ::BindingMapper::_sql_helper</a></div><div class="ttdeci">SqliteHelper _sql_helper</div><div class="ttdoc">数据库操作对象</div><div class="ttdef"><b>Definition</b> binding.hpp:193</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_ae8359c4312ca03c8bae81cca1cb9c27c"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c">XuMQ::BindingMapper::createTable</a></div><div class="ttdeci">void createTable()</div><div class="ttdoc">创建一张表</div><div class="ttdef"><b>Definition</b> binding.hpp:73</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_aebab403e56d9a65ca9705722aec6fe05"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05">XuMQ::BindingMapper::recovery</a></div><div class="ttdeci">BindingMap recovery()</div><div class="ttdoc">获取所有绑定信息 从数据库加载到内存</div><div class="ttdef"><b>Definition</b> binding.hpp:164</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_binding_mapper_html_aee9d00e3dca312e636e11623cf5c9e98"><div class="ttname"><a href="class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98">XuMQ::BindingMapper::BindingMapper</a></div><div class="ttdeci">BindingMapper(const std::string &amp;dbfile)</div><div class="ttdoc">绑定信息持久化管理类 构造函数</div><div class="ttdef"><b>Definition</b> binding.hpp:64</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a22fd9192e7f58d40e0188a4f619b9bad"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad">XuMQ::FileHelper::createDirectory</a></div><div class="ttdeci">static bool createDirectory(const std::string &amp;pathname)</div><div class="ttdoc">创建目录</div><div class="ttdef"><b>Definition</b> helper.hpp:414</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_file_helper_html_a28643d0c0fa7088e7afa86f4f048b2f9"><div class="ttname"><a href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9">XuMQ::FileHelper::parentDirectory</a></div><div class="ttdeci">static std::string parentDirectory(const std::string &amp;filename)</div><div class="ttdoc">获取文件的父目录</div><div class="ttdef"><b>Definition</b> helper.hpp:357</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html">XuMQ::SqliteHelper</a></div><div class="ttdoc">SQLite 数据库操作助手类</div><div class="ttdef"><b>Definition</b> helper.hpp:58</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_a9228afe2e214e707afdf56640d7bc76a"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a">XuMQ::SqliteHelper::exec</a></div><div class="ttdeci">bool exec(const std::string &amp;sql, SqliteCallback cb, void *arg)</div><div class="ttdoc">执行 SQL 语句</div><div class="ttdef"><b>Definition</b> helper.hpp:109</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_sqlite_helper_html_ae30429cd2d883fe24a616a65a547783b"><div class="ttname"><a href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b">XuMQ::SqliteHelper::open</a></div><div class="ttdeci">bool open(int safe_level=SQLITE_OPEN_FULLMUTEX)</div><div class="ttdoc">打开数据库</div><div class="ttdef"><b>Definition</b> helper.hpp:90</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> helper.hpp:44</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a4970cc87d0e344f2b27f072e7172cff7"><div class="ttname"><a href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">XuMQ::BindingMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, MsgQueueBindingMap &gt; BindingMap</div><div class="ttdoc">绑定映射表-—交换机-&gt;消息队列绑定映射表的映射表</div><div class="ttdef"><b>Definition</b> binding.hpp:55</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a7d6eb557023012c069ab5ee39728a677"><div class="ttname"><a href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">XuMQ::MsgQueueBindingMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Binding::ptr &gt; MsgQueueBindingMap</div><div class="ttdoc">消息队列绑定映射表-—消息队列-&gt;绑定信息的映射表</div><div class="ttdef"><b>Definition</b> binding.hpp:43</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html">XuMQ::Binding</a></div><div class="ttdoc">绑定信息结构体</div><div class="ttdef"><b>Definition</b> binding.hpp:26</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_a556ddccd61c68722c783ab2c40e32fe3"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#a556ddccd61c68722c783ab2c40e32fe3">XuMQ::Binding::Binding</a></div><div class="ttdeci">Binding()</div><div class="ttdoc">无参构造</div><div class="ttdef"><b>Definition</b> binding.hpp:32</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_aab53ab374f3cbbaf06bf2cf198cca793"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#aab53ab374f3cbbaf06bf2cf198cca793">XuMQ::Binding::Binding</a></div><div class="ttdeci">Binding(const std::string &amp;ename, const std::string &amp;qname, const std::string &amp;key)</div><div class="ttdoc">绑定信息结构体 构造函数</div><div class="ttdef"><b>Definition</b> binding.hpp:37</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_aac885ac4d4169859aed2f33b73d53e6d"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#aac885ac4d4169859aed2f33b73d53e6d">XuMQ::Binding::exchange_name</a></div><div class="ttdeci">std::string exchange_name</div><div class="ttdoc">交换机名称</div><div class="ttdef"><b>Definition</b> binding.hpp:28</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_ac457cef292144fa21ee44ef84048b8d3"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#ac457cef292144fa21ee44ef84048b8d3">XuMQ::Binding::binding_key</a></div><div class="ttdeci">std::string binding_key</div><div class="ttdoc">绑定关键字</div><div class="ttdef"><b>Definition</b> binding.hpp:30</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_aeb3e04108a29b61334502b575c4b075e"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">XuMQ::Binding::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Binding &gt; ptr</div><div class="ttdoc">绑定信息指针</div><div class="ttdef"><b>Definition</b> binding.hpp:27</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_binding_html_aeb411f44ef74f18b63da51509a25de85"><div class="ttname"><a href="struct_xu_m_q_1_1_binding.html#aeb411f44ef74f18b63da51509a25de85">XuMQ::Binding::msgqueue_name</a></div><div class="ttdeci">std::string msgqueue_name</div><div class="ttdoc">消息队列名称</div><div class="ttdef"><b>Definition</b> binding.hpp:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="binding_8hpp.html">binding.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

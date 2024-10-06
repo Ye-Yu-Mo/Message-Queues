@@ -131,7 +131,7 @@ namespace XuMQ
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
             {
-                error(logger, "插入数据失败!");
+                error(logger, "数据库: 插入交换机失败!");
                 return false;
             }
             return true;
@@ -147,7 +147,7 @@ namespace XuMQ
             bool ret = _sql_helper.exec(sql_str, nullptr, nullptr);
             if (ret == false)
             {
-                error(logger, "删除数据失败!");
+                error(logger, "数据库: 删除交换机失败!");
                 return false;
             }
             return true;

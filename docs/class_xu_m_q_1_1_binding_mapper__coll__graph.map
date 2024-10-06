@@ -1,0 +1,5 @@
+<map id="XuMQ::BindingMapper" name="XuMQ::BindingMapper">
+<area shape="rect" id="Node000001" title="绑定信息持久化管理类" alt="" coords="5,93,172,119"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="14,5,163,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,45,91,93,86,93,86,45"/>
+</map>

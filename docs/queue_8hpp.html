@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('queue_8hpp.html',''); initResizable();
   <div class="headertitle"><div class="title">queue.hpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>消息队列模块的定义和实现  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="logger_8hpp_source.html">../common/logger.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="helper_8hpp_source.html">../common/helper.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="msg_8pb_8h_source.html">../common/msg.pb.h</a>&quot;</code><br />
@@ -115,7 +118,7 @@ queue.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="queue_8hpp__incl.png" border="0" usemap="#aserver_2queue_8hpp" alt=""/></div>
 <map name="aserver_2queue_8hpp" id="aserver_2queue_8hpp">
-<area shape="rect" title=" " alt="" coords="2635,5,2770,31"/>
+<area shape="rect" title="消息队列模块的定义和实现" alt="" coords="2635,5,2770,31"/>
 <area shape="rect" href="logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,159,168,185"/>
 <area shape="poly" title=" " alt="" coords="2635,22,2230,25,1620,34,991,51,727,65,528,81,420,97,314,118,143,158,141,153,313,113,420,92,528,76,727,59,990,46,1620,28,2230,20,2635,17"/>
 <area shape="rect" href="helper_8hpp.html" title="工具类封装" alt="" coords="835,79,997,104"/>
@@ -198,7 +201,7 @@ queue.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="queue_8hpp__dep__incl.png" border="0" usemap="#aserver_2queue_8hppdep" alt=""/></div>
 <map name="aserver_2queue_8hppdep" id="aserver_2queue_8hppdep">
-<area shape="rect" title=" " alt="" coords="20,5,155,31"/>
+<area shape="rect" title="消息队列模块的定义和实现" alt="" coords="20,5,155,31"/>
 <area shape="rect" href="mqqueuetest_8cpp.html" title=" " alt="" coords="5,79,169,104"/>
 <area shape="poly" title=" " alt="" coords="90,44,90,79,85,79,85,44"/>
 </map>
@@ -229,7 +232,11 @@ queue.hpp 的引用(Include)关系图:</div>
 <tr class="memdesc:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列映射表 消息队列名称-&gt;消息队列指针  <br /></td></tr>
 <tr class="separator:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>消息队列模块的定义和实现 </p>
+<p>本文件定义了消息队列的结构体 <code>MsgQueue</code> 及其管理类 <code>MsgQueueMapper</code> 和 <code>MsgQueueManager</code>。</p>
+<p><code>MsgQueue</code> 结构体用于表示一个消息队列，包含其属性和相关操作。 <code>MsgQueueMapper</code> 类负责持久化管理，将消息队列信息存储在 SQLite 数据库中。 <code>MsgQueueManager</code> 类负责在内存中管理消息队列，并提供相应的操作接口。 </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

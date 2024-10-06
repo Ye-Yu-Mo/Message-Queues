@@ -1,6 +1,6 @@
 <map id="test/mqqueuetest.cpp" name="test/mqqueuetest.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="2695,5,2859,31"/>
-<area shape="rect" id="Node000002" href="$queue_8hpp.html" title=" " alt="" coords="2629,79,2776,104"/>
+<area shape="rect" id="Node000002" href="$queue_8hpp.html" title="消息队列模块的定义和实现" alt="" coords="2629,79,2776,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2767,33,2727,71,2723,67,2764,29"/>
 <area shape="rect" id="Node000039" title=" " alt="" coords="2800,79,2904,104"/>
 <area shape="poly" id="edge41_Node000001_Node000039" title=" " alt="" coords="2791,29,2832,67,2828,71,2787,33"/>

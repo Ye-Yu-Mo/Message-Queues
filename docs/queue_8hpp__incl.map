@@ -1,5 +1,5 @@
 <map id="server/queue.hpp" name="server/queue.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="2635,5,2770,31"/>
+<area shape="rect" id="Node000001" title="消息队列模块的定义和实现" alt="" coords="2635,5,2770,31"/>
 <area shape="rect" id="Node000002" href="$logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,159,168,185"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2635,22,2230,25,1620,34,991,51,727,65,528,81,420,97,314,118,143,158,141,153,313,113,420,92,528,76,727,59,990,46,1620,28,2230,20,2635,17"/>
 <area shape="rect" id="Node000004" href="$helper_8hpp.html" title="工具类封装" alt="" coords="835,79,997,104"/>

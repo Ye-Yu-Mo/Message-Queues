@@ -1,0 +1,7 @@
+<map id="XuMQ::BindingManager::removeExchangeBindings" name="XuMQ::BindingManager::removeExchangeBindings">
+<area shape="rect" id="Node000001" title="移除指定交换机的所有绑定信息" alt="" coords="5,5,204,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b" title="移除交换机绑定信息" alt="" coords="252,5,451,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="499,5,648,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="451,23,485,23,485,28,451,28"/>
+</map>

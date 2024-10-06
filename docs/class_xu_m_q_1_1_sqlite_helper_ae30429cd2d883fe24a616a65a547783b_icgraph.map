@@ -1,7 +1,9 @@
 <map id="XuMQ::SqliteHelper::open" name="XuMQ::SqliteHelper::open">
-<area shape="rect" id="Node000001" title="打开数据库" alt="" coords="240,37,389,77"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="8,5,189,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,47,189,41,190,36,227,42"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094" title="消息队列持久化管理类 构造函数" alt="" coords="5,69,192,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,73,192,78,192,73,226,68"/>
+<area shape="rect" id="Node000001" title="打开数据库" alt="" coords="240,69,389,109"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98" title="绑定信息持久化管理类 构造函数" alt="" coords="15,5,182,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,68,166,48,167,43,234,63"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_exchange_mapper.html#af65edea32e008c8ddbe8810761670d5c" title="交换机持久化管理类 构造函数" alt="" coords="8,69,189,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,92,189,92,189,87,226,87"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_msg_queue_mapper.html#ad6565be12a1db7f40856c71830504094" title="消息队列持久化管理类 构造函数" alt="" coords="5,133,192,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,116,167,136,166,131,232,111"/>
 </map>

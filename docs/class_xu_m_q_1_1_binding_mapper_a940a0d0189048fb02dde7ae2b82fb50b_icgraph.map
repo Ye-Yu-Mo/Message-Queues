@@ -1,0 +1,5 @@
+<map id="XuMQ::BindingMapper::removeExchangeBindings" name="XuMQ::BindingMapper::removeExchangeBindings">
+<area shape="rect" id="Node000001" title="移除交换机绑定信息" alt="" coords="252,5,451,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_binding_manager.html#a57f5f588abf5ae70b43651a378a9d5ff" title="移除指定交换机的所有绑定信息" alt="" coords="5,5,204,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>

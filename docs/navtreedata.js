@@ -26,37 +26,39 @@ var NAVTREE =
 [
   [ "Message-Queues", "index.html", [
     [ "Message-Queues", "md__r_e_a_d_m_e.html", [
-      [ "项目介绍", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "开发环境", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "技术选型", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "需求分析", "md__r_e_a_d_m_e.html#autotoc_md4", [
-        [ "核心概念", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
-        [ "核心API", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
-        [ "交换机类型", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
-        [ "网络通信", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
-        [ "消息应答", "md__r_e_a_d_m_e.html#autotoc_md9", null ]
+      [ "<a href=\"https://ye-yu-mo.github.io/Message-Queues/\" >项目文档</a>", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "项目介绍", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "开发环境", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "技术选型", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "需求分析", "md__r_e_a_d_m_e.html#autotoc_md5", [
+        [ "核心概念", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+        [ "核心API", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+        [ "交换机类型", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+        [ "网络通信", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
+        [ "消息应答", "md__r_e_a_d_m_e.html#autotoc_md10", null ]
       ] ],
-      [ "模块划分", "md__r_e_a_d_m_e.html#autotoc_md10", [
-        [ "服务端模块", "md__r_e_a_d_m_e.html#autotoc_md11", [
-          [ "持久化数据管理中心", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
-          [ "虚拟机管理模块", "md__r_e_a_d_m_e.html#autotoc_md13", null ],
-          [ "交换路由模块", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
-          [ "消费者管理模块", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
-          [ "信道管理模块", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
-          [ "连接管理模块", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
-          [ "BrokerServer模块", "md__r_e_a_d_m_e.html#autotoc_md18", null ]
+      [ "模块划分", "md__r_e_a_d_m_e.html#autotoc_md11", [
+        [ "服务端模块", "md__r_e_a_d_m_e.html#autotoc_md12", [
+          [ "持久化数据管理中心", "md__r_e_a_d_m_e.html#autotoc_md13", null ],
+          [ "虚拟机管理模块", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
+          [ "交换路由模块", "md__r_e_a_d_m_e.html#autotoc_md15", null ],
+          [ "消费者管理模块", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
+          [ "信道管理模块", "md__r_e_a_d_m_e.html#autotoc_md17", null ],
+          [ "连接管理模块", "md__r_e_a_d_m_e.html#autotoc_md18", null ],
+          [ "BrokerServer模块", "md__r_e_a_d_m_e.html#autotoc_md19", null ]
         ] ],
-        [ "客户端模块", "md__r_e_a_d_m_e.html#autotoc_md19", [
-          [ "消费者管理", "md__r_e_a_d_m_e.html#autotoc_md20", null ],
-          [ "信道管理模块", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
-          [ "连接管理模块", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
-          [ "异步工作池模块", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
-          [ "客户端模块", "md__r_e_a_d_m_e.html#autotoc_md24", null ]
+        [ "客户端模块", "md__r_e_a_d_m_e.html#autotoc_md20", [
+          [ "消费者管理", "md__r_e_a_d_m_e.html#autotoc_md21", null ],
+          [ "信道管理模块", "md__r_e_a_d_m_e.html#autotoc_md22", null ],
+          [ "连接管理模块", "md__r_e_a_d_m_e.html#autotoc_md23", null ],
+          [ "异步工作池模块", "md__r_e_a_d_m_e.html#autotoc_md24", null ],
+          [ "客户端模块", "md__r_e_a_d_m_e.html#autotoc_md25", null ]
         ] ]
       ] ],
-      [ "模块关系图", "md__r_e_a_d_m_e.html#autotoc_md25", null ],
-      [ "TODO", "md__r_e_a_d_m_e.html#autotoc_md26", null ]
+      [ "模块关系图", "md__r_e_a_d_m_e.html#autotoc_md26", null ],
+      [ "TODO", "md__r_e_a_d_m_e.html#autotoc_md27", null ]
     ] ],
+    [ "弃用列表", "deprecated.html", null ],
     [ "命名空间", "namespaces.html", [
       [ "命名空间列表", "namespaces.html", "namespaces_dup" ],
       [ "命名空间成员", "namespacemembers.html", [
@@ -96,9 +98,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_xu_m_q_1_1_message.html#a374ee62e622f4f10c6f20d561539cada",
-"class_xu_m_q_1_1_message___payload_1_1___internal.html",
-"namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a457929c044f0ea902e54568f57dffa20"
+"class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a",
+"class_xu_m_q_1_1_message___payload.html#aa71ffa565b95893849c8ddcf815a61b9",
+"mqqueuetest_8cpp.html#a8163fd70b85d6bed99f380b1383443ca"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

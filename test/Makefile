@@ -1,4 +1,7 @@
-.PHONY:mqqueuetest
+.PHONY:mqbindingtest
+mqbindingtest:mqbindingtest.cpp
+	g++ $^ -o $@ -std=c++17 -lgtest -lprotobuf -lsqlite3
+
 mqqueuetest:mqqueuetest.cpp
 	g++ $^ -o $@ -std=c++17 -lgtest -lprotobuf -lsqlite3
 

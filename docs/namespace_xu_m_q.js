@@ -2,6 +2,9 @@ var namespace_xu_m_q =
 [
     [ "BasicProperties", "class_xu_m_q_1_1_basic_properties.html", "class_xu_m_q_1_1_basic_properties" ],
     [ "BasicPropertiesDefaultTypeInternal", "struct_xu_m_q_1_1_basic_properties_default_type_internal.html", "struct_xu_m_q_1_1_basic_properties_default_type_internal" ],
+    [ "Binding", "struct_xu_m_q_1_1_binding.html", "struct_xu_m_q_1_1_binding" ],
+    [ "BindingManager", "class_xu_m_q_1_1_binding_manager.html", "class_xu_m_q_1_1_binding_manager" ],
+    [ "BindingMapper", "class_xu_m_q_1_1_binding_mapper.html", "class_xu_m_q_1_1_binding_mapper" ],
     [ "Exchange", "struct_xu_m_q_1_1_exchange.html", "struct_xu_m_q_1_1_exchange" ],
     [ "ExchangeManager", "class_xu_m_q_1_1_exchange_manager.html", "class_xu_m_q_1_1_exchange_manager" ],
     [ "ExchangeMapper", "class_xu_m_q_1_1_exchange_mapper.html", "class_xu_m_q_1_1_exchange_mapper" ],
@@ -17,7 +20,9 @@ var namespace_xu_m_q =
     [ "SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", "class_xu_m_q_1_1_sqlite_helper" ],
     [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
     [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
+    [ "BindingMap", "namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7", null ],
     [ "ExchangeMap", "namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18", null ],
+    [ "MsgQueueBindingMap", "namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677", null ],
     [ "QueueMap", "namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb", null ],
     [ "DeliveryMode", "namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614", [
       [ "UNKNOWMODE", "namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a457929c044f0ea902e54568f57dffa20", null ],

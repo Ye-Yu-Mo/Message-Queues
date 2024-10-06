@@ -101,9 +101,11 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> </p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+&lt;a href="https://ye-yu-mo.github.io/Message-Queues/" &gt;项目文档&lt;/a&gt;</h1>
+<h1><a class="anchor" id="autotoc_md2"></a>
 项目介绍</h1>
 <p>在分布式系统中，跨主机之间的消费者模型是一个非常普遍的需求，通常会把阻塞队列封装成一个独立的服务器程序，并且添加上更多的功能，也就是消息队列（Message Queue，MQ）</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md3"></a>
 开发环境</h1>
 <ul>
 <li>Ubuntu 22.04(WSL)</li>
@@ -111,7 +113,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>g++/gdb</li>
 <li>Makefile</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 技术选型</h1>
 <ul>
 <li>开发主语言: C++</li>
@@ -121,9 +123,9 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>单元测试框架: <a href="https://github.com/google/googletest">Gtest</a></li>
 <li>日志系统: <a href="https://github.com/Ye-Yu-Mo/LogSystem">Xulog</a></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md5"></a>
 需求分析</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 核心概念</h2>
 <ul>
 <li>生产者-Producer</li>
@@ -150,7 +152,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <p><img src="https://s2.loli.net/2024/10/03/SmqsxOVf4rz5wZE.png" alt="null _1_.png" class="inline"/></p>
 <p>消息流程图如下</p>
 <p><img src="https://s2.loli.net/2024/10/03/PQIBjTeS2dora5m.png" alt="null _2_.png" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 核心API</h2>
 <p>对于BrokerServer来说, 核心API如下</p>
 <ul>
@@ -166,7 +168,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>取消订阅-basicCancel</li>
 </ul>
 <p>ProducerClient和ConsumerClient通过网络的方式远程调用这些API实现消费者生产者模型</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 交换机类型</h2>
 <ul>
 <li>Direct-直接交换: 指定被该交换机绑定的队列名(完全匹配)</li>
@@ -177,7 +179,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <p>&zwj;匹配样例 </p>
 </blockquote>
 <p>binding_key: news.music.# 约定字符: 数字\字母\ '_' \ '.' \ '#' \ '*' routing_key: news.music.pop 约定字符: 数字\字母\ '_' \ '.'</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 网络通信</h2>
 <p>作为服务器客户端架构, 通过网络通信让客户端能够操作服务器</p>
 <ul>
@@ -196,7 +198,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>确认消息</li>
 <li>取消订阅</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 消息应答</h2>
 <p>被消费的信息需要进行应答, 有两种方式</p>
 <ul>
@@ -204,11 +206,11 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>手动应答: 消费者调用应答接口, 当BrokerServer收到应答请求时, 才删除消息</li>
 </ul>
 <p>手动应答是为了确保消息确实被处理成功, 在可靠性要求高的情况下可以使用</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 模块划分</h1>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 服务端模块</h2>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md13"></a>
 持久化数据管理中心</h3>
 <p>在数据管理模块中主要管理交换机, 队列, 队列绑定, 消息等部分的数据</p>
 <ol type="1">
@@ -309,7 +311,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </ul>
 </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md13"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 虚拟机管理模块</h3>
 <p>交换机/队列/绑定/消息都是虚拟机单元的一部分, 因此虚拟机是对上述模块的整合</p>
 <p>管理信息:</p><ul>
@@ -326,7 +328,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>确认消息</li>
 <li>获取交换机的所有绑定信息</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md15"></a>
 交换路由模块</h3>
 <p>消息发布是将消息传达到交换机中, 交换机再决定分发到队列中去</p>
 <p>分为直接交换, 广播交换, 主题交换</p>
@@ -335,7 +337,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>获取匹配结果</li>
 <li>判断格式是否符合规定</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md15"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 消费者管理模块</h3>
 <p>消费者指订阅了消息队列的客户端, 当队列中有消息会自动推送给客户端</p>
 <p>订阅消息指的是订阅一整个队列的消息</p>
@@ -364,7 +366,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>获取指定队列消费者</li>
 <li>删除指定队列消费者</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 信道管理模块</h3>
 <p>同一个连接(Connection)中可以有多个通信通道(Channel)</p>
 <p>某个客户端关闭通信实质上是关闭信道,并非关闭连接</p>
@@ -386,7 +388,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>创建\关闭信道</li>
 <li>获取指定信道的句柄</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md17"></a>
+<h3><a class="anchor" id="autotoc_md18"></a>
 连接管理模块</h3>
 <p>网络通信连接的管理</p>
 <p>连接关闭时, 需要将信道全部关闭</p>
@@ -402,7 +404,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>新增\关闭连接</li>
 <li>获取指定连接的句柄</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md18"></a>
+<h3><a class="anchor" id="autotoc_md19"></a>
 BrokerServer模块</h3>
 <p>是以上所有模块的整合, 形成一个服务器, 向外提供服务</p>
 <p>管理信息:</p><ul>
@@ -412,9 +414,9 @@ BrokerServer模块</h3>
 <li>工作线程池句柄</li>
 <li>muduo库通信所需元素</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 客户端模块</h2>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md21"></a>
 消费者管理</h3>
 <p>订阅客户端订阅一个队列时, 就是创建了一个消费者</p>
 <ul>
@@ -423,7 +425,7 @@ BrokerServer模块</h3>
 <li>自动确认标志</li>
 <li>消息回调处理函数指针</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md21"></a>
+<h3><a class="anchor" id="autotoc_md22"></a>
 信道管理模块</h3>
 <p>与服务端信道一一对应, 服务端信道提供的服务器, 客户端都有, 客户端再为用户提供服务</p>
 <p>向服务端的请求都是通过信道完成的</p>
@@ -435,7 +437,7 @@ BrokerServer模块</h3>
 <li>信道关联连接</li>
 <li>创建\关闭信道</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md23"></a>
 连接管理模块</h3>
 <p>客户端连接的管理本质上是对客户端TcpClient的二次封装和管理</p>
 <p>客户端对用户是透明的, 用户是通过连接创建信道, 通过信道完成相应的服务</p>
@@ -449,17 +451,17 @@ BrokerServer模块</h3>
 <li>管理线程池句柄</li>
 <li>连接关联的信道管理句柄</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md24"></a>
 异步工作池模块</h3>
 <p>TcpClient需要一个EventLoopThread模块进行IO事件监控</p>
 <p>收到推送消息后, 需要线程池对推送来的消息进行处理</p>
-<h3><a class="anchor" id="autotoc_md24"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 客户端模块</h3>
 <p>封装实现订阅客户端/发布客户端</p>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 模块关系图</h1>
 <p><img src="https://s2.loli.net/2024/10/03/bgqxMvCPpHr9ksn.png" alt="null _3_.png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 TODO</h1>
 <ul>
 <li>VirtualHost的创建删除</li>

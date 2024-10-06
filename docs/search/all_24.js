@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['消息应答_0',['消息应答',['../md__r_e_a_d_m_e.html#autotoc_md9',1,'']]],
-  ['消费者管理模块_1',['消费者管理模块',['../md__r_e_a_d_m_e.html#autotoc_md15',1,'']]],
-  ['消费者管理_2',['消费者管理',['../md__r_e_a_d_m_e.html#autotoc_md20',1,'']]]
+  ['核心概念_0',['核心概念',['../md__r_e_a_d_m_e.html#autotoc_md6',1,'']]],
+  ['核心api_1',['核心API',['../md__r_e_a_d_m_e.html#autotoc_md7',1,'']]]
 ];

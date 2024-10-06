@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['payload_0',['Payload',['../class_xu_m_q_1_1_message.html#a53116f1d58f9087100ba317d3dbd6423',1,'XuMQ::Message']]],
-  ['ptr_1',['ptr',['../struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa',1,'XuMQ::Exchange::ptr'],['../class_xu_m_q_1_1_exchange_manager.html#a7335bc08ad536ef5969a8efe0155fb17',1,'XuMQ::ExchangeManager::ptr'],['../struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06',1,'XuMQ::MsgQueue::ptr'],['../class_xu_m_q_1_1_msg_queue_manager.html#a461c7f6d1a110d8bcfdbfbbaf02d79c6',1,'XuMQ::MsgQueueManager::ptr']]]
+  ['internalarenaconstructable_5f_0',['internalarenaconstructable_',['../class_xu_m_q_1_1_basic_properties.html#a50c0edd22b4a01ed2b17f4d256ce9749',1,'XuMQ::BasicProperties::InternalArenaConstructable_'],['../class_xu_m_q_1_1_message___payload.html#aede4e619fcab235d9de675630425984f',1,'XuMQ::Message_Payload::InternalArenaConstructable_'],['../class_xu_m_q_1_1_message.html#a839475fdc1e0e57150b987e50b566acf',1,'XuMQ::Message::InternalArenaConstructable_']]]
 ];

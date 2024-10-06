@@ -1,0 +1,5 @@
+<map id="XuMQ::BindingMapper::removeQueueBindings" name="XuMQ::BindingMapper::removeQueueBindings">
+<area shape="rect" id="Node000001" title="移除消息队列绑定信息" alt="" coords="259,5,437,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_binding_manager.html#a6ce68afa19bf82b0347a1dbbf8ee2d59" title="移除指定消息队列的所有绑定信息" alt="" coords="5,5,211,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,28,211,28,211,23,245,23"/>
+</map>

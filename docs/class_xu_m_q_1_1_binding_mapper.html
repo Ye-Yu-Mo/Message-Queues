@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::BindingMapper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_binding_mapper.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_binding_mapper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::BindingMapper类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>绑定信息持久化管理类  
+ <a href="class_xu_m_q_1_1_binding_mapper.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="binding_8hpp_source.html">binding.hpp</a>&gt;</code></p>
+<div class="dynheader">
+XuMQ::BindingMapper 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1_binding_mapper_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1_binding_mapper_coll__map" id="a_xu_m_q_1_1_binding_mapper_coll__map">
+<area shape="rect" title="绑定信息持久化管理类" alt="" coords="5,93,172,119"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html" title="SQLite 数据库操作助手类" alt="" coords="14,5,163,31"/>
+<area shape="poly" title=" " alt="" coords="91,45,91,93,86,93,86,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aee9d00e3dca312e636e11623cf5c9e98" id="r_aee9d00e3dca312e636e11623cf5c9e98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98">BindingMapper</a> (const std::string &amp;dbfile)</td></tr>
+<tr class="memdesc:aee9d00e3dca312e636e11623cf5c9e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定信息持久化管理类 构造函数  <br /></td></tr>
+<tr class="separator:aee9d00e3dca312e636e11623cf5c9e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8359c4312ca03c8bae81cca1cb9c27c" id="r_ae8359c4312ca03c8bae81cca1cb9c27c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c">createTable</a> ()</td></tr>
+<tr class="memdesc:ae8359c4312ca03c8bae81cca1cb9c27c"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一张表  <br /></td></tr>
+<tr class="separator:ae8359c4312ca03c8bae81cca1cb9c27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b854bc8a5fa8f3bbc262905a1c67823" id="r_a7b854bc8a5fa8f3bbc262905a1c67823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#a7b854bc8a5fa8f3bbc262905a1c67823">removeTable</a> ()</td></tr>
+<tr class="memdesc:a7b854bc8a5fa8f3bbc262905a1c67823"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除一张表  <br /></td></tr>
+<tr class="separator:a7b854bc8a5fa8f3bbc262905a1c67823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e63c28ff05c747ee9fac05d2613e7ce" id="r_a5e63c28ff05c747ee9fac05d2613e7ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#a5e63c28ff05c747ee9fac05d2613e7ce">insert</a> (<a class="el" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> &amp;binding)</td></tr>
+<tr class="memdesc:a5e63c28ff05c747ee9fac05d2613e7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">新增一个绑定信息  <br /></td></tr>
+<tr class="separator:a5e63c28ff05c747ee9fac05d2613e7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a706f0d0142d82477a170db7d9e57409a" id="r_a706f0d0142d82477a170db7d9e57409a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#a706f0d0142d82477a170db7d9e57409a">remove</a> (const std::string &amp;ename, const std::string &amp;qname)</td></tr>
+<tr class="memdesc:a706f0d0142d82477a170db7d9e57409a"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除一个绑定信息  <br /></td></tr>
+<tr class="separator:a706f0d0142d82477a170db7d9e57409a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940a0d0189048fb02dde7ae2b82fb50b" id="r_a940a0d0189048fb02dde7ae2b82fb50b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#a940a0d0189048fb02dde7ae2b82fb50b">removeExchangeBindings</a> (const std::string &amp;ename)</td></tr>
+<tr class="memdesc:a940a0d0189048fb02dde7ae2b82fb50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除交换机绑定信息  <br /></td></tr>
+<tr class="separator:a940a0d0189048fb02dde7ae2b82fb50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabac40c1c7251e8819501783c2a3e777" id="r_aabac40c1c7251e8819501783c2a3e777"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#aabac40c1c7251e8819501783c2a3e777">removeQueueBindings</a> (const std::string &amp;qname)</td></tr>
+<tr class="memdesc:aabac40c1c7251e8819501783c2a3e777"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息队列绑定信息  <br /></td></tr>
+<tr class="separator:aabac40c1c7251e8819501783c2a3e777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebab403e56d9a65ca9705722aec6fe05" id="r_aebab403e56d9a65ca9705722aec6fe05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05">recovery</a> ()</td></tr>
+<tr class="memdesc:aebab403e56d9a65ca9705722aec6fe05"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有绑定信息 从数据库加载到内存  <br /></td></tr>
+<tr class="separator:aebab403e56d9a65ca9705722aec6fe05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a47a75e781d871bd450e443821eb6891f" id="r_a47a75e781d871bd450e443821eb6891f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f">selectCallback</a> (void *arg, int numcol, char **row, char **fields)</td></tr>
+<tr class="memdesc:a47a75e781d871bd450e443821eb6891f"><td class="mdescLeft">&#160;</td><td class="mdescRight">select语句的回调函数 将获取到的数据存入参数中  <br /></td></tr>
+<tr class="separator:a47a75e781d871bd450e443821eb6891f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:ac6284ddc379299f44c843036c4721d3d" id="r_ac6284ddc379299f44c843036c4721d3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">_sql_helper</a></td></tr>
+<tr class="memdesc:ac6284ddc379299f44c843036c4721d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库操作对象  <br /></td></tr>
+<tr class="separator:ac6284ddc379299f44c843036c4721d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>绑定信息持久化管理类 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aee9d00e3dca312e636e11623cf5c9e98" name="aee9d00e3dca312e636e11623cf5c9e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee9d00e3dca312e636e11623cf5c9e98">&#9670;&#160;</a></span>BindingMapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::BindingMapper::BindingMapper </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dbfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>绑定信息持久化管理类 构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dbfile</td><td>数据库名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>如果数据库不存在则自动创建 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_aee9d00e3dca312e636e11623cf5c9e98_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_aee9d00e3dca312e636e11623cf5c9e98_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_aee9d00e3dca312e636e11623cf5c9e98_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_aee9d00e3dca312e636e11623cf5c9e98_cgraph">
+<area shape="rect" title="绑定信息持久化管理类 构造函数" alt="" coords="5,101,172,141"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad" title="创建目录" alt="" coords="221,5,405,45"/>
+<area shape="poly" title=" " alt="" coords="127,99,219,55,237,48,239,53,221,60,129,103"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c" title="创建一张表" alt="" coords="229,69,396,109"/>
+<area shape="poly" title=" " alt="" coords="172,107,216,100,216,106,173,112"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#ae30429cd2d883fe24a616a65a547783b" title="打开数据库" alt="" coords="238,133,387,173"/>
+<area shape="poly" title=" " alt="" coords="173,131,225,138,224,143,172,136"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a28643d0c0fa7088e7afa86f4f048b2f9" title="获取文件的父目录" alt="" coords="220,197,405,237"/>
+<area shape="poly" title=" " alt="" coords="129,139,221,183,239,190,237,195,219,188,127,144"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e" title="检查文件是否存在" alt="" coords="453,13,636,38"/>
+<area shape="poly" title=" " alt="" coords="405,23,440,23,440,28,405,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="470,69,619,109"/>
+<area shape="poly" title=" " alt="" coords="396,87,456,87,456,92,396,92"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ae8359c4312ca03c8bae81cca1cb9c27c" name="ae8359c4312ca03c8bae81cca1cb9c27c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8359c4312ca03c8bae81cca1cb9c27c">&#9670;&#160;</a></span>createTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::BindingMapper::createTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建一张表 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_cgraph">
+<area shape="rect" title="创建一张表" alt="" coords="5,5,172,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="220,5,369,45"/>
+<area shape="poly" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_ae8359c4312ca03c8bae81cca1cb9c27c_icgraph">
+<area shape="rect" title="创建一张表" alt="" coords="220,5,387,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_mapper.html#aee9d00e3dca312e636e11623cf5c9e98" title="绑定信息持久化管理类 构造函数" alt="" coords="5,5,172,45"/>
+<area shape="poly" title=" " alt="" coords="206,28,172,28,172,23,206,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e63c28ff05c747ee9fac05d2613e7ce" name="a5e63c28ff05c747ee9fac05d2613e7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e63c28ff05c747ee9fac05d2613e7ce">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::BindingMapper::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>binding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新增一个绑定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binding</td><td>消息绑定信息指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>新增成功返回true 失败返回false并输出日志 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_cgraph">
+<area shape="rect" title="新增一个绑定信息" alt="" coords="5,5,172,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="220,5,369,45"/>
+<area shape="poly" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_a5e63c28ff05c747ee9fac05d2613e7ce_icgraph">
+<area shape="rect" title="新增一个绑定信息" alt="" coords="228,5,395,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#aa20a9e261cf940b3292d9e60e8e87eca" title="添加绑定信息" alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebab403e56d9a65ca9705722aec6fe05" name="aebab403e56d9a65ca9705722aec6fe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebab403e56d9a65ca9705722aec6fe05">&#9670;&#160;</a></span>recovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> XuMQ::BindingMapper::recovery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取所有绑定信息 从数据库加载到内存 </p>
+<dl class="section return"><dt>返回</dt><dd>一张映射表 交换机-&gt;消息队列绑定映射表的映射表 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7" title="绑定映射表-—交换机-&gt;消息队列绑定映射表的映射表">BindingMap</a> </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_cgraph">
+<area shape="rect" title="获取所有绑定信息 从数据库加载到内存" alt="" coords="5,37,172,77"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="229,5,378,45"/>
+<area shape="poly" title=" " alt="" coords="172,42,215,36,216,41,173,48"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="220,69,387,109"/>
+<area shape="poly" title=" " alt="" coords="173,67,207,72,206,77,172,72"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_aebab403e56d9a65ca9705722aec6fe05_icgraph">
+<area shape="rect" title="获取所有绑定信息 从数据库加载到内存" alt="" coords="228,5,395,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4" title="绑定信息数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a706f0d0142d82477a170db7d9e57409a" name="a706f0d0142d82477a170db7d9e57409a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706f0d0142d82477a170db7d9e57409a">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::BindingMapper::remove </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除一个绑定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ename</td><td>交换机名称 </td></tr>
+    <tr><td class="paramname">qname</td><td>消息队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>删除成功返回true 删除失败输出日志并返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_cgraph">
+<area shape="rect" title="移除一个绑定信息" alt="" coords="5,5,172,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="220,5,369,45"/>
+<area shape="poly" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_a706f0d0142d82477a170db7d9e57409a_icgraph">
+<area shape="rect" title="移除一个绑定信息" alt="" coords="228,5,395,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855" title="解除绑定信息" alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a940a0d0189048fb02dde7ae2b82fb50b" name="a940a0d0189048fb02dde7ae2b82fb50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a940a0d0189048fb02dde7ae2b82fb50b">&#9670;&#160;</a></span>removeExchangeBindings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::BindingMapper::removeExchangeBindings </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除交换机绑定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ename</td><td>交换机名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>删除成功返回true 删除失败输出日志并返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_cgraph">
+<area shape="rect" title="移除交换机绑定信息" alt="" coords="5,5,204,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="252,5,401,45"/>
+<area shape="poly" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_a940a0d0189048fb02dde7ae2b82fb50b_icgraph">
+<area shape="rect" title="移除交换机绑定信息" alt="" coords="252,5,451,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a57f5f588abf5ae70b43651a378a9d5ff" title="移除指定交换机的所有绑定信息" alt="" coords="5,5,204,45"/>
+<area shape="poly" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aabac40c1c7251e8819501783c2a3e777" name="aabac40c1c7251e8819501783c2a3e777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabac40c1c7251e8819501783c2a3e777">&#9670;&#160;</a></span>removeQueueBindings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::BindingMapper::removeQueueBindings </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除消息队列绑定信息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ename</td><td>消息队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>删除成功返回true 删除失败输出日志并返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_cgraph">
+<area shape="rect" title="移除消息队列绑定信息" alt="" coords="5,5,184,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="232,5,381,45"/>
+<area shape="poly" title=" " alt="" coords="184,23,218,23,218,28,184,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_aabac40c1c7251e8819501783c2a3e777_icgraph">
+<area shape="rect" title="移除消息队列绑定信息" alt="" coords="259,5,437,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a6ce68afa19bf82b0347a1dbbf8ee2d59" title="移除指定消息队列的所有绑定信息" alt="" coords="5,5,211,45"/>
+<area shape="poly" title=" " alt="" coords="245,28,211,28,211,23,245,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7b854bc8a5fa8f3bbc262905a1c67823" name="a7b854bc8a5fa8f3bbc262905a1c67823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b854bc8a5fa8f3bbc262905a1c67823">&#9670;&#160;</a></span>removeTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::BindingMapper::removeTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除一张表 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_cgraph" id="aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_cgraph">
+<area shape="rect" title="移除一张表" alt="" coords="5,5,172,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="220,5,369,45"/>
+<area shape="poly" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_a7b854bc8a5fa8f3bbc262905a1c67823_icgraph">
+<area shape="rect" title="移除一张表" alt="" coords="228,5,395,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a76a1b50abcd8258267ec5141919401fb" title="清除绑定信息" alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47a75e781d871bd450e443821eb6891f" name="a47a75e781d871bd450e443821eb6891f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a75e781d871bd450e443821eb6891f">&#9670;&#160;</a></span>selectCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int XuMQ::BindingMapper::selectCallback </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numcol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>select语句的回调函数 将获取到的数据存入参数中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg</td><td>存入的参数 </td></tr>
+    <tr><td class="paramname">numcol</td><td>列数 </td></tr>
+    <tr><td class="paramname">row</td><td>行 </td></tr>
+    <tr><td class="paramname">fields</td><td>列名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>处理结果 0表示正常退出 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>防止交换机相关绑定信息已经存在 不能直接创建队列映射 会覆盖历史数据 先获取交换机的映射对象 向其中添加数据 若交换机没有映射信息 使用引用则会自动创建</dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_binding_mapper_a47a75e781d871bd450e443821eb6891f_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_binding_mapper_a47a75e781d871bd450e443821eb6891f_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_binding_mapper_a47a75e781d871bd450e443821eb6891f_icgraph" id="aclass_xu_m_q_1_1_binding_mapper_a47a75e781d871bd450e443821eb6891f_icgraph">
+<area shape="rect" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="443,5,609,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05" title="获取所有绑定信息 从数据库加载到内存" alt="" coords="228,5,395,45"/>
+<area shape="poly" title=" " alt="" coords="429,28,395,28,395,23,429,23"/>
+<area shape="rect" href="class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4" title="绑定信息数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,5,180,45"/>
+<area shape="poly" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac6284ddc379299f44c843036c4721d3d" name="ac6284ddc379299f44c843036c4721d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6284ddc379299f44c843036c4721d3d">&#9670;&#160;</a></span>_sql_helper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_sqlite_helper.html">SqliteHelper</a> XuMQ::BindingMapper::_sql_helper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数据库操作对象 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html">BindingMapper</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<map id="XuMQ::BindingMapper::insert" name="XuMQ::BindingMapper::insert">
+<area shape="rect" id="Node000001" title="新增一个绑定信息" alt="" coords="5,5,172,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="220,5,369,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,23,206,23,206,28,172,28"/>
+</map>

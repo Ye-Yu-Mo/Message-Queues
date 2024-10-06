@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['服务端模块_0',['服务端模块',['../md__r_e_a_d_m_e.html#autotoc_md11',1,'']]]
+  ['技术选型_0',['技术选型',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]]
 ];

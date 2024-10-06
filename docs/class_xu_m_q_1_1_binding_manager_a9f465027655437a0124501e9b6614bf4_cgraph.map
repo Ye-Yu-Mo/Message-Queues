@@ -1,0 +1,9 @@
+<map id="XuMQ::BindingManager::BindingManager" name="XuMQ::BindingManager::BindingManager">
+<area shape="rect" id="Node000001" title="绑定信息数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="5,37,180,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_binding_mapper.html#aebab403e56d9a65ca9705722aec6fe05" title="获取所有绑定信息 从数据库加载到内存" alt="" coords="228,37,395,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,55,214,55,214,60,181,60"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_sqlite_helper.html#a9228afe2e214e707afdf56640d7bc76a" title="执行 SQL 语句" alt="" coords="451,5,601,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,42,438,36,438,41,396,48"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_binding_mapper.html#a47a75e781d871bd450e443821eb6891f" title="select语句的回调函数 将获取到的数据存入参数中" alt="" coords="443,69,609,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="396,67,429,72,428,77,395,72"/>
+</map>

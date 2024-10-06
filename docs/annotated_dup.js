@@ -3,6 +3,9 @@ var annotated_dup =
     [ "XuMQ", "namespace_xu_m_q.html", [
       [ "BasicProperties", "class_xu_m_q_1_1_basic_properties.html", "class_xu_m_q_1_1_basic_properties" ],
       [ "BasicPropertiesDefaultTypeInternal", "struct_xu_m_q_1_1_basic_properties_default_type_internal.html", "struct_xu_m_q_1_1_basic_properties_default_type_internal" ],
+      [ "Binding", "struct_xu_m_q_1_1_binding.html", "struct_xu_m_q_1_1_binding" ],
+      [ "BindingManager", "class_xu_m_q_1_1_binding_manager.html", "class_xu_m_q_1_1_binding_manager" ],
+      [ "BindingMapper", "class_xu_m_q_1_1_binding_mapper.html", "class_xu_m_q_1_1_binding_mapper" ],
       [ "Exchange", "struct_xu_m_q_1_1_exchange.html", "struct_xu_m_q_1_1_exchange" ],
       [ "ExchangeManager", "class_xu_m_q_1_1_exchange_manager.html", "class_xu_m_q_1_1_exchange_manager" ],
       [ "ExchangeMapper", "class_xu_m_q_1_1_exchange_mapper.html", "class_xu_m_q_1_1_exchange_mapper" ],
@@ -19,6 +22,7 @@ var annotated_dup =
       [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
       [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ]
     ] ],
+    [ "BindingTest", "class_binding_test.html", "class_binding_test" ],
     [ "ExchangerMapper", "class_exchanger_mapper.html", null ],
     [ "ExchangeTest", "class_exchange_test.html", "class_exchange_test" ],
     [ "is_proto_enum< ::XuMQ::DeliveryMode >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_delivery_mode_01_4.html", null ],

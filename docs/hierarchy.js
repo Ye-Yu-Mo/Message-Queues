@@ -4,7 +4,11 @@ var hierarchy =
     [ "XuMQ::Message::_Internal", "class_xu_m_q_1_1_message_1_1___internal.html", null ],
     [ "XuMQ::Message_Payload::_Internal", "class_xu_m_q_1_1_message___payload_1_1___internal.html", null ],
     [ "XuMQ::BasicPropertiesDefaultTypeInternal", "struct_xu_m_q_1_1_basic_properties_default_type_internal.html", null ],
+    [ "XuMQ::Binding", "struct_xu_m_q_1_1_binding.html", null ],
+    [ "XuMQ::BindingManager", "class_xu_m_q_1_1_binding_manager.html", null ],
+    [ "XuMQ::BindingMapper", "class_xu_m_q_1_1_binding_mapper.html", null ],
     [ "testing::Environment", null, [
+      [ "BindingTest", "class_binding_test.html", null ],
       [ "ExchangeTest", "class_exchange_test.html", null ],
       [ "QueueTest", "class_queue_test.html", null ]
     ] ],
