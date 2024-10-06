@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['_7ebasicproperties_0',['~BasicProperties',['../class_xu_m_q_1_1_basic_properties.html#ad61a3d3e3971ffe42cb901838a46c996',1,'XuMQ::BasicProperties']]],
-  ['_7ebasicpropertiesdefaulttypeinternal_1',['~BasicPropertiesDefaultTypeInternal',['../struct_xu_m_q_1_1_basic_properties_default_type_internal.html#a20da497eeb5977f1fa1ef7c34bcddfa1',1,'XuMQ::BasicPropertiesDefaultTypeInternal']]],
-  ['_7emessage_2',['~Message',['../class_xu_m_q_1_1_message.html#a08576bf67bea1220e3d365114f5233b2',1,'XuMQ::Message']]],
-  ['_7emessage_5fpayload_3',['~Message_Payload',['../class_xu_m_q_1_1_message___payload.html#a75efd2d985380b5559421e98803e9d62',1,'XuMQ::Message_Payload']]],
-  ['_7emessage_5fpayloaddefaulttypeinternal_4',['~Message_PayloadDefaultTypeInternal',['../struct_xu_m_q_1_1_message___payload_default_type_internal.html#a21b4874cd61d9c2f98f3a759308c0d67',1,'XuMQ::Message_PayloadDefaultTypeInternal']]],
-  ['_7emessagedefaulttypeinternal_5',['~MessageDefaultTypeInternal',['../struct_xu_m_q_1_1_message_default_type_internal.html#ae35a29c55ea9366985c8b6be208cedf5',1,'XuMQ::MessageDefaultTypeInternal']]]
+  ['waitackcount_0',['waitackcount',['../class_xu_m_q_1_1_queue_message.html#ab0524e7480ec1b83bf54b7faf87911bf',1,'XuMQ::QueueMessage::waitAckCount()'],['../class_xu_m_q_1_1_message_manager.html#ab608b376d1015f39a31027fa8ce067ad',1,'XuMQ::MessageManager::waitAckCount()']]],
+  ['write_1',['write',['../class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a',1,'XuMQ::FileHelper::write(const std::string &amp;body)'],['../class_xu_m_q_1_1_file_helper.html#ac7c94fa35d8403064bb43511759abc0e',1,'XuMQ::FileHelper::write(const char *body, size_t offset, size_t len)']]]
 ];

@@ -1,9 +1,17 @@
 <map id="XuMQ::FileHelper::createFile" name="XuMQ::FileHelper::createFile">
-<area shape="rect" id="Node000001" title="创建新文件" alt="" coords="453,42,660,67"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69" title="创建消息文件" alt="" coords="229,5,405,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,43,405,39,406,33,440,38"/>
-<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="290,70,345,95"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,71,345,82,345,77,439,66"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb" title="构造函数 创建必要的目录和数据文件" alt="" coords="5,5,181,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+<area shape="rect" id="Node000001" title="创建新文件" alt="" coords="671,77,877,102"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69" title="创建消息文件" alt="" coords="447,5,623,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="711,76,610,48,611,43,713,70"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="447,69,623,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="657,92,623,92,623,87,657,87"/>
+<area shape="rect" id="Node000008" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="507,134,562,159"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="708,108,563,143,561,138,706,103"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb" title="构造函数 创建必要的目录和数据文件" alt="" coords="223,5,399,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="433,28,399,28,399,23,433,23"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="226,69,395,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="433,92,396,92,396,87,433,87"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="226,133,395,173"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="451,116,382,136,380,131,450,111"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,69,175,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="212,92,175,92,175,87,212,87"/>
 </map>

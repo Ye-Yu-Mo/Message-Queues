@@ -15,10 +15,12 @@ var annotated_dup =
       [ "Message_Payload", "class_xu_m_q_1_1_message___payload.html", "class_xu_m_q_1_1_message___payload" ],
       [ "Message_PayloadDefaultTypeInternal", "struct_xu_m_q_1_1_message___payload_default_type_internal.html", "struct_xu_m_q_1_1_message___payload_default_type_internal" ],
       [ "MessageDefaultTypeInternal", "struct_xu_m_q_1_1_message_default_type_internal.html", "struct_xu_m_q_1_1_message_default_type_internal" ],
+      [ "MessageManager", "class_xu_m_q_1_1_message_manager.html", "class_xu_m_q_1_1_message_manager" ],
       [ "MessageMapper", "class_xu_m_q_1_1_message_mapper.html", "class_xu_m_q_1_1_message_mapper" ],
       [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", "struct_xu_m_q_1_1_msg_queue" ],
       [ "MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", "class_xu_m_q_1_1_msg_queue_manager" ],
       [ "MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", "class_xu_m_q_1_1_msg_queue_mapper" ],
+      [ "QueueMessage", "class_xu_m_q_1_1_queue_message.html", "class_xu_m_q_1_1_queue_message" ],
       [ "SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", "class_xu_m_q_1_1_sqlite_helper" ],
       [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
       [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ]

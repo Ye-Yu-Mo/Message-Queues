@@ -1,0 +1,5 @@
+<map id="XuMQ::QueueMessage" name="XuMQ::QueueMessage">
+<area shape="rect" id="Node000001" title="推送消息队列管理" alt="" coords="9,93,178,119"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html" title="处理消息队列的文件存储和管理类" alt="" coords="5,5,181,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,45,96,93,91,93,91,45"/>
+</map>

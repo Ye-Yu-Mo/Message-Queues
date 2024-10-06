@@ -1,0 +1,23 @@
+<map id="XuMQ::QueueMessage::recovery" name="XuMQ::QueueMessage::recovery">
+<area shape="rect" id="Node000001" title="恢复历史消息" alt="" coords="5,143,175,183"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="223,143,399,183"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,161,209,161,209,166,175,166"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="451,5,658,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,141,376,91,409,64,445,41,465,33,467,37,448,46,413,68,380,95,331,145"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="467,79,643,119"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="387,141,464,120,466,125,388,146"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="467,143,643,183"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="399,161,453,161,453,166,399,166"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="447,208,663,233"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="397,181,487,202,486,207,396,186"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="458,281,651,307"/>
+<area shape="poly" id="edge11_Node000002_Node000009" title=" " alt="" coords="344,181,448,244,511,273,509,278,445,248,341,186"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="510,80,507,70,514,60,530,55,555,53,583,56,598,63,596,68,581,61,555,58,531,60,518,65,512,71,515,78"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="711,125,883,151"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="642,151,697,146,697,151,643,157"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="931,151,1100,176"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="643,161,917,161,917,166,643,166"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="761,127,753,117,757,107,772,101,797,99,827,102,839,111,836,116,825,107,797,104,773,106,761,111,758,116,765,124"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="883,145,917,149,917,155,882,151"/>
+<area shape="poly" id="edge12_Node000009_Node000009" title=" " alt="" coords="516,283,507,273,512,263,528,257,555,255,588,259,601,268,598,272,586,263,555,260,529,262,515,267,513,272,520,279"/>
+</map>

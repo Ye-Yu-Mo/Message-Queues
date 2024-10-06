@@ -1,10 +1,16 @@
 <map id="XuMQ::FileHelper::read" name="XuMQ::FileHelper::read">
-<area shape="rect" id="Node000001" title="读取文件内容" alt="" coords="453,42,625,67"/>
-<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="579,32,568,24,539,21,516,23,503,28,501,33,507,40,503,44,495,34,499,24,514,18,539,15,570,19,582,28"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="229,5,405,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,44,405,40,406,34,440,39"/>
-<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="290,70,345,95"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,70,345,82,345,77,440,65"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+<area shape="rect" id="Node000001" title="读取文件内容" alt="" coords="888,74,1060,99"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="1014,64,1003,56,974,53,950,55,938,60,935,65,942,72,938,76,930,66,934,56,949,50,974,47,1005,51,1017,60"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="664,37,840,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="874,76,840,72,840,66,875,71"/>
+<area shape="rect" id="Node000007" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="725,102,779,127"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="875,102,780,114,779,109,874,97"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="650,60,616,60,616,55,650,55"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>

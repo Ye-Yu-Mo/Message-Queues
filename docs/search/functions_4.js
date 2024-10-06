@@ -10,6 +10,8 @@ var searchData=
   ['deliverymode_5fisvalid_7',['DeliveryMode_IsValid',['../namespace_xu_m_q.html#a8471a456dc9ff20e672496443a8e1ecc',1,'XuMQ']]],
   ['deliverymode_5fname_8',['DeliveryMode_Name',['../namespace_xu_m_q.html#abb33d9f6f89ddc80ac3a1a8725e20742',1,'XuMQ']]],
   ['deliverymode_5fparse_9',['DeliveryMode_Parse',['../namespace_xu_m_q.html#ae51bc0fa5f83234e4f1d74487bf2854f',1,'XuMQ']]],
-  ['descriptor_10',['descriptor',['../class_xu_m_q_1_1_basic_properties.html#ac0eae6cd945453117c8ab1516dee6b67',1,'XuMQ::BasicProperties::descriptor()'],['../class_xu_m_q_1_1_message___payload.html#ac9043bb41d70c6ca783f47e57e972ed0',1,'XuMQ::Message_Payload::descriptor()'],['../class_xu_m_q_1_1_message.html#ac8516772274e5f8ccbe0ad4610ec8361',1,'XuMQ::Message::descriptor()']]],
-  ['descriptor_5ftable_5fmsg_5f2eproto_5fgetter_11',['descriptor_table_msg_2eproto_getter',['../msg_8pb_8cc.html#abc86ab67b54e8e0fb8d5b979b3db680b',1,'msg.pb.cc']]]
+  ['descriptor_10',['descriptor',['../class_xu_m_q_1_1_message___payload.html#ac9043bb41d70c6ca783f47e57e972ed0',1,'XuMQ::Message_Payload::descriptor()'],['../class_xu_m_q_1_1_message.html#ac8516772274e5f8ccbe0ad4610ec8361',1,'XuMQ::Message::descriptor()'],['../class_xu_m_q_1_1_basic_properties.html#ac0eae6cd945453117c8ab1516dee6b67',1,'XuMQ::BasicProperties::descriptor()']]],
+  ['descriptor_5ftable_5fmsg_5f2eproto_5fgetter_11',['descriptor_table_msg_2eproto_getter',['../msg_8pb_8cc.html#abc86ab67b54e8e0fb8d5b979b3db680b',1,'msg.pb.cc']]],
+  ['destroyqueuemessage_12',['destroyQueueMessage',['../class_xu_m_q_1_1_message_manager.html#a43dc75f6a048db24d474ca4fda192111',1,'XuMQ::MessageManager']]],
+  ['durablecount_13',['durablecount',['../class_xu_m_q_1_1_message_manager.html#adbb292daaf6e87d4f6352dbfb4418cac',1,'XuMQ::MessageManager::durableCount()'],['../class_xu_m_q_1_1_queue_message.html#aa895f956fbabab9f34e3f9a86412e451',1,'XuMQ::QueueMessage::durableCount()']]]
 ];

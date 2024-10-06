@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::QueueMessage类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_queue_message.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_queue_message-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::QueueMessage类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>推送消息队列管理  
+ <a href="class_xu_m_q_1_1_queue_message.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="message_8hpp_source.html">message.hpp</a>&gt;</code></p>
+<div class="dynheader">
+XuMQ::QueueMessage 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1_queue_message_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1_queue_message_coll__map" id="a_xu_m_q_1_1_queue_message_coll__map">
+<area shape="rect" title="推送消息队列管理" alt="" coords="9,93,178,119"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html" title="处理消息队列的文件存储和管理类" alt="" coords="5,5,181,31"/>
+<area shape="poly" title=" " alt="" coords="96,45,96,93,91,93,91,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a7e22dae4e225f975705b3ba5213b5ec1" id="r_a7e22dae4e225f975705b3ba5213b5ec1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a7e22dae4e225f975705b3ba5213b5ec1">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_queue_message.html">QueueMessage</a> &gt;</td></tr>
+<tr class="separator:a7e22dae4e225f975705b3ba5213b5ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aebc4131d35b3fc0ef9bde430464cf3bd" id="r_aebc4131d35b3fc0ef9bde430464cf3bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#aebc4131d35b3fc0ef9bde430464cf3bd">QueueMessage</a> (std::string &amp;basedir, const std::string &amp;qname)</td></tr>
+<tr class="memdesc:aebc4131d35b3fc0ef9bde430464cf3bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">推送消息队列构造函数 恢复历史消息  <br /></td></tr>
+<tr class="separator:aebc4131d35b3fc0ef9bde430464cf3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a4bcdfbf5560b1ec02b71eca6604d2e" id="r_a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e">recovery</a> ()</td></tr>
+<tr class="memdesc:a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复历史消息  <br /></td></tr>
+<tr class="separator:a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ccb16c92bc8a4e87f1000a5cd28ac2" id="r_a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2">insert</a> (const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *bp, const std::string &amp;body, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a> delivery_mode)</td></tr>
+<tr class="memdesc:a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入推送消息队列  <br /></td></tr>
+<tr class="separator:a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec4a3731dfd398fc819e72ef5a9a3d4" id="r_a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3ec4a3731dfd398fc819e72ef5a9a3d4">front</a> ()</td></tr>
+<tr class="memdesc:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取队头消息  <br /></td></tr>
+<tr class="separator:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c9afb899ac5840d9de4e531bdbc6fa" id="r_ae2c9afb899ac5840d9de4e531bdbc6fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa">remove</a> (const std::string &amp;msg_id)</td></tr>
+<tr class="memdesc:ae2c9afb899ac5840d9de4e531bdbc6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除接收到确认ack的消息  <br /></td></tr>
+<tr class="separator:ae2c9afb899ac5840d9de4e531bdbc6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f0f73843aab5c64c48fcc3b92e5b43" id="r_a61f0f73843aab5c64c48fcc3b92e5b43"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a61f0f73843aab5c64c48fcc3b92e5b43">availableCount</a> ()</td></tr>
+<tr class="memdesc:a61f0f73843aab5c64c48fcc3b92e5b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取可获取消息数量  <br /></td></tr>
+<tr class="separator:a61f0f73843aab5c64c48fcc3b92e5b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5ea21009d6f65b2536b7edda697668" id="r_a9f5ea21009d6f65b2536b7edda697668"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a9f5ea21009d6f65b2536b7edda697668">totalCount</a> ()</td></tr>
+<tr class="memdesc:a9f5ea21009d6f65b2536b7edda697668"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取总消息数量  <br /></td></tr>
+<tr class="separator:a9f5ea21009d6f65b2536b7edda697668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0524e7480ec1b83bf54b7faf87911bf" id="r_ab0524e7480ec1b83bf54b7faf87911bf"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ab0524e7480ec1b83bf54b7faf87911bf">waitAckCount</a> ()</td></tr>
+<tr class="memdesc:ab0524e7480ec1b83bf54b7faf87911bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取待确认消息数量  <br /></td></tr>
+<tr class="separator:ab0524e7480ec1b83bf54b7faf87911bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa895f956fbabab9f34e3f9a86412e451" id="r_aa895f956fbabab9f34e3f9a86412e451"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#aa895f956fbabab9f34e3f9a86412e451">durableCount</a> ()</td></tr>
+<tr class="memdesc:aa895f956fbabab9f34e3f9a86412e451"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取持久化消息数量  <br /></td></tr>
+<tr class="separator:aa895f956fbabab9f34e3f9a86412e451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8570b81207fb95a1ac360d55f55ba4a" id="r_af8570b81207fb95a1ac360d55f55ba4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#af8570b81207fb95a1ac360d55f55ba4a">clear</a> ()</td></tr>
+<tr class="memdesc:af8570b81207fb95a1ac360d55f55ba4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空数据  <br /></td></tr>
+<tr class="separator:af8570b81207fb95a1ac360d55f55ba4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a34d8541ab7e8a651edb0be9d8f54751c" id="r_a34d8541ab7e8a651edb0be9d8f54751c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a34d8541ab7e8a651edb0be9d8f54751c">garbageCollectionCheck</a> ()</td></tr>
+<tr class="memdesc:a34d8541ab7e8a651edb0be9d8f54751c"><td class="mdescLeft">&#160;</td><td class="mdescRight">垃圾回收条件检测  <br /></td></tr>
+<tr class="separator:a34d8541ab7e8a651edb0be9d8f54751c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada3a025f1a12afc594e4cae142572909" id="r_ada3a025f1a12afc594e4cae142572909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909">garbageCollection</a> ()</td></tr>
+<tr class="memdesc:ada3a025f1a12afc594e4cae142572909"><td class="mdescLeft">&#160;</td><td class="mdescRight">垃圾回收  <br /></td></tr>
+<tr class="separator:ada3a025f1a12afc594e4cae142572909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1e4c2d835ea20446bc92831448ab6e77" id="r_a1e4c2d835ea20446bc92831448ab6e77"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a1e4c2d835ea20446bc92831448ab6e77">_mutex</a></td></tr>
+<tr class="memdesc:a1e4c2d835ea20446bc92831448ab6e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
+<tr class="separator:a1e4c2d835ea20446bc92831448ab6e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3859f8c30a5179f05cc86615c7af1ac6" id="r_a3859f8c30a5179f05cc86615c7af1ac6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3859f8c30a5179f05cc86615c7af1ac6">_qname</a></td></tr>
+<tr class="memdesc:a3859f8c30a5179f05cc86615c7af1ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列名称  <br /></td></tr>
+<tr class="separator:a3859f8c30a5179f05cc86615c7af1ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad012b905924a141dc18e3483d040bbdc" id="r_ad012b905924a141dc18e3483d040bbdc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ad012b905924a141dc18e3483d040bbdc">_valid_count</a></td></tr>
+<tr class="memdesc:ad012b905924a141dc18e3483d040bbdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">有效消息数量  <br /></td></tr>
+<tr class="separator:ad012b905924a141dc18e3483d040bbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4975d3805a9917a517b5473d2647eb5" id="r_ae4975d3805a9917a517b5473d2647eb5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ae4975d3805a9917a517b5473d2647eb5">_total_count</a></td></tr>
+<tr class="memdesc:ae4975d3805a9917a517b5473d2647eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">总消息数量  <br /></td></tr>
+<tr class="separator:ae4975d3805a9917a517b5473d2647eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34d3b57f38551de8dcd3df67caca1622" id="r_a34d3b57f38551de8dcd3df67caca1622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_message_mapper.html">MessageMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a34d3b57f38551de8dcd3df67caca1622">_mapper</a></td></tr>
+<tr class="memdesc:a34d3b57f38551de8dcd3df67caca1622"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列持久化管理类  <br /></td></tr>
+<tr class="separator:a34d3b57f38551de8dcd3df67caca1622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1bb7719d110d094bd831f5388b5d41" id="r_abb1bb7719d110d094bd831f5388b5d41"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#abb1bb7719d110d094bd831f5388b5d41">_msgs</a></td></tr>
+<tr class="memdesc:abb1bb7719d110d094bd831f5388b5d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">待推送消息列表  <br /></td></tr>
+<tr class="separator:abb1bb7719d110d094bd831f5388b5d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bde3b7bf27d1acef3448d65d0d8328" id="r_ac7bde3b7bf27d1acef3448d65d0d8328"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ac7bde3b7bf27d1acef3448d65d0d8328">_durable_msgs</a></td></tr>
+<tr class="memdesc:ac7bde3b7bf27d1acef3448d65d0d8328"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久化消息映射表  <br /></td></tr>
+<tr class="separator:ac7bde3b7bf27d1acef3448d65d0d8328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c287ca72d5ed239fe8949a55959ae11" id="r_a1c287ca72d5ed239fe8949a55959ae11"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a1c287ca72d5ed239fe8949a55959ae11">_waitack_msgs</a></td></tr>
+<tr class="memdesc:a1c287ca72d5ed239fe8949a55959ae11"><td class="mdescLeft">&#160;</td><td class="mdescRight">待确认消息映射表  <br /></td></tr>
+<tr class="separator:a1c287ca72d5ed239fe8949a55959ae11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>推送消息队列管理 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a7e22dae4e225f975705b3ba5213b5ec1" name="a7e22dae4e225f975705b3ba5213b5ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e22dae4e225f975705b3ba5213b5ec1">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_queue_message.html#a7e22dae4e225f975705b3ba5213b5ec1">XuMQ::QueueMessage::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_queue_message.html">QueueMessage</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aebc4131d35b3fc0ef9bde430464cf3bd" name="aebc4131d35b3fc0ef9bde430464cf3bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc4131d35b3fc0ef9bde430464cf3bd">&#9670;&#160;</a></span>QueueMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::QueueMessage::QueueMessage </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>basedir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>推送消息队列构造函数 恢复历史消息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">basedir</td><td>基础目录 </td></tr>
+    <tr><td class="paramname">qname</td><td>队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a61f0f73843aab5c64c48fcc3b92e5b43" name="a61f0f73843aab5c64c48fcc3b92e5b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61f0f73843aab5c64c48fcc3b92e5b43">&#9670;&#160;</a></span>availableCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::availableCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取可获取消息数量 </p>
+<dl class="section return"><dt>返回</dt><dd>可获取消息数量 </dd></dl>
+
+</div>
+</div>
+<a id="af8570b81207fb95a1ac360d55f55ba4a" name="af8570b81207fb95a1ac360d55f55ba4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8570b81207fb95a1ac360d55f55ba4a">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::QueueMessage::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空数据 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_af8570b81207fb95a1ac360d55f55ba4a_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_af8570b81207fb95a1ac360d55f55ba4a_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_af8570b81207fb95a1ac360d55f55ba4a_cgraph" id="aclass_xu_m_q_1_1_queue_message_af8570b81207fb95a1ac360d55f55ba4a_cgraph">
+<area shape="rect" title="清空数据" alt="" coords="5,5,175,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a13e702a334c62783ae9a404b360d80b3" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="223,5,399,45"/>
+<area shape="poly" title=" " alt="" coords="175,23,209,23,209,28,175,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="447,13,663,38"/>
+<area shape="poly" title=" " alt="" coords="399,23,433,23,433,28,399,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa895f956fbabab9f34e3f9a86412e451" name="aa895f956fbabab9f34e3f9a86412e451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa895f956fbabab9f34e3f9a86412e451">&#9670;&#160;</a></span>durableCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::durableCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取持久化消息数量 </p>
+<dl class="section return"><dt>返回</dt><dd>持久化消息数量 </dd></dl>
+
+</div>
+</div>
+<a id="a3ec4a3731dfd398fc819e72ef5a9a3d4" name="a3ec4a3731dfd398fc819e72ef5a9a3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec4a3731dfd398fc819e72ef5a9a3d4">&#9670;&#160;</a></span>front()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> XuMQ::QueueMessage::front </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取队头消息 </p>
+<dl class="section return"><dt>返回</dt><dd>消息指针 </dd></dl>
+
+</div>
+</div>
+<a id="ada3a025f1a12afc594e4cae142572909" name="ada3a025f1a12afc594e4cae142572909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada3a025f1a12afc594e4cae142572909">&#9670;&#160;</a></span>garbageCollection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::QueueMessage::garbageCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>垃圾回收 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_cgraph" id="aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_cgraph">
+<area shape="rect" title="垃圾回收" alt="" coords="5,175,175,215"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="229,143,405,183"/>
+<area shape="poly" title=" " alt="" coords="174,181,215,175,215,180,175,186"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a34d8541ab7e8a651edb0be9d8f54751c" title="垃圾回收条件检测" alt="" coords="223,207,411,247"/>
+<area shape="poly" title=" " alt="" coords="175,205,209,210,209,215,174,210"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="463,5,670,31"/>
+<area shape="poly" title=" " alt="" coords="334,141,386,91,420,64,457,41,477,33,479,37,460,46,423,68,389,95,338,145"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="479,79,655,119"/>
+<area shape="poly" title=" " alt="" coords="395,141,474,120,476,125,396,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="479,143,655,183"/>
+<area shape="poly" title=" " alt="" coords="405,161,465,161,465,166,405,166"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="459,208,675,233"/>
+<area shape="poly" title=" " alt="" coords="405,181,498,202,497,208,404,186"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="470,281,663,307"/>
+<area shape="poly" title=" " alt="" coords="389,181,412,193,428,206,437,219,446,231,460,244,488,260,517,274,514,279,485,265,457,248,442,235,433,222,424,210,409,198,387,186"/>
+<area shape="poly" title=" " alt="" coords="522,80,519,70,526,60,542,55,567,53,595,56,610,63,608,68,593,61,567,58,543,60,530,65,524,71,527,78"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="723,125,895,151"/>
+<area shape="poly" title=" " alt="" coords="654,151,709,146,709,151,655,157"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="943,151,1112,176"/>
+<area shape="poly" title=" " alt="" coords="655,161,929,161,929,166,655,166"/>
+<area shape="poly" title=" " alt="" coords="773,127,765,117,769,107,784,101,809,99,839,102,851,111,848,116,837,107,809,104,785,106,773,111,770,116,777,124"/>
+<area shape="poly" title=" " alt="" coords="895,145,929,149,929,155,894,151"/>
+<area shape="poly" title=" " alt="" coords="528,283,519,273,524,263,540,257,567,255,600,259,613,268,610,272,598,263,567,260,541,262,527,267,525,272,532,279"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_icgraph" id="aclass_xu_m_q_1_1_queue_message_ada3a025f1a12afc594e4cae142572909_icgraph">
+<area shape="rect" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a34d8541ab7e8a651edb0be9d8f54751c" name="a34d8541ab7e8a651edb0be9d8f54751c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d8541ab7e8a651edb0be9d8f54751c">&#9670;&#160;</a></span>garbageCollectionCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::QueueMessage::garbageCollectionCheck </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>垃圾回收条件检测 </p>
+<dl class="section return"><dt>返回</dt><dd>消息总量大于2000 且 有效消息占比小于50% 返回true 否则返回false </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_a34d8541ab7e8a651edb0be9d8f54751c_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_a34d8541ab7e8a651edb0be9d8f54751c_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_a34d8541ab7e8a651edb0be9d8f54751c_icgraph" id="aclass_xu_m_q_1_1_queue_message_a34d8541ab7e8a651edb0be9d8f54751c_icgraph">
+<area shape="rect" title="垃圾回收条件检测" alt="" coords="440,5,628,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,28,392,28,392,23,426,23"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91ccb16c92bc8a4e87f1000a5cd28ac2" name="a91ccb16c92bc8a4e87f1000a5cd28ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ccb16c92bc8a4e87f1000a5cd28ac2">&#9670;&#160;</a></span>insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::QueueMessage::insert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *&#160;</td>
+          <td class="paramname"><em>bp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a>&#160;</td>
+          <td class="paramname"><em>delivery_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入推送消息队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bp</td><td>消息属性 </td></tr>
+    <tr><td class="paramname">body</td><td>消息内容主体 </td></tr>
+    <tr><td class="paramname">delivery_mode</td><td>持久化标志 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph" id="aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph">
+<area shape="rect" title="插入推送消息队列" alt="" coords="5,144,175,184"/>
+<area shape="rect" href="class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="233,5,403,45"/>
+<area shape="poly" title=" " alt="" coords="110,142,158,99,221,55,234,48,237,53,224,60,162,103,113,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_basic_properties.html#a72f608855c1f3cd1496ab75048b0571c" title=" " alt="" coords="223,70,413,95"/>
+<area shape="poly" title=" " alt="" coords="134,141,222,105,250,97,252,102,224,111,136,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="230,144,406,184"/>
+<area shape="poly" title=" " alt="" coords="175,161,216,161,216,167,175,167"/>
+<area shape="rect" href="class_xu_m_q_1_1_basic_properties.html#a778f5ac91b355081fc43120fe57ad2b0" title=" " alt="" coords="233,208,403,248"/>
+<area shape="poly" title=" " alt="" coords="163,182,233,202,232,207,161,187"/>
+<area shape="rect" href="class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="227,273,409,298"/>
+<area shape="poly" title=" " alt="" coords="115,182,163,220,224,258,244,266,242,271,221,262,160,225,112,186"/>
+<area shape="poly" title=" " alt="" coords="276,144,273,134,280,125,295,119,318,117,344,120,359,127,356,132,343,125,318,123,296,125,283,129,278,135,281,143"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3a4bcdfbf5560b1ec02b71eca6604d2e" name="a3a4bcdfbf5560b1ec02b71eca6604d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a4bcdfbf5560b1ec02b71eca6604d2e">&#9670;&#160;</a></span>recovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::QueueMessage::recovery </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>恢复历史消息 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_a3a4bcdfbf5560b1ec02b71eca6604d2e_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_a3a4bcdfbf5560b1ec02b71eca6604d2e_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_a3a4bcdfbf5560b1ec02b71eca6604d2e_cgraph" id="aclass_xu_m_q_1_1_queue_message_a3a4bcdfbf5560b1ec02b71eca6604d2e_cgraph">
+<area shape="rect" title="恢复历史消息" alt="" coords="5,143,175,183"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="223,143,399,183"/>
+<area shape="poly" title=" " alt="" coords="175,161,209,161,209,166,175,166"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="451,5,658,31"/>
+<area shape="poly" title=" " alt="" coords="327,141,376,91,409,64,445,41,465,33,467,37,448,46,413,68,380,95,331,145"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="467,79,643,119"/>
+<area shape="poly" title=" " alt="" coords="387,141,464,120,466,125,388,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="467,143,643,183"/>
+<area shape="poly" title=" " alt="" coords="399,161,453,161,453,166,399,166"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="447,208,663,233"/>
+<area shape="poly" title=" " alt="" coords="397,181,487,202,486,207,396,186"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="458,281,651,307"/>
+<area shape="poly" title=" " alt="" coords="344,181,448,244,511,273,509,278,445,248,341,186"/>
+<area shape="poly" title=" " alt="" coords="510,80,507,70,514,60,530,55,555,53,583,56,598,63,596,68,581,61,555,58,531,60,518,65,512,71,515,78"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="711,125,883,151"/>
+<area shape="poly" title=" " alt="" coords="642,151,697,146,697,151,643,157"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="931,151,1100,176"/>
+<area shape="poly" title=" " alt="" coords="643,161,917,161,917,166,643,166"/>
+<area shape="poly" title=" " alt="" coords="761,127,753,117,757,107,772,101,797,99,827,102,839,111,836,116,825,107,797,104,773,106,761,111,758,116,765,124"/>
+<area shape="poly" title=" " alt="" coords="883,145,917,149,917,155,882,151"/>
+<area shape="poly" title=" " alt="" coords="516,283,507,273,512,263,528,257,555,255,588,259,601,268,598,272,586,263,555,260,529,262,515,267,513,272,520,279"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae2c9afb899ac5840d9de4e531bdbc6fa" name="ae2c9afb899ac5840d9de4e531bdbc6fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c9afb899ac5840d9de4e531bdbc6fa">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::QueueMessage::remove </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除接收到确认ack的消息 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg_id</td><td>消息id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_ae2c9afb899ac5840d9de4e531bdbc6fa_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_ae2c9afb899ac5840d9de4e531bdbc6fa_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_ae2c9afb899ac5840d9de4e531bdbc6fa_cgraph" id="aclass_xu_m_q_1_1_queue_message_ae2c9afb899ac5840d9de4e531bdbc6fa_cgraph">
+<area shape="rect" title="移除接收到确认ack的消息" alt="" coords="5,247,175,287"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="226,207,395,247"/>
+<area shape="poly" title=" " alt="" coords="175,249,212,242,213,248,175,255"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a19bb7fd4a2e055f61af658880567c402" title="移除消息 将消息中的有效标记置为false 更新到数据文件中" alt="" coords="223,279,399,319"/>
+<area shape="poly" title=" " alt="" coords="175,277,210,282,209,287,175,282"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="453,143,629,183"/>
+<area shape="poly" title=" " alt="" coords="383,205,455,184,456,190,384,210"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a34d8541ab7e8a651edb0be9d8f54751c" title="垃圾回收条件检测" alt="" coords="447,207,635,247"/>
+<area shape="poly" title=" " alt="" coords="395,225,433,225,433,230,395,230"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="687,5,894,31"/>
+<area shape="poly" title=" " alt="" coords="558,141,610,91,644,64,681,41,701,33,703,37,684,46,647,68,613,95,562,145"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="703,79,879,119"/>
+<area shape="poly" title=" " alt="" coords="619,141,698,120,700,125,620,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="703,143,879,183"/>
+<area shape="poly" title=" " alt="" coords="629,161,689,161,689,166,629,166"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="683,208,899,233"/>
+<area shape="poly" title=" " alt="" coords="629,181,722,202,721,208,628,186"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="694,281,887,307"/>
+<area shape="poly" title=" " alt="" coords="613,181,636,193,652,206,661,219,670,231,684,244,712,260,741,274,738,279,709,265,681,248,666,235,657,222,648,210,633,198,611,186"/>
+<area shape="poly" title=" " alt="" coords="746,80,743,70,750,60,766,55,791,53,819,56,834,63,832,68,817,61,791,58,767,60,754,65,748,71,751,78"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="947,125,1119,151"/>
+<area shape="poly" title=" " alt="" coords="878,151,933,146,933,151,879,157"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="1167,151,1336,176"/>
+<area shape="poly" title=" " alt="" coords="879,161,1153,161,1153,166,879,166"/>
+<area shape="poly" title=" " alt="" coords="997,127,989,117,993,107,1008,101,1033,99,1063,102,1075,111,1072,116,1061,107,1033,104,1009,106,997,111,994,116,1001,124"/>
+<area shape="poly" title=" " alt="" coords="1119,145,1153,149,1153,155,1118,151"/>
+<area shape="poly" title=" " alt="" coords="752,283,743,273,748,263,764,257,791,255,824,259,837,268,834,272,822,263,791,260,765,262,751,267,749,272,756,279"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a" title="写入字符串到文件" alt="" coords="453,296,629,321"/>
+<area shape="poly" title=" " alt="" coords="399,300,439,302,439,307,399,306"/>
+<area shape="poly" title=" " alt="" coords="503,298,495,288,499,278,515,272,541,269,573,273,585,283,582,287,571,278,541,275,516,277,503,282,500,287,507,294"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9f5ea21009d6f65b2536b7edda697668" name="a9f5ea21009d6f65b2536b7edda697668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5ea21009d6f65b2536b7edda697668">&#9670;&#160;</a></span>totalCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::totalCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取总消息数量 </p>
+<dl class="section return"><dt>返回</dt><dd>总消息数量 </dd></dl>
+
+</div>
+</div>
+<a id="ab0524e7480ec1b83bf54b7faf87911bf" name="ab0524e7480ec1b83bf54b7faf87911bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0524e7480ec1b83bf54b7faf87911bf">&#9670;&#160;</a></span>waitAckCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::waitAckCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取待确认消息数量 </p>
+<dl class="section return"><dt>返回</dt><dd>待确认消息数量 </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ac7bde3b7bf27d1acef3448d65d0d8328" name="ac7bde3b7bf27d1acef3448d65d0d8328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bde3b7bf27d1acef3448d65d0d8328">&#9670;&#160;</a></span>_durable_msgs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_durable_msgs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>持久化消息映射表 </p>
+
+</div>
+</div>
+<a id="a34d3b57f38551de8dcd3df67caca1622" name="a34d3b57f38551de8dcd3df67caca1622"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d3b57f38551de8dcd3df67caca1622">&#9670;&#160;</a></span>_mapper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_message_mapper.html">MessageMapper</a> XuMQ::QueueMessage::_mapper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>消息队列持久化管理类 </p>
+
+</div>
+</div>
+<a id="abb1bb7719d110d094bd831f5388b5d41" name="abb1bb7719d110d094bd831f5388b5d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1bb7719d110d094bd831f5388b5d41">&#9670;&#160;</a></span>_msgs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt;<a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_msgs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>待推送消息列表 </p>
+
+</div>
+</div>
+<a id="a1e4c2d835ea20446bc92831448ab6e77" name="a1e4c2d835ea20446bc92831448ab6e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4c2d835ea20446bc92831448ab6e77">&#9670;&#160;</a></span>_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex XuMQ::QueueMessage::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>互斥锁 </p>
+
+</div>
+</div>
+<a id="a3859f8c30a5179f05cc86615c7af1ac6" name="a3859f8c30a5179f05cc86615c7af1ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3859f8c30a5179f05cc86615c7af1ac6">&#9670;&#160;</a></span>_qname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::QueueMessage::_qname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>队列名称 </p>
+
+</div>
+</div>
+<a id="ae4975d3805a9917a517b5473d2647eb5" name="ae4975d3805a9917a517b5473d2647eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4975d3805a9917a517b5473d2647eb5">&#9670;&#160;</a></span>_total_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::_total_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>总消息数量 </p>
+
+</div>
+</div>
+<a id="ad012b905924a141dc18e3483d040bbdc" name="ad012b905924a141dc18e3483d040bbdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad012b905924a141dc18e3483d040bbdc">&#9670;&#160;</a></span>_valid_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::QueueMessage::_valid_count</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>有效消息数量 </p>
+
+</div>
+</div>
+<a id="a1c287ca72d5ed239fe8949a55959ae11" name="a1c287ca72d5ed239fe8949a55959ae11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c287ca72d5ed239fe8949a55959ae11">&#9670;&#160;</a></span>_waitack_msgs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_waitack_msgs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>待确认消息映射表 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_queue_message.html">QueueMessage</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

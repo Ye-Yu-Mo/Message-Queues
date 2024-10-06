@@ -1,18 +1,5 @@
-<map id="third/Xulog/logs/message.hpp" name="third/Xulog/logs/message.hpp">
-<area shape="rect" id="Node000001" title="日志消息类的实现" alt="" coords="33,5,248,31"/>
-<area shape="rect" id="Node000002" href="$format_8hpp.html" title="日志格式化器类的定义" alt="" coords="41,79,241,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,44,143,79,138,79,138,44"/>
-<area shape="rect" id="Node000003" href="$third_2_xulog_2logs_2logger_8hpp.html" title="日志器模块的实现" alt="" coords="43,152,239,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="143,118,143,152,138,152,138,118"/>
-<area shape="rect" id="Node000004" href="$_xulog_8h.html" title="全局日志接口和宏定义" alt="" coords="52,225,229,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="143,191,143,225,138,225,138,191"/>
-<area shape="rect" id="Node000005" href="$common_2logger_8hpp.html" title="异步日志器初始化" alt="" coords="65,299,216,324"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="143,264,143,299,138,299,138,264"/>
-<area shape="rect" id="Node000006" href="$helper_8hpp.html" title="工具类封装" alt="" coords="123,372,273,397"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="161,333,191,370,187,374,156,336"/>
-<area shape="rect" id="Node000007" href="$exchange_8hpp.html" title=" " alt="" coords="5,445,164,471"/>
-<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="130,337,112,373,90,446,85,444,108,371,125,335"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="169,407,105,447,102,443,166,403"/>
-<area shape="rect" id="Node000008" href="$mqfiletest_8cpp.html" title=" " alt="" coords="189,445,333,471"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="219,406,253,443,249,447,215,409"/>
+<map id="server/message.hpp" name="server/message.hpp">
+<area shape="rect" id="Node000001" title="消息队列文件存储的实现" alt="" coords="19,5,174,31"/>
+<area shape="rect" id="Node000002" href="$mqmessagetest_8cpp.html" title=" " alt="" coords="5,79,188,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,44,99,79,94,79,94,44"/>
 </map>

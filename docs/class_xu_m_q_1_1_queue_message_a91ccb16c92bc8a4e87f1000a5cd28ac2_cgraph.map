@@ -1,0 +1,14 @@
+<map id="XuMQ::QueueMessage::insert" name="XuMQ::QueueMessage::insert">
+<area shape="rect" id="Node000001" title="插入推送消息队列" alt="" coords="5,144,175,184"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="233,5,403,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,142,158,99,221,55,234,48,237,53,224,60,162,103,113,146"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_basic_properties.html#a72f608855c1f3cd1496ab75048b0571c" title=" " alt="" coords="223,70,413,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,141,222,105,250,97,252,102,224,111,136,146"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="230,144,406,184"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,161,216,161,216,167,175,167"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_basic_properties.html#a778f5ac91b355081fc43120fe57ad2b0" title=" " alt="" coords="233,208,403,248"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="163,182,233,202,232,207,161,187"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="227,273,409,298"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="115,182,163,220,224,258,244,266,242,271,221,262,160,225,112,186"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="276,144,273,134,280,125,295,119,318,117,344,120,359,127,356,132,343,125,318,123,296,125,283,129,278,135,281,143"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="XuMQ::QueueMessage::clear" name="XuMQ::QueueMessage::clear">
+<area shape="rect" id="Node000001" title="清空数据" alt="" coords="5,5,175,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a13e702a334c62783ae9a404b360d80b3" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="223,5,399,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,23,209,23,209,28,175,28"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="447,13,663,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,23,433,23,433,28,399,28"/>
+</map>

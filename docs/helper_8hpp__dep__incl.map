@@ -1,19 +1,21 @@
 <map id="common/helper.hpp" name="common/helper.hpp">
-<area shape="rect" id="Node000001" title="工具类封装" alt="" coords="393,5,544,31"/>
-<area shape="rect" id="Node000002" href="$binding_8hpp.html" title=" " alt="" coords="35,79,177,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,36,165,81,164,76,397,31"/>
-<area shape="rect" id="Node000004" href="$exchange_8hpp.html" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="208,79,367,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="428,38,318,81,316,76,426,33"/>
-<area shape="rect" id="Node000006" href="$message_8hpp.html" title="消息队列文件存储的实现" alt="" coords="391,79,546,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="471,44,471,79,466,79,466,44"/>
-<area shape="rect" id="Node000007" href="$queue_8hpp.html" title="消息队列模块的定义和实现" alt="" coords="571,79,705,104"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="510,34,611,76,609,81,507,38"/>
-<area shape="rect" id="Node000009" href="$mqfiletest_8cpp.html" title=" " alt="" coords="730,79,874,104"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="536,31,749,76,747,81,535,36"/>
+<area shape="rect" id="Node000001" title="工具类封装" alt="" coords="421,5,572,31"/>
+<area shape="rect" id="Node000002" href="$binding_8hpp.html" title=" " alt="" coords="41,79,184,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="422,36,175,81,174,76,421,31"/>
+<area shape="rect" id="Node000004" href="$exchange_8hpp.html" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="223,79,381,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="454,38,335,81,333,76,452,33"/>
+<area shape="rect" id="Node000006" href="$message_8hpp.html" title="消息队列文件存储的实现" alt="" coords="419,79,574,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="499,44,499,79,494,79,494,44"/>
+<area shape="rect" id="Node000008" href="$queue_8hpp.html" title="消息队列模块的定义和实现" alt="" coords="599,79,733,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="538,34,639,76,637,81,535,38"/>
+<area shape="rect" id="Node000010" href="$mqfiletest_8cpp.html" title=" " alt="" coords="758,79,902,104"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="564,31,777,76,775,81,563,36"/>
 <area shape="rect" id="Node000003" href="$mqbindingtest_8cpp.html" title=" " alt="" coords="5,152,177,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="103,118,96,152,91,151,98,117"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="108,118,97,153,92,151,103,117"/>
 <area shape="rect" id="Node000005" href="$mqexchangetest_8cpp.html" title=" " alt="" coords="202,152,389,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="293,117,297,152,291,152,288,118"/>
-<area shape="rect" id="Node000008" href="$mqqueuetest_8cpp.html" title=" " alt="" coords="556,152,720,177"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="641,118,641,152,635,152,635,118"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,118,299,152,294,152,297,118"/>
+<area shape="rect" id="Node000007" href="$mqmessagetest_8cpp.html" title=" " alt="" coords="413,152,596,177"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="502,117,506,152,501,152,497,118"/>
+<area shape="rect" id="Node000009" href="$mqqueuetest_8cpp.html" title=" " alt="" coords="620,152,784,177"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="680,115,699,151,694,153,676,117"/>
 </map>

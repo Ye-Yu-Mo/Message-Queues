@@ -1,0 +1,5 @@
+<map id="XuMQ::QueueMessage::garbageCollection" name="XuMQ::QueueMessage::garbageCollection">
+<area shape="rect" id="Node000001" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+</map>

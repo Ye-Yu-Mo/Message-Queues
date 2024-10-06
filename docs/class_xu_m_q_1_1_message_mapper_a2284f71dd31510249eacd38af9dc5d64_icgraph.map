@@ -1,6 +1,14 @@
 <map id="XuMQ::MessageMapper::insert" name="XuMQ::MessageMapper::insert">
-<area shape="rect" id="Node000001" title="插入消息 将消息添加到数据文件中" alt="" coords="229,29,405,69"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="355,18,342,11,317,8,296,10,283,15,278,21,281,28,275,30,273,20,280,10,295,5,317,3,343,6,358,13"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,29,181,69"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,52,182,52,182,47,215,47"/>
+<area shape="rect" id="Node000001" title="插入消息 将消息添加到数据文件中" alt="" coords="664,69,840,109"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="790,58,777,51,752,48,730,50,718,55,713,61,715,68,710,70,708,60,714,50,729,45,752,43,778,46,792,53"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="650,77,616,73,617,67,651,72"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2" title="插入推送消息队列" alt="" coords="443,101,613,141"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="651,106,613,112,613,107,650,101"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>

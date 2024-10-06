@@ -1,8 +1,14 @@
 <map id="XuMQ::FileHelper::rename" name="XuMQ::FileHelper::rename">
-<area shape="rect" id="Node000001" title="重命名文件" alt="" coords="229,42,423,67"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="368,33,357,24,326,21,301,23,288,28,285,33,292,40,288,44,280,34,284,24,300,18,326,15,359,19,371,29"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,43,181,39,182,34,216,38"/>
-<area shape="rect" id="Node000003" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="66,70,121,95"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="216,71,121,82,121,77,215,65"/>
+<area shape="rect" id="Node000001" title="重命名文件" alt="" coords="664,74,857,99"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="802,65,791,56,761,53,736,55,723,60,720,65,727,72,723,76,715,66,719,56,735,50,761,47,793,51,806,61"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="650,75,616,71,616,66,651,70"/>
+<area shape="rect" id="Node000006" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="501,102,555,127"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="651,103,556,114,555,109,650,97"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>

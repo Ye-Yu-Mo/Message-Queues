@@ -1,0 +1,9 @@
+<map id="XuMQ::MessageMapper::garbageCollection" name="XuMQ::MessageMapper::garbageCollection">
+<area shape="rect" id="Node000001" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+</map>

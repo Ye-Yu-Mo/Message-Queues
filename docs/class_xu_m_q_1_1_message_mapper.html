@@ -118,9 +118,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a72087ccf24bf8a177eea208cdd678a69" id="r_a72087ccf24bf8a177eea208cdd678a69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69">createMsgFile</a> ()</td></tr>
 <tr class="memdesc:a72087ccf24bf8a177eea208cdd678a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建消息文件  <br /></td></tr>
 <tr class="separator:a72087ccf24bf8a177eea208cdd678a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c9f61f37697b2e1da3a35da355201e5" id="r_a3c9f61f37697b2e1da3a35da355201e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a3c9f61f37697b2e1da3a35da355201e5">removeMsgFIle</a> ()</td></tr>
-<tr class="memdesc:a3c9f61f37697b2e1da3a35da355201e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息文件 包括移除数据文件和临时文件  <br /></td></tr>
-<tr class="separator:a3c9f61f37697b2e1da3a35da355201e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e702a334c62783ae9a404b360d80b3" id="r_a13e702a334c62783ae9a404b360d80b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a13e702a334c62783ae9a404b360d80b3">removeMsgFile</a> ()</td></tr>
+<tr class="memdesc:a13e702a334c62783ae9a404b360d80b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息文件 包括移除数据文件和临时文件  <br /></td></tr>
+<tr class="separator:a13e702a334c62783ae9a404b360d80b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2284f71dd31510249eacd38af9dc5d64" id="r_a2284f71dd31510249eacd38af9dc5d64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64">insert</a> (const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
 <tr class="memdesc:a2284f71dd31510249eacd38af9dc5d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入消息 将消息添加到数据文件中  <br /></td></tr>
 <tr class="separator:a2284f71dd31510249eacd38af9dc5d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,23 +295,39 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph">
-<area shape="rect" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,123,181,163"/>
-<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="249,29,425,69"/>
-<area shape="poly" title=" " alt="" coords="134,120,228,79,251,71,253,76,230,84,136,125"/>
-<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="249,93,425,133"/>
-<area shape="poly" title=" " alt="" coords="181,129,235,123,236,128,182,135"/>
-<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,158,445,183"/>
-<area shape="poly" title=" " alt="" coords="182,150,216,154,215,159,181,155"/>
-<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="241,231,434,257"/>
-<area shape="poly" title=" " alt="" coords="143,160,294,224,292,229,141,165"/>
-<area shape="poly" title=" " alt="" coords="293,30,290,20,297,10,313,5,337,3,365,6,380,13,378,18,364,11,337,8,314,10,300,15,295,21,298,28"/>
-<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="493,75,665,101"/>
-<area shape="poly" title=" " alt="" coords="425,101,479,96,480,101,426,107"/>
-<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="713,101,883,126"/>
-<area shape="poly" title=" " alt="" coords="425,111,699,111,699,116,425,116"/>
-<area shape="poly" title=" " alt="" coords="544,77,536,67,540,57,555,51,579,49,610,52,622,61,619,66,608,57,579,54,556,56,544,61,541,66,548,74"/>
-<area shape="poly" title=" " alt="" coords="666,95,700,99,700,105,665,101"/>
-<area shape="poly" title=" " alt="" coords="298,233,290,223,294,213,310,207,337,205,371,209,384,218,381,222,369,213,337,210,312,212,298,217,295,222,302,229"/>
+<area shape="rect" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,143,181,183"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="234,5,441,31"/>
+<area shape="poly" title=" " alt="" coords="110,141,159,91,192,64,228,41,247,33,250,37,231,46,195,68,163,95,113,145"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="249,79,425,119"/>
+<area shape="poly" title=" " alt="" coords="170,141,247,120,248,125,171,146"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="249,143,425,183"/>
+<area shape="poly" title=" " alt="" coords="181,161,236,161,236,166,181,166"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,208,445,233"/>
+<area shape="poly" title=" " alt="" coords="180,181,270,202,269,207,178,186"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="241,281,434,307"/>
+<area shape="poly" title=" " alt="" coords="126,181,231,244,294,273,291,278,228,248,124,186"/>
+<area shape="poly" title=" " alt="" coords="293,80,290,70,297,60,313,55,337,53,365,56,380,63,378,68,364,61,337,58,314,60,300,65,295,71,298,78"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="493,125,665,151"/>
+<area shape="poly" title=" " alt="" coords="425,151,479,146,480,151,426,157"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="713,151,883,176"/>
+<area shape="poly" title=" " alt="" coords="425,161,699,161,699,166,425,166"/>
+<area shape="poly" title=" " alt="" coords="544,127,536,117,540,107,555,101,579,99,610,102,622,111,619,116,608,107,579,104,556,106,544,111,541,116,548,124"/>
+<area shape="poly" title=" " alt="" coords="666,145,700,149,700,155,665,151"/>
+<area shape="poly" title=" " alt="" coords="298,283,290,273,294,263,310,257,337,255,371,259,384,268,381,272,369,263,337,260,312,262,298,267,295,272,302,279"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_icgraph">
+<area shape="rect" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>
 </div>
 
@@ -363,10 +379,18 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph">
-<area shape="rect" title="插入消息 将消息添加到数据文件中" alt="" coords="229,29,405,69"/>
-<area shape="poly" title=" " alt="" coords="355,18,342,11,317,8,296,10,283,15,278,21,281,28,275,30,273,20,280,10,295,5,317,3,343,6,358,13"/>
-<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,29,181,69"/>
-<area shape="poly" title=" " alt="" coords="215,52,182,52,182,47,215,47"/>
+<area shape="rect" title="插入消息 将消息添加到数据文件中" alt="" coords="664,69,840,109"/>
+<area shape="poly" title=" " alt="" coords="790,58,777,51,752,48,730,50,718,55,713,61,715,68,710,70,708,60,714,50,729,45,752,43,778,46,792,53"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="poly" title=" " alt="" coords="650,77,616,73,617,67,651,72"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2" title="插入推送消息队列" alt="" coords="443,101,613,141"/>
+<area shape="poly" title=" " alt="" coords="651,106,613,112,613,107,650,101"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>
 </div>
 
@@ -482,9 +506,15 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph">
-<area shape="rect" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="229,5,405,45"/>
-<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
-<area shape="poly" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+<area shape="rect" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="664,37,840,77"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
+<area shape="poly" title=" " alt="" coords="650,60,616,60,616,55,650,55"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
+<area shape="poly" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e" title="恢复历史消息" alt="" coords="223,69,392,109"/>
+<area shape="poly" title=" " alt="" coords="427,75,393,80,392,74,426,69"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>
 </div>
 
@@ -533,11 +563,21 @@ Private 属性</h2></td></tr>
 <area shape="poly" title=" " alt="" coords="281,31,273,21,277,11,292,5,317,3,349,7,361,16,358,20,347,11,317,8,293,10,281,15,278,20,285,27"/>
 </map>
 </div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_icgraph">
+<area shape="rect" title="移除消息 将消息中的有效标记置为false 更新到数据文件中" alt="" coords="223,5,399,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa" title="移除接收到确认ack的消息" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a3c9f61f37697b2e1da3a35da355201e5" name="a3c9f61f37697b2e1da3a35da355201e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c9f61f37697b2e1da3a35da355201e5">&#9670;&#160;</a></span>removeMsgFIle()</h2>
+<a id="a13e702a334c62783ae9a404b360d80b3" name="a13e702a334c62783ae9a404b360d80b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e702a334c62783ae9a404b360d80b3">&#9670;&#160;</a></span>removeMsgFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +586,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void XuMQ::MessageMapper::removeMsgFIle </td>
+          <td class="memname">void XuMQ::MessageMapper::removeMsgFile </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -563,11 +603,21 @@ Private 属性</h2></td></tr>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph" alt=""/></div>
-<map name="aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_cgraph">
 <area shape="rect" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="5,5,181,45"/>
 <area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,13,445,38"/>
 <area shape="poly" title=" " alt="" coords="181,23,215,23,215,28,181,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a13e702a334c62783ae9a404b360d80b3_icgraph">
+<area shape="rect" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="223,5,399,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_queue_message.html#af8570b81207fb95a1ac360d55f55ba4a" title="清空数据" alt="" coords="5,5,175,45"/>
+<area shape="poly" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
 </map>
 </div>
 
