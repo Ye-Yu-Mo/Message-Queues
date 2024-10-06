@@ -1,6 +1,10 @@
 <map id="XuMQ::FileHelper::write" name="XuMQ::FileHelper::write">
-<area shape="rect" id="Node000001" title="写入字符串到文件" alt="" coords="108,29,284,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="224,19,216,11,196,8,179,10,170,15,168,20,173,28,169,31,163,21,166,11,177,5,196,3,218,6,228,15"/>
-<area shape="rect" id="Node000002" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,60,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,45,60,45,60,39,94,39"/>
+<area shape="rect" id="Node000001" title="写入字符串到文件" alt="" coords="229,70,405,95"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="358,61,347,52,317,49,293,51,281,56,278,61,285,68,281,72,273,62,277,52,292,46,317,43,349,47,361,57"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#aaca8c44cb58bc14c7b886a78c4cfe1aa" title="插入消息到指定文件 负责数据文件和临时文件的写入工作" alt="" coords="5,5,181,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,69,171,48,173,43,254,64"/>
+<area shape="rect" id="Node000003" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="66,70,121,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,85,121,85,121,80,215,80"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message_mapper.html#a19bb7fd4a2e055f61af658880567c402" title="移除消息 将消息中的有效标记置为false 更新到数据文件中" alt="" coords="5,120,181,160"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,101,173,123,171,117,253,96"/>
 </map>

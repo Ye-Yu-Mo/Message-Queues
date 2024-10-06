@@ -1,11 +1,9 @@
 <map id="XuMQ::Message::ByteSizeLong" name="XuMQ::Message::ByteSizeLong">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,109,228,134"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,77,228,102"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message.html#a93bb603deb900d2e14024f3454df6b1f" title=" " alt="" coords="276,5,468,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,106,275,55,296,47,298,52,277,60,149,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,74,278,46,279,51,169,79"/>
 <area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message.html#a1ce55e52d9d0d22d2802b1353fe3e69d" title=" " alt="" coords="276,69,468,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,106,262,100,263,106,219,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,87,262,87,262,92,228,92"/>
 <area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_message.html#a954922f36ceb02a67e3569c27a523dc2" title=" " alt="" coords="276,133,468,173"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,131,263,137,262,142,218,137"/>
-<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_message.html#a9d45b5e5c0c4f1f9b6dd2efbf71434d5" title=" " alt="" coords="276,197,468,237"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="149,132,277,183,298,190,296,195,275,188,147,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,100,279,127,278,133,168,105"/>
 </map>

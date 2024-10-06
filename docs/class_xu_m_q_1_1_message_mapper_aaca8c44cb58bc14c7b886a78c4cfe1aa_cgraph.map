@@ -1,0 +1,8 @@
+<map id="XuMQ::MessageMapper::insert" name="XuMQ::MessageMapper::insert">
+<area shape="rect" id="Node000001" title="插入消息到指定文件 负责数据文件和临时文件的写入工作" alt="" coords="5,35,181,75"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="233,5,402,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,38,227,30,228,36,182,43"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a" title="写入字符串到文件" alt="" coords="229,79,405,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,67,225,74,224,79,181,72"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="281,80,273,70,277,60,292,54,317,52,349,56,361,65,358,69,347,61,317,57,293,59,281,64,278,70,285,77"/>
+</map>

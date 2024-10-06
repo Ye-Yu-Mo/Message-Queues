@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::MessageMapper类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_message_mapper.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_message_mapper-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::MessageMapper类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>处理消息队列的文件存储和管理类  
+ <a href="class_xu_m_q_1_1_message_mapper.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="message_8hpp_source.html">message.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a2ffd4f5f07c10daa040773a4ec163deb" id="r_a2ffd4f5f07c10daa040773a4ec163deb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb">MessageMapper</a> (std::string &amp;basedir, const std::string &amp;qname)</td></tr>
+<tr class="memdesc:a2ffd4f5f07c10daa040773a4ec163deb"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数 创建必要的目录和数据文件  <br /></td></tr>
+<tr class="separator:a2ffd4f5f07c10daa040773a4ec163deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72087ccf24bf8a177eea208cdd678a69" id="r_a72087ccf24bf8a177eea208cdd678a69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69">createMsgFile</a> ()</td></tr>
+<tr class="memdesc:a72087ccf24bf8a177eea208cdd678a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建消息文件  <br /></td></tr>
+<tr class="separator:a72087ccf24bf8a177eea208cdd678a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c9f61f37697b2e1da3a35da355201e5" id="r_a3c9f61f37697b2e1da3a35da355201e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a3c9f61f37697b2e1da3a35da355201e5">removeMsgFIle</a> ()</td></tr>
+<tr class="memdesc:a3c9f61f37697b2e1da3a35da355201e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息文件 包括移除数据文件和临时文件  <br /></td></tr>
+<tr class="separator:a3c9f61f37697b2e1da3a35da355201e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2284f71dd31510249eacd38af9dc5d64" id="r_a2284f71dd31510249eacd38af9dc5d64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64">insert</a> (const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memdesc:a2284f71dd31510249eacd38af9dc5d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入消息 将消息添加到数据文件中  <br /></td></tr>
+<tr class="separator:a2284f71dd31510249eacd38af9dc5d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bb7fd4a2e055f61af658880567c402" id="r_a19bb7fd4a2e055f61af658880567c402"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a19bb7fd4a2e055f61af658880567c402">remove</a> (<a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memdesc:a19bb7fd4a2e055f61af658880567c402"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息 将消息中的有效标记置为false 更新到数据文件中  <br /></td></tr>
+<tr class="separator:a19bb7fd4a2e055f61af658880567c402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fcd0d0b06709693f3cbc37ea73c3ca2" id="r_a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2">garbageCollection</a> ()</td></tr>
+<tr class="memdesc:a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件  <br /></td></tr>
+<tr class="separator:a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:aaca8c44cb58bc14c7b886a78c4cfe1aa" id="r_aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#aaca8c44cb58bc14c7b886a78c4cfe1aa">insert</a> (const std::string &amp;filename, const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memdesc:aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入消息到指定文件 负责数据文件和临时文件的写入工作  <br /></td></tr>
+<tr class="separator:aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0617e445b421553271cd2316adc71160" id="r_a0617e445b421553271cd2316adc71160"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160">load</a> (std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; &amp;result)</td></tr>
+<tr class="memdesc:a0617e445b421553271cd2316adc71160"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载有效消息 从数据文件中读取所有消息并存为有效的消息对象  <br /></td></tr>
+<tr class="separator:a0617e445b421553271cd2316adc71160"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a1fd6adb4b502ee299a7cf3a3d4965c1b" id="r_a1fd6adb4b502ee299a7cf3a3d4965c1b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a1fd6adb4b502ee299a7cf3a3d4965c1b">_qname</a></td></tr>
+<tr class="memdesc:a1fd6adb4b502ee299a7cf3a3d4965c1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列名称  <br /></td></tr>
+<tr class="separator:a1fd6adb4b502ee299a7cf3a3d4965c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab655b45d7fadaba3565564c9f213c7db" id="r_ab655b45d7fadaba3565564c9f213c7db"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#ab655b45d7fadaba3565564c9f213c7db">_datafile</a></td></tr>
+<tr class="memdesc:ab655b45d7fadaba3565564c9f213c7db"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据文件  <br /></td></tr>
+<tr class="separator:ab655b45d7fadaba3565564c9f213c7db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69b3746fec5b2dd24cee0b2108e54e45" id="r_a69b3746fec5b2dd24cee0b2108e54e45"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a69b3746fec5b2dd24cee0b2108e54e45">_tmpfile</a></td></tr>
+<tr class="memdesc:a69b3746fec5b2dd24cee0b2108e54e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时文件  <br /></td></tr>
+<tr class="separator:a69b3746fec5b2dd24cee0b2108e54e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>处理消息队列的文件存储和管理类 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a2ffd4f5f07c10daa040773a4ec163deb" name="a2ffd4f5f07c10daa040773a4ec163deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ffd4f5f07c10daa040773a4ec163deb">&#9670;&#160;</a></span>MessageMapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::MessageMapper::MessageMapper </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>basedir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 创建必要的目录和数据文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">basedir</td><td>基础目录 </td></tr>
+    <tr><td class="paramname">qname</td><td>队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a2ffd4f5f07c10daa040773a4ec163deb_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a2ffd4f5f07c10daa040773a4ec163deb_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a2ffd4f5f07c10daa040773a4ec163deb_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a2ffd4f5f07c10daa040773a4ec163deb_cgraph">
+<area shape="rect" title="构造函数 创建必要的目录和数据文件" alt="" coords="5,37,181,77"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad" title="创建目录" alt="" coords="229,5,413,45"/>
+<area shape="poly" title=" " alt="" coords="181,42,215,37,216,43,182,48"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69" title="创建消息文件" alt="" coords="233,69,409,109"/>
+<area shape="poly" title=" " alt="" coords="182,67,220,72,219,78,181,72"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a9a1942e32bcf93fa90ada07371331b1e" title="检查文件是否存在" alt="" coords="473,13,656,38"/>
+<area shape="poly" title=" " alt="" coords="414,23,460,23,460,28,414,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="461,77,668,102"/>
+<area shape="poly" title=" " alt="" coords="410,87,447,87,447,92,410,92"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a72087ccf24bf8a177eea208cdd678a69" name="a72087ccf24bf8a177eea208cdd678a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72087ccf24bf8a177eea208cdd678a69">&#9670;&#160;</a></span>createMsgFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MessageMapper::createMsgFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建消息文件 </p>
+<dl class="section return"><dt>返回</dt><dd>成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_cgraph">
+<area shape="rect" title="创建消息文件" alt="" coords="5,5,181,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3" title="创建新文件" alt="" coords="229,13,436,38"/>
+<area shape="poly" title=" " alt="" coords="181,23,216,23,216,28,181,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a72087ccf24bf8a177eea208cdd678a69_icgraph">
+<area shape="rect" title="创建消息文件" alt="" coords="229,5,405,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb" title="构造函数 创建必要的目录和数据文件" alt="" coords="5,5,181,45"/>
+<area shape="poly" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fcd0d0b06709693f3cbc37ea73c3ca2" name="a0fcd0d0b06709693f3cbc37ea73c3ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcd0d0b06709693f3cbc37ea73c3ca2">&#9670;&#160;</a></span>garbageCollection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; XuMQ::MessageMapper::garbageCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件 </p>
+<dl class="section return"><dt>返回</dt><dd>有效消息列表 </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a0fcd0d0b06709693f3cbc37ea73c3ca2_cgraph">
+<area shape="rect" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,123,181,163"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="249,29,425,69"/>
+<area shape="poly" title=" " alt="" coords="134,120,228,79,251,71,253,76,230,84,136,125"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="249,93,425,133"/>
+<area shape="poly" title=" " alt="" coords="181,129,235,123,236,128,182,135"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,158,445,183"/>
+<area shape="poly" title=" " alt="" coords="182,150,216,154,215,159,181,155"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="241,231,434,257"/>
+<area shape="poly" title=" " alt="" coords="143,160,294,224,292,229,141,165"/>
+<area shape="poly" title=" " alt="" coords="293,30,290,20,297,10,313,5,337,3,365,6,380,13,378,18,364,11,337,8,314,10,300,15,295,21,298,28"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="493,75,665,101"/>
+<area shape="poly" title=" " alt="" coords="425,101,479,96,480,101,426,107"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="713,101,883,126"/>
+<area shape="poly" title=" " alt="" coords="425,111,699,111,699,116,425,116"/>
+<area shape="poly" title=" " alt="" coords="544,77,536,67,540,57,555,51,579,49,610,52,622,61,619,66,608,57,579,54,556,56,544,61,541,66,548,74"/>
+<area shape="poly" title=" " alt="" coords="666,95,700,99,700,105,665,101"/>
+<area shape="poly" title=" " alt="" coords="298,233,290,223,294,213,310,207,337,205,371,209,384,218,381,222,369,213,337,210,312,212,298,217,295,222,302,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2284f71dd31510249eacd38af9dc5d64" name="a2284f71dd31510249eacd38af9dc5d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2284f71dd31510249eacd38af9dc5d64">&#9670;&#160;</a></span>insert() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MessageMapper::insert </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入消息 将消息添加到数据文件中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>消息指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>插入成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_cgraph">
+<area shape="rect" title="插入消息 将消息添加到数据文件中" alt="" coords="5,29,181,69"/>
+<area shape="poly" title=" " alt="" coords="60,30,58,20,63,11,75,5,93,3,114,6,126,13,123,17,112,11,93,8,77,10,67,15,63,21,65,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a2284f71dd31510249eacd38af9dc5d64_icgraph">
+<area shape="rect" title="插入消息 将消息添加到数据文件中" alt="" coords="229,29,405,69"/>
+<area shape="poly" title=" " alt="" coords="355,18,342,11,317,8,296,10,283,15,278,21,281,28,275,30,273,20,280,10,295,5,317,3,343,6,358,13"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,29,181,69"/>
+<area shape="poly" title=" " alt="" coords="215,52,182,52,182,47,215,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaca8c44cb58bc14c7b886a78c4cfe1aa" name="aaca8c44cb58bc14c7b886a78c4cfe1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaca8c44cb58bc14c7b886a78c4cfe1aa">&#9670;&#160;</a></span>insert() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MessageMapper::insert </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>插入消息到指定文件 负责数据文件和临时文件的写入工作 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>文件名 </td></tr>
+    <tr><td class="paramname">msg</td><td>文件指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_aaca8c44cb58bc14c7b886a78c4cfe1aa_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_aaca8c44cb58bc14c7b886a78c4cfe1aa_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_aaca8c44cb58bc14c7b886a78c4cfe1aa_cgraph" id="aclass_xu_m_q_1_1_message_mapper_aaca8c44cb58bc14c7b886a78c4cfe1aa_cgraph">
+<area shape="rect" title="插入消息到指定文件 负责数据文件和临时文件的写入工作" alt="" coords="5,35,181,75"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="233,5,402,31"/>
+<area shape="poly" title=" " alt="" coords="181,38,227,30,228,36,182,43"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a" title="写入字符串到文件" alt="" coords="229,79,405,104"/>
+<area shape="poly" title=" " alt="" coords="182,67,225,74,224,79,181,72"/>
+<area shape="poly" title=" " alt="" coords="281,80,273,70,277,60,292,54,317,52,349,56,361,65,358,69,347,61,317,57,293,59,281,64,278,70,285,77"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0617e445b421553271cd2316adc71160" name="a0617e445b421553271cd2316adc71160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0617e445b421553271cd2316adc71160">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MessageMapper::load </td>
+          <td>(</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>加载有效消息 从数据文件中读取所有消息并存为有效的消息对象 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>存储有效消息的列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_cgraph">
+<area shape="rect" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="5,47,181,87"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="229,29,401,55"/>
+<area shape="poly" title=" " alt="" coords="181,55,215,51,216,56,182,60"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="449,55,619,80"/>
+<area shape="poly" title=" " alt="" coords="182,65,436,65,436,70,182,70"/>
+<area shape="poly" title=" " alt="" coords="280,31,272,21,276,11,291,5,315,3,346,6,358,15,355,20,344,11,315,8,292,10,280,15,277,20,284,28"/>
+<area shape="poly" title=" " alt="" coords="402,49,436,53,436,59,401,55"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph" id="aclass_xu_m_q_1_1_message_mapper_a0617e445b421553271cd2316adc71160_icgraph">
+<area shape="rect" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="229,5,405,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
+<area shape="poly" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a19bb7fd4a2e055f61af658880567c402" name="a19bb7fd4a2e055f61af658880567c402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19bb7fd4a2e055f61af658880567c402">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::MessageMapper::remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除消息 将消息中的有效标记置为false 更新到数据文件中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>消息指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>移除成功返回true 失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a19bb7fd4a2e055f61af658880567c402_cgraph">
+<area shape="rect" title="移除消息 将消息中的有效标记置为false 更新到数据文件中" alt="" coords="5,22,181,62"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a" title="写入字符串到文件" alt="" coords="229,29,405,55"/>
+<area shape="poly" title=" " alt="" coords="182,39,215,39,215,45,182,45"/>
+<area shape="poly" title=" " alt="" coords="281,31,273,21,277,11,292,5,317,3,349,7,361,16,358,20,347,11,317,8,293,10,281,15,278,20,285,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c9f61f37697b2e1da3a35da355201e5" name="a3c9f61f37697b2e1da3a35da355201e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c9f61f37697b2e1da3a35da355201e5">&#9670;&#160;</a></span>removeMsgFIle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::MessageMapper::removeMsgFIle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除消息文件 包括移除数据文件和临时文件 </p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph" id="aclass_xu_m_q_1_1_message_mapper_a3c9f61f37697b2e1da3a35da355201e5_cgraph">
+<area shape="rect" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="5,5,181,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,13,445,38"/>
+<area shape="poly" title=" " alt="" coords="181,23,215,23,215,28,181,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="ab655b45d7fadaba3565564c9f213c7db" name="ab655b45d7fadaba3565564c9f213c7db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab655b45d7fadaba3565564c9f213c7db">&#9670;&#160;</a></span>_datafile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::MessageMapper::_datafile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>数据文件 </p>
+
+</div>
+</div>
+<a id="a1fd6adb4b502ee299a7cf3a3d4965c1b" name="a1fd6adb4b502ee299a7cf3a3d4965c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd6adb4b502ee299a7cf3a3d4965c1b">&#9670;&#160;</a></span>_qname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::MessageMapper::_qname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>队列名称 </p>
+
+</div>
+</div>
+<a id="a69b3746fec5b2dd24cee0b2108e54e45" name="a69b3746fec5b2dd24cee0b2108e54e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69b3746fec5b2dd24cee0b2108e54e45">&#9670;&#160;</a></span>_tmpfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::MessageMapper::_tmpfile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>临时文件 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_message_mapper.html">MessageMapper</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

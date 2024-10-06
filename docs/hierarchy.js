@@ -28,6 +28,7 @@ var hierarchy =
     ] ],
     [ "XuMQ::Message_PayloadDefaultTypeInternal", "struct_xu_m_q_1_1_message___payload_default_type_internal.html", null ],
     [ "XuMQ::MessageDefaultTypeInternal", "struct_xu_m_q_1_1_message_default_type_internal.html", null ],
+    [ "XuMQ::MessageMapper", "class_xu_m_q_1_1_message_mapper.html", null ],
     [ "XuMQ::MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", null ],
     [ "XuMQ::MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", null ],
     [ "XuMQ::MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", null ],

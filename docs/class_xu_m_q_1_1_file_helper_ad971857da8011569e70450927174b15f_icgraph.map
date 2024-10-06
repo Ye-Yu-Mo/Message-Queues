@@ -1,6 +1,10 @@
 <map id="XuMQ::FileHelper::read" name="XuMQ::FileHelper::read">
-<area shape="rect" id="Node000001" title="读取文件内容" alt="" coords="108,29,280,55"/>
-<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="222,19,214,11,194,8,177,10,169,15,167,20,172,28,167,31,161,21,164,11,176,5,194,3,216,6,225,15"/>
-<area shape="rect" id="Node000002" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,60,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,45,60,45,60,39,94,39"/>
+<area shape="rect" id="Node000001" title="读取文件内容" alt="" coords="453,42,625,67"/>
+<area shape="poly" id="edge4_Node000001_Node000001" title=" " alt="" coords="579,32,568,24,539,21,516,23,503,28,501,33,507,40,503,44,495,34,499,24,514,18,539,15,570,19,582,28"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="229,5,405,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,44,405,40,406,34,440,39"/>
+<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="290,70,345,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,70,345,82,345,77,440,65"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
 </map>

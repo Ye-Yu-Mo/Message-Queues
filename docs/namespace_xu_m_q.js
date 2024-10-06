@@ -14,6 +14,7 @@ var namespace_xu_m_q =
     [ "Message_Payload", "class_xu_m_q_1_1_message___payload.html", "class_xu_m_q_1_1_message___payload" ],
     [ "Message_PayloadDefaultTypeInternal", "struct_xu_m_q_1_1_message___payload_default_type_internal.html", "struct_xu_m_q_1_1_message___payload_default_type_internal" ],
     [ "MessageDefaultTypeInternal", "struct_xu_m_q_1_1_message_default_type_internal.html", "struct_xu_m_q_1_1_message_default_type_internal" ],
+    [ "MessageMapper", "class_xu_m_q_1_1_message_mapper.html", "class_xu_m_q_1_1_message_mapper" ],
     [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", "struct_xu_m_q_1_1_msg_queue" ],
     [ "MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", "class_xu_m_q_1_1_msg_queue_manager" ],
     [ "MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", "class_xu_m_q_1_1_msg_queue_mapper" ],
@@ -22,6 +23,7 @@ var namespace_xu_m_q =
     [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
     [ "BindingMap", "namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7", null ],
     [ "ExchangeMap", "namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18", null ],
+    [ "MessagePtr", "namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47", null ],
     [ "MsgQueueBindingMap", "namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677", null ],
     [ "QueueMap", "namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb", null ],
     [ "DeliveryMode", "namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614", [
@@ -50,6 +52,7 @@ var namespace_xu_m_q =
     [ "_BasicProperties_default_instance_", "namespace_xu_m_q.html#a46760558817e80a1b7174413711c94fe", null ],
     [ "_Message_default_instance_", "namespace_xu_m_q.html#ad0fa2d87e5282526884b9bb9aed28beb", null ],
     [ "_Message_Payload_default_instance_", "namespace_xu_m_q.html#a6433b2d0f7308ee83e364ece0cc9b319", null ],
+    [ "DATAFILE_SUBFIX", "namespace_xu_m_q.html#a4c80748846b3a6c7d5b33e3383bcfd50", null ],
     [ "DeliveryMode_ARRAYSIZE", "namespace_xu_m_q.html#af91e7f144cf9ee19df8185bd66af20ad", null ],
     [ "DeliveryMode_MAX", "namespace_xu_m_q.html#a41a68167fd12001c392dfb64ba06cd62", null ],
     [ "DeliveryMode_MIN", "namespace_xu_m_q.html#a0d59c091a7c17e8dcbf03ef01831b7e2", null ],
@@ -57,5 +60,8 @@ var namespace_xu_m_q =
     [ "ExchangeType_MAX", "namespace_xu_m_q.html#ab2e0bbec536a93a55900c987e5510944", null ],
     [ "ExchangeType_MIN", "namespace_xu_m_q.html#aee0aff534d6a141e6eb553bc20cf68df", null ],
     [ "log_init", "namespace_xu_m_q.html#ab48ee1fdcd2c301040d24a1642224a7d", null ],
-    [ "logger", "namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a", null ]
+    [ "logger", "namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a", null ],
+    [ "MSG_INVALID", "namespace_xu_m_q.html#a56075f1162065b026001954507eea6be", null ],
+    [ "MSG_VALID", "namespace_xu_m_q.html#ad7908844b9b7da3ad295c14902d49f0c", null ],
+    [ "TMPFILE_SUBFIX", "namespace_xu_m_q.html#adf00f6175ab7f0660677533d2499949a", null ]
 ];

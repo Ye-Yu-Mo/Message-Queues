@@ -152,6 +152,7 @@ XuMQ::Message_Payload 的协作图:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:a227f843840914898f5b55e673cbe34cb" id="r_a227f843840914898f5b55e673cbe34cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <a class="el" href="class_xu_m_q_1_1_message___payload.html#a227f843840914898f5b55e673cbe34cba9a6ca98c8249c39f162fd6e6aa54c5e7">kBodyFieldNumber</a> = 2
+, <a class="el" href="class_xu_m_q_1_1_message___payload.html#a227f843840914898f5b55e673cbe34cba1b6123579b846991aecd5e3bae023232">kValidFieldNumber</a> = 3
 , <a class="el" href="class_xu_m_q_1_1_message___payload.html#a227f843840914898f5b55e673cbe34cbacfda25812aa62845f2c5337e01065a48">kPropertiesFieldNumber</a> = 1
  }</td></tr>
 <tr class="separator:a227f843840914898f5b55e673cbe34cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +212,19 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:afbbdabad8650ae9a9ec7b69c63d7ebdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82daec0fd15164bd7b79e8c894e182c9" id="r_a82daec0fd15164bd7b79e8c894e182c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a82daec0fd15164bd7b79e8c894e182c9">set_allocated_body</a> (std::string *<a class="el" href="class_xu_m_q_1_1_message___payload.html#a27b2f04d3db97758224a2040ad413979">body</a>)</td></tr>
 <tr class="separator:a82daec0fd15164bd7b79e8c894e182c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517bbe8cd66faa3a7106aa62540bc562" id="r_a517bbe8cd66faa3a7106aa62540bc562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a517bbe8cd66faa3a7106aa62540bc562">clear_valid</a> ()</td></tr>
+<tr class="separator:a517bbe8cd66faa3a7106aa62540bc562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa48b3fa8eca0c3766b01fe2d2ec020" id="r_adfa48b3fa8eca0c3766b01fe2d2ec020"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#adfa48b3fa8eca0c3766b01fe2d2ec020">valid</a> () const</td></tr>
+<tr class="separator:adfa48b3fa8eca0c3766b01fe2d2ec020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0afab88c40d214f3c159b9cfb367da9" id="r_aa0afab88c40d214f3c159b9cfb367da9"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:aa0afab88c40d214f3c159b9cfb367da9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#aa0afab88c40d214f3c159b9cfb367da9">set_valid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:aa0afab88c40d214f3c159b9cfb367da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb4ff61d4f5fe3903b14c006cafce9a" id="r_aedb4ff61d4f5fe3903b14c006cafce9a"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#aedb4ff61d4f5fe3903b14c006cafce9a">mutable_valid</a> ()</td></tr>
+<tr class="separator:aedb4ff61d4f5fe3903b14c006cafce9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33731af3b68f10dea0b0aebe3fcaa1a4" id="r_a33731af3b68f10dea0b0aebe3fcaa1a4"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a33731af3b68f10dea0b0aebe3fcaa1a4">release_valid</a> ()</td></tr>
+<tr class="separator:a33731af3b68f10dea0b0aebe3fcaa1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67cd49cd3000745f8b36f295853b9aef" id="r_a67cd49cd3000745f8b36f295853b9aef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a67cd49cd3000745f8b36f295853b9aef">set_allocated_valid</a> (std::string *<a class="el" href="class_xu_m_q_1_1_message___payload.html#adfa48b3fa8eca0c3766b01fe2d2ec020">valid</a>)</td></tr>
+<tr class="separator:a67cd49cd3000745f8b36f295853b9aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd78dc3e38612deb5263d7ce4718907" id="r_a9cd78dc3e38612deb5263d7ce4718907"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a9cd78dc3e38612deb5263d7ce4718907">has_properties</a> () const</td></tr>
 <tr class="separator:a9cd78dc3e38612deb5263d7ce4718907"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5f2244d3ab48589bf154df2571ef473" id="r_ae5f2244d3ab48589bf154df2571ef473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#ae5f2244d3ab48589bf154df2571ef473">clear_properties</a> ()</td></tr>
@@ -230,6 +244,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a2c4cb6701581e325c71e96760ba9be96" id="r_a2c4cb6701581e325c71e96760ba9be96"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
 <tr class="memitem:a2c4cb6701581e325c71e96760ba9be96"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a2c4cb6701581e325c71e96760ba9be96">set_body</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
 <tr class="separator:a2c4cb6701581e325c71e96760ba9be96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f8bdc6cba51505a3fbbe81756eb8dc" id="r_ab1f8bdc6cba51505a3fbbe81756eb8dc"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:ab1f8bdc6cba51505a3fbbe81756eb8dc"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#ab1f8bdc6cba51505a3fbbe81756eb8dc">set_valid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:ab1f8bdc6cba51505a3fbbe81756eb8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
@@ -279,6 +296,12 @@ Private 成员函数</h2></td></tr>
 <tr class="separator:a6b3fff87ef63d830db4f3478805a7744"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52adcde781e73c8c68f0bc5f3a84d03" id="r_ac52adcde781e73c8c68f0bc5f3a84d03"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#ac52adcde781e73c8c68f0bc5f3a84d03">_internal_mutable_body</a> ()</td></tr>
 <tr class="separator:ac52adcde781e73c8c68f0bc5f3a84d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1098ff1d0a56fa234fd53ad91a82a804" id="r_a1098ff1d0a56fa234fd53ad91a82a804"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a1098ff1d0a56fa234fd53ad91a82a804">_internal_valid</a> () const</td></tr>
+<tr class="separator:a1098ff1d0a56fa234fd53ad91a82a804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ff0f5b9cd74d142c6f08d6dc281b1c" id="r_a98ff0f5b9cd74d142c6f08d6dc281b1c"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a98ff0f5b9cd74d142c6f08d6dc281b1c">_internal_set_valid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a98ff0f5b9cd74d142c6f08d6dc281b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d1b39064810c42d4f45e2ee01d70019" id="r_a4d1b39064810c42d4f45e2ee01d70019"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a4d1b39064810c42d4f45e2ee01d70019">_internal_mutable_valid</a> ()</td></tr>
+<tr class="separator:a4d1b39064810c42d4f45e2ee01d70019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b545afdf8d53aec95293285eed48b90" id="r_a6b545afdf8d53aec95293285eed48b90"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a6b545afdf8d53aec95293285eed48b90">_internal_has_properties</a> () const</td></tr>
 <tr class="separator:a6b545afdf8d53aec95293285eed48b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2533b33b87d925df8cd0d16d5afb1a62" id="r_a2533b33b87d925df8cd0d16d5afb1a62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">::XuMQ::BasicProperties</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message___payload.html#a2533b33b87d925df8cd0d16d5afb1a62">_internal_properties</a> () const</td></tr>
@@ -373,6 +396,7 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a227f843840914898f5b55e673cbe34cba9a6ca98c8249c39f162fd6e6aa54c5e7" name="a227f843840914898f5b55e673cbe34cba9a6ca98c8249c39f162fd6e6aa54c5e7"></a>kBodyFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a227f843840914898f5b55e673cbe34cba1b6123579b846991aecd5e3bae023232" name="a227f843840914898f5b55e673cbe34cba1b6123579b846991aecd5e3bae023232"></a>kValidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a227f843840914898f5b55e673cbe34cbacfda25812aa62845f2c5337e01065a48" name="a227f843840914898f5b55e673cbe34cbacfda25812aa62845f2c5337e01065a48"></a>kPropertiesFieldNumber&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
@@ -487,11 +511,13 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message___payload_abdbbf8e3a0bb0f46fb5cd2e50ad5f743_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_abdbbf8e3a0bb0f46fb5cd2e50ad5f743_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message___payload_abdbbf8e3a0bb0f46fb5cd2e50ad5f743_cgraph" id="aclass_xu_m_q_1_1_message___payload_abdbbf8e3a0bb0f46fb5cd2e50ad5f743_cgraph">
-<area shape="rect" title=" " alt="" coords="5,37,191,77"/>
+<area shape="rect" title=" " alt="" coords="5,69,191,109"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#ac84d5d03cd525ea932498c38c662ccd3" title=" " alt="" coords="241,5,427,45"/>
-<area shape="poly" title=" " alt="" coords="191,42,227,37,228,42,191,47"/>
+<area shape="poly" title=" " alt="" coords="172,67,246,46,248,51,173,72"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a6b545afdf8d53aec95293285eed48b90" title=" " alt="" coords="239,69,429,109"/>
-<area shape="poly" title=" " alt="" coords="191,67,225,72,225,77,191,73"/>
+<area shape="poly" title=" " alt="" coords="191,87,225,87,225,92,191,92"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a1098ff1d0a56fa234fd53ad91a82a804" title=" " alt="" coords="241,133,427,173"/>
+<area shape="poly" title=" " alt="" coords="173,107,248,127,246,132,172,112"/>
 </map>
 </div>
 
@@ -728,6 +754,41 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a4d1b39064810c42d4f45e2ee01d70019" name="a4d1b39064810c42d4f45e2ee01d70019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d1b39064810c42d4f45e2ee01d70019">&#9670;&#160;</a></span>_internal_mutable_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::Message_Payload::_internal_mutable_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message___payload_a4d1b39064810c42d4f45e2ee01d70019_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_a4d1b39064810c42d4f45e2ee01d70019_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message___payload_a4d1b39064810c42d4f45e2ee01d70019_icgraph" id="aclass_xu_m_q_1_1_message___payload_a4d1b39064810c42d4f45e2ee01d70019_icgraph">
+<area shape="rect" title=" " alt="" coords="239,5,425,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a346520217ed8feaf7b1e13923248ff0c" title=" " alt="" coords="5,5,191,45"/>
+<area shape="poly" title=" " alt="" coords="225,28,191,28,191,23,225,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2533b33b87d925df8cd0d16d5afb1a62" name="a2533b33b87d925df8cd0d16d5afb1a62"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2533b33b87d925df8cd0d16d5afb1a62">&#9670;&#160;</a></span>_internal_properties()</h2>
 
@@ -779,6 +840,71 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a98ff0f5b9cd74d142c6f08d6dc281b1c" name="a98ff0f5b9cd74d142c6f08d6dc281b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ff0f5b9cd74d142c6f08d6dc281b1c">&#9670;&#160;</a></span>_internal_set_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Message_Payload::_internal_set_valid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1098ff1d0a56fa234fd53ad91a82a804" name="a1098ff1d0a56fa234fd53ad91a82a804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1098ff1d0a56fa234fd53ad91a82a804">&#9670;&#160;</a></span>_internal_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::Message_Payload::_internal_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_message___payload_a1098ff1d0a56fa234fd53ad91a82a804_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_a1098ff1d0a56fa234fd53ad91a82a804_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_message___payload_a1098ff1d0a56fa234fd53ad91a82a804_icgraph" id="aclass_xu_m_q_1_1_message___payload_a1098ff1d0a56fa234fd53ad91a82a804_icgraph">
+<area shape="rect" title=" " alt="" coords="239,69,424,109"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#ae98f499b80787be6beb0ef0aa05d8a0c" title=" " alt="" coords="5,5,191,45"/>
+<area shape="poly" title=" " alt="" coords="244,68,171,48,172,43,245,63"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a5fc49e2befb2f66714064ed1ce9e4260" title=" " alt="" coords="5,69,191,109"/>
+<area shape="poly" title=" " alt="" coords="225,92,191,92,191,87,225,87"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#abdbbf8e3a0bb0f46fb5cd2e50ad5f743" title=" " alt="" coords="5,133,191,173"/>
+<area shape="poly" title=" " alt="" coords="245,116,172,136,171,131,244,110"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a346520217ed8feaf7b1e13923248ff0c" name="a346520217ed8feaf7b1e13923248ff0c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a346520217ed8feaf7b1e13923248ff0c">&#9670;&#160;</a></span>_InternalParse()</h2>
 
@@ -817,11 +943,13 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message___payload_a346520217ed8feaf7b1e13923248ff0c_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_a346520217ed8feaf7b1e13923248ff0c_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message___payload_a346520217ed8feaf7b1e13923248ff0c_cgraph" id="aclass_xu_m_q_1_1_message___payload_a346520217ed8feaf7b1e13923248ff0c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,37,191,77"/>
+<area shape="rect" title=" " alt="" coords="5,69,191,109"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#ac52adcde781e73c8c68f0bc5f3a84d03" title=" " alt="" coords="256,5,443,45"/>
-<area shape="poly" title=" " alt="" coords="191,43,242,36,243,42,191,48"/>
+<area shape="poly" title=" " alt="" coords="177,67,257,46,258,51,178,72"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a6a9b800031dd6b063a1bbd03bbdc4a77" title=" " alt="" coords="239,69,460,109"/>
-<area shape="poly" title=" " alt="" coords="191,66,225,71,225,76,191,72"/>
+<area shape="poly" title=" " alt="" coords="191,87,225,87,225,92,191,92"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a4d1b39064810c42d4f45e2ee01d70019" title=" " alt="" coords="256,133,443,173"/>
+<area shape="poly" title=" " alt="" coords="178,107,258,127,257,133,177,112"/>
 <area shape="rect" href="msg_8pb_8h.html#aa4a65bbbe52ef8c6ec2a9a1c6c5f2f98" title=" " alt="" coords="508,69,712,109"/>
 <area shape="poly" title=" " alt="" coords="460,87,494,87,494,92,460,92"/>
 </map>
@@ -867,15 +995,17 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message___payload_ae98f499b80787be6beb0ef0aa05d8a0c_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_ae98f499b80787be6beb0ef0aa05d8a0c_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message___payload_ae98f499b80787be6beb0ef0aa05d8a0c_cgraph" id="aclass_xu_m_q_1_1_message___payload_ae98f499b80787be6beb0ef0aa05d8a0c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,101,191,141"/>
+<area shape="rect" title=" " alt="" coords="5,133,191,173"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#ac84d5d03cd525ea932498c38c662ccd3" title=" " alt="" coords="241,5,427,45"/>
-<area shape="poly" title=" " alt="" coords="139,99,238,55,257,47,259,52,240,60,141,104"/>
+<area shape="poly" title=" " alt="" coords="123,131,174,93,237,55,252,48,254,53,240,60,177,98,126,135"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a6b545afdf8d53aec95293285eed48b90" title=" " alt="" coords="239,69,429,109"/>
-<area shape="poly" title=" " alt="" coords="191,106,225,101,225,107,191,111"/>
-<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a07e9df8c4e46031276056f4262b0bc98" title=" " alt="" coords="241,133,427,173"/>
-<area shape="poly" title=" " alt="" coords="191,131,228,136,227,142,191,137"/>
-<area shape="rect" href="class_xu_m_q_1_1_message___payload_1_1___internal.html#a6b1d56f6873ee0e54f8b153e7b4bb864" title=" " alt="" coords="241,197,427,237"/>
-<area shape="poly" title=" " alt="" coords="141,139,240,183,259,190,257,195,238,188,139,144"/>
+<area shape="poly" title=" " alt="" coords="172,131,246,110,248,115,173,136"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a1098ff1d0a56fa234fd53ad91a82a804" title=" " alt="" coords="241,133,427,173"/>
+<area shape="poly" title=" " alt="" coords="191,151,227,151,227,156,191,156"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a07e9df8c4e46031276056f4262b0bc98" title=" " alt="" coords="241,197,427,237"/>
+<area shape="poly" title=" " alt="" coords="173,171,248,191,246,196,172,176"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload_1_1___internal.html#a6b1d56f6873ee0e54f8b153e7b4bb864" title=" " alt="" coords="241,261,427,301"/>
+<area shape="poly" title=" " alt="" coords="126,171,177,209,240,247,254,254,252,259,237,252,174,214,123,176"/>
 </map>
 </div>
 
@@ -933,11 +1063,13 @@ Private 属性</h2></td></tr>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_message___payload_a5fc49e2befb2f66714064ed1ce9e4260_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_message___payload_a5fc49e2befb2f66714064ed1ce9e4260_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_message___payload_a5fc49e2befb2f66714064ed1ce9e4260_cgraph" id="aclass_xu_m_q_1_1_message___payload_a5fc49e2befb2f66714064ed1ce9e4260_cgraph">
-<area shape="rect" title=" " alt="" coords="5,37,191,77"/>
+<area shape="rect" title=" " alt="" coords="5,69,191,109"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#ac84d5d03cd525ea932498c38c662ccd3" title=" " alt="" coords="241,5,427,45"/>
-<area shape="poly" title=" " alt="" coords="191,42,227,37,228,42,191,47"/>
+<area shape="poly" title=" " alt="" coords="172,67,246,46,248,51,173,72"/>
 <area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a6b545afdf8d53aec95293285eed48b90" title=" " alt="" coords="239,69,429,109"/>
-<area shape="poly" title=" " alt="" coords="191,67,225,72,225,77,191,73"/>
+<area shape="poly" title=" " alt="" coords="191,87,225,87,225,92,191,92"/>
+<area shape="rect" href="class_xu_m_q_1_1_message___payload.html#a1098ff1d0a56fa234fd53ad91a82a804" title=" " alt="" coords="241,133,427,173"/>
+<area shape="poly" title=" " alt="" coords="173,107,248,127,246,132,172,112"/>
 </map>
 </div>
 
@@ -1024,6 +1156,31 @@ Private 属性</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void XuMQ::Message_Payload::clear_properties </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a517bbe8cd66faa3a7106aa62540bc562" name="a517bbe8cd66faa3a7106aa62540bc562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517bbe8cd66faa3a7106aa62540bc562">&#9670;&#160;</a></span>clear_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Message_Payload::clear_valid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1543,6 +1700,31 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="aedb4ff61d4f5fe3903b14c006cafce9a" name="aedb4ff61d4f5fe3903b14c006cafce9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb4ff61d4f5fe3903b14c006cafce9a">&#9670;&#160;</a></span>mutable_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::Message_Payload::mutable_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac3dcfc712f7d2fb11123192577c1f384" name="ac3dcfc712f7d2fb11123192577c1f384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3dcfc712f7d2fb11123192577c1f384">&#9670;&#160;</a></span>New()</h2>
 
@@ -1696,6 +1878,31 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a33731af3b68f10dea0b0aebe3fcaa1a4" name="a33731af3b68f10dea0b0aebe3fcaa1a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33731af3b68f10dea0b0aebe3fcaa1a4">&#9670;&#160;</a></span>release_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::Message_Payload::release_valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a82daec0fd15164bd7b79e8c894e182c9" name="a82daec0fd15164bd7b79e8c894e182c9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82daec0fd15164bd7b79e8c894e182c9">&#9670;&#160;</a></span>set_allocated_body()</h2>
 
@@ -1736,6 +1943,32 @@ Private 属性</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_xu_m_q_1_1_basic_properties.html">::XuMQ::BasicProperties</a> *&#160;</td>
           <td class="paramname"><em>properties</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67cd49cd3000745f8b36f295853b9aef" name="a67cd49cd3000745f8b36f295853b9aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67cd49cd3000745f8b36f295853b9aef">&#9670;&#160;</a></span>set_allocated_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Message_Payload::set_allocated_valid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>valid</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1791,6 +2024,74 @@ template&lt;typename ArgT0 , typename... ArgT&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::Message_Payload::set_body </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0afab88c40d214f3c159b9cfb367da9" name="aa0afab88c40d214f3c159b9cfb367da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0afab88c40d214f3c159b9cfb367da9">&#9670;&#160;</a></span>set_valid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Message_Payload::set_valid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1f8bdc6cba51505a3fbbe81756eb8dc" name="ab1f8bdc6cba51505a3fbbe81756eb8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f8bdc6cba51505a3fbbe81756eb8dc">&#9670;&#160;</a></span>set_valid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::Message_Payload::set_valid </td>
           <td>(</td>
           <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
           <td class="paramname"><em>arg0</em>, </td>
@@ -2036,6 +2337,31 @@ template&lt;typename ArgT0 , typename... ArgT&gt; </div>
 
 </div>
 </div>
+<a id="adfa48b3fa8eca0c3766b01fe2d2ec020" name="adfa48b3fa8eca0c3766b01fe2d2ec020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa48b3fa8eca0c3766b01fe2d2ec020">&#9670;&#160;</a></span>valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::Message_Payload::valid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">友元及相关函数文档</h2>
 <a id="ab618dbbac4a8d749da0d85c32932df36" name="ab618dbbac4a8d749da0d85c32932df36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab618dbbac4a8d749da0d85c32932df36">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</h2>
@@ -2179,7 +2505,7 @@ template&lt;typename T &gt; </div>
 <div class="line">    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,</div>
 <div class="line">    <a class="code hl_function" href="class_xu_m_q_1_1_message___payload.html#a8f19b8a2219a7b14b6c5759140934980">Message_Payload::MergeImpl</a></div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_xu_m_q_1_1_message___payload_html_a8f19b8a2219a7b14b6c5759140934980"><div class="ttname"><a href="class_xu_m_q_1_1_message___payload.html#a8f19b8a2219a7b14b6c5759140934980">XuMQ::Message_Payload::MergeImpl</a></div><div class="ttdeci">static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</div><div class="ttdef"><b>Definition</b> msg.pb.cc:657</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_message___payload_html_a8f19b8a2219a7b14b6c5759140934980"><div class="ttname"><a href="class_xu_m_q_1_1_message___payload.html#a8f19b8a2219a7b14b6c5759140934980">XuMQ::Message_Payload::MergeImpl</a></div><div class="ttdeci">static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</div><div class="ttdef"><b>Definition</b> msg.pb.cc:700</div></div>
 </div><!-- fragment -->
 </div>
 </div>

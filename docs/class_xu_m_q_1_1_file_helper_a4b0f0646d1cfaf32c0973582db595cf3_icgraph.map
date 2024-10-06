@@ -1,5 +1,9 @@
 <map id="XuMQ::FileHelper::createFile" name="XuMQ::FileHelper::createFile">
-<area shape="rect" id="Node000001" title="创建新文件" alt="" coords="108,5,315,31"/>
-<area shape="rect" id="Node000002" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+<area shape="rect" id="Node000001" title="创建新文件" alt="" coords="453,42,660,67"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69" title="创建消息文件" alt="" coords="229,5,405,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,43,405,39,406,33,440,38"/>
+<area shape="rect" id="Node000004" href="$mqfiletest_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="290,70,345,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="440,71,345,82,345,77,439,66"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb" title="构造函数 创建必要的目录和数据文件" alt="" coords="5,5,181,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
 </map>

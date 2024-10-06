@@ -1,0 +1,5 @@
+<map id="XuMQ::MessageMapper::load" name="XuMQ::MessageMapper::load">
+<area shape="rect" id="Node000001" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="229,5,405,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,5,181,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,28,182,28,182,23,215,23"/>
+</map>

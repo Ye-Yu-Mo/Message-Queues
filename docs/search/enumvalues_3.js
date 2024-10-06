@@ -8,5 +8,5 @@ var searchData=
   ['kpayloadfieldnumber_5',['kPayloadFieldNumber',['../class_xu_m_q_1_1_message.html#a50513959fb2b3432bbc8787c3c0b80a7afa46ee1018920f70396c32d0febd21f3',1,'XuMQ::Message']]],
   ['kpropertiesfieldnumber_6',['kPropertiesFieldNumber',['../class_xu_m_q_1_1_message___payload.html#a227f843840914898f5b55e673cbe34cbacfda25812aa62845f2c5337e01065a48',1,'XuMQ::Message_Payload']]],
   ['kroutingkeyfieldnumber_7',['kRoutingKeyFieldNumber',['../class_xu_m_q_1_1_basic_properties.html#a7d7bf11ee6d99d90b3443a11000d4961af2d01ec707e3bccdffbcee1156ba0fb2',1,'XuMQ::BasicProperties']]],
-  ['kvalidfieldnumber_8',['kValidFieldNumber',['../class_xu_m_q_1_1_message.html#a50513959fb2b3432bbc8787c3c0b80a7abb8e0b89a1a24f947f05f6dbd5d84cca',1,'XuMQ::Message']]]
+  ['kvalidfieldnumber_8',['kValidFieldNumber',['../class_xu_m_q_1_1_message___payload.html#a227f843840914898f5b55e673cbe34cba1b6123579b846991aecd5e3bae023232',1,'XuMQ::Message_Payload']]]
 ];

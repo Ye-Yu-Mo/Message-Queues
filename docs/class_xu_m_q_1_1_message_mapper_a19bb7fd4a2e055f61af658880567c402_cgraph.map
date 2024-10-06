@@ -1,0 +1,6 @@
+<map id="XuMQ::MessageMapper::remove" name="XuMQ::MessageMapper::remove">
+<area shape="rect" id="Node000001" title="移除消息 将消息中的有效标记置为false 更新到数据文件中" alt="" coords="5,22,181,62"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#abade7c0c4c34cbc93fc19aa55aa1be7a" title="写入字符串到文件" alt="" coords="229,29,405,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,39,215,39,215,45,182,45"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="281,31,273,21,277,11,292,5,317,3,349,7,361,16,358,20,347,11,317,8,293,10,281,15,278,20,285,27"/>
+</map>

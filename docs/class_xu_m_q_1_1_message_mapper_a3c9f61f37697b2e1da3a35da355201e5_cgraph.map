@@ -1,0 +1,5 @@
+<map id="XuMQ::MessageMapper::removeMsgFIle" name="XuMQ::MessageMapper::removeMsgFIle">
+<area shape="rect" id="Node000001" title="移除消息文件 包括移除数据文件和临时文件" alt="" coords="5,5,181,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,13,445,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,23,215,23,215,28,181,28"/>
+</map>

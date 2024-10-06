@@ -1,0 +1,9 @@
+<map id="XuMQ::MessageMapper::load" name="XuMQ::MessageMapper::load">
+<area shape="rect" id="Node000001" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="5,47,181,87"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="229,29,401,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,55,215,51,216,56,182,60"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="449,55,619,80"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="182,65,436,65,436,70,182,70"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="280,31,272,21,276,11,291,5,315,3,346,6,358,15,355,20,344,11,315,8,292,10,280,15,277,20,284,28"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="402,49,436,53,436,59,401,55"/>
+</map>

@@ -15,6 +15,7 @@ var annotated_dup =
       [ "Message_Payload", "class_xu_m_q_1_1_message___payload.html", "class_xu_m_q_1_1_message___payload" ],
       [ "Message_PayloadDefaultTypeInternal", "struct_xu_m_q_1_1_message___payload_default_type_internal.html", "struct_xu_m_q_1_1_message___payload_default_type_internal" ],
       [ "MessageDefaultTypeInternal", "struct_xu_m_q_1_1_message_default_type_internal.html", "struct_xu_m_q_1_1_message_default_type_internal" ],
+      [ "MessageMapper", "class_xu_m_q_1_1_message_mapper.html", "class_xu_m_q_1_1_message_mapper" ],
       [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", "struct_xu_m_q_1_1_msg_queue" ],
       [ "MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", "class_xu_m_q_1_1_msg_queue_manager" ],
       [ "MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", "class_xu_m_q_1_1_msg_queue_mapper" ],

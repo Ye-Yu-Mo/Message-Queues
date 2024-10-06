@@ -11,7 +11,7 @@ var searchData=
   ['_5finternal_5fmutable_5fpayload_8',['_internal_mutable_payload',['../class_xu_m_q_1_1_message.html#abaf72ecf3f82a1ea4417077bfe63f3fa',1,'XuMQ::Message']]],
   ['_5finternal_5fmutable_5fproperties_9',['_internal_mutable_properties',['../class_xu_m_q_1_1_message___payload.html#a6a9b800031dd6b063a1bbd03bbdc4a77',1,'XuMQ::Message_Payload']]],
   ['_5finternal_5fmutable_5frouting_5fkey_10',['_internal_mutable_routing_key',['../class_xu_m_q_1_1_basic_properties.html#a41d842c75e6652a0704a4169d5792380',1,'XuMQ::BasicProperties']]],
-  ['_5finternal_5fmutable_5fvalid_11',['_internal_mutable_valid',['../class_xu_m_q_1_1_message.html#a3ddb534361b0ee8cc9b08c5141db30e8',1,'XuMQ::Message']]],
+  ['_5finternal_5fmutable_5fvalid_11',['_internal_mutable_valid',['../class_xu_m_q_1_1_message___payload.html#a4d1b39064810c42d4f45e2ee01d70019',1,'XuMQ::Message_Payload']]],
   ['_5finternal_5foffset_12',['_internal_offset',['../class_xu_m_q_1_1_message.html#a954922f36ceb02a67e3569c27a523dc2',1,'XuMQ::Message']]],
   ['_5finternal_5fpayload_13',['_internal_payload',['../class_xu_m_q_1_1_message.html#a32da4d2ac2d6f3dbc1b6378a3c08ac0a',1,'XuMQ::Message']]],
   ['_5finternal_5fproperties_14',['_internal_properties',['../class_xu_m_q_1_1_message___payload.html#a2533b33b87d925df8cd0d16d5afb1a62',1,'XuMQ::Message_Payload']]],
@@ -22,8 +22,8 @@ var searchData=
   ['_5finternal_5fset_5flength_19',['_internal_set_length',['../class_xu_m_q_1_1_message.html#a1c43d4baddd37939ab201d5caa9ae187',1,'XuMQ::Message']]],
   ['_5finternal_5fset_5foffset_20',['_internal_set_offset',['../class_xu_m_q_1_1_message.html#a15d3db017fbd16249a6351bd0026650e',1,'XuMQ::Message']]],
   ['_5finternal_5fset_5frouting_5fkey_21',['_internal_set_routing_key',['../class_xu_m_q_1_1_basic_properties.html#a5a508c7f5fc3b929651e84da371d3814',1,'XuMQ::BasicProperties']]],
-  ['_5finternal_5fset_5fvalid_22',['_internal_set_valid',['../class_xu_m_q_1_1_message.html#a8061b1490ac956d880cad2d799a5844c',1,'XuMQ::Message']]],
-  ['_5finternal_5fvalid_23',['_internal_valid',['../class_xu_m_q_1_1_message.html#a9d45b5e5c0c4f1f9b6dd2efbf71434d5',1,'XuMQ::Message']]],
+  ['_5finternal_5fset_5fvalid_22',['_internal_set_valid',['../class_xu_m_q_1_1_message___payload.html#a98ff0f5b9cd74d142c6f08d6dc281b1c',1,'XuMQ::Message_Payload']]],
+  ['_5finternal_5fvalid_23',['_internal_valid',['../class_xu_m_q_1_1_message___payload.html#a1098ff1d0a56fa234fd53ad91a82a804',1,'XuMQ::Message_Payload']]],
   ['_5finternalparse_24',['_internalparse',['../class_xu_m_q_1_1_basic_properties.html#a5ab9c0271b253518d23b605b5938f46b',1,'XuMQ::BasicProperties::_InternalParse()'],['../class_xu_m_q_1_1_message___payload.html#a346520217ed8feaf7b1e13923248ff0c',1,'XuMQ::Message_Payload::_InternalParse()'],['../class_xu_m_q_1_1_message.html#a3cabfbe063e62fd0f83b8c29dd42cde9',1,'XuMQ::Message::_InternalParse()']]],
   ['_5finternalserialize_25',['_internalserialize',['../class_xu_m_q_1_1_basic_properties.html#a847390b3af4304a7bd798233b78e9d70',1,'XuMQ::BasicProperties::_InternalSerialize()'],['../class_xu_m_q_1_1_message___payload.html#ae98f499b80787be6beb0ef0aa05d8a0c',1,'XuMQ::Message_Payload::_InternalSerialize()'],['../class_xu_m_q_1_1_message.html#a9c6161973af2447f67e5b2334727ccb3',1,'XuMQ::Message::_InternalSerialize()']]]
 ];

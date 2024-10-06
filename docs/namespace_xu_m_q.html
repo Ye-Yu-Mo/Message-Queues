@@ -143,6 +143,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_message_default_type_internal.html">MessageDefaultTypeInternal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html">MessageMapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理消息队列的文件存储和管理类  <a href="class_xu_m_q_1_1_message_mapper.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_msg_queue.html">MsgQueue</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体  <a href="struct_xu_m_q_1_1_msg_queue.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +176,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:a2c80cb23e6fa300bd31a9226e982be18" id="r_a2c80cb23e6fa300bd31a9226e982be18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
 <tr class="memdesc:a2c80cb23e6fa300bd31a9226e982be18"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表 交换机名称-&gt;交换机对象指针  <br /></td></tr>
 <tr class="separator:a2c80cb23e6fa300bd31a9226e982be18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7eae080046044daf7d76949d7b24c47" id="r_aa7eae080046044daf7d76949d7b24c47"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a> &gt;</td></tr>
+<tr class="memdesc:aa7eae080046044daf7d76949d7b24c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">proto生成的Message类型指针  <br /></td></tr>
+<tr class="separator:aa7eae080046044daf7d76949d7b24c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade8f8bc46e29f4519c0cd10e79b0cbbb" id="r_ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> &gt;</td></tr>
 <tr class="memdesc:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列映射表 消息队列名称-&gt;消息队列指针  <br /></td></tr>
 <tr class="separator:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +254,18 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="separator:a41a68167fd12001c392dfb64ba06cd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af91e7f144cf9ee19df8185bd66af20ad" id="r_af91e7f144cf9ee19df8185bd66af20ad"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#af91e7f144cf9ee19df8185bd66af20ad">DeliveryMode_ARRAYSIZE</a> = <a class="el" href="namespace_xu_m_q.html#a41a68167fd12001c392dfb64ba06cd62">DeliveryMode_MAX</a> + 1</td></tr>
 <tr class="separator:af91e7f144cf9ee19df8185bd66af20ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c80748846b3a6c7d5b33e3383bcfd50" id="r_a4c80748846b3a6c7d5b33e3383bcfd50"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a4c80748846b3a6c7d5b33e3383bcfd50">DATAFILE_SUBFIX</a> = &quot;.mqd&quot;</td></tr>
+<tr class="memdesc:a4c80748846b3a6c7d5b33e3383bcfd50"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据文件后缀名  <br /></td></tr>
+<tr class="separator:a4c80748846b3a6c7d5b33e3383bcfd50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf00f6175ab7f0660677533d2499949a" id="r_adf00f6175ab7f0660677533d2499949a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#adf00f6175ab7f0660677533d2499949a">TMPFILE_SUBFIX</a> = &quot;.mqd.tmp&quot;</td></tr>
+<tr class="memdesc:adf00f6175ab7f0660677533d2499949a"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时文件后缀名  <br /></td></tr>
+<tr class="separator:adf00f6175ab7f0660677533d2499949a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7908844b9b7da3ad295c14902d49f0c" id="r_ad7908844b9b7da3ad295c14902d49f0c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ad7908844b9b7da3ad295c14902d49f0c">MSG_VALID</a> = &quot;1&quot;</td></tr>
+<tr class="memdesc:ad7908844b9b7da3ad295c14902d49f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息有效标志  <br /></td></tr>
+<tr class="separator:ad7908844b9b7da3ad295c14902d49f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56075f1162065b026001954507eea6be" id="r_a56075f1162065b026001954507eea6be"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a56075f1162065b026001954507eea6be">MSG_INVALID</a> = &quot;0&quot;</td></tr>
+<tr class="memdesc:a56075f1162065b026001954507eea6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息无效标志  <br /></td></tr>
+<tr class="separator:a56075f1162065b026001954507eea6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">类型定义说明</h2>
 <a id="a4970cc87d0e344f2b27f072e7172cff7" name="a4970cc87d0e344f2b27f072e7172cff7"></a>
@@ -281,6 +299,22 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 </div><div class="memdoc">
 
 <p>交换机映射表 交换机名称-&gt;交换机对象指针 </p>
+
+</div>
+</div>
+<a id="aa7eae080046044daf7d76949d7b24c47" name="aa7eae080046044daf7d76949d7b24c47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7eae080046044daf7d76949d7b24c47">&#9670;&#160;</a></span>MessagePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">XuMQ::MessagePtr</a> = typedef std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>proto生成的Message类型指针 </p>
 
 </div>
 </div>
@@ -667,6 +701,22 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a4c80748846b3a6c7d5b33e3383bcfd50" name="a4c80748846b3a6c7d5b33e3383bcfd50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c80748846b3a6c7d5b33e3383bcfd50">&#9670;&#160;</a></span>DATAFILE_SUBFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* XuMQ::DATAFILE_SUBFIX = &quot;.mqd&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>数据文件后缀名 </p>
+
+</div>
+</div>
 <a id="af91e7f144cf9ee19df8185bd66af20ad" name="af91e7f144cf9ee19df8185bd66af20ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af91e7f144cf9ee19df8185bd66af20ad">&#9670;&#160;</a></span>DeliveryMode_ARRAYSIZE</h2>
 
@@ -828,6 +878,54 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>日志器的智能指针类型 </p>
+
+</div>
+</div>
+<a id="a56075f1162065b026001954507eea6be" name="a56075f1162065b026001954507eea6be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56075f1162065b026001954507eea6be">&#9670;&#160;</a></span>MSG_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* XuMQ::MSG_INVALID = &quot;0&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息无效标志 </p>
+
+</div>
+</div>
+<a id="ad7908844b9b7da3ad295c14902d49f0c" name="ad7908844b9b7da3ad295c14902d49f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7908844b9b7da3ad295c14902d49f0c">&#9670;&#160;</a></span>MSG_VALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* XuMQ::MSG_VALID = &quot;1&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息有效标志 </p>
+
+</div>
+</div>
+<a id="adf00f6175ab7f0660677533d2499949a" name="adf00f6175ab7f0660677533d2499949a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf00f6175ab7f0660677533d2499949a">&#9670;&#160;</a></span>TMPFILE_SUBFIX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* XuMQ::TMPFILE_SUBFIX = &quot;.mqd.tmp&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>临时文件后缀名 </p>
 
 </div>
 </div>

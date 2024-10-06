@@ -1,0 +1,19 @@
+<map id="XuMQ::MessageMapper::garbageCollection" name="XuMQ::MessageMapper::garbageCollection">
+<area shape="rect" id="Node000001" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="5,123,181,163"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64" title="插入消息 将消息添加到数据文件中" alt="" coords="249,29,425,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,120,228,79,251,71,253,76,230,84,136,125"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160" title="加载有效消息 从数据文件中读取所有消息并存为有效的消息对象" alt="" coords="249,93,425,133"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="181,129,235,123,236,128,182,135"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_file_helper.html#a0f802521391b758249b06df7b569368a" title="删除文件" alt="" coords="229,158,445,183"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="182,150,216,154,215,159,181,155"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_file_helper.html#a69d92b4cd80a4ce7544faafebd1d42c1" title="重命名文件" alt="" coords="241,231,434,257"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="143,160,294,224,292,229,141,165"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="293,30,290,20,297,10,313,5,337,3,365,6,380,13,378,18,364,11,337,8,314,10,300,15,295,21,298,28"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_file_helper.html#ad971857da8011569e70450927174b15f" title="读取文件内容" alt="" coords="493,75,665,101"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="425,101,479,96,480,101,426,107"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_file_helper.html#a7ac4e13733fde87e0aaf31039bf61102" title="获取文件大小" alt="" coords="713,101,883,126"/>
+<area shape="poly" id="edge7_Node000003_Node000005" title=" " alt="" coords="425,111,699,111,699,116,425,116"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="544,77,536,67,540,57,555,51,579,49,610,52,622,61,619,66,608,57,579,54,556,56,544,61,541,66,548,74"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="666,95,700,99,700,105,665,101"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="298,233,290,223,294,213,310,207,337,205,371,209,384,218,381,222,369,213,337,210,312,212,298,217,295,222,302,229"/>
+</map>

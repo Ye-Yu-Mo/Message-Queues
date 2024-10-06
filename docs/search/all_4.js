@@ -10,10 +10,11 @@ var searchData=
   ['clear_5fpayload_7',['clear_payload',['../class_xu_m_q_1_1_message.html#a1e6ff4782e11b98d1b453486e4ae288a',1,'XuMQ::Message']]],
   ['clear_5fproperties_8',['clear_properties',['../class_xu_m_q_1_1_message___payload.html#ae5f2244d3ab48589bf154df2571ef473',1,'XuMQ::Message_Payload']]],
   ['clear_5frouting_5fkey_9',['clear_routing_key',['../class_xu_m_q_1_1_basic_properties.html#a10e53776af80b0a79c2b57b6c82618e3',1,'XuMQ::BasicProperties']]],
-  ['clear_5fvalid_10',['clear_valid',['../class_xu_m_q_1_1_message.html#a37b6def5d197d8f36c33b0f9c28afac7',1,'XuMQ::Message']]],
+  ['clear_5fvalid_10',['clear_valid',['../class_xu_m_q_1_1_message___payload.html#a517bbe8cd66faa3a7106aa62540bc562',1,'XuMQ::Message_Payload']]],
   ['close_11',['close',['../class_xu_m_q_1_1_sqlite_helper.html#ac8e660e745afaafc72b82937ae81c1e8',1,'XuMQ::SqliteHelper']]],
   ['copyfrom_12',['copyfrom',['../class_xu_m_q_1_1_basic_properties.html#ad09ac87de65216c804a2634ee8585771',1,'XuMQ::BasicProperties::CopyFrom()'],['../class_xu_m_q_1_1_message___payload.html#aa71ffa565b95893849c8ddcf815a61b9',1,'XuMQ::Message_Payload::CopyFrom()'],['../class_xu_m_q_1_1_message.html#a949e6070913bf14fc93973f241fe2e98',1,'XuMQ::Message::CopyFrom()']]],
   ['createdirectory_13',['createDirectory',['../class_xu_m_q_1_1_file_helper.html#a22fd9192e7f58d40e0188a4f619b9bad',1,'XuMQ::FileHelper']]],
   ['createfile_14',['createFile',['../class_xu_m_q_1_1_file_helper.html#a4b0f0646d1cfaf32c0973582db595cf3',1,'XuMQ::FileHelper']]],
-  ['createtable_15',['createtable',['../class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c',1,'XuMQ::BindingMapper::createTable()'],['../class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7',1,'XuMQ::ExchangeMapper::createTable()'],['../class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e',1,'XuMQ::MsgQueueMapper::createTable()']]]
+  ['createmsgfile_15',['createMsgFile',['../class_xu_m_q_1_1_message_mapper.html#a72087ccf24bf8a177eea208cdd678a69',1,'XuMQ::MessageMapper']]],
+  ['createtable_16',['createtable',['../class_xu_m_q_1_1_binding_mapper.html#ae8359c4312ca03c8bae81cca1cb9c27c',1,'XuMQ::BindingMapper::createTable()'],['../class_xu_m_q_1_1_exchange_mapper.html#a12af18161c38ec2a98fe75f27cf0e9e7',1,'XuMQ::ExchangeMapper::createTable()'],['../class_xu_m_q_1_1_msg_queue_mapper.html#a3a4b6fb4b50b4e5e3ef4f45fc160cd8e',1,'XuMQ::MsgQueueMapper::createTable()']]]
 ];
