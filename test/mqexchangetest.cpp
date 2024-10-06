@@ -68,8 +68,5 @@ int main(int argc, char *argv[])
     debug(XuMQ::logger, "exchange2:%d", emp->exists("exchange2"));
     debug(XuMQ::logger, "exchange3:%d", emp->exists("exchange3"));
     debug(XuMQ::logger, "exchange4:%d", emp->exists("exchange4"));
-    // testing::InitGoogleTest(&argc, argv);
-    // testing::AddGlobalTestEnvironment(new ExchangeTest);
-    // int res = RUN_ALL_TESTS();
     return 0;
 }
