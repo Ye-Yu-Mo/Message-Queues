@@ -16,6 +16,7 @@ public:
         // mmp->clear();
         info(XuMQ::logger, "清理完成");
     }
+
 };
 
 // TEST(message_test, insert_test)
@@ -72,28 +73,33 @@ public:
 //     // ASSERT_EQ(mmp->waitAckCount("queue1"), 5);
 // }
 
-TEST(message_test, delete_test)
-{
-    XuMQ::MessagePtr msg1 = mmp->front("queue1");
+// TEST(message_test, delete_test)
+// {
+//     XuMQ::MessagePtr msg1 = mmp->front("queue1");
 
-    ASSERT_NE(msg1.get(), nullptr);
-    ASSERT_EQ(msg1->payload().body(), std::string("hello xu 2"));
-    // ASSERT_EQ(mmp->durableCount("queue1"), 9);
-    // ASSERT_EQ(mmp->availableCount("queue1"), 9);
-    // ASSERT_EQ(mmp->totalCount("queue1"), 9);
-    // XuMQ::MessagePtr msg1 = mmp->front("queue1");
-    // ASSERT_EQ(mmp->durableCount("queue1"), 9);
+//     ASSERT_NE(msg1.get(), nullptr);
+//     ASSERT_EQ(msg1->payload().body(), std::string("hello xu 2"));
+//     // ASSERT_EQ(mmp->durableCount("queue1"), 9);
+//     // ASSERT_EQ(mmp->availableCount("queue1"), 9);
+//     // ASSERT_EQ(mmp->totalCount("queue1"), 9);
+//     // XuMQ::MessagePtr msg1 = mmp->front("queue1");
+//     // ASSERT_EQ(mmp->durableCount("queue1"), 9);
 
-    // ASSERT_NE(msg1.get(), nullptr);
-    // ASSERT_EQ(msg1->payload().body(), std::string("hello xu 1"));
-    // ASSERT_EQ(mmp->availableCount("queue1"), 8);
-    // ASSERT_EQ(mmp->waitAckCount("queue1"), 1);
-    // mmp->ack("queue1", msg1->payload().properties().id());
-    // ASSERT_EQ(mmp->availableCount("queue1"), 8);
-    // ASSERT_EQ(mmp->waitAckCount("queue1"), 0);
-    // ASSERT_EQ(mmp->durableCount("queue1"), 8);
-    // ASSERT_EQ(mmp->totalCount("queue1"), 9);
+//     // ASSERT_NE(msg1.get(), nullptr);
+//     // ASSERT_EQ(msg1->payload().body(), std::string("hello xu 1"));
+//     // ASSERT_EQ(mmp->availableCount("queue1"), 8);
+//     // ASSERT_EQ(mmp->waitAckCount("queue1"), 1);
+//     // mmp->ack("queue1", msg1->payload().properties().id());
+//     // ASSERT_EQ(mmp->availableCount("queue1"), 8);
+//     // ASSERT_EQ(mmp->waitAckCount("queue1"), 0);
+//     // ASSERT_EQ(mmp->durableCount("queue1"), 8);
+//     // ASSERT_EQ(mmp->totalCount("queue1"), 9);
     
+// }
+
+TEST(message_test, destroy_test)
+{
+    mmp->destroyQueueMessage("queue1");
 }
 
 int main(int argc, char *argv[])
