@@ -1,5 +1,5 @@
 /**
- * @file virtual_host.hpp
+ * @file host.hpp
  * @brief XuMQ 虚拟机模块定义
  *
  * 此模块实现了虚拟主机的功能，包括交换机和队列的管理、消息的发布与消费，以及绑定信息的管理。
@@ -17,6 +17,7 @@
 
 namespace XuMQ
 {
+    /// @class VirtualHost
     /// @brief 虚拟机模块
     class VirtualHost
     {

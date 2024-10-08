@@ -1,6 +1,6 @@
 <map id="server/exchange.hpp" name="server/exchange.hpp">
 <area shape="rect" id="Node000001" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="91,5,250,31"/>
-<area shape="rect" id="Node000002" href="$host_8hpp.html" title=" " alt="" coords="20,79,143,104"/>
+<area shape="rect" id="Node000002" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="20,79,143,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,41,98,81,94,76,144,37"/>
 <area shape="rect" id="Node000004" href="$mqexchangetest_8cpp.html" title=" " alt="" coords="167,79,353,104"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,37,247,76,244,81,194,41"/>

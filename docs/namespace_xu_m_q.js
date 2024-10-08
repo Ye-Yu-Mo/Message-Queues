@@ -20,6 +20,7 @@ var namespace_xu_m_q =
     [ "MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", "class_xu_m_q_1_1_msg_queue_manager" ],
     [ "MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", "class_xu_m_q_1_1_msg_queue_mapper" ],
     [ "QueueMessage", "class_xu_m_q_1_1_queue_message.html", "class_xu_m_q_1_1_queue_message" ],
+    [ "Router", "class_xu_m_q_1_1_router.html", "class_xu_m_q_1_1_router" ],
     [ "SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", "class_xu_m_q_1_1_sqlite_helper" ],
     [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
     [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],

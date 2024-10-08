@@ -99,10 +99,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_xu_m_q_1_1_exchange_mapper.html#ab8322c18a98bc820da000603cbdf88ff",
-"class_xu_m_q_1_1_message___payload.html#aa71ffa565b95893849c8ddcf815a61b9",
-"class_xu_m_q_1_1_virtual_host.html#a2036e0816609a2f078d6ab7b5beaed9c",
-"namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da5cb83eacac883351df992b3a23317bc9"
+"class_xu_m_q_1_1_exchange_mapper.html#ab572b6e512d9e382e3143b1b04de4417",
+"class_xu_m_q_1_1_message___payload.html#aa0afab88c40d214f3c159b9cfb367da9",
+"class_xu_m_q_1_1_virtual_host.html#a0ada0fe384f769793427918ade01c1fd",
+"namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

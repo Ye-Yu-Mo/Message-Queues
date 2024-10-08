@@ -83,10 +83,8 @@ ProducerClient和ConsumerClient通过网络的方式远程调用这些API实现�
 * Fanout-广播交换: 复制发布到该交换机的所有队列
 * Topic-主题交换: 队列在创建时指定了一个bindingKey, 当交换机收到一个消息时, 该消息内部存在一个字符串routingKey, 当routingKey与bindKey满足一定条件时, 把消息存到该队列中
 
-> 匹配样例
-
-binding_key: news.music.# 约定字符: 数字\\字母\\ '\_' \\ '\.' \\ '\#' \\ '\*'
-routing_key: news.music.pop 约定字符: 数字\\字母\\ '\_' \\ '\.'
+> 匹配规则<br> <br> 
+binding_key: `news.music.#` 约定字符: 数字`0~9`\\字母`a~z A~Z`\\ `_` \\ `.` \\ `#` \\ `*`<br> **注意**  <br> 1. `*` 通配符可以代替一个任意单词 例如: `news.*.footable`是合法的<br> 2. `#` 通配符可以代替任意多个(0个或任意个)单词 例如: `news.sport.#`是合法的<br> 3. 在两个点直接不允许出现通配符和其他字符 例如: `news.*a.footable`是不合法的<br> 4. `#`通配符不允许连续使用通配符 没有意义 例如`news.#.*.footable #.# *.# #.*`是不合法的<br> <br> routing_key: news.music.pop 约定字符: 数字`0~9`\\字母`a~z A~Z`\\ `_` \\ `.`
 
 ### 网络通信
 

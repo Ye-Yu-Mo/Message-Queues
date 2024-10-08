@@ -176,9 +176,18 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>Topic-主题交换: 队列在创建时指定了一个bindingKey, 当交换机收到一个消息时, 该消息内部存在一个字符串routingKey, 当routingKey与bindKey满足一定条件时, 把消息存到该队列中</li>
 </ul>
 <blockquote class="doxtable">
-<p>&zwj;匹配样例 </p>
+<p>&zwj;匹配规则<br  />
+ <br  />
+ </p>
 </blockquote>
-<p>binding_key: news.music.# 约定字符: 数字\字母\ '_' \ '.' \ '#' \ '*' routing_key: news.music.pop 约定字符: 数字\字母\ '_' \ '.'</p>
+<p>binding_key: <code>news.music.#</code> 约定字符: 数字<code>0~9</code>\字母<code>a~z A~Z</code>\ <code>_</code> \ <code>.</code> \ <code>#</code> \ <code>*</code><br  />
+ <b>注意</b> <br  />
+ 1. <code>*</code> 通配符可以代替一个任意单词 例如: <code>news.*.footable</code>是合法的<br  />
+ 2. <code>#</code> 通配符可以代替任意多个(0个或任意个)单词 例如: <code>news.sport.#</code>是合法的<br  />
+ 3. 在两个点直接不允许出现通配符和其他字符 例如: <code>news.*a.footable</code>是不合法的<br  />
+ 4. <code>#</code>通配符不允许连续使用通配符 没有意义 例如<code>news.#.*.footable #.# *.# #.*</code>是不合法的<br  />
+ <br  />
+ routing_key: news.music.pop 约定字符: 数字<code>0~9</code>\字母<code>a~z A~Z</code>\ <code>_</code> \ <code>.</code></p>
 <h2><a class="anchor" id="autotoc_md9"></a>
 网络通信</h2>
 <p>作为服务器客户端架构, 通过网络通信让客户端能够操作服务器</p>

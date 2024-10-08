@@ -11,7 +11,8 @@ var hierarchy =
       [ "BindingTest", "class_binding_test.html", null ],
       [ "BindingTest", "class_binding_test.html", null ],
       [ "ExchangeTest", "class_exchange_test.html", null ],
-      [ "QueueTest", "class_queue_test.html", null ]
+      [ "QueueTest", "class_queue_test.html", null ],
+      [ "RouteTest", "class_route_test.html", null ]
     ] ],
     [ "XuMQ::Exchange", "struct_xu_m_q_1_1_exchange.html", null ],
     [ "XuMQ::ExchangeManager", "class_xu_m_q_1_1_exchange_manager.html", null ],
@@ -35,6 +36,7 @@ var hierarchy =
     [ "XuMQ::MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", null ],
     [ "XuMQ::MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", null ],
     [ "XuMQ::QueueMessage", "class_xu_m_q_1_1_queue_message.html", null ],
+    [ "XuMQ::Router", "class_xu_m_q_1_1_router.html", null ],
     [ "XuMQ::SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", null ],
     [ "XuMQ::StrHelper", "class_xu_m_q_1_1_str_helper.html", null ],
     [ "TableStruct_msg_2eproto", "struct_table_struct__msg__2eproto.html", null ],

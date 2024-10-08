@@ -1,6 +1,6 @@
 <map id="test/mqbindingtest.cpp" name="test/mqbindingtest.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="2693,5,2865,31"/>
-<area shape="rect" id="Node000002" href="$binding_8hpp.html" title=" " alt="" coords="2625,79,2780,104"/>
+<area shape="rect" id="Node000002" href="$binding_8hpp.html" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="2625,79,2780,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2768,33,2727,71,2723,67,2765,29"/>
 <area shape="rect" id="Node000039" title=" " alt="" coords="2804,79,2908,104"/>
 <area shape="poly" id="edge41_Node000001_Node000039" title=" " alt="" coords="2793,29,2835,67,2831,71,2789,33"/>

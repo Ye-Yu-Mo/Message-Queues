@@ -1,4 +1,7 @@
-.PHONY:mqhosttest
+.PHONY:mqroute
+mqroute:mqroute.cpp ../common/msg.pb.cc
+	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
+
 mqhosttest:mqhosttest.cpp ../common/msg.pb.cc
 	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
 

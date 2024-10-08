@@ -1,9 +1,11 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,164,80"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,164,105"/>
 <area shape="rect" id="Node000001" href="$class_binding_test.html" title=" " alt="" coords="219,5,316,31"/>
-<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="145,49,218,28,220,33,146,54"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="128,72,234,28,236,33,130,77"/>
 <area shape="rect" id="Node000002" href="$class_exchange_test.html" title=" " alt="" coords="212,55,323,80"/>
-<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="178,65,212,65,212,70,178,70"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="178,77,211,72,212,78,178,82"/>
 <area shape="rect" id="Node000003" href="$class_queue_test.html" title=" " alt="" coords="222,104,313,129"/>
-<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="146,81,222,102,221,107,145,86"/>
+<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="178,102,222,108,222,113,178,108"/>
+<area shape="rect" id="Node000004" href="$class_route_test.html" title=" " alt="" coords="224,153,311,179"/>
+<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="131,108,235,151,233,156,129,113"/>
 </map>

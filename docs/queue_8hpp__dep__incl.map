@@ -1,6 +1,6 @@
 <map id="server/queue.hpp" name="server/queue.hpp">
 <area shape="rect" id="Node000001" title="消息队列模块的定义和实现" alt="" coords="98,5,233,31"/>
-<area shape="rect" id="Node000002" href="$host_8hpp.html" title=" " alt="" coords="20,79,143,104"/>
+<area shape="rect" id="Node000002" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="20,79,143,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,42,97,80,93,76,140,38"/>
 <area shape="rect" id="Node000004" href="$mqqueuetest_8cpp.html" title=" " alt="" coords="167,79,331,104"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,38,237,76,234,80,188,42"/>

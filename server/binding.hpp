@@ -1,5 +1,5 @@
 /**
- * @file binding_manager.hpp
+ * @file binding.hpp
  * @brief 该文件包含消息队列绑定信息的管理类和结构体定义。
  *
  * 本模块实现了消息队列与交换机的绑定信息管理，包括持久化管理和内存管理。

@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('binding_8hpp.html',''); initResizable(
   <div class="headertitle"><div class="title">binding.hpp 文件参考</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>该文件包含消息队列绑定信息的管理类和结构体定义。  
+<a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="logger_8hpp_source.html">../common/logger.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="helper_8hpp_source.html">../common/helper.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="msg_8pb_8h_source.html">../common/msg.pb.h</a>&quot;</code><br />
@@ -115,7 +118,7 @@ binding.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="binding_8hpp__incl.png" border="0" usemap="#aserver_2binding_8hpp" alt=""/></div>
 <map name="aserver_2binding_8hpp" id="aserver_2binding_8hpp">
-<area shape="rect" title=" " alt="" coords="2631,5,2774,31"/>
+<area shape="rect" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="2631,5,2774,31"/>
 <area shape="rect" href="logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,159,168,185"/>
 <area shape="poly" title=" " alt="" coords="2631,22,2224,25,1615,34,988,52,726,65,528,81,420,97,314,118,143,158,141,153,313,113,420,92,528,76,726,59,988,46,1615,28,2224,20,2631,17"/>
 <area shape="rect" href="helper_8hpp.html" title="工具类封装" alt="" coords="835,79,997,104"/>
@@ -198,8 +201,8 @@ binding.hpp 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="binding_8hpp__dep__incl.png" border="0" usemap="#aserver_2binding_8hppdep" alt=""/></div>
 <map name="aserver_2binding_8hppdep" id="aserver_2binding_8hppdep">
-<area shape="rect" title=" " alt="" coords="95,5,238,31"/>
-<area shape="rect" href="host_8hpp.html" title=" " alt="" coords="20,79,143,104"/>
+<area shape="rect" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="95,5,238,31"/>
+<area shape="rect" href="host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="20,79,143,104"/>
 <area shape="poly" title=" " alt="" coords="144,41,97,80,94,76,141,37"/>
 <area shape="rect" href="mqbindingtest_8cpp.html" title=" " alt="" coords="167,79,339,104"/>
 <area shape="poly" title=" " alt="" coords="193,37,241,76,237,81,189,41"/>
@@ -236,7 +239,15 @@ binding.hpp 的引用(Include)关系图:</div>
 <tr class="memdesc:a4970cc87d0e344f2b27f072e7172cff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定映射表-&mdash;交换机-&gt;消息队列绑定映射表的映射表  <br /></td></tr>
 <tr class="separator:a4970cc87d0e344f2b27f072e7172cff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>该文件包含消息队列绑定信息的管理类和结构体定义。 </p>
+<p>本模块实现了消息队列与交换机的绑定信息管理，包括持久化管理和内存管理。</p>
+<ol type="1">
+<li>该模块主要负责消息队列与交换机之间的绑定关系的维护。</li>
+<li>提供了对绑定信息的增删查改接口。</li>
+<li>支持将绑定信息持久化到 SQLite 数据库中，以便于重启后恢复状态。 </li>
+</ol>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

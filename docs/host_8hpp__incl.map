@@ -1,10 +1,10 @@
 <map id="server/host.hpp" name="server/host.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="3833,5,3956,31"/>
+<area shape="rect" id="Node000001" title="XuMQ 虚拟机模块定义" alt="" coords="3833,5,3956,31"/>
 <area shape="rect" id="Node000002" href="$exchange_8hpp.html" title="交换机管理模块，定义了交换机的结构、持久化以及内存管理功能" alt="" coords="3653,79,3766,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3866,33,3753,76,3751,71,3864,28"/>
 <area shape="rect" id="Node000039" href="$queue_8hpp.html" title="消息队列模块的定义和实现" alt="" coords="3791,79,3881,104"/>
 <area shape="poly" id="edge41_Node000001_Node000039" title=" " alt="" coords="3887,33,3856,70,3852,67,3883,29"/>
-<area shape="rect" id="Node000040" href="$binding_8hpp.html" title=" " alt="" coords="3905,79,4004,104"/>
+<area shape="rect" id="Node000040" href="$binding_8hpp.html" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="3905,79,4004,104"/>
 <area shape="poly" id="edge49_Node000001_Node000040" title=" " alt="" coords="3907,29,3938,66,3934,70,3903,33"/>
 <area shape="rect" id="Node000041" href="$message_8hpp.html" title="消息队列文件存储的实现" alt="" coords="4028,79,4137,104"/>
 <area shape="poly" id="edge57_Node000001_Node000041" title=" " alt="" coords="3926,28,4040,71,4038,76,3924,33"/>

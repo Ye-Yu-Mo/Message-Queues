@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::Router类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_router.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="class_xu_m_q_1_1_router-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::Router类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>路由管理器  
+ <a href="class_xu_m_q_1_1_router.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="route_8hpp_source.html">route.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a23fd20d6881e4c70d0d0017dd371f869" id="r_a23fd20d6881e4c70d0d0017dd371f869"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_router.html#a23fd20d6881e4c70d0d0017dd371f869">isLegalRoutingKey</a> (const std::string &amp;routing_key)</td></tr>
+<tr class="memdesc:a23fd20d6881e4c70d0d0017dd371f869"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断路由关键字是否合法  <br /></td></tr>
+<tr class="separator:a23fd20d6881e4c70d0d0017dd371f869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4c02211ce5a8f6fd344cbe66a3db289" id="r_ab4c02211ce5a8f6fd344cbe66a3db289"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_router.html#ab4c02211ce5a8f6fd344cbe66a3db289">isLegalBindingKey</a> (const std::string &amp;binding_key)</td></tr>
+<tr class="memdesc:ab4c02211ce5a8f6fd344cbe66a3db289"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断绑定关键字是否合法  <br /></td></tr>
+<tr class="separator:ab4c02211ce5a8f6fd344cbe66a3db289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af18394ff14421ce690cbf088964c5c75" id="r_af18394ff14421ce690cbf088964c5c75"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_router.html#af18394ff14421ce690cbf088964c5c75">route</a> (<a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a> type, const std::string &amp;routing_key, const std::string &amp;binding_key)</td></tr>
+<tr class="memdesc:af18394ff14421ce690cbf088964c5c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">路由选择  <br /></td></tr>
+<tr class="separator:af18394ff14421ce690cbf088964c5c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>路由管理器 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab4c02211ce5a8f6fd344cbe66a3db289" name="ab4c02211ce5a8f6fd344cbe66a3db289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4c02211ce5a8f6fd344cbe66a3db289">&#9670;&#160;</a></span>isLegalBindingKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool XuMQ::Router::isLegalBindingKey </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>binding_key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断绑定关键字是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">binding_key</td><td>绑定关键字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合法返回true 不合法返回false </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>约定字符: <code>0~9</code> <code>a~z</code> <code>A~Z</code> <code>_</code> <code>.</code> <code>#</code> <code>*</code> 注意:<ol type="1">
+<li><code>*</code> 通配符可以代替一个任意单词 例如: <code>news.*.footable</code>是合法的</li>
+<li><code>#</code> 通配符可以代替任意多个(0个或任意个)单词</li>
+<li>在两个点直接不允许出现通配符和其他字符</li>
+<li><code>#</code> 通配符不允许连续使用通配符 没有意义 </li>
+</ol>
+</dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_router_ab4c02211ce5a8f6fd344cbe66a3db289_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_router_ab4c02211ce5a8f6fd344cbe66a3db289_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_router_ab4c02211ce5a8f6fd344cbe66a3db289_cgraph" id="aclass_xu_m_q_1_1_router_ab4c02211ce5a8f6fd344cbe66a3db289_cgraph">
+<area shape="rect" title="判断绑定关键字是否合法" alt="" coords="5,5,244,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1" title="将字符串分割为多个子字符串" alt="" coords="292,5,459,31"/>
+<area shape="poly" title=" " alt="" coords="244,15,278,15,278,21,244,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a23fd20d6881e4c70d0d0017dd371f869" name="a23fd20d6881e4c70d0d0017dd371f869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23fd20d6881e4c70d0d0017dd371f869">&#9670;&#160;</a></span>isLegalRoutingKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool XuMQ::Router::isLegalRoutingKey </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>routing_key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断路由关键字是否合法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">routing_key</td><td>路由关键字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>合法返回true 不合法返回false </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>合法字符 <code>a~z</code> <code>A~Z</code> <code>0~9</code> <code>.</code> <code>_</code> </dd></dl>
+
+</div>
+</div>
+<a id="af18394ff14421ce690cbf088964c5c75" name="af18394ff14421ce690cbf088964c5c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af18394ff14421ce690cbf088964c5c75">&#9670;&#160;</a></span>route()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool XuMQ::Router::route </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">ExchangeType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>routing_key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>binding_key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>路由选择 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>路由模式 </td></tr>
+    <tr><td class="paramname">routing_key</td><td>路由关键字 </td></tr>
+    <tr><td class="paramname">binding_key</td><td>绑定关键字 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>是否匹配成功 匹配成功返回true 匹配失败返回false </dd></dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_cgraph" id="aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_cgraph">
+<area shape="rect" title="路由选择" alt="" coords="5,5,160,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1" title="将字符串分割为多个子字符串" alt="" coords="208,5,375,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,195,15,195,21,160,21"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_icgraph" id="aclass_xu_m_q_1_1_router_af18394ff14421ce690cbf088964c5c75_icgraph">
+<area shape="rect" title="路由选择" alt="" coords="108,5,263,31"/>
+<area shape="rect" href="mqroute_8cpp.html#a342162fad0d7af211a469e11596eff09" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_router.html">Router</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

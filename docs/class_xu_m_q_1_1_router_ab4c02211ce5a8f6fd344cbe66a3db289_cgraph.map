@@ -1,0 +1,5 @@
+<map id="XuMQ::Router::isLegalBindingKey" name="XuMQ::Router::isLegalBindingKey">
+<area shape="rect" id="Node000001" title="判断绑定关键字是否合法" alt="" coords="5,5,244,31"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_str_helper.html#a09130ed2c6b196410499a6184c9a36e1" title="将字符串分割为多个子字符串" alt="" coords="292,5,459,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,15,278,15,278,21,244,21"/>
+</map>
