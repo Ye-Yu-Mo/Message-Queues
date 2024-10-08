@@ -132,7 +132,6 @@ namespace XuMQ
                     return result;
                 }
             }
-            info(logger, "垃圾回收有效消息数量为: %d", result.size());
             // 删除原文件
             ret = FileHelper::removeFile(_datafile);
             if (ret == false)
@@ -254,21 +253,23 @@ namespace XuMQ
         /// @param body 消息内容主体
         /// @param delivery_mode 持久化标志
         /// @return 成功返回true 失败返回false
-        bool insert(const BasicProperties *bp, const std::string &body, DeliveryMode delivery_mode)
+        bool insert(const BasicProperties *bp, const std::string &body, bool queue_id_durable)
         {
             // 构造消息对象
             MessagePtr msg = std::make_shared<Message>();
             msg->mutable_payload()->set_body(body);
             if (bp != nullptr)
             {
+                DeliveryMode mode = queue_id_durable ? bp->delivery_mode() : DeliveryMode::UNDURABLE;
                 msg->mutable_payload()->mutable_properties()->set_id(bp->id());
-                msg->mutable_payload()->mutable_properties()->set_delivery_mode(bp->delivery_mode());
+                msg->mutable_payload()->mutable_properties()->set_delivery_mode(mode);
                 msg->mutable_payload()->mutable_properties()->set_routing_key(bp->routing_key());
             }
             else
             {
+                DeliveryMode mode = queue_id_durable ? DeliveryMode::DURABLE : DeliveryMode::UNDURABLE;
                 msg->mutable_payload()->mutable_properties()->set_id(UUIDHelper::uuid());
-                msg->mutable_payload()->mutable_properties()->set_delivery_mode(delivery_mode);
+                msg->mutable_payload()->mutable_properties()->set_delivery_mode(mode);
                 msg->mutable_payload()->mutable_properties()->set_routing_key("");
             }
             std::unique_lock<std::mutex> lock(_mutex);
@@ -461,7 +462,7 @@ namespace XuMQ
         /// @param body 消息主体
         /// @param mode 持久化标志
         /// @return 插入成功返回true 失败返回false
-        bool insert(const std::string &qname, BasicProperties *bp, const std::string &body, DeliveryMode mode)
+        bool insert(const std::string &qname, BasicProperties *bp, const std::string &body, bool mode)
         {
             QueueMessage::ptr qmp;
             {
@@ -592,8 +593,8 @@ namespace XuMQ
         }
 
     private:
-        std::mutex _mutex;
-        std::string _basedir;
-        std::unordered_map<std::string, QueueMessage::ptr> _queue_msgs;
+        std::mutex _mutex;                                              ///< 互斥锁
+        std::string _basedir;                                           ///< 基础目录
+        std::unordered_map<std::string, QueueMessage::ptr> _queue_msgs; ///< 消息队列
     };
 }

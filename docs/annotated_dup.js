@@ -23,11 +23,13 @@ var annotated_dup =
       [ "QueueMessage", "class_xu_m_q_1_1_queue_message.html", "class_xu_m_q_1_1_queue_message" ],
       [ "SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", "class_xu_m_q_1_1_sqlite_helper" ],
       [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
-      [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ]
+      [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
+      [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html", "class_xu_m_q_1_1_virtual_host" ]
     ] ],
     [ "BindingTest", "class_binding_test.html", "class_binding_test" ],
     [ "ExchangerMapper", "class_exchanger_mapper.html", null ],
     [ "ExchangeTest", "class_exchange_test.html", "class_exchange_test" ],
+    [ "HostTest", "class_host_test.html", "class_host_test" ],
     [ "is_proto_enum< ::XuMQ::DeliveryMode >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_delivery_mode_01_4.html", null ],
     [ "is_proto_enum< ::XuMQ::ExchangeType >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_exchange_type_01_4.html", null ],
     [ "QueueTest", "class_queue_test.html", "class_queue_test" ],

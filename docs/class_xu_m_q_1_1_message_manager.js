@@ -9,7 +9,7 @@ var class_xu_m_q_1_1_message_manager =
     [ "durableCount", "class_xu_m_q_1_1_message_manager.html#adbb292daaf6e87d4f6352dbfb4418cac", null ],
     [ "front", "class_xu_m_q_1_1_message_manager.html#a789e0f9bc75b1addaa93cea5d706d1de", null ],
     [ "initQueueMessage", "class_xu_m_q_1_1_message_manager.html#a2889a59d88210b180a9b4257a2890091", null ],
-    [ "insert", "class_xu_m_q_1_1_message_manager.html#a30fe380faeb110481703fbc479475371", null ],
+    [ "insert", "class_xu_m_q_1_1_message_manager.html#a22bcd719f643c973b90fb1e2a0cdfcca", null ],
     [ "totalCount", "class_xu_m_q_1_1_message_manager.html#ab666d8d809e05eb88e540d4bfc14e793", null ],
     [ "waitAckCount", "class_xu_m_q_1_1_message_manager.html#ab608b376d1015f39a31027fa8ce067ad", null ],
     [ "_basedir", "class_xu_m_q_1_1_message_manager.html#aec043e76df33622c0f8435badbc1bebe", null ],

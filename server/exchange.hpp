@@ -40,7 +40,7 @@ namespace XuMQ
                  ExchangeType etype,
                  bool edurable,
                  bool eauto_delete,
-                 std::unordered_map<std::string, std::string> &eargs)
+                 const std::unordered_map<std::string, std::string> &eargs)
             : name(ename), type(etype), durable(edurable), auto_delete(eauto_delete), args(eargs)
         {
         }
@@ -211,7 +211,7 @@ namespace XuMQ
                              ExchangeType type,
                              bool durable,
                              bool auto_delete,
-                             std::unordered_map<std::string, std::string> &args)
+                             const std::unordered_map<std::string, std::string> &args)
         {
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _exchanges.find(name);

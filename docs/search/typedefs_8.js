@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loglevel_0',['LogLevel',['../classmuduo_1_1_logger_1_1_impl.html#a315f5e830825f7fcefb019e71c5ab20a',1,'muduo::Logger::Impl']]]
+  ['sqlitecallback_0',['SqliteCallback',['../class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3',1,'XuMQ::SqliteHelper']]]
 ];

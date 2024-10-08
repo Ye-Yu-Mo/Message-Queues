@@ -1,11 +1,11 @@
 var searchData=
 [
   ['datafile_5fsubfix_0',['DATAFILE_SUBFIX',['../namespace_xu_m_q.html#a4c80748846b3a6c7d5b33e3383bcfd50',1,'XuMQ']]],
-  ['declareexchange_1',['declareExchange',['../class_xu_m_q_1_1_exchange_manager.html#a5808485f200f1edff7a97263c855cb2e',1,'XuMQ::ExchangeManager']]],
-  ['declarequeue_2',['declareQueue',['../class_xu_m_q_1_1_msg_queue_manager.html#a0c5f37ee8190b1bee6b8ecb844663fc4',1,'XuMQ::MsgQueueManager']]],
-  ['default_5finstance_3',['default_instance',['../class_xu_m_q_1_1_message.html#a6d8b174997f0de1b2656b5eb9ec40ff2',1,'XuMQ::Message::default_instance()'],['../class_xu_m_q_1_1_message___payload.html#a0fa8d446e23572610e52cd30c1e394cf',1,'XuMQ::Message_Payload::default_instance()'],['../class_xu_m_q_1_1_basic_properties.html#a5840ad46ece43e61a101f4efb647c74c',1,'XuMQ::BasicProperties::default_instance()']]],
-  ['deleteexchange_4',['deleteExchange',['../class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129',1,'XuMQ::ExchangeManager']]],
-  ['deletequeue_5',['deleteQueue',['../class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1',1,'XuMQ::MsgQueueManager']]],
+  ['declareexchange_1',['declareexchange',['../class_xu_m_q_1_1_virtual_host.html#aa14cf8c0c2c128fec0019162b27101be',1,'XuMQ::VirtualHost::declareExchange()'],['../class_xu_m_q_1_1_exchange_manager.html#aa0218910dda04e6a6cba62882d433d6f',1,'XuMQ::ExchangeManager::declareExchange()']]],
+  ['declarequeue_2',['declarequeue',['../class_xu_m_q_1_1_msg_queue_manager.html#a335dfce61a8747de639c588d077b30d5',1,'XuMQ::MsgQueueManager::declareQueue()'],['../class_xu_m_q_1_1_virtual_host.html#a0ada0fe384f769793427918ade01c1fd',1,'XuMQ::VirtualHost::declareQueue()']]],
+  ['default_5finstance_3',['default_instance',['../class_xu_m_q_1_1_basic_properties.html#a5840ad46ece43e61a101f4efb647c74c',1,'XuMQ::BasicProperties::default_instance()'],['../class_xu_m_q_1_1_message___payload.html#a0fa8d446e23572610e52cd30c1e394cf',1,'XuMQ::Message_Payload::default_instance()'],['../class_xu_m_q_1_1_message.html#a6d8b174997f0de1b2656b5eb9ec40ff2',1,'XuMQ::Message::default_instance()']]],
+  ['deleteexchange_4',['deleteexchange',['../class_xu_m_q_1_1_exchange_manager.html#a60370a38087d700d71ecd7479f66a129',1,'XuMQ::ExchangeManager::deleteExchange()'],['../class_xu_m_q_1_1_virtual_host.html#aecc9813f39ba030c9c0ed79d5aa45de1',1,'XuMQ::VirtualHost::deleteExchange(const std::string &amp;name)']]],
+  ['deletequeue_5',['deletequeue',['../class_xu_m_q_1_1_virtual_host.html#a2036e0816609a2f078d6ab7b5beaed9c',1,'XuMQ::VirtualHost::deleteQueue()'],['../class_xu_m_q_1_1_msg_queue_manager.html#afa992390752f2c157de6e0d1b87b79e1',1,'XuMQ::MsgQueueManager::deleteQueue()']]],
   ['delivery_5fmode_6',['delivery_mode',['../class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa',1,'XuMQ::BasicProperties']]],
   ['delivery_5fmode_5f_7',['delivery_mode_',['../struct_xu_m_q_1_1_basic_properties_1_1_impl__.html#abf56fc67e46d4d5a2cd4b6e5887a35c2',1,'XuMQ::BasicProperties::Impl_']]],
   ['deliverymode_8',['DeliveryMode',['../namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614',1,'XuMQ']]],

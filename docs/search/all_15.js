@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unbind_0',['unbind',['../class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855',1,'XuMQ::BindingManager']]],
+  ['unbind_0',['unbind',['../class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855',1,'XuMQ::BindingManager::unbind()'],['../class_xu_m_q_1_1_virtual_host.html#a1ecdd5bb0409422ef1c35b12f9060784',1,'XuMQ::VirtualHost::unbind()']]],
   ['undurable_1',['UNDURABLE',['../namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a1575dc12622e36c0efa8a0fd8024e996',1,'XuMQ']]],
   ['unknowmode_2',['UNKNOWMODE',['../namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614a457929c044f0ea902e54568f57dffa20',1,'XuMQ']]],
   ['unknowtype_3',['UNKNOWTYPE',['../namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7da663837940118a6f44ae3cffba0b7396b',1,'XuMQ']]],

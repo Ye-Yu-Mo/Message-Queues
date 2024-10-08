@@ -8,7 +8,7 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/leaf/Message-Queues",
+      "cwd": "/home/leaf/Message-Queues/test",
       "program": "/home/leaf/Message-Queues/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",

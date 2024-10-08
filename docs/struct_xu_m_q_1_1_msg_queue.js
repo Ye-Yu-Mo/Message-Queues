@@ -2,7 +2,7 @@ var struct_xu_m_q_1_1_msg_queue =
 [
     [ "ptr", "struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06", null ],
     [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html#ae93fe02f20e3b3c8f18b0ee74df5275d", null ],
-    [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html#a5ec98f6a1ee5a0abcb06df8be4671662", null ],
+    [ "MsgQueue", "struct_xu_m_q_1_1_msg_queue.html#ad03e7d82bb8531b880978694a6c04ef6", null ],
     [ "getArgs", "struct_xu_m_q_1_1_msg_queue.html#a375d991fc89414224d7db5d139a533dd", null ],
     [ "setArgs", "struct_xu_m_q_1_1_msg_queue.html#a0aab5b0ec307ce45776c56192d7ff428", null ],
     [ "args", "struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f", null ],

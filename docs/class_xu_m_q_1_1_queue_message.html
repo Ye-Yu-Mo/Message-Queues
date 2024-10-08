@@ -134,9 +134,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a3a4bcdfbf5560b1ec02b71eca6604d2e" id="r_a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e">recovery</a> ()</td></tr>
 <tr class="memdesc:a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复历史消息  <br /></td></tr>
 <tr class="separator:a3a4bcdfbf5560b1ec02b71eca6604d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91ccb16c92bc8a4e87f1000a5cd28ac2" id="r_a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2">insert</a> (const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *bp, const std::string &amp;body, <a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a> delivery_mode)</td></tr>
-<tr class="memdesc:a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入推送消息队列  <br /></td></tr>
-<tr class="separator:a91ccb16c92bc8a4e87f1000a5cd28ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9bae0beae450d6a2e9ac089de87ecc" id="r_a9a9bae0beae450d6a2e9ac089de87ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc">insert</a> (const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *bp, const std::string &amp;body, bool queue_id_durable)</td></tr>
+<tr class="memdesc:a9a9bae0beae450d6a2e9ac089de87ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入推送消息队列  <br /></td></tr>
+<tr class="separator:a9a9bae0beae450d6a2e9ac089de87ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ec4a3731dfd398fc819e72ef5a9a3d4" id="r_a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3ec4a3731dfd398fc819e72ef5a9a3d4">front</a> ()</td></tr>
 <tr class="memdesc:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取队头消息  <br /></td></tr>
 <tr class="separator:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -489,8 +489,8 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<a id="a91ccb16c92bc8a4e87f1000a5cd28ac2" name="a91ccb16c92bc8a4e87f1000a5cd28ac2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91ccb16c92bc8a4e87f1000a5cd28ac2">&#9670;&#160;</a></span>insert()</h2>
+<a id="a9a9bae0beae450d6a2e9ac089de87ecc" name="a9a9bae0beae450d6a2e9ac089de87ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9bae0beae450d6a2e9ac089de87ecc">&#9670;&#160;</a></span>insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -513,8 +513,8 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#a0f608e8c800bb6737ae004b82a037614">DeliveryMode</a>&#160;</td>
-          <td class="paramname"><em>delivery_mode</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>queue_id_durable</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -542,8 +542,8 @@ Private 属性</h2></td></tr>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph" alt=""/></div>
-<map name="aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph" id="aclass_xu_m_q_1_1_queue_message_a91ccb16c92bc8a4e87f1000a5cd28ac2_cgraph">
+<div class="center"><img src="class_xu_m_q_1_1_queue_message_a9a9bae0beae450d6a2e9ac089de87ecc_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_queue_message_a9a9bae0beae450d6a2e9ac089de87ecc_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_queue_message_a9a9bae0beae450d6a2e9ac089de87ecc_cgraph" id="aclass_xu_m_q_1_1_queue_message_a9a9bae0beae450d6a2e9ac089de87ecc_cgraph">
 <area shape="rect" title="插入推送消息队列" alt="" coords="5,144,175,184"/>
 <area shape="rect" href="class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="233,5,403,45"/>
 <area shape="poly" title=" " alt="" coords="110,142,158,99,221,55,234,48,237,53,224,60,162,103,113,146"/>

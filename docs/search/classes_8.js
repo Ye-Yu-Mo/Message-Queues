@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sqlitehelper_0',['SqliteHelper',['../class_xu_m_q_1_1_sqlite_helper.html',1,'XuMQ']]],
-  ['strhelper_1',['StrHelper',['../class_xu_m_q_1_1_str_helper.html',1,'XuMQ']]]
+  ['queuemessage_0',['QueueMessage',['../class_xu_m_q_1_1_queue_message.html',1,'XuMQ']]],
+  ['queuetest_1',['QueueTest',['../class_queue_test.html',1,'']]]
 ];

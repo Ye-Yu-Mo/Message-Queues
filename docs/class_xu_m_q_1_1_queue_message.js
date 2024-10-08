@@ -8,7 +8,7 @@ var class_xu_m_q_1_1_queue_message =
     [ "front", "class_xu_m_q_1_1_queue_message.html#a3ec4a3731dfd398fc819e72ef5a9a3d4", null ],
     [ "garbageCollection", "class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909", null ],
     [ "garbageCollectionCheck", "class_xu_m_q_1_1_queue_message.html#a34d8541ab7e8a651edb0be9d8f54751c", null ],
-    [ "insert", "class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2", null ],
+    [ "insert", "class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc", null ],
     [ "recovery", "class_xu_m_q_1_1_queue_message.html#a3a4bcdfbf5560b1ec02b71eca6604d2e", null ],
     [ "remove", "class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa", null ],
     [ "totalCount", "class_xu_m_q_1_1_queue_message.html#a9f5ea21009d6f65b2536b7edda697668", null ],

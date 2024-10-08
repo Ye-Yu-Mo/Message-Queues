@@ -38,10 +38,14 @@ var hierarchy =
     [ "XuMQ::SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", null ],
     [ "XuMQ::StrHelper", "class_xu_m_q_1_1_str_helper.html", null ],
     [ "TableStruct_msg_2eproto", "struct_table_struct__msg__2eproto.html", null ],
+    [ "testing::Test", null, [
+      [ "HostTest", "class_host_test.html", null ]
+    ] ],
     [ "std::true_type", null, [
       [ "is_proto_enum< ::XuMQ::DeliveryMode >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_delivery_mode_01_4.html", null ],
       [ "is_proto_enum< ::XuMQ::ExchangeType >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_exchange_type_01_4.html", null ]
     ] ],
     [ "UUIDHelper", "class_u_u_i_d_helper.html", null ],
-    [ "XuMQ::UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", null ]
+    [ "XuMQ::UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", null ],
+    [ "XuMQ::VirtualHost", "class_xu_m_q_1_1_virtual_host.html", null ]
 ];

@@ -3,7 +3,7 @@
 <area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="790,58,777,51,752,48,730,50,718,55,713,61,715,68,710,70,708,60,714,50,729,45,752,43,778,46,792,53"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2" title="垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件" alt="" coords="440,37,616,77"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="650,77,616,73,617,67,651,72"/>
-<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_queue_message.html#a91ccb16c92bc8a4e87f1000a5cd28ac2" title="插入推送消息队列" alt="" coords="443,101,613,141"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc" title="插入推送消息队列" alt="" coords="443,101,613,141"/>
 <area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="651,106,613,112,613,107,650,101"/>
 <area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_queue_message.html#ada3a025f1a12afc594e4cae142572909" title="垃圾回收" alt="" coords="223,5,392,45"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,45,392,40,393,35,427,40"/>

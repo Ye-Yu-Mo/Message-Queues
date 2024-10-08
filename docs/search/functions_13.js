@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['unbind_0',['unbind',['../class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855',1,'XuMQ::BindingManager']]],
+  ['unbind_0',['unbind',['../class_xu_m_q_1_1_binding_manager.html#a8b0aeffb8866b4b39c5957d0fd77f855',1,'XuMQ::BindingManager::unbind()'],['../class_xu_m_q_1_1_virtual_host.html#a1ecdd5bb0409422ef1c35b12f9060784',1,'XuMQ::VirtualHost::unbind()']]],
   ['unsafe_5farena_5frelease_5fpayload_1',['unsafe_arena_release_payload',['../class_xu_m_q_1_1_message.html#a7b86d287c66e99fb5ca87a2930728f39',1,'XuMQ::Message']]],
   ['unsafe_5farena_5frelease_5fproperties_2',['unsafe_arena_release_properties',['../class_xu_m_q_1_1_message___payload.html#ac9f2f64233d8b684c3d17ee9eaff3273',1,'XuMQ::Message_Payload']]],
   ['unsafe_5farena_5fset_5fallocated_5fpayload_3',['unsafe_arena_set_allocated_payload',['../class_xu_m_q_1_1_message.html#a4241e8f9476be044b65f6edc713637d9',1,'XuMQ::Message']]],

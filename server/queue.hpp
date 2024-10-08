@@ -42,7 +42,7 @@ namespace XuMQ
                  bool qdurable,
                  bool qexclusive,
                  bool qauto_delete,
-                 std::unordered_map<std::string, std::string> &qargs) : name(qname), durable(qdurable), exclusive(qexclusive),
+                 const std::unordered_map<std::string, std::string> &qargs) : name(qname), durable(qdurable), exclusive(qexclusive),
                                                                         auto_delete(qauto_delete), args(qargs)
         {
         }
@@ -212,7 +212,7 @@ namespace XuMQ
                           bool qdurable,
                           bool qexclusive,
                           bool qauto_delete,
-                          std::unordered_map<std::string, std::string> &qargs)
+                          const std::unordered_map<std::string, std::string> &qargs)
         {
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _queues.find(qname);

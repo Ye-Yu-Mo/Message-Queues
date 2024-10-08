@@ -23,6 +23,7 @@ var namespace_xu_m_q =
     [ "SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", "class_xu_m_q_1_1_sqlite_helper" ],
     [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
     [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
+    [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html", "class_xu_m_q_1_1_virtual_host" ],
     [ "BindingMap", "namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7", null ],
     [ "ExchangeMap", "namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18", null ],
     [ "MessagePtr", "namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47", null ],
