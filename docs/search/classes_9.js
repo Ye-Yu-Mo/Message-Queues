@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['router_0',['Router',['../class_xu_m_q_1_1_router.html',1,'XuMQ']]],
-  ['routetest_1',['RouteTest',['../class_route_test.html',1,'']]]
+  ['queueconsumer_0',['QueueConsumer',['../class_xu_m_q_1_1_queue_consumer.html',1,'XuMQ']]],
+  ['queuemessage_1',['QueueMessage',['../class_xu_m_q_1_1_queue_message.html',1,'XuMQ']]],
+  ['queuetest_2',['QueueTest',['../class_queue_test.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sqlitecallback_0',['SqliteCallback',['../class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3',1,'XuMQ::SqliteHelper']]]
+  ['queuemap_0',['QueueMap',['../namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb',1,'XuMQ']]]
 ];

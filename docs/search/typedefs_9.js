@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['messagecallback_0',['MessageCallback',['../namespacemuduo_1_1net.html#a05dd9b14c86cc5a5305fe6fdb1f56884',1,'muduo::net']]],
-  ['messageptr_1',['MessagePtr',['../namespacemuduo_1_1net.html#a56e4fa8f6fe7f977220c826455b8ba68',1,'muduo::net']]]
+  ['sqlitecallback_0',['SqliteCallback',['../class_xu_m_q_1_1_sqlite_helper.html#ad9b30fb069cfdb091fa01bc7649a55f3',1,'XuMQ::SqliteHelper']]]
 ];

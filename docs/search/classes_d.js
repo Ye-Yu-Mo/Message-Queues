@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['virtualhost_0',['VirtualHost',['../class_xu_m_q_1_1_virtual_host.html',1,'XuMQ']]]
+  ['uuidhelper_0',['uuidhelper',['../class_u_u_i_d_helper.html',1,'UUIDHelper'],['../class_xu_m_q_1_1_u_u_i_d_helper.html',1,'XuMQ::UUIDHelper']]]
 ];

@@ -7,9 +7,12 @@ var hierarchy =
     [ "XuMQ::Binding", "struct_xu_m_q_1_1_binding.html", null ],
     [ "XuMQ::BindingManager", "class_xu_m_q_1_1_binding_manager.html", null ],
     [ "XuMQ::BindingMapper", "class_xu_m_q_1_1_binding_mapper.html", null ],
+    [ "XuMQ::Consumer", "struct_xu_m_q_1_1_consumer.html", null ],
+    [ "XuMQ::ConsumerManager", "class_xu_m_q_1_1_consumer_manager.html", null ],
     [ "testing::Environment", null, [
       [ "BindingTest", "class_binding_test.html", null ],
       [ "BindingTest", "class_binding_test.html", null ],
+      [ "ConsumerTest", "class_consumer_test.html", null ],
       [ "ExchangeTest", "class_exchange_test.html", null ],
       [ "QueueTest", "class_queue_test.html", null ],
       [ "RouteTest", "class_route_test.html", null ]
@@ -35,6 +38,7 @@ var hierarchy =
     [ "XuMQ::MsgQueue", "struct_xu_m_q_1_1_msg_queue.html", null ],
     [ "XuMQ::MsgQueueManager", "class_xu_m_q_1_1_msg_queue_manager.html", null ],
     [ "XuMQ::MsgQueueMapper", "class_xu_m_q_1_1_msg_queue_mapper.html", null ],
+    [ "XuMQ::QueueConsumer", "class_xu_m_q_1_1_queue_consumer.html", null ],
     [ "XuMQ::QueueMessage", "class_xu_m_q_1_1_queue_message.html", null ],
     [ "XuMQ::Router", "class_xu_m_q_1_1_router.html", null ],
     [ "XuMQ::SqliteHelper", "class_xu_m_q_1_1_sqlite_helper.html", null ],

@@ -1,4 +1,7 @@
-.PHONY:mqroute
+.PHONY:mqconsumer.cc
+mqconsumer:mqconsumer.cpp ../common/msg.pb.cc
+	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
+
 mqroute:mqroute.cpp ../common/msg.pb.cc
 	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
 
@@ -21,4 +24,4 @@ mqfiletest:mqfiletest.cpp
 	g++ $^ -o $@ -std=c++17
 .PHONY:clean
 clean:
-	rm mqfiletest dir  mqexchangetest mqmessagetest data mqhosttest -rf
+	rm mqfiletest dir mqroute mqconsumer mqexchangetest mqmessagetest data mqhosttest -rf

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['payload_5f_0',['payload_',['../struct_xu_m_q_1_1_message_1_1_impl__.html#aa0ccdbb01261ce42b9d52195df8c48bc',1,'XuMQ::Message::Impl_']]],
-  ['properties_5f_1',['properties_',['../struct_xu_m_q_1_1_message___payload_1_1_impl__.html#abecacd39b38df9ea5f563ccc6ba5a041',1,'XuMQ::Message_Payload::Impl_']]]
+  ['offset_5f_0',['offset_',['../struct_xu_m_q_1_1_message_1_1_impl__.html#aa34ad2a76475e8642cefb27266996e8b',1,'XuMQ::Message::Impl_']]],
+  ['offsets_1',['offsets',['../struct_table_struct__msg__2eproto.html#a4941ca2470d6d88a963302c2e7c6e943',1,'TableStruct_msg_2eproto']]]
 ];

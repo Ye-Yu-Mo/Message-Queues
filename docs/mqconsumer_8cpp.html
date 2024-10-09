@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: test/mqconsumer.cpp 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('mqconsumer_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">mqconsumer.cpp 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="consumer_8hpp_source.html">../server/consumer.hpp</a>&quot;</code><br />
+<code>#include &lt;gtest/gtest.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+mqconsumer.cpp 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="mqconsumer_8cpp__incl.png" border="0" usemap="#atest_2mqconsumer_8cpp" alt=""/></div>
+<map name="atest_2mqconsumer_8cpp" id="atest_2mqconsumer_8cpp">
+<area shape="rect" title=" " alt="" coords="876,5,1039,31"/>
+<area shape="rect" href="consumer_8hpp.html" title=" " alt="" coords="792,79,963,104"/>
+<area shape="poly" title=" " alt="" coords="946,33,902,72,899,68,943,29"/>
+<area shape="rect" title=" " alt="" coords="987,79,1091,104"/>
+<area shape="poly" title=" " alt="" coords="972,29,1017,68,1013,72,969,33"/>
+<area shape="rect" href="logger_8hpp.html" title="异步日志器初始化" alt="" coords="5,233,168,258"/>
+<area shape="poly" title=" " alt="" coords="792,103,624,123,430,155,268,193,136,231,135,226,267,188,429,149,623,118,791,98"/>
+<area shape="rect" href="helper_8hpp.html" title="工具类封装" alt="" coords="796,152,959,177"/>
+<area shape="poly" title=" " alt="" coords="880,104,880,138,875,138,875,104"/>
+<area shape="rect" title=" " alt="" coords="192,233,272,258"/>
+<area shape="poly" title=" " alt="" coords="794,107,669,127,530,155,406,188,285,228,277,230,275,225,283,223,405,183,529,149,668,121,793,101"/>
+<area shape="rect" title=" " alt="" coords="297,233,359,258"/>
+<area shape="poly" title=" " alt="" coords="822,107,622,154,496,188,372,228,366,230,364,225,370,223,495,183,620,148,821,101"/>
+<area shape="rect" title=" " alt="" coords="383,233,470,258"/>
+<area shape="poly" title=" " alt="" coords="847,107,640,180,483,228,474,231,473,226,482,223,638,175,846,102"/>
+<area shape="rect" href="msg_8pb_8h.html" title=" " alt="" coords="2520,152,2675,177"/>
+<area shape="poly" title=" " alt="" coords="963,100,975,101,1425,129,1867,146,2245,156,2506,160,2506,165,2245,161,1866,152,1425,134,974,107,963,106"/>
+<area shape="rect" title=" " alt="" coords="2699,152,2823,177"/>
+<area shape="poly" title=" " alt="" coords="963,100,975,101,1234,116,1454,122,1828,121,2010,119,2204,121,2425,130,2686,149,2685,155,2425,136,2204,127,2010,124,1828,126,1454,128,1234,122,974,107,963,106"/>
+<area shape="rect" title=" " alt="" coords="2848,152,2912,177"/>
+<area shape="poly" title=" " alt="" coords="963,100,975,101,1154,109,1377,113,1896,115,2164,117,2420,122,2648,132,2834,150,2834,155,2647,138,2419,128,2164,122,1896,120,1377,118,1154,115,975,107,963,106"/>
+<area shape="rect" title=" " alt="" coords="2936,152,3013,177"/>
+<area shape="poly" title=" " alt="" coords="963,100,975,101,1270,116,1521,120,1742,116,1948,109,2155,104,2376,106,2627,120,2922,149,2922,155,2626,125,2376,112,2155,110,1948,114,1742,121,1521,125,1270,122,974,107,963,106"/>
+<area shape="rect" title=" " alt="" coords="19,313,155,353"/>
+<area shape="poly" title=" " alt="" coords="89,258,89,299,84,299,84,258"/>
+<area shape="poly" title=" " alt="" coords="796,173,522,191,352,207,180,228,152,233,151,227,180,223,351,202,522,186,796,167"/>
+<area shape="poly" title=" " alt="" coords="796,171,693,175,564,186,424,202,285,228,273,231,272,226,283,223,423,197,564,180,692,170,796,165"/>
+<area shape="rect" title=" " alt="" coords="1544,233,1603,258"/>
+<area shape="poly" title=" " alt="" coords="959,162,1073,164,1217,173,1376,191,1455,205,1533,223,1540,225,1538,230,1531,228,1454,210,1375,196,1217,178,1073,169,959,167"/>
+<area shape="poly" title=" " alt="" coords="796,171,707,176,600,186,485,203,371,228,364,230,362,225,370,223,484,198,600,181,707,171,795,166"/>
+<area shape="rect" title=" " alt="" coords="1345,233,1423,258"/>
+<area shape="poly" title=" " alt="" coords="959,168,1133,186,1234,202,1334,223,1344,226,1343,231,1333,228,1233,207,1132,192,959,174"/>
+<area shape="poly" title=" " alt="" coords="796,177,650,196,483,228,471,231,470,226,482,223,649,191,795,171"/>
+<area shape="rect" title=" " alt="" coords="1448,233,1520,258"/>
+<area shape="poly" title=" " alt="" coords="959,165,1057,170,1177,180,1307,197,1437,223,1446,225,1445,231,1435,228,1306,203,1176,186,1056,176,959,171"/>
+<area shape="rect" title=" " alt="" coords="495,233,569,258"/>
+<area shape="poly" title=" " alt="" coords="803,180,698,200,582,228,573,231,572,225,581,223,697,195,802,175"/>
+<area shape="rect" title=" " alt="" coords="593,233,668,258"/>
+<area shape="poly" title=" " alt="" coords="837,180,681,228,673,230,672,225,679,223,836,175"/>
+<area shape="rect" title=" " alt="" coords="692,233,759,258"/>
+<area shape="poly" title=" " alt="" coords="856,180,761,229,759,224,854,175"/>
+<area shape="rect" title=" " alt="" coords="783,233,868,258"/>
+<area shape="poly" title=" " alt="" coords="872,179,843,222,838,220,867,176"/>
+<area shape="rect" title=" " alt="" coords="893,233,966,258"/>
+<area shape="poly" title=" " alt="" coords="887,176,916,220,912,222,883,179"/>
+<area shape="rect" title=" " alt="" coords="991,233,1052,258"/>
+<area shape="poly" title=" " alt="" coords="900,175,989,224,987,228,897,180"/>
+<area shape="rect" title=" " alt="" coords="1077,233,1142,258"/>
+<area shape="poly" title=" " alt="" coords="917,175,1065,223,1071,225,1069,230,1063,228,915,180"/>
+<area shape="rect" title=" " alt="" coords="1167,233,1233,258"/>
+<area shape="poly" title=" " alt="" coords="948,175,1047,194,1155,223,1162,225,1161,230,1154,228,1046,200,947,180"/>
+<area shape="rect" title=" " alt="" coords="1258,233,1321,258"/>
+<area shape="poly" title=" " alt="" coords="959,171,1095,189,1171,204,1246,223,1254,225,1252,230,1245,228,1170,209,1094,195,959,176"/>
+<area shape="poly" title=" " alt="" coords="2520,170,2318,174,2056,184,1800,202,1695,213,1615,228,1608,230,1607,225,1614,223,1694,208,1800,196,2056,179,2318,169,2520,164"/>
+<area shape="rect" title=" " alt="" coords="3365,233,3424,258"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2790,182,2876,184,3024,182,3094,183,3170,189,3255,201,3354,223,3361,225,3360,230,3353,228,3254,206,3169,194,3094,188,3024,188,2876,190,2789,187,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="3448,225,3603,265"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2896,189,3060,194,3225,201,3435,223,3434,228,3224,206,3060,199,2896,194,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="3627,225,3781,265"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2828,185,2946,190,3149,193,3353,198,3473,207,3613,223,3613,228,3472,212,3353,204,3149,198,2946,195,2827,190,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="3805,225,3947,265"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2855,186,2997,190,3239,190,3356,190,3482,194,3624,204,3792,223,3791,228,3624,209,3481,199,3356,195,3239,195,2997,196,2855,191,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="3971,233,4149,258"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2881,187,3045,193,3324,193,3458,192,3602,195,3766,205,3959,223,3994,228,3993,233,3958,228,3766,210,3602,201,3458,198,3324,198,3045,198,2881,193,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="4174,233,4389,258"/>
+<area shape="poly" title=" " alt="" coords="2675,174,2688,175,2912,189,3102,195,3425,195,3581,194,3748,197,3938,205,4162,223,4204,228,4204,233,4161,228,3937,210,3748,202,3581,199,3425,200,3102,201,2912,194,2688,180,2675,179"/>
+<area shape="rect" title=" " alt="" coords="1627,225,1821,265"/>
+<area shape="poly" title=" " alt="" coords="2520,172,2223,191,2032,207,1835,228,1835,223,2032,202,2223,186,2519,167"/>
+<area shape="rect" title=" " alt="" coords="1845,225,2037,265"/>
+<area shape="poly" title=" " alt="" coords="2520,176,2312,196,2052,228,2051,222,2312,191,2519,170"/>
+<area shape="rect" title=" " alt="" coords="2061,225,2256,265"/>
+<area shape="poly" title=" " alt="" coords="2534,180,2270,227,2269,222,2533,175"/>
+<area shape="rect" title=" " alt="" coords="2280,233,2480,258"/>
+<area shape="poly" title=" " alt="" coords="2567,180,2425,231,2424,226,2565,175"/>
+<area shape="rect" title=" " alt="" coords="2504,225,2691,265"/>
+<area shape="poly" title=" " alt="" coords="2600,178,2600,212,2595,212,2595,178"/>
+<area shape="rect" title=" " alt="" coords="2715,225,2909,265"/>
+<area shape="poly" title=" " alt="" coords="2629,175,2748,218,2747,223,2628,180"/>
+<area shape="rect" title=" " alt="" coords="2933,225,3128,265"/>
+<area shape="poly" title=" " alt="" coords="2661,175,2920,221,2919,227,2660,180"/>
+<area shape="rect" title=" " alt="" coords="3153,225,3341,265"/>
+<area shape="poly" title=" " alt="" coords="2675,173,2688,175,2912,197,3139,223,3139,228,2911,202,2688,180,2675,178"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_consumer_test.html">ConsumerTest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a309c1610898dca3ada454694968f0dc2" id="r_a309c1610898dca3ada454694968f0dc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#a309c1610898dca3ada454694968f0dc2">CallBack</a> (const std::string &amp;tag, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">XuMQ::BasicProperties</a> *bp, const std::string &amp;body)</td></tr>
+<tr class="separator:a309c1610898dca3ada454694968f0dc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f49a6f090c6128303ab89531905e6f" id="r_ab1f49a6f090c6128303ab89531905e6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#ab1f49a6f090c6128303ab89531905e6f">TEST</a> (consumer_test, insert_test)</td></tr>
+<tr class="separator:ab1f49a6f090c6128303ab89531905e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab060b8f7b72b7099f6786ec783b81062" id="r_ab060b8f7b72b7099f6786ec783b81062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#ab060b8f7b72b7099f6786ec783b81062">TEST</a> (consumer_test, remove_test)</td></tr>
+<tr class="separator:ab060b8f7b72b7099f6786ec783b81062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a985bf788013ea8947fa144ef5ff0d261" id="r_a985bf788013ea8947fa144ef5ff0d261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#a985bf788013ea8947fa144ef5ff0d261">TEST</a> (consumer_test, choose_test)</td></tr>
+<tr class="separator:a985bf788013ea8947fa144ef5ff0d261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97" id="r_a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
+<tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:a2208261f885e26fd1553e0d857451689" id="r_a2208261f885e26fd1553e0d857451689"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">XuMQ::ConsumerManager::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a></td></tr>
+<tr class="separator:a2208261f885e26fd1553e0d857451689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a309c1610898dca3ada454694968f0dc2" name="a309c1610898dca3ada454694968f0dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a309c1610898dca3ada454694968f0dc2">&#9670;&#160;</a></span>CallBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CallBack </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">XuMQ::BasicProperties</a> *&#160;</td>
+          <td class="paramname"><em>bp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>body</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="mqconsumer_8cpp_a309c1610898dca3ada454694968f0dc2_icgraph.png" border="0" usemap="#amqconsumer_8cpp_a309c1610898dca3ada454694968f0dc2_icgraph" alt=""/></div>
+<map name="amqconsumer_8cpp_a309c1610898dca3ada454694968f0dc2_icgraph" id="amqconsumer_8cpp_a309c1610898dca3ada454694968f0dc2_icgraph">
+<area shape="rect" title=" " alt="" coords="108,5,187,31"/>
+<area shape="rect" href="mqconsumer_8cpp.html#ab1f49a6f090c6128303ab89531905e6f" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0ddf1224851353fc92bfbff6f499fa97" name="a0ddf1224851353fc92bfbff6f499fa97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a985bf788013ea8947fa144ef5ff0d261" name="a985bf788013ea8947fa144ef5ff0d261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a985bf788013ea8947fa144ef5ff0d261">&#9670;&#160;</a></span>TEST() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">consumer_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">choose_test&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1f49a6f090c6128303ab89531905e6f" name="ab1f49a6f090c6128303ab89531905e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f49a6f090c6128303ab89531905e6f">&#9670;&#160;</a></span>TEST() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">consumer_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">insert_test&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="mqconsumer_8cpp_ab1f49a6f090c6128303ab89531905e6f_cgraph.png" border="0" usemap="#amqconsumer_8cpp_ab1f49a6f090c6128303ab89531905e6f_cgraph" alt=""/></div>
+<map name="amqconsumer_8cpp_ab1f49a6f090c6128303ab89531905e6f_cgraph" id="amqconsumer_8cpp_ab1f49a6f090c6128303ab89531905e6f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,60,31"/>
+<area shape="rect" href="mqconsumer_8cpp.html#a309c1610898dca3ada454694968f0dc2" title=" " alt="" coords="108,5,187,31"/>
+<area shape="poly" title=" " alt="" coords="61,15,94,15,94,21,61,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab060b8f7b72b7099f6786ec783b81062" name="ab060b8f7b72b7099f6786ec783b81062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab060b8f7b72b7099f6786ec783b81062">&#9670;&#160;</a></span>TEST() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">consumer_test&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">remove_test&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="a2208261f885e26fd1553e0d857451689" name="a2208261f885e26fd1553e0d857451689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2208261f885e26fd1553e0d857451689">&#9670;&#160;</a></span>cmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">XuMQ::ConsumerManager::ptr</a> cmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="mqconsumer_8cpp.html">mqconsumer.cpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

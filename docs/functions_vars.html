@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>_bmp&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_virtual_host.html#a0ca0f121c2e762947b2d2f40f3d1b905">XuMQ::VirtualHost</a></li>
 <li>_cached_size_&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_basic_properties_1_1_impl__.html#a508fed5fa794fd344ad4c28dec404018">XuMQ::BasicProperties::Impl_</a>, <a class="el" href="struct_xu_m_q_1_1_message_1_1_impl__.html#a918744a75da035fcd974bae8cf48bc9a">XuMQ::Message::Impl_</a>, <a class="el" href="struct_xu_m_q_1_1_message___payload_1_1_impl__.html#a881f68fe50dfd4b7422bebe2e90dd973">XuMQ::Message_Payload::Impl_</a></li>
 <li>_class_data_&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_basic_properties.html#a1d087a79242b9a84ad940b885198570f">XuMQ::BasicProperties</a>, <a class="el" href="class_xu_m_q_1_1_message.html#a8e47a317bccded6b2bcb2e122c2aa73b">XuMQ::Message</a>, <a class="el" href="class_xu_m_q_1_1_message___payload.html#a7d17e3803aaa4ddd222d5d046663c565">XuMQ::Message_Payload</a></li>
+<li>_consumers&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a30a1b203c42dca9989108a710801afa6">XuMQ::QueueConsumer</a></li>
 <li>_datafile&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_message_mapper.html#ab655b45d7fadaba3565564c9f213c7db">XuMQ::MessageMapper</a></li>
 <li>_dbfile&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_sqlite_helper.html#a9e34e9525a504b7b47ca6c31b68b8b86">XuMQ::SqliteHelper</a></li>
 <li>_durable_msgs&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_queue_message.html#ac7bde3b7bf27d1acef3448d65d0d8328">XuMQ::QueueMessage</a></li>
@@ -119,10 +120,12 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>_mmp&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_virtual_host.html#a247d9bb21c462b6f0be89b265bf1ac78">XuMQ::VirtualHost</a></li>
 <li>_mqmp&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_virtual_host.html#a33765e01cc50d166d31efb4b3fb2fb10">XuMQ::VirtualHost</a></li>
 <li>_msgs&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_queue_message.html#abb1bb7719d110d094bd831f5388b5d41">XuMQ::QueueMessage</a></li>
-<li>_mutex&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">XuMQ::BindingManager</a>, <a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">XuMQ::ExchangeManager</a>, <a class="el" href="class_xu_m_q_1_1_message_manager.html#a118a279161d097962c155469b2223233">XuMQ::MessageManager</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">XuMQ::MsgQueueManager</a>, <a class="el" href="class_xu_m_q_1_1_queue_message.html#a1e4c2d835ea20446bc92831448ab6e77">XuMQ::QueueMessage</a></li>
-<li>_qname&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_message_mapper.html#a1fd6adb4b502ee299a7cf3a3d4965c1b">XuMQ::MessageMapper</a>, <a class="el" href="class_xu_m_q_1_1_queue_message.html#a3859f8c30a5179f05cc86615c7af1ac6">XuMQ::QueueMessage</a></li>
+<li>_mutex&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_binding_manager.html#a89de37822a9c9af6e527925b3e52d1b2">XuMQ::BindingManager</a>, <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a398c128392b79a58339e70b06b7add9c">XuMQ::ConsumerManager</a>, <a class="el" href="class_xu_m_q_1_1_exchange_manager.html#a064006de93e6089cf11286aaf4db894b">XuMQ::ExchangeManager</a>, <a class="el" href="class_xu_m_q_1_1_message_manager.html#a118a279161d097962c155469b2223233">XuMQ::MessageManager</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ad512849d260b95474d9ef4a9621a6ef5">XuMQ::MsgQueueManager</a>, <a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aca4e1cc483f104492a29645133855a39">XuMQ::QueueConsumer</a>, <a class="el" href="class_xu_m_q_1_1_queue_message.html#a1e4c2d835ea20446bc92831448ab6e77">XuMQ::QueueMessage</a></li>
+<li>_qconsumers&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_consumer_manager.html#adcbb8602835d050b57e1dbe67fa1fc59">XuMQ::ConsumerManager</a></li>
+<li>_qname&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_message_mapper.html#a1fd6adb4b502ee299a7cf3a3d4965c1b">XuMQ::MessageMapper</a>, <a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aa31096bc2c7466b8247dfe4498dd558d">XuMQ::QueueConsumer</a>, <a class="el" href="class_xu_m_q_1_1_queue_message.html#a3859f8c30a5179f05cc86615c7af1ac6">XuMQ::QueueMessage</a></li>
 <li>_queue_msgs&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_message_manager.html#adb2d6d95f508727854dd2f1f920e98dd">XuMQ::MessageManager</a></li>
 <li>_queues&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_msg_queue_manager.html#ac90480dc7ff8fb669feda8e290d2aefe">XuMQ::MsgQueueManager</a></li>
+<li>_rr_seq&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aeb030d8253a6e1671b88a61b0716446d">XuMQ::QueueConsumer</a></li>
 <li>_sql_helper&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_binding_mapper.html#ac6284ddc379299f44c843036c4721d3d">XuMQ::BindingMapper</a>, <a class="el" href="class_xu_m_q_1_1_exchange_mapper.html#a33047288bbcf1a5a529692fd619fd173">XuMQ::ExchangeMapper</a>, <a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html#aad3e8a18b45f048697b366f4e38c7c0e">XuMQ::MsgQueueMapper</a></li>
 <li>_tmpfile&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_message_mapper.html#a69b3746fec5b2dd24cee0b2108e54e45">XuMQ::MessageMapper</a></li>
 <li>_total_count&#160;:&#160;<a class="el" href="class_xu_m_q_1_1_queue_message.html#ae4975d3805a9917a517b5473d2647eb5">XuMQ::QueueMessage</a></li>
@@ -133,6 +136,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>args&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a58c437c1e9477f0802a6279c7c99ae0e">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a11c5660cc6ccaf1f766f0a0fc714a73f">XuMQ::MsgQueue</a></li>
+<li>auto_ack&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_consumer.html#a9dbf0e71806eba259bd78daf3a489d23">XuMQ::Consumer</a></li>
 <li>auto_delete&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a04b28bac2d6177070e4f9f03f564131e">XuMQ::Exchange</a>, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a1eb86f7a1bf63c66c54614ac7996c787">XuMQ::MsgQueue</a></li>
 </ul>
 
@@ -140,6 +144,11 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>binding_key&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_binding.html#ac457cef292144fa21ee44ef84048b8d3">XuMQ::Binding</a></li>
 <li>body_&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_message___payload_1_1_impl__.html#a636f85c6f1ed7f8cd6c00326cc2ae9c6">XuMQ::Message_Payload::Impl_</a></li>
+</ul>
+
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>callback&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_consumer.html#a66817e2cc21c7241d68d2746bce95b87">XuMQ::Consumer</a></li>
 </ul>
 
 
@@ -192,12 +201,18 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 </ul>
 
 
+<h3><a id="index_q" name="index_q"></a>- q -</h3><ul>
+<li>qname&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893">XuMQ::Consumer</a></li>
+</ul>
+
+
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>routing_key_&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_basic_properties_1_1_impl__.html#a55d9eb2b3da89a019fc9c4e65133b70c">XuMQ::BasicProperties::Impl_</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>tag&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_consumer.html#aeb6b1acd346d9153b6e172f2c41cfdfb">XuMQ::Consumer</a></li>
 <li>type&#160;:&#160;<a class="el" href="struct_xu_m_q_1_1_exchange.html#a35fa49a24961b8f8182a6a7bccfce9a6">XuMQ::Exchange</a></li>
 </ul>
 

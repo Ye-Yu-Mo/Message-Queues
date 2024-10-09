@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['file_5fdefault_5finstances_0',['file_default_instances',['../msg_8pb_8cc.html#af4cbfc3fec9aecfe7c25cfb5ae157c54',1,'msg.pb.cc']]],
-  ['file_5flevel_5fenum_5fdescriptors_5fmsg_5f2eproto_1',['file_level_enum_descriptors_msg_2eproto',['../msg_8pb_8cc.html#affef2b7cb1a2bb165e66d3358a5414a1',1,'msg.pb.cc']]],
-  ['file_5flevel_5fmetadata_5fmsg_5f2eproto_2',['file_level_metadata_msg_2eproto',['../msg_8pb_8cc.html#a982f39a372fb25505e230e812f19f77c',1,'msg.pb.cc']]],
-  ['file_5flevel_5fservice_5fdescriptors_5fmsg_5f2eproto_3',['file_level_service_descriptors_msg_2eproto',['../msg_8pb_8cc.html#aaf0751091c3b321a8244b6daf5626214',1,'msg.pb.cc']]]
+  ['emp_0',['emp',['../mqexchangetest_8cpp.html#a5c973bbf039915c6b135a798745587ee',1,'mqexchangetest.cpp']]],
+  ['exchange_5fname_1',['exchange_name',['../struct_xu_m_q_1_1_binding.html#aac885ac4d4169859aed2f33b73d53e6d',1,'XuMQ::Binding']]],
+  ['exchangetype_5farraysize_2',['ExchangeType_ARRAYSIZE',['../namespace_xu_m_q.html#a5648bf7ee97db9af26596b6e4839a5a3',1,'XuMQ']]],
+  ['exchangetype_5fmax_3',['ExchangeType_MAX',['../namespace_xu_m_q.html#ab2e0bbec536a93a55900c987e5510944',1,'XuMQ']]],
+  ['exchangetype_5fmin_4',['ExchangeType_MIN',['../namespace_xu_m_q.html#aee0aff534d6a141e6eb553bc20cf68df',1,'XuMQ']]],
+  ['exclusive_5',['exclusive',['../struct_xu_m_q_1_1_msg_queue.html#a932ad5aa9a12fb97647048f595f64bf3',1,'XuMQ::MsgQueue']]]
 ];

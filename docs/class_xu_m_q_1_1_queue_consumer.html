@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::QueueConsumer类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_queue_consumer.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_queue_consumer-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::QueueConsumer类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>以队列为单元的消费者管理类  
+ <a href="class_xu_m_q_1_1_queue_consumer.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="consumer_8hpp_source.html">consumer.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:acff0b137c45eb7eb38a216d9d36fb5ca" id="r_acff0b137c45eb7eb38a216d9d36fb5ca"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#acff0b137c45eb7eb38a216d9d36fb5ca">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_queue_consumer.html">QueueConsumer</a> &gt;</td></tr>
+<tr class="memdesc:acff0b137c45eb7eb38a216d9d36fb5ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者管理类  <br /></td></tr>
+<tr class="separator:acff0b137c45eb7eb38a216d9d36fb5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a103b3cb5381157daf56295ff44a3545b" id="r_a103b3cb5381157daf56295ff44a3545b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a103b3cb5381157daf56295ff44a3545b">QueueConsumer</a> (const std::string &amp;qname)</td></tr>
+<tr class="memdesc:a103b3cb5381157daf56295ff44a3545b"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a103b3cb5381157daf56295ff44a3545b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb9f084fc156c8fef9f66de3ae72cd9d" id="r_acb9f084fc156c8fef9f66de3ae72cd9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#acb9f084fc156c8fef9f66de3ae72cd9d">create</a> (const std::string &amp;ctag, const std::string &amp;queue_name, bool ack, const <a class="el" href="namespace_xu_m_q.html#ad750607847d6c3d747643c8f019d5d99">ConsumerCallback</a> &amp;cb)</td></tr>
+<tr class="memdesc:acb9f084fc156c8fef9f66de3ae72cd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个消费者  <br /></td></tr>
+<tr class="separator:acb9f084fc156c8fef9f66de3ae72cd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11eda3e50965b7aba903c9e0872f51a8" id="r_a11eda3e50965b7aba903c9e0872f51a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a11eda3e50965b7aba903c9e0872f51a8">remove</a> (const std::string &amp;ctag)</td></tr>
+<tr class="memdesc:a11eda3e50965b7aba903c9e0872f51a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除一个消费者  <br /></td></tr>
+<tr class="separator:a11eda3e50965b7aba903c9e0872f51a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bea8258307e2aa15c9769a4c40cc27" id="r_a65bea8258307e2aa15c9769a4c40cc27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a65bea8258307e2aa15c9769a4c40cc27">choose</a> ()</td></tr>
+<tr class="memdesc:a65bea8258307e2aa15c9769a4c40cc27"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个消费者  <br /></td></tr>
+<tr class="separator:a65bea8258307e2aa15c9769a4c40cc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3fa60b863bf020c71005816a54d472" id="r_a3d3fa60b863bf020c71005816a54d472"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a3d3fa60b863bf020c71005816a54d472">empty</a> ()</td></tr>
+<tr class="memdesc:a3d3fa60b863bf020c71005816a54d472"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断消费者队列是否为空  <br /></td></tr>
+<tr class="separator:a3d3fa60b863bf020c71005816a54d472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a619d4cc76f73cfedda755a4810d81" id="r_af0a619d4cc76f73cfedda755a4810d81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#af0a619d4cc76f73cfedda755a4810d81">exists</a> (const std::string &amp;ctag)</td></tr>
+<tr class="memdesc:af0a619d4cc76f73cfedda755a4810d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">判断消费者是否存在  <br /></td></tr>
+<tr class="separator:af0a619d4cc76f73cfedda755a4810d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1ddf360f1791794050b3b65e4d345d1" id="r_af1ddf360f1791794050b3b65e4d345d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#af1ddf360f1791794050b3b65e4d345d1">clear</a> ()</td></tr>
+<tr class="memdesc:af1ddf360f1791794050b3b65e4d345d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空  <br /></td></tr>
+<tr class="separator:af1ddf360f1791794050b3b65e4d345d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:aa31096bc2c7466b8247dfe4498dd558d" id="r_aa31096bc2c7466b8247dfe4498dd558d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aa31096bc2c7466b8247dfe4498dd558d">_qname</a></td></tr>
+<tr class="memdesc:aa31096bc2c7466b8247dfe4498dd558d"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列名称  <br /></td></tr>
+<tr class="separator:aa31096bc2c7466b8247dfe4498dd558d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4e1cc483f104492a29645133855a39" id="r_aca4e1cc483f104492a29645133855a39"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aca4e1cc483f104492a29645133855a39">_mutex</a></td></tr>
+<tr class="memdesc:aca4e1cc483f104492a29645133855a39"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
+<tr class="separator:aca4e1cc483f104492a29645133855a39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb030d8253a6e1671b88a61b0716446d" id="r_aeb030d8253a6e1671b88a61b0716446d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#aeb030d8253a6e1671b88a61b0716446d">_rr_seq</a></td></tr>
+<tr class="memdesc:aeb030d8253a6e1671b88a61b0716446d"><td class="mdescLeft">&#160;</td><td class="mdescRight">轮转序号  <br /></td></tr>
+<tr class="separator:aeb030d8253a6e1671b88a61b0716446d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a1b203c42dca9989108a710801afa6" id="r_a30a1b203c42dca9989108a710801afa6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html#a30a1b203c42dca9989108a710801afa6">_consumers</a></td></tr>
+<tr class="memdesc:a30a1b203c42dca9989108a710801afa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者管理数组  <br /></td></tr>
+<tr class="separator:a30a1b203c42dca9989108a710801afa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>以队列为单元的消费者管理类 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="acff0b137c45eb7eb38a216d9d36fb5ca" name="acff0b137c45eb7eb38a216d9d36fb5ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff0b137c45eb7eb38a216d9d36fb5ca">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_queue_consumer.html#acff0b137c45eb7eb38a216d9d36fb5ca">XuMQ::QueueConsumer::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_queue_consumer.html">QueueConsumer</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消费者管理类 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a103b3cb5381157daf56295ff44a3545b" name="a103b3cb5381157daf56295ff44a3545b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a103b3cb5381157daf56295ff44a3545b">&#9670;&#160;</a></span>QueueConsumer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::QueueConsumer::QueueConsumer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>qname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">qname</td><td>队列名称 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a65bea8258307e2aa15c9769a4c40cc27" name="a65bea8258307e2aa15c9769a4c40cc27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65bea8258307e2aa15c9769a4c40cc27">&#9670;&#160;</a></span>choose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a> XuMQ::QueueConsumer::choose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一个消费者 </p>
+<dl class="section return"><dt>返回</dt><dd>消费者结构管理指针 </dd></dl>
+
+</div>
+</div>
+<a id="af1ddf360f1791794050b3b65e4d345d1" name="af1ddf360f1791794050b3b65e4d345d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ddf360f1791794050b3b65e4d345d1">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::QueueConsumer::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清空 </p>
+
+</div>
+</div>
+<a id="acb9f084fc156c8fef9f66de3ae72cd9d" name="acb9f084fc156c8fef9f66de3ae72cd9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb9f084fc156c8fef9f66de3ae72cd9d">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a> XuMQ::QueueConsumer::create </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ctag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>queue_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>ack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#ad750607847d6c3d747643c8f019d5d99">ConsumerCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建一个消费者 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctag</td><td>消费者标识 </td></tr>
+    <tr><td class="paramname">queue_name</td><td>消费者订阅的队列名称 </td></tr>
+    <tr><td class="paramname">ack</td><td>自动确认标志 </td></tr>
+    <tr><td class="paramname">cb</td><td>消费者回调函数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>消费者结构管理指针 </dd></dl>
+
+</div>
+</div>
+<a id="a3d3fa60b863bf020c71005816a54d472" name="a3d3fa60b863bf020c71005816a54d472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d3fa60b863bf020c71005816a54d472">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::QueueConsumer::empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断消费者队列是否为空 </p>
+<dl class="section return"><dt>返回</dt><dd>为空返回true 不为空返回false </dd></dl>
+
+</div>
+</div>
+<a id="af0a619d4cc76f73cfedda755a4810d81" name="af0a619d4cc76f73cfedda755a4810d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0a619d4cc76f73cfedda755a4810d81">&#9670;&#160;</a></span>exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::QueueConsumer::exists </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ctag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>判断消费者是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctag</td><td>消费者标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>存在返回true 不存在返回false </dd></dl>
+
+</div>
+</div>
+<a id="a11eda3e50965b7aba903c9e0872f51a8" name="a11eda3e50965b7aba903c9e0872f51a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11eda3e50965b7aba903c9e0872f51a8">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::QueueConsumer::remove </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ctag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除一个消费者 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctag</td><td>消费者标识 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a30a1b203c42dca9989108a710801afa6" name="a30a1b203c42dca9989108a710801afa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a1b203c42dca9989108a710801afa6">&#9670;&#160;</a></span>_consumers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">Consumer::ptr</a>&gt; XuMQ::QueueConsumer::_consumers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>消费者管理数组 </p>
+
+</div>
+</div>
+<a id="aca4e1cc483f104492a29645133855a39" name="aca4e1cc483f104492a29645133855a39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4e1cc483f104492a29645133855a39">&#9670;&#160;</a></span>_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex XuMQ::QueueConsumer::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>互斥锁 </p>
+
+</div>
+</div>
+<a id="aa31096bc2c7466b8247dfe4498dd558d" name="aa31096bc2c7466b8247dfe4498dd558d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa31096bc2c7466b8247dfe4498dd558d">&#9670;&#160;</a></span>_qname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string XuMQ::QueueConsumer::_qname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>队列名称 </p>
+
+</div>
+</div>
+<a id="aeb030d8253a6e1671b88a61b0716446d" name="aeb030d8253a6e1671b88a61b0716446d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb030d8253a6e1671b88a61b0716446d">&#9670;&#160;</a></span>_rr_seq</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t XuMQ::QueueConsumer::_rr_seq</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>轮转序号 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html">QueueConsumer</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

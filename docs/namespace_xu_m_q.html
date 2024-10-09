@@ -121,6 +121,12 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_binding_mapper.html">BindingMapper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定信息持久化管理类  <a href="class_xu_m_q_1_1_binding_mapper.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_consumer.html">Consumer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者对象结构  <a href="struct_xu_m_q_1_1_consumer.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_consumer_manager.html">ConsumerManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者队列管理器  <a href="class_xu_m_q_1_1_consumer_manager.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1_exchange.html">Exchange</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机结构体对象  <a href="struct_xu_m_q_1_1_exchange.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +164,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_msg_queue_mapper.html">MsgQueueMapper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列持久化管理类 将数据存储在sqlite数据库中  <a href="class_xu_m_q_1_1_msg_queue_mapper.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_consumer.html">QueueConsumer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">以队列为单元的消费者管理类  <a href="class_xu_m_q_1_1_queue_consumer.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html">QueueMessage</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">推送消息队列管理  <a href="class_xu_m_q_1_1_queue_message.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +194,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:a4970cc87d0e344f2b27f072e7172cff7" id="r_a4970cc87d0e344f2b27f072e7172cff7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> = std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> &gt;</td></tr>
 <tr class="memdesc:a4970cc87d0e344f2b27f072e7172cff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定映射表-&mdash;交换机-&gt;消息队列绑定映射表的映射表  <br /></td></tr>
 <tr class="separator:a4970cc87d0e344f2b27f072e7172cff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad750607847d6c3d747643c8f019d5d99" id="r_ad750607847d6c3d747643c8f019d5d99"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ad750607847d6c3d747643c8f019d5d99">ConsumerCallback</a> = std::function&lt; void(const std::string, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string)&gt;</td></tr>
+<tr class="memdesc:ad750607847d6c3d747643c8f019d5d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者回调函数  <br /></td></tr>
+<tr class="separator:ad750607847d6c3d747643c8f019d5d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c80cb23e6fa300bd31a9226e982be18" id="r_a2c80cb23e6fa300bd31a9226e982be18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
 <tr class="memdesc:a2c80cb23e6fa300bd31a9226e982be18"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表 交换机名称-&gt;交换机对象指针  <br /></td></tr>
 <tr class="separator:a2c80cb23e6fa300bd31a9226e982be18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,6 +307,22 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <p>绑定映射表-&mdash;交换机-&gt;消息队列绑定映射表的映射表 </p>
 <dl class="section note"><dt>注解</dt><dd>一个交换机可能会有多个队列的绑定信息 从交换机名称找到其关联的所有的消息队列和对应的绑定信息 这一张表包含了所有的交换机, 消息队列, 绑定信息 以交换机为单元进行区分 first是交换机名称 second是消息队列绑定映射表 </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd>已弃用 std::unordered_map&lt;std::string, Binding::ptr&gt;; 队列-&gt;绑定信息 std::unordered_map&lt;std::string, Binding::ptr&gt;; 交换机-&gt;绑定信息 删除交换机绑定信息时, 需要删除交换机-&gt;绑定信息中的数据 额外需要遍历队列-&gt;绑定信息中绑定信息的交换机名称 再进行释放 效率极低 </dd></dl>
+
+</div>
+</div>
+<a id="ad750607847d6c3d747643c8f019d5d99" name="ad750607847d6c3d747643c8f019d5d99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad750607847d6c3d747643c8f019d5d99">&#9670;&#160;</a></span>ConsumerCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#ad750607847d6c3d747643c8f019d5d99">XuMQ::ConsumerCallback</a> = typedef std::function&lt;void(const std::string, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消费者回调函数 </p>
 
 </div>
 </div>

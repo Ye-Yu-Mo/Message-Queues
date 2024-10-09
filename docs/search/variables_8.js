@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['length_5f_0',['length_',['../struct_xu_m_q_1_1_message_1_1_impl__.html#a9069c6e822c9a931536d049c2a98ae9b',1,'XuMQ::Message::Impl_']]],
-  ['log_5finit_1',['log_init',['../namespace_xu_m_q.html#ab48ee1fdcd2c301040d24a1642224a7d',1,'XuMQ']]],
-  ['logger_2',['logger',['../namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a',1,'XuMQ']]]
+  ['kindexinfilemessages_0',['kindexinfilemessages',['../class_xu_m_q_1_1_basic_properties.html#a98e1a2d3b1e293e1e586a3d9a2ce8334',1,'XuMQ::BasicProperties::kIndexInFileMessages'],['../class_xu_m_q_1_1_message___payload.html#a15638896ccb7680d19ec34a7e724e30f',1,'XuMQ::Message_Payload::kIndexInFileMessages'],['../class_xu_m_q_1_1_message.html#ad66311a20ff86e18bdeea029272b69a9',1,'XuMQ::Message::kIndexInFileMessages']]]
 ];
