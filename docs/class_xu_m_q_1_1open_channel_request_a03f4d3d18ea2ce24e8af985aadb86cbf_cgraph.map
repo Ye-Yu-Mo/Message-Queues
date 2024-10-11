@@ -1,0 +1,13 @@
+<map id="XuMQ::openChannelRequest::descriptor" name="XuMQ::openChannelRequest::descriptor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,212,77"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1open_channel_request.html#a7812c5712a12e4ecd83fd0b0fe0c7ba8" title=" " alt="" coords="260,37,467,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="212,55,246,55,246,60,212,60"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1open_channel_request.html#a9cb48a513006cf5586927d7a2dbaed11" title=" " alt="" coords="515,5,721,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="466,42,501,37,501,43,467,47"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1open_channel_request.html#ae82116c302e2dae9e535004993923ad6" title=" " alt="" coords="515,69,721,109"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="467,68,501,72,501,77,466,73"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1open_channel_request.html#accb416ff9226340833b2be9a1666b3ed" title=" " alt="" coords="769,5,976,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="721,23,756,23,756,28,721,28"/>
+<area shape="rect" id="Node000006" href="$protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066" title=" " alt="" coords="779,69,966,109"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="721,87,766,87,766,92,721,92"/>
+</map>

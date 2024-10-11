@@ -1,0 +1,9 @@
+<map id="common/protocol.pb.h" name="common/protocol.pb.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="101,5,269,31"/>
+<area shape="rect" id="Node000002" href="$protocol_8pb_8cc.html" title=" " alt="" coords="5,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,41,109,81,106,76,158,37"/>
+<area shape="rect" id="Node000003" href="$channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="205,79,351,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="212,37,264,76,261,81,209,41"/>
+<area shape="rect" id="Node000004" href="$mqchanneltest_8cpp.html" title=" " alt="" coords="191,152,365,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,118,281,152,275,152,275,118"/>
+</map>

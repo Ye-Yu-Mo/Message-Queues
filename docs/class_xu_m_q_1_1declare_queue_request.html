@@ -1,0 +1,3217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::declareQueueRequest类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1declare_queue_request.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_xu_m_q_1_1declare_queue_request-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::declareQueueRequest类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="protocol_8pb_8h_source.html">protocol.pb.h</a>&gt;</code></p>
+<div class="dynheader">
+类 XuMQ::declareQueueRequest 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request__inherit__graph.png" border="0" usemap="#a_xu_m_q_1_1declare_queue_request_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_xu_m_q_1_1declare_queue_request_inherit__map" id="a_xu_m_q_1_1declare_queue_request_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,93,217,119"/>
+<area shape="rect" title=" " alt="" coords="21,5,202,45"/>
+<area shape="poly" title=" " alt="" coords="114,59,114,93,109,93,109,59"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+XuMQ::declareQueueRequest 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1declare_queue_request_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1declare_queue_request_coll__map" id="a_xu_m_q_1_1declare_queue_request_coll__map">
+<area shape="rect" title=" " alt="" coords="101,108,313,133"/>
+<area shape="rect" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" title=" " alt="" coords="131,52,194,106,191,110,127,56"/>
+<area shape="rect" href="struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html" title=" " alt="" coords="211,5,423,45"/>
+<area shape="poly" title=" " alt="" coords="286,56,222,110,219,106,283,52"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request_1_1___internal.html">_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html">Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a9b6c03b5c7b52e2e1a51b203193f2f5c" id="r_a9b6c03b5c7b52e2e1a51b203193f2f5c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <br />
+&#160;&#160;<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5ca16bbbce49ed64e7c8014ccf7555cef9c">kArgsFieldNumber</a> = 7
+, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5cab6fe638db0a7e47f2a2460a51f960f92">kRidFieldNumber</a> = 1
+, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5cad8a6da5b916be4c84c56656edaf1ac13">kCidFieldNumber</a> = 2
+, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5ca309193e117f5d6f1786bd89dfe9ab39a">kQueueNameFieldNumber</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5caabf0310250cff6f919e442ef78278a1c">kExclusiveFieldNumber</a> = 4
+, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5ca0b13bae445131f0ee5197440435673ff">kDurableFieldNumber</a> = 5
+, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b6c03b5c7b52e2e1a51b203193f2f5cae11105ce2da4ae6e06ec892ff06b72d4">kAutoDeleteFieldNumber</a> = 6
+<br />
+ }</td></tr>
+<tr class="separator:a9b6c03b5c7b52e2e1a51b203193f2f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8e7591a8a97a4ba05c682e147efe79a5" id="r_a8e7591a8a97a4ba05c682e147efe79a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a8e7591a8a97a4ba05c682e147efe79a5">declareQueueRequest</a> ()</td></tr>
+<tr class="separator:a8e7591a8a97a4ba05c682e147efe79a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a533667bdf87c9f1cf40a17d331252bc6" id="r_a533667bdf87c9f1cf40a17d331252bc6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a533667bdf87c9f1cf40a17d331252bc6">~declareQueueRequest</a> () override</td></tr>
+<tr class="separator:a533667bdf87c9f1cf40a17d331252bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad675ca7343f6bdb0e0860210b761aa4c" id="r_ad675ca7343f6bdb0e0860210b761aa4c"><td class="memItemLeft" align="right" valign="top">PROTOBUF_CONSTEXPR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ad675ca7343f6bdb0e0860210b761aa4c">declareQueueRequest</a> (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)</td></tr>
+<tr class="separator:ad675ca7343f6bdb0e0860210b761aa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0de18f051379c27d002ee8adeabd9de7" id="r_a0de18f051379c27d002ee8adeabd9de7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0de18f051379c27d002ee8adeabd9de7">declareQueueRequest</a> (const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;from)</td></tr>
+<tr class="separator:a0de18f051379c27d002ee8adeabd9de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a531730ef6e068189c2616366bb6a3f89" id="r_a531730ef6e068189c2616366bb6a3f89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a531730ef6e068189c2616366bb6a3f89">declareQueueRequest</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:a531730ef6e068189c2616366bb6a3f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b499435adf321616bf720df7de82c8" id="r_ae8b499435adf321616bf720df7de82c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ae8b499435adf321616bf720df7de82c8">operator=</a> (const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;from)</td></tr>
+<tr class="separator:ae8b499435adf321616bf720df7de82c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6237e369b8e3dafbf3cd7daf17fafe73" id="r_a6237e369b8e3dafbf3cd7daf17fafe73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6237e369b8e3dafbf3cd7daf17fafe73">operator=</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:a6237e369b8e3dafbf3cd7daf17fafe73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee3cdeff09c37e83763764a1949640b" id="r_aeee3cdeff09c37e83763764a1949640b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aeee3cdeff09c37e83763764a1949640b">Swap</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *other)</td></tr>
+<tr class="separator:aeee3cdeff09c37e83763764a1949640b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567e004a9cd607da60629267af820e3c" id="r_a567e004a9cd607da60629267af820e3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a567e004a9cd607da60629267af820e3c">UnsafeArenaSwap</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *other)</td></tr>
+<tr class="separator:a567e004a9cd607da60629267af820e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084d4578ee84d6f229fca739c8c0563f" id="r_a084d4578ee84d6f229fca739c8c0563f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a084d4578ee84d6f229fca739c8c0563f">New</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final</td></tr>
+<tr class="separator:a084d4578ee84d6f229fca739c8c0563f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b786738d50b6d8f60a2968b7f610bbe" id="r_a7b786738d50b6d8f60a2968b7f610bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7b786738d50b6d8f60a2968b7f610bbe">CopyFrom</a> (const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;from)</td></tr>
+<tr class="separator:a7b786738d50b6d8f60a2968b7f610bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce568d96e0aab40324ff52ea4e46246" id="r_a7ce568d96e0aab40324ff52ea4e46246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7ce568d96e0aab40324ff52ea4e46246">MergeFrom</a> (const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;from)</td></tr>
+<tr class="separator:a7ce568d96e0aab40324ff52ea4e46246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0184d108aaf16c2b06f3cae47fce8d6" id="r_ae0184d108aaf16c2b06f3cae47fce8d6"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_REINITIALIZES void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ae0184d108aaf16c2b06f3cae47fce8d6">Clear</a> () final</td></tr>
+<tr class="separator:ae0184d108aaf16c2b06f3cae47fce8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f9bc22a4ec988bd17d145843715246" id="r_ab2f9bc22a4ec988bd17d145843715246"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab2f9bc22a4ec988bd17d145843715246">IsInitialized</a> () const final</td></tr>
+<tr class="separator:ab2f9bc22a4ec988bd17d145843715246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f9e8de8b9cdfc1154786a8e3b971a69" id="r_a4f9e8de8b9cdfc1154786a8e3b971a69"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69">ByteSizeLong</a> () const final</td></tr>
+<tr class="separator:a4f9e8de8b9cdfc1154786a8e3b971a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addccfb2d1668bc29713e48c2ed360f77" id="r_addccfb2d1668bc29713e48c2ed360f77"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#addccfb2d1668bc29713e48c2ed360f77">_InternalParse</a> (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final</td></tr>
+<tr class="separator:addccfb2d1668bc29713e48c2ed360f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0540da4166ffe12337bca77619fe2dc4" id="r_a0540da4166ffe12337bca77619fe2dc4"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4">_InternalSerialize</a> (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final</td></tr>
+<tr class="separator:a0540da4166ffe12337bca77619fe2dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8455762358b135bc3d0d7156636a1705" id="r_a8455762358b135bc3d0d7156636a1705"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a8455762358b135bc3d0d7156636a1705">GetCachedSize</a> () const final</td></tr>
+<tr class="separator:a8455762358b135bc3d0d7156636a1705"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1725cccbf58d7858db5dda2700324378" id="r_a1725cccbf58d7858db5dda2700324378"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a1725cccbf58d7858db5dda2700324378">GetClassData</a> () const final</td></tr>
+<tr class="separator:a1725cccbf58d7858db5dda2700324378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ca1e2693eaf184964a95ff8c5f9757" id="r_a71ca1e2693eaf184964a95ff8c5f9757"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::Metadata&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a71ca1e2693eaf184964a95ff8c5f9757">GetMetadata</a> () const final</td></tr>
+<tr class="separator:a71ca1e2693eaf184964a95ff8c5f9757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a1ab79778b84f7eda105926c1e33a83" id="r_a0a1ab79778b84f7eda105926c1e33a83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0a1ab79778b84f7eda105926c1e33a83">args_size</a> () const</td></tr>
+<tr class="separator:a0a1ab79778b84f7eda105926c1e33a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f2e2a3598b7b973ca5a12b29ddcc32" id="r_a42f2e2a3598b7b973ca5a12b29ddcc32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a42f2e2a3598b7b973ca5a12b29ddcc32">clear_args</a> ()</td></tr>
+<tr class="separator:a42f2e2a3598b7b973ca5a12b29ddcc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73744ecfa6d6440d442421afd70338cf" id="r_a73744ecfa6d6440d442421afd70338cf"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a> () const</td></tr>
+<tr class="separator:a73744ecfa6d6440d442421afd70338cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b59d60d68a98d51d5848b7b9ba72cea" id="r_a2b59d60d68a98d51d5848b7b9ba72cea"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a2b59d60d68a98d51d5848b7b9ba72cea">mutable_args</a> ()</td></tr>
+<tr class="separator:a2b59d60d68a98d51d5848b7b9ba72cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6285a26d6f830fd4b1a4d6f8c9aa6430" id="r_a6285a26d6f830fd4b1a4d6f8c9aa6430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6285a26d6f830fd4b1a4d6f8c9aa6430">clear_rid</a> ()</td></tr>
+<tr class="separator:a6285a26d6f830fd4b1a4d6f8c9aa6430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00a3a8186d7756ad82e85e9fb595784" id="r_aa00a3a8186d7756ad82e85e9fb595784"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aa00a3a8186d7756ad82e85e9fb595784">rid</a> () const</td></tr>
+<tr class="separator:aa00a3a8186d7756ad82e85e9fb595784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871c09f84237d60c8ed844dc01c35a22" id="r_a871c09f84237d60c8ed844dc01c35a22"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a871c09f84237d60c8ed844dc01c35a22"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a871c09f84237d60c8ed844dc01c35a22">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:a871c09f84237d60c8ed844dc01c35a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7f8d33774a7b49e6d39db5075f11a2" id="r_a9d7f8d33774a7b49e6d39db5075f11a2"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9d7f8d33774a7b49e6d39db5075f11a2">mutable_rid</a> ()</td></tr>
+<tr class="separator:a9d7f8d33774a7b49e6d39db5075f11a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e313c73d61ab6ef7a670219567bb93" id="r_a52e313c73d61ab6ef7a670219567bb93"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a52e313c73d61ab6ef7a670219567bb93">release_rid</a> ()</td></tr>
+<tr class="separator:a52e313c73d61ab6ef7a670219567bb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b2726c78eda4b978d835192054b1b2" id="r_a88b2726c78eda4b978d835192054b1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a88b2726c78eda4b978d835192054b1b2">set_allocated_rid</a> (std::string *<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aa00a3a8186d7756ad82e85e9fb595784">rid</a>)</td></tr>
+<tr class="separator:a88b2726c78eda4b978d835192054b1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72f34ddfd8be8f6b081547c8d840175f" id="r_a72f34ddfd8be8f6b081547c8d840175f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a72f34ddfd8be8f6b081547c8d840175f">clear_cid</a> ()</td></tr>
+<tr class="separator:a72f34ddfd8be8f6b081547c8d840175f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e84ad90b7b91b3b9a089c2032f914a" id="r_a71e84ad90b7b91b3b9a089c2032f914a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a71e84ad90b7b91b3b9a089c2032f914a">cid</a> () const</td></tr>
+<tr class="separator:a71e84ad90b7b91b3b9a089c2032f914a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529bffec5c30c1f76f1aafb09edaf636" id="r_a529bffec5c30c1f76f1aafb09edaf636"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a529bffec5c30c1f76f1aafb09edaf636"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a529bffec5c30c1f76f1aafb09edaf636">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:a529bffec5c30c1f76f1aafb09edaf636"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3083f92aa346fc1d04aee0fa8e2d2ac2" id="r_a3083f92aa346fc1d04aee0fa8e2d2ac2"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a3083f92aa346fc1d04aee0fa8e2d2ac2">mutable_cid</a> ()</td></tr>
+<tr class="separator:a3083f92aa346fc1d04aee0fa8e2d2ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59555c0c5d8b9bc96072276cd2b52e94" id="r_a59555c0c5d8b9bc96072276cd2b52e94"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a59555c0c5d8b9bc96072276cd2b52e94">release_cid</a> ()</td></tr>
+<tr class="separator:a59555c0c5d8b9bc96072276cd2b52e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58bf28ad3a6a8577d36ba53898f6bc1e" id="r_a58bf28ad3a6a8577d36ba53898f6bc1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a58bf28ad3a6a8577d36ba53898f6bc1e">set_allocated_cid</a> (std::string *<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a71e84ad90b7b91b3b9a089c2032f914a">cid</a>)</td></tr>
+<tr class="separator:a58bf28ad3a6a8577d36ba53898f6bc1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc4f8ecc03c8afcd42d361498871103" id="r_a6fc4f8ecc03c8afcd42d361498871103"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6fc4f8ecc03c8afcd42d361498871103">clear_queue_name</a> ()</td></tr>
+<tr class="separator:a6fc4f8ecc03c8afcd42d361498871103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd588eb4e7a1a8a40f591d04b9e21d8" id="r_a6cd588eb4e7a1a8a40f591d04b9e21d8"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6cd588eb4e7a1a8a40f591d04b9e21d8">queue_name</a> () const</td></tr>
+<tr class="separator:a6cd588eb4e7a1a8a40f591d04b9e21d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f61b140f799a012f8ebfc69dd72a13" id="r_a01f61b140f799a012f8ebfc69dd72a13"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a01f61b140f799a012f8ebfc69dd72a13"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a01f61b140f799a012f8ebfc69dd72a13">set_queue_name</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:a01f61b140f799a012f8ebfc69dd72a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772d04dedcf3637346ee3af09ecb8ac2" id="r_a772d04dedcf3637346ee3af09ecb8ac2"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a772d04dedcf3637346ee3af09ecb8ac2">mutable_queue_name</a> ()</td></tr>
+<tr class="separator:a772d04dedcf3637346ee3af09ecb8ac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed814918df233c2be26ac6bcf8c5f785" id="r_aed814918df233c2be26ac6bcf8c5f785"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aed814918df233c2be26ac6bcf8c5f785">release_queue_name</a> ()</td></tr>
+<tr class="separator:aed814918df233c2be26ac6bcf8c5f785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd895e39d1d7a2eedfdbc08f8cc6562" id="r_abbd895e39d1d7a2eedfdbc08f8cc6562"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#abbd895e39d1d7a2eedfdbc08f8cc6562">set_allocated_queue_name</a> (std::string *<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6cd588eb4e7a1a8a40f591d04b9e21d8">queue_name</a>)</td></tr>
+<tr class="separator:abbd895e39d1d7a2eedfdbc08f8cc6562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22681d0ca112c0619520ffc91282536" id="r_ab22681d0ca112c0619520ffc91282536"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab22681d0ca112c0619520ffc91282536">clear_exclusive</a> ()</td></tr>
+<tr class="separator:ab22681d0ca112c0619520ffc91282536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2e7e7fba6c8aeaf924b48fe27968d8" id="r_a8c2e7e7fba6c8aeaf924b48fe27968d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a8c2e7e7fba6c8aeaf924b48fe27968d8">exclusive</a> () const</td></tr>
+<tr class="separator:a8c2e7e7fba6c8aeaf924b48fe27968d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb5e483afefad81306a9034e7f0bd8d" id="r_a7bb5e483afefad81306a9034e7f0bd8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7bb5e483afefad81306a9034e7f0bd8d">set_exclusive</a> (bool value)</td></tr>
+<tr class="separator:a7bb5e483afefad81306a9034e7f0bd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022bfece5e2e15c34d6b3df4d5ecad6d" id="r_a022bfece5e2e15c34d6b3df4d5ecad6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a022bfece5e2e15c34d6b3df4d5ecad6d">clear_durable</a> ()</td></tr>
+<tr class="separator:a022bfece5e2e15c34d6b3df4d5ecad6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af67b3d8e53f1588e0f04152d383ebae4" id="r_af67b3d8e53f1588e0f04152d383ebae4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#af67b3d8e53f1588e0f04152d383ebae4">durable</a> () const</td></tr>
+<tr class="separator:af67b3d8e53f1588e0f04152d383ebae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa18d92463b329d4f857325e5b85fae" id="r_a7aa18d92463b329d4f857325e5b85fae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7aa18d92463b329d4f857325e5b85fae">set_durable</a> (bool value)</td></tr>
+<tr class="separator:a7aa18d92463b329d4f857325e5b85fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1b3518cded24a56a9e364d708e0115" id="r_aac1b3518cded24a56a9e364d708e0115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aac1b3518cded24a56a9e364d708e0115">clear_auto_delete</a> ()</td></tr>
+<tr class="separator:aac1b3518cded24a56a9e364d708e0115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb221b139e466b8638f0bf11bc37917" id="r_a1fb221b139e466b8638f0bf11bc37917"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a1fb221b139e466b8638f0bf11bc37917">auto_delete</a> () const</td></tr>
+<tr class="separator:a1fb221b139e466b8638f0bf11bc37917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac6a56d90206745f98bdb068c2f22f5" id="r_a9ac6a56d90206745f98bdb068c2f22f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9ac6a56d90206745f98bdb068c2f22f5">set_auto_delete</a> (bool value)</td></tr>
+<tr class="separator:a9ac6a56d90206745f98bdb068c2f22f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab191706f2cf46e1f55846a7da98ff739" id="r_ab191706f2cf46e1f55846a7da98ff739"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:ab191706f2cf46e1f55846a7da98ff739"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab191706f2cf46e1f55846a7da98ff739">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:ab191706f2cf46e1f55846a7da98ff739"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d7700c39a21dd29d225b4c7acdd7b9" id="r_a37d7700c39a21dd29d225b4c7acdd7b9"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:a37d7700c39a21dd29d225b4c7acdd7b9"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a37d7700c39a21dd29d225b4c7acdd7b9">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:a37d7700c39a21dd29d225b4c7acdd7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4d5ab7cc6d1edc987df6c68bfd7053" id="r_ace4d5ab7cc6d1edc987df6c68bfd7053"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:ace4d5ab7cc6d1edc987df6c68bfd7053"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ace4d5ab7cc6d1edc987df6c68bfd7053">set_queue_name</a> (ArgT0 &amp;&amp;arg0, ArgT... <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a73744ecfa6d6440d442421afd70338cf">args</a>)</td></tr>
+<tr class="separator:ace4d5ab7cc6d1edc987df6c68bfd7053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:af9c9e80b0d9bac6e8d570afaf9f91c28" id="r_af9c9e80b0d9bac6e8d570afaf9f91c28"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#af9c9e80b0d9bac6e8d570afaf9f91c28">descriptor</a> ()</td></tr>
+<tr class="separator:af9c9e80b0d9bac6e8d570afaf9f91c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02f9ebb6b9cb9a81de1a518769f54927" id="r_a02f9ebb6b9cb9a81de1a518769f54927"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a02f9ebb6b9cb9a81de1a518769f54927">GetDescriptor</a> ()</td></tr>
+<tr class="separator:a02f9ebb6b9cb9a81de1a518769f54927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2ceaa07a063983c749d6ee9037a1ee" id="r_a3c2ceaa07a063983c749d6ee9037a1ee"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Reflection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a3c2ceaa07a063983c749d6ee9037a1ee">GetReflection</a> ()</td></tr>
+<tr class="separator:a3c2ceaa07a063983c749d6ee9037a1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c8ec32a9bedc9cad8c180c4a1ae397" id="r_a39c8ec32a9bedc9cad8c180c4a1ae397"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a39c8ec32a9bedc9cad8c180c4a1ae397">default_instance</a> ()</td></tr>
+<tr class="separator:a39c8ec32a9bedc9cad8c180c4a1ae397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a54778711930797d61b015170a4ed5" id="r_a15a54778711930797d61b015170a4ed5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a15a54778711930797d61b015170a4ed5">internal_default_instance</a> ()</td></tr>
+<tr class="separator:a15a54778711930797d61b015170a4ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:ad965476715d872ed655ecd49e696be06" id="r_ad965476715d872ed655ecd49e696be06"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ad965476715d872ed655ecd49e696be06">kIndexInFileMessages</a></td></tr>
+<tr class="separator:ad965476715d872ed655ecd49e696be06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08245d4fd5d93cc4797513a2b8bc13c4" id="r_a08245d4fd5d93cc4797513a2b8bc13c4"><td class="memItemLeft" align="right" valign="top">static const ClassData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a08245d4fd5d93cc4797513a2b8bc13c4">_class_data_</a></td></tr>
+<tr class="separator:a08245d4fd5d93cc4797513a2b8bc13c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a34fea211fe563eabfb345d1f7be92cf8" id="r_a34fea211fe563eabfb345d1f7be92cf8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a34fea211fe563eabfb345d1f7be92cf8">declareQueueRequest</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)</td></tr>
+<tr class="separator:a34fea211fe563eabfb345d1f7be92cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:a7327af30baacbf19fc40adfe00f911ea" id="r_a7327af30baacbf19fc40adfe00f911ea"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7327af30baacbf19fc40adfe00f911ea">InternalArenaConstructable_</a></td></tr>
+<tr class="separator:a7327af30baacbf19fc40adfe00f911ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f0c438a21bb3e6785c3c0aa0bc63ac" id="r_ab7f0c438a21bb3e6785c3c0aa0bc63ac"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab7f0c438a21bb3e6785c3c0aa0bc63ac">DestructorSkippable_</a></td></tr>
+<tr class="separator:ab7f0c438a21bb3e6785c3c0aa0bc63ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a95fe7552eeef189f864839e2e30d1c67" id="r_a95fe7552eeef189f864839e2e30d1c67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a95fe7552eeef189f864839e2e30d1c67">SharedCtor</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned)</td></tr>
+<tr class="separator:a95fe7552eeef189f864839e2e30d1c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d56da54f44437c74501e121ca298425" id="r_a4d56da54f44437c74501e121ca298425"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a4d56da54f44437c74501e121ca298425">SharedDtor</a> ()</td></tr>
+<tr class="separator:a4d56da54f44437c74501e121ca298425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ad9235302fad094a046c4200a6eedcf" id="r_a1ad9235302fad094a046c4200a6eedcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a1ad9235302fad094a046c4200a6eedcf">SetCachedSize</a> (int size) const final</td></tr>
+<tr class="separator:a1ad9235302fad094a046c4200a6eedcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bebf485a1a0777c0ce1d133ea516154" id="r_a2bebf485a1a0777c0ce1d133ea516154"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a2bebf485a1a0777c0ce1d133ea516154">InternalSwap</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *other)</td></tr>
+<tr class="separator:a2bebf485a1a0777c0ce1d133ea516154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307592472b1dceb75e929c5e2c1388ef" id="r_a307592472b1dceb75e929c5e2c1388ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a307592472b1dceb75e929c5e2c1388ef">_internal_args_size</a> () const</td></tr>
+<tr class="separator:a307592472b1dceb75e929c5e2c1388ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52772b43714fd858eeffb21d09234e4" id="r_aa52772b43714fd858eeffb21d09234e4"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aa52772b43714fd858eeffb21d09234e4">_internal_args</a> () const</td></tr>
+<tr class="separator:aa52772b43714fd858eeffb21d09234e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df6959111656023ec8fd18261fb5f32" id="r_a7df6959111656023ec8fd18261fb5f32"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7df6959111656023ec8fd18261fb5f32">_internal_mutable_args</a> ()</td></tr>
+<tr class="separator:a7df6959111656023ec8fd18261fb5f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0727542e685393ce3a0b9ce9a4dee987" id="r_a0727542e685393ce3a0b9ce9a4dee987"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0727542e685393ce3a0b9ce9a4dee987">_internal_rid</a> () const</td></tr>
+<tr class="separator:a0727542e685393ce3a0b9ce9a4dee987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eeb22f19cf703e9cf0229fd44d08a10" id="r_a0eeb22f19cf703e9cf0229fd44d08a10"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0eeb22f19cf703e9cf0229fd44d08a10">_internal_set_rid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a0eeb22f19cf703e9cf0229fd44d08a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f3b13ace041809e5538f25e785d46e" id="r_a76f3b13ace041809e5538f25e785d46e"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a76f3b13ace041809e5538f25e785d46e">_internal_mutable_rid</a> ()</td></tr>
+<tr class="separator:a76f3b13ace041809e5538f25e785d46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbea7a04c3cde5607f491183b0f1fff9" id="r_adbea7a04c3cde5607f491183b0f1fff9"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#adbea7a04c3cde5607f491183b0f1fff9">_internal_cid</a> () const</td></tr>
+<tr class="separator:adbea7a04c3cde5607f491183b0f1fff9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4db8f7ef59310f07beed87eb5e45d44" id="r_ad4db8f7ef59310f07beed87eb5e45d44"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ad4db8f7ef59310f07beed87eb5e45d44">_internal_set_cid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:ad4db8f7ef59310f07beed87eb5e45d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bf7158ecf4656511de6d4bb580568a" id="r_a08bf7158ecf4656511de6d4bb580568a"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a08bf7158ecf4656511de6d4bb580568a">_internal_mutable_cid</a> ()</td></tr>
+<tr class="separator:a08bf7158ecf4656511de6d4bb580568a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf42d220a03f6136d059aae9397ae7d2" id="r_acf42d220a03f6136d059aae9397ae7d2"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#acf42d220a03f6136d059aae9397ae7d2">_internal_queue_name</a> () const</td></tr>
+<tr class="separator:acf42d220a03f6136d059aae9397ae7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66aae1130e0d98f91d405da8f3a94d68" id="r_a66aae1130e0d98f91d405da8f3a94d68"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a66aae1130e0d98f91d405da8f3a94d68">_internal_set_queue_name</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a66aae1130e0d98f91d405da8f3a94d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8b6315f2acb0ae7dbee8cb13864623" id="r_acc8b6315f2acb0ae7dbee8cb13864623"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#acc8b6315f2acb0ae7dbee8cb13864623">_internal_mutable_queue_name</a> ()</td></tr>
+<tr class="separator:acc8b6315f2acb0ae7dbee8cb13864623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec7fb6adc6a10acdce212f4776297f4" id="r_abec7fb6adc6a10acdce212f4776297f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#abec7fb6adc6a10acdce212f4776297f4">_internal_exclusive</a> () const</td></tr>
+<tr class="separator:abec7fb6adc6a10acdce212f4776297f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae34aca79f231d59ab2faf3715cdf6745" id="r_ae34aca79f231d59ab2faf3715cdf6745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ae34aca79f231d59ab2faf3715cdf6745">_internal_set_exclusive</a> (bool value)</td></tr>
+<tr class="separator:ae34aca79f231d59ab2faf3715cdf6745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7833becf2046b8bc66b837dfcc1fc0a2" id="r_a7833becf2046b8bc66b837dfcc1fc0a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7833becf2046b8bc66b837dfcc1fc0a2">_internal_durable</a> () const</td></tr>
+<tr class="separator:a7833becf2046b8bc66b837dfcc1fc0a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13ef90418b1e9e5da3a908824c984d1b" id="r_a13ef90418b1e9e5da3a908824c984d1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a13ef90418b1e9e5da3a908824c984d1b">_internal_set_durable</a> (bool value)</td></tr>
+<tr class="separator:a13ef90418b1e9e5da3a908824c984d1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefbc2f47a5ab323212af3d0cbecf8caf" id="r_aefbc2f47a5ab323212af3d0cbecf8caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#aefbc2f47a5ab323212af3d0cbecf8caf">_internal_auto_delete</a> () const</td></tr>
+<tr class="separator:aefbc2f47a5ab323212af3d0cbecf8caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7293ab5b2aab7f88f4bf13faf4dd1c7f" id="r_a7293ab5b2aab7f88f4bf13faf4dd1c7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7293ab5b2aab7f88f4bf13faf4dd1c7f">_internal_set_auto_delete</a> (bool value)</td></tr>
+<tr class="separator:a7293ab5b2aab7f88f4bf13faf4dd1c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a6bbd5f4eb14acc0b68407024e4b20e4e" id="r_a6bbd5f4eb14acc0b68407024e4b20e4e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6bbd5f4eb14acc0b68407024e4b20e4e">MergeImpl</a> (::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</td></tr>
+<tr class="separator:a6bbd5f4eb14acc0b68407024e4b20e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4fc2bff4e3baf74060cba2bf392d96" id="r_a2c4fc2bff4e3baf74060cba2bf392d96"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::StringPiece&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a2c4fc2bff4e3baf74060cba2bf392d96">FullMessageName</a> ()</td></tr>
+<tr class="separator:a2c4fc2bff4e3baf74060cba2bf392d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fce57878c399f57889a6d02fa8af6cb" id="r_a8fce57878c399f57889a6d02fa8af6cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a8fce57878c399f57889a6d02fa8af6cb">ArenaDtor</a> (void *object)</td></tr>
+<tr class="separator:a8fce57878c399f57889a6d02fa8af6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a89364b46c461657706efc6fc4fcc9eff" id="r_a89364b46c461657706efc6fc4fcc9eff"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83b4ec3b120d14d750e1d479acfdd15" id="r_ab83b4ec3b120d14d750e1d479acfdd15"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html">Impl_</a>&#160;&#160;&#160;<a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a0f9f135b7b0990179f09c074e0d3495a">_impl_</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ab83b4ec3b120d14d750e1d479acfdd15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89364b46c461657706efc6fc4fcc9eff" id="r_a89364b46c461657706efc6fc4fcc9eff"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a89364b46c461657706efc6fc4fcc9eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a9b35d94da3444084fc3673b7717b6cfe" id="r_a9b35d94da3444084fc3673b7717b6cfe"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a9b35d94da3444084fc3673b7717b6cfe">::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</a></td></tr>
+<tr class="separator:a9b35d94da3444084fc3673b7717b6cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36" id="r_ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab618dbbac4a8d749da0d85c32932df36">::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</a></td></tr>
+<tr class="separator:ab618dbbac4a8d749da0d85c32932df36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf24c46a593886b66728451c4e9c3d2" id="r_a6cf24c46a593886b66728451c4e9c3d2"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a6cf24c46a593886b66728451c4e9c3d2">::TableStruct_protocol_2eproto</a></td></tr>
+<tr class="separator:a6cf24c46a593886b66728451c4e9c3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528c3397ebb244de0bcc30924c03dd0a" id="r_a528c3397ebb244de0bcc30924c03dd0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a528c3397ebb244de0bcc30924c03dd0a">swap</a> (<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;a, <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;b)</td></tr>
+<tr class="separator:a528c3397ebb244de0bcc30924c03dd0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="ab7f0c438a21bb3e6785c3c0aa0bc63ac" name="ab7f0c438a21bb3e6785c3c0aa0bc63ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f0c438a21bb3e6785c3c0aa0bc63ac">&#9670;&#160;</a></span>DestructorSkippable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#ab7f0c438a21bb3e6785c3c0aa0bc63ac">XuMQ::declareQueueRequest::DestructorSkippable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7327af30baacbf19fc40adfe00f911ea" name="a7327af30baacbf19fc40adfe00f911ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7327af30baacbf19fc40adfe00f911ea">&#9670;&#160;</a></span>InternalArenaConstructable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1declare_queue_request.html#a7327af30baacbf19fc40adfe00f911ea">XuMQ::declareQueueRequest::InternalArenaConstructable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a9b6c03b5c7b52e2e1a51b203193f2f5c" name="a9b6c03b5c7b52e2e1a51b203193f2f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b6c03b5c7b52e2e1a51b203193f2f5c">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5ca16bbbce49ed64e7c8014ccf7555cef9c" name="a9b6c03b5c7b52e2e1a51b203193f2f5ca16bbbce49ed64e7c8014ccf7555cef9c"></a>kArgsFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5cab6fe638db0a7e47f2a2460a51f960f92" name="a9b6c03b5c7b52e2e1a51b203193f2f5cab6fe638db0a7e47f2a2460a51f960f92"></a>kRidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5cad8a6da5b916be4c84c56656edaf1ac13" name="a9b6c03b5c7b52e2e1a51b203193f2f5cad8a6da5b916be4c84c56656edaf1ac13"></a>kCidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5ca309193e117f5d6f1786bd89dfe9ab39a" name="a9b6c03b5c7b52e2e1a51b203193f2f5ca309193e117f5d6f1786bd89dfe9ab39a"></a>kQueueNameFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5caabf0310250cff6f919e442ef78278a1c" name="a9b6c03b5c7b52e2e1a51b203193f2f5caabf0310250cff6f919e442ef78278a1c"></a>kExclusiveFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5ca0b13bae445131f0ee5197440435673ff" name="a9b6c03b5c7b52e2e1a51b203193f2f5ca0b13bae445131f0ee5197440435673ff"></a>kDurableFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9b6c03b5c7b52e2e1a51b203193f2f5cae11105ce2da4ae6e06ec892ff06b72d4" name="a9b6c03b5c7b52e2e1a51b203193f2f5cae11105ce2da4ae6e06ec892ff06b72d4"></a>kAutoDeleteFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a8e7591a8a97a4ba05c682e147efe79a5" name="a8e7591a8a97a4ba05c682e147efe79a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7591a8a97a4ba05c682e147efe79a5">&#9670;&#160;</a></span>declareQueueRequest() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::declareQueueRequest::declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a533667bdf87c9f1cf40a17d331252bc6" name="a533667bdf87c9f1cf40a17d331252bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a533667bdf87c9f1cf40a17d331252bc6">&#9670;&#160;</a></span>~declareQueueRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::declareQueueRequest::~declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a533667bdf87c9f1cf40a17d331252bc6_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a533667bdf87c9f1cf40a17d331252bc6_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a533667bdf87c9f1cf40a17d331252bc6_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a533667bdf87c9f1cf40a17d331252bc6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,217,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a8fce57878c399f57889a6d02fa8af6cb" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="217,42,251,37,252,43,218,47"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4d56da54f44437c74501e121ca298425" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="218,68,252,72,251,77,217,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad675ca7343f6bdb0e0860210b761aa4c" name="ad675ca7343f6bdb0e0860210b761aa4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad675ca7343f6bdb0e0860210b761aa4c">&#9670;&#160;</a></span>declareQueueRequest() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_CONSTEXPR XuMQ::declareQueueRequest::declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0de18f051379c27d002ee8adeabd9de7" name="a0de18f051379c27d002ee8adeabd9de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de18f051379c27d002ee8adeabd9de7">&#9670;&#160;</a></span>declareQueueRequest() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::declareQueueRequest::declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a0de18f051379c27d002ee8adeabd9de7_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a0de18f051379c27d002ee8adeabd9de7_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a0de18f051379c27d002ee8adeabd9de7_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a0de18f051379c27d002ee8adeabd9de7_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,217,109"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#adbea7a04c3cde5607f491183b0f1fff9" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="193,67,276,46,277,51,194,72"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#acf42d220a03f6136d059aae9397ae7d2" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="217,87,252,87,252,92,217,92"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0727542e685393ce3a0b9ce9a4dee987" title=" " alt="" coords="265,133,477,173"/>
+<area shape="poly" title=" " alt="" coords="194,107,277,127,276,133,193,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a531730ef6e068189c2616366bb6a3f89" name="a531730ef6e068189c2616366bb6a3f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531730ef6e068189c2616366bb6a3f89">&#9670;&#160;</a></span>declareQueueRequest() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::declareQueueRequest::declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34fea211fe563eabfb345d1f7be92cf8" name="a34fea211fe563eabfb345d1f7be92cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34fea211fe563eabfb345d1f7be92cf8">&#9670;&#160;</a></span>declareQueueRequest() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::declareQueueRequest::declareQueueRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a34fea211fe563eabfb345d1f7be92cf8_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a34fea211fe563eabfb345d1f7be92cf8_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a34fea211fe563eabfb345d1f7be92cf8_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a34fea211fe563eabfb345d1f7be92cf8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,217,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a8fce57878c399f57889a6d02fa8af6cb" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="217,42,251,37,252,43,218,47"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a95fe7552eeef189f864839e2e30d1c67" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="218,68,252,72,251,77,217,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="aa52772b43714fd858eeffb21d09234e4" name="aa52772b43714fd858eeffb21d09234e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52772b43714fd858eeffb21d09234e4">&#9670;&#160;</a></span>_internal_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; &amp; XuMQ::declareQueueRequest::_internal_args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_aa52772b43714fd858eeffb21d09234e4_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_aa52772b43714fd858eeffb21d09234e4_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_aa52772b43714fd858eeffb21d09234e4_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_aa52772b43714fd858eeffb21d09234e4_icgraph">
+<area shape="rect" title=" " alt="" coords="265,37,477,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,217,41,218,36,252,40"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,75,218,79,217,74,252,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a307592472b1dceb75e929c5e2c1388ef" name="a307592472b1dceb75e929c5e2c1388ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307592472b1dceb75e929c5e2c1388ef">&#9670;&#160;</a></span>_internal_args_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int XuMQ::declareQueueRequest::_internal_args_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a307592472b1dceb75e929c5e2c1388ef_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a307592472b1dceb75e929c5e2c1388ef_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a307592472b1dceb75e929c5e2c1388ef_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a307592472b1dceb75e929c5e2c1388ef_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aefbc2f47a5ab323212af3d0cbecf8caf" name="aefbc2f47a5ab323212af3d0cbecf8caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefbc2f47a5ab323212af3d0cbecf8caf">&#9670;&#160;</a></span>_internal_auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::_internal_auto_delete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_aefbc2f47a5ab323212af3d0cbecf8caf_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_aefbc2f47a5ab323212af3d0cbecf8caf_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_aefbc2f47a5ab323212af3d0cbecf8caf_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_aefbc2f47a5ab323212af3d0cbecf8caf_icgraph">
+<area shape="rect" title=" " alt="" coords="265,37,477,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,217,41,218,36,252,40"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,75,218,79,217,74,252,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adbea7a04c3cde5607f491183b0f1fff9" name="adbea7a04c3cde5607f491183b0f1fff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbea7a04c3cde5607f491183b0f1fff9">&#9670;&#160;</a></span>_internal_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::_internal_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_adbea7a04c3cde5607f491183b0f1fff9_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_adbea7a04c3cde5607f491183b0f1fff9_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_adbea7a04c3cde5607f491183b0f1fff9_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_adbea7a04c3cde5607f491183b0f1fff9_icgraph">
+<area shape="rect" title=" " alt="" coords="265,69,477,109"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="275,69,192,48,194,43,277,63"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,92,218,92,218,87,252,87"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0de18f051379c27d002ee8adeabd9de7" title=" " alt="" coords="5,133,217,173"/>
+<area shape="poly" title=" " alt="" coords="277,115,194,136,192,131,275,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7833becf2046b8bc66b837dfcc1fc0a2" name="a7833becf2046b8bc66b837dfcc1fc0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7833becf2046b8bc66b837dfcc1fc0a2">&#9670;&#160;</a></span>_internal_durable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::_internal_durable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a7833becf2046b8bc66b837dfcc1fc0a2_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a7833becf2046b8bc66b837dfcc1fc0a2_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a7833becf2046b8bc66b837dfcc1fc0a2_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a7833becf2046b8bc66b837dfcc1fc0a2_icgraph">
+<area shape="rect" title=" " alt="" coords="265,37,477,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,217,41,218,36,252,40"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,75,218,79,217,74,252,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abec7fb6adc6a10acdce212f4776297f4" name="abec7fb6adc6a10acdce212f4776297f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec7fb6adc6a10acdce212f4776297f4">&#9670;&#160;</a></span>_internal_exclusive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::_internal_exclusive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_abec7fb6adc6a10acdce212f4776297f4_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_abec7fb6adc6a10acdce212f4776297f4_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_abec7fb6adc6a10acdce212f4776297f4_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_abec7fb6adc6a10acdce212f4776297f4_icgraph">
+<area shape="rect" title=" " alt="" coords="265,37,477,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,217,41,218,36,252,40"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,75,218,79,217,74,252,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7df6959111656023ec8fd18261fb5f32" name="a7df6959111656023ec8fd18261fb5f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df6959111656023ec8fd18261fb5f32">&#9670;&#160;</a></span>_internal_mutable_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; * XuMQ::declareQueueRequest::_internal_mutable_args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08bf7158ecf4656511de6d4bb580568a" name="a08bf7158ecf4656511de6d4bb580568a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bf7158ecf4656511de6d4bb580568a">&#9670;&#160;</a></span>_internal_mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::_internal_mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a08bf7158ecf4656511de6d4bb580568a_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a08bf7158ecf4656511de6d4bb580568a_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a08bf7158ecf4656511de6d4bb580568a_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a08bf7158ecf4656511de6d4bb580568a_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#addccfb2d1668bc29713e48c2ed360f77" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc8b6315f2acb0ae7dbee8cb13864623" name="acc8b6315f2acb0ae7dbee8cb13864623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8b6315f2acb0ae7dbee8cb13864623">&#9670;&#160;</a></span>_internal_mutable_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::_internal_mutable_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_acc8b6315f2acb0ae7dbee8cb13864623_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_acc8b6315f2acb0ae7dbee8cb13864623_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_acc8b6315f2acb0ae7dbee8cb13864623_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_acc8b6315f2acb0ae7dbee8cb13864623_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,504,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#addccfb2d1668bc29713e48c2ed360f77" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76f3b13ace041809e5538f25e785d46e" name="a76f3b13ace041809e5538f25e785d46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f3b13ace041809e5538f25e785d46e">&#9670;&#160;</a></span>_internal_mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::_internal_mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a76f3b13ace041809e5538f25e785d46e_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a76f3b13ace041809e5538f25e785d46e_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a76f3b13ace041809e5538f25e785d46e_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a76f3b13ace041809e5538f25e785d46e_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#addccfb2d1668bc29713e48c2ed360f77" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf42d220a03f6136d059aae9397ae7d2" name="acf42d220a03f6136d059aae9397ae7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf42d220a03f6136d059aae9397ae7d2">&#9670;&#160;</a></span>_internal_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::_internal_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_acf42d220a03f6136d059aae9397ae7d2_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_acf42d220a03f6136d059aae9397ae7d2_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_acf42d220a03f6136d059aae9397ae7d2_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_acf42d220a03f6136d059aae9397ae7d2_icgraph">
+<area shape="rect" title=" " alt="" coords="265,69,477,109"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="275,69,192,48,194,43,277,63"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,92,218,92,218,87,252,87"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0de18f051379c27d002ee8adeabd9de7" title=" " alt="" coords="5,133,217,173"/>
+<area shape="poly" title=" " alt="" coords="277,115,194,136,192,131,275,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0727542e685393ce3a0b9ce9a4dee987" name="a0727542e685393ce3a0b9ce9a4dee987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0727542e685393ce3a0b9ce9a4dee987">&#9670;&#160;</a></span>_internal_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::_internal_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a0727542e685393ce3a0b9ce9a4dee987_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a0727542e685393ce3a0b9ce9a4dee987_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a0727542e685393ce3a0b9ce9a4dee987_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a0727542e685393ce3a0b9ce9a4dee987_icgraph">
+<area shape="rect" title=" " alt="" coords="265,69,477,109"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0540da4166ffe12337bca77619fe2dc4" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="275,69,192,48,194,43,277,63"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a4f9e8de8b9cdfc1154786a8e3b971a69" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,92,218,92,218,87,252,87"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0de18f051379c27d002ee8adeabd9de7" title=" " alt="" coords="5,133,217,173"/>
+<area shape="poly" title=" " alt="" coords="277,115,194,136,192,131,275,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7293ab5b2aab7f88f4bf13faf4dd1c7f" name="a7293ab5b2aab7f88f4bf13faf4dd1c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7293ab5b2aab7f88f4bf13faf4dd1c7f">&#9670;&#160;</a></span>_internal_set_auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_auto_delete </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4db8f7ef59310f07beed87eb5e45d44" name="ad4db8f7ef59310f07beed87eb5e45d44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4db8f7ef59310f07beed87eb5e45d44">&#9670;&#160;</a></span>_internal_set_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_cid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13ef90418b1e9e5da3a908824c984d1b" name="a13ef90418b1e9e5da3a908824c984d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ef90418b1e9e5da3a908824c984d1b">&#9670;&#160;</a></span>_internal_set_durable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_durable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae34aca79f231d59ab2faf3715cdf6745" name="ae34aca79f231d59ab2faf3715cdf6745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae34aca79f231d59ab2faf3715cdf6745">&#9670;&#160;</a></span>_internal_set_exclusive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_exclusive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66aae1130e0d98f91d405da8f3a94d68" name="a66aae1130e0d98f91d405da8f3a94d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66aae1130e0d98f91d405da8f3a94d68">&#9670;&#160;</a></span>_internal_set_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0eeb22f19cf703e9cf0229fd44d08a10" name="a0eeb22f19cf703e9cf0229fd44d08a10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eeb22f19cf703e9cf0229fd44d08a10">&#9670;&#160;</a></span>_internal_set_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::_internal_set_rid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addccfb2d1668bc29713e48c2ed360f77" name="addccfb2d1668bc29713e48c2ed360f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addccfb2d1668bc29713e48c2ed360f77">&#9670;&#160;</a></span>_InternalParse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * XuMQ::declareQueueRequest::_InternalParse </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ParseContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_addccfb2d1668bc29713e48c2ed360f77_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_addccfb2d1668bc29713e48c2ed360f77_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_addccfb2d1668bc29713e48c2ed360f77_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_addccfb2d1668bc29713e48c2ed360f77_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,217,109"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a08bf7158ecf4656511de6d4bb580568a" title=" " alt="" coords="279,5,491,45"/>
+<area shape="poly" title=" " alt="" coords="197,67,285,46,286,51,198,72"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#acc8b6315f2acb0ae7dbee8cb13864623" title=" " alt="" coords="265,69,504,109"/>
+<area shape="poly" title=" " alt="" coords="218,87,252,87,252,92,218,92"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a76f3b13ace041809e5538f25e785d46e" title=" " alt="" coords="279,133,491,173"/>
+<area shape="poly" title=" " alt="" coords="198,107,286,128,285,133,197,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0540da4166ffe12337bca77619fe2dc4" name="a0540da4166ffe12337bca77619fe2dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0540da4166ffe12337bca77619fe2dc4">&#9670;&#160;</a></span>_InternalSerialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * XuMQ::declareQueueRequest::_InternalSerialize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a0540da4166ffe12337bca77619fe2dc4_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a0540da4166ffe12337bca77619fe2dc4_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a0540da4166ffe12337bca77619fe2dc4_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a0540da4166ffe12337bca77619fe2dc4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,197,217,237"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#aa52772b43714fd858eeffb21d09234e4" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="125,195,180,127,220,88,264,55,276,49,278,53,267,60,223,92,184,130,129,199"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#aefbc2f47a5ab323212af3d0cbecf8caf" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="138,195,195,157,264,119,281,112,283,117,266,124,197,162,141,200"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#adbea7a04c3cde5607f491183b0f1fff9" title=" " alt="" coords="265,133,477,173"/>
+<area shape="poly" title=" " alt="" coords="193,195,276,174,277,179,194,200"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a7833becf2046b8bc66b837dfcc1fc0a2" title=" " alt="" coords="265,197,477,237"/>
+<area shape="poly" title=" " alt="" coords="217,215,252,215,252,220,217,220"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#abec7fb6adc6a10acdce212f4776297f4" title=" " alt="" coords="265,261,477,301"/>
+<area shape="poly" title=" " alt="" coords="194,235,277,255,276,261,193,240"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#acf42d220a03f6136d059aae9397ae7d2" title=" " alt="" coords="265,325,477,365"/>
+<area shape="poly" title=" " alt="" coords="141,235,197,273,266,311,283,318,281,323,264,316,195,278,138,240"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0727542e685393ce3a0b9ce9a4dee987" title=" " alt="" coords="265,389,477,429"/>
+<area shape="poly" title=" " alt="" coords="129,236,184,304,223,342,267,375,278,381,276,386,264,380,220,346,180,308,125,239"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8fce57878c399f57889a6d02fa8af6cb" name="a8fce57878c399f57889a6d02fa8af6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fce57878c399f57889a6d02fa8af6cb">&#9670;&#160;</a></span>ArenaDtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::ArenaDtor </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a8fce57878c399f57889a6d02fa8af6cb_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a8fce57878c399f57889a6d02fa8af6cb_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a8fce57878c399f57889a6d02fa8af6cb_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a8fce57878c399f57889a6d02fa8af6cb_icgraph">
+<area shape="rect" title=" " alt="" coords="265,37,477,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a34fea211fe563eabfb345d1f7be92cf8" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,45,217,41,218,36,252,40"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a533667bdf87c9f1cf40a17d331252bc6" title=" " alt="" coords="5,69,217,109"/>
+<area shape="poly" title=" " alt="" coords="252,75,218,79,217,74,252,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73744ecfa6d6440d442421afd70338cf" name="a73744ecfa6d6440d442421afd70338cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73744ecfa6d6440d442421afd70338cf">&#9670;&#160;</a></span>args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; &amp; XuMQ::declareQueueRequest::args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a1ab79778b84f7eda105926c1e33a83" name="a0a1ab79778b84f7eda105926c1e33a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a1ab79778b84f7eda105926c1e33a83">&#9670;&#160;</a></span>args_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int XuMQ::declareQueueRequest::args_size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fb221b139e466b8638f0bf11bc37917" name="a1fb221b139e466b8638f0bf11bc37917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb221b139e466b8638f0bf11bc37917">&#9670;&#160;</a></span>auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::auto_delete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f9e8de8b9cdfc1154786a8e3b971a69" name="a4f9e8de8b9cdfc1154786a8e3b971a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f9e8de8b9cdfc1154786a8e3b971a69">&#9670;&#160;</a></span>ByteSizeLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::declareQueueRequest::ByteSizeLong </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a4f9e8de8b9cdfc1154786a8e3b971a69_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a4f9e8de8b9cdfc1154786a8e3b971a69_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a4f9e8de8b9cdfc1154786a8e3b971a69_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a4f9e8de8b9cdfc1154786a8e3b971a69_cgraph">
+<area shape="rect" title=" " alt="" coords="5,229,217,269"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#aa52772b43714fd858eeffb21d09234e4" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="121,228,143,191,175,144,215,96,264,55,274,49,277,54,267,59,219,100,179,148,147,194,125,231"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a307592472b1dceb75e929c5e2c1388ef" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="130,227,187,174,224,144,264,119,278,112,281,117,267,124,227,149,190,178,133,231"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#aefbc2f47a5ab323212af3d0cbecf8caf" title=" " alt="" coords="265,133,477,173"/>
+<area shape="poly" title=" " alt="" coords="157,227,264,183,287,175,289,180,266,188,159,232"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#adbea7a04c3cde5607f491183b0f1fff9" title=" " alt="" coords="265,197,477,237"/>
+<area shape="poly" title=" " alt="" coords="217,234,251,229,252,235,218,239"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a7833becf2046b8bc66b837dfcc1fc0a2" title=" " alt="" coords="265,261,477,301"/>
+<area shape="poly" title=" " alt="" coords="218,260,252,264,251,269,217,265"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#abec7fb6adc6a10acdce212f4776297f4" title=" " alt="" coords="265,325,477,365"/>
+<area shape="poly" title=" " alt="" coords="159,267,266,311,289,319,287,324,264,316,157,272"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#acf42d220a03f6136d059aae9397ae7d2" title=" " alt="" coords="265,389,477,429"/>
+<area shape="poly" title=" " alt="" coords="133,268,190,321,227,350,267,375,281,382,278,387,264,380,224,354,187,325,130,272"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a0727542e685393ce3a0b9ce9a4dee987" title=" " alt="" coords="265,453,477,493"/>
+<area shape="poly" title=" " alt="" coords="125,268,147,305,179,351,219,398,267,439,277,445,274,450,264,443,215,402,175,354,143,308,121,271"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71e84ad90b7b91b3b9a089c2032f914a" name="a71e84ad90b7b91b3b9a089c2032f914a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e84ad90b7b91b3b9a089c2032f914a">&#9670;&#160;</a></span>cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0184d108aaf16c2b06f3cae47fce8d6" name="ae0184d108aaf16c2b06f3cae47fce8d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0184d108aaf16c2b06f3cae47fce8d6">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_ae0184d108aaf16c2b06f3cae47fce8d6_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_ae0184d108aaf16c2b06f3cae47fce8d6_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_ae0184d108aaf16c2b06f3cae47fce8d6_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_ae0184d108aaf16c2b06f3cae47fce8d6_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a7b786738d50b6d8f60a2968b7f610bbe" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a42f2e2a3598b7b973ca5a12b29ddcc32" name="a42f2e2a3598b7b973ca5a12b29ddcc32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f2e2a3598b7b973ca5a12b29ddcc32">&#9670;&#160;</a></span>clear_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac1b3518cded24a56a9e364d708e0115" name="aac1b3518cded24a56a9e364d708e0115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1b3518cded24a56a9e364d708e0115">&#9670;&#160;</a></span>clear_auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_auto_delete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72f34ddfd8be8f6b081547c8d840175f" name="a72f34ddfd8be8f6b081547c8d840175f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f34ddfd8be8f6b081547c8d840175f">&#9670;&#160;</a></span>clear_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a022bfece5e2e15c34d6b3df4d5ecad6d" name="a022bfece5e2e15c34d6b3df4d5ecad6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022bfece5e2e15c34d6b3df4d5ecad6d">&#9670;&#160;</a></span>clear_durable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_durable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22681d0ca112c0619520ffc91282536" name="ab22681d0ca112c0619520ffc91282536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22681d0ca112c0619520ffc91282536">&#9670;&#160;</a></span>clear_exclusive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_exclusive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fc4f8ecc03c8afcd42d361498871103" name="a6fc4f8ecc03c8afcd42d361498871103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc4f8ecc03c8afcd42d361498871103">&#9670;&#160;</a></span>clear_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6285a26d6f830fd4b1a4d6f8c9aa6430" name="a6285a26d6f830fd4b1a4d6f8c9aa6430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6285a26d6f830fd4b1a4d6f8c9aa6430">&#9670;&#160;</a></span>clear_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::clear_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b786738d50b6d8f60a2968b7f610bbe" name="a7b786738d50b6d8f60a2968b7f610bbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b786738d50b6d8f60a2968b7f610bbe">&#9670;&#160;</a></span>CopyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a7b786738d50b6d8f60a2968b7f610bbe_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a7b786738d50b6d8f60a2968b7f610bbe_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a7b786738d50b6d8f60a2968b7f610bbe_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a7b786738d50b6d8f60a2968b7f610bbe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,217,77"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#ae0184d108aaf16c2b06f3cae47fce8d6" title=" " alt="" coords="265,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="217,42,251,37,252,43,218,47"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a7ce568d96e0aab40324ff52ea4e46246" title=" " alt="" coords="265,69,477,109"/>
+<area shape="poly" title=" " alt="" coords="218,68,252,72,251,77,217,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39c8ec32a9bedc9cad8c180c4a1ae397" name="a39c8ec32a9bedc9cad8c180c4a1ae397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c8ec32a9bedc9cad8c180c4a1ae397">&#9670;&#160;</a></span>default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp; XuMQ::declareQueueRequest::default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9c9e80b0d9bac6e8d570afaf9f91c28" name="af9c9e80b0d9bac6e8d570afaf9f91c28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c9e80b0d9bac6e8d570afaf9f91c28">&#9670;&#160;</a></span>descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::declareQueueRequest::descriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af67b3d8e53f1588e0f04152d383ebae4" name="af67b3d8e53f1588e0f04152d383ebae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af67b3d8e53f1588e0f04152d383ebae4">&#9670;&#160;</a></span>durable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::durable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c2e7e7fba6c8aeaf924b48fe27968d8" name="a8c2e7e7fba6c8aeaf924b48fe27968d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c2e7e7fba6c8aeaf924b48fe27968d8">&#9670;&#160;</a></span>exclusive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::exclusive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c4fc2bff4e3baf74060cba2bf392d96" name="a2c4fc2bff4e3baf74060cba2bf392d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4fc2bff4e3baf74060cba2bf392d96">&#9670;&#160;</a></span>FullMessageName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::PROTOBUF_NAMESPACE_ID::StringPiece XuMQ::declareQueueRequest::FullMessageName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8455762358b135bc3d0d7156636a1705" name="a8455762358b135bc3d0d7156636a1705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8455762358b135bc3d0d7156636a1705">&#9670;&#160;</a></span>GetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int XuMQ::declareQueueRequest::GetCachedSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1725cccbf58d7858db5dda2700324378" name="a1725cccbf58d7858db5dda2700324378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1725cccbf58d7858db5dda2700324378">&#9670;&#160;</a></span>GetClassData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * XuMQ::declareQueueRequest::GetClassData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02f9ebb6b9cb9a81de1a518769f54927" name="a02f9ebb6b9cb9a81de1a518769f54927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02f9ebb6b9cb9a81de1a518769f54927">&#9670;&#160;</a></span>GetDescriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::declareQueueRequest::GetDescriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71ca1e2693eaf184964a95ff8c5f9757" name="a71ca1e2693eaf184964a95ff8c5f9757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ca1e2693eaf184964a95ff8c5f9757">&#9670;&#160;</a></span>GetMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_ID::Metadata XuMQ::declareQueueRequest::GetMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a71ca1e2693eaf184964a95ff8c5f9757_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a71ca1e2693eaf184964a95ff8c5f9757_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a71ca1e2693eaf184964a95ff8c5f9757_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a71ca1e2693eaf184964a95ff8c5f9757_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,217,45"/>
+<area shape="rect" href="protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066" title=" " alt="" coords="265,5,452,45"/>
+<area shape="poly" title=" " alt="" coords="217,23,251,23,251,28,217,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c2ceaa07a063983c749d6ee9037a1ee" name="a3c2ceaa07a063983c749d6ee9037a1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2ceaa07a063983c749d6ee9037a1ee">&#9670;&#160;</a></span>GetReflection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Reflection * XuMQ::declareQueueRequest::GetReflection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15a54778711930797d61b015170a4ed5" name="a15a54778711930797d61b015170a4ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a54778711930797d61b015170a4ed5">&#9670;&#160;</a></span>internal_default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> * XuMQ::declareQueueRequest::internal_default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bebf485a1a0777c0ce1d133ea516154" name="a2bebf485a1a0777c0ce1d133ea516154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bebf485a1a0777c0ce1d133ea516154">&#9670;&#160;</a></span>InternalSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::InternalSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_cgraph" id="aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,217,69"/>
+<area shape="poly" title=" " alt="" coords="72,30,69,20,76,10,90,5,111,3,136,6,149,13,147,18,134,11,111,8,91,10,79,15,75,21,77,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a2bebf485a1a0777c0ce1d133ea516154_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,217,69"/>
+<area shape="poly" title=" " alt="" coords="147,18,134,11,111,8,91,10,79,15,75,21,77,28,72,30,69,20,76,10,90,5,111,3,136,6,149,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2f9bc22a4ec988bd17d145843715246" name="ab2f9bc22a4ec988bd17d145843715246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f9bc22a4ec988bd17d145843715246">&#9670;&#160;</a></span>IsInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::declareQueueRequest::IsInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ce568d96e0aab40324ff52ea4e46246" name="a7ce568d96e0aab40324ff52ea4e46246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce568d96e0aab40324ff52ea4e46246">&#9670;&#160;</a></span>MergeFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::MergeFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a7ce568d96e0aab40324ff52ea4e46246_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a7ce568d96e0aab40324ff52ea4e46246_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a7ce568d96e0aab40324ff52ea4e46246_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a7ce568d96e0aab40324ff52ea4e46246_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a7b786738d50b6d8f60a2968b7f610bbe" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6bbd5f4eb14acc0b68407024e4b20e4e" name="a6bbd5f4eb14acc0b68407024e4b20e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbd5f4eb14acc0b68407024e4b20e4e">&#9670;&#160;</a></span>MergeImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::MergeImpl </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>to_msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>from_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b59d60d68a98d51d5848b7b9ba72cea" name="a2b59d60d68a98d51d5848b7b9ba72cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b59d60d68a98d51d5848b7b9ba72cea">&#9670;&#160;</a></span>mutable_args()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_ID::Map&lt; std::string, std::string &gt; * XuMQ::declareQueueRequest::mutable_args </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3083f92aa346fc1d04aee0fa8e2d2ac2" name="a3083f92aa346fc1d04aee0fa8e2d2ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3083f92aa346fc1d04aee0fa8e2d2ac2">&#9670;&#160;</a></span>mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a772d04dedcf3637346ee3af09ecb8ac2" name="a772d04dedcf3637346ee3af09ecb8ac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772d04dedcf3637346ee3af09ecb8ac2">&#9670;&#160;</a></span>mutable_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::mutable_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d7f8d33774a7b49e6d39db5075f11a2" name="a9d7f8d33774a7b49e6d39db5075f11a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7f8d33774a7b49e6d39db5075f11a2">&#9670;&#160;</a></span>mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a084d4578ee84d6f229fca739c8c0563f" name="a084d4578ee84d6f229fca739c8c0563f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a084d4578ee84d6f229fca739c8c0563f">&#9670;&#160;</a></span>New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> * XuMQ::declareQueueRequest::New </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em> = <code>nullptr</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8b499435adf321616bf720df7de82c8" name="ae8b499435adf321616bf720df7de82c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b499435adf321616bf720df7de82c8">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp; XuMQ::declareQueueRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6237e369b8e3dafbf3cd7daf17fafe73" name="a6237e369b8e3dafbf3cd7daf17fafe73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6237e369b8e3dafbf3cd7daf17fafe73">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp; XuMQ::declareQueueRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cd588eb4e7a1a8a40f591d04b9e21d8" name="a6cd588eb4e7a1a8a40f591d04b9e21d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cd588eb4e7a1a8a40f591d04b9e21d8">&#9670;&#160;</a></span>queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59555c0c5d8b9bc96072276cd2b52e94" name="a59555c0c5d8b9bc96072276cd2b52e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59555c0c5d8b9bc96072276cd2b52e94">&#9670;&#160;</a></span>release_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::release_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed814918df233c2be26ac6bcf8c5f785" name="aed814918df233c2be26ac6bcf8c5f785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed814918df233c2be26ac6bcf8c5f785">&#9670;&#160;</a></span>release_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::release_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52e313c73d61ab6ef7a670219567bb93" name="a52e313c73d61ab6ef7a670219567bb93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e313c73d61ab6ef7a670219567bb93">&#9670;&#160;</a></span>release_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::declareQueueRequest::release_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa00a3a8186d7756ad82e85e9fb595784" name="aa00a3a8186d7756ad82e85e9fb595784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa00a3a8186d7756ad82e85e9fb595784">&#9670;&#160;</a></span>rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::declareQueueRequest::rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58bf28ad3a6a8577d36ba53898f6bc1e" name="a58bf28ad3a6a8577d36ba53898f6bc1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58bf28ad3a6a8577d36ba53898f6bc1e">&#9670;&#160;</a></span>set_allocated_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_allocated_cid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>cid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbd895e39d1d7a2eedfdbc08f8cc6562" name="abbd895e39d1d7a2eedfdbc08f8cc6562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd895e39d1d7a2eedfdbc08f8cc6562">&#9670;&#160;</a></span>set_allocated_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_allocated_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>queue_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88b2726c78eda4b978d835192054b1b2" name="a88b2726c78eda4b978d835192054b1b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b2726c78eda4b978d835192054b1b2">&#9670;&#160;</a></span>set_allocated_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_allocated_rid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>rid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ac6a56d90206745f98bdb068c2f22f5" name="a9ac6a56d90206745f98bdb068c2f22f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac6a56d90206745f98bdb068c2f22f5">&#9670;&#160;</a></span>set_auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_auto_delete </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a529bffec5c30c1f76f1aafb09edaf636" name="a529bffec5c30c1f76f1aafb09edaf636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529bffec5c30c1f76f1aafb09edaf636">&#9670;&#160;</a></span>set_cid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37d7700c39a21dd29d225b4c7acdd7b9" name="a37d7700c39a21dd29d225b4c7acdd7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d7700c39a21dd29d225b4c7acdd7b9">&#9670;&#160;</a></span>set_cid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::declareQueueRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aa18d92463b329d4f857325e5b85fae" name="a7aa18d92463b329d4f857325e5b85fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa18d92463b329d4f857325e5b85fae">&#9670;&#160;</a></span>set_durable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_durable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bb5e483afefad81306a9034e7f0bd8d" name="a7bb5e483afefad81306a9034e7f0bd8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb5e483afefad81306a9034e7f0bd8d">&#9670;&#160;</a></span>set_exclusive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_exclusive </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01f61b140f799a012f8ebfc69dd72a13" name="a01f61b140f799a012f8ebfc69dd72a13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f61b140f799a012f8ebfc69dd72a13">&#9670;&#160;</a></span>set_queue_name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace4d5ab7cc6d1edc987df6c68bfd7053" name="ace4d5ab7cc6d1edc987df6c68bfd7053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace4d5ab7cc6d1edc987df6c68bfd7053">&#9670;&#160;</a></span>set_queue_name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::declareQueueRequest::set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a871c09f84237d60c8ed844dc01c35a22" name="a871c09f84237d60c8ed844dc01c35a22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871c09f84237d60c8ed844dc01c35a22">&#9670;&#160;</a></span>set_rid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab191706f2cf46e1f55846a7da98ff739" name="ab191706f2cf46e1f55846a7da98ff739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab191706f2cf46e1f55846a7da98ff739">&#9670;&#160;</a></span>set_rid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::declareQueueRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ad9235302fad094a046c4200a6eedcf" name="a1ad9235302fad094a046c4200a6eedcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad9235302fad094a046c4200a6eedcf">&#9670;&#160;</a></span>SetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::SetCachedSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95fe7552eeef189f864839e2e30d1c67" name="a95fe7552eeef189f864839e2e30d1c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95fe7552eeef189f864839e2e30d1c67">&#9670;&#160;</a></span>SharedCtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::SharedCtor </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a95fe7552eeef189f864839e2e30d1c67_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a95fe7552eeef189f864839e2e30d1c67_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a95fe7552eeef189f864839e2e30d1c67_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a95fe7552eeef189f864839e2e30d1c67_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a34fea211fe563eabfb345d1f7be92cf8" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d56da54f44437c74501e121ca298425" name="a4d56da54f44437c74501e121ca298425"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d56da54f44437c74501e121ca298425">&#9670;&#160;</a></span>SharedDtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::SharedDtor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1declare_queue_request_a4d56da54f44437c74501e121ca298425_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1declare_queue_request_a4d56da54f44437c74501e121ca298425_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1declare_queue_request_a4d56da54f44437c74501e121ca298425_icgraph" id="aclass_xu_m_q_1_1declare_queue_request_a4d56da54f44437c74501e121ca298425_icgraph">
+<area shape="rect" title=" " alt="" coords="265,5,477,45"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a533667bdf87c9f1cf40a17d331252bc6" title=" " alt="" coords="5,5,217,45"/>
+<area shape="poly" title=" " alt="" coords="252,28,218,28,218,23,252,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeee3cdeff09c37e83763764a1949640b" name="aeee3cdeff09c37e83763764a1949640b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee3cdeff09c37e83763764a1949640b">&#9670;&#160;</a></span>Swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a567e004a9cd607da60629267af820e3c" name="a567e004a9cd607da60629267af820e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567e004a9cd607da60629267af820e3c">&#9670;&#160;</a></span>UnsafeArenaSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::declareQueueRequest::UnsafeArenaSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="ab618dbbac4a8d749da0d85c32932df36" name="ab618dbbac4a8d749da0d85c32932df36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab618dbbac4a8d749da0d85c32932df36">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b35d94da3444084fc3673b7717b6cfe" name="a9b35d94da3444084fc3673b7717b6cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b35d94da3444084fc3673b7717b6cfe">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cf24c46a593886b66728451c4e9c3d2" name="a6cf24c46a593886b66728451c4e9c3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf24c46a593886b66728451c4e9c3d2">&#9670;&#160;</a></span>::TableStruct_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="struct_table_struct__protocol__2eproto.html">::TableStruct_protocol_2eproto</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a528c3397ebb244de0bcc30924c03dd0a" name="a528c3397ebb244de0bcc30924c03dd0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528c3397ebb244de0bcc30924c03dd0a">&#9670;&#160;</a></span>swap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a89364b46c461657706efc6fc4fcc9eff" name="a89364b46c461657706efc6fc4fcc9eff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89364b46c461657706efc6fc4fcc9eff">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">XuMQ::declareQueueRequest</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08245d4fd5d93cc4797513a2b8bc13c4" name="a08245d4fd5d93cc4797513a2b8bc13c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08245d4fd5d93cc4797513a2b8bc13c4">&#9670;&#160;</a></span>_class_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData XuMQ::declareQueueRequest::_class_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,</div>
+<div class="line">    <a class="code hl_function" href="class_xu_m_q_1_1declare_queue_request.html#a6bbd5f4eb14acc0b68407024e4b20e4e">declareQueueRequest::MergeImpl</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1declare_queue_request_html_a6bbd5f4eb14acc0b68407024e4b20e4e"><div class="ttname"><a href="class_xu_m_q_1_1declare_queue_request.html#a6bbd5f4eb14acc0b68407024e4b20e4e">XuMQ::declareQueueRequest::MergeImpl</a></div><div class="ttdeci">static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:2217</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f9f135b7b0990179f09c074e0d3495a" name="a0f9f135b7b0990179f09c074e0d3495a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9f135b7b0990179f09c074e0d3495a">&#9670;&#160;</a></span>_impl_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html">Impl_</a> XuMQ::declareQueueRequest::_impl_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad965476715d872ed655ecd49e696be06" name="ad965476715d872ed655ecd49e696be06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad965476715d872ed655ecd49e696be06">&#9670;&#160;</a></span>kIndexInFileMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int XuMQ::declareQueueRequest::kIndexInFileMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    6</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">declareQueueRequest</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

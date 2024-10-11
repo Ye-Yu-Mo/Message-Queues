@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['uuidhelper_0',['uuidhelper',['../class_u_u_i_d_helper.html',1,'UUIDHelper'],['../class_xu_m_q_1_1_u_u_i_d_helper.html',1,'XuMQ::UUIDHelper']]]
+  ['sqlitehelper_0',['SqliteHelper',['../class_xu_m_q_1_1_sqlite_helper.html',1,'XuMQ']]],
+  ['strhelper_1',['StrHelper',['../class_xu_m_q_1_1_str_helper.html',1,'XuMQ']]]
 ];

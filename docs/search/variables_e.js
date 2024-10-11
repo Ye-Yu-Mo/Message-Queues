@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['qname_0',['qname',['../struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893',1,'XuMQ::Consumer']]]
+  ['qname_0',['qname',['../struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893',1,'XuMQ::Consumer']]],
+  ['queue_5fname_5f_1',['queue_name_',['../struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html#a189247bf6832049c82af4ed0db047e2d',1,'XuMQ::declareQueueRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1delete_queue_request_1_1_impl__.html#a78a84fdbf1dded1ab1671953ac6832fc',1,'XuMQ::deleteQueueRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1queue_bind_request_1_1_impl__.html#ab851d635c55c00afc16edfd2c9afc806',1,'XuMQ::queueBindRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1queue_un_bind_request_1_1_impl__.html#ab67511a73ef52c5fb75baff9f742b803',1,'XuMQ::queueUnBindRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1basic_ack_request_1_1_impl__.html#ad7089dbdfead075f1d4de7f0d2bf0826',1,'XuMQ::basicAckRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1basic_consume_request_1_1_impl__.html#a3a1229ee34183e65f54f83825d7b8902',1,'XuMQ::basicConsumeRequest::Impl_::queue_name_'],['../struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html#ae75f49b41a0c71a45f5655c7a897c8db',1,'XuMQ::basicCancelRequest::Impl_::queue_name_']]]
 ];

@@ -1,0 +1,1569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: common/protocol.pb.cc 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('protocol_8pb_8cc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">protocol.pb.cc 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="protocol_8pb_8h_source.html">protocol.pb.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;google/protobuf/io/coded_stream.h&gt;</code><br />
+<code>#include &lt;google/protobuf/extension_set.h&gt;</code><br />
+<code>#include &lt;google/protobuf/wire_format_lite.h&gt;</code><br />
+<code>#include &lt;google/protobuf/descriptor.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_message_reflection.h&gt;</code><br />
+<code>#include &lt;google/protobuf/reflection_ops.h&gt;</code><br />
+<code>#include &lt;google/protobuf/wire_format.h&gt;</code><br />
+<code>#include &lt;google/protobuf/port_def.inc&gt;</code><br />
+<code>#include &lt;google/protobuf/port_undef.inc&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+protocol.pb.cc 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc__incl.png" border="0" usemap="#acommon_2protocol_8pb_8cc" alt=""/></div>
+<map name="acommon_2protocol_8pb_8cc" id="acommon_2protocol_8pb_8cc">
+<area shape="rect" title=" " alt="" coords="1751,5,1926,31"/>
+<area shape="rect" href="protocol_8pb_8h.html" title=" " alt="" coords="1223,86,1329,111"/>
+<area shape="poly" title=" " alt="" coords="1757,33,1343,91,1343,85,1756,28"/>
+<area shape="rect" title=" " alt="" coords="349,255,504,295"/>
+<area shape="poly" title=" " alt="" coords="1751,27,1447,45,1048,76,852,96,682,118,552,143,508,156,480,169,464,184,452,203,436,242,431,240,447,200,460,181,477,164,506,151,551,137,681,113,852,90,1047,71,1447,40,1751,21"/>
+<area shape="rect" title=" " alt="" coords="5,255,160,295"/>
+<area shape="poly" title=" " alt="" coords="1751,22,1488,24,1138,32,792,50,648,64,541,81,420,117,305,163,204,211,128,250,126,246,202,206,303,158,419,112,539,76,648,58,791,45,1138,27,1488,19,1751,17"/>
+<area shape="rect" title=" " alt="" coords="184,255,325,295"/>
+<area shape="poly" title=" " alt="" coords="1751,23,1511,27,1196,36,887,53,760,66,663,81,609,96,555,115,451,160,362,209,295,249,292,245,359,204,449,155,553,110,607,91,662,76,759,61,887,48,1196,31,1511,21,1751,17"/>
+<area shape="rect" title=" " alt="" coords="2437,255,2632,295"/>
+<area shape="poly" title=" " alt="" coords="1835,32,1819,66,1805,113,1802,138,1803,162,1809,185,1822,205,1834,213,1855,219,1918,230,2097,243,2423,252,2423,258,2097,248,1917,236,1853,225,1832,217,1818,209,1804,187,1797,163,1796,137,1800,112,1814,64,1830,30"/>
+<area shape="rect" title=" " alt="" coords="2657,255,2850,295"/>
+<area shape="poly" title=" " alt="" coords="1841,31,1844,73,1852,97,1865,116,2644,252,2643,257,1863,121,1847,99,1839,74,1835,31"/>
+<area shape="rect" title=" " alt="" coords="1876,86,1961,111"/>
+<area shape="poly" title=" " alt="" coords="1852,29,1899,74,1895,78,1849,33"/>
+<area shape="rect" title=" " alt="" coords="1985,79,2143,119"/>
+<area shape="poly" title=" " alt="" coords="1872,28,1998,72,1996,77,1871,33"/>
+<area shape="rect" title=" " alt="" coords="2167,86,2372,111"/>
+<area shape="poly" title=" " alt="" coords="1902,28,2194,81,2193,86,1901,33"/>
+<area shape="rect" title=" " alt="" coords="2397,79,2587,119"/>
+<area shape="poly" title=" " alt="" coords="1927,25,2131,45,2384,76,2383,81,2130,50,1926,30"/>
+<area shape="rect" title=" " alt="" coords="2612,79,2769,119"/>
+<area shape="poly" title=" " alt="" coords="1927,20,2221,37,2407,53,2599,76,2598,81,2407,59,2220,42,1926,25"/>
+<area shape="rect" title=" " alt="" coords="528,262,587,287"/>
+<area shape="poly" title=" " alt="" coords="1249,114,1199,137,1144,169,1123,190,1113,200,1098,209,1027,234,964,246,906,248,852,245,797,240,739,238,674,242,599,257,593,259,591,254,598,252,673,237,739,233,797,235,852,240,907,243,963,241,1025,229,1096,204,1110,196,1119,186,1141,165,1196,133,1247,109"/>
+<area shape="rect" title=" " alt="" coords="1045,262,1104,287"/>
+<area shape="poly" title=" " alt="" coords="1278,112,1272,158,1262,185,1246,208,1216,232,1186,241,1154,246,1117,257,1113,259,1111,254,1115,252,1153,241,1185,236,1213,227,1242,205,1257,182,1266,156,1273,111"/>
+<area shape="poly" title=" " alt="" coords="1222,103,1070,106,870,116,769,124,675,136,596,150,538,169,512,184,488,204,450,245,446,242,484,200,509,180,536,164,595,145,675,130,768,119,870,110,1070,101,1222,98"/>
+<area shape="poly" title=" " alt="" coords="1223,105,796,126,552,145,450,157,374,169,308,186,244,208,136,252,134,247,242,203,307,181,373,164,450,151,551,140,796,121,1222,99"/>
+<area shape="poly" title=" " alt="" coords="1222,105,846,125,634,144,546,156,481,169,430,186,381,207,298,250,295,245,378,202,428,181,479,164,546,151,633,139,846,120,1222,99"/>
+<area shape="rect" title=" " alt="" coords="1560,262,1739,287"/>
+<area shape="poly" title=" " alt="" coords="1307,109,1440,164,1517,204,1615,253,1613,258,1515,209,1438,169,1305,114"/>
+<area shape="rect" title=" " alt="" coords="1763,262,1978,287"/>
+<area shape="poly" title=" " alt="" coords="1325,109,1406,132,1497,164,1532,185,1568,204,1669,231,1796,257,1795,262,1667,236,1566,209,1530,189,1495,169,1405,137,1324,114"/>
+<area shape="rect" title=" " alt="" coords="2003,255,2197,295"/>
+<area shape="poly" title=" " alt="" coords="1330,105,1434,127,1494,144,1552,164,1571,175,1585,185,1599,195,1618,204,1671,221,1717,231,1799,239,1883,242,1989,252,1989,257,1882,248,1798,245,1717,236,1670,226,1616,209,1596,200,1582,189,1569,179,1550,169,1492,149,1433,132,1329,111"/>
+<area shape="rect" title=" " alt="" coords="2221,255,2413,295"/>
+<area shape="poly" title=" " alt="" coords="1330,103,1457,123,1531,140,1604,164,1623,174,1637,185,1650,195,1669,204,1747,226,1814,239,1874,244,1932,245,2053,243,2125,245,2208,252,2207,257,2124,250,2053,248,1932,250,1874,249,1813,244,1745,231,1667,209,1647,200,1633,189,1620,179,1602,169,1530,145,1456,128,1329,108"/>
+<area shape="poly" title=" " alt="" coords="1330,100,1397,107,1479,118,1568,137,1656,164,1675,174,1688,185,1701,195,1720,204,1784,219,1866,229,2060,239,2260,244,2423,252,2423,257,2260,249,2060,244,1865,234,1783,224,1718,209,1698,200,1685,189,1672,179,1654,169,1567,142,1478,124,1396,112,1330,106"/>
+<area shape="rect" title=" " alt="" coords="611,262,811,287"/>
+<area shape="poly" title=" " alt="" coords="1263,114,1144,209,1098,227,1058,238,987,246,914,248,823,257,792,262,791,257,822,252,914,243,986,241,1057,233,1096,222,1141,204,1260,110"/>
+<area shape="rect" title=" " alt="" coords="835,255,1021,295"/>
+<area shape="poly" title=" " alt="" coords="1273,113,1244,159,1222,186,1195,209,1167,222,1128,235,1036,256,1034,251,1127,229,1165,217,1192,204,1218,182,1240,156,1268,110"/>
+<area shape="poly" title=" " alt="" coords="1330,103,1499,124,1602,142,1706,164,1739,174,1763,185,1788,195,1821,204,1943,225,2047,236,2140,240,2227,240,2410,238,2517,241,2643,252,2642,257,2517,247,2410,243,2227,245,2140,245,2047,241,1942,230,1819,209,1786,200,1761,190,1737,179,1705,169,1601,147,1498,129,1329,108"/>
+<area shape="rect" title=" " alt="" coords="549,174,720,199"/>
+<area shape="poly" title=" " alt="" coords="1223,108,1008,132,732,169,705,174,704,169,732,164,1007,127,1222,103"/>
+<area shape="rect" title=" " alt="" coords="745,167,903,207"/>
+<area shape="poly" title=" " alt="" coords="1223,112,917,169,916,164,1222,107"/>
+<area shape="rect" title=" " alt="" coords="927,167,1086,207"/>
+<area shape="poly" title=" " alt="" coords="1240,114,1080,165,1078,160,1239,109"/>
+<area shape="rect" title=" " alt="" coords="1347,255,1535,295"/>
+<area shape="poly" title=" " alt="" coords="1318,109,1366,130,1390,146,1410,165,1422,183,1431,202,1441,241,1435,242,1426,204,1417,185,1406,168,1386,150,1363,135,1316,114"/>
+<area shape="rect" href="msg_8pb_8h.html" title=" " alt="" coords="1313,174,1396,199"/>
+<area shape="poly" title=" " alt="" coords="1289,110,1337,162,1333,165,1285,113"/>
+<area shape="poly" title=" " alt="" coords="1313,194,599,257,593,259,591,254,598,252,1313,189"/>
+<area shape="poly" title=" " alt="" coords="1319,202,1295,209,1205,231,1117,257,1112,259,1110,254,1115,252,1204,226,1294,204,1318,197"/>
+<area shape="poly" title=" " alt="" coords="1313,194,905,224,518,257,517,252,904,219,1313,188"/>
+<area shape="poly" title=" " alt="" coords="1313,194,1097,209,839,220,636,223,433,231,314,241,174,257,173,252,314,236,433,226,636,218,839,215,1097,204,1313,189"/>
+<area shape="poly" title=" " alt="" coords="1313,194,1097,209,886,220,719,224,553,233,340,257,339,252,552,228,719,219,885,214,1097,204,1313,188"/>
+<area shape="poly" title=" " alt="" coords="1395,197,1598,256,1596,261,1394,202"/>
+<area shape="poly" title=" " alt="" coords="1396,192,1789,257,1788,262,1396,197"/>
+<area shape="poly" title=" " alt="" coords="1396,189,1643,212,1989,252,1989,257,1643,217,1396,194"/>
+<area shape="poly" title=" " alt="" coords="1397,188,1813,219,2208,252,2207,257,1813,225,1396,194"/>
+<area shape="poly" title=" " alt="" coords="1396,188,1932,220,2424,252,2423,257,1932,225,1396,193"/>
+<area shape="poly" title=" " alt="" coords="1313,196,823,257,790,262,789,257,822,252,1313,190"/>
+<area shape="poly" title=" " alt="" coords="1314,199,1036,255,1035,249,1312,194"/>
+<area shape="poly" title=" " alt="" coords="1396,187,2643,253,2643,258,1396,193"/>
+<area shape="poly" title=" " alt="" coords="1368,198,1414,243,1410,246,1364,201"/>
+<area shape="rect" title=" " alt="" coords="1128,255,1323,295"/>
+<area shape="poly" title=" " alt="" coords="1339,202,1267,249,1264,245,1336,197"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1open_channel_request_default_type_internal.html">XuMQ::openChannelRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1close_channel_request_default_type_internal.html">XuMQ::closeChannelRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html">XuMQ::declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_exchange_request_default_type_internal.html">XuMQ::declareExchangeRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1delete_exchange_request_default_type_internal.html">XuMQ::deleteExchangeRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_queue_request___args_entry___do_not_use_default_type_internal.html">XuMQ::declareQueueRequest_ArgsEntry_DoNotUseDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_queue_request_default_type_internal.html">XuMQ::declareQueueRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1delete_queue_request_default_type_internal.html">XuMQ::deleteQueueRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1queue_bind_request_default_type_internal.html">XuMQ::queueBindRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1queue_un_bind_request_default_type_internal.html">XuMQ::queueUnBindRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_publish_request_default_type_internal.html">XuMQ::basicPublishRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_ack_request_default_type_internal.html">XuMQ::basicAckRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_consume_request_default_type_internal.html">XuMQ::basicConsumeRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_cancel_request_default_type_internal.html">XuMQ::basicCancelRequestDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_consume_response_default_type_internal.html">XuMQ::basicConsumeResponseDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_response_default_type_internal.html">XuMQ::basicResponseDefaultTypeInternal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1open_channel_request_1_1___internal.html">XuMQ::openChannelRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1close_channel_request_1_1___internal.html">XuMQ::closeChannelRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_exchange_request_1_1___internal.html">XuMQ::declareExchangeRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request_1_1___internal.html">XuMQ::deleteExchangeRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request_1_1___internal.html">XuMQ::declareQueueRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_queue_request_1_1___internal.html">XuMQ::deleteQueueRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1queue_bind_request_1_1___internal.html">XuMQ::queueBindRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1queue_un_bind_request_1_1___internal.html">XuMQ::queueUnBindRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_publish_request_1_1___internal.html">XuMQ::basicPublishRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_ack_request_1_1___internal.html">XuMQ::basicAckRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_consume_request_1_1___internal.html">XuMQ::basicConsumeRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request_1_1___internal.html">XuMQ::basicCancelRequest::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_consume_response_1_1___internal.html">XuMQ::basicConsumeResponse::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_response_1_1___internal.html">XuMQ::basicResponse::_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespace_xu_m_q" id="r_namespace_xu_m_q"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a656da48cf3d2824247c83ad8d92f10" id="r_a1a656da48cf3d2824247c83ad8d92f10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a1a656da48cf3d2824247c83ad8d92f10">CHK_</a>(x)&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td></tr>
+<tr class="separator:a1a656da48cf3d2824247c83ad8d92f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:afade20bf7800779821bad96b96be93f4" id="r_afade20bf7800779821bad96b96be93f4"><td class="memItemLeft" align="right" valign="top">const uint32_t <a class="el" href="struct_table_struct__protocol__2eproto.html#a7a9a213719ff86d9b986440ea837011c">TableStruct_protocol_2eproto::offsets</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#afade20bf7800779821bad96b96be93f4">PROTOBUF_SECTION_VARIABLE</a> (protodesc_cold)</td></tr>
+<tr class="separator:afade20bf7800779821bad96b96be93f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc7ae0baa5b8535022f2c075a8b15066" id="r_adc7ae0baa5b8535022f2c075a8b15066"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_WEAKconst ::_pbi::DescriptorTable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066">descriptor_table_protocol_2eproto_getter</a> ()</td></tr>
+<tr class="separator:adc7ae0baa5b8535022f2c075a8b15066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6e1908a700ddeb4f7b008ad3d59e1a" id="r_a9c6e1908a700ddeb4f7b008ad3d59e1a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a9c6e1908a700ddeb4f7b008ad3d59e1a"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NAMESPACE_OPEN PROTOBUF_NOINLINE::XuMQ::openChannelRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a9c6e1908a700ddeb4f7b008ad3d59e1a">Arena::CreateMaybeMessage&lt; ::XuMQ::openChannelRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a9c6e1908a700ddeb4f7b008ad3d59e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83a49df0c99d09c1fa66dbc5111b939" id="r_ae83a49df0c99d09c1fa66dbc5111b939"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae83a49df0c99d09c1fa66dbc5111b939"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::closeChannelRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ae83a49df0c99d09c1fa66dbc5111b939">Arena::CreateMaybeMessage&lt; ::XuMQ::closeChannelRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:ae83a49df0c99d09c1fa66dbc5111b939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf3ad2e29e328023aa217ef117ff9a8c" id="r_abf3ad2e29e328023aa217ef117ff9a8c"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:abf3ad2e29e328023aa217ef117ff9a8c"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#abf3ad2e29e328023aa217ef117ff9a8c">Arena::CreateMaybeMessage&lt; ::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:abf3ad2e29e328023aa217ef117ff9a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3b658d7b4fc261cb010209963a7245" id="r_abd3b658d7b4fc261cb010209963a7245"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:abd3b658d7b4fc261cb010209963a7245"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::declareExchangeRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#abd3b658d7b4fc261cb010209963a7245">Arena::CreateMaybeMessage&lt; ::XuMQ::declareExchangeRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:abd3b658d7b4fc261cb010209963a7245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c6a0fead33d98872b659a1953f48cfa" id="r_a3c6a0fead33d98872b659a1953f48cfa"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a3c6a0fead33d98872b659a1953f48cfa"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::deleteExchangeRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a3c6a0fead33d98872b659a1953f48cfa">Arena::CreateMaybeMessage&lt; ::XuMQ::deleteExchangeRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a3c6a0fead33d98872b659a1953f48cfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ea640f256d38be1593b7c99714653dc" id="r_a4ea640f256d38be1593b7c99714653dc"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4ea640f256d38be1593b7c99714653dc"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a4ea640f256d38be1593b7c99714653dc">Arena::CreateMaybeMessage&lt; ::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a4ea640f256d38be1593b7c99714653dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63132104229662cd8ffc8c9f55b15b5a" id="r_a63132104229662cd8ffc8c9f55b15b5a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a63132104229662cd8ffc8c9f55b15b5a"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::declareQueueRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a63132104229662cd8ffc8c9f55b15b5a">Arena::CreateMaybeMessage&lt; ::XuMQ::declareQueueRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a63132104229662cd8ffc8c9f55b15b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae120c24e478b353e8e0b1a471980a2c0" id="r_ae120c24e478b353e8e0b1a471980a2c0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae120c24e478b353e8e0b1a471980a2c0"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::deleteQueueRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ae120c24e478b353e8e0b1a471980a2c0">Arena::CreateMaybeMessage&lt; ::XuMQ::deleteQueueRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:ae120c24e478b353e8e0b1a471980a2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d34e621dd79be990e040ff15cefe70" id="r_a94d34e621dd79be990e040ff15cefe70"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a94d34e621dd79be990e040ff15cefe70"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::queueBindRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a94d34e621dd79be990e040ff15cefe70">Arena::CreateMaybeMessage&lt; ::XuMQ::queueBindRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a94d34e621dd79be990e040ff15cefe70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb54b87256d6430a07ebbf7afe8d2a00" id="r_aeb54b87256d6430a07ebbf7afe8d2a00"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aeb54b87256d6430a07ebbf7afe8d2a00"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::queueUnBindRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#aeb54b87256d6430a07ebbf7afe8d2a00">Arena::CreateMaybeMessage&lt; ::XuMQ::queueUnBindRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:aeb54b87256d6430a07ebbf7afe8d2a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fb8f77997463f95f4aaba119a7c13ee" id="r_a7fb8f77997463f95f4aaba119a7c13ee"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a7fb8f77997463f95f4aaba119a7c13ee"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicPublishRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a7fb8f77997463f95f4aaba119a7c13ee">Arena::CreateMaybeMessage&lt; ::XuMQ::basicPublishRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a7fb8f77997463f95f4aaba119a7c13ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51592fa6d86c384523d946e9ea954bce" id="r_a51592fa6d86c384523d946e9ea954bce"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a51592fa6d86c384523d946e9ea954bce"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicAckRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a51592fa6d86c384523d946e9ea954bce">Arena::CreateMaybeMessage&lt; ::XuMQ::basicAckRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a51592fa6d86c384523d946e9ea954bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a887dc463f00ad221bbe6e2a6e3361bef" id="r_a887dc463f00ad221bbe6e2a6e3361bef"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a887dc463f00ad221bbe6e2a6e3361bef"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicConsumeRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a887dc463f00ad221bbe6e2a6e3361bef">Arena::CreateMaybeMessage&lt; ::XuMQ::basicConsumeRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a887dc463f00ad221bbe6e2a6e3361bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fa4e0045f7e6c66a4c99df3916deb6" id="r_a45fa4e0045f7e6c66a4c99df3916deb6"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a45fa4e0045f7e6c66a4c99df3916deb6"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicCancelRequest *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a45fa4e0045f7e6c66a4c99df3916deb6">Arena::CreateMaybeMessage&lt; ::XuMQ::basicCancelRequest &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a45fa4e0045f7e6c66a4c99df3916deb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3dac4ad2ab9b1dfa9c87333054105de" id="r_ad3dac4ad2ab9b1dfa9c87333054105de"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ad3dac4ad2ab9b1dfa9c87333054105de"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicConsumeResponse *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ad3dac4ad2ab9b1dfa9c87333054105de">Arena::CreateMaybeMessage&lt; ::XuMQ::basicConsumeResponse &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:ad3dac4ad2ab9b1dfa9c87333054105de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b103094abc809b3813dc09c5812245a" id="r_a0b103094abc809b3813dc09c5812245a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a0b103094abc809b3813dc09c5812245a"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NOINLINE::XuMQ::basicResponse *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a0b103094abc809b3813dc09c5812245a">Arena::CreateMaybeMessage&lt; ::XuMQ::basicResponse &gt;</a> (Arena *arena)</td></tr>
+<tr class="separator:a0b103094abc809b3813dc09c5812245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aea4c8df1396f5a29afba41df425b113d" id="r_aea4c8df1396f5a29afba41df425b113d"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1open_channel_request_default_type_internal.html">openChannelRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#aea4c8df1396f5a29afba41df425b113d">XuMQ::_openChannelRequest_default_instance_</a></td></tr>
+<tr class="separator:aea4c8df1396f5a29afba41df425b113d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db9bb1caa2e0f164ca6efaa88e50d5b" id="r_a5db9bb1caa2e0f164ca6efaa88e50d5b"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1close_channel_request_default_type_internal.html">closeChannelRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a5db9bb1caa2e0f164ca6efaa88e50d5b">XuMQ::_closeChannelRequest_default_instance_</a></td></tr>
+<tr class="separator:a5db9bb1caa2e0f164ca6efaa88e50d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae68e318f82626df220ccb95c94491c6c" id="r_ae68e318f82626df220ccb95c94491c6c"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html">declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ae68e318f82626df220ccb95c94491c6c">XuMQ::_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_</a></td></tr>
+<tr class="separator:ae68e318f82626df220ccb95c94491c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9840b1ab0545c21715dd85aee67166e" id="r_af9840b1ab0545c21715dd85aee67166e"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1declare_exchange_request_default_type_internal.html">declareExchangeRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#af9840b1ab0545c21715dd85aee67166e">XuMQ::_declareExchangeRequest_default_instance_</a></td></tr>
+<tr class="separator:af9840b1ab0545c21715dd85aee67166e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c290ce5223b77656aa17cc15ce3a8e4" id="r_a7c290ce5223b77656aa17cc15ce3a8e4"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1delete_exchange_request_default_type_internal.html">deleteExchangeRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a7c290ce5223b77656aa17cc15ce3a8e4">XuMQ::_deleteExchangeRequest_default_instance_</a></td></tr>
+<tr class="separator:a7c290ce5223b77656aa17cc15ce3a8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85b38df26a2b4c44ad6ef63267b91b67" id="r_a85b38df26a2b4c44ad6ef63267b91b67"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1declare_queue_request___args_entry___do_not_use_default_type_internal.html">declareQueueRequest_ArgsEntry_DoNotUseDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a85b38df26a2b4c44ad6ef63267b91b67">XuMQ::_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_</a></td></tr>
+<tr class="separator:a85b38df26a2b4c44ad6ef63267b91b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb3e0eedd2f55bbcffdd32c68ee543c" id="r_a7bb3e0eedd2f55bbcffdd32c68ee543c"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1declare_queue_request_default_type_internal.html">declareQueueRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a7bb3e0eedd2f55bbcffdd32c68ee543c">XuMQ::_declareQueueRequest_default_instance_</a></td></tr>
+<tr class="separator:a7bb3e0eedd2f55bbcffdd32c68ee543c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be19e975f58d0d0e1f2bae7dbe92064" id="r_a0be19e975f58d0d0e1f2bae7dbe92064"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1delete_queue_request_default_type_internal.html">deleteQueueRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a0be19e975f58d0d0e1f2bae7dbe92064">XuMQ::_deleteQueueRequest_default_instance_</a></td></tr>
+<tr class="separator:a0be19e975f58d0d0e1f2bae7dbe92064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c98f804df54fe8eba2daa161b18517" id="r_a07c98f804df54fe8eba2daa161b18517"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1queue_bind_request_default_type_internal.html">queueBindRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a07c98f804df54fe8eba2daa161b18517">XuMQ::_queueBindRequest_default_instance_</a></td></tr>
+<tr class="separator:a07c98f804df54fe8eba2daa161b18517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac551ba242e2cae3ad3639c727fb01baa" id="r_ac551ba242e2cae3ad3639c727fb01baa"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1queue_un_bind_request_default_type_internal.html">queueUnBindRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ac551ba242e2cae3ad3639c727fb01baa">XuMQ::_queueUnBindRequest_default_instance_</a></td></tr>
+<tr class="separator:ac551ba242e2cae3ad3639c727fb01baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd2c2d8162651e4958fa0b4c2580985" id="r_afdd2c2d8162651e4958fa0b4c2580985"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_publish_request_default_type_internal.html">basicPublishRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#afdd2c2d8162651e4958fa0b4c2580985">XuMQ::_basicPublishRequest_default_instance_</a></td></tr>
+<tr class="separator:afdd2c2d8162651e4958fa0b4c2580985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ee8f84e893473795c61ba34e912534" id="r_a17ee8f84e893473795c61ba34e912534"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_ack_request_default_type_internal.html">basicAckRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a17ee8f84e893473795c61ba34e912534">XuMQ::_basicAckRequest_default_instance_</a></td></tr>
+<tr class="separator:a17ee8f84e893473795c61ba34e912534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b9a2c566171a2c69353352014d7878" id="r_a03b9a2c566171a2c69353352014d7878"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_consume_request_default_type_internal.html">basicConsumeRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a03b9a2c566171a2c69353352014d7878">XuMQ::_basicConsumeRequest_default_instance_</a></td></tr>
+<tr class="separator:a03b9a2c566171a2c69353352014d7878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3efc9bb1ec3628777ef3af3db0602c" id="r_acf3efc9bb1ec3628777ef3af3db0602c"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_cancel_request_default_type_internal.html">basicCancelRequestDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#acf3efc9bb1ec3628777ef3af3db0602c">XuMQ::_basicCancelRequest_default_instance_</a></td></tr>
+<tr class="separator:acf3efc9bb1ec3628777ef3af3db0602c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a091f30f5a9d3eea00b8e2f44e4a31666" id="r_a091f30f5a9d3eea00b8e2f44e4a31666"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_consume_response_default_type_internal.html">basicConsumeResponseDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a091f30f5a9d3eea00b8e2f44e4a31666">XuMQ::_basicConsumeResponse_default_instance_</a></td></tr>
+<tr class="separator:a091f30f5a9d3eea00b8e2f44e4a31666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006d12401b7aa8bc236eca515e4dccee" id="r_a006d12401b7aa8bc236eca515e4dccee"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 <a class="el" href="struct_xu_m_q_1_1basic_response_default_type_internal.html">basicResponseDefaultTypeInternal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a006d12401b7aa8bc236eca515e4dccee">XuMQ::_basicResponse_default_instance_</a></td></tr>
+<tr class="separator:a006d12401b7aa8bc236eca515e4dccee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a49538b49438afc044f6039f1f21b68" id="r_a8a49538b49438afc044f6039f1f21b68"><td class="memItemLeft" align="right" valign="top">::_pb::Metadata&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a8a49538b49438afc044f6039f1f21b68">file_level_metadata_protocol_2eproto</a> [16]</td></tr>
+<tr class="separator:a8a49538b49438afc044f6039f1f21b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae03474f3a2681848e4abaccedf0dc320" id="r_ae03474f3a2681848e4abaccedf0dc320"><td class="memItemLeft" align="right" valign="top">static constexpr ::_pb::EnumDescriptor const  **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ae03474f3a2681848e4abaccedf0dc320">file_level_enum_descriptors_protocol_2eproto</a> = nullptr</td></tr>
+<tr class="separator:ae03474f3a2681848e4abaccedf0dc320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f09c9b1242aeee85baab002ca19809" id="r_ac2f09c9b1242aeee85baab002ca19809"><td class="memItemLeft" align="right" valign="top">static constexpr ::_pb::ServiceDescriptor const  **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ac2f09c9b1242aeee85baab002ca19809">file_level_service_descriptors_protocol_2eproto</a> = nullptr</td></tr>
+<tr class="separator:ac2f09c9b1242aeee85baab002ca19809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cbfc3fec9aecfe7c25cfb5ae157c54" id="r_af4cbfc3fec9aecfe7c25cfb5ae157c54"><td class="memItemLeft" align="right" valign="top">static const ::_pb::Message *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#af4cbfc3fec9aecfe7c25cfb5ae157c54">file_default_instances</a> []</td></tr>
+<tr class="separator:af4cbfc3fec9aecfe7c25cfb5ae157c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea1e5d62a1cbf4d4bc52b0e904f3d315" id="r_aea1e5d62a1cbf4d4bc52b0e904f3d315"><td class="memItemLeft" align="right" valign="top">static const ::_pbi::DescriptorTable *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#aea1e5d62a1cbf4d4bc52b0e904f3d315">descriptor_table_protocol_2eproto_deps</a> [1]</td></tr>
+<tr class="separator:aea1e5d62a1cbf4d4bc52b0e904f3d315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a465ff236da584519a986c130f5a4ccc8" id="r_a465ff236da584519a986c130f5a4ccc8"><td class="memItemLeft" align="right" valign="top">::_pbi::once_flag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#a465ff236da584519a986c130f5a4ccc8">descriptor_table_protocol_2eproto_once</a></td></tr>
+<tr class="separator:a465ff236da584519a986c130f5a4ccc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d97f994c75123d93e34f0ec3ffb5b0" id="r_ab5d97f994c75123d93e34f0ec3ffb5b0"><td class="memItemLeft" align="right" valign="top">const ::_pbi::DescriptorTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8cc.html#ab5d97f994c75123d93e34f0ec3ffb5b0">descriptor_table_protocol_2eproto</a></td></tr>
+<tr class="separator:ab5d97f994c75123d93e34f0ec3ffb5b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[1/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[2/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[3/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[4/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[5/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[6/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[7/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[8/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[9/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[10/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[11/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[12/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[13/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a656da48cf3d2824247c83ad8d92f10" name="a1a656da48cf3d2824247c83ad8d92f10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a656da48cf3d2824247c83ad8d92f10">&#9670;&#160;</a></span>CHK_ <span class="overload">[14/14]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHK_</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a51592fa6d86c384523d946e9ea954bce" name="a51592fa6d86c384523d946e9ea954bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51592fa6d86c384523d946e9ea954bce">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicAckRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicAckRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_ack_request.html">::XuMQ::basicAckRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_cgraph" id="aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,224,69"/>
+<area shape="poly" title=" " alt="" coords="74,30,71,20,78,10,92,5,115,3,140,6,154,13,152,18,139,11,115,8,94,10,81,15,76,21,79,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_icgraph" id="aprotocol_8pb_8cc_a51592fa6d86c384523d946e9ea954bce_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,224,69"/>
+<area shape="poly" title=" " alt="" coords="152,18,139,11,115,8,94,10,81,15,76,21,79,28,74,30,71,20,78,10,92,5,115,3,140,6,154,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a45fa4e0045f7e6c66a4c99df3916deb6" name="a45fa4e0045f7e6c66a4c99df3916deb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fa4e0045f7e6c66a4c99df3916deb6">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicCancelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicCancelRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">::XuMQ::basicCancelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_cgraph" id="aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,244,69"/>
+<area shape="poly" title=" " alt="" coords="80,30,78,20,85,10,101,5,125,3,152,6,167,13,165,18,151,11,125,8,102,10,88,15,83,21,86,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_icgraph" id="aprotocol_8pb_8cc_a45fa4e0045f7e6c66a4c99df3916deb6_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,244,69"/>
+<area shape="poly" title=" " alt="" coords="165,18,151,11,125,8,102,10,88,15,83,21,86,28,80,30,78,20,85,10,101,5,125,3,152,6,167,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a887dc463f00ad221bbe6e2a6e3361bef" name="a887dc463f00ad221bbe6e2a6e3361bef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a887dc463f00ad221bbe6e2a6e3361bef">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicConsumeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicConsumeRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_consume_request.html">::XuMQ::basicConsumeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_cgraph" id="aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,260,69"/>
+<area shape="poly" title=" " alt="" coords="86,30,83,20,90,10,107,5,133,3,162,6,178,13,176,18,161,11,133,8,108,10,93,15,88,21,91,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_icgraph" id="aprotocol_8pb_8cc_a887dc463f00ad221bbe6e2a6e3361bef_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,260,69"/>
+<area shape="poly" title=" " alt="" coords="176,18,161,11,133,8,108,10,93,15,88,21,91,28,86,30,83,20,90,10,107,5,133,3,162,6,178,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad3dac4ad2ab9b1dfa9c87333054105de" name="ad3dac4ad2ab9b1dfa9c87333054105de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3dac4ad2ab9b1dfa9c87333054105de">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicConsumeResponse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicConsumeResponse * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_consume_response.html">::XuMQ::basicConsumeResponse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_cgraph" id="aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,271,69"/>
+<area shape="poly" title=" " alt="" coords="89,30,86,20,94,10,111,5,138,3,169,5,185,13,183,18,167,11,138,8,112,10,97,15,91,21,94,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_icgraph" id="aprotocol_8pb_8cc_ad3dac4ad2ab9b1dfa9c87333054105de_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,271,69"/>
+<area shape="poly" title=" " alt="" coords="183,18,167,11,138,8,112,10,97,15,91,21,94,28,89,30,86,20,94,10,111,5,138,3,169,5,185,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7fb8f77997463f95f4aaba119a7c13ee" name="a7fb8f77997463f95f4aaba119a7c13ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fb8f77997463f95f4aaba119a7c13ee">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicPublishRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicPublishRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_publish_request.html">::XuMQ::basicPublishRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_cgraph" id="aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,247,69"/>
+<area shape="poly" title=" " alt="" coords="81,30,79,20,86,10,102,5,126,3,154,6,169,13,167,18,152,11,126,8,103,10,89,15,84,21,86,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_icgraph" id="aprotocol_8pb_8cc_a7fb8f77997463f95f4aaba119a7c13ee_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,247,69"/>
+<area shape="poly" title=" " alt="" coords="167,18,152,11,126,8,103,10,89,15,84,21,86,28,81,30,79,20,86,10,102,5,126,3,154,6,169,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b103094abc809b3813dc09c5812245a" name="a0b103094abc809b3813dc09c5812245a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b103094abc809b3813dc09c5812245a">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::basicResponse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::basicResponse * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1basic_response.html">::XuMQ::basicResponse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_cgraph" id="aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,209,69"/>
+<area shape="poly" title=" " alt="" coords="69,30,67,20,73,11,87,5,107,3,131,6,144,13,141,18,129,11,107,8,88,10,76,15,72,21,74,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_icgraph" id="aprotocol_8pb_8cc_a0b103094abc809b3813dc09c5812245a_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,209,69"/>
+<area shape="poly" title=" " alt="" coords="141,18,129,11,107,8,88,10,76,15,72,21,74,28,69,30,67,20,73,11,87,5,107,3,131,6,144,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae83a49df0c99d09c1fa66dbc5111b939" name="ae83a49df0c99d09c1fa66dbc5111b939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83a49df0c99d09c1fa66dbc5111b939">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::closeChannelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::closeChannelRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1close_channel_request.html">::XuMQ::closeChannelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_cgraph" id="aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,252,69"/>
+<area shape="poly" title=" " alt="" coords="83,30,80,20,88,10,104,5,129,3,157,6,173,13,170,18,156,11,129,8,105,10,91,15,85,21,88,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_icgraph" id="aprotocol_8pb_8cc_ae83a49df0c99d09c1fa66dbc5111b939_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,252,69"/>
+<area shape="poly" title=" " alt="" coords="170,18,156,11,129,8,105,10,91,15,85,21,88,28,83,30,80,20,88,10,104,5,129,3,157,6,173,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abd3b658d7b4fc261cb010209963a7245" name="abd3b658d7b4fc261cb010209963a7245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3b658d7b4fc261cb010209963a7245">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::declareExchangeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::declareExchangeRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1declare_exchange_request.html">::XuMQ::declareExchangeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_cgraph" id="aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,276,69"/>
+<area shape="poly" title=" " alt="" coords="91,30,88,20,96,10,114,5,141,3,172,5,189,13,187,18,171,11,141,8,115,10,99,15,93,21,96,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_icgraph" id="aprotocol_8pb_8cc_abd3b658d7b4fc261cb010209963a7245_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,276,69"/>
+<area shape="poly" title=" " alt="" coords="187,18,171,11,141,8,115,10,99,15,93,21,96,28,91,30,88,20,96,10,114,5,141,3,172,5,189,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf3ad2e29e328023aa217ef117ff9a8c" name="abf3ad2e29e328023aa217ef117ff9a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3ad2e29e328023aa217ef117ff9a8c">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html">::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_cgraph" id="aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,261,84"/>
+<area shape="poly" title=" " alt="" coords="84,29,84,19,93,10,109,5,133,3,162,6,179,14,176,18,161,11,133,8,110,10,96,15,89,21,89,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_icgraph" id="aprotocol_8pb_8cc_abf3ad2e29e328023aa217ef117ff9a8c_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,261,84"/>
+<area shape="poly" title=" " alt="" coords="176,18,161,11,133,8,110,10,96,15,89,21,89,29,84,29,84,19,93,10,109,5,133,3,162,6,179,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63132104229662cd8ffc8c9f55b15b5a" name="a63132104229662cd8ffc8c9f55b15b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63132104229662cd8ffc8c9f55b15b5a">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::declareQueueRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::declareQueueRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1declare_queue_request.html">::XuMQ::declareQueueRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_cgraph" id="aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,256,69"/>
+<area shape="poly" title=" " alt="" coords="84,30,81,20,89,10,105,5,131,3,160,6,176,13,173,18,158,11,131,8,106,10,92,15,86,21,89,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_icgraph" id="aprotocol_8pb_8cc_a63132104229662cd8ffc8c9f55b15b5a_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,256,69"/>
+<area shape="poly" title=" " alt="" coords="173,18,158,11,131,8,106,10,92,15,86,21,89,28,84,30,81,20,89,10,105,5,131,3,160,6,176,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ea640f256d38be1593b7c99714653dc" name="a4ea640f256d38be1593b7c99714653dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ea640f256d38be1593b7c99714653dc">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html">::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_cgraph" id="aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,240,84"/>
+<area shape="poly" title=" " alt="" coords="77,29,78,19,86,10,101,5,123,3,149,6,164,14,161,18,147,11,123,8,102,10,89,15,83,21,83,29"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_icgraph" id="aprotocol_8pb_8cc_a4ea640f256d38be1593b7c99714653dc_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,240,84"/>
+<area shape="poly" title=" " alt="" coords="161,18,147,11,123,8,102,10,89,15,83,21,83,29,77,29,78,19,86,10,101,5,123,3,149,6,164,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c6a0fead33d98872b659a1953f48cfa" name="a3c6a0fead33d98872b659a1953f48cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c6a0fead33d98872b659a1953f48cfa">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::deleteExchangeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::deleteExchangeRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">::XuMQ::deleteExchangeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_cgraph" id="aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,269,69"/>
+<area shape="poly" title=" " alt="" coords="88,30,85,20,93,10,111,5,137,3,168,5,185,13,182,18,167,11,137,8,112,10,96,15,91,21,93,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_icgraph" id="aprotocol_8pb_8cc_a3c6a0fead33d98872b659a1953f48cfa_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,269,69"/>
+<area shape="poly" title=" " alt="" coords="182,18,167,11,137,8,112,10,96,15,91,21,93,28,88,30,85,20,93,10,111,5,137,3,168,5,185,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae120c24e478b353e8e0b1a471980a2c0" name="ae120c24e478b353e8e0b1a471980a2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae120c24e478b353e8e0b1a471980a2c0">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::deleteQueueRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::deleteQueueRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1delete_queue_request.html">::XuMQ::deleteQueueRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_cgraph" id="aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,248,69"/>
+<area shape="poly" title=" " alt="" coords="81,30,79,20,86,10,102,5,127,3,155,6,170,13,168,18,153,11,127,8,103,10,89,15,84,21,87,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_icgraph" id="aprotocol_8pb_8cc_ae120c24e478b353e8e0b1a471980a2c0_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,248,69"/>
+<area shape="poly" title=" " alt="" coords="168,18,153,11,127,8,103,10,89,15,84,21,87,28,81,30,79,20,86,10,102,5,127,3,155,6,170,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c6e1908a700ddeb4f7b008ad3d59e1a" name="a9c6e1908a700ddeb4f7b008ad3d59e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6e1908a700ddeb4f7b008ad3d59e1a">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::openChannelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_OPEN PROTOBUF_NOINLINE::XuMQ::openChannelRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1open_channel_request.html">::XuMQ::openChannelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_cgraph" id="aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,251,69"/>
+<area shape="poly" title=" " alt="" coords="82,30,80,20,87,10,103,5,128,3,157,6,172,13,170,18,155,11,128,8,104,10,90,15,85,21,87,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_icgraph" id="aprotocol_8pb_8cc_a9c6e1908a700ddeb4f7b008ad3d59e1a_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,251,69"/>
+<area shape="poly" title=" " alt="" coords="170,18,155,11,128,8,104,10,90,15,85,21,87,28,82,30,80,20,87,10,103,5,128,3,157,6,172,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a94d34e621dd79be990e040ff15cefe70" name="a94d34e621dd79be990e040ff15cefe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d34e621dd79be990e040ff15cefe70">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::queueBindRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::queueBindRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1queue_bind_request.html">::XuMQ::queueBindRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_cgraph" id="aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,235,69"/>
+<area shape="poly" title=" " alt="" coords="77,30,75,20,81,10,97,5,120,3,147,6,161,13,159,18,145,11,120,8,98,10,85,15,80,21,82,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_icgraph" id="aprotocol_8pb_8cc_a94d34e621dd79be990e040ff15cefe70_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,235,69"/>
+<area shape="poly" title=" " alt="" coords="159,18,145,11,120,8,98,10,85,15,80,21,82,28,77,30,75,20,81,10,97,5,120,3,147,6,161,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeb54b87256d6430a07ebbf7afe8d2a00" name="aeb54b87256d6430a07ebbf7afe8d2a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb54b87256d6430a07ebbf7afe8d2a00">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt; ::XuMQ::queueUnBindRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NOINLINE::XuMQ::queueUnBindRequest * Arena::CreateMaybeMessage&lt; <a class="el" href="class_xu_m_q_1_1queue_un_bind_request.html">::XuMQ::queueUnBindRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"><em>arena</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_cgraph.png" border="0" usemap="#aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_cgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_cgraph" id="aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,252,69"/>
+<area shape="poly" title=" " alt="" coords="83,30,80,20,88,10,104,5,129,3,157,6,173,13,170,18,156,11,129,8,105,10,91,15,85,21,88,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_icgraph" id="aprotocol_8pb_8cc_aeb54b87256d6430a07ebbf7afe8d2a00_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,252,69"/>
+<area shape="poly" title=" " alt="" coords="170,18,156,11,129,8,105,10,91,15,85,21,88,28,83,30,80,20,88,10,104,5,129,3,157,6,173,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc7ae0baa5b8535022f2c075a8b15066" name="adc7ae0baa5b8535022f2c075a8b15066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc7ae0baa5b8535022f2c075a8b15066">&#9670;&#160;</a></span>descriptor_table_protocol_2eproto_getter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ATTRIBUTE_WEAKconst ::_pbi::DescriptorTable * descriptor_table_protocol_2eproto_getter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8cc_adc7ae0baa5b8535022f2c075a8b15066_icgraph.png" border="0" usemap="#aprotocol_8pb_8cc_adc7ae0baa5b8535022f2c075a8b15066_icgraph" alt=""/></div>
+<map name="aprotocol_8pb_8cc_adc7ae0baa5b8535022f2c075a8b15066_icgraph" id="aprotocol_8pb_8cc_adc7ae0baa5b8535022f2c075a8b15066_icgraph">
+<area shape="rect" title=" " alt="" coords="821,517,1008,557"/>
+<area shape="rect" href="class_xu_m_q_1_1open_channel_request.html#ae82116c302e2dae9e535004993923ad6" title=" " alt="" coords="541,37,747,77"/>
+<area shape="poly" title=" " alt="" coords="911,504,905,420,897,367,885,309,868,250,844,192,812,138,772,91,746,75,749,70,775,87,816,135,848,189,873,248,891,308,903,366,910,420,916,504"/>
+<area shape="rect" href="class_xu_m_q_1_1close_channel_request.html#a557b9c9afd1ba22039c167a8802b8dec" title=" " alt="" coords="539,101,749,141"/>
+<area shape="poly" title=" " alt="" coords="909,504,899,431,877,337,859,287,836,239,807,194,772,155,748,140,751,135,775,151,811,191,841,236,864,285,882,335,904,430,914,503"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html#a38c9b75b7d9b453b04e057636164fb48" title=" " alt="" coords="515,165,773,205"/>
+<area shape="poly" title=" " alt="" coords="906,504,893,443,868,365,850,325,829,286,802,251,772,219,754,208,757,203,775,215,807,247,833,284,855,323,873,364,898,441,911,503"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_exchange_request.html#a7263f1618b054318b4aa3e0792e317e2" title=" " alt="" coords="527,229,761,269"/>
+<area shape="poly" title=" " alt="" coords="902,505,885,455,859,395,821,334,798,307,772,283,752,272,755,267,775,279,802,303,825,331,863,392,890,453,907,503"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a966f47c47bb94195f4b40c8fa605ec27" title=" " alt="" coords="531,293,757,333"/>
+<area shape="poly" title=" " alt="" coords="896,506,876,468,848,425,813,383,772,348,750,336,753,331,775,343,817,379,853,422,881,466,901,503"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html#a8b1ff2cad2b8e2a3e3968b88168f0b2a" title=" " alt="" coords="515,357,773,397"/>
+<area shape="poly" title=" " alt="" coords="886,509,837,458,806,433,772,412,745,400,747,395,775,407,809,429,840,455,890,505"/>
+<area shape="rect" href="class_xu_m_q_1_1declare_queue_request.html#a71ca1e2693eaf184964a95ff8c5f9757" title=" " alt="" coords="538,421,750,461"/>
+<area shape="poly" title=" " alt="" coords="861,514,772,476,734,464,735,459,774,471,863,509"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_queue_request.html#a4304b70d1acf329e77b1484ae0a1706f" title=" " alt="" coords="541,485,747,525"/>
+<area shape="poly" title=" " alt="" coords="807,527,747,520,747,515,808,522"/>
+<area shape="rect" href="class_xu_m_q_1_1queue_bind_request.html#a8b3984c4f50db84b51065e8cecf5454e" title=" " alt="" coords="549,549,739,589"/>
+<area shape="poly" title=" " alt="" coords="808,553,740,561,739,555,807,547"/>
+<area shape="rect" href="class_xu_m_q_1_1queue_un_bind_request.html#ae24ebb12b8adda1ba578420d89f3043d" title=" " alt="" coords="539,613,749,653"/>
+<area shape="poly" title=" " alt="" coords="863,566,774,604,735,616,734,611,772,599,861,561"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_publish_request.html#a4c2780c4531e008e51dd620ac066fc28" title=" " alt="" coords="543,677,745,717"/>
+<area shape="poly" title=" " alt="" coords="890,570,840,620,809,646,775,668,746,680,744,675,772,663,806,642,837,616,886,566"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_ack_request.html#a820df27e5f41f5aa9e9dc351d0f77c3c" title=" " alt="" coords="554,741,734,781"/>
+<area shape="poly" title=" " alt="" coords="901,571,881,609,853,652,817,695,775,732,735,750,733,745,772,727,813,692,848,649,876,606,896,569"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_consume_request.html#a1ec09162485c002bb82fe4fe2043d3a2" title=" " alt="" coords="535,805,753,845"/>
+<area shape="poly" title=" " alt="" coords="907,572,890,622,863,682,825,743,802,771,775,795,755,808,752,803,772,791,798,768,821,740,859,680,885,620,902,570"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#aa0f139d338c5914048a4460d5aa3bedc" title=" " alt="" coords="544,869,744,909"/>
+<area shape="poly" title=" " alt="" coords="911,571,898,633,873,711,855,752,833,791,807,828,775,859,746,877,743,872,772,855,802,824,829,788,850,749,868,709,893,632,906,570"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_consume_response.html#a1e0975559bf9971d94bfe613e9129b55" title=" " alt="" coords="531,933,757,973"/>
+<area shape="poly" title=" " alt="" coords="914,571,904,645,882,740,864,790,841,838,811,884,775,923,758,935,755,931,772,919,807,881,836,836,859,788,877,738,899,644,909,571"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_response.html#a9dc82234289eb5d14c0c1b59fbe0e5fe" title=" " alt="" coords="561,997,727,1037"/>
+<area shape="poly" title=" " alt="" coords="916,571,910,655,903,709,891,767,873,827,848,885,816,940,775,987,753,1003,728,1012,726,1007,751,998,772,983,812,937,844,883,868,825,885,766,897,708,905,654,911,571"/>
+<area shape="rect" href="class_xu_m_q_1_1open_channel_request.html#a7812c5712a12e4ecd83fd0b0fe0c7ba8" title=" " alt="" coords="260,5,467,45"/>
+<area shape="poly" title=" " alt="" coords="526,47,466,40,467,34,527,41"/>
+<area shape="rect" href="class_xu_m_q_1_1open_channel_request.html#ab2678b52755181a7f408e20c454d1469" title=" " alt="" coords="260,69,467,109"/>
+<area shape="poly" title=" " alt="" coords="527,73,467,80,466,75,526,68"/>
+<area shape="rect" href="class_xu_m_q_1_1open_channel_request.html#a03f4d3d18ea2ce24e8af985aadb86cbf" title=" " alt="" coords="5,5,212,45"/>
+<area shape="poly" title=" " alt="" coords="247,28,212,28,212,23,247,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afade20bf7800779821bad96b96be93f4" name="afade20bf7800779821bad96b96be93f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afade20bf7800779821bad96b96be93f4">&#9670;&#160;</a></span>PROTOBUF_SECTION_VARIABLE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint32_t <a class="el" href="struct_table_struct__protocol__2eproto.html#a7a9a213719ff86d9b986440ea837011c">TableStruct_protocol_2eproto::offsets</a>[] PROTOBUF_SECTION_VARIABLE </td>
+          <td>(</td>
+          <td class="paramtype">protodesc_cold&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ab5d97f994c75123d93e34f0ec3ffb5b0" name="ab5d97f994c75123d93e34f0ec3ffb5b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d97f994c75123d93e34f0ec3ffb5b0">&#9670;&#160;</a></span>descriptor_table_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static PROTOBUF_ATTRIBUTE_INIT_PRIORITY2::_pbi::AddDescriptorsRunner dynamic_init_dummy_protocol_2eproto &amp; descriptor_table_protocol_2eproto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <span class="keyword">false</span>, <span class="keyword">false</span>, 1540, descriptor_table_protodef_protocol_2eproto,</div>
+<div class="line">    <span class="stringliteral">&quot;protocol.proto&quot;</span>,</div>
+<div class="line">    &amp;<a class="code hl_variable" href="protocol_8pb_8cc.html#a465ff236da584519a986c130f5a4ccc8">descriptor_table_protocol_2eproto_once</a>, <a class="code hl_variable" href="protocol_8pb_8cc.html#aea1e5d62a1cbf4d4bc52b0e904f3d315">descriptor_table_protocol_2eproto_deps</a>, 1, 16,</div>
+<div class="line">    schemas, <a class="code hl_variable" href="protocol_8pb_8cc.html#af4cbfc3fec9aecfe7c25cfb5ae157c54">file_default_instances</a>, <a class="code hl_variable" href="struct_table_struct__protocol__2eproto.html#a7a9a213719ff86d9b986440ea837011c">TableStruct_protocol_2eproto::offsets</a>,</div>
+<div class="line">    <a class="code hl_variable" href="protocol_8pb_8cc.html#a8a49538b49438afc044f6039f1f21b68">file_level_metadata_protocol_2eproto</a>, <a class="code hl_variable" href="protocol_8pb_8cc.html#ae03474f3a2681848e4abaccedf0dc320">file_level_enum_descriptors_protocol_2eproto</a>,</div>
+<div class="line">    <a class="code hl_variable" href="protocol_8pb_8cc.html#ac2f09c9b1242aeee85baab002ca19809">file_level_service_descriptors_protocol_2eproto</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_a465ff236da584519a986c130f5a4ccc8"><div class="ttname"><a href="protocol_8pb_8cc.html#a465ff236da584519a986c130f5a4ccc8">descriptor_table_protocol_2eproto_once</a></div><div class="ttdeci">::_pbi::once_flag descriptor_table_protocol_2eproto_once</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:523</div></div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_a8a49538b49438afc044f6039f1f21b68"><div class="ttname"><a href="protocol_8pb_8cc.html#a8a49538b49438afc044f6039f1f21b68">file_level_metadata_protocol_2eproto</a></div><div class="ttdeci">::_pb::Metadata file_level_metadata_protocol_2eproto[16]</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:273</div></div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_ac2f09c9b1242aeee85baab002ca19809"><div class="ttname"><a href="protocol_8pb_8cc.html#ac2f09c9b1242aeee85baab002ca19809">file_level_service_descriptors_protocol_2eproto</a></div><div class="ttdeci">static constexpr ::_pb::ServiceDescriptor const  ** file_level_service_descriptors_protocol_2eproto</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:275</div></div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_ae03474f3a2681848e4abaccedf0dc320"><div class="ttname"><a href="protocol_8pb_8cc.html#ae03474f3a2681848e4abaccedf0dc320">file_level_enum_descriptors_protocol_2eproto</a></div><div class="ttdeci">static constexpr ::_pb::EnumDescriptor const  ** file_level_enum_descriptors_protocol_2eproto</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:274</div></div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_aea1e5d62a1cbf4d4bc52b0e904f3d315"><div class="ttname"><a href="protocol_8pb_8cc.html#aea1e5d62a1cbf4d4bc52b0e904f3d315">descriptor_table_protocol_2eproto_deps</a></div><div class="ttdeci">static const ::_pbi::DescriptorTable *const descriptor_table_protocol_2eproto_deps[1]</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:520</div></div>
+<div class="ttc" id="aprotocol_8pb_8cc_html_af4cbfc3fec9aecfe7c25cfb5ae157c54"><div class="ttname"><a href="protocol_8pb_8cc.html#af4cbfc3fec9aecfe7c25cfb5ae157c54">file_default_instances</a></div><div class="ttdeci">static const ::_pb::Message *const file_default_instances[]</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:460</div></div>
+<div class="ttc" id="astruct_table_struct__protocol__2eproto_html_a7a9a213719ff86d9b986440ea837011c"><div class="ttname"><a href="struct_table_struct__protocol__2eproto.html#a7a9a213719ff86d9b986440ea837011c">TableStruct_protocol_2eproto::offsets</a></div><div class="ttdeci">static const uint32_t offsets[]</div><div class="ttdef"><b>Definition</b> protocol.pb.h:48</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aea1e5d62a1cbf4d4bc52b0e904f3d315" name="aea1e5d62a1cbf4d4bc52b0e904f3d315"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1e5d62a1cbf4d4bc52b0e904f3d315">&#9670;&#160;</a></span>descriptor_table_protocol_2eproto_deps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::_pbi::DescriptorTable* const descriptor_table_protocol_2eproto_deps[1]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  &amp;<a class="code hl_variable" href="msg_8pb_8cc.html#aec96d697c689213d761d89e464f97e57">::descriptor_table_msg_2eproto</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="amsg_8pb_8cc_html_aec96d697c689213d761d89e464f97e57"><div class="ttname"><a href="msg_8pb_8cc.html#aec96d697c689213d761d89e464f97e57">descriptor_table_msg_2eproto</a></div><div class="ttdeci">const ::_pbi::DescriptorTable descriptor_table_msg_2eproto</div><div class="ttdef"><b>Definition</b> msg.pb.cc:129</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a465ff236da584519a986c130f5a4ccc8" name="a465ff236da584519a986c130f5a4ccc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a465ff236da584519a986c130f5a4ccc8">&#9670;&#160;</a></span>descriptor_table_protocol_2eproto_once</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::_pbi::once_flag descriptor_table_protocol_2eproto_once</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4cbfc3fec9aecfe7c25cfb5ae157c54" name="af4cbfc3fec9aecfe7c25cfb5ae157c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4cbfc3fec9aecfe7c25cfb5ae157c54">&#9670;&#160;</a></span>file_default_instances</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::_pb::Message* const file_default_instances[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#aea4c8df1396f5a29afba41df425b113d">::XuMQ::_openChannelRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1open_channel_request_default_type_internal.html#af20b7f821a0677a397bc9b401ae74fb6">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a5db9bb1caa2e0f164ca6efaa88e50d5b">::XuMQ::_closeChannelRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1close_channel_request_default_type_internal.html#a05b5415c4eca5d15edf705d4fa721573">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#ae68e318f82626df220ccb95c94491c6c">::XuMQ::_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html#ac2b586c21857d4b7e322a0ea278a830e">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#af9840b1ab0545c21715dd85aee67166e">::XuMQ::_declareExchangeRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1declare_exchange_request_default_type_internal.html#abc8449c33c717a9e9d4e9f1862385046">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a7c290ce5223b77656aa17cc15ce3a8e4">::XuMQ::_deleteExchangeRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1delete_exchange_request_default_type_internal.html#a15646b8fcf6548a212a208d89c9f7d3b">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a85b38df26a2b4c44ad6ef63267b91b67">::XuMQ::_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1declare_queue_request___args_entry___do_not_use_default_type_internal.html#a7317e25a0adb5783c44a229e469d9a9e">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a7bb3e0eedd2f55bbcffdd32c68ee543c">::XuMQ::_declareQueueRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1declare_queue_request_default_type_internal.html#a3082531f3fe72425c9b79f5c2f83038b">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a0be19e975f58d0d0e1f2bae7dbe92064">::XuMQ::_deleteQueueRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1delete_queue_request_default_type_internal.html#a1388ef192215fd771661f73950ae3e5b">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a07c98f804df54fe8eba2daa161b18517">::XuMQ::_queueBindRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1queue_bind_request_default_type_internal.html#a81cb9c6c5a984091c5f1c24d95dbb0d8">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#ac551ba242e2cae3ad3639c727fb01baa">::XuMQ::_queueUnBindRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1queue_un_bind_request_default_type_internal.html#a59ae7cf0823a69f13b9ef4794420fb3d">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#afdd2c2d8162651e4958fa0b4c2580985">::XuMQ::_basicPublishRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_publish_request_default_type_internal.html#a19cefc0b4061b0dfda966520be282ef7">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a17ee8f84e893473795c61ba34e912534">::XuMQ::_basicAckRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_ack_request_default_type_internal.html#a3fdc83a956ce1319904340985260813e">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a03b9a2c566171a2c69353352014d7878">::XuMQ::_basicConsumeRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_consume_request_default_type_internal.html#a898a1c1658bdc3defe3aa452a4e50fbc">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#acf3efc9bb1ec3628777ef3af3db0602c">::XuMQ::_basicCancelRequest_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_cancel_request_default_type_internal.html#a29c5bfd0d2ed46d072635fd1d534dc08">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a091f30f5a9d3eea00b8e2f44e4a31666">::XuMQ::_basicConsumeResponse_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_consume_response_default_type_internal.html#ae14cadacd23e2e1e424dc3ec5038a1cc">_instance</a>,</div>
+<div class="line">  &amp;<a class="code hl_variable" href="namespace_xu_m_q.html#a006d12401b7aa8bc236eca515e4dccee">::XuMQ::_basicResponse_default_instance_</a>.<a class="code hl_variable" href="struct_xu_m_q_1_1basic_response_default_type_internal.html#a2ba0355f5b5776e672acd2a70c05c83c">_instance</a>,</div>
+<div class="line">}</div>
+<div class="ttc" id="anamespace_xu_m_q_html_a006d12401b7aa8bc236eca515e4dccee"><div class="ttname"><a href="namespace_xu_m_q.html#a006d12401b7aa8bc236eca515e4dccee">XuMQ::_basicResponse_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicResponseDefaultTypeInternal _basicResponse_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:271</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a03b9a2c566171a2c69353352014d7878"><div class="ttname"><a href="namespace_xu_m_q.html#a03b9a2c566171a2c69353352014d7878">XuMQ::_basicConsumeRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicConsumeRequestDefaultTypeInternal _basicConsumeRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:224</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a07c98f804df54fe8eba2daa161b18517"><div class="ttname"><a href="namespace_xu_m_q.html#a07c98f804df54fe8eba2daa161b18517">XuMQ::_queueBindRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 queueBindRequestDefaultTypeInternal _queueBindRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:158</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a091f30f5a9d3eea00b8e2f44e4a31666"><div class="ttname"><a href="namespace_xu_m_q.html#a091f30f5a9d3eea00b8e2f44e4a31666">XuMQ::_basicConsumeResponse_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicConsumeResponseDefaultTypeInternal _basicConsumeResponse_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:256</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a0be19e975f58d0d0e1f2bae7dbe92064"><div class="ttname"><a href="namespace_xu_m_q.html#a0be19e975f58d0d0e1f2bae7dbe92064">XuMQ::_deleteQueueRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 deleteQueueRequestDefaultTypeInternal _deleteQueueRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:141</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a17ee8f84e893473795c61ba34e912534"><div class="ttname"><a href="namespace_xu_m_q.html#a17ee8f84e893473795c61ba34e912534">XuMQ::_basicAckRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicAckRequestDefaultTypeInternal _basicAckRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:207</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a5db9bb1caa2e0f164ca6efaa88e50d5b"><div class="ttname"><a href="namespace_xu_m_q.html#a5db9bb1caa2e0f164ca6efaa88e50d5b">XuMQ::_closeChannelRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 closeChannelRequestDefaultTypeInternal _closeChannelRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:51</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a7bb3e0eedd2f55bbcffdd32c68ee543c"><div class="ttname"><a href="namespace_xu_m_q.html#a7bb3e0eedd2f55bbcffdd32c68ee543c">XuMQ::_declareQueueRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 declareQueueRequestDefaultTypeInternal _declareQueueRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:126</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a7c290ce5223b77656aa17cc15ce3a8e4"><div class="ttname"><a href="namespace_xu_m_q.html#a7c290ce5223b77656aa17cc15ce3a8e4">XuMQ::_deleteExchangeRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 deleteExchangeRequestDefaultTypeInternal _deleteExchangeRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:96</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a85b38df26a2b4c44ad6ef63267b91b67"><div class="ttname"><a href="namespace_xu_m_q.html#a85b38df26a2b4c44ad6ef63267b91b67">XuMQ::_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 declareQueueRequest_ArgsEntry_DoNotUseDefaultTypeInternal _declareQueueRequest_ArgsEntry_DoNotUse_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:107</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_ac551ba242e2cae3ad3639c727fb01baa"><div class="ttname"><a href="namespace_xu_m_q.html#ac551ba242e2cae3ad3639c727fb01baa">XuMQ::_queueUnBindRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 queueUnBindRequestDefaultTypeInternal _queueUnBindRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:174</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_acf3efc9bb1ec3628777ef3af3db0602c"><div class="ttname"><a href="namespace_xu_m_q.html#acf3efc9bb1ec3628777ef3af3db0602c">XuMQ::_basicCancelRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicCancelRequestDefaultTypeInternal _basicCancelRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:240</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_ae68e318f82626df220ccb95c94491c6c"><div class="ttname"><a href="namespace_xu_m_q.html#ae68e318f82626df220ccb95c94491c6c">XuMQ::_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal _declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:62</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_aea4c8df1396f5a29afba41df425b113d"><div class="ttname"><a href="namespace_xu_m_q.html#aea4c8df1396f5a29afba41df425b113d">XuMQ::_openChannelRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 openChannelRequestDefaultTypeInternal _openChannelRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:37</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_af9840b1ab0545c21715dd85aee67166e"><div class="ttname"><a href="namespace_xu_m_q.html#af9840b1ab0545c21715dd85aee67166e">XuMQ::_declareExchangeRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 declareExchangeRequestDefaultTypeInternal _declareExchangeRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:81</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_afdd2c2d8162651e4958fa0b4c2580985"><div class="ttname"><a href="namespace_xu_m_q.html#afdd2c2d8162651e4958fa0b4c2580985">XuMQ::_basicPublishRequest_default_instance_</a></div><div class="ttdeci">PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicPublishRequestDefaultTypeInternal _basicPublishRequest_default_instance_</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:191</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_ack_request_default_type_internal_html_a3fdc83a956ce1319904340985260813e"><div class="ttname"><a href="struct_xu_m_q_1_1basic_ack_request_default_type_internal.html#a3fdc83a956ce1319904340985260813e">XuMQ::basicAckRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicAckRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:204</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_cancel_request_default_type_internal_html_a29c5bfd0d2ed46d072635fd1d534dc08"><div class="ttname"><a href="struct_xu_m_q_1_1basic_cancel_request_default_type_internal.html#a29c5bfd0d2ed46d072635fd1d534dc08">XuMQ::basicCancelRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicCancelRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:237</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_consume_request_default_type_internal_html_a898a1c1658bdc3defe3aa452a4e50fbc"><div class="ttname"><a href="struct_xu_m_q_1_1basic_consume_request_default_type_internal.html#a898a1c1658bdc3defe3aa452a4e50fbc">XuMQ::basicConsumeRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicConsumeRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:221</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_consume_response_default_type_internal_html_ae14cadacd23e2e1e424dc3ec5038a1cc"><div class="ttname"><a href="struct_xu_m_q_1_1basic_consume_response_default_type_internal.html#ae14cadacd23e2e1e424dc3ec5038a1cc">XuMQ::basicConsumeResponseDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicConsumeResponse _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:253</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_publish_request_default_type_internal_html_a19cefc0b4061b0dfda966520be282ef7"><div class="ttname"><a href="struct_xu_m_q_1_1basic_publish_request_default_type_internal.html#a19cefc0b4061b0dfda966520be282ef7">XuMQ::basicPublishRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicPublishRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:188</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1basic_response_default_type_internal_html_a2ba0355f5b5776e672acd2a70c05c83c"><div class="ttname"><a href="struct_xu_m_q_1_1basic_response_default_type_internal.html#a2ba0355f5b5776e672acd2a70c05c83c">XuMQ::basicResponseDefaultTypeInternal::_instance</a></div><div class="ttdeci">basicResponse _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:268</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1close_channel_request_default_type_internal_html_a05b5415c4eca5d15edf705d4fa721573"><div class="ttname"><a href="struct_xu_m_q_1_1close_channel_request_default_type_internal.html#a05b5415c4eca5d15edf705d4fa721573">XuMQ::closeChannelRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">closeChannelRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:48</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal_html_ac2b586c21857d4b7e322a0ea278a830e"><div class="ttname"><a href="struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html#ac2b586c21857d4b7e322a0ea278a830e">XuMQ::declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal::_instance</a></div><div class="ttdeci">declareExchangeRequest_ArgsEntry_DoNotUse _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:59</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1declare_exchange_request_default_type_internal_html_abc8449c33c717a9e9d4e9f1862385046"><div class="ttname"><a href="struct_xu_m_q_1_1declare_exchange_request_default_type_internal.html#abc8449c33c717a9e9d4e9f1862385046">XuMQ::declareExchangeRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">declareExchangeRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:78</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1declare_queue_request___args_entry___do_not_use_default_type_internal_html_a7317e25a0adb5783c44a229e469d9a9e"><div class="ttname"><a href="struct_xu_m_q_1_1declare_queue_request___args_entry___do_not_use_default_type_internal.html#a7317e25a0adb5783c44a229e469d9a9e">XuMQ::declareQueueRequest_ArgsEntry_DoNotUseDefaultTypeInternal::_instance</a></div><div class="ttdeci">declareQueueRequest_ArgsEntry_DoNotUse _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:104</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1declare_queue_request_default_type_internal_html_a3082531f3fe72425c9b79f5c2f83038b"><div class="ttname"><a href="struct_xu_m_q_1_1declare_queue_request_default_type_internal.html#a3082531f3fe72425c9b79f5c2f83038b">XuMQ::declareQueueRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">declareQueueRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:123</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1delete_exchange_request_default_type_internal_html_a15646b8fcf6548a212a208d89c9f7d3b"><div class="ttname"><a href="struct_xu_m_q_1_1delete_exchange_request_default_type_internal.html#a15646b8fcf6548a212a208d89c9f7d3b">XuMQ::deleteExchangeRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">deleteExchangeRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:93</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1delete_queue_request_default_type_internal_html_a1388ef192215fd771661f73950ae3e5b"><div class="ttname"><a href="struct_xu_m_q_1_1delete_queue_request_default_type_internal.html#a1388ef192215fd771661f73950ae3e5b">XuMQ::deleteQueueRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">deleteQueueRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:138</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1open_channel_request_default_type_internal_html_af20b7f821a0677a397bc9b401ae74fb6"><div class="ttname"><a href="struct_xu_m_q_1_1open_channel_request_default_type_internal.html#af20b7f821a0677a397bc9b401ae74fb6">XuMQ::openChannelRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">openChannelRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:34</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1queue_bind_request_default_type_internal_html_a81cb9c6c5a984091c5f1c24d95dbb0d8"><div class="ttname"><a href="struct_xu_m_q_1_1queue_bind_request_default_type_internal.html#a81cb9c6c5a984091c5f1c24d95dbb0d8">XuMQ::queueBindRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">queueBindRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:155</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1queue_un_bind_request_default_type_internal_html_a59ae7cf0823a69f13b9ef4794420fb3d"><div class="ttname"><a href="struct_xu_m_q_1_1queue_un_bind_request_default_type_internal.html#a59ae7cf0823a69f13b9ef4794420fb3d">XuMQ::queueUnBindRequestDefaultTypeInternal::_instance</a></div><div class="ttdeci">queueUnBindRequest _instance</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:171</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae03474f3a2681848e4abaccedf0dc320" name="ae03474f3a2681848e4abaccedf0dc320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03474f3a2681848e4abaccedf0dc320">&#9670;&#160;</a></span>file_level_enum_descriptors_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_protocol_2eproto = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a49538b49438afc044f6039f1f21b68" name="a8a49538b49438afc044f6039f1f21b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a49538b49438afc044f6039f1f21b68">&#9670;&#160;</a></span>file_level_metadata_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::_pb::Metadata file_level_metadata_protocol_2eproto[16]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2f09c9b1242aeee85baab002ca19809" name="ac2f09c9b1242aeee85baab002ca19809"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f09c9b1242aeee85baab002ca19809">&#9670;&#160;</a></span>file_level_service_descriptors_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_protocol_2eproto = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="protocol_8pb_8cc.html">protocol.pb.cc</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

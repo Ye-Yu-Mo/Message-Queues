@@ -51,7 +51,7 @@ namespace XuMQ
                              ExchangeType type,
                              bool durable,
                              bool auto_delete,
-                             std::unordered_map<std::string, std::string> &args)
+                             const google::protobuf::Map<std::string, std::string> &args)
         {
             return _emp->declareExchange(name, type, durable, auto_delete, args);
         }
@@ -75,7 +75,7 @@ namespace XuMQ
                           bool qdurable,
                           bool qexclusive,
                           bool qauto_delete,
-                          std::unordered_map<std::string, std::string> &qargs)
+                          const google::protobuf::Map<std::string, std::string> &qargs)
         {
             // 初始化队列消息句柄
             // 消息对立创建
@@ -158,6 +158,14 @@ namespace XuMQ
         void basicAck(const std::string &qname, const std::string &msg_id)
         {
             _mmp->ack(qname, msg_id);
+        }
+
+        /// @brief 获取指定交换机句柄
+        /// @param ename 交换机名称
+        /// @return 交换机句柄
+        Exchange::ptr selectExchange(const std::string& ename)
+        {
+            return _emp->selectExchange(ename);
         }
 
         /// @brief 清理

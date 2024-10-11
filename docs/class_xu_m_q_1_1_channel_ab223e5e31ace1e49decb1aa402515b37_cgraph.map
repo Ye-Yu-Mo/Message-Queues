@@ -1,0 +1,11 @@
+<map id="XuMQ::Channel::queueBind" name="XuMQ::Channel::queueBind">
+<area shape="rect" id="Node000001" title="队列绑定请求处理函数" alt="" coords="5,77,204,102"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="252,77,479,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,87,238,87,238,92,204,92"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="527,5,693,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="414,74,519,46,520,52,416,79"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="527,69,693,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="479,87,513,87,513,92,479,92"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="527,133,693,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="416,100,520,127,519,132,414,105"/>
+</map>

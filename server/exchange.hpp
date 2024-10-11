@@ -26,7 +26,7 @@ namespace XuMQ
         ExchangeType type;                                 ///< 交换机类型
         bool durable;                                      ///< 数据持久化标志
         bool auto_delete;                                  ///< 自动删除标志
-        std::unordered_map<std::string, std::string> args; ///< 其他参数
+        google::protobuf::Map<std::string, std::string> args; ///< 其他参数
 
         /// @brief 无参构造
         Exchange() {}
@@ -40,7 +40,7 @@ namespace XuMQ
                  ExchangeType etype,
                  bool edurable,
                  bool eauto_delete,
-                 const std::unordered_map<std::string, std::string> &eargs)
+                 const google::protobuf::Map<std::string, std::string> &eargs)
             : name(ename), type(etype), durable(edurable), auto_delete(eauto_delete), args(eargs)
         {
         }
@@ -58,7 +58,7 @@ namespace XuMQ
                 size_t pos = str.find('=');
                 std::string key = str.substr(0, pos);
                 std::string value = str.substr(pos + 1);
-                args.insert(std::make_pair(key, value));
+                args[key] = value;
             }
         }
         /// @brief 将映射成员转化为字符串
@@ -211,7 +211,7 @@ namespace XuMQ
                              ExchangeType type,
                              bool durable,
                              bool auto_delete,
-                             const std::unordered_map<std::string, std::string> &args)
+                             const google::protobuf::Map<std::string, std::string> &args)
         {
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _exchanges.find(name);

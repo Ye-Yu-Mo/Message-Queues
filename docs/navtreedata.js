@@ -77,7 +77,7 @@ var NAVTREE =
       [ "类成员", "functions.html", [
         [ "全部", "functions.html", "functions_dup" ],
         [ "函数", "functions_func.html", "functions_func" ],
-        [ "变量", "functions_vars.html", null ],
+        [ "变量", "functions_vars.html", "functions_vars" ],
         [ "类型定义", "functions_type.html", null ],
         [ "枚举值", "functions_eval.html", null ],
         [ "相关函数", "functions_rela.html", null ]
@@ -99,11 +99,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594",
-"class_xu_m_q_1_1_message___payload.html#a6a9b800031dd6b063a1bbd03bbdc4a77",
-"class_xu_m_q_1_1_queue_message.html#a9f5ea21009d6f65b2536b7edda697668",
-"mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5",
-"struct_xu_m_q_1_1_msg_queue.html#abf4ef1e180d26f79fc50672365f857b7"
+"class_xu_m_q_1_1_channel.html#a78f1093af1868e5c2343ba3896cc16bd",
+"class_xu_m_q_1_1_message.html#ab618dbbac4a8d749da0d85c32932df36",
+"class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec",
+"class_xu_m_q_1_1basic_ack_request.html#a658fac4fbda34e2f0eac883556265a9c",
+"class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824",
+"class_xu_m_q_1_1basic_consume_response.html#a65ef99250494463f12d26dc6d3cc3759",
+"class_xu_m_q_1_1basic_publish_request.html#ab69ea6ab000303fc7c6f3822c5493f17",
+"class_xu_m_q_1_1close_channel_request.html#a81f0f3990a1ae17a4e0bfc7bd30cd007",
+"class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html",
+"class_xu_m_q_1_1delete_exchange_request.html#a1badbaf376923f8efe18b36abe076f16",
+"class_xu_m_q_1_1delete_queue_request.html#ad26036091251164b66f31e2d2370d034",
+"class_xu_m_q_1_1queue_bind_request.html#a7ba6383c08f40241d1a9075d71e0222c",
+"class_xu_m_q_1_1queue_un_bind_request.html#af1812fb5f60393b462502b82f69dc10c",
+"msg_8pb_8h.html#a4816a5c6a665a9846a019871c6310c7daa084eda8370385e513bc0599d3cc5811",
+"struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b",
+"struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html#a9fd8973b3c8710813d66ee5b90813a5c"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

@@ -42,9 +42,9 @@
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="251,156,202,156,202,151,251,151"/>
 <area shape="rect" id="Node000009" href="$class_xu_m_q_1_1_binding_manager.html#aa20a9e261cf940b3292d9e60e8e87eca" title="添加绑定信息" alt="" coords="21,197,195,237"/>
 <area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="261,220,195,220,195,215,261,215"/>
-<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1_exchange_manager.html#aa0218910dda04e6a6cba62882d433d6f" title="声明交换机" alt="" coords="13,261,203,301"/>
+<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1_exchange_manager.html#a009c0a6ba58b6585d07eec1d42eff0ad" title="声明交换机" alt="" coords="13,261,203,301"/>
 <area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="254,284,203,284,203,279,254,279"/>
-<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1_msg_queue_manager.html#a335dfce61a8747de639c588d077b30d5" title="声明消息队列" alt="" coords="11,325,205,365"/>
+<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1_msg_queue_manager.html#abef413a301ebe08def79bdd9427eb6de" title="声明消息队列" alt="" coords="11,325,205,365"/>
 <area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="251,348,206,348,206,343,251,343"/>
 <area shape="rect" id="Node000015" href="$class_xu_m_q_1_1_binding_manager.html#a9f465027655437a0124501e9b6614bf4" title="绑定信息数据内存管理类 构造函数 从数据库中恢复数据" alt="" coords="21,389,195,429"/>
 <area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="261,412,195,412,195,407,261,407"/>

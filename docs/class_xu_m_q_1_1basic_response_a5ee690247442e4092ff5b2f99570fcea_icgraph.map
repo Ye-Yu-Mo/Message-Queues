@@ -1,0 +1,25 @@
+<map id="XuMQ::basicResponse::set_cid" name="XuMQ::basicResponse::set_cid">
+<area shape="rect" id="Node000001" title=" " alt="" coords="569,221,736,261"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="295,228,521,253"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="556,243,521,243,521,238,556,238"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#affeb11d1543bca47890c4c417d064ea7" title="确认消息请求处理函数" alt="" coords="32,5,220,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="392,217,369,178,336,131,295,83,245,44,219,32,221,28,248,40,298,79,341,127,374,175,396,214"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_channel.html#a78f1093af1868e5c2343ba3896cc16bd" title=" " alt="" coords="22,55,230,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="387,219,329,155,289,122,245,94,217,83,219,78,248,89,292,117,332,151,391,215"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_channel.html#ac57143674354b4a66457ee45b2594326" title="订阅消息请求处理函数" alt="" coords="13,104,239,129"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="378,222,319,181,283,161,246,143,210,132,211,127,248,138,286,156,322,177,381,217"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_channel.html#afd0b2d0f7c207e201921899d89b2f24b" title="消息发布请求处理函数" alt="" coords="21,153,231,179"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="357,226,246,193,196,181,198,176,247,187,358,221"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_channel.html#a9fe8b4ca13ee55b9d6d998ffe129e66b" title="声明交换机请求处理函数" alt="" coords="5,203,247,228"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="281,232,246,229,247,224,281,227"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_channel.html#aa6eda661aad4a936238a293ce1530e5d" title="声明队列请求处理函数" alt="" coords="16,252,236,277"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="281,254,236,258,236,253,281,249"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1_channel.html#a951d9bbcda84618c530c66c4174a5d94" title="删除交换机请求处理函数" alt="" coords="9,301,243,327"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="355,260,247,291,193,304,191,299,246,286,354,255"/>
+<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1_channel.html#a12933a318b18977abfdae12ee8320dcc" title="删除队列请求处理函数" alt="" coords="19,351,233,376"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="380,264,321,303,248,340,207,353,205,348,246,336,318,298,377,259"/>
+<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1_channel.html#ab223e5e31ace1e49decb1aa402515b37" title="队列绑定请求处理函数" alt="" coords="27,400,225,425"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="390,266,332,328,292,362,248,390,216,402,214,397,245,385,289,358,328,325,386,262"/>
+<area shape="rect" id="Node000012" href="$class_xu_m_q_1_1_channel.html#adf7e85a96d113bb80f3c9b10b46c1f91" title="队列解绑请求处理函数" alt="" coords="17,449,235,475"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="396,267,373,306,340,353,298,400,248,439,220,452,218,447,245,434,294,396,336,349,368,303,391,265"/>
+</map>

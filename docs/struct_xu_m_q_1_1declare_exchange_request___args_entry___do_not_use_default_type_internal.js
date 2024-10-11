@@ -1,0 +1,6 @@
+var struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal =
+[
+    [ "declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal", "struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html#af85a3003e9be5b32fcc9363f9c967d10", null ],
+    [ "~declareExchangeRequest_ArgsEntry_DoNotUseDefaultTypeInternal", "struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html#ac9714e232840b32a4da205fa75df9d44", null ],
+    [ "_instance", "struct_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use_default_type_internal.html#ac2b586c21857d4b7e322a0ea278a830e", null ]
+];

@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: common/protocol.pb.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('protocol_8pb_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">protocol.pb.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;google/protobuf/port_def.inc&gt;</code><br />
+<code>#include &lt;google/protobuf/port_undef.inc&gt;</code><br />
+<code>#include &lt;google/protobuf/io/coded_stream.h&gt;</code><br />
+<code>#include &lt;google/protobuf/arena.h&gt;</code><br />
+<code>#include &lt;google/protobuf/arenastring.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_message_util.h&gt;</code><br />
+<code>#include &lt;google/protobuf/metadata_lite.h&gt;</code><br />
+<code>#include &lt;google/protobuf/generated_message_reflection.h&gt;</code><br />
+<code>#include &lt;google/protobuf/message.h&gt;</code><br />
+<code>#include &lt;google/protobuf/repeated_field.h&gt;</code><br />
+<code>#include &lt;google/protobuf/extension_set.h&gt;</code><br />
+<code>#include &lt;google/protobuf/map.h&gt;</code><br />
+<code>#include &lt;google/protobuf/map_entry.h&gt;</code><br />
+<code>#include &lt;google/protobuf/map_field_inl.h&gt;</code><br />
+<code>#include &lt;google/protobuf/unknown_field_set.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="msg_8pb_8h_source.html">msg.pb.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+protocol.pb.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8h__incl.png" border="0" usemap="#acommon_2protocol_8pb_8h" alt=""/></div>
+<map name="acommon_2protocol_8pb_8h" id="acommon_2protocol_8pb_8h">
+<area shape="rect" title=" " alt="" coords="1253,5,1421,31"/>
+<area shape="rect" title=" " alt="" coords="5,174,64,199"/>
+<area shape="poly" title=" " alt="" coords="1253,23,1038,28,760,38,488,55,376,67,291,81,228,100,166,123,68,170,66,165,164,118,226,95,290,76,375,62,488,50,760,33,1038,23,1253,18"/>
+<area shape="rect" title=" " alt="" coords="88,174,147,199"/>
+<area shape="poly" title=" " alt="" coords="1253,22,1105,25,909,33,688,51,576,64,467,81,379,98,311,116,160,169,155,171,153,166,158,164,309,111,378,93,466,76,576,59,688,46,908,28,1104,19,1253,17"/>
+<area shape="rect" title=" " alt="" coords="171,167,325,207"/>
+<area shape="poly" title=" " alt="" coords="1253,25,983,41,817,57,650,81,560,100,470,122,319,165,318,160,469,116,559,94,649,76,816,52,983,35,1253,19"/>
+<area shape="rect" title=" " alt="" coords="349,167,504,207"/>
+<area shape="poly" title=" " alt="" coords="1253,28,1053,46,934,62,815,81,643,122,497,165,496,160,642,117,814,76,933,56,1052,41,1253,22"/>
+<area shape="rect" title=" " alt="" coords="528,167,669,207"/>
+<area shape="poly" title=" " alt="" coords="1254,33,1123,53,977,81,812,123,671,165,669,160,810,118,975,76,1122,48,1253,28"/>
+<area shape="rect" title=" " alt="" coords="693,174,872,199"/>
+<area shape="poly" title=" " alt="" coords="1289,33,1106,81,953,129,829,172,827,167,951,124,1105,76,1288,28"/>
+<area shape="rect" title=" " alt="" coords="897,174,1111,199"/>
+<area shape="poly" title=" " alt="" coords="1302,33,1245,54,1181,81,1099,126,1033,169,1030,164,1097,122,1179,76,1243,49,1301,28"/>
+<area shape="rect" title=" " alt="" coords="1355,167,1549,207"/>
+<area shape="poly" title=" " alt="" coords="1338,31,1335,72,1338,95,1346,117,1366,140,1391,158,1388,162,1362,144,1342,120,1332,97,1329,72,1332,31"/>
+<area shape="rect" title=" " alt="" coords="1573,167,1765,207"/>
+<area shape="poly" title=" " alt="" coords="1343,30,1361,73,1376,97,1396,116,1418,125,1458,137,1564,161,1563,166,1457,142,1416,131,1393,121,1372,100,1356,75,1338,32"/>
+<area shape="rect" title=" " alt="" coords="1789,167,1984,207"/>
+<area shape="poly" title=" " alt="" coords="1350,29,1399,78,1425,102,1447,116,1492,135,1532,147,1569,153,1604,155,1680,156,1776,164,1775,169,1680,162,1604,161,1568,158,1531,152,1490,140,1444,121,1422,106,1395,82,1346,33"/>
+<area shape="rect" title=" " alt="" coords="2008,174,2208,199"/>
+<area shape="poly" title=" " alt="" coords="1360,28,1443,76,1469,99,1481,108,1497,116,1569,140,1631,153,1688,158,1741,159,1854,155,1920,157,1996,164,2031,169,2030,174,1996,169,1919,162,1854,161,1741,164,1687,164,1631,158,1568,145,1495,121,1478,112,1466,103,1440,81,1358,33"/>
+<area shape="rect" title=" " alt="" coords="2232,167,2419,207"/>
+<area shape="poly" title=" " alt="" coords="1374,28,1429,49,1489,76,1518,98,1530,108,1548,116,1609,131,1686,141,1871,151,2062,156,2218,164,2218,169,2062,161,1871,157,1686,147,1608,136,1546,121,1527,112,1515,102,1487,81,1427,54,1372,33"/>
+<area shape="rect" title=" " alt="" coords="2443,167,2637,207"/>
+<area shape="poly" title=" " alt="" coords="1391,28,1462,48,1537,76,1555,87,1568,98,1580,108,1598,116,1675,134,1772,145,1883,151,2001,154,2237,156,2342,159,2429,164,2429,169,2342,164,2237,162,2001,159,1882,156,1771,150,1674,139,1596,121,1577,112,1564,102,1552,91,1535,81,1460,53,1390,33"/>
+<area shape="rect" title=" " alt="" coords="1653,86,1824,111"/>
+<area shape="poly" title=" " alt="" coords="1396,28,1667,81,1666,86,1395,33"/>
+<area shape="rect" title=" " alt="" coords="1849,79,2007,119"/>
+<area shape="poly" title=" " alt="" coords="1422,25,1607,45,1835,76,1835,81,1606,50,1421,30"/>
+<area shape="rect" title=" " alt="" coords="2031,79,2190,119"/>
+<area shape="poly" title=" " alt="" coords="1422,21,1684,39,1849,55,2018,76,2018,81,1849,60,1684,44,1422,26"/>
+<area shape="rect" title=" " alt="" coords="2661,167,2849,207"/>
+<area shape="poly" title=" " alt="" coords="1420,28,1502,46,1586,76,1603,87,1615,98,1626,108,1642,116,1685,128,1735,138,1852,151,1987,157,2132,158,2417,157,2543,158,2647,164,2647,169,2543,164,2417,162,2132,164,1987,162,1852,156,1734,143,1684,133,1640,121,1623,112,1611,102,1600,91,1584,81,1500,52,1419,33"/>
+<area shape="rect" href="msg_8pb_8h.html" title=" " alt="" coords="1192,86,1275,111"/>
+<area shape="poly" title=" " alt="" coords="1324,33,1261,80,1258,76,1320,29"/>
+<area shape="poly" title=" " alt="" coords="1192,103,971,107,648,117,317,137,179,151,77,169,70,171,68,166,75,164,179,146,317,131,647,111,971,101,1191,98"/>
+<area shape="poly" title=" " alt="" coords="1192,103,986,108,686,119,381,138,254,152,159,169,152,171,151,166,158,164,253,147,380,133,686,113,986,102,1192,98"/>
+<area shape="poly" title=" " alt="" coords="1192,104,844,121,596,140,339,169,339,164,596,135,844,115,1191,98"/>
+<area shape="poly" title=" " alt="" coords="1192,105,913,125,719,144,518,169,517,164,719,138,913,119,1192,100"/>
+<area shape="poly" title=" " alt="" coords="1192,106,978,128,834,146,683,169,683,164,833,141,978,123,1192,101"/>
+<area shape="poly" title=" " alt="" coords="1192,110,857,174,856,169,1191,105"/>
+<area shape="poly" title=" " alt="" coords="1203,114,1048,172,1047,167,1201,109"/>
+<area shape="poly" title=" " alt="" coords="1264,109,1392,159,1390,164,1262,114"/>
+<area shape="poly" title=" " alt="" coords="1275,105,1561,161,1560,167,1274,111"/>
+<area shape="poly" title=" " alt="" coords="1275,102,1776,164,1775,169,1274,107"/>
+<area shape="poly" title=" " alt="" coords="1275,101,1446,116,1721,136,1842,146,1996,164,2032,169,2031,174,1996,169,1841,152,1721,142,1445,121,1275,106"/>
+<area shape="poly" title=" " alt="" coords="1275,100,1496,116,1698,127,1856,134,2015,143,2219,164,2218,169,2015,149,1856,139,1698,133,1496,121,1275,106"/>
+<area shape="poly" title=" " alt="" coords="1275,100,1547,116,1793,127,1987,132,2181,141,2430,164,2429,169,2181,147,1987,137,1793,132,1547,121,1275,105"/>
+<area shape="poly" title=" " alt="" coords="1275,100,1597,116,1891,126,2121,129,2352,138,2647,164,2647,169,2352,143,2121,135,1891,131,1597,121,1275,105"/>
+<area shape="rect" title=" " alt="" coords="1136,167,1331,207"/>
+<area shape="poly" title=" " alt="" coords="1236,112,1236,153,1231,153,1231,112"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="protocol_8pb_8h__dep__incl.png" border="0" usemap="#acommon_2protocol_8pb_8hdep" alt=""/></div>
+<map name="acommon_2protocol_8pb_8hdep" id="acommon_2protocol_8pb_8hdep">
+<area shape="rect" title=" " alt="" coords="101,5,269,31"/>
+<area shape="rect" href="protocol_8pb_8cc.html" title=" " alt="" coords="5,79,180,104"/>
+<area shape="poly" title=" " alt="" coords="161,41,109,81,106,76,158,37"/>
+<area shape="rect" href="channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="205,79,351,104"/>
+<area shape="poly" title=" " alt="" coords="212,37,264,76,261,81,209,41"/>
+<area shape="rect" href="mqchanneltest_8cpp.html" title=" " alt="" coords="191,152,365,177"/>
+<area shape="poly" title=" " alt="" coords="281,118,281,152,275,152,275,118"/>
+</map>
+</div>
+</div>
+<p><a href="protocol_8pb_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_table_struct__protocol__2eproto.html">TableStruct_protocol_2eproto</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1open_channel_request.html">XuMQ::openChannelRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1open_channel_request_1_1_impl__.html">XuMQ::openChannelRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1close_channel_request.html">XuMQ::closeChannelRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1close_channel_request_1_1_impl__.html">XuMQ::closeChannelRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html">XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_exchange_request.html">XuMQ::declareExchangeRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_exchange_request_1_1_impl__.html">XuMQ::declareExchangeRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">XuMQ::deleteExchangeRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1delete_exchange_request_1_1_impl__.html">XuMQ::deleteExchangeRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html">XuMQ::declareQueueRequest_ArgsEntry_DoNotUse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">XuMQ::declareQueueRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html">XuMQ::declareQueueRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_queue_request.html">XuMQ::deleteQueueRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1delete_queue_request_1_1_impl__.html">XuMQ::deleteQueueRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1queue_bind_request.html">XuMQ::queueBindRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1queue_bind_request_1_1_impl__.html">XuMQ::queueBindRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1queue_un_bind_request.html">XuMQ::queueUnBindRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1queue_un_bind_request_1_1_impl__.html">XuMQ::queueUnBindRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_publish_request.html">XuMQ::basicPublishRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_publish_request_1_1_impl__.html">XuMQ::basicPublishRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_ack_request.html">XuMQ::basicAckRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_ack_request_1_1_impl__.html">XuMQ::basicAckRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_consume_request.html">XuMQ::basicConsumeRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_consume_request_1_1_impl__.html">XuMQ::basicConsumeRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">XuMQ::basicCancelRequest</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html">XuMQ::basicCancelRequest::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_consume_response.html">XuMQ::basicConsumeResponse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_consume_response_1_1_impl__.html">XuMQ::basicConsumeResponse::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_response.html">XuMQ::basicResponse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_response_1_1_impl__.html">XuMQ::basicResponse::Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespaceinternal" id="r_namespaceinternal"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinternal.html">internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_xu_m_q" id="r_namespace_xu_m_q"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a5f8202b719a842fe48c7beb0948d620f" id="r_a5f8202b719a842fe48c7beb0948d620f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a5f8202b719a842fe48c7beb0948d620f">PROTOBUF_INTERNAL_EXPORT_protocol_2eproto</a></td></tr>
+<tr class="separator:a5f8202b719a842fe48c7beb0948d620f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a22ad190b30f444825ca9aed8f2a49e43" id="r_a22ad190b30f444825ca9aed8f2a49e43"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a22ad190b30f444825ca9aed8f2a49e43"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_NAMESPACE_OPEN <a class="el" href="class_xu_m_q_1_1basic_ack_request.html">::XuMQ::basicAckRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a22ad190b30f444825ca9aed8f2a49e43">Arena::CreateMaybeMessage&lt;::XuMQ::basicAckRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a22ad190b30f444825ca9aed8f2a49e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a2eccbddfef9600111f86be618f791b" id="r_a3a2eccbddfef9600111f86be618f791b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a3a2eccbddfef9600111f86be618f791b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">::XuMQ::basicCancelRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a3a2eccbddfef9600111f86be618f791b">Arena::CreateMaybeMessage&lt;::XuMQ::basicCancelRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a3a2eccbddfef9600111f86be618f791b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca05552d252f3909ed9705f76edb0826" id="r_aca05552d252f3909ed9705f76edb0826"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aca05552d252f3909ed9705f76edb0826"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_consume_request.html">::XuMQ::basicConsumeRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#aca05552d252f3909ed9705f76edb0826">Arena::CreateMaybeMessage&lt;::XuMQ::basicConsumeRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:aca05552d252f3909ed9705f76edb0826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a226991aff72d7c700173391b449e9840" id="r_a226991aff72d7c700173391b449e9840"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a226991aff72d7c700173391b449e9840"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_consume_response.html">::XuMQ::basicConsumeResponse</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a226991aff72d7c700173391b449e9840">Arena::CreateMaybeMessage&lt;::XuMQ::basicConsumeResponse &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a226991aff72d7c700173391b449e9840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd74dd694a3b9c75f8979ce87b59efd0" id="r_abd74dd694a3b9c75f8979ce87b59efd0"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:abd74dd694a3b9c75f8979ce87b59efd0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_publish_request.html">::XuMQ::basicPublishRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#abd74dd694a3b9c75f8979ce87b59efd0">Arena::CreateMaybeMessage&lt;::XuMQ::basicPublishRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:abd74dd694a3b9c75f8979ce87b59efd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8a804f80a2980a27ea596b83eb84bf" id="r_a2e8a804f80a2980a27ea596b83eb84bf"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a2e8a804f80a2980a27ea596b83eb84bf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_response.html">::XuMQ::basicResponse</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a2e8a804f80a2980a27ea596b83eb84bf">Arena::CreateMaybeMessage&lt;::XuMQ::basicResponse &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a2e8a804f80a2980a27ea596b83eb84bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef3296e286036619eac8a2a05484162" id="r_aaef3296e286036619eac8a2a05484162"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aaef3296e286036619eac8a2a05484162"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1close_channel_request.html">::XuMQ::closeChannelRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#aaef3296e286036619eac8a2a05484162">Arena::CreateMaybeMessage&lt;::XuMQ::closeChannelRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:aaef3296e286036619eac8a2a05484162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bba718ea59d4318493c939ffa316daf" id="r_a2bba718ea59d4318493c939ffa316daf"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a2bba718ea59d4318493c939ffa316daf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_exchange_request.html">::XuMQ::declareExchangeRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a2bba718ea59d4318493c939ffa316daf">Arena::CreateMaybeMessage&lt;::XuMQ::declareExchangeRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a2bba718ea59d4318493c939ffa316daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab860e5d6b3cf079bae0ae5514081009" id="r_aab860e5d6b3cf079bae0ae5514081009"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aab860e5d6b3cf079bae0ae5514081009"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html">::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#aab860e5d6b3cf079bae0ae5514081009">Arena::CreateMaybeMessage&lt;::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse &gt;</a> (Arena *)</td></tr>
+<tr class="separator:aab860e5d6b3cf079bae0ae5514081009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f92e188fed32525836f94d2dfdfc5cf" id="r_a2f92e188fed32525836f94d2dfdfc5cf"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a2f92e188fed32525836f94d2dfdfc5cf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">::XuMQ::declareQueueRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a2f92e188fed32525836f94d2dfdfc5cf">Arena::CreateMaybeMessage&lt;::XuMQ::declareQueueRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a2f92e188fed32525836f94d2dfdfc5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae35a7d0ddc0fbc824fae34e25c1499ab" id="r_ae35a7d0ddc0fbc824fae34e25c1499ab"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ae35a7d0ddc0fbc824fae34e25c1499ab"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html">::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#ae35a7d0ddc0fbc824fae34e25c1499ab">Arena::CreateMaybeMessage&lt;::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse &gt;</a> (Arena *)</td></tr>
+<tr class="separator:ae35a7d0ddc0fbc824fae34e25c1499ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a72dbefa4ebb7c03eae36a4cd9c697" id="r_ac0a72dbefa4ebb7c03eae36a4cd9c697"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:ac0a72dbefa4ebb7c03eae36a4cd9c697"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">::XuMQ::deleteExchangeRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#ac0a72dbefa4ebb7c03eae36a4cd9c697">Arena::CreateMaybeMessage&lt;::XuMQ::deleteExchangeRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:ac0a72dbefa4ebb7c03eae36a4cd9c697"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e23b55d7254461a35efc6173136c0b" id="r_a83e23b55d7254461a35efc6173136c0b"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a83e23b55d7254461a35efc6173136c0b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1delete_queue_request.html">::XuMQ::deleteQueueRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a83e23b55d7254461a35efc6173136c0b">Arena::CreateMaybeMessage&lt;::XuMQ::deleteQueueRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a83e23b55d7254461a35efc6173136c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa86b2a23ea67fec7865949ff47d9a7" id="r_a4aa86b2a23ea67fec7865949ff47d9a7"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4aa86b2a23ea67fec7865949ff47d9a7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1open_channel_request.html">::XuMQ::openChannelRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a4aa86b2a23ea67fec7865949ff47d9a7">Arena::CreateMaybeMessage&lt;::XuMQ::openChannelRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a4aa86b2a23ea67fec7865949ff47d9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4727b07892df3dbd2e7fdcdf07980df8" id="r_a4727b07892df3dbd2e7fdcdf07980df8"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:a4727b07892df3dbd2e7fdcdf07980df8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1queue_bind_request.html">::XuMQ::queueBindRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#a4727b07892df3dbd2e7fdcdf07980df8">Arena::CreateMaybeMessage&lt;::XuMQ::queueBindRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:a4727b07892df3dbd2e7fdcdf07980df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa22ce2fa1bb167cd468ddee5d215917e" id="r_aa22ce2fa1bb167cd468ddee5d215917e"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
+<tr class="memitem:aa22ce2fa1bb167cd468ddee5d215917e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1queue_un_bind_request.html">::XuMQ::queueUnBindRequest</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#aa22ce2fa1bb167cd468ddee5d215917e">Arena::CreateMaybeMessage&lt;::XuMQ::queueUnBindRequest &gt;</a> (Arena *)</td></tr>
+<tr class="separator:aa22ce2fa1bb167cd468ddee5d215917e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ab456c8a900a92425ed2803cd7246fc82" id="r_ab456c8a900a92425ed2803cd7246fc82"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8pb_8h.html#ab456c8a900a92425ed2803cd7246fc82">descriptor_table_protocol_2eproto</a></td></tr>
+<tr class="separator:ab456c8a900a92425ed2803cd7246fc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a5f8202b719a842fe48c7beb0948d620f" name="a5f8202b719a842fe48c7beb0948d620f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8202b719a842fe48c7beb0948d620f">&#9670;&#160;</a></span>PROTOBUF_INTERNAL_EXPORT_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROTOBUF_INTERNAL_EXPORT_protocol_2eproto</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a22ad190b30f444825ca9aed8f2a49e43" name="a22ad190b30f444825ca9aed8f2a49e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22ad190b30f444825ca9aed8f2a49e43">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicAckRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_OPEN <a class="el" href="class_xu_m_q_1_1basic_ack_request.html">::XuMQ::basicAckRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_ack_request.html">::XuMQ::basicAckRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a2eccbddfef9600111f86be618f791b" name="a3a2eccbddfef9600111f86be618f791b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a2eccbddfef9600111f86be618f791b">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicCancelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">::XuMQ::basicCancelRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">::XuMQ::basicCancelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca05552d252f3909ed9705f76edb0826" name="aca05552d252f3909ed9705f76edb0826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca05552d252f3909ed9705f76edb0826">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicConsumeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_consume_request.html">::XuMQ::basicConsumeRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_consume_request.html">::XuMQ::basicConsumeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a226991aff72d7c700173391b449e9840" name="a226991aff72d7c700173391b449e9840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a226991aff72d7c700173391b449e9840">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicConsumeResponse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_consume_response.html">::XuMQ::basicConsumeResponse</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_consume_response.html">::XuMQ::basicConsumeResponse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd74dd694a3b9c75f8979ce87b59efd0" name="abd74dd694a3b9c75f8979ce87b59efd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd74dd694a3b9c75f8979ce87b59efd0">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicPublishRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_publish_request.html">::XuMQ::basicPublishRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_publish_request.html">::XuMQ::basicPublishRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e8a804f80a2980a27ea596b83eb84bf" name="a2e8a804f80a2980a27ea596b83eb84bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8a804f80a2980a27ea596b83eb84bf">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::basicResponse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_response.html">::XuMQ::basicResponse</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1basic_response.html">::XuMQ::basicResponse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaef3296e286036619eac8a2a05484162" name="aaef3296e286036619eac8a2a05484162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef3296e286036619eac8a2a05484162">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::closeChannelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1close_channel_request.html">::XuMQ::closeChannelRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1close_channel_request.html">::XuMQ::closeChannelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bba718ea59d4318493c939ffa316daf" name="a2bba718ea59d4318493c939ffa316daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bba718ea59d4318493c939ffa316daf">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::declareExchangeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_exchange_request.html">::XuMQ::declareExchangeRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1declare_exchange_request.html">::XuMQ::declareExchangeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab860e5d6b3cf079bae0ae5514081009" name="aab860e5d6b3cf079bae0ae5514081009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab860e5d6b3cf079bae0ae5514081009">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html">::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html">::XuMQ::declareExchangeRequest_ArgsEntry_DoNotUse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f92e188fed32525836f94d2dfdfc5cf" name="a2f92e188fed32525836f94d2dfdfc5cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f92e188fed32525836f94d2dfdfc5cf">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::declareQueueRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_queue_request.html">::XuMQ::declareQueueRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1declare_queue_request.html">::XuMQ::declareQueueRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae35a7d0ddc0fbc824fae34e25c1499ab" name="ae35a7d0ddc0fbc824fae34e25c1499ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae35a7d0ddc0fbc824fae34e25c1499ab">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html">::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1declare_queue_request___args_entry___do_not_use.html">::XuMQ::declareQueueRequest_ArgsEntry_DoNotUse</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0a72dbefa4ebb7c03eae36a4cd9c697" name="ac0a72dbefa4ebb7c03eae36a4cd9c697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a72dbefa4ebb7c03eae36a4cd9c697">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::deleteExchangeRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">::XuMQ::deleteExchangeRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">::XuMQ::deleteExchangeRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a83e23b55d7254461a35efc6173136c0b" name="a83e23b55d7254461a35efc6173136c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e23b55d7254461a35efc6173136c0b">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::deleteQueueRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1delete_queue_request.html">::XuMQ::deleteQueueRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1delete_queue_request.html">::XuMQ::deleteQueueRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4aa86b2a23ea67fec7865949ff47d9a7" name="a4aa86b2a23ea67fec7865949ff47d9a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa86b2a23ea67fec7865949ff47d9a7">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::openChannelRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1open_channel_request.html">::XuMQ::openChannelRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1open_channel_request.html">::XuMQ::openChannelRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4727b07892df3dbd2e7fdcdf07980df8" name="a4727b07892df3dbd2e7fdcdf07980df8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4727b07892df3dbd2e7fdcdf07980df8">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::queueBindRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1queue_bind_request.html">::XuMQ::queueBindRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1queue_bind_request.html">::XuMQ::queueBindRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa22ce2fa1bb167cd468ddee5d215917e" name="aa22ce2fa1bb167cd468ddee5d215917e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22ce2fa1bb167cd468ddee5d215917e">&#9670;&#160;</a></span>Arena::CreateMaybeMessage&lt;::XuMQ::queueUnBindRequest &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1queue_un_bind_request.html">::XuMQ::queueUnBindRequest</a> * Arena::CreateMaybeMessage&lt;<a class="el" href="class_xu_m_q_1_1queue_un_bind_request.html">::XuMQ::queueUnBindRequest</a> &gt; </td>
+          <td>(</td>
+          <td class="paramtype">Arena *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ab456c8a900a92425ed2803cd7246fc82" name="ab456c8a900a92425ed2803cd7246fc82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab456c8a900a92425ed2803cd7246fc82">&#9670;&#160;</a></span>descriptor_table_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protocol_2eproto</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bdd9a5d540de89e9fe90efdfc6973a4f.html">common</a></li><li class="navelem"><a class="el" href="protocol_8pb_8h.html">protocol.pb.h</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

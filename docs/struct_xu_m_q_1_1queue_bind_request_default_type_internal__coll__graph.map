@@ -1,0 +1,9 @@
+<map id="XuMQ::queueBindRequestDefaultTypeInternal" name="XuMQ::queueBindRequestDefaultTypeInternal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="82,196,321,236"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1queue_bind_request.html" title=" " alt="" coords="106,108,297,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,147,204,196,199,196,199,147"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,52,190,106,186,110,126,56"/>
+<area shape="rect" id="Node000004" href="$struct_xu_m_q_1_1queue_bind_request_1_1_impl__.html" title=" " alt="" coords="211,5,402,45"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="277,56,216,110,213,106,274,52"/>
+</map>

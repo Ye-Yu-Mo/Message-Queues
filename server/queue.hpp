@@ -29,7 +29,7 @@ namespace XuMQ
         bool durable;                                      ///< 持久化标志
         bool exclusive;                                    ///< 独占标志
         bool auto_delete;                                  ///< 自动删除标志
-        std::unordered_map<std::string, std::string> args; ///< 其他参数
+        google::protobuf::Map<std::string, std::string> args; ///< 其他参数
         /// @brief 无参构造
         MsgQueue() {}
         /// @brief 构造函数
@@ -42,7 +42,7 @@ namespace XuMQ
                  bool qdurable,
                  bool qexclusive,
                  bool qauto_delete,
-                 const std::unordered_map<std::string, std::string> &qargs) : name(qname), durable(qdurable), exclusive(qexclusive),
+                 const google::protobuf::Map<std::string, std::string> &qargs) : name(qname), durable(qdurable), exclusive(qexclusive),
                                                                         auto_delete(qauto_delete), args(qargs)
         {
         }
@@ -60,7 +60,7 @@ namespace XuMQ
                 size_t pos = str.find('=');
                 std::string key = str.substr(0, pos);
                 std::string value = str.substr(pos + 1);
-                args.insert(std::make_pair(key, value));
+                args[key] = value;
             }
         }
         /// @brief 将映射成员转化为字符串
@@ -212,7 +212,7 @@ namespace XuMQ
                           bool qdurable,
                           bool qexclusive,
                           bool qauto_delete,
-                          const std::unordered_map<std::string, std::string> &qargs)
+                          const google::protobuf::Map<std::string, std::string> &qargs)
         {
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _queues.find(qname);

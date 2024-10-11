@@ -1,5 +1,9 @@
 <map id="XuMQ::BasicProperties::id" name="XuMQ::BasicProperties::id">
-<area shape="rect" id="Node000001" title=" " alt="" coords="223,13,413,38"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc" title="插入推送消息队列" alt="" coords="5,5,175,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,28,175,28,175,23,209,23"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="511,35,701,60"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#ac43307fec3c360dde235c6ad45b7338e" title="消费者回调函数" alt="" coords="279,5,463,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,36,463,32,463,27,497,31"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc" title="插入推送消息队列" alt="" coords="286,55,455,95"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="497,63,456,68,455,63,497,58"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#ac57143674354b4a66457ee45b2594326" title="订阅消息请求处理函数" alt="" coords="5,5,231,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,21,231,21,231,15,265,15"/>
 </map>

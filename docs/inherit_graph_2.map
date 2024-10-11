@@ -1,7 +1,37 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,45,117,70"/>
-<area shape="rect" id="Node000001" href="$structis__proto__enum_3_01_1_1_xu_m_q_1_1_delivery_mode_01_4.html" title=" " alt="" coords="165,5,345,45"/>
-<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="130,43,165,38,166,43,131,49"/>
-<area shape="rect" id="Node000002" href="$structis__proto__enum_3_01_1_1_xu_m_q_1_1_exchange_type_01_4.html" title=" " alt="" coords="165,69,345,109"/>
-<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="131,66,166,72,165,77,130,71"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,393,187,433"/>
+<area shape="rect" id="Node000001" href="$class_xu_m_q_1_1_basic_properties.html" title=" " alt="" coords="266,5,437,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="97,378,106,307,128,215,146,167,168,121,197,77,233,40,265,23,267,27,236,44,202,81,173,123,151,169,133,217,111,308,102,379"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_message.html" title=" " alt="" coords="288,55,415,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="99,378,111,316,135,237,153,196,175,157,201,121,233,89,259,75,287,67,288,72,261,79,236,93,205,124,179,160,158,199,140,239,116,317,104,379"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_message___payload.html" title=" " alt="" coords="259,104,444,129"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="102,379,117,325,142,260,181,194,205,164,233,138,257,125,260,130,236,143,209,168,185,197,147,262,122,327,107,380"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_ack_request.html" title=" " alt="" coords="261,153,441,179"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="106,379,123,335,150,283,187,231,209,208,233,188,260,174,262,179,236,192,212,212,191,234,155,286,128,337,111,381"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_cancel_request.html" title=" " alt="" coords="251,203,451,228"/>
+<area shape="poly" id="edge7_Node000000_Node000005" title=" " alt="" coords="111,379,132,345,159,306,193,268,233,237,257,226,259,231,236,242,197,272,163,310,136,348,116,382"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1basic_consume_request.html" title=" " alt="" coords="243,252,460,277"/>
+<area shape="poly" id="edge8_Node000000_Node000006" title=" " alt="" coords="121,380,169,331,200,307,233,286,262,275,264,280,236,291,203,311,173,335,124,384"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1basic_consume_response.html" title=" " alt="" coords="238,301,465,327"/>
+<area shape="poly" id="edge9_Node000000_Node000007" title=" " alt="" coords="138,383,183,358,234,335,272,324,274,329,236,341,186,363,141,388"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1basic_publish_request.html" title=" " alt="" coords="250,351,453,376"/>
+<area shape="poly" id="edge10_Node000000_Node000008" title=" " alt="" coords="200,390,284,373,285,379,201,395"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1basic_response.html" title=" " alt="" coords="268,400,435,425"/>
+<area shape="poly" id="edge11_Node000000_Node000009" title=" " alt="" coords="201,410,268,410,268,415,201,415"/>
+<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1close_channel_request.html" title=" " alt="" coords="247,449,456,475"/>
+<area shape="poly" id="edge12_Node000000_Node000010" title=" " alt="" coords="201,430,285,447,284,452,200,435"/>
+<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1declare_exchange_request.html" title=" " alt="" coords="235,499,468,524"/>
+<area shape="poly" id="edge13_Node000000_Node000011" title=" " alt="" coords="142,437,186,462,236,483,279,496,277,501,234,489,184,466,139,442"/>
+<area shape="rect" id="Node000012" href="$class_xu_m_q_1_1declare_queue_request.html" title=" " alt="" coords="245,548,457,573"/>
+<area shape="poly" id="edge14_Node000000_Node000012" title=" " alt="" coords="124,441,173,489,203,513,236,533,268,545,266,550,233,538,200,517,170,493,121,445"/>
+<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1delete_exchange_request.html" title=" " alt="" coords="238,597,465,623"/>
+<area shape="poly" id="edge15_Node000000_Node000013" title=" " alt="" coords="116,443,136,477,164,515,197,552,236,582,263,595,261,600,233,587,193,556,159,518,132,480,112,446"/>
+<area shape="rect" id="Node000014" href="$class_xu_m_q_1_1delete_queue_request.html" title=" " alt="" coords="249,647,454,672"/>
+<area shape="poly" id="edge16_Node000000_Node000014" title=" " alt="" coords="111,445,129,488,155,539,191,590,213,612,236,632,260,644,257,649,233,636,209,616,187,593,151,542,124,490,106,447"/>
+<area shape="rect" id="Node000015" href="$class_xu_m_q_1_1open_channel_request.html" title=" " alt="" coords="248,696,455,721"/>
+<area shape="poly" id="edge17_Node000000_Node000015" title=" " alt="" coords="107,445,122,498,148,562,185,627,209,656,236,681,258,694,255,698,233,685,205,660,181,630,143,565,117,500,102,447"/>
+<area shape="rect" id="Node000016" href="$class_xu_m_q_1_1queue_bind_request.html" title=" " alt="" coords="256,745,447,771"/>
+<area shape="poly" id="edge18_Node000000_Node000016" title=" " alt="" coords="104,446,117,508,141,585,158,625,179,664,205,700,236,731,257,743,254,748,233,735,201,703,175,667,153,628,136,587,111,509,99,447"/>
+<area shape="rect" id="Node000017" href="$class_xu_m_q_1_1queue_un_bind_request.html" title=" " alt="" coords="247,795,456,820"/>
+<area shape="poly" id="edge19_Node000000_Node000017" title=" " alt="" coords="102,446,112,517,134,607,151,655,173,701,202,743,236,780,256,792,253,797,233,784,198,747,169,704,146,657,128,609,106,518,97,447"/>
 </map>

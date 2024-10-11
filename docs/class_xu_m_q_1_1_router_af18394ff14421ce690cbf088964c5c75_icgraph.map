@@ -1,5 +1,7 @@
 <map id="XuMQ::Router::route" name="XuMQ::Router::route">
-<area shape="rect" id="Node000001" title="路由选择" alt="" coords="108,5,263,31"/>
-<area shape="rect" id="Node000002" href="$mqroute_8cpp.html#a342162fad0d7af211a469e11596eff09" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+<area shape="rect" id="Node000001" title="路由选择" alt="" coords="264,31,419,56"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#afd0b2d0f7c207e201921899d89b2f24b" title="消息发布请求处理函数" alt="" coords="5,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,36,216,32,217,27,250,31"/>
+<area shape="rect" id="Node000003" href="$mqroute_8cpp.html#a342162fad0d7af211a469e11596eff09" title=" " alt="" coords="83,55,138,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="250,55,139,67,138,62,250,50"/>
 </map>

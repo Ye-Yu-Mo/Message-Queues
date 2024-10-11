@@ -1,0 +1,2486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::deleteExchangeRequest类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1delete_exchange_request.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_xu_m_q_1_1delete_exchange_request-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::deleteExchangeRequest类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="protocol_8pb_8h_source.html">protocol.pb.h</a>&gt;</code></p>
+<div class="dynheader">
+类 XuMQ::deleteExchangeRequest 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request__inherit__graph.png" border="0" usemap="#a_xu_m_q_1_1delete_exchange_request_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_xu_m_q_1_1delete_exchange_request_inherit__map" id="a_xu_m_q_1_1delete_exchange_request_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,93,232,119"/>
+<area shape="rect" title=" " alt="" coords="28,5,209,45"/>
+<area shape="poly" title=" " alt="" coords="121,59,121,93,116,93,116,59"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+XuMQ::deleteExchangeRequest 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1delete_exchange_request_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1delete_exchange_request_coll__map" id="a_xu_m_q_1_1delete_exchange_request_coll__map">
+<area shape="rect" title=" " alt="" coords="96,108,323,133"/>
+<area shape="rect" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" title=" " alt="" coords="131,52,197,106,193,110,128,56"/>
+<area shape="rect" href="struct_xu_m_q_1_1delete_exchange_request_1_1_impl__.html" title=" " alt="" coords="211,5,437,45"/>
+<area shape="poly" title=" " alt="" coords="292,56,225,110,222,106,288,52"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request_1_1___internal.html">_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1delete_exchange_request_1_1_impl__.html">Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a311dc73ad22acd40805af0084639e845" id="r_a311dc73ad22acd40805af0084639e845"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a311dc73ad22acd40805af0084639e845a1baf4c70937edfc0bc5fa710e9c5da91">kRidFieldNumber</a> = 1
+, <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a311dc73ad22acd40805af0084639e845a9762b3498a515b996932ceebc736118f">kCidFieldNumber</a> = 2
+, <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a311dc73ad22acd40805af0084639e845a6a34f85d84513116883f97e1981777ac">kExchangeNameFieldNumber</a> = 3
+ }</td></tr>
+<tr class="separator:a311dc73ad22acd40805af0084639e845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:af19772e3115f493ed2dc0fc434ff2142" id="r_af19772e3115f493ed2dc0fc434ff2142"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#af19772e3115f493ed2dc0fc434ff2142">deleteExchangeRequest</a> ()</td></tr>
+<tr class="separator:af19772e3115f493ed2dc0fc434ff2142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82633fe7b1ed05647677ab4fa0f9973" id="r_ac82633fe7b1ed05647677ab4fa0f9973"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ac82633fe7b1ed05647677ab4fa0f9973">~deleteExchangeRequest</a> () override</td></tr>
+<tr class="separator:ac82633fe7b1ed05647677ab4fa0f9973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24b47625ce2e94eb733a7902c86dcd05" id="r_a24b47625ce2e94eb733a7902c86dcd05"><td class="memItemLeft" align="right" valign="top">PROTOBUF_CONSTEXPR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a24b47625ce2e94eb733a7902c86dcd05">deleteExchangeRequest</a> (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)</td></tr>
+<tr class="separator:a24b47625ce2e94eb733a7902c86dcd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83ea55eb17f09b6a2cf57f390df72ba" id="r_aa83ea55eb17f09b6a2cf57f390df72ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aa83ea55eb17f09b6a2cf57f390df72ba">deleteExchangeRequest</a> (const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;from)</td></tr>
+<tr class="separator:aa83ea55eb17f09b6a2cf57f390df72ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf5865aec0f6211ceebc2ae5654ec9f" id="r_a8bf5865aec0f6211ceebc2ae5654ec9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a8bf5865aec0f6211ceebc2ae5654ec9f">deleteExchangeRequest</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:a8bf5865aec0f6211ceebc2ae5654ec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cf16a0d6d00d734b4a3a7a5e6e07d7" id="r_ae4cf16a0d6d00d734b4a3a7a5e6e07d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ae4cf16a0d6d00d734b4a3a7a5e6e07d7">operator=</a> (const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;from)</td></tr>
+<tr class="separator:ae4cf16a0d6d00d734b4a3a7a5e6e07d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d113c54b989a1c2d3125e58b76b8fb" id="r_a03d113c54b989a1c2d3125e58b76b8fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a03d113c54b989a1c2d3125e58b76b8fb">operator=</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:a03d113c54b989a1c2d3125e58b76b8fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48cde75427eb409d461335f08e6954d" id="r_ac48cde75427eb409d461335f08e6954d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ac48cde75427eb409d461335f08e6954d">Swap</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *other)</td></tr>
+<tr class="separator:ac48cde75427eb409d461335f08e6954d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd010388b74ec9ecda3226d83a4a26f" id="r_aedd010388b74ec9ecda3226d83a4a26f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aedd010388b74ec9ecda3226d83a4a26f">UnsafeArenaSwap</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *other)</td></tr>
+<tr class="separator:aedd010388b74ec9ecda3226d83a4a26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad777a97cc82c8891a687e054c5ad9c56" id="r_ad777a97cc82c8891a687e054c5ad9c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ad777a97cc82c8891a687e054c5ad9c56">New</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final</td></tr>
+<tr class="separator:ad777a97cc82c8891a687e054c5ad9c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667e9071763ad12f270c6acf692f2ec8" id="r_a667e9071763ad12f270c6acf692f2ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a667e9071763ad12f270c6acf692f2ec8">CopyFrom</a> (const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;from)</td></tr>
+<tr class="separator:a667e9071763ad12f270c6acf692f2ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d9b9f125228016154aff534556b36ae" id="r_a9d9b9f125228016154aff534556b36ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a9d9b9f125228016154aff534556b36ae">MergeFrom</a> (const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;from)</td></tr>
+<tr class="separator:a9d9b9f125228016154aff534556b36ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1badbaf376923f8efe18b36abe076f16" id="r_a1badbaf376923f8efe18b36abe076f16"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_REINITIALIZES void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a1badbaf376923f8efe18b36abe076f16">Clear</a> () final</td></tr>
+<tr class="separator:a1badbaf376923f8efe18b36abe076f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ec1b6295880e4ae2e66fdcde58ce08" id="r_a71ec1b6295880e4ae2e66fdcde58ce08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a71ec1b6295880e4ae2e66fdcde58ce08">IsInitialized</a> () const final</td></tr>
+<tr class="separator:a71ec1b6295880e4ae2e66fdcde58ce08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7801842c154743c12840864734a7dcc8" id="r_a7801842c154743c12840864734a7dcc8"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a7801842c154743c12840864734a7dcc8">ByteSizeLong</a> () const final</td></tr>
+<tr class="separator:a7801842c154743c12840864734a7dcc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e288461b266f0f3b3dcf6e5fdfcc24d" id="r_a3e288461b266f0f3b3dcf6e5fdfcc24d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a3e288461b266f0f3b3dcf6e5fdfcc24d">_InternalParse</a> (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final</td></tr>
+<tr class="separator:a3e288461b266f0f3b3dcf6e5fdfcc24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372e5ae6fe5c8878f97b76fb420eb996" id="r_a372e5ae6fe5c8878f97b76fb420eb996"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a372e5ae6fe5c8878f97b76fb420eb996">_InternalSerialize</a> (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final</td></tr>
+<tr class="separator:a372e5ae6fe5c8878f97b76fb420eb996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bf4b9dc0fe00d63d7dd94dfd9ea458" id="r_ac9bf4b9dc0fe00d63d7dd94dfd9ea458"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ac9bf4b9dc0fe00d63d7dd94dfd9ea458">GetCachedSize</a> () const final</td></tr>
+<tr class="separator:ac9bf4b9dc0fe00d63d7dd94dfd9ea458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a10310a68b70bf4973cf3447b132e1a" id="r_a2a10310a68b70bf4973cf3447b132e1a"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a2a10310a68b70bf4973cf3447b132e1a">GetClassData</a> () const final</td></tr>
+<tr class="separator:a2a10310a68b70bf4973cf3447b132e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966f47c47bb94195f4b40c8fa605ec27" id="r_a966f47c47bb94195f4b40c8fa605ec27"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::Metadata&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a966f47c47bb94195f4b40c8fa605ec27">GetMetadata</a> () const final</td></tr>
+<tr class="separator:a966f47c47bb94195f4b40c8fa605ec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b0451630b3ef89d19f85513d272a01" id="r_a80b0451630b3ef89d19f85513d272a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a80b0451630b3ef89d19f85513d272a01">clear_rid</a> ()</td></tr>
+<tr class="separator:a80b0451630b3ef89d19f85513d272a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad21ca36cdbcdd925a82afb4e1b231e7a" id="r_ad21ca36cdbcdd925a82afb4e1b231e7a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ad21ca36cdbcdd925a82afb4e1b231e7a">rid</a> () const</td></tr>
+<tr class="separator:ad21ca36cdbcdd925a82afb4e1b231e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e68f5cfcd7db8cab501f8febcaaee5e" id="r_a7e68f5cfcd7db8cab501f8febcaaee5e"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a7e68f5cfcd7db8cab501f8febcaaee5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a7e68f5cfcd7db8cab501f8febcaaee5e">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a7e68f5cfcd7db8cab501f8febcaaee5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6f8433fe93637348c547a72aa06c3e" id="r_afc6f8433fe93637348c547a72aa06c3e"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#afc6f8433fe93637348c547a72aa06c3e">mutable_rid</a> ()</td></tr>
+<tr class="separator:afc6f8433fe93637348c547a72aa06c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4236f318019f968dff7e93b516a605f" id="r_aa4236f318019f968dff7e93b516a605f"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aa4236f318019f968dff7e93b516a605f">release_rid</a> ()</td></tr>
+<tr class="separator:aa4236f318019f968dff7e93b516a605f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0548224780601a7d00da45d8ebb28aef" id="r_a0548224780601a7d00da45d8ebb28aef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a0548224780601a7d00da45d8ebb28aef">set_allocated_rid</a> (std::string *<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ad21ca36cdbcdd925a82afb4e1b231e7a">rid</a>)</td></tr>
+<tr class="separator:a0548224780601a7d00da45d8ebb28aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedd3b61a1e9073a24f8c765fbcb3f007" id="r_aedd3b61a1e9073a24f8c765fbcb3f007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aedd3b61a1e9073a24f8c765fbcb3f007">clear_cid</a> ()</td></tr>
+<tr class="separator:aedd3b61a1e9073a24f8c765fbcb3f007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f6f700b82d66784d29f53307b0f5d01" id="r_a2f6f700b82d66784d29f53307b0f5d01"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a2f6f700b82d66784d29f53307b0f5d01">cid</a> () const</td></tr>
+<tr class="separator:a2f6f700b82d66784d29f53307b0f5d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aca015bcf1696c13e013b7070f16c58" id="r_a7aca015bcf1696c13e013b7070f16c58"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a7aca015bcf1696c13e013b7070f16c58"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a7aca015bcf1696c13e013b7070f16c58">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a7aca015bcf1696c13e013b7070f16c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cc536ef0667b80e512290341599ba2c" id="r_a8cc536ef0667b80e512290341599ba2c"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a8cc536ef0667b80e512290341599ba2c">mutable_cid</a> ()</td></tr>
+<tr class="separator:a8cc536ef0667b80e512290341599ba2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4be2045516fb5467635fc8297c51973" id="r_ae4be2045516fb5467635fc8297c51973"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ae4be2045516fb5467635fc8297c51973">release_cid</a> ()</td></tr>
+<tr class="separator:ae4be2045516fb5467635fc8297c51973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2cfe939ae8fbcf2c6238360bbc8a95" id="r_aae2cfe939ae8fbcf2c6238360bbc8a95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aae2cfe939ae8fbcf2c6238360bbc8a95">set_allocated_cid</a> (std::string *<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a2f6f700b82d66784d29f53307b0f5d01">cid</a>)</td></tr>
+<tr class="separator:aae2cfe939ae8fbcf2c6238360bbc8a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d269f18e4cbf4cb12a33fffb427796" id="r_a77d269f18e4cbf4cb12a33fffb427796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a77d269f18e4cbf4cb12a33fffb427796">clear_exchange_name</a> ()</td></tr>
+<tr class="separator:a77d269f18e4cbf4cb12a33fffb427796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b844595c881f28baed7e217276e6c4" id="r_a49b844595c881f28baed7e217276e6c4"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a49b844595c881f28baed7e217276e6c4">exchange_name</a> () const</td></tr>
+<tr class="separator:a49b844595c881f28baed7e217276e6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9158112c3408afcba69b04ba29b1df68" id="r_a9158112c3408afcba69b04ba29b1df68"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a9158112c3408afcba69b04ba29b1df68"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a9158112c3408afcba69b04ba29b1df68">set_exchange_name</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a9158112c3408afcba69b04ba29b1df68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a251c2d74fdeb714ff83abfe4624de" id="r_ae8a251c2d74fdeb714ff83abfe4624de"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ae8a251c2d74fdeb714ff83abfe4624de">mutable_exchange_name</a> ()</td></tr>
+<tr class="separator:ae8a251c2d74fdeb714ff83abfe4624de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c7a6e06acf6d6f8216b863013e632d" id="r_a66c7a6e06acf6d6f8216b863013e632d"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a66c7a6e06acf6d6f8216b863013e632d">release_exchange_name</a> ()</td></tr>
+<tr class="separator:a66c7a6e06acf6d6f8216b863013e632d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5288f0cd3b07c4c7dbda2dc58575d9a" id="r_ad5288f0cd3b07c4c7dbda2dc58575d9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ad5288f0cd3b07c4c7dbda2dc58575d9a">set_allocated_exchange_name</a> (std::string *<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a49b844595c881f28baed7e217276e6c4">exchange_name</a>)</td></tr>
+<tr class="separator:ad5288f0cd3b07c4c7dbda2dc58575d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29a0838b7235d1165c7f6fa47e42618" id="r_af29a0838b7235d1165c7f6fa47e42618"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:af29a0838b7235d1165c7f6fa47e42618"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#af29a0838b7235d1165c7f6fa47e42618">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:af29a0838b7235d1165c7f6fa47e42618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9bb23c8cb37db5a935e0f3c66d52ad" id="r_a6a9bb23c8cb37db5a935e0f3c66d52ad"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:a6a9bb23c8cb37db5a935e0f3c66d52ad"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a6a9bb23c8cb37db5a935e0f3c66d52ad">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a6a9bb23c8cb37db5a935e0f3c66d52ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5049fc620d23ebb8ec88a39087f09ef" id="r_aa5049fc620d23ebb8ec88a39087f09ef"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:aa5049fc620d23ebb8ec88a39087f09ef"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aa5049fc620d23ebb8ec88a39087f09ef">set_exchange_name</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:aa5049fc620d23ebb8ec88a39087f09ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a206ccd9e75dc45ff927fdabb2b8487f3" id="r_a206ccd9e75dc45ff927fdabb2b8487f3"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a206ccd9e75dc45ff927fdabb2b8487f3">descriptor</a> ()</td></tr>
+<tr class="separator:a206ccd9e75dc45ff927fdabb2b8487f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c76304c40ebb6a149d0d4be1c7afbc6" id="r_a9c76304c40ebb6a149d0d4be1c7afbc6"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a9c76304c40ebb6a149d0d4be1c7afbc6">GetDescriptor</a> ()</td></tr>
+<tr class="separator:a9c76304c40ebb6a149d0d4be1c7afbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370a503c18634865177890c2bb659259" id="r_a370a503c18634865177890c2bb659259"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Reflection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a370a503c18634865177890c2bb659259">GetReflection</a> ()</td></tr>
+<tr class="separator:a370a503c18634865177890c2bb659259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4905618ad3f9c707a998b63d19c5aaac" id="r_a4905618ad3f9c707a998b63d19c5aaac"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a4905618ad3f9c707a998b63d19c5aaac">default_instance</a> ()</td></tr>
+<tr class="separator:a4905618ad3f9c707a998b63d19c5aaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea647d91fcc4e3fb24b1c1c3ba3c2487" id="r_aea647d91fcc4e3fb24b1c1c3ba3c2487"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aea647d91fcc4e3fb24b1c1c3ba3c2487">internal_default_instance</a> ()</td></tr>
+<tr class="separator:aea647d91fcc4e3fb24b1c1c3ba3c2487"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a287e7f6ba480a465e8502e6d41d826ea" id="r_a287e7f6ba480a465e8502e6d41d826ea"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a287e7f6ba480a465e8502e6d41d826ea">kIndexInFileMessages</a></td></tr>
+<tr class="separator:a287e7f6ba480a465e8502e6d41d826ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7f2e7827026847640eefd630c2a1e3" id="r_a7e7f2e7827026847640eefd630c2a1e3"><td class="memItemLeft" align="right" valign="top">static const ClassData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a7e7f2e7827026847640eefd630c2a1e3">_class_data_</a></td></tr>
+<tr class="separator:a7e7f2e7827026847640eefd630c2a1e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a0d3596566d1e02e8185b1eace1174e21" id="r_a0d3596566d1e02e8185b1eace1174e21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a0d3596566d1e02e8185b1eace1174e21">deleteExchangeRequest</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)</td></tr>
+<tr class="separator:a0d3596566d1e02e8185b1eace1174e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:a86b1340bd0db7899fbc3bd09d37ad866" id="r_a86b1340bd0db7899fbc3bd09d37ad866"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a86b1340bd0db7899fbc3bd09d37ad866">InternalArenaConstructable_</a></td></tr>
+<tr class="separator:a86b1340bd0db7899fbc3bd09d37ad866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510d9d283d915330469c3f0cd5084acc" id="r_a510d9d283d915330469c3f0cd5084acc"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a510d9d283d915330469c3f0cd5084acc">DestructorSkippable_</a></td></tr>
+<tr class="separator:a510d9d283d915330469c3f0cd5084acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a06c838eaf7bf9cb0938e4b2f62c1ad69" id="r_a06c838eaf7bf9cb0938e4b2f62c1ad69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a06c838eaf7bf9cb0938e4b2f62c1ad69">SharedCtor</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned)</td></tr>
+<tr class="separator:a06c838eaf7bf9cb0938e4b2f62c1ad69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f395889f1c1a4c004475a8d1815de1" id="r_a86f395889f1c1a4c004475a8d1815de1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a86f395889f1c1a4c004475a8d1815de1">SharedDtor</a> ()</td></tr>
+<tr class="separator:a86f395889f1c1a4c004475a8d1815de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10cdc03b8958752d892da9648f1c4655" id="r_a10cdc03b8958752d892da9648f1c4655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a10cdc03b8958752d892da9648f1c4655">SetCachedSize</a> (int size) const final</td></tr>
+<tr class="separator:a10cdc03b8958752d892da9648f1c4655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ba6de13a470a3fa63ff66bca7f9125" id="r_a30ba6de13a470a3fa63ff66bca7f9125"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a30ba6de13a470a3fa63ff66bca7f9125">InternalSwap</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *other)</td></tr>
+<tr class="separator:a30ba6de13a470a3fa63ff66bca7f9125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72d5952779dd949d73b388df38915e21" id="r_a72d5952779dd949d73b388df38915e21"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a72d5952779dd949d73b388df38915e21">_internal_rid</a> () const</td></tr>
+<tr class="separator:a72d5952779dd949d73b388df38915e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedc92a490dce413469846a5e47448fa2" id="r_aedc92a490dce413469846a5e47448fa2"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aedc92a490dce413469846a5e47448fa2">_internal_set_rid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:aedc92a490dce413469846a5e47448fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60193fff6371bc760b7e14d213c6a56f" id="r_a60193fff6371bc760b7e14d213c6a56f"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a60193fff6371bc760b7e14d213c6a56f">_internal_mutable_rid</a> ()</td></tr>
+<tr class="separator:a60193fff6371bc760b7e14d213c6a56f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d43d29358a3048f1140b4894174ac65" id="r_a8d43d29358a3048f1140b4894174ac65"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a8d43d29358a3048f1140b4894174ac65">_internal_cid</a> () const</td></tr>
+<tr class="separator:a8d43d29358a3048f1140b4894174ac65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47467b48792e36b88a79b73905a7988b" id="r_a47467b48792e36b88a79b73905a7988b"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a47467b48792e36b88a79b73905a7988b">_internal_set_cid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a47467b48792e36b88a79b73905a7988b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41d4717bc9dc1cd7c0e96ffc5a31fff4" id="r_a41d4717bc9dc1cd7c0e96ffc5a31fff4"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a41d4717bc9dc1cd7c0e96ffc5a31fff4">_internal_mutable_cid</a> ()</td></tr>
+<tr class="separator:a41d4717bc9dc1cd7c0e96ffc5a31fff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa2594ed5a7999e61b34055627da741" id="r_aaaa2594ed5a7999e61b34055627da741"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#aaaa2594ed5a7999e61b34055627da741">_internal_exchange_name</a> () const</td></tr>
+<tr class="separator:aaaa2594ed5a7999e61b34055627da741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45616b247649cdf802bd3adad14f833" id="r_ad45616b247649cdf802bd3adad14f833"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ad45616b247649cdf802bd3adad14f833">_internal_set_exchange_name</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:ad45616b247649cdf802bd3adad14f833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6de889188367f5e93e90a4c5aca8e353" id="r_a6de889188367f5e93e90a4c5aca8e353"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a6de889188367f5e93e90a4c5aca8e353">_internal_mutable_exchange_name</a> ()</td></tr>
+<tr class="separator:a6de889188367f5e93e90a4c5aca8e353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:a27e1516fcedfa99c85ad45e124a62c24" id="r_a27e1516fcedfa99c85ad45e124a62c24"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a27e1516fcedfa99c85ad45e124a62c24">MergeImpl</a> (::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</td></tr>
+<tr class="separator:a27e1516fcedfa99c85ad45e124a62c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ca774643a7cfd5cef0635844e7ee34f" id="r_a6ca774643a7cfd5cef0635844e7ee34f"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::StringPiece&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a6ca774643a7cfd5cef0635844e7ee34f">FullMessageName</a> ()</td></tr>
+<tr class="separator:a6ca774643a7cfd5cef0635844e7ee34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a2fa187d244f854799dd77cc3cd039b7e" id="r_a2fa187d244f854799dd77cc3cd039b7e"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13005ed7fdbd977e5157b22592c76512" id="r_a13005ed7fdbd977e5157b22592c76512"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_xu_m_q_1_1delete_exchange_request_1_1_impl__.html">Impl_</a>&#160;&#160;&#160;<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a0bca9c90d255661b4fc328ff6df75d16">_impl_</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a13005ed7fdbd977e5157b22592c76512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa187d244f854799dd77cc3cd039b7e" id="r_a2fa187d244f854799dd77cc3cd039b7e"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a2fa187d244f854799dd77cc3cd039b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a9b35d94da3444084fc3673b7717b6cfe" id="r_a9b35d94da3444084fc3673b7717b6cfe"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a9b35d94da3444084fc3673b7717b6cfe">::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</a></td></tr>
+<tr class="separator:a9b35d94da3444084fc3673b7717b6cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36" id="r_ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#ab618dbbac4a8d749da0d85c32932df36">::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</a></td></tr>
+<tr class="separator:ab618dbbac4a8d749da0d85c32932df36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf24c46a593886b66728451c4e9c3d2" id="r_a6cf24c46a593886b66728451c4e9c3d2"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a6cf24c46a593886b66728451c4e9c3d2">::TableStruct_protocol_2eproto</a></td></tr>
+<tr class="separator:a6cf24c46a593886b66728451c4e9c3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e759eb3f02af1209784b7cdb8d53f7" id="r_a27e759eb3f02af1209784b7cdb8d53f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a27e759eb3f02af1209784b7cdb8d53f7">swap</a> (<a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;a, <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;b)</td></tr>
+<tr class="separator:a27e759eb3f02af1209784b7cdb8d53f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a510d9d283d915330469c3f0cd5084acc" name="a510d9d283d915330469c3f0cd5084acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510d9d283d915330469c3f0cd5084acc">&#9670;&#160;</a></span>DestructorSkippable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a510d9d283d915330469c3f0cd5084acc">XuMQ::deleteExchangeRequest::DestructorSkippable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86b1340bd0db7899fbc3bd09d37ad866" name="a86b1340bd0db7899fbc3bd09d37ad866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b1340bd0db7899fbc3bd09d37ad866">&#9670;&#160;</a></span>InternalArenaConstructable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html#a86b1340bd0db7899fbc3bd09d37ad866">XuMQ::deleteExchangeRequest::InternalArenaConstructable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a311dc73ad22acd40805af0084639e845" name="a311dc73ad22acd40805af0084639e845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a311dc73ad22acd40805af0084639e845">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a311dc73ad22acd40805af0084639e845a1baf4c70937edfc0bc5fa710e9c5da91" name="a311dc73ad22acd40805af0084639e845a1baf4c70937edfc0bc5fa710e9c5da91"></a>kRidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a311dc73ad22acd40805af0084639e845a9762b3498a515b996932ceebc736118f" name="a311dc73ad22acd40805af0084639e845a9762b3498a515b996932ceebc736118f"></a>kCidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a311dc73ad22acd40805af0084639e845a6a34f85d84513116883f97e1981777ac" name="a311dc73ad22acd40805af0084639e845a6a34f85d84513116883f97e1981777ac"></a>kExchangeNameFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="af19772e3115f493ed2dc0fc434ff2142" name="af19772e3115f493ed2dc0fc434ff2142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19772e3115f493ed2dc0fc434ff2142">&#9670;&#160;</a></span>deleteExchangeRequest() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::deleteExchangeRequest::deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac82633fe7b1ed05647677ab4fa0f9973" name="ac82633fe7b1ed05647677ab4fa0f9973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac82633fe7b1ed05647677ab4fa0f9973">&#9670;&#160;</a></span>~deleteExchangeRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::deleteExchangeRequest::~deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_ac82633fe7b1ed05647677ab4fa0f9973_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_ac82633fe7b1ed05647677ab4fa0f9973_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_ac82633fe7b1ed05647677ab4fa0f9973_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_ac82633fe7b1ed05647677ab4fa0f9973_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a86f395889f1c1a4c004475a8d1815de1" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="232,23,266,23,266,28,232,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a24b47625ce2e94eb733a7902c86dcd05" name="a24b47625ce2e94eb733a7902c86dcd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24b47625ce2e94eb733a7902c86dcd05">&#9670;&#160;</a></span>deleteExchangeRequest() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_CONSTEXPR XuMQ::deleteExchangeRequest::deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa83ea55eb17f09b6a2cf57f390df72ba" name="aa83ea55eb17f09b6a2cf57f390df72ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa83ea55eb17f09b6a2cf57f390df72ba">&#9670;&#160;</a></span>deleteExchangeRequest() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::deleteExchangeRequest::deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_aa83ea55eb17f09b6a2cf57f390df72ba_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_aa83ea55eb17f09b6a2cf57f390df72ba_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_aa83ea55eb17f09b6a2cf57f390df72ba_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_aa83ea55eb17f09b6a2cf57f390df72ba_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,232,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a8d43d29358a3048f1140b4894174ac65" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="205,67,293,46,294,51,206,72"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aaaa2594ed5a7999e61b34055627da741" title=" " alt="" coords="280,69,507,109"/>
+<area shape="poly" title=" " alt="" coords="232,87,266,87,266,92,232,92"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a72d5952779dd949d73b388df38915e21" title=" " alt="" coords="280,133,507,173"/>
+<area shape="poly" title=" " alt="" coords="206,107,294,128,293,133,205,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8bf5865aec0f6211ceebc2ae5654ec9f" name="a8bf5865aec0f6211ceebc2ae5654ec9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf5865aec0f6211ceebc2ae5654ec9f">&#9670;&#160;</a></span>deleteExchangeRequest() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::deleteExchangeRequest::deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d3596566d1e02e8185b1eace1174e21" name="a0d3596566d1e02e8185b1eace1174e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d3596566d1e02e8185b1eace1174e21">&#9670;&#160;</a></span>deleteExchangeRequest() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::deleteExchangeRequest::deleteExchangeRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a0d3596566d1e02e8185b1eace1174e21_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a0d3596566d1e02e8185b1eace1174e21_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a0d3596566d1e02e8185b1eace1174e21_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a0d3596566d1e02e8185b1eace1174e21_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a06c838eaf7bf9cb0938e4b2f62c1ad69" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="232,23,266,23,266,28,232,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8d43d29358a3048f1140b4894174ac65" name="a8d43d29358a3048f1140b4894174ac65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d43d29358a3048f1140b4894174ac65">&#9670;&#160;</a></span>_internal_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::_internal_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a8d43d29358a3048f1140b4894174ac65_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a8d43d29358a3048f1140b4894174ac65_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a8d43d29358a3048f1140b4894174ac65_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a8d43d29358a3048f1140b4894174ac65_icgraph">
+<area shape="rect" title=" " alt="" coords="280,69,507,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a372e5ae6fe5c8878f97b76fb420eb996" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="293,69,204,48,206,43,294,64"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a7801842c154743c12840864734a7dcc8" title=" " alt="" coords="5,69,232,109"/>
+<area shape="poly" title=" " alt="" coords="266,92,232,92,232,87,266,87"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aa83ea55eb17f09b6a2cf57f390df72ba" title=" " alt="" coords="5,133,232,173"/>
+<area shape="poly" title=" " alt="" coords="294,115,206,136,204,131,293,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaaa2594ed5a7999e61b34055627da741" name="aaaa2594ed5a7999e61b34055627da741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa2594ed5a7999e61b34055627da741">&#9670;&#160;</a></span>_internal_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::_internal_exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_aaaa2594ed5a7999e61b34055627da741_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_aaaa2594ed5a7999e61b34055627da741_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_aaaa2594ed5a7999e61b34055627da741_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_aaaa2594ed5a7999e61b34055627da741_icgraph">
+<area shape="rect" title=" " alt="" coords="280,69,507,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a372e5ae6fe5c8878f97b76fb420eb996" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="293,69,204,48,206,43,294,64"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a7801842c154743c12840864734a7dcc8" title=" " alt="" coords="5,69,232,109"/>
+<area shape="poly" title=" " alt="" coords="266,92,232,92,232,87,266,87"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aa83ea55eb17f09b6a2cf57f390df72ba" title=" " alt="" coords="5,133,232,173"/>
+<area shape="poly" title=" " alt="" coords="294,115,206,136,204,131,293,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a41d4717bc9dc1cd7c0e96ffc5a31fff4" name="a41d4717bc9dc1cd7c0e96ffc5a31fff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d4717bc9dc1cd7c0e96ffc5a31fff4">&#9670;&#160;</a></span>_internal_mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::_internal_mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a41d4717bc9dc1cd7c0e96ffc5a31fff4_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a41d4717bc9dc1cd7c0e96ffc5a31fff4_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a41d4717bc9dc1cd7c0e96ffc5a31fff4_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a41d4717bc9dc1cd7c0e96ffc5a31fff4_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a3e288461b266f0f3b3dcf6e5fdfcc24d" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6de889188367f5e93e90a4c5aca8e353" name="a6de889188367f5e93e90a4c5aca8e353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de889188367f5e93e90a4c5aca8e353">&#9670;&#160;</a></span>_internal_mutable_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::_internal_mutable_exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a6de889188367f5e93e90a4c5aca8e353_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a6de889188367f5e93e90a4c5aca8e353_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a6de889188367f5e93e90a4c5aca8e353_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a6de889188367f5e93e90a4c5aca8e353_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,543,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a3e288461b266f0f3b3dcf6e5fdfcc24d" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a60193fff6371bc760b7e14d213c6a56f" name="a60193fff6371bc760b7e14d213c6a56f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60193fff6371bc760b7e14d213c6a56f">&#9670;&#160;</a></span>_internal_mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::_internal_mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a60193fff6371bc760b7e14d213c6a56f_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a60193fff6371bc760b7e14d213c6a56f_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a60193fff6371bc760b7e14d213c6a56f_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a60193fff6371bc760b7e14d213c6a56f_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a3e288461b266f0f3b3dcf6e5fdfcc24d" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72d5952779dd949d73b388df38915e21" name="a72d5952779dd949d73b388df38915e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72d5952779dd949d73b388df38915e21">&#9670;&#160;</a></span>_internal_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::_internal_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a72d5952779dd949d73b388df38915e21_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a72d5952779dd949d73b388df38915e21_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a72d5952779dd949d73b388df38915e21_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a72d5952779dd949d73b388df38915e21_icgraph">
+<area shape="rect" title=" " alt="" coords="280,69,507,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a372e5ae6fe5c8878f97b76fb420eb996" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="293,69,204,48,206,43,294,64"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a7801842c154743c12840864734a7dcc8" title=" " alt="" coords="5,69,232,109"/>
+<area shape="poly" title=" " alt="" coords="266,92,232,92,232,87,266,87"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aa83ea55eb17f09b6a2cf57f390df72ba" title=" " alt="" coords="5,133,232,173"/>
+<area shape="poly" title=" " alt="" coords="294,115,206,136,204,131,293,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47467b48792e36b88a79b73905a7988b" name="a47467b48792e36b88a79b73905a7988b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47467b48792e36b88a79b73905a7988b">&#9670;&#160;</a></span>_internal_set_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::_internal_set_cid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad45616b247649cdf802bd3adad14f833" name="ad45616b247649cdf802bd3adad14f833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45616b247649cdf802bd3adad14f833">&#9670;&#160;</a></span>_internal_set_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::_internal_set_exchange_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedc92a490dce413469846a5e47448fa2" name="aedc92a490dce413469846a5e47448fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc92a490dce413469846a5e47448fa2">&#9670;&#160;</a></span>_internal_set_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::_internal_set_rid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e288461b266f0f3b3dcf6e5fdfcc24d" name="a3e288461b266f0f3b3dcf6e5fdfcc24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e288461b266f0f3b3dcf6e5fdfcc24d">&#9670;&#160;</a></span>_InternalParse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * XuMQ::deleteExchangeRequest::_InternalParse </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ParseContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a3e288461b266f0f3b3dcf6e5fdfcc24d_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a3e288461b266f0f3b3dcf6e5fdfcc24d_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a3e288461b266f0f3b3dcf6e5fdfcc24d_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a3e288461b266f0f3b3dcf6e5fdfcc24d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,232,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a41d4717bc9dc1cd7c0e96ffc5a31fff4" title=" " alt="" coords="298,5,525,45"/>
+<area shape="poly" title=" " alt="" coords="210,67,306,46,307,51,212,72"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a6de889188367f5e93e90a4c5aca8e353" title=" " alt="" coords="280,69,543,109"/>
+<area shape="poly" title=" " alt="" coords="232,87,266,87,266,92,232,92"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a60193fff6371bc760b7e14d213c6a56f" title=" " alt="" coords="298,133,525,173"/>
+<area shape="poly" title=" " alt="" coords="212,107,307,128,306,133,210,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a372e5ae6fe5c8878f97b76fb420eb996" name="a372e5ae6fe5c8878f97b76fb420eb996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372e5ae6fe5c8878f97b76fb420eb996">&#9670;&#160;</a></span>_InternalSerialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * XuMQ::deleteExchangeRequest::_InternalSerialize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a372e5ae6fe5c8878f97b76fb420eb996_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a372e5ae6fe5c8878f97b76fb420eb996_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a372e5ae6fe5c8878f97b76fb420eb996_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a372e5ae6fe5c8878f97b76fb420eb996_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,232,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a8d43d29358a3048f1140b4894174ac65" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="205,67,293,46,294,51,206,72"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aaaa2594ed5a7999e61b34055627da741" title=" " alt="" coords="280,69,507,109"/>
+<area shape="poly" title=" " alt="" coords="232,87,266,87,266,92,232,92"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a72d5952779dd949d73b388df38915e21" title=" " alt="" coords="280,133,507,173"/>
+<area shape="poly" title=" " alt="" coords="206,107,294,128,293,133,205,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7801842c154743c12840864734a7dcc8" name="a7801842c154743c12840864734a7dcc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7801842c154743c12840864734a7dcc8">&#9670;&#160;</a></span>ByteSizeLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::deleteExchangeRequest::ByteSizeLong </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a7801842c154743c12840864734a7dcc8_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a7801842c154743c12840864734a7dcc8_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a7801842c154743c12840864734a7dcc8_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a7801842c154743c12840864734a7dcc8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,69,232,109"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a8d43d29358a3048f1140b4894174ac65" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="205,67,293,46,294,51,206,72"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#aaaa2594ed5a7999e61b34055627da741" title=" " alt="" coords="280,69,507,109"/>
+<area shape="poly" title=" " alt="" coords="232,87,266,87,266,92,232,92"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a72d5952779dd949d73b388df38915e21" title=" " alt="" coords="280,133,507,173"/>
+<area shape="poly" title=" " alt="" coords="206,107,294,128,293,133,205,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2f6f700b82d66784d29f53307b0f5d01" name="a2f6f700b82d66784d29f53307b0f5d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f6f700b82d66784d29f53307b0f5d01">&#9670;&#160;</a></span>cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1badbaf376923f8efe18b36abe076f16" name="a1badbaf376923f8efe18b36abe076f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1badbaf376923f8efe18b36abe076f16">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a1badbaf376923f8efe18b36abe076f16_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a1badbaf376923f8efe18b36abe076f16_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a1badbaf376923f8efe18b36abe076f16_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a1badbaf376923f8efe18b36abe076f16_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a667e9071763ad12f270c6acf692f2ec8" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aedd3b61a1e9073a24f8c765fbcb3f007" name="aedd3b61a1e9073a24f8c765fbcb3f007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd3b61a1e9073a24f8c765fbcb3f007">&#9670;&#160;</a></span>clear_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::clear_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77d269f18e4cbf4cb12a33fffb427796" name="a77d269f18e4cbf4cb12a33fffb427796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d269f18e4cbf4cb12a33fffb427796">&#9670;&#160;</a></span>clear_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::clear_exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80b0451630b3ef89d19f85513d272a01" name="a80b0451630b3ef89d19f85513d272a01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b0451630b3ef89d19f85513d272a01">&#9670;&#160;</a></span>clear_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::clear_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a667e9071763ad12f270c6acf692f2ec8" name="a667e9071763ad12f270c6acf692f2ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667e9071763ad12f270c6acf692f2ec8">&#9670;&#160;</a></span>CopyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a667e9071763ad12f270c6acf692f2ec8_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a667e9071763ad12f270c6acf692f2ec8_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a667e9071763ad12f270c6acf692f2ec8_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a667e9071763ad12f270c6acf692f2ec8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,232,77"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a1badbaf376923f8efe18b36abe076f16" title=" " alt="" coords="280,5,507,45"/>
+<area shape="poly" title=" " alt="" coords="232,41,266,37,267,43,233,47"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a9d9b9f125228016154aff534556b36ae" title=" " alt="" coords="280,69,507,109"/>
+<area shape="poly" title=" " alt="" coords="233,68,267,72,266,77,232,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4905618ad3f9c707a998b63d19c5aaac" name="a4905618ad3f9c707a998b63d19c5aaac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4905618ad3f9c707a998b63d19c5aaac">&#9670;&#160;</a></span>default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp; XuMQ::deleteExchangeRequest::default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a206ccd9e75dc45ff927fdabb2b8487f3" name="a206ccd9e75dc45ff927fdabb2b8487f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206ccd9e75dc45ff927fdabb2b8487f3">&#9670;&#160;</a></span>descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::deleteExchangeRequest::descriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49b844595c881f28baed7e217276e6c4" name="a49b844595c881f28baed7e217276e6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b844595c881f28baed7e217276e6c4">&#9670;&#160;</a></span>exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ca774643a7cfd5cef0635844e7ee34f" name="a6ca774643a7cfd5cef0635844e7ee34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ca774643a7cfd5cef0635844e7ee34f">&#9670;&#160;</a></span>FullMessageName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::PROTOBUF_NAMESPACE_ID::StringPiece XuMQ::deleteExchangeRequest::FullMessageName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9bf4b9dc0fe00d63d7dd94dfd9ea458" name="ac9bf4b9dc0fe00d63d7dd94dfd9ea458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bf4b9dc0fe00d63d7dd94dfd9ea458">&#9670;&#160;</a></span>GetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int XuMQ::deleteExchangeRequest::GetCachedSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a10310a68b70bf4973cf3447b132e1a" name="a2a10310a68b70bf4973cf3447b132e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a10310a68b70bf4973cf3447b132e1a">&#9670;&#160;</a></span>GetClassData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * XuMQ::deleteExchangeRequest::GetClassData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c76304c40ebb6a149d0d4be1c7afbc6" name="a9c76304c40ebb6a149d0d4be1c7afbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c76304c40ebb6a149d0d4be1c7afbc6">&#9670;&#160;</a></span>GetDescriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::deleteExchangeRequest::GetDescriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a966f47c47bb94195f4b40c8fa605ec27" name="a966f47c47bb94195f4b40c8fa605ec27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966f47c47bb94195f4b40c8fa605ec27">&#9670;&#160;</a></span>GetMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_ID::Metadata XuMQ::deleteExchangeRequest::GetMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a966f47c47bb94195f4b40c8fa605ec27_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a966f47c47bb94195f4b40c8fa605ec27_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a966f47c47bb94195f4b40c8fa605ec27_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a966f47c47bb94195f4b40c8fa605ec27_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,232,45"/>
+<area shape="rect" href="protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066" title=" " alt="" coords="280,5,467,45"/>
+<area shape="poly" title=" " alt="" coords="232,23,266,23,266,28,232,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a370a503c18634865177890c2bb659259" name="a370a503c18634865177890c2bb659259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370a503c18634865177890c2bb659259">&#9670;&#160;</a></span>GetReflection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Reflection * XuMQ::deleteExchangeRequest::GetReflection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea647d91fcc4e3fb24b1c1c3ba3c2487" name="aea647d91fcc4e3fb24b1c1c3ba3c2487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea647d91fcc4e3fb24b1c1c3ba3c2487">&#9670;&#160;</a></span>internal_default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> * XuMQ::deleteExchangeRequest::internal_default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30ba6de13a470a3fa63ff66bca7f9125" name="a30ba6de13a470a3fa63ff66bca7f9125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ba6de13a470a3fa63ff66bca7f9125">&#9670;&#160;</a></span>InternalSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::InternalSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_cgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" title=" " alt="" coords="76,30,74,20,81,10,96,5,119,3,145,6,160,13,157,18,144,11,119,8,97,10,84,15,79,21,81,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a30ba6de13a470a3fa63ff66bca7f9125_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,232,69"/>
+<area shape="poly" title=" " alt="" coords="157,18,144,11,119,8,97,10,84,15,79,21,81,28,76,30,74,20,81,10,96,5,119,3,145,6,160,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71ec1b6295880e4ae2e66fdcde58ce08" name="a71ec1b6295880e4ae2e66fdcde58ce08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ec1b6295880e4ae2e66fdcde58ce08">&#9670;&#160;</a></span>IsInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::deleteExchangeRequest::IsInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d9b9f125228016154aff534556b36ae" name="a9d9b9f125228016154aff534556b36ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d9b9f125228016154aff534556b36ae">&#9670;&#160;</a></span>MergeFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::MergeFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a9d9b9f125228016154aff534556b36ae_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a9d9b9f125228016154aff534556b36ae_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a9d9b9f125228016154aff534556b36ae_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a9d9b9f125228016154aff534556b36ae_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a667e9071763ad12f270c6acf692f2ec8" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a27e1516fcedfa99c85ad45e124a62c24" name="a27e1516fcedfa99c85ad45e124a62c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e1516fcedfa99c85ad45e124a62c24">&#9670;&#160;</a></span>MergeImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::MergeImpl </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>to_msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>from_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cc536ef0667b80e512290341599ba2c" name="a8cc536ef0667b80e512290341599ba2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cc536ef0667b80e512290341599ba2c">&#9670;&#160;</a></span>mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8a251c2d74fdeb714ff83abfe4624de" name="ae8a251c2d74fdeb714ff83abfe4624de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a251c2d74fdeb714ff83abfe4624de">&#9670;&#160;</a></span>mutable_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::mutable_exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc6f8433fe93637348c547a72aa06c3e" name="afc6f8433fe93637348c547a72aa06c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6f8433fe93637348c547a72aa06c3e">&#9670;&#160;</a></span>mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad777a97cc82c8891a687e054c5ad9c56" name="ad777a97cc82c8891a687e054c5ad9c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad777a97cc82c8891a687e054c5ad9c56">&#9670;&#160;</a></span>New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> * XuMQ::deleteExchangeRequest::New </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em> = <code>nullptr</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4cf16a0d6d00d734b4a3a7a5e6e07d7" name="ae4cf16a0d6d00d734b4a3a7a5e6e07d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cf16a0d6d00d734b4a3a7a5e6e07d7">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp; XuMQ::deleteExchangeRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03d113c54b989a1c2d3125e58b76b8fb" name="a03d113c54b989a1c2d3125e58b76b8fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d113c54b989a1c2d3125e58b76b8fb">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp; XuMQ::deleteExchangeRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4be2045516fb5467635fc8297c51973" name="ae4be2045516fb5467635fc8297c51973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4be2045516fb5467635fc8297c51973">&#9670;&#160;</a></span>release_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::release_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66c7a6e06acf6d6f8216b863013e632d" name="a66c7a6e06acf6d6f8216b863013e632d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66c7a6e06acf6d6f8216b863013e632d">&#9670;&#160;</a></span>release_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::release_exchange_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4236f318019f968dff7e93b516a605f" name="aa4236f318019f968dff7e93b516a605f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4236f318019f968dff7e93b516a605f">&#9670;&#160;</a></span>release_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::deleteExchangeRequest::release_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad21ca36cdbcdd925a82afb4e1b231e7a" name="ad21ca36cdbcdd925a82afb4e1b231e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad21ca36cdbcdd925a82afb4e1b231e7a">&#9670;&#160;</a></span>rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::deleteExchangeRequest::rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae2cfe939ae8fbcf2c6238360bbc8a95" name="aae2cfe939ae8fbcf2c6238360bbc8a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae2cfe939ae8fbcf2c6238360bbc8a95">&#9670;&#160;</a></span>set_allocated_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_allocated_cid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>cid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5288f0cd3b07c4c7dbda2dc58575d9a" name="ad5288f0cd3b07c4c7dbda2dc58575d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5288f0cd3b07c4c7dbda2dc58575d9a">&#9670;&#160;</a></span>set_allocated_exchange_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_allocated_exchange_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>exchange_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0548224780601a7d00da45d8ebb28aef" name="a0548224780601a7d00da45d8ebb28aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0548224780601a7d00da45d8ebb28aef">&#9670;&#160;</a></span>set_allocated_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_allocated_rid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>rid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aca015bcf1696c13e013b7070f16c58" name="a7aca015bcf1696c13e013b7070f16c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aca015bcf1696c13e013b7070f16c58">&#9670;&#160;</a></span>set_cid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a9bb23c8cb37db5a935e0f3c66d52ad" name="a6a9bb23c8cb37db5a935e0f3c66d52ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9bb23c8cb37db5a935e0f3c66d52ad">&#9670;&#160;</a></span>set_cid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::deleteExchangeRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9158112c3408afcba69b04ba29b1df68" name="a9158112c3408afcba69b04ba29b1df68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9158112c3408afcba69b04ba29b1df68">&#9670;&#160;</a></span>set_exchange_name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_exchange_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5049fc620d23ebb8ec88a39087f09ef" name="aa5049fc620d23ebb8ec88a39087f09ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5049fc620d23ebb8ec88a39087f09ef">&#9670;&#160;</a></span>set_exchange_name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::deleteExchangeRequest::set_exchange_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e68f5cfcd7db8cab501f8febcaaee5e" name="a7e68f5cfcd7db8cab501f8febcaaee5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e68f5cfcd7db8cab501f8febcaaee5e">&#9670;&#160;</a></span>set_rid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af29a0838b7235d1165c7f6fa47e42618" name="af29a0838b7235d1165c7f6fa47e42618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29a0838b7235d1165c7f6fa47e42618">&#9670;&#160;</a></span>set_rid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::deleteExchangeRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10cdc03b8958752d892da9648f1c4655" name="a10cdc03b8958752d892da9648f1c4655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10cdc03b8958752d892da9648f1c4655">&#9670;&#160;</a></span>SetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::SetCachedSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06c838eaf7bf9cb0938e4b2f62c1ad69" name="a06c838eaf7bf9cb0938e4b2f62c1ad69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c838eaf7bf9cb0938e4b2f62c1ad69">&#9670;&#160;</a></span>SharedCtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::SharedCtor </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a06c838eaf7bf9cb0938e4b2f62c1ad69_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a06c838eaf7bf9cb0938e4b2f62c1ad69_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a06c838eaf7bf9cb0938e4b2f62c1ad69_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a06c838eaf7bf9cb0938e4b2f62c1ad69_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#a0d3596566d1e02e8185b1eace1174e21" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a86f395889f1c1a4c004475a8d1815de1" name="a86f395889f1c1a4c004475a8d1815de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f395889f1c1a4c004475a8d1815de1">&#9670;&#160;</a></span>SharedDtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::SharedDtor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1delete_exchange_request_a86f395889f1c1a4c004475a8d1815de1_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1delete_exchange_request_a86f395889f1c1a4c004475a8d1815de1_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1delete_exchange_request_a86f395889f1c1a4c004475a8d1815de1_icgraph" id="aclass_xu_m_q_1_1delete_exchange_request_a86f395889f1c1a4c004475a8d1815de1_icgraph">
+<area shape="rect" title=" " alt="" coords="280,5,507,45"/>
+<area shape="rect" href="class_xu_m_q_1_1delete_exchange_request.html#ac82633fe7b1ed05647677ab4fa0f9973" title=" " alt="" coords="5,5,232,45"/>
+<area shape="poly" title=" " alt="" coords="266,28,232,28,232,23,266,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac48cde75427eb409d461335f08e6954d" name="ac48cde75427eb409d461335f08e6954d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48cde75427eb409d461335f08e6954d">&#9670;&#160;</a></span>Swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedd010388b74ec9ecda3226d83a4a26f" name="aedd010388b74ec9ecda3226d83a4a26f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd010388b74ec9ecda3226d83a4a26f">&#9670;&#160;</a></span>UnsafeArenaSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::deleteExchangeRequest::UnsafeArenaSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="ab618dbbac4a8d749da0d85c32932df36" name="ab618dbbac4a8d749da0d85c32932df36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab618dbbac4a8d749da0d85c32932df36">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b35d94da3444084fc3673b7717b6cfe" name="a9b35d94da3444084fc3673b7717b6cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b35d94da3444084fc3673b7717b6cfe">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cf24c46a593886b66728451c4e9c3d2" name="a6cf24c46a593886b66728451c4e9c3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf24c46a593886b66728451c4e9c3d2">&#9670;&#160;</a></span>::TableStruct_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="struct_table_struct__protocol__2eproto.html">::TableStruct_protocol_2eproto</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27e759eb3f02af1209784b7cdb8d53f7" name="a27e759eb3f02af1209784b7cdb8d53f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e759eb3f02af1209784b7cdb8d53f7">&#9670;&#160;</a></span>swap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2fa187d244f854799dd77cc3cd039b7e" name="a2fa187d244f854799dd77cc3cd039b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa187d244f854799dd77cc3cd039b7e">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  <a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">XuMQ::deleteExchangeRequest</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e7f2e7827026847640eefd630c2a1e3" name="a7e7f2e7827026847640eefd630c2a1e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7f2e7827026847640eefd630c2a1e3">&#9670;&#160;</a></span>_class_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData XuMQ::deleteExchangeRequest::_class_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,</div>
+<div class="line">    <a class="code hl_function" href="class_xu_m_q_1_1delete_exchange_request.html#a27e1516fcedfa99c85ad45e124a62c24">deleteExchangeRequest::MergeImpl</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1delete_exchange_request_html_a27e1516fcedfa99c85ad45e124a62c24"><div class="ttname"><a href="class_xu_m_q_1_1delete_exchange_request.html#a27e1516fcedfa99c85ad45e124a62c24">XuMQ::deleteExchangeRequest::MergeImpl</a></div><div class="ttdeci">static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:1765</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0bca9c90d255661b4fc328ff6df75d16" name="a0bca9c90d255661b4fc328ff6df75d16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bca9c90d255661b4fc328ff6df75d16">&#9670;&#160;</a></span>_impl_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1delete_exchange_request_1_1_impl__.html">Impl_</a> XuMQ::deleteExchangeRequest::_impl_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a287e7f6ba480a465e8502e6d41d826ea" name="a287e7f6ba480a465e8502e6d41d826ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287e7f6ba480a465e8502e6d41d826ea">&#9670;&#160;</a></span>kIndexInFileMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int XuMQ::deleteExchangeRequest::kIndexInFileMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    4</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1delete_exchange_request.html">deleteExchangeRequest</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

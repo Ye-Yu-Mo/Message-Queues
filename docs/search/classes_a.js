@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['router_0',['Router',['../class_xu_m_q_1_1_router.html',1,'XuMQ']]],
-  ['routetest_1',['RouteTest',['../class_route_test.html',1,'']]]
+  ['openchannelrequest_0',['openChannelRequest',['../class_xu_m_q_1_1open_channel_request.html',1,'XuMQ']]],
+  ['openchannelrequestdefaulttypeinternal_1',['openChannelRequestDefaultTypeInternal',['../struct_xu_m_q_1_1open_channel_request_default_type_internal.html',1,'XuMQ']]]
 ];

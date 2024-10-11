@@ -1,0 +1,2812 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::basicCancelRequest类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1basic_cancel_request.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pri-types">Private 类型</a> &#124;
+<a href="#pri-methods">Private 成员函数</a> &#124;
+<a href="#pri-static-methods">静态 Private 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="#friends">友元</a> &#124;
+<a href="class_xu_m_q_1_1basic_cancel_request-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::basicCancelRequest类 参考<span class="mlabels"><span class="mlabel">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="protocol_8pb_8h_source.html">protocol.pb.h</a>&gt;</code></p>
+<div class="dynheader">
+类 XuMQ::basicCancelRequest 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request__inherit__graph.png" border="0" usemap="#a_xu_m_q_1_1basic_cancel_request_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_xu_m_q_1_1basic_cancel_request_inherit__map" id="a_xu_m_q_1_1basic_cancel_request_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,93,205,119"/>
+<area shape="rect" title=" " alt="" coords="15,5,196,45"/>
+<area shape="poly" title=" " alt="" coords="108,59,108,93,103,93,103,59"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+XuMQ::basicCancelRequest 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request__coll__graph.png" border="0" usemap="#a_xu_m_q_1_1basic_cancel_request_coll__map" alt="Collaboration graph"/></div>
+<map name="a_xu_m_q_1_1basic_cancel_request_coll__map" id="a_xu_m_q_1_1basic_cancel_request_coll__map">
+<area shape="rect" title=" " alt="" coords="103,108,303,133"/>
+<area shape="rect" title=" " alt="" coords="5,5,187,45"/>
+<area shape="poly" title=" " alt="" coords="130,52,191,106,187,110,126,56"/>
+<area shape="rect" href="struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html" title=" " alt="" coords="211,5,411,45"/>
+<area shape="poly" title=" " alt="" coords="280,56,218,110,215,106,277,52"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request_1_1___internal.html">_Internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html">Impl_</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a66388cf71e1ad18ff9b6ab1269fe752a" id="r_a66388cf71e1ad18ff9b6ab1269fe752a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: int { <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a66388cf71e1ad18ff9b6ab1269fe752aa2e53b420a7a3d1bcb5deec8dd3d1e218">kRidFieldNumber</a> = 1
+, <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a66388cf71e1ad18ff9b6ab1269fe752aab27f261d2150eaaf95e9ddd7a03ab794">kCidFieldNumber</a> = 2
+, <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a66388cf71e1ad18ff9b6ab1269fe752aaaf06b6e49aae26116a4e80130044d9e6">kConsumerTagFieldNumber</a> = 3
+, <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a66388cf71e1ad18ff9b6ab1269fe752aa061000663d4e7b88a4353e78d6f1a45c">kQueueNameFieldNumber</a> = 4
+ }</td></tr>
+<tr class="separator:a66388cf71e1ad18ff9b6ab1269fe752a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a4eeb2c266cb1856a089ede33dae06adc" id="r_a4eeb2c266cb1856a089ede33dae06adc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a4eeb2c266cb1856a089ede33dae06adc">basicCancelRequest</a> ()</td></tr>
+<tr class="separator:a4eeb2c266cb1856a089ede33dae06adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d271969b98d74f8865a20395623b48" id="r_a54d271969b98d74f8865a20395623b48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a54d271969b98d74f8865a20395623b48">~basicCancelRequest</a> () override</td></tr>
+<tr class="separator:a54d271969b98d74f8865a20395623b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a4c46af56fde70be461e1e8b229ca79" id="r_a9a4c46af56fde70be461e1e8b229ca79"><td class="memItemLeft" align="right" valign="top">PROTOBUF_CONSTEXPR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a9a4c46af56fde70be461e1e8b229ca79">basicCancelRequest</a> (::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)</td></tr>
+<tr class="separator:a9a4c46af56fde70be461e1e8b229ca79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1e8f08f811691ef4a180a81dfedd824" id="r_af1e8f08f811691ef4a180a81dfedd824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824">basicCancelRequest</a> (const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;from)</td></tr>
+<tr class="separator:af1e8f08f811691ef4a180a81dfedd824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64ac640500386b80fa0208d02f9bd26" id="r_ae64ac640500386b80fa0208d02f9bd26"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae64ac640500386b80fa0208d02f9bd26">basicCancelRequest</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:ae64ac640500386b80fa0208d02f9bd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7abdaf85a27462cc3ade740086d1c83" id="r_ac7abdaf85a27462cc3ade740086d1c83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac7abdaf85a27462cc3ade740086d1c83">operator=</a> (const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;from)</td></tr>
+<tr class="separator:ac7abdaf85a27462cc3ade740086d1c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82eda9940f46d1af255f4a2ad95f856b" id="r_a82eda9940f46d1af255f4a2ad95f856b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a82eda9940f46d1af255f4a2ad95f856b">operator=</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&amp;from) noexcept</td></tr>
+<tr class="separator:a82eda9940f46d1af255f4a2ad95f856b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d2affec4e751575d485a2e5faf69e2" id="r_a63d2affec4e751575d485a2e5faf69e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a63d2affec4e751575d485a2e5faf69e2">Swap</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *other)</td></tr>
+<tr class="separator:a63d2affec4e751575d485a2e5faf69e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb35024ade0680118bc388e28424c37d" id="r_acb35024ade0680118bc388e28424c37d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#acb35024ade0680118bc388e28424c37d">UnsafeArenaSwap</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *other)</td></tr>
+<tr class="separator:acb35024ade0680118bc388e28424c37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8858da29d8ff75f236ef14c42ad10fc" id="r_ac8858da29d8ff75f236ef14c42ad10fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac8858da29d8ff75f236ef14c42ad10fc">New</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena=nullptr) const final</td></tr>
+<tr class="separator:ac8858da29d8ff75f236ef14c42ad10fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca423097db29b2e1fd64764fa77c41f8" id="r_aca423097db29b2e1fd64764fa77c41f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aca423097db29b2e1fd64764fa77c41f8">CopyFrom</a> (const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;from)</td></tr>
+<tr class="separator:aca423097db29b2e1fd64764fa77c41f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a178a19c6f60c7ef1f76138e9a7ccb149" id="r_a178a19c6f60c7ef1f76138e9a7ccb149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a178a19c6f60c7ef1f76138e9a7ccb149">MergeFrom</a> (const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;from)</td></tr>
+<tr class="separator:a178a19c6f60c7ef1f76138e9a7ccb149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8729d22403952a5cd23b2df0a058412e" id="r_a8729d22403952a5cd23b2df0a058412e"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ATTRIBUTE_REINITIALIZES void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a8729d22403952a5cd23b2df0a058412e">Clear</a> () final</td></tr>
+<tr class="separator:a8729d22403952a5cd23b2df0a058412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e52160788b0a85cccd364737fccc68a" id="r_a1e52160788b0a85cccd364737fccc68a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a1e52160788b0a85cccd364737fccc68a">IsInitialized</a> () const final</td></tr>
+<tr class="separator:a1e52160788b0a85cccd364737fccc68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae988d504dff53925684ebde3b2f24e92" id="r_ae988d504dff53925684ebde3b2f24e92"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae988d504dff53925684ebde3b2f24e92">ByteSizeLong</a> () const final</td></tr>
+<tr class="separator:ae988d504dff53925684ebde3b2f24e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9a09c089b3fddb9cd953ecdc7b1480" id="r_a6b9a09c089b3fddb9cd953ecdc7b1480"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a6b9a09c089b3fddb9cd953ecdc7b1480">_InternalParse</a> (const char *ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext *ctx) final</td></tr>
+<tr class="separator:a6b9a09c089b3fddb9cd953ecdc7b1480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21aa12fb7861c2f3046f91c1d7b8985f" id="r_a21aa12fb7861c2f3046f91c1d7b8985f"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a21aa12fb7861c2f3046f91c1d7b8985f">_InternalSerialize</a> (uint8_t *target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *stream) const final</td></tr>
+<tr class="separator:a21aa12fb7861c2f3046f91c1d7b8985f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97c9a2a8d22e8f7b7ad57ab6822a8e4" id="r_af97c9a2a8d22e8f7b7ad57ab6822a8e4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#af97c9a2a8d22e8f7b7ad57ab6822a8e4">GetCachedSize</a> () const final</td></tr>
+<tr class="separator:af97c9a2a8d22e8f7b7ad57ab6822a8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4689e72adcb64643c29602fb3f67d779" id="r_a4689e72adcb64643c29602fb3f67d779"><td class="memItemLeft" align="right" valign="top">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a4689e72adcb64643c29602fb3f67d779">GetClassData</a> () const final</td></tr>
+<tr class="separator:a4689e72adcb64643c29602fb3f67d779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f139d338c5914048a4460d5aa3bedc" id="r_aa0f139d338c5914048a4460d5aa3bedc"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::Metadata&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aa0f139d338c5914048a4460d5aa3bedc">GetMetadata</a> () const final</td></tr>
+<tr class="separator:aa0f139d338c5914048a4460d5aa3bedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a49a44bb774f8f5925468cc0ac6b1ae" id="r_a1a49a44bb774f8f5925468cc0ac6b1ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a1a49a44bb774f8f5925468cc0ac6b1ae">clear_rid</a> ()</td></tr>
+<tr class="separator:a1a49a44bb774f8f5925468cc0ac6b1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8a1807beca027822dc968722dd9e2a" id="r_a8d8a1807beca027822dc968722dd9e2a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a8d8a1807beca027822dc968722dd9e2a">rid</a> () const</td></tr>
+<tr class="separator:a8d8a1807beca027822dc968722dd9e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22a2fa17c1231a5e44d4e5c2ab29a73" id="r_ad22a2fa17c1231a5e44d4e5c2ab29a73"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:ad22a2fa17c1231a5e44d4e5c2ab29a73"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ad22a2fa17c1231a5e44d4e5c2ab29a73">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:ad22a2fa17c1231a5e44d4e5c2ab29a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeffac53f224e4ed0cef22485899977e5" id="r_aeffac53f224e4ed0cef22485899977e5"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aeffac53f224e4ed0cef22485899977e5">mutable_rid</a> ()</td></tr>
+<tr class="separator:aeffac53f224e4ed0cef22485899977e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa758fe770ceb1182c0ca6f27e0707b6a" id="r_aa758fe770ceb1182c0ca6f27e0707b6a"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aa758fe770ceb1182c0ca6f27e0707b6a">release_rid</a> ()</td></tr>
+<tr class="separator:aa758fe770ceb1182c0ca6f27e0707b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808129a78550798095eaa43db077a26e" id="r_a808129a78550798095eaa43db077a26e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a808129a78550798095eaa43db077a26e">set_allocated_rid</a> (std::string *<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a8d8a1807beca027822dc968722dd9e2a">rid</a>)</td></tr>
+<tr class="separator:a808129a78550798095eaa43db077a26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa70a2d827302707a5686e82f6cb00b3d" id="r_aa70a2d827302707a5686e82f6cb00b3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aa70a2d827302707a5686e82f6cb00b3d">clear_cid</a> ()</td></tr>
+<tr class="separator:aa70a2d827302707a5686e82f6cb00b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0cf113214f5022acfd1f245286c48f1" id="r_ac0cf113214f5022acfd1f245286c48f1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac0cf113214f5022acfd1f245286c48f1">cid</a> () const</td></tr>
+<tr class="separator:ac0cf113214f5022acfd1f245286c48f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b75571d9f83fb4e2e8c9dd0eb05fd1" id="r_af1b75571d9f83fb4e2e8c9dd0eb05fd1"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:af1b75571d9f83fb4e2e8c9dd0eb05fd1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#af1b75571d9f83fb4e2e8c9dd0eb05fd1">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:af1b75571d9f83fb4e2e8c9dd0eb05fd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5f248251aa1d8d66fc61f98ad92772" id="r_aef5f248251aa1d8d66fc61f98ad92772"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#aef5f248251aa1d8d66fc61f98ad92772">mutable_cid</a> ()</td></tr>
+<tr class="separator:aef5f248251aa1d8d66fc61f98ad92772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fec48b3004da923cba8267b968b8a5" id="r_a86fec48b3004da923cba8267b968b8a5"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a86fec48b3004da923cba8267b968b8a5">release_cid</a> ()</td></tr>
+<tr class="separator:a86fec48b3004da923cba8267b968b8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3e699cc3fed48f04d7d6e908559bf3" id="r_a4d3e699cc3fed48f04d7d6e908559bf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a4d3e699cc3fed48f04d7d6e908559bf3">set_allocated_cid</a> (std::string *<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac0cf113214f5022acfd1f245286c48f1">cid</a>)</td></tr>
+<tr class="separator:a4d3e699cc3fed48f04d7d6e908559bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe0f6b473bf8b37f5cfdb4247fc4d5bd" id="r_afe0f6b473bf8b37f5cfdb4247fc4d5bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#afe0f6b473bf8b37f5cfdb4247fc4d5bd">clear_consumer_tag</a> ()</td></tr>
+<tr class="separator:afe0f6b473bf8b37f5cfdb4247fc4d5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a989dc8a4f2edced7ff62adc729130a5e" id="r_a989dc8a4f2edced7ff62adc729130a5e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a989dc8a4f2edced7ff62adc729130a5e">consumer_tag</a> () const</td></tr>
+<tr class="separator:a989dc8a4f2edced7ff62adc729130a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f2efa9a7e8896f7ed1f6e900737100" id="r_ac0f2efa9a7e8896f7ed1f6e900737100"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:ac0f2efa9a7e8896f7ed1f6e900737100"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac0f2efa9a7e8896f7ed1f6e900737100">set_consumer_tag</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:ac0f2efa9a7e8896f7ed1f6e900737100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4977d20d40ab813ca88e7f67e68f770" id="r_ae4977d20d40ab813ca88e7f67e68f770"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae4977d20d40ab813ca88e7f67e68f770">mutable_consumer_tag</a> ()</td></tr>
+<tr class="separator:ae4977d20d40ab813ca88e7f67e68f770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6171abe2a5596f264bd1a969e1b948d" id="r_ac6171abe2a5596f264bd1a969e1b948d"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac6171abe2a5596f264bd1a969e1b948d">release_consumer_tag</a> ()</td></tr>
+<tr class="separator:ac6171abe2a5596f264bd1a969e1b948d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a694ef9f2fb64d68376a01fc08163b960" id="r_a694ef9f2fb64d68376a01fc08163b960"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a694ef9f2fb64d68376a01fc08163b960">set_allocated_consumer_tag</a> (std::string *<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a989dc8a4f2edced7ff62adc729130a5e">consumer_tag</a>)</td></tr>
+<tr class="separator:a694ef9f2fb64d68376a01fc08163b960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5047529f7c3dfab3a925c55f12a10de1" id="r_a5047529f7c3dfab3a925c55f12a10de1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a5047529f7c3dfab3a925c55f12a10de1">clear_queue_name</a> ()</td></tr>
+<tr class="separator:a5047529f7c3dfab3a925c55f12a10de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1fba9cc29fab55464c612074df46f0" id="r_a9d1fba9cc29fab55464c612074df46f0"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a9d1fba9cc29fab55464c612074df46f0">queue_name</a> () const</td></tr>
+<tr class="separator:a9d1fba9cc29fab55464c612074df46f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55315bdac88732133f7a6544d847d5ff" id="r_a55315bdac88732133f7a6544d847d5ff"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </td></tr>
+<tr class="memitem:a55315bdac88732133f7a6544d847d5ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a55315bdac88732133f7a6544d847d5ff">set_queue_name</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a55315bdac88732133f7a6544d847d5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b5047f8d37b77086f9f24d09dd18d98" id="r_a0b5047f8d37b77086f9f24d09dd18d98"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a0b5047f8d37b77086f9f24d09dd18d98">mutable_queue_name</a> ()</td></tr>
+<tr class="separator:a0b5047f8d37b77086f9f24d09dd18d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4051892ebf8d3cec7ef9509eb0ef2e7" id="r_af4051892ebf8d3cec7ef9509eb0ef2e7"><td class="memItemLeft" align="right" valign="top">PROTOBUF_NODISCARD std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#af4051892ebf8d3cec7ef9509eb0ef2e7">release_queue_name</a> ()</td></tr>
+<tr class="separator:af4051892ebf8d3cec7ef9509eb0ef2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf451a37a292bfe679982df90a3fe48" id="r_abaf451a37a292bfe679982df90a3fe48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#abaf451a37a292bfe679982df90a3fe48">set_allocated_queue_name</a> (std::string *<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a9d1fba9cc29fab55464c612074df46f0">queue_name</a>)</td></tr>
+<tr class="separator:abaf451a37a292bfe679982df90a3fe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a3edec0bc8d34291483d96f94c92ba5" id="r_a5a3edec0bc8d34291483d96f94c92ba5"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:a5a3edec0bc8d34291483d96f94c92ba5"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a5a3edec0bc8d34291483d96f94c92ba5">set_rid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a5a3edec0bc8d34291483d96f94c92ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40bbe9107fcc159fa1dba4bf357a4438" id="r_a40bbe9107fcc159fa1dba4bf357a4438"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:a40bbe9107fcc159fa1dba4bf357a4438"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a40bbe9107fcc159fa1dba4bf357a4438">set_cid</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a40bbe9107fcc159fa1dba4bf357a4438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22df479e7fc012c263da0c53dd861df" id="r_ab22df479e7fc012c263da0c53dd861df"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:ab22df479e7fc012c263da0c53dd861df"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ab22df479e7fc012c263da0c53dd861df">set_consumer_tag</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:ab22df479e7fc012c263da0c53dd861df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68b7450dd1aaaf02d90344f95a16d605" id="r_a68b7450dd1aaaf02d90344f95a16d605"><td class="memTemplParams" colspan="2">template&lt;typename ArgT0 , typename... ArgT&gt; </td></tr>
+<tr class="memitem:a68b7450dd1aaaf02d90344f95a16d605"><td class="memTemplItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a68b7450dd1aaaf02d90344f95a16d605">set_queue_name</a> (ArgT0 &amp;&amp;arg0, ArgT... args)</td></tr>
+<tr class="separator:a68b7450dd1aaaf02d90344f95a16d605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:ab2fb31125d59fdb9e8244f92e756f520" id="r_ab2fb31125d59fdb9e8244f92e756f520"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ab2fb31125d59fdb9e8244f92e756f520">descriptor</a> ()</td></tr>
+<tr class="separator:ab2fb31125d59fdb9e8244f92e756f520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b89be35d2a9bb3ce910808a8f0b549" id="r_ae1b89be35d2a9bb3ce910808a8f0b549"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Descriptor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae1b89be35d2a9bb3ce910808a8f0b549">GetDescriptor</a> ()</td></tr>
+<tr class="separator:ae1b89be35d2a9bb3ce910808a8f0b549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468eac65eca1793b4b94cfff32ead65b" id="r_a468eac65eca1793b4b94cfff32ead65b"><td class="memItemLeft" align="right" valign="top">static const ::PROTOBUF_NAMESPACE_ID::Reflection *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a468eac65eca1793b4b94cfff32ead65b">GetReflection</a> ()</td></tr>
+<tr class="separator:a468eac65eca1793b4b94cfff32ead65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e169d44018355f3886dfb4b4d04ed9" id="r_ae6e169d44018355f3886dfb4b4d04ed9"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae6e169d44018355f3886dfb4b4d04ed9">default_instance</a> ()</td></tr>
+<tr class="separator:ae6e169d44018355f3886dfb4b4d04ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68834b8dd77194b80341319ab1209518" id="r_a68834b8dd77194b80341319ab1209518"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a68834b8dd77194b80341319ab1209518">internal_default_instance</a> ()</td></tr>
+<tr class="separator:a68834b8dd77194b80341319ab1209518"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静态 Public 属性</h2></td></tr>
+<tr class="memitem:a4c6bcd73930740b27236d3236bb8fbd8" id="r_a4c6bcd73930740b27236d3236bb8fbd8"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a4c6bcd73930740b27236d3236bb8fbd8">kIndexInFileMessages</a></td></tr>
+<tr class="separator:a4c6bcd73930740b27236d3236bb8fbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9128f64edff90c289f5062e8c5735dcd" id="r_a9128f64edff90c289f5062e8c5735dcd"><td class="memItemLeft" align="right" valign="top">static const ClassData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a9128f64edff90c289f5062e8c5735dcd">_class_data_</a></td></tr>
+<tr class="separator:a9128f64edff90c289f5062e8c5735dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a5e8e9598c753865f1784b00f7ba14f9a" id="r_a5e8e9598c753865f1784b00f7ba14f9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a5e8e9598c753865f1784b00f7ba14f9a">basicCancelRequest</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned=false)</td></tr>
+<tr class="separator:a5e8e9598c753865f1784b00f7ba14f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private 类型</h2></td></tr>
+<tr class="memitem:acbc7e221ad0f99c6e84f7b0992d05a7c" id="r_acbc7e221ad0f99c6e84f7b0992d05a7c"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#acbc7e221ad0f99c6e84f7b0992d05a7c">InternalArenaConstructable_</a></td></tr>
+<tr class="separator:acbc7e221ad0f99c6e84f7b0992d05a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e97435656528b8ba9535f058b76566" id="r_a57e97435656528b8ba9535f058b76566"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a57e97435656528b8ba9535f058b76566">DestructorSkippable_</a></td></tr>
+<tr class="separator:a57e97435656528b8ba9535f058b76566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private 成员函数</h2></td></tr>
+<tr class="memitem:a469afa42ac45fb816be00eab470f204f" id="r_a469afa42ac45fb816be00eab470f204f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a469afa42ac45fb816be00eab470f204f">SharedCtor</a> (::PROTOBUF_NAMESPACE_ID::Arena *arena, bool is_message_owned)</td></tr>
+<tr class="separator:a469afa42ac45fb816be00eab470f204f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b4325e820ecaef959b016bd007769c" id="r_a64b4325e820ecaef959b016bd007769c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a64b4325e820ecaef959b016bd007769c">SharedDtor</a> ()</td></tr>
+<tr class="separator:a64b4325e820ecaef959b016bd007769c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11621807c056b7e732629007cd550ef" id="r_ac11621807c056b7e732629007cd550ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac11621807c056b7e732629007cd550ef">SetCachedSize</a> (int size) const final</td></tr>
+<tr class="separator:ac11621807c056b7e732629007cd550ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2b752e121211071830d97729e4f09d" id="r_a2a2b752e121211071830d97729e4f09d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a2a2b752e121211071830d97729e4f09d">InternalSwap</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *other)</td></tr>
+<tr class="separator:a2a2b752e121211071830d97729e4f09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961458113737e4b75009141a3621a8f7" id="r_a961458113737e4b75009141a3621a8f7"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a961458113737e4b75009141a3621a8f7">_internal_rid</a> () const</td></tr>
+<tr class="separator:a961458113737e4b75009141a3621a8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a20a990b2642676f661ab115cfafeb1" id="r_a2a20a990b2642676f661ab115cfafeb1"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a2a20a990b2642676f661ab115cfafeb1">_internal_set_rid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a2a20a990b2642676f661ab115cfafeb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e225da79435884b92d6288be218eac" id="r_a53e225da79435884b92d6288be218eac"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a53e225da79435884b92d6288be218eac">_internal_mutable_rid</a> ()</td></tr>
+<tr class="separator:a53e225da79435884b92d6288be218eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac24a7bbfeb4bc925f8582c4596a2266f" id="r_ac24a7bbfeb4bc925f8582c4596a2266f"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ac24a7bbfeb4bc925f8582c4596a2266f">_internal_cid</a> () const</td></tr>
+<tr class="separator:ac24a7bbfeb4bc925f8582c4596a2266f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d35bab656ba6ceb518b5fb3f500682" id="r_a80d35bab656ba6ceb518b5fb3f500682"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a80d35bab656ba6ceb518b5fb3f500682">_internal_set_cid</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a80d35bab656ba6ceb518b5fb3f500682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b05dac07df25e7daf795c508b9f632" id="r_a14b05dac07df25e7daf795c508b9f632"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a14b05dac07df25e7daf795c508b9f632">_internal_mutable_cid</a> ()</td></tr>
+<tr class="separator:a14b05dac07df25e7daf795c508b9f632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326ac1b4dde0a797825516a583181210" id="r_a326ac1b4dde0a797825516a583181210"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a326ac1b4dde0a797825516a583181210">_internal_consumer_tag</a> () const</td></tr>
+<tr class="separator:a326ac1b4dde0a797825516a583181210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8797fb7fa031001b2b4877fb716fd818" id="r_a8797fb7fa031001b2b4877fb716fd818"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a8797fb7fa031001b2b4877fb716fd818">_internal_set_consumer_tag</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:a8797fb7fa031001b2b4877fb716fd818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae815ec4ea319abcbcd8503f7612ddd5a" id="r_ae815ec4ea319abcbcd8503f7612ddd5a"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ae815ec4ea319abcbcd8503f7612ddd5a">_internal_mutable_consumer_tag</a> ()</td></tr>
+<tr class="separator:ae815ec4ea319abcbcd8503f7612ddd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eeb44c0286c36e3dfdcf3f40cd3b5d6" id="r_a5eeb44c0286c36e3dfdcf3f40cd3b5d6"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a5eeb44c0286c36e3dfdcf3f40cd3b5d6">_internal_queue_name</a> () const</td></tr>
+<tr class="separator:a5eeb44c0286c36e3dfdcf3f40cd3b5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b737434cbfea4c7cd943ea123dbd07" id="r_ab5b737434cbfea4c7cd943ea123dbd07"><td class="memItemLeft" align="right" valign="top">PROTOBUF_ALWAYS_INLINE void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ab5b737434cbfea4c7cd943ea123dbd07">_internal_set_queue_name</a> (const std::string &amp;value)</td></tr>
+<tr class="separator:ab5b737434cbfea4c7cd943ea123dbd07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b2f4fec8fb0b26b80c8f10b1e65c89" id="r_ad4b2f4fec8fb0b26b80c8f10b1e65c89"><td class="memItemLeft" align="right" valign="top">std::string *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ad4b2f4fec8fb0b26b80c8f10b1e65c89">_internal_mutable_queue_name</a> ()</td></tr>
+<tr class="separator:ad4b2f4fec8fb0b26b80c8f10b1e65c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+静态 Private 成员函数</h2></td></tr>
+<tr class="memitem:adb8528870a9c95327c926e9884241488" id="r_adb8528870a9c95327c926e9884241488"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#adb8528870a9c95327c926e9884241488">MergeImpl</a> (::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</td></tr>
+<tr class="separator:adb8528870a9c95327c926e9884241488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0255cbe358f843bd437730234802e8ed" id="r_a0255cbe358f843bd437730234802e8ed"><td class="memItemLeft" align="right" valign="top">::PROTOBUF_NAMESPACE_ID::StringPiece&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a0255cbe358f843bd437730234802e8ed">FullMessageName</a> ()</td></tr>
+<tr class="separator:a0255cbe358f843bd437730234802e8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a399d09cb18e6f77738a2487ea6f3719f" id="r_a399d09cb18e6f77738a2487ea6f3719f"><td class="memItemLeft" >union {&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76b6cc33cf3b09802b3941a2df1013b" id="r_ab76b6cc33cf3b09802b3941a2df1013b"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html">Impl_</a>&#160;&#160;&#160;<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a1a97663fa78cd2a2f02e3adaac2fa76d">_impl_</a>&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:ab76b6cc33cf3b09802b3941a2df1013b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399d09cb18e6f77738a2487ea6f3719f" id="r_a399d09cb18e6f77738a2487ea6f3719f"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom">&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a399d09cb18e6f77738a2487ea6f3719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
+友元</h2></td></tr>
+<tr class="memitem:a9b35d94da3444084fc3673b7717b6cfe" id="r_a9b35d94da3444084fc3673b7717b6cfe"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a9b35d94da3444084fc3673b7717b6cfe">::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</a></td></tr>
+<tr class="separator:a9b35d94da3444084fc3673b7717b6cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36" id="r_ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab618dbbac4a8d749da0d85c32932df36"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#ab618dbbac4a8d749da0d85c32932df36">::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</a></td></tr>
+<tr class="separator:ab618dbbac4a8d749da0d85c32932df36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf24c46a593886b66728451c4e9c3d2" id="r_a6cf24c46a593886b66728451c4e9c3d2"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a6cf24c46a593886b66728451c4e9c3d2">::TableStruct_protocol_2eproto</a></td></tr>
+<tr class="separator:a6cf24c46a593886b66728451c4e9c3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71d3d7c78d69c9f9d03d707bd6cdc673" id="r_a71d3d7c78d69c9f9d03d707bd6cdc673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a71d3d7c78d69c9f9d03d707bd6cdc673">swap</a> (<a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;a, <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;b)</td></tr>
+<tr class="separator:a71d3d7c78d69c9f9d03d707bd6cdc673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员类型定义说明</h2>
+<a id="a57e97435656528b8ba9535f058b76566" name="a57e97435656528b8ba9535f058b76566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e97435656528b8ba9535f058b76566">&#9670;&#160;</a></span>DestructorSkippable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#a57e97435656528b8ba9535f058b76566">XuMQ::basicCancelRequest::DestructorSkippable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbc7e221ad0f99c6e84f7b0992d05a7c" name="acbc7e221ad0f99c6e84f7b0992d05a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbc7e221ad0f99c6e84f7b0992d05a7c">&#9670;&#160;</a></span>InternalArenaConstructable_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html#acbc7e221ad0f99c6e84f7b0992d05a7c">XuMQ::basicCancelRequest::InternalArenaConstructable_</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a66388cf71e1ad18ff9b6ab1269fe752a" name="a66388cf71e1ad18ff9b6ab1269fe752a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66388cf71e1ad18ff9b6ab1269fe752a">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum : int</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a66388cf71e1ad18ff9b6ab1269fe752aa2e53b420a7a3d1bcb5deec8dd3d1e218" name="a66388cf71e1ad18ff9b6ab1269fe752aa2e53b420a7a3d1bcb5deec8dd3d1e218"></a>kRidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66388cf71e1ad18ff9b6ab1269fe752aab27f261d2150eaaf95e9ddd7a03ab794" name="a66388cf71e1ad18ff9b6ab1269fe752aab27f261d2150eaaf95e9ddd7a03ab794"></a>kCidFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66388cf71e1ad18ff9b6ab1269fe752aaaf06b6e49aae26116a4e80130044d9e6" name="a66388cf71e1ad18ff9b6ab1269fe752aaaf06b6e49aae26116a4e80130044d9e6"></a>kConsumerTagFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a66388cf71e1ad18ff9b6ab1269fe752aa061000663d4e7b88a4353e78d6f1a45c" name="a66388cf71e1ad18ff9b6ab1269fe752aa061000663d4e7b88a4353e78d6f1a45c"></a>kQueueNameFieldNumber&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a4eeb2c266cb1856a089ede33dae06adc" name="a4eeb2c266cb1856a089ede33dae06adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eeb2c266cb1856a089ede33dae06adc">&#9670;&#160;</a></span>basicCancelRequest() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::basicCancelRequest::basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54d271969b98d74f8865a20395623b48" name="a54d271969b98d74f8865a20395623b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d271969b98d74f8865a20395623b48">&#9670;&#160;</a></span>~basicCancelRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::basicCancelRequest::~basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a54d271969b98d74f8865a20395623b48_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a54d271969b98d74f8865a20395623b48_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a54d271969b98d74f8865a20395623b48_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a54d271969b98d74f8865a20395623b48_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a64b4325e820ecaef959b016bd007769c" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="205,23,240,23,240,28,205,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9a4c46af56fde70be461e1e8b229ca79" name="a9a4c46af56fde70be461e1e8b229ca79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a4c46af56fde70be461e1e8b229ca79">&#9670;&#160;</a></span>basicCancelRequest() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_CONSTEXPR XuMQ::basicCancelRequest::basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1e8f08f811691ef4a180a81dfedd824" name="af1e8f08f811691ef4a180a81dfedd824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e8f08f811691ef4a180a81dfedd824">&#9670;&#160;</a></span>basicCancelRequest() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::basicCancelRequest::basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_af1e8f08f811691ef4a180a81dfedd824_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_af1e8f08f811691ef4a180a81dfedd824_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_af1e8f08f811691ef4a180a81dfedd824_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_af1e8f08f811691ef4a180a81dfedd824_cgraph">
+<area shape="rect" title=" " alt="" coords="5,101,205,141"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ac24a7bbfeb4bc925f8582c4596a2266f" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="149,99,252,55,273,47,275,52,254,60,151,104"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a326ac1b4dde0a797825516a583181210" title=" " alt="" coords="253,69,453,109"/>
+<area shape="poly" title=" " alt="" coords="205,106,239,101,240,107,206,111"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a5eeb44c0286c36e3dfdcf3f40cd3b5d6" title=" " alt="" coords="253,133,453,173"/>
+<area shape="poly" title=" " alt="" coords="206,132,240,136,239,141,205,137"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a961458113737e4b75009141a3621a8f7" title=" " alt="" coords="253,197,453,237"/>
+<area shape="poly" title=" " alt="" coords="151,139,254,183,275,190,273,195,252,188,149,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae64ac640500386b80fa0208d02f9bd26" name="ae64ac640500386b80fa0208d02f9bd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae64ac640500386b80fa0208d02f9bd26">&#9670;&#160;</a></span>basicCancelRequest() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::basicCancelRequest::basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e8e9598c753865f1784b00f7ba14f9a" name="a5e8e9598c753865f1784b00f7ba14f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8e9598c753865f1784b00f7ba14f9a">&#9670;&#160;</a></span>basicCancelRequest() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::basicCancelRequest::basicCancelRequest </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a5e8e9598c753865f1784b00f7ba14f9a_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a5e8e9598c753865f1784b00f7ba14f9a_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a5e8e9598c753865f1784b00f7ba14f9a_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a5e8e9598c753865f1784b00f7ba14f9a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a469afa42ac45fb816be00eab470f204f" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="205,23,240,23,240,28,205,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac24a7bbfeb4bc925f8582c4596a2266f" name="ac24a7bbfeb4bc925f8582c4596a2266f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac24a7bbfeb4bc925f8582c4596a2266f">&#9670;&#160;</a></span>_internal_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::_internal_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_ac24a7bbfeb4bc925f8582c4596a2266f_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_ac24a7bbfeb4bc925f8582c4596a2266f_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_ac24a7bbfeb4bc925f8582c4596a2266f_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_ac24a7bbfeb4bc925f8582c4596a2266f_icgraph">
+<area shape="rect" title=" " alt="" coords="253,69,453,109"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a21aa12fb7861c2f3046f91c1d7b8985f" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="261,68,183,48,184,43,263,63"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824" title=" " alt="" coords="5,69,205,109"/>
+<area shape="poly" title=" " alt="" coords="240,92,206,92,206,87,240,87"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ae988d504dff53925684ebde3b2f24e92" title=" " alt="" coords="5,133,205,173"/>
+<area shape="poly" title=" " alt="" coords="263,115,184,136,183,131,261,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a326ac1b4dde0a797825516a583181210" name="a326ac1b4dde0a797825516a583181210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326ac1b4dde0a797825516a583181210">&#9670;&#160;</a></span>_internal_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::_internal_consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a326ac1b4dde0a797825516a583181210_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a326ac1b4dde0a797825516a583181210_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a326ac1b4dde0a797825516a583181210_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a326ac1b4dde0a797825516a583181210_icgraph">
+<area shape="rect" title=" " alt="" coords="253,69,453,109"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a21aa12fb7861c2f3046f91c1d7b8985f" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="261,68,183,48,184,43,263,63"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824" title=" " alt="" coords="5,69,205,109"/>
+<area shape="poly" title=" " alt="" coords="240,92,206,92,206,87,240,87"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ae988d504dff53925684ebde3b2f24e92" title=" " alt="" coords="5,133,205,173"/>
+<area shape="poly" title=" " alt="" coords="263,115,184,136,183,131,261,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14b05dac07df25e7daf795c508b9f632" name="a14b05dac07df25e7daf795c508b9f632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b05dac07df25e7daf795c508b9f632">&#9670;&#160;</a></span>_internal_mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::_internal_mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a14b05dac07df25e7daf795c508b9f632_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a14b05dac07df25e7daf795c508b9f632_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a14b05dac07df25e7daf795c508b9f632_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a14b05dac07df25e7daf795c508b9f632_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a6b9a09c089b3fddb9cd953ecdc7b1480" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae815ec4ea319abcbcd8503f7612ddd5a" name="ae815ec4ea319abcbcd8503f7612ddd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae815ec4ea319abcbcd8503f7612ddd5a">&#9670;&#160;</a></span>_internal_mutable_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::_internal_mutable_consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_ae815ec4ea319abcbcd8503f7612ddd5a_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_ae815ec4ea319abcbcd8503f7612ddd5a_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_ae815ec4ea319abcbcd8503f7612ddd5a_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_ae815ec4ea319abcbcd8503f7612ddd5a_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,500,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a6b9a09c089b3fddb9cd953ecdc7b1480" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad4b2f4fec8fb0b26b80c8f10b1e65c89" name="ad4b2f4fec8fb0b26b80c8f10b1e65c89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b2f4fec8fb0b26b80c8f10b1e65c89">&#9670;&#160;</a></span>_internal_mutable_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::_internal_mutable_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_ad4b2f4fec8fb0b26b80c8f10b1e65c89_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_ad4b2f4fec8fb0b26b80c8f10b1e65c89_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_ad4b2f4fec8fb0b26b80c8f10b1e65c89_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_ad4b2f4fec8fb0b26b80c8f10b1e65c89_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,492,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a6b9a09c089b3fddb9cd953ecdc7b1480" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,205,28,205,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a53e225da79435884b92d6288be218eac" name="a53e225da79435884b92d6288be218eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e225da79435884b92d6288be218eac">&#9670;&#160;</a></span>_internal_mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::_internal_mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a53e225da79435884b92d6288be218eac_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a53e225da79435884b92d6288be218eac_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a53e225da79435884b92d6288be218eac_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a53e225da79435884b92d6288be218eac_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a6b9a09c089b3fddb9cd953ecdc7b1480" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5eeb44c0286c36e3dfdcf3f40cd3b5d6" name="a5eeb44c0286c36e3dfdcf3f40cd3b5d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eeb44c0286c36e3dfdcf3f40cd3b5d6">&#9670;&#160;</a></span>_internal_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::_internal_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a5eeb44c0286c36e3dfdcf3f40cd3b5d6_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a5eeb44c0286c36e3dfdcf3f40cd3b5d6_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a5eeb44c0286c36e3dfdcf3f40cd3b5d6_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a5eeb44c0286c36e3dfdcf3f40cd3b5d6_icgraph">
+<area shape="rect" title=" " alt="" coords="253,69,453,109"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a21aa12fb7861c2f3046f91c1d7b8985f" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="261,68,183,48,184,43,263,63"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824" title=" " alt="" coords="5,69,205,109"/>
+<area shape="poly" title=" " alt="" coords="240,92,206,92,206,87,240,87"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ae988d504dff53925684ebde3b2f24e92" title=" " alt="" coords="5,133,205,173"/>
+<area shape="poly" title=" " alt="" coords="263,115,184,136,183,131,261,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a961458113737e4b75009141a3621a8f7" name="a961458113737e4b75009141a3621a8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a961458113737e4b75009141a3621a8f7">&#9670;&#160;</a></span>_internal_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::_internal_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a961458113737e4b75009141a3621a8f7_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a961458113737e4b75009141a3621a8f7_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a961458113737e4b75009141a3621a8f7_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a961458113737e4b75009141a3621a8f7_icgraph">
+<area shape="rect" title=" " alt="" coords="253,69,453,109"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a21aa12fb7861c2f3046f91c1d7b8985f" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="261,68,183,48,184,43,263,63"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824" title=" " alt="" coords="5,69,205,109"/>
+<area shape="poly" title=" " alt="" coords="240,92,206,92,206,87,240,87"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ae988d504dff53925684ebde3b2f24e92" title=" " alt="" coords="5,133,205,173"/>
+<area shape="poly" title=" " alt="" coords="263,115,184,136,183,131,261,110"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a80d35bab656ba6ceb518b5fb3f500682" name="a80d35bab656ba6ceb518b5fb3f500682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d35bab656ba6ceb518b5fb3f500682">&#9670;&#160;</a></span>_internal_set_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::_internal_set_cid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8797fb7fa031001b2b4877fb716fd818" name="a8797fb7fa031001b2b4877fb716fd818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8797fb7fa031001b2b4877fb716fd818">&#9670;&#160;</a></span>_internal_set_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::_internal_set_consumer_tag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5b737434cbfea4c7cd943ea123dbd07" name="ab5b737434cbfea4c7cd943ea123dbd07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b737434cbfea4c7cd943ea123dbd07">&#9670;&#160;</a></span>_internal_set_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::_internal_set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a20a990b2642676f661ab115cfafeb1" name="a2a20a990b2642676f661ab115cfafeb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a20a990b2642676f661ab115cfafeb1">&#9670;&#160;</a></span>_internal_set_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::_internal_set_rid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b9a09c089b3fddb9cd953ecdc7b1480" name="a6b9a09c089b3fddb9cd953ecdc7b1480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b9a09c089b3fddb9cd953ecdc7b1480">&#9670;&#160;</a></span>_InternalParse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * XuMQ::basicCancelRequest::_InternalParse </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::internal::ParseContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a6b9a09c089b3fddb9cd953ecdc7b1480_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a6b9a09c089b3fddb9cd953ecdc7b1480_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a6b9a09c089b3fddb9cd953ecdc7b1480_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a6b9a09c089b3fddb9cd953ecdc7b1480_cgraph">
+<area shape="rect" title=" " alt="" coords="5,101,205,141"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a14b05dac07df25e7daf795c508b9f632" title=" " alt="" coords="277,5,477,45"/>
+<area shape="poly" title=" " alt="" coords="147,99,252,55,277,47,279,52,254,60,149,104"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ae815ec4ea319abcbcd8503f7612ddd5a" title=" " alt="" coords="253,69,500,109"/>
+<area shape="poly" title=" " alt="" coords="205,107,239,103,240,108,206,112"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ad4b2f4fec8fb0b26b80c8f10b1e65c89" title=" " alt="" coords="257,133,496,173"/>
+<area shape="poly" title=" " alt="" coords="206,130,244,135,243,140,205,136"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a53e225da79435884b92d6288be218eac" title=" " alt="" coords="277,197,477,237"/>
+<area shape="poly" title=" " alt="" coords="149,139,254,183,279,191,277,196,252,188,147,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21aa12fb7861c2f3046f91c1d7b8985f" name="a21aa12fb7861c2f3046f91c1d7b8985f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21aa12fb7861c2f3046f91c1d7b8985f">&#9670;&#160;</a></span>_InternalSerialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t * XuMQ::basicCancelRequest::_InternalSerialize </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a21aa12fb7861c2f3046f91c1d7b8985f_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a21aa12fb7861c2f3046f91c1d7b8985f_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a21aa12fb7861c2f3046f91c1d7b8985f_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a21aa12fb7861c2f3046f91c1d7b8985f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,101,205,141"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ac24a7bbfeb4bc925f8582c4596a2266f" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="149,99,252,55,273,47,275,52,254,60,151,104"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a326ac1b4dde0a797825516a583181210" title=" " alt="" coords="253,69,453,109"/>
+<area shape="poly" title=" " alt="" coords="205,106,239,101,240,107,206,111"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a5eeb44c0286c36e3dfdcf3f40cd3b5d6" title=" " alt="" coords="253,133,453,173"/>
+<area shape="poly" title=" " alt="" coords="206,132,240,136,239,141,205,137"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a961458113737e4b75009141a3621a8f7" title=" " alt="" coords="253,197,453,237"/>
+<area shape="poly" title=" " alt="" coords="151,139,254,183,275,190,273,195,252,188,149,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae988d504dff53925684ebde3b2f24e92" name="ae988d504dff53925684ebde3b2f24e92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae988d504dff53925684ebde3b2f24e92">&#9670;&#160;</a></span>ByteSizeLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t XuMQ::basicCancelRequest::ByteSizeLong </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_ae988d504dff53925684ebde3b2f24e92_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_ae988d504dff53925684ebde3b2f24e92_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_ae988d504dff53925684ebde3b2f24e92_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_ae988d504dff53925684ebde3b2f24e92_cgraph">
+<area shape="rect" title=" " alt="" coords="5,101,205,141"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#ac24a7bbfeb4bc925f8582c4596a2266f" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="149,99,252,55,273,47,275,52,254,60,151,104"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a326ac1b4dde0a797825516a583181210" title=" " alt="" coords="253,69,453,109"/>
+<area shape="poly" title=" " alt="" coords="205,106,239,101,240,107,206,111"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a5eeb44c0286c36e3dfdcf3f40cd3b5d6" title=" " alt="" coords="253,133,453,173"/>
+<area shape="poly" title=" " alt="" coords="206,132,240,136,239,141,205,137"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a961458113737e4b75009141a3621a8f7" title=" " alt="" coords="253,197,453,237"/>
+<area shape="poly" title=" " alt="" coords="151,139,254,183,275,190,273,195,252,188,149,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac0cf113214f5022acfd1f245286c48f1" name="ac0cf113214f5022acfd1f245286c48f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0cf113214f5022acfd1f245286c48f1">&#9670;&#160;</a></span>cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8729d22403952a5cd23b2df0a058412e" name="a8729d22403952a5cd23b2df0a058412e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8729d22403952a5cd23b2df0a058412e">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a8729d22403952a5cd23b2df0a058412e_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a8729d22403952a5cd23b2df0a058412e_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a8729d22403952a5cd23b2df0a058412e_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a8729d22403952a5cd23b2df0a058412e_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#aca423097db29b2e1fd64764fa77c41f8" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa70a2d827302707a5686e82f6cb00b3d" name="aa70a2d827302707a5686e82f6cb00b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa70a2d827302707a5686e82f6cb00b3d">&#9670;&#160;</a></span>clear_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::clear_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe0f6b473bf8b37f5cfdb4247fc4d5bd" name="afe0f6b473bf8b37f5cfdb4247fc4d5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe0f6b473bf8b37f5cfdb4247fc4d5bd">&#9670;&#160;</a></span>clear_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::clear_consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5047529f7c3dfab3a925c55f12a10de1" name="a5047529f7c3dfab3a925c55f12a10de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5047529f7c3dfab3a925c55f12a10de1">&#9670;&#160;</a></span>clear_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::clear_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a49a44bb774f8f5925468cc0ac6b1ae" name="a1a49a44bb774f8f5925468cc0ac6b1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a49a44bb774f8f5925468cc0ac6b1ae">&#9670;&#160;</a></span>clear_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::clear_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a989dc8a4f2edced7ff62adc729130a5e" name="a989dc8a4f2edced7ff62adc729130a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a989dc8a4f2edced7ff62adc729130a5e">&#9670;&#160;</a></span>consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca423097db29b2e1fd64764fa77c41f8" name="aca423097db29b2e1fd64764fa77c41f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca423097db29b2e1fd64764fa77c41f8">&#9670;&#160;</a></span>CopyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::CopyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_aca423097db29b2e1fd64764fa77c41f8_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_aca423097db29b2e1fd64764fa77c41f8_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_aca423097db29b2e1fd64764fa77c41f8_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_aca423097db29b2e1fd64764fa77c41f8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,37,205,77"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a8729d22403952a5cd23b2df0a058412e" title=" " alt="" coords="253,5,453,45"/>
+<area shape="poly" title=" " alt="" coords="205,42,239,37,240,43,206,47"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a178a19c6f60c7ef1f76138e9a7ccb149" title=" " alt="" coords="253,69,453,109"/>
+<area shape="poly" title=" " alt="" coords="206,68,240,72,239,77,205,73"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae6e169d44018355f3886dfb4b4d04ed9" name="ae6e169d44018355f3886dfb4b4d04ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e169d44018355f3886dfb4b4d04ed9">&#9670;&#160;</a></span>default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp; XuMQ::basicCancelRequest::default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2fb31125d59fdb9e8244f92e756f520" name="ab2fb31125d59fdb9e8244f92e756f520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fb31125d59fdb9e8244f92e756f520">&#9670;&#160;</a></span>descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::basicCancelRequest::descriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0255cbe358f843bd437730234802e8ed" name="a0255cbe358f843bd437730234802e8ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0255cbe358f843bd437730234802e8ed">&#9670;&#160;</a></span>FullMessageName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">::PROTOBUF_NAMESPACE_ID::StringPiece XuMQ::basicCancelRequest::FullMessageName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af97c9a2a8d22e8f7b7ad57ab6822a8e4" name="af97c9a2a8d22e8f7b7ad57ab6822a8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97c9a2a8d22e8f7b7ad57ab6822a8e4">&#9670;&#160;</a></span>GetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int XuMQ::basicCancelRequest::GetCachedSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4689e72adcb64643c29602fb3f67d779" name="a4689e72adcb64643c29602fb3f67d779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4689e72adcb64643c29602fb3f67d779">&#9670;&#160;</a></span>GetClassData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData * XuMQ::basicCancelRequest::GetClassData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1b89be35d2a9bb3ce910808a8f0b549" name="ae1b89be35d2a9bb3ce910808a8f0b549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b89be35d2a9bb3ce910808a8f0b549">&#9670;&#160;</a></span>GetDescriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Descriptor * XuMQ::basicCancelRequest::GetDescriptor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0f139d338c5914048a4460d5aa3bedc" name="aa0f139d338c5914048a4460d5aa3bedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f139d338c5914048a4460d5aa3bedc">&#9670;&#160;</a></span>GetMetadata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_NAMESPACE_ID::Metadata XuMQ::basicCancelRequest::GetMetadata </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_aa0f139d338c5914048a4460d5aa3bedc_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_aa0f139d338c5914048a4460d5aa3bedc_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_aa0f139d338c5914048a4460d5aa3bedc_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_aa0f139d338c5914048a4460d5aa3bedc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,205,45"/>
+<area shape="rect" href="protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066" title=" " alt="" coords="253,5,440,45"/>
+<area shape="poly" title=" " alt="" coords="205,23,239,23,239,28,205,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a468eac65eca1793b4b94cfff32ead65b" name="a468eac65eca1793b4b94cfff32ead65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468eac65eca1793b4b94cfff32ead65b">&#9670;&#160;</a></span>GetReflection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const ::PROTOBUF_NAMESPACE_ID::Reflection * XuMQ::basicCancelRequest::GetReflection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68834b8dd77194b80341319ab1209518" name="a68834b8dd77194b80341319ab1209518"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68834b8dd77194b80341319ab1209518">&#9670;&#160;</a></span>internal_default_instance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> * XuMQ::basicCancelRequest::internal_default_instance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a2b752e121211071830d97729e4f09d" name="a2a2b752e121211071830d97729e4f09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2b752e121211071830d97729e4f09d">&#9670;&#160;</a></span>InternalSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::InternalSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_cgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,205,69"/>
+<area shape="poly" title=" " alt="" coords="68,30,66,20,72,11,85,5,105,3,129,6,141,13,139,18,127,11,105,8,86,10,75,15,71,21,73,28"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a2a2b752e121211071830d97729e4f09d_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,205,69"/>
+<area shape="poly" title=" " alt="" coords="139,18,127,11,105,8,86,10,75,15,71,21,73,28,68,30,66,20,72,11,85,5,105,3,129,6,141,13"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1e52160788b0a85cccd364737fccc68a" name="a1e52160788b0a85cccd364737fccc68a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e52160788b0a85cccd364737fccc68a">&#9670;&#160;</a></span>IsInitialized()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XuMQ::basicCancelRequest::IsInitialized </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a178a19c6f60c7ef1f76138e9a7ccb149" name="a178a19c6f60c7ef1f76138e9a7ccb149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a178a19c6f60c7ef1f76138e9a7ccb149">&#9670;&#160;</a></span>MergeFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::MergeFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a178a19c6f60c7ef1f76138e9a7ccb149_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a178a19c6f60c7ef1f76138e9a7ccb149_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a178a19c6f60c7ef1f76138e9a7ccb149_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a178a19c6f60c7ef1f76138e9a7ccb149_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#aca423097db29b2e1fd64764fa77c41f8" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb8528870a9c95327c926e9884241488" name="adb8528870a9c95327c926e9884241488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8528870a9c95327c926e9884241488">&#9670;&#160;</a></span>MergeImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::MergeImpl </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>to_msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ::PROTOBUF_NAMESPACE_ID::Message &amp;&#160;</td>
+          <td class="paramname"><em>from_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef5f248251aa1d8d66fc61f98ad92772" name="aef5f248251aa1d8d66fc61f98ad92772"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5f248251aa1d8d66fc61f98ad92772">&#9670;&#160;</a></span>mutable_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::mutable_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4977d20d40ab813ca88e7f67e68f770" name="ae4977d20d40ab813ca88e7f67e68f770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4977d20d40ab813ca88e7f67e68f770">&#9670;&#160;</a></span>mutable_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::mutable_consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b5047f8d37b77086f9f24d09dd18d98" name="a0b5047f8d37b77086f9f24d09dd18d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5047f8d37b77086f9f24d09dd18d98">&#9670;&#160;</a></span>mutable_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::mutable_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeffac53f224e4ed0cef22485899977e5" name="aeffac53f224e4ed0cef22485899977e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeffac53f224e4ed0cef22485899977e5">&#9670;&#160;</a></span>mutable_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::mutable_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac8858da29d8ff75f236ef14c42ad10fc" name="ac8858da29d8ff75f236ef14c42ad10fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8858da29d8ff75f236ef14c42ad10fc">&#9670;&#160;</a></span>New()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> * XuMQ::basicCancelRequest::New </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em> = <code>nullptr</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82eda9940f46d1af255f4a2ad95f856b" name="a82eda9940f46d1af255f4a2ad95f856b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82eda9940f46d1af255f4a2ad95f856b">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp; XuMQ::basicCancelRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7abdaf85a27462cc3ade740086d1c83" name="ac7abdaf85a27462cc3ade740086d1c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7abdaf85a27462cc3ade740086d1c83">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp; XuMQ::basicCancelRequest::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d1fba9cc29fab55464c612074df46f0" name="a9d1fba9cc29fab55464c612074df46f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1fba9cc29fab55464c612074df46f0">&#9670;&#160;</a></span>queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86fec48b3004da923cba8267b968b8a5" name="a86fec48b3004da923cba8267b968b8a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fec48b3004da923cba8267b968b8a5">&#9670;&#160;</a></span>release_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::release_cid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6171abe2a5596f264bd1a969e1b948d" name="ac6171abe2a5596f264bd1a969e1b948d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6171abe2a5596f264bd1a969e1b948d">&#9670;&#160;</a></span>release_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::release_consumer_tag </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4051892ebf8d3cec7ef9509eb0ef2e7" name="af4051892ebf8d3cec7ef9509eb0ef2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4051892ebf8d3cec7ef9509eb0ef2e7">&#9670;&#160;</a></span>release_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::release_queue_name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa758fe770ceb1182c0ca6f27e0707b6a" name="aa758fe770ceb1182c0ca6f27e0707b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa758fe770ceb1182c0ca6f27e0707b6a">&#9670;&#160;</a></span>release_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string * XuMQ::basicCancelRequest::release_rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d8a1807beca027822dc968722dd9e2a" name="a8d8a1807beca027822dc968722dd9e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d8a1807beca027822dc968722dd9e2a">&#9670;&#160;</a></span>rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; XuMQ::basicCancelRequest::rid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d3e699cc3fed48f04d7d6e908559bf3" name="a4d3e699cc3fed48f04d7d6e908559bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3e699cc3fed48f04d7d6e908559bf3">&#9670;&#160;</a></span>set_allocated_cid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_allocated_cid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>cid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a694ef9f2fb64d68376a01fc08163b960" name="a694ef9f2fb64d68376a01fc08163b960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a694ef9f2fb64d68376a01fc08163b960">&#9670;&#160;</a></span>set_allocated_consumer_tag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_allocated_consumer_tag </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>consumer_tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abaf451a37a292bfe679982df90a3fe48" name="abaf451a37a292bfe679982df90a3fe48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf451a37a292bfe679982df90a3fe48">&#9670;&#160;</a></span>set_allocated_queue_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_allocated_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>queue_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a808129a78550798095eaa43db077a26e" name="a808129a78550798095eaa43db077a26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808129a78550798095eaa43db077a26e">&#9670;&#160;</a></span>set_allocated_rid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_allocated_rid </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>rid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1b75571d9f83fb4e2e8c9dd0eb05fd1" name="af1b75571d9f83fb4e2e8c9dd0eb05fd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b75571d9f83fb4e2e8c9dd0eb05fd1">&#9670;&#160;</a></span>set_cid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40bbe9107fcc159fa1dba4bf357a4438" name="a40bbe9107fcc159fa1dba4bf357a4438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40bbe9107fcc159fa1dba4bf357a4438">&#9670;&#160;</a></span>set_cid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::basicCancelRequest::set_cid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0f2efa9a7e8896f7ed1f6e900737100" name="ac0f2efa9a7e8896f7ed1f6e900737100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f2efa9a7e8896f7ed1f6e900737100">&#9670;&#160;</a></span>set_consumer_tag() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_consumer_tag </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22df479e7fc012c263da0c53dd861df" name="ab22df479e7fc012c263da0c53dd861df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22df479e7fc012c263da0c53dd861df">&#9670;&#160;</a></span>set_consumer_tag() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::basicCancelRequest::set_consumer_tag </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55315bdac88732133f7a6544d847d5ff" name="a55315bdac88732133f7a6544d847d5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55315bdac88732133f7a6544d847d5ff">&#9670;&#160;</a></span>set_queue_name() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a68b7450dd1aaaf02d90344f95a16d605" name="a68b7450dd1aaaf02d90344f95a16d605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68b7450dd1aaaf02d90344f95a16d605">&#9670;&#160;</a></span>set_queue_name() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::basicCancelRequest::set_queue_name </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad22a2fa17c1231a5e44d4e5c2ab29a73" name="ad22a2fa17c1231a5e44d4e5c2ab29a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22a2fa17c1231a5e44d4e5c2ab29a73">&#9670;&#160;</a></span>set_rid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0  = const std::string&amp;, typename... ArgT&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a3edec0bc8d34291483d96f94c92ba5" name="a5a3edec0bc8d34291483d96f94c92ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a3edec0bc8d34291483d96f94c92ba5">&#9670;&#160;</a></span>set_rid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ArgT0 , typename... ArgT&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PROTOBUF_ALWAYS_INLINE void XuMQ::basicCancelRequest::set_rid </td>
+          <td>(</td>
+          <td class="paramtype">ArgT0 &amp;&amp;&#160;</td>
+          <td class="paramname"><em>arg0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ArgT...&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac11621807c056b7e732629007cd550ef" name="ac11621807c056b7e732629007cd550ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11621807c056b7e732629007cd550ef">&#9670;&#160;</a></span>SetCachedSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::SetCachedSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a469afa42ac45fb816be00eab470f204f" name="a469afa42ac45fb816be00eab470f204f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469afa42ac45fb816be00eab470f204f">&#9670;&#160;</a></span>SharedCtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::SharedCtor </td>
+          <td>(</td>
+          <td class="paramtype">::PROTOBUF_NAMESPACE_ID::Arena *&#160;</td>
+          <td class="paramname"><em>arena</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_message_owned</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a469afa42ac45fb816be00eab470f204f_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a469afa42ac45fb816be00eab470f204f_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a469afa42ac45fb816be00eab470f204f_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a469afa42ac45fb816be00eab470f204f_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a5e8e9598c753865f1784b00f7ba14f9a" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a64b4325e820ecaef959b016bd007769c" name="a64b4325e820ecaef959b016bd007769c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b4325e820ecaef959b016bd007769c">&#9670;&#160;</a></span>SharedDtor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::SharedDtor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1basic_cancel_request_a64b4325e820ecaef959b016bd007769c_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1basic_cancel_request_a64b4325e820ecaef959b016bd007769c_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1basic_cancel_request_a64b4325e820ecaef959b016bd007769c_icgraph" id="aclass_xu_m_q_1_1basic_cancel_request_a64b4325e820ecaef959b016bd007769c_icgraph">
+<area shape="rect" title=" " alt="" coords="253,5,453,45"/>
+<area shape="rect" href="class_xu_m_q_1_1basic_cancel_request.html#a54d271969b98d74f8865a20395623b48" title=" " alt="" coords="5,5,205,45"/>
+<area shape="poly" title=" " alt="" coords="240,28,206,28,206,23,240,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a63d2affec4e751575d485a2e5faf69e2" name="a63d2affec4e751575d485a2e5faf69e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d2affec4e751575d485a2e5faf69e2">&#9670;&#160;</a></span>Swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb35024ade0680118bc388e28424c37d" name="acb35024ade0680118bc388e28424c37d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb35024ade0680118bc388e28424c37d">&#9670;&#160;</a></span>UnsafeArenaSwap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::basicCancelRequest::UnsafeArenaSwap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> *&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">友元及相关函数文档</h2>
+<a id="ab618dbbac4a8d749da0d85c32932df36" name="ab618dbbac4a8d749da0d85c32932df36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab618dbbac4a8d749da0d85c32932df36">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b35d94da3444084fc3673b7717b6cfe" name="a9b35d94da3444084fc3673b7717b6cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b35d94da3444084fc3673b7717b6cfe">&#9670;&#160;</a></span>::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cf24c46a593886b66728451c4e9c3d2" name="a6cf24c46a593886b66728451c4e9c3d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf24c46a593886b66728451c4e9c3d2">&#9670;&#160;</a></span>::TableStruct_protocol_2eproto</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct <a class="el" href="struct_table_struct__protocol__2eproto.html">::TableStruct_protocol_2eproto</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71d3d7c78d69c9f9d03d707bd6cdc673" name="a71d3d7c78d69c9f9d03d707bd6cdc673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d3d7c78d69c9f9d03d707bd6cdc673">&#9670;&#160;</a></span>swap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a399d09cb18e6f77738a2487ea6f3719f" name="a399d09cb18e6f77738a2487ea6f3719f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a399d09cb18e6f77738a2487ea6f3719f">&#9670;&#160;</a></span>[union]</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union  { ... }  <a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">XuMQ::basicCancelRequest</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9128f64edff90c289f5062e8c5735dcd" name="a9128f64edff90c289f5062e8c5735dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9128f64edff90c289f5062e8c5735dcd">&#9670;&#160;</a></span>_class_data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const ::PROTOBUF_NAMESPACE_ID::Message::ClassData XuMQ::basicCancelRequest::_class_data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,</div>
+<div class="line">    <a class="code hl_function" href="class_xu_m_q_1_1basic_cancel_request.html#adb8528870a9c95327c926e9884241488">basicCancelRequest::MergeImpl</a></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1basic_cancel_request_html_adb8528870a9c95327c926e9884241488"><div class="ttname"><a href="class_xu_m_q_1_1basic_cancel_request.html#adb8528870a9c95327c926e9884241488">XuMQ::basicCancelRequest::MergeImpl</a></div><div class="ttdeci">static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message &amp;to_msg, const ::PROTOBUF_NAMESPACE_ID::Message &amp;from_msg)</div><div class="ttdef"><b>Definition</b> protocol.pb.cc:4773</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1a97663fa78cd2a2f02e3adaac2fa76d" name="a1a97663fa78cd2a2f02e3adaac2fa76d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a97663fa78cd2a2f02e3adaac2fa76d">&#9670;&#160;</a></span>_impl_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_xu_m_q_1_1basic_cancel_request_1_1_impl__.html">Impl_</a> XuMQ::basicCancelRequest::_impl_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c6bcd73930740b27236d3236bb8fbd8" name="a4c6bcd73930740b27236d3236bb8fbd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c6bcd73930740b27236d3236bb8fbd8">&#9670;&#160;</a></span>kIndexInFileMessages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int XuMQ::basicCancelRequest::kIndexInFileMessages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div>
+<div class="line">    13</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1basic_cancel_request.html">basicCancelRequest</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

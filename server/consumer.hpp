@@ -1,4 +1,4 @@
-/// @file consumer.h
+/// @file consumer.hpp
 /// @brief 消费者管理模块
 ///
 /// 本文件定义了消费者及其管理类，用于管理队列中的消费者。
@@ -21,7 +21,7 @@
 
 namespace XuMQ
 {
-    using ConsumerCallback = std::function<void(const std::string, const BasicProperties *, const std::string)>; ///< 消费者回调函数
+    using ConsumerCallback = std::function<void(const std::string&, const BasicProperties *, const std::string&)>; ///< 消费者回调函数
     /// @struct Consumer
     /// @brief 消费者对象结构
     struct Consumer

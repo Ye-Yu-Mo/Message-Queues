@@ -1,4 +1,7 @@
-.PHONY:mqconsumer.cc
+.PHONY:mqchannel
+mqchannel:mqchanneltest.cpp ../common/msg.pb.cc ../common/protocol.pb.cc
+	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf -I../third/muduo/include
+
 mqconsumer:mqconsumer.cpp ../common/msg.pb.cc
 	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
 

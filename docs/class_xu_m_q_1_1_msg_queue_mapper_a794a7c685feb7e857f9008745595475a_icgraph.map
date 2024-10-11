@@ -1,5 +1,5 @@
 <map id="XuMQ::MsgQueueMapper::insert" name="XuMQ::MsgQueueMapper::insert">
 <area shape="rect" id="Node000001" title="新增一个消息队列" alt="" coords="248,5,435,45"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_manager.html#a335dfce61a8747de639c588d077b30d5" title="声明消息队列" alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_msg_queue_manager.html#abef413a301ebe08def79bdd9427eb6de" title="声明消息队列" alt="" coords="5,5,200,45"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,28,200,28,200,23,234,23"/>
 </map>
