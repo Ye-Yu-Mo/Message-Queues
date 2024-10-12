@@ -1,3 +1,15 @@
+/**
+ * @file broker.hpp
+ * @brief XuMQ消息队列服务器类的声明文件。
+ *
+ * 该文件定义了XuMQ消息队列服务器类的实现，负责处理客户端的连接与消息请求，维护虚拟主机、消费者管理和连接管理等。
+ *
+ * 包含的主要功能：
+ * - 处理与客户端的网络连接
+ * - 基于 Protobuf 的消息解析和分发
+ * - 管理队列、交换机及消费者
+ *
+ */
 #pragma once
 #include "muduo/protobuf/codec.h"
 #include "muduo/protobuf/dispatcher.h"
@@ -16,13 +28,19 @@
 
 namespace XuMQ
 {
-    const char *DBFILE = "/meta.db";
-    const char *HOSTNAME = "VirtualHost";
+    const char *DBFILE = "/meta.db";      ///< 数据库名称
+    const char *HOSTNAME = "VirtualHost"; ///< 虚拟机名称
+
+    /// @class Server
+    /// @brief 服务器类，负责处理客户端请求、管理连接、分发消息。
     class Server
     {
     public:
-        using MessagePtr = std::shared_ptr<google::protobuf::Message>;
+        using MessagePtr = std::shared_ptr<google::protobuf::Message>; ///< protobuf消息的智能指针类型定义
 
+        /// @brief Server类的构造函数
+        /// @param port 服务器监听的端口号
+        /// @param basedir 基础目录，用于存储元数据等文件
         Server(int port, const std::string &basedir) : _server(&_baseloop, muduo::net::InetAddress("0.0.0.0", port),
                                                                "Server", muduo::net::TcpServer::kReusePort),
                                                        _dispatcher(std::bind(&Server::onUnknowMessage, this,
@@ -67,6 +85,7 @@ namespace XuMQ
                                                  std::placeholders::_2, std::placeholders::_3));
             _server.setConnectionCallback(std::bind(&Server::onConnection, this, std::placeholders::_1));
         }
+        /// @brief 启动服务器，开始监听并处理客户端请求
         void start()
         {
             _server.start();
@@ -74,6 +93,13 @@ namespace XuMQ
         }
 
     private:
+        /**
+         * @brief 处理打开信道的请求
+         * @param conn 客户端连接
+         * @param message 打开信道请求消息
+         * @param timestamp 消息时间戳
+         * @return 操作是否成功
+         */
         bool onOpenChannel(const muduo::net::TcpConnectionPtr &conn, const openChannelRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -85,6 +111,12 @@ namespace XuMQ
             }
             return mconn->openChannel(message);
         }
+        /**
+         * @brief 处理关闭信道的请求
+         * @param conn 客户端连接
+         * @param message 关闭信道请求消息
+         * @param timestamp 消息时间戳
+         */
         void onCloseChannel(const muduo::net::TcpConnectionPtr &conn, const closeChannelRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -96,6 +128,12 @@ namespace XuMQ
             }
             return mconn->closeChannel(message);
         }
+        /**
+         * @brief 处理声明交换机的请求
+         * @param conn 客户端连接
+         * @param message 声明交换机请求消息
+         * @param timestamp 消息时间戳
+         */
         void onDeclareExchange(const muduo::net::TcpConnectionPtr &conn, const declareExchangeRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -113,6 +151,12 @@ namespace XuMQ
             }
             return cp->declareExchange(message);
         }
+        /**
+         * @brief 处理删除交换机的请求
+         * @param conn 客户端连接
+         * @param message 删除交换机请求消息
+         * @param timestamp 消息时间戳
+         */
         void onDeleteExchange(const muduo::net::TcpConnectionPtr &conn, const deleteExchangeRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -130,6 +174,12 @@ namespace XuMQ
             }
             return cp->deleteExchange(message);
         }
+        /**
+         * @brief 处理声明队列的请求
+         * @param conn 客户端连接
+         * @param message 声明队列请求消息
+         * @param timestamp 消息时间戳
+         */
         void onDeClareQueue(const muduo::net::TcpConnectionPtr &conn, const declareQueueRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -147,6 +197,12 @@ namespace XuMQ
             }
             return cp->declareQueue(message);
         }
+        /**
+         * @brief 处理删除队列的请求
+         * @param conn 客户端连接
+         * @param message 删除队列请求消息
+         * @param timestamp 消息时间戳
+         */
         void onDeleteQueue(const muduo::net::TcpConnectionPtr &conn, const deleteQueueRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -164,6 +220,12 @@ namespace XuMQ
             }
             return cp->deleteQueue(message);
         }
+        /**
+         * @brief 处理队列绑定的请求
+         * @param conn 客户端连接
+         * @param message 队列绑定请求消息
+         * @param timestamp 消息时间戳
+         */
         void onQueueBind(const muduo::net::TcpConnectionPtr &conn, const queueBindRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -181,6 +243,12 @@ namespace XuMQ
             }
             return cp->queueBind(message);
         }
+        /**
+         * @brief 处理队列解绑的请求
+         * @param conn 客户端连接
+         * @param message 队列解绑请求消息
+         * @param timestamp 消息时间戳
+         */
         void onQueueUnBind(const muduo::net::TcpConnectionPtr &conn, const queueUnBindRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -198,6 +266,12 @@ namespace XuMQ
             }
             return cp->queueUnBind(message);
         }
+        /**
+         * @brief 处理消息发布的请求
+         * @param conn 客户端连接
+         * @param message 消息发布请求消息
+         * @param timestamp 消息时间戳
+         */
         void onBasicPublish(const muduo::net::TcpConnectionPtr &conn, const basicPublishRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -215,6 +289,12 @@ namespace XuMQ
             }
             return cp->basicPublish(message);
         }
+        /**
+         * @brief 处理消息应答的请求
+         * @param conn 客户端连接
+         * @param message 消息应答请求消息
+         * @param timestamp 消息时间戳
+         */
         void onBasicAck(const muduo::net::TcpConnectionPtr &conn, const basicAckRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -232,6 +312,12 @@ namespace XuMQ
             }
             return cp->basicAck(message);
         }
+        /**
+         * @brief 处理消息订阅的请求
+         * @param conn 客户端连接
+         * @param message 消息订阅请求消息
+         * @param timestamp 消息时间戳
+         */
         void onBasicConsume(const muduo::net::TcpConnectionPtr &conn, const basicConsumeRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -249,6 +335,12 @@ namespace XuMQ
             }
             return cp->basicConsume(message);
         }
+        /**
+         * @brief 处理取消订阅的请求
+         * @param conn 客户端连接
+         * @param message 取消订阅请求消息
+         * @param timestamp 消息时间戳
+         */
         void onBasicCancel(const muduo::net::TcpConnectionPtr &conn, const basicCancelRequestPtr message, muduo::Timestamp)
         {
             Connection::ptr mconn = _connection_manager->getConnection(conn);
@@ -266,12 +358,21 @@ namespace XuMQ
             }
             return cp->basicCancel(message);
         }
-
+        /**
+         * @brief 处理未知消息类型的请求
+         * @param conn 客户端连接
+         * @param message 未知类型的消息
+         * @param timestamp 消息时间戳
+         */
         void onUnknowMessage(const muduo::net::TcpConnectionPtr &conn, const Server::MessagePtr message, muduo::Timestamp)
         {
             INFO("onUnknowMessage: %s", message->GetTypeName());
             conn->shutdown();
         }
+        /**
+         * @brief 处理新连接的回调函数
+         * @param conn 新建立的TCP连接
+         */
         void onConnection(const muduo::net::TcpConnectionPtr &conn)
         {
             if (conn->connected())

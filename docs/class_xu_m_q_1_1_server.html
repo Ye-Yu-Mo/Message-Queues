@@ -106,49 +106,69 @@ $(document).ready(function(){initNavTree('class_xu_m_q_1_1_server.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p>服务器类，负责处理客户端请求、管理连接、分发消息。  
+ <a href="class_xu_m_q_1_1_server.html#details">更多...</a></p>
+
 <p><code>#include &lt;<a class="el" href="broker_8hpp_source.html">broker.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
 <tr class="memitem:ace0e4a2206eb6cadbe6be8953ffac1c7" id="r_ace0e4a2206eb6cadbe6be8953ffac1c7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#ace0e4a2206eb6cadbe6be8953ffac1c7">MessagePtr</a> = std::shared_ptr&lt; google::protobuf::Message &gt;</td></tr>
+<tr class="memdesc:ace0e4a2206eb6cadbe6be8953ffac1c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">protobuf消息的智能指针类型定义  <br /></td></tr>
 <tr class="separator:ace0e4a2206eb6cadbe6be8953ffac1c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:afb876192b1fc2cb2e3b021c58aa21d47" id="r_afb876192b1fc2cb2e3b021c58aa21d47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47">Server</a> (int port, const std::string &amp;basedir)</td></tr>
+<tr class="memdesc:afb876192b1fc2cb2e3b021c58aa21d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server类的构造函数  <br /></td></tr>
 <tr class="separator:afb876192b1fc2cb2e3b021c58aa21d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8ad0533d5fdd251f9e4694c186c670b" id="r_ac8ad0533d5fdd251f9e4694c186c670b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#ac8ad0533d5fdd251f9e4694c186c670b">start</a> ()</td></tr>
+<tr class="memdesc:ac8ad0533d5fdd251f9e4694c186c670b"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动服务器，开始监听并处理客户端请求  <br /></td></tr>
 <tr class="separator:ac8ad0533d5fdd251f9e4694c186c670b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
 <tr class="memitem:af0e7655981a5649aba5d14219b901dba" id="r_af0e7655981a5649aba5d14219b901dba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#af0e7655981a5649aba5d14219b901dba">onOpenChannel</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a0b66ac6ad7a71679dd35a34684b5d622">openChannelRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:af0e7655981a5649aba5d14219b901dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理打开信道的请求  <br /></td></tr>
 <tr class="separator:af0e7655981a5649aba5d14219b901dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37629168331a75323a37185031c02210" id="r_a37629168331a75323a37185031c02210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a37629168331a75323a37185031c02210">onCloseChannel</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a7f682f5c4b91edfd21ce5157d20a7389">closeChannelRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a37629168331a75323a37185031c02210"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理关闭信道的请求  <br /></td></tr>
 <tr class="separator:a37629168331a75323a37185031c02210"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f25b5d1f175004bb8ba66fb1db2895d" id="r_a2f25b5d1f175004bb8ba66fb1db2895d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a2f25b5d1f175004bb8ba66fb1db2895d">onDeclareExchange</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a565ef24c10d6161f8b3b238dfa1e2d38">declareExchangeRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a2f25b5d1f175004bb8ba66fb1db2895d"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理声明交换机的请求  <br /></td></tr>
 <tr class="separator:a2f25b5d1f175004bb8ba66fb1db2895d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5fe0a7c1e7c26c7ccc21b97a954fd32" id="r_ad5fe0a7c1e7c26c7ccc21b97a954fd32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#ad5fe0a7c1e7c26c7ccc21b97a954fd32">onDeleteExchange</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#afb55800cff4209ac359d352135e01c39">deleteExchangeRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:ad5fe0a7c1e7c26c7ccc21b97a954fd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理删除交换机的请求  <br /></td></tr>
 <tr class="separator:ad5fe0a7c1e7c26c7ccc21b97a954fd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f778fca9727e2a0238680cba53c9fee" id="r_a6f778fca9727e2a0238680cba53c9fee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a6f778fca9727e2a0238680cba53c9fee">onDeClareQueue</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a2e4a7a84ab7192fb25d36802a33764c1">declareQueueRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a6f778fca9727e2a0238680cba53c9fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理声明队列的请求  <br /></td></tr>
 <tr class="separator:a6f778fca9727e2a0238680cba53c9fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a89f18c07cceaf649b5775bc1fa5351" id="r_a4a89f18c07cceaf649b5775bc1fa5351"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a4a89f18c07cceaf649b5775bc1fa5351">onDeleteQueue</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a166fad7828585f198b54d4b4ee4f50e2">deleteQueueRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a4a89f18c07cceaf649b5775bc1fa5351"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理删除队列的请求  <br /></td></tr>
 <tr class="separator:a4a89f18c07cceaf649b5775bc1fa5351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dd68442f6f6d1b1627ae271fce8966d" id="r_a3dd68442f6f6d1b1627ae271fce8966d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a3dd68442f6f6d1b1627ae271fce8966d">onQueueBind</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#ab93a9cc2dbab513d88f6e1eba78ae69e">queueBindRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a3dd68442f6f6d1b1627ae271fce8966d"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理队列绑定的请求  <br /></td></tr>
 <tr class="separator:a3dd68442f6f6d1b1627ae271fce8966d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad78df74e8eec8b21560b5697b07c4f37" id="r_ad78df74e8eec8b21560b5697b07c4f37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#ad78df74e8eec8b21560b5697b07c4f37">onQueueUnBind</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a45cc9152b7fbd6416937b94f97ec813a">queueUnBindRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:ad78df74e8eec8b21560b5697b07c4f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理队列解绑的请求  <br /></td></tr>
 <tr class="separator:ad78df74e8eec8b21560b5697b07c4f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67bd86d5f093433c7a5810029767b47" id="r_ae67bd86d5f093433c7a5810029767b47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#ae67bd86d5f093433c7a5810029767b47">onBasicPublish</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a1c2d37f29b085bb039a66be850deb33a">basicPublishRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:ae67bd86d5f093433c7a5810029767b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理消息发布的请求  <br /></td></tr>
 <tr class="separator:ae67bd86d5f093433c7a5810029767b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc3f625d8d37f00f593bdd4623715745" id="r_acc3f625d8d37f00f593bdd4623715745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#acc3f625d8d37f00f593bdd4623715745">onBasicAck</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#ab39ce3e363d0099a96f5dbd6cc015a3a">basicAckRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:acc3f625d8d37f00f593bdd4623715745"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理消息应答的请求  <br /></td></tr>
 <tr class="separator:acc3f625d8d37f00f593bdd4623715745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bec015d22951e3fa26638a3f7389fc8" id="r_a0bec015d22951e3fa26638a3f7389fc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a0bec015d22951e3fa26638a3f7389fc8">onBasicConsume</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a6ed6e4d88651201cb80e8663c126881a">basicConsumeRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a0bec015d22951e3fa26638a3f7389fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理消息订阅的请求  <br /></td></tr>
 <tr class="separator:a0bec015d22951e3fa26638a3f7389fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a8e3ee7f2d960249428cb4ba6849af" id="r_a15a8e3ee7f2d960249428cb4ba6849af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a15a8e3ee7f2d960249428cb4ba6849af">onBasicCancel</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#ab41d3233970b8aebb9f6c3afacb7ae97">basicCancelRequestPtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a15a8e3ee7f2d960249428cb4ba6849af"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理取消订阅的请求  <br /></td></tr>
 <tr class="separator:a15a8e3ee7f2d960249428cb4ba6849af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858a245d660cdf7fcc6aec350b0ed54f" id="r_a858a245d660cdf7fcc6aec350b0ed54f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a858a245d660cdf7fcc6aec350b0ed54f">onUnknowMessage</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1_server.html#ace0e4a2206eb6cadbe6be8953ffac1c7">Server::MessagePtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:a858a245d660cdf7fcc6aec350b0ed54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理未知消息类型的请求  <br /></td></tr>
 <tr class="separator:a858a245d660cdf7fcc6aec350b0ed54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a764b67e9014f0e76bbe4cf25e77e495e" id="r_a764b67e9014f0e76bbe4cf25e77e495e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_server.html#a764b67e9014f0e76bbe4cf25e77e495e">onConnection</a> (const muduo::net::TcpConnectionPtr &amp;conn)</td></tr>
+<tr class="memdesc:a764b67e9014f0e76bbe4cf25e77e495e"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理新连接的回调函数  <br /></td></tr>
 <tr class="separator:a764b67e9014f0e76bbe4cf25e77e495e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -178,7 +198,9 @@ Private 属性</h2></td></tr>
 <tr class="memdesc:afd5926804a5cabe93c92be52a34e50d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池管理句柄  <br /></td></tr>
 <tr class="separator:afd5926804a5cabe93c92be52a34e50d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">成员类型定义说明</h2>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>服务器类，负责处理客户端请求、管理连接、分发消息。 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
 <a id="ace0e4a2206eb6cadbe6be8953ffac1c7" name="ace0e4a2206eb6cadbe6be8953ffac1c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace0e4a2206eb6cadbe6be8953ffac1c7">&#9670;&#160;</a></span>MessagePtr</h2>
 
@@ -190,6 +212,8 @@ Private 属性</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>protobuf消息的智能指针类型定义 </p>
 
 </div>
 </div>
@@ -227,37 +251,46 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Server类的构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>服务器监听的端口号 </td></tr>
+    <tr><td class="paramname">basedir</td><td>基础目录，用于存储元数据等文件 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_afb876192b1fc2cb2e3b021c58aa21d47_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_afb876192b1fc2cb2e3b021c58aa21d47_cgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_afb876192b1fc2cb2e3b021c58aa21d47_cgraph" id="aclass_xu_m_q_1_1_server_afb876192b1fc2cb2e3b021c58aa21d47_cgraph">
-<area shape="rect" title=" " alt="" coords="5,301,167,327"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#acc3f625d8d37f00f593bdd4623715745" title=" " alt="" coords="241,5,436,31"/>
+<area shape="rect" title="Server类的构造函数" alt="" coords="5,301,167,327"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#acc3f625d8d37f00f593bdd4623715745" title="处理消息应答的请求" alt="" coords="241,5,436,31"/>
 <area shape="poly" title=" " alt="" coords="87,301,97,251,119,180,135,142,156,104,182,69,213,40,227,31,230,35,216,44,186,73,161,107,140,144,124,182,102,253,92,302"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a15a8e3ee7f2d960249428cb4ba6849af" title=" " alt="" coords="231,55,446,80"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a15a8e3ee7f2d960249428cb4ba6849af" title="处理取消订阅的请求" alt="" coords="231,55,446,80"/>
 <area shape="poly" title=" " alt="" coords="88,300,101,258,126,201,162,140,186,113,213,89,221,84,224,89,216,93,190,116,167,143,130,203,106,260,93,302"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a0bec015d22951e3fa26638a3f7389fc8" title=" " alt="" coords="223,104,454,129"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a0bec015d22951e3fa26638a3f7389fc8" title="处理消息订阅的请求" alt="" coords="223,104,454,129"/>
 <area shape="poly" title=" " alt="" coords="90,300,106,267,133,222,168,177,190,156,213,138,224,132,227,137,216,143,193,160,172,180,137,225,111,269,95,302"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#ae67bd86d5f093433c7a5810029767b47" title=" " alt="" coords="230,153,447,179"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#ae67bd86d5f093433c7a5810029767b47" title="处理消息发布的请求" alt="" coords="230,153,447,179"/>
 <area shape="poly" title=" " alt="" coords="94,299,141,244,175,213,213,188,228,181,231,186,216,192,178,218,145,248,99,303"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a37629168331a75323a37185031c02210" title=" " alt="" coords="227,203,451,228"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a37629168331a75323a37185031c02210" title="处理关闭信道的请求" alt="" coords="227,203,451,228"/>
 <area shape="poly" title=" " alt="" coords="103,299,152,268,214,237,238,229,240,234,216,242,154,272,106,303"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a764b67e9014f0e76bbe4cf25e77e495e" title=" " alt="" coords="235,252,443,277"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a764b67e9014f0e76bbe4cf25e77e495e" title="处理新连接的回调函数" alt="" coords="235,252,443,277"/>
 <area shape="poly" title=" " alt="" coords="150,299,214,286,258,277,259,283,215,291,151,304"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a2f25b5d1f175004bb8ba66fb1db2895d" title=" " alt="" coords="215,301,463,327"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a2f25b5d1f175004bb8ba66fb1db2895d" title="处理声明交换机的请求" alt="" coords="215,301,463,327"/>
 <area shape="poly" title=" " alt="" coords="167,311,201,311,201,317,167,317"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a6f778fca9727e2a0238680cba53c9fee" title=" " alt="" coords="224,351,453,376"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a6f778fca9727e2a0238680cba53c9fee" title="处理声明队列的请求" alt="" coords="224,351,453,376"/>
 <area shape="poly" title=" " alt="" coords="152,324,260,345,259,351,151,329"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#ad5fe0a7c1e7c26c7ccc21b97a954fd32" title=" " alt="" coords="218,400,459,425"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#ad5fe0a7c1e7c26c7ccc21b97a954fd32" title="处理删除交换机的请求" alt="" coords="218,400,459,425"/>
 <area shape="poly" title=" " alt="" coords="107,325,155,355,216,385,245,394,243,399,214,390,152,360,104,329"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a4a89f18c07cceaf649b5775bc1fa5351" title=" " alt="" coords="229,449,449,475"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a4a89f18c07cceaf649b5775bc1fa5351" title="处理删除队列的请求" alt="" coords="229,449,449,475"/>
 <area shape="poly" title=" " alt="" coords="99,325,145,379,178,409,216,434,235,443,232,447,213,439,175,413,141,383,95,329"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#af0e7655981a5649aba5d14219b901dba" title=" " alt="" coords="227,499,450,524"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#af0e7655981a5649aba5d14219b901dba" title="处理打开信道的请求" alt="" coords="227,499,450,524"/>
 <area shape="poly" title=" " alt="" coords="95,326,111,358,137,402,173,447,216,484,229,491,227,496,213,488,169,450,133,405,107,361,90,328"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#a3dd68442f6f6d1b1627ae271fce8966d" title=" " alt="" coords="235,548,442,573"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#a3dd68442f6f6d1b1627ae271fce8966d" title="处理队列绑定的请求" alt="" coords="235,548,442,573"/>
 <area shape="poly" title=" " alt="" coords="93,326,106,367,131,424,167,484,190,510,216,533,227,540,224,544,213,537,186,514,163,487,126,426,101,369,88,328"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#ad78df74e8eec8b21560b5697b07c4f37" title=" " alt="" coords="227,597,451,623"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#ad78df74e8eec8b21560b5697b07c4f37" title="处理队列解绑的请求" alt="" coords="227,597,451,623"/>
 <area shape="poly" title=" " alt="" coords="92,326,102,375,124,445,141,483,161,520,186,554,216,583,225,589,222,593,213,587,182,557,157,523,136,485,119,447,97,376,87,327"/>
 </map>
 </div>
@@ -304,13 +337,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理消息应答的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>消息应答请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_acc3f625d8d37f00f593bdd4623715745_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_acc3f625d8d37f00f593bdd4623715745_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_acc3f625d8d37f00f593bdd4623715745_icgraph" id="aclass_xu_m_q_1_1_server_acc3f625d8d37f00f593bdd4623715745_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,409,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理消息应答的请求" alt="" coords="215,5,409,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -356,13 +399,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理取消订阅的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>取消订阅请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a15a8e3ee7f2d960249428cb4ba6849af_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a15a8e3ee7f2d960249428cb4ba6849af_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a15a8e3ee7f2d960249428cb4ba6849af_icgraph" id="aclass_xu_m_q_1_1_server_a15a8e3ee7f2d960249428cb4ba6849af_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,429,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理取消订阅的请求" alt="" coords="215,5,429,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -408,13 +461,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理消息订阅的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>消息订阅请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a0bec015d22951e3fa26638a3f7389fc8_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a0bec015d22951e3fa26638a3f7389fc8_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a0bec015d22951e3fa26638a3f7389fc8_icgraph" id="aclass_xu_m_q_1_1_server_a0bec015d22951e3fa26638a3f7389fc8_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,445,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理消息订阅的请求" alt="" coords="215,5,445,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -460,13 +523,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理消息发布的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>消息发布请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_ae67bd86d5f093433c7a5810029767b47_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_ae67bd86d5f093433c7a5810029767b47_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_ae67bd86d5f093433c7a5810029767b47_icgraph" id="aclass_xu_m_q_1_1_server_ae67bd86d5f093433c7a5810029767b47_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,432,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理消息发布的请求" alt="" coords="215,5,432,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -512,13 +585,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理关闭信道的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>关闭信道请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a37629168331a75323a37185031c02210_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a37629168331a75323a37185031c02210_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a37629168331a75323a37185031c02210_icgraph" id="aclass_xu_m_q_1_1_server_a37629168331a75323a37185031c02210_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,439,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理关闭信道的请求" alt="" coords="215,5,439,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -548,13 +631,21 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理新连接的回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>新建立的TCP连接 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a764b67e9014f0e76bbe4cf25e77e495e_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a764b67e9014f0e76bbe4cf25e77e495e_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a764b67e9014f0e76bbe4cf25e77e495e_icgraph" id="aclass_xu_m_q_1_1_server_a764b67e9014f0e76bbe4cf25e77e495e_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,423,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理新连接的回调函数" alt="" coords="215,5,423,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -600,13 +691,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理声明交换机的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>声明交换机请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a2f25b5d1f175004bb8ba66fb1db2895d_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a2f25b5d1f175004bb8ba66fb1db2895d_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a2f25b5d1f175004bb8ba66fb1db2895d_icgraph" id="aclass_xu_m_q_1_1_server_a2f25b5d1f175004bb8ba66fb1db2895d_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,463,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理声明交换机的请求" alt="" coords="215,5,463,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -652,13 +753,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理声明队列的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>声明队列请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a6f778fca9727e2a0238680cba53c9fee_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a6f778fca9727e2a0238680cba53c9fee_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a6f778fca9727e2a0238680cba53c9fee_icgraph" id="aclass_xu_m_q_1_1_server_a6f778fca9727e2a0238680cba53c9fee_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,444,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理声明队列的请求" alt="" coords="215,5,444,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -704,13 +815,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理删除交换机的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>删除交换机请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_ad5fe0a7c1e7c26c7ccc21b97a954fd32_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_ad5fe0a7c1e7c26c7ccc21b97a954fd32_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_ad5fe0a7c1e7c26c7ccc21b97a954fd32_icgraph" id="aclass_xu_m_q_1_1_server_ad5fe0a7c1e7c26c7ccc21b97a954fd32_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,456,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理删除交换机的请求" alt="" coords="215,5,456,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -756,13 +877,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理删除队列的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>删除队列请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a4a89f18c07cceaf649b5775bc1fa5351_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a4a89f18c07cceaf649b5775bc1fa5351_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a4a89f18c07cceaf649b5775bc1fa5351_icgraph" id="aclass_xu_m_q_1_1_server_a4a89f18c07cceaf649b5775bc1fa5351_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,435,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理删除队列的请求" alt="" coords="215,5,435,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -808,13 +939,24 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理打开信道的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>打开信道请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>操作是否成功 </dd></dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_af0e7655981a5649aba5d14219b901dba_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_af0e7655981a5649aba5d14219b901dba_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_af0e7655981a5649aba5d14219b901dba_icgraph" id="aclass_xu_m_q_1_1_server_af0e7655981a5649aba5d14219b901dba_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,437,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理打开信道的请求" alt="" coords="215,5,437,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -860,13 +1002,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理队列绑定的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>队列绑定请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_a3dd68442f6f6d1b1627ae271fce8966d_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_a3dd68442f6f6d1b1627ae271fce8966d_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_a3dd68442f6f6d1b1627ae271fce8966d_icgraph" id="aclass_xu_m_q_1_1_server_a3dd68442f6f6d1b1627ae271fce8966d_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,421,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理队列绑定的请求" alt="" coords="215,5,421,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -912,13 +1064,23 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>处理队列解绑的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>队列解绑请求消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_ad78df74e8eec8b21560b5697b07c4f37_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_ad78df74e8eec8b21560b5697b07c4f37_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_ad78df74e8eec8b21560b5697b07c4f37_icgraph" id="aclass_xu_m_q_1_1_server_ad78df74e8eec8b21560b5697b07c4f37_icgraph">
-<area shape="rect" title=" " alt="" coords="215,5,439,31"/>
-<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" title="处理队列解绑的请求" alt="" coords="215,5,439,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>
 </div>
@@ -965,6 +1127,16 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>处理未知消息类型的请求 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>客户端连接 </td></tr>
+    <tr><td class="paramname">message</td><td>未知类型的消息 </td></tr>
+    <tr><td class="paramname">timestamp</td><td>消息时间戳 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac8ad0533d5fdd251f9e4694c186c670b" name="ac8ad0533d5fdd251f9e4694c186c670b"></a>
@@ -989,12 +1161,14 @@ Private 属性</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>启动服务器，开始监听并处理客户端请求 </p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_xu_m_q_1_1_server_ac8ad0533d5fdd251f9e4694c186c670b_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_server_ac8ad0533d5fdd251f9e4694c186c670b_icgraph" alt=""/></div>
 <map name="aclass_xu_m_q_1_1_server_ac8ad0533d5fdd251f9e4694c186c670b_icgraph" id="aclass_xu_m_q_1_1_server_ac8ad0533d5fdd251f9e4694c186c670b_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,257,31"/>
+<area shape="rect" title="启动服务器，开始监听并处理客户端请求" alt="" coords="108,5,257,31"/>
 <area shape="rect" href="mqserver_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
 <area shape="poly" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="XuMQ::Server::onDeleteQueue" name="XuMQ::Server::onDeleteQueue">
-<area shape="rect" id="Node000001" title=" " alt="" coords="215,5,435,31"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title=" " alt="" coords="5,5,167,31"/>
+<area shape="rect" id="Node000001" title="处理删除队列的请求" alt="" coords="215,5,435,31"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_server.html#afb876192b1fc2cb2e3b021c58aa21d47" title="Server类的构造函数" alt="" coords="5,5,167,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,21,167,21,167,15,201,15"/>
 </map>

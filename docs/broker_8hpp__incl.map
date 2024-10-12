@@ -1,5 +1,5 @@
 <map id="server/broker.hpp" name="server/broker.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="2947,5,3082,31"/>
+<area shape="rect" id="Node000001" title="XuMQ消息队列服务器类的声明文件。" alt="" coords="2947,5,3082,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="1866,225,2046,251"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2947,29,2779,49,2579,81,2415,117,2254,157,2009,224,2007,219,2252,151,2414,112,2578,76,2779,44,2947,23"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="2070,225,2279,251"/>
