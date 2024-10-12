@@ -129,6 +129,13 @@ namespace XuMQ
         {
             return _bmp->getExchangeBindings(ename);
         }
+        /// @brief 获取所有队列
+        /// @return 消息队列映射表
+        /// @see QueueMap
+        QueueMap allQueues()
+        {
+            return _mqmp->allQueue();
+        }
 
         /// @brief 向指定队列插入新消息
         /// @param qname 消息队列名称

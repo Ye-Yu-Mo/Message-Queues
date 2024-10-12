@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: XuMQ::ConnectionManager类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_xu_m_q_1_1_connection_manager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pri-attribs">Private 属性</a> &#124;
+<a href="class_xu_m_q_1_1_connection_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">XuMQ::ConnectionManager类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>连接管理类  
+ <a href="class_xu_m_q_1_1_connection_manager.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="connection_8hpp_source.html">connection.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a487036eb08071ec5e7726f0e0c602f1f" id="r_a487036eb08071ec5e7726f0e0c602f1f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a487036eb08071ec5e7726f0e0c602f1f">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_connection_manager.html">ConnectionManager</a> &gt;</td></tr>
+<tr class="memdesc:a487036eb08071ec5e7726f0e0c602f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接管理句柄  <br /></td></tr>
+<tr class="separator:a487036eb08071ec5e7726f0e0c602f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aee965fc40bd853f9df455ebf235c2f6d" id="r_aee965fc40bd853f9df455ebf235c2f6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#aee965fc40bd853f9df455ebf235c2f6d">ConnectionManager</a> ()</td></tr>
+<tr class="memdesc:aee965fc40bd853f9df455ebf235c2f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:aee965fc40bd853f9df455ebf235c2f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b56b5a3e7940467657b89812c48ab42" id="r_a0b56b5a3e7940467657b89812c48ab42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">newConnection</a> (const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
+<tr class="memdesc:a0b56b5a3e7940467657b89812c48ab42"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建一个连接  <br /></td></tr>
+<tr class="separator:a0b56b5a3e7940467657b89812c48ab42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42ba69f2b3048a7e21dfa7d277a66cbb" id="r_a42ba69f2b3048a7e21dfa7d277a66cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a42ba69f2b3048a7e21dfa7d277a66cbb">deleteConnection</a> (const muduo::net::TcpConnectionPtr &amp;conn)</td></tr>
+<tr class="memdesc:a42ba69f2b3048a7e21dfa7d277a66cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除一个连接  <br /></td></tr>
+<tr class="separator:a42ba69f2b3048a7e21dfa7d277a66cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bd5677aa84c95cb061b3ec336d46f19" id="r_a7bd5677aa84c95cb061b3ec336d46f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a7bd5677aa84c95cb061b3ec336d46f19">getConnection</a> (const muduo::net::TcpConnectionPtr &amp;conn)</td></tr>
+<tr class="memdesc:a7bd5677aa84c95cb061b3ec336d46f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个连接  <br /></td></tr>
+<tr class="separator:a7bd5677aa84c95cb061b3ec336d46f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private 属性</h2></td></tr>
+<tr class="memitem:a20fcb1796e10a367a6bfa4b221021422" id="r_a20fcb1796e10a367a6bfa4b221021422"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">_mutex</a></td></tr>
+<tr class="memdesc:a20fcb1796e10a367a6bfa4b221021422"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
+<tr class="separator:a20fcb1796e10a367a6bfa4b221021422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e14f56ff72382fd3c1e9cb563402f8c" id="r_a2e14f56ff72382fd3c1e9cb563402f8c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; muduo::net::TcpConnectionPtr, <a class="el" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a></td></tr>
+<tr class="memdesc:a2e14f56ff72382fd3c1e9cb563402f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">一个从muduo连接管理句柄到连接管理句柄的映射表  <br /></td></tr>
+<tr class="separator:a2e14f56ff72382fd3c1e9cb563402f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>连接管理类 </p>
+</div><h2 class="groupheader">成员类型定义说明</h2>
+<a id="a487036eb08071ec5e7726f0e0c602f1f" name="a487036eb08071ec5e7726f0e0c602f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a487036eb08071ec5e7726f0e0c602f1f">&#9670;&#160;</a></span>ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_connection_manager.html#a487036eb08071ec5e7726f0e0c602f1f">XuMQ::ConnectionManager::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_connection_manager.html">ConnectionManager</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>连接管理句柄 </p>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="aee965fc40bd853f9df455ebf235c2f6d" name="aee965fc40bd853f9df455ebf235c2f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee965fc40bd853f9df455ebf235c2f6d">&#9670;&#160;</a></span>ConnectionManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::ConnectionManager::ConnectionManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a42ba69f2b3048a7e21dfa7d277a66cbb" name="a42ba69f2b3048a7e21dfa7d277a66cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ba69f2b3048a7e21dfa7d277a66cbb">&#9670;&#160;</a></span>deleteConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::ConnectionManager::deleteConnection </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除一个连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接管理句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7bd5677aa84c95cb061b3ec336d46f19" name="a7bd5677aa84c95cb061b3ec336d46f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bd5677aa84c95cb061b3ec336d46f19">&#9670;&#160;</a></span>getConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a> XuMQ::ConnectionManager::getConnection </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一个连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接管理句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>连接句柄 </dd></dl>
+
+</div>
+</div>
+<a id="a0b56b5a3e7940467657b89812c48ab42" name="a0b56b5a3e7940467657b89812c48ab42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b56b5a3e7940467657b89812c48ab42">&#9670;&#160;</a></span>newConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::ConnectionManager::newConnection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>cmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>codec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>pool</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新建一个连接 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>虚拟机 </td></tr>
+    <tr><td class="paramname">cmp</td><td>消费者管理句柄 </td></tr>
+    <tr><td class="paramname">codec</td><td>协议处理句柄 </td></tr>
+    <tr><td class="paramname">conn</td><td>muduo连接管理句柄 </td></tr>
+    <tr><td class="paramname">pool</td><td>线程池管理句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a2e14f56ff72382fd3c1e9cb563402f8c" name="a2e14f56ff72382fd3c1e9cb563402f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e14f56ff72382fd3c1e9cb563402f8c">&#9670;&#160;</a></span>_conns</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;muduo::net::TcpConnectionPtr, <a class="el" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a>&gt; XuMQ::ConnectionManager::_conns</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>一个从muduo连接管理句柄到连接管理句柄的映射表 </p>
+
+</div>
+</div>
+<a id="a20fcb1796e10a367a6bfa4b221021422" name="a20fcb1796e10a367a6bfa4b221021422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20fcb1796e10a367a6bfa4b221021422">&#9670;&#160;</a></span>_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex XuMQ::ConnectionManager::_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>互斥锁 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_xu_m_q.html">XuMQ</a></li><li class="navelem"><a class="el" href="class_xu_m_q_1_1_connection_manager.html">ConnectionManager</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

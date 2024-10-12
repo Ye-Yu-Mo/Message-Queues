@@ -1,7 +1,9 @@
 var dir_41e1742e44e2de38b3bc91f993fed282 =
 [
     [ "binding.hpp", "binding_8hpp.html", "binding_8hpp" ],
+    [ "broker.hpp", "broker_8hpp.html", "broker_8hpp" ],
     [ "channel.hpp", "channel_8hpp.html", "channel_8hpp" ],
+    [ "connection.hpp", "connection_8hpp.html", "connection_8hpp" ],
     [ "consumer.hpp", "consumer_8hpp.html", "consumer_8hpp" ],
     [ "exchange.hpp", "exchange_8hpp.html", "exchange_8hpp" ],
     [ "host.hpp", "host_8hpp.html", "host_8hpp" ],

@@ -99,22 +99,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_xu_m_q_1_1_channel.html#a78f1093af1868e5c2343ba3896cc16bd",
-"class_xu_m_q_1_1_message.html#ab618dbbac4a8d749da0d85c32932df36",
-"class_xu_m_q_1_1_msg_queue_manager.html#ac85cb1637471f4c11ab652736d810cec",
-"class_xu_m_q_1_1basic_ack_request.html#a658fac4fbda34e2f0eac883556265a9c",
-"class_xu_m_q_1_1basic_cancel_request.html#af1e8f08f811691ef4a180a81dfedd824",
-"class_xu_m_q_1_1basic_consume_response.html#a65ef99250494463f12d26dc6d3cc3759",
-"class_xu_m_q_1_1basic_publish_request.html#ab69ea6ab000303fc7c6f3822c5493f17",
-"class_xu_m_q_1_1close_channel_request.html#a81f0f3990a1ae17a4e0bfc7bd30cd007",
-"class_xu_m_q_1_1declare_exchange_request___args_entry___do_not_use.html",
-"class_xu_m_q_1_1delete_exchange_request.html#a1badbaf376923f8efe18b36abe076f16",
-"class_xu_m_q_1_1delete_queue_request.html#ad26036091251164b66f31e2d2370d034",
-"class_xu_m_q_1_1queue_bind_request.html#a7ba6383c08f40241d1a9075d71e0222c",
-"class_xu_m_q_1_1queue_un_bind_request.html#af1812fb5f60393b462502b82f69dc10c",
-"msg_8pb_8h.html#a4816a5c6a665a9846a019871c6310c7daa084eda8370385e513bc0599d3cc5811",
-"struct_xu_m_q_1_1_exchange.html#a4592927797f070863f763a9c4486621b",
-"struct_xu_m_q_1_1declare_queue_request_1_1_impl__.html#a9fd8973b3c8710813d66ee5b90813a5c"
+"class_xu_m_q_1_1_channel.html#a582ba8b361f33f6b8e4ada5d42a18fbf",
+"class_xu_m_q_1_1_message.html#a725f698d8dc0c28592d462cb7a09c1ca",
+"class_xu_m_q_1_1_message_manager.html#ab666d8d809e05eb88e540d4bfc14e793",
+"class_xu_m_q_1_1_virtual_host.html#a6ecd278ac1dd7258a60f1638ad3c8058",
+"class_xu_m_q_1_1basic_cancel_request.html#a64b4325e820ecaef959b016bd007769c",
+"class_xu_m_q_1_1basic_consume_request.html#acaf86b41231f2ae067f754827221bedf",
+"class_xu_m_q_1_1basic_publish_request.html#a47c6391fb5144272bad7a7ac25e3db95",
+"class_xu_m_q_1_1basic_response.html#ac486c5bf680bfbc0c935821e227bb5d4",
+"class_xu_m_q_1_1declare_exchange_request.html#a787a81cd1f19a25c802cbfbe6cbaf08b",
+"class_xu_m_q_1_1declare_queue_request.html#a8fce57878c399f57889a6d02fa8af6cb",
+"class_xu_m_q_1_1delete_queue_request.html#a16f30653e44e22377d2b47ecf748b7fb",
+"class_xu_m_q_1_1open_channel_request.html#afeef9e3997125009319c609197184dd4",
+"class_xu_m_q_1_1queue_un_bind_request.html#a488143c21179c0d3e3f8773698c25f29",
+"md__r_e_a_d_m_e.html#autotoc_md22",
+"protocol_8pb_8cc.html#adc7ae0baa5b8535022f2c075a8b15066",
+"struct_xu_m_q_1_1basic_consume_response_default_type_internal.html#a80baa32a3766a5278f97458e1e8805e4"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

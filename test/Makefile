@@ -1,33 +1,9 @@
-.PHONY:mqconnection
-mqconnection:mqconnectiontest.cpp ../common/msg.pb.cc ../common/protocol.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf -I../third/muduo/include
+.PHONY:mqserver
+CFLAG= -I../third/muduo/include/
+LFALG= -L../third/muduo/lib -lgtest -lsqlite3 -lprotobuf  -pthread -lmuduo_net -lmuduo_base -lz
+mqserver:mqserver.cpp ../common/msg.pb.cc ../common/protocol.pb.cc ../third/muduo/include/muduo/protobuf/codec.cc
+	g++ $(CFLAG) $^ -o $@ -std=c++17 $(LFALG)
 
-mqchannel:mqchanneltest.cpp ../common/msg.pb.cc ../common/protocol.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf -I../third/muduo/include
-
-mqconsumer:mqconsumer.cpp ../common/msg.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
-
-mqroute:mqroute.cpp ../common/msg.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
-
-mqhosttest:mqhosttest.cpp ../common/msg.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
-
-mqmessagetest:mqmessagetest.cpp ../common/msg.pb.cc
-	g++ $^ -o $@ -std=c++17 -lgtest -lsqlite3 -lprotobuf
-
-mqbindingtest:mqbindingtest.cpp
-	g++ $^ -o $@ -std=c++17 -lgtest -lprotobuf -lsqlite3
-
-mqqueuetest:mqqueuetest.cpp
-	g++ $^ -o $@ -std=c++17 -lgtest -lprotobuf -lsqlite3
-
-mqexchangetest:mqexchangetest.cpp
-	g++ $^ -o $@ -std=c++17 -lgtest -lprotobuf -lsqlite3
-
-mqfiletest:mqfiletest.cpp
-	g++ $^ -o $@ -std=c++17
 .PHONY:clean
 clean:
-	rm mqfiletest dir mqroute mqconsumer mqexchangetest mqmessagetest data mqhosttest mqchannel -rf
+	rm mqserver -rf

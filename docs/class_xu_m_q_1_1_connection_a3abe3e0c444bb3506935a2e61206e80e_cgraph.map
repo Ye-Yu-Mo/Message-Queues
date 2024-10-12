@@ -1,0 +1,11 @@
+<map id="XuMQ::Connection::openChannel" name="XuMQ::Connection::openChannel">
+<area shape="rect" id="Node000001" title="打开信道" alt="" coords="5,77,240,102"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684" title="基础响应发送函数" alt="" coords="288,77,535,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,87,274,87,274,92,240,92"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="583,5,749,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,74,572,46,573,51,464,79"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="583,69,749,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="535,87,569,87,569,92,535,92"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="583,133,749,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="464,100,573,127,572,132,462,105"/>
+</map>

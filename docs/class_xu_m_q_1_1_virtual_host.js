@@ -2,6 +2,7 @@ var class_xu_m_q_1_1_virtual_host =
 [
     [ "ptr", "class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca", null ],
     [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html#a8d45ae7da086051415fe2635c2dde988", null ],
+    [ "allQueues", "class_xu_m_q_1_1_virtual_host.html#ae8a200995e7912b67fd928d19662cdf8", null ],
     [ "basicAck", "class_xu_m_q_1_1_virtual_host.html#a123b680a7d0ec45737d32ae8ce16aa06", null ],
     [ "basicConsume", "class_xu_m_q_1_1_virtual_host.html#ac5bec493e185f208dbd0f3c069b80531", null ],
     [ "basicPublish", "class_xu_m_q_1_1_virtual_host.html#aef5738e8e1dc4d1c1938403be667c8d2", null ],

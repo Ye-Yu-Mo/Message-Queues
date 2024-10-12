@@ -6,18 +6,18 @@
 /// 主要包括以下结构和类：
 /// - Consumer: 表示单个消费者的结构
 /// - QueueConsumer: 管理单个队列中的多个消费者
-/// - ConsumerManager: 管理所有消费者队列
+/// - ConsumerManager: 管理所有消费者队列 
 
 #pragma once
 #include "../common/logger.hpp"
 #include "../common/helper.hpp"
-#include "../common/msg.pb.h"
+#include "../common/msg.pb.h"    
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include <mutex>
-#include <memory>
-#include <functional>
+#include <mutex> 
+#include <memory>               
+#include <functional>  
 
 namespace XuMQ
 {

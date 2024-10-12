@@ -1,13 +1,22 @@
 <map id="server/binding.hpp" name="server/binding.hpp">
-<area shape="rect" id="Node000001" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="193,5,336,31"/>
-<area shape="rect" id="Node000002" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="118,79,241,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,41,195,80,192,76,239,37"/>
-<area shape="rect" id="Node000006" href="$mqbindingtest_8cpp.html" title=" " alt="" coords="265,79,437,104"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="291,37,339,76,335,81,287,41"/>
-<area shape="rect" id="Node000003" href="$channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="19,152,166,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="157,115,109,154,105,150,153,110"/>
-<area shape="rect" id="Node000005" href="$mqhosttest_8cpp.html" title=" " alt="" coords="190,152,342,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="205,110,254,150,250,154,202,115"/>
-<area shape="rect" id="Node000004" href="$mqchanneltest_8cpp.html" title=" " alt="" coords="5,225,180,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,191,95,225,90,225,90,191"/>
+<area shape="rect" id="Node000001" title="该文件包含消息队列绑定信息的管理类和结构体定义。" alt="" coords="210,5,353,31"/>
+<area shape="rect" id="Node000002" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="135,79,257,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,41,212,80,208,76,256,37"/>
+<area shape="rect" id="Node000010" href="$mqbindingtest_8cpp.html" title=" " alt="" coords="282,79,454,104"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="307,37,356,76,352,81,304,41"/>
+<area shape="rect" id="Node000003" href="$broker_8hpp.html" title=" " alt="" coords="7,299,142,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,113,134,130,113,154,94,192,83,233,77,299,72,298,78,232,89,190,108,150,131,126,157,108"/>
+<area shape="rect" id="Node000005" href="$channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="123,152,269,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="199,118,199,152,193,152,193,118"/>
+<area shape="rect" id="Node000009" href="$mqhosttest_8cpp.html" title=" " alt="" coords="293,152,445,177"/>
+<area shape="poly" id="edge9_Node000002_Node000009" title=" " alt="" coords="237,107,342,149,340,154,235,112"/>
+<area shape="rect" id="Node000004" href="$mqserver_8cpp.html" title=" " alt="" coords="5,372,144,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="77,338,77,372,72,372,72,338"/>
+<area shape="rect" id="Node000006" href="$connection_8hpp.html" title="声明了连接类和连接管理类，主要用于管理连接的建立、维护与信道的操作。" alt="" coords="113,225,279,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="199,191,199,225,193,225,193,191"/>
+<area shape="rect" id="Node000008" href="$mqchanneltest_8cpp.html" title=" " alt="" coords="303,225,478,251"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="241,179,360,223,358,228,239,184"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="166,260,96,301,93,296,163,255"/>
+<area shape="rect" id="Node000007" href="$mqconnectiontest_8cpp.html" title=" " alt="" coords="167,299,361,324"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="218,259,255,297,251,300,215,262"/>
 </map>

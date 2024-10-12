@@ -138,5 +138,39 @@
     "stdfloat": "cpp",
     "*.ipp": "cpp",
     "forward_list": "cpp"
-  }
+  },
+  "markdown-image.sm_ms.token": "hjuUPyezARQ4DIGupqlAYy0ssogquzMY",
+  "markdown-image.base.uploadMethod": "SM.MS",
+  "markdown-image.base.uploadMethods": [
+    "SM.MS"
+  ],
+  "commentTranslate.targetLanguage": "zh-CN",
+  "cSpell.words": [
+    "baseloop",
+    "DBFILE",
+    "eargs",
+    "eauto",
+    "edurable",
+    "ename",
+    "Fanout",
+    "flase",
+    "Gtest",
+    "hname",
+    "mconn",
+    "mqbm",
+    "mqmp",
+    "muduo",
+    "numcol",
+    "Protobuf",
+    "qargs",
+    "qauto",
+    "qconsumers",
+    "qdurable",
+    "qexclusive",
+    "threadpool",
+    "tinyint",
+    "Xulog"
+  ],
+  "dictCompletion.addSpaceAfterCompletion": true,
+  "dictCompletion.collectWordsFromCurrentFile": true
 }

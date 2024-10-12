@@ -55,7 +55,7 @@ namespace XuMQ
         /// @param host 虚拟机
         /// @param cmp 消费者管理句柄
         /// @param codec 协议处理句柄
-        /// @param conn 连接管理句柄
+        /// @param conn muduo连接管理句柄
         /// @param pool 线程池管理句柄
         Channel(const std::string &id, const VirtualHost::ptr &host, const ConsumerManager::ptr &cmp,
                 const ProtobufCodecPtr &codec, const muduo::net::TcpConnectionPtr &conn, const threadpool::ptr &pool)
@@ -228,7 +228,7 @@ namespace XuMQ
     private:
         std::string _cid;                   ///< 信道id
         Consumer::ptr _consumer;            ///< 消费者对象
-        muduo::net::TcpConnectionPtr _conn; ///< 连接管理句柄
+        muduo::net::TcpConnectionPtr _conn; ///< muduo连接管理句柄
         ProtobufCodecPtr _codec;            ///< 协议处理句柄
         ConsumerManager::ptr _cmp;          ///< 消费者管理句柄
         VirtualHost::ptr _host;             ///< 虚拟机
@@ -248,7 +248,7 @@ namespace XuMQ
         /// @param host 虚拟机
         /// @param cmp 消费者管理句柄
         /// @param codec 协议处理句柄
-        /// @param conn 连接管理句柄
+        /// @param conn muduo连接管理句柄
         /// @param pool 线程池管理句柄
         /// @return 成功返回 true 失败返回 false
         bool openChannel(const std::string &id, const VirtualHost::ptr &host, const ConsumerManager::ptr &cmp,
