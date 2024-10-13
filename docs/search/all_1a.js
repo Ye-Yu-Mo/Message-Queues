@@ -14,7 +14,7 @@ var searchData=
   ['_7ebasicpublishrequestdefaulttypeinternal_11',['~basicPublishRequestDefaultTypeInternal',['../struct_xu_m_q_1_1basic_publish_request_default_type_internal.html#a061555c4e2a826d5257221313f613917',1,'XuMQ::basicPublishRequestDefaultTypeInternal']]],
   ['_7ebasicresponse_12',['~basicResponse',['../class_xu_m_q_1_1basic_response.html#ab3b1f834bff099edc6ea85c773d38613',1,'XuMQ::basicResponse']]],
   ['_7ebasicresponsedefaulttypeinternal_13',['~basicResponseDefaultTypeInternal',['../struct_xu_m_q_1_1basic_response_default_type_internal.html#a8589af745b1b93fa5eb876f4733476fa',1,'XuMQ::basicResponseDefaultTypeInternal']]],
-  ['_7echannel_14',['~Channel',['../class_xu_m_q_1_1_channel.html#ac81856c1f7620453442f1d4ca7ff9bb6',1,'XuMQ::Channel']]],
+  ['_7echannel_14',['~channel',['../class_xu_m_q_1_1_channel.html#ac81856c1f7620453442f1d4ca7ff9bb6',1,'XuMQ::Channel::~Channel()'],['../class_xu_m_q_1_1_channel.html#ac81856c1f7620453442f1d4ca7ff9bb6',1,'XuMQ::Channel::~Channel()']]],
   ['_7eclosechannelrequest_15',['~closeChannelRequest',['../class_xu_m_q_1_1close_channel_request.html#a4254e31d2116199636dc105d69fbee82',1,'XuMQ::closeChannelRequest']]],
   ['_7eclosechannelrequestdefaulttypeinternal_16',['~closeChannelRequestDefaultTypeInternal',['../struct_xu_m_q_1_1close_channel_request_default_type_internal.html#a138e6505a3af09cc6768bbec118a9fd2',1,'XuMQ::closeChannelRequestDefaultTypeInternal']]],
   ['_7edeclareexchangerequest_17',['~declareExchangeRequest',['../class_xu_m_q_1_1declare_exchange_request.html#a5afa5f30b714fd4936b3f05217c7230c',1,'XuMQ::declareExchangeRequest']]],

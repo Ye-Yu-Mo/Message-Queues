@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -121,22 +121,22 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a13e702a334c62783ae9a404b360d80b3" id="r_a13e702a334c62783ae9a404b360d80b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a13e702a334c62783ae9a404b360d80b3">removeMsgFile</a> ()</td></tr>
 <tr class="memdesc:a13e702a334c62783ae9a404b360d80b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息文件 包括移除数据文件和临时文件  <br /></td></tr>
 <tr class="separator:a13e702a334c62783ae9a404b360d80b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2284f71dd31510249eacd38af9dc5d64" id="r_a2284f71dd31510249eacd38af9dc5d64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64">insert</a> (const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memitem:a2284f71dd31510249eacd38af9dc5d64" id="r_a2284f71dd31510249eacd38af9dc5d64"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a2284f71dd31510249eacd38af9dc5d64">insert</a> (const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;msg)</td></tr>
 <tr class="memdesc:a2284f71dd31510249eacd38af9dc5d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入消息 将消息添加到数据文件中  <br /></td></tr>
 <tr class="separator:a2284f71dd31510249eacd38af9dc5d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19bb7fd4a2e055f61af658880567c402" id="r_a19bb7fd4a2e055f61af658880567c402"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a19bb7fd4a2e055f61af658880567c402">remove</a> (<a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memitem:a19bb7fd4a2e055f61af658880567c402" id="r_a19bb7fd4a2e055f61af658880567c402"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a19bb7fd4a2e055f61af658880567c402">remove</a> (<a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;msg)</td></tr>
 <tr class="memdesc:a19bb7fd4a2e055f61af658880567c402"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除消息 将消息中的有效标记置为false 更新到数据文件中  <br /></td></tr>
 <tr class="separator:a19bb7fd4a2e055f61af658880567c402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fcd0d0b06709693f3cbc37ea73c3ca2" id="r_a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2">garbageCollection</a> ()</td></tr>
+<tr class="memitem:a0fcd0d0b06709693f3cbc37ea73c3ca2" id="r_a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0fcd0d0b06709693f3cbc37ea73c3ca2">garbageCollection</a> ()</td></tr>
 <tr class="memdesc:a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">垃圾回收 加载所有有效消息 存储到临时文件后更新数据文件  <br /></td></tr>
 <tr class="separator:a0fcd0d0b06709693f3cbc37ea73c3ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
-<tr class="memitem:aaca8c44cb58bc14c7b886a78c4cfe1aa" id="r_aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#aaca8c44cb58bc14c7b886a78c4cfe1aa">insert</a> (const std::string &amp;filename, const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;msg)</td></tr>
+<tr class="memitem:aaca8c44cb58bc14c7b886a78c4cfe1aa" id="r_aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#aaca8c44cb58bc14c7b886a78c4cfe1aa">insert</a> (const std::string &amp;filename, const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;msg)</td></tr>
 <tr class="memdesc:aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入消息到指定文件 负责数据文件和临时文件的写入工作  <br /></td></tr>
 <tr class="separator:aaca8c44cb58bc14c7b886a78c4cfe1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0617e445b421553271cd2316adc71160" id="r_a0617e445b421553271cd2316adc71160"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160">load</a> (std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; &amp;result)</td></tr>
+<tr class="memitem:a0617e445b421553271cd2316adc71160" id="r_a0617e445b421553271cd2316adc71160"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_message_mapper.html#a0617e445b421553271cd2316adc71160">load</a> (std::list&lt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt; &amp;result)</td></tr>
 <tr class="memdesc:a0617e445b421553271cd2316adc71160"><td class="mdescLeft">&#160;</td><td class="mdescRight">加载有效消息 从数据文件中读取所有消息并存为有效的消息对象  <br /></td></tr>
 <tr class="separator:a0617e445b421553271cd2316adc71160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -275,7 +275,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; XuMQ::MessageMapper::garbageCollection </td>
+          <td class="memname">std::list&lt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt; XuMQ::MessageMapper::garbageCollection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -345,7 +345,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">bool XuMQ::MessageMapper::insert </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -414,7 +414,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>msg</em>&#160;</td>
         </tr>
         <tr>
@@ -467,7 +467,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">bool XuMQ::MessageMapper::load </td>
           <td>(</td>
-          <td class="paramtype">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::list&lt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td></td>
         </tr>
@@ -532,7 +532,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="memname">bool XuMQ::MessageMapper::remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>

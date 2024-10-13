@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
   0: ":_abcdefghiklmnopqrstuvwxy~交信客开异弃技持服核模消网虚连需项",
-  1: "_bcdefhilmoqrstuv",
+  1: "_abcdefhilmoqrstuv",
   2: "ix",
-  3: "bcehlmpqrst",
+  3: "bcehlmpqrstw",
   4: "_abcdefghilmnopqrstuvw~",
   5: "_abcdefhiklmnopqrtv",
   6: "bcdefimnopqs",

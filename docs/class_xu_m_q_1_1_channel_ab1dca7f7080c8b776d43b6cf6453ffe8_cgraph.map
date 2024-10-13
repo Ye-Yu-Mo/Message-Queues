@@ -1,0 +1,17 @@
+<map id="XuMQ::Channel::queueBind" name="XuMQ::Channel::queueBind">
+<area shape="rect" id="Node000001" title="添加绑定信息" alt="" coords="5,205,204,230"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1queue_bind_request.html#a57dda0aff30a34c88399bf1e19abb2fc" title=" " alt="" coords="267,5,458,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,203,164,133,204,91,251,55,262,49,265,53,253,60,208,95,168,136,116,206"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1queue_bind_request.html#ae1fdfb6add2f08bbac04862e44285535" title=" " alt="" coords="267,69,458,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,202,176,162,251,119,268,112,270,117,253,124,179,166,124,207"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1queue_bind_request.html#a19291b11d5222b71945f04d3a5a37f76" title=" " alt="" coords="267,133,458,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="156,202,267,174,269,179,158,207"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1queue_bind_request.html#af35c148337d9170102f8b27fb6a5d049" title=" " alt="" coords="267,197,458,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="204,215,254,215,254,220,204,220"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1queue_bind_request.html#ae9cbb24aab7828a8d23a6b4a9807e78a" title=" " alt="" coords="267,261,458,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="158,228,269,255,267,261,156,233"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="271,326,454,351"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="123,228,179,269,215,292,253,311,277,320,275,325,251,316,212,296,176,273,120,232"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="252,375,473,401"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="117,228,170,292,209,329,253,360,271,368,268,373,251,365,205,333,166,296,113,232"/>
+</map>

@@ -1,6 +1,6 @@
 <map id="test/mqchanneltest.cpp" name="test/mqchanneltest.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="2025,5,2199,31"/>
-<area shape="rect" id="Node000002" href="$channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="2033,79,2191,104"/>
+<area shape="rect" id="Node000002" href="$server_2channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="2033,79,2191,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2115,31,2115,65,2109,65,2109,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="727,152,929,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2033,98,1575,117,1264,133,944,155,943,149,1264,128,1574,112,2032,93"/>
@@ -24,7 +24,7 @@
 <area shape="poly" id="edge69_Node000002_Node000042" title=" " alt="" coords="2123,102,2216,220,2212,223,2119,106"/>
 <area shape="rect" id="Node000045" href="$threadpool_8hpp.html" title=" " alt="" coords="4011,233,4205,258"/>
 <area shape="poly" id="edge61_Node000002_Node000045" title=" " alt="" coords="2192,90,2586,92,3140,100,3418,107,3664,118,3855,131,3923,140,3967,149,4002,164,4035,183,4087,221,4084,226,4032,187,4000,169,3966,155,3922,145,3855,137,3664,123,3418,112,3140,105,2586,97,2192,95"/>
-<area shape="rect" id="Node000051" href="$consumer_8hpp.html" title="消费者管理模块" alt="" coords="3841,152,3954,177"/>
+<area shape="rect" id="Node000051" href="$server_2consumer_8hpp.html" title="消费者管理模块" alt="" coords="3841,152,3954,177"/>
 <area shape="poly" id="edge70_Node000002_Node000051" title=" " alt="" coords="2192,93,3827,158,3827,163,2191,98"/>
 <area shape="rect" id="Node000053" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="4433,152,4511,177"/>
 <area shape="poly" id="edge78_Node000002_Node000053" title=" " alt="" coords="2192,90,2625,93,3268,102,3929,120,4205,133,4414,149,4419,150,4418,155,4413,155,4205,138,3928,125,3268,108,2625,99,2192,96"/>

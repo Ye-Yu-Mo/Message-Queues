@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -108,10 +108,13 @@ $(document).ready(function(){initNavTree('class_xu_m_q_1_1_channel_manager.html'
 <p>信道管理类  
  <a href="class_xu_m_q_1_1_channel_manager.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="channel_8hpp_source.html">channel.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="client_2channel_8hpp_source.html">channel.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
+<tr class="memitem:a7249192cd9b829ab25fb020e43f6bef7" id="r_a7249192cd9b829ab25fb020e43f6bef7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_channel_manager.html">ChannelManager</a> &gt;</td></tr>
+<tr class="memdesc:a7249192cd9b829ab25fb020e43f6bef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道管理句柄  <br /></td></tr>
+<tr class="separator:a7249192cd9b829ab25fb020e43f6bef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7249192cd9b829ab25fb020e43f6bef7" id="r_a7249192cd9b829ab25fb020e43f6bef7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ptr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_channel_manager.html">ChannelManager</a> &gt;</td></tr>
 <tr class="memdesc:a7249192cd9b829ab25fb020e43f6bef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道管理句柄  <br /></td></tr>
 <tr class="separator:a7249192cd9b829ab25fb020e43f6bef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,7 +124,19 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a32fd116bf7e8707dd87aeffbd5b008dc" id="r_a32fd116bf7e8707dd87aeffbd5b008dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a32fd116bf7e8707dd87aeffbd5b008dc">ChannelManager</a> ()</td></tr>
 <tr class="memdesc:a32fd116bf7e8707dd87aeffbd5b008dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
 <tr class="separator:a32fd116bf7e8707dd87aeffbd5b008dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeedb8bdf848ecdb9daff2b17721746ee" id="r_aeedb8bdf848ecdb9daff2b17721746ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aeedb8bdf848ecdb9daff2b17721746ee">openChannel</a> (const std::string &amp;id, const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
+<tr class="memitem:a28590c67d7cc5b4610c296060c422b46" id="r_a28590c67d7cc5b4610c296060c422b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a28590c67d7cc5b4610c296060c422b46">create</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec)</td></tr>
+<tr class="memdesc:a28590c67d7cc5b4610c296060c422b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建一个信道  <br /></td></tr>
+<tr class="separator:a28590c67d7cc5b4610c296060c422b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78bbbf59c921e4592783782d6e20a855" id="r_a78bbbf59c921e4592783782d6e20a855"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a78bbbf59c921e4592783782d6e20a855">remove</a> (const std::string &amp;cid)</td></tr>
+<tr class="memdesc:a78bbbf59c921e4592783782d6e20a855"><td class="mdescLeft">&#160;</td><td class="mdescRight">移除一个信道  <br /></td></tr>
+<tr class="separator:a78bbbf59c921e4592783782d6e20a855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648eb01d17b056f404a56d7c13951bc9" id="r_a648eb01d17b056f404a56d7c13951bc9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a648eb01d17b056f404a56d7c13951bc9">get</a> (const std::string &amp;cid)</td></tr>
+<tr class="memdesc:a648eb01d17b056f404a56d7c13951bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取一个信道  <br /></td></tr>
+<tr class="separator:a648eb01d17b056f404a56d7c13951bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32fd116bf7e8707dd87aeffbd5b008dc" id="r_a32fd116bf7e8707dd87aeffbd5b008dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a32fd116bf7e8707dd87aeffbd5b008dc">ChannelManager</a> ()</td></tr>
+<tr class="memdesc:a32fd116bf7e8707dd87aeffbd5b008dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
+<tr class="separator:a32fd116bf7e8707dd87aeffbd5b008dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeedb8bdf848ecdb9daff2b17721746ee" id="r_aeedb8bdf848ecdb9daff2b17721746ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aeedb8bdf848ecdb9daff2b17721746ee">openChannel</a> (const std::string &amp;id, const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
 <tr class="memdesc:aeedb8bdf848ecdb9daff2b17721746ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开一个信道  <br /></td></tr>
 <tr class="separator:aeedb8bdf848ecdb9daff2b17721746ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a864c7599c6e053051b713e6417d7410c" id="r_a864c7599c6e053051b713e6417d7410c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a864c7599c6e053051b713e6417d7410c">closeChannel</a> (const std::string &amp;id)</td></tr>
@@ -136,15 +151,31 @@ Private 属性</h2></td></tr>
 <tr class="memitem:ac7f6f76fda2123b6ba771d4de7c09f18" id="r_ac7f6f76fda2123b6ba771d4de7c09f18"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#ac7f6f76fda2123b6ba771d4de7c09f18">_mutex</a></td></tr>
 <tr class="memdesc:ac7f6f76fda2123b6ba771d4de7c09f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁  <br /></td></tr>
 <tr class="separator:ac7f6f76fda2123b6ba771d4de7c09f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7adb2687a8f5df60fe0c8c5670af662c" id="r_a7adb2687a8f5df60fe0c8c5670af662c"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7adb2687a8f5df60fe0c8c5670af662c">_channels</a></td></tr>
-<tr class="memdesc:a7adb2687a8f5df60fe0c8c5670af662c"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道id到信道管理句柄的映射表  <br /></td></tr>
-<tr class="separator:a7adb2687a8f5df60fe0c8c5670af662c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e6df8afb3022510c588874a6e0b31d" id="r_a09e6df8afb3022510c588874a6e0b31d"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a09e6df8afb3022510c588874a6e0b31d">_channels</a></td></tr>
+<tr class="memdesc:a09e6df8afb3022510c588874a6e0b31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道id和信道句柄的映射表  <br /></td></tr>
+<tr class="separator:a09e6df8afb3022510c588874a6e0b31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>信道管理类 </p>
 </div><h2 class="groupheader">成员类型定义说明</h2>
 <a id="a7249192cd9b829ab25fb020e43f6bef7" name="a7249192cd9b829ab25fb020e43f6bef7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7249192cd9b829ab25fb020e43f6bef7">&#9670;&#160;</a></span>ptr</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7249192cd9b829ab25fb020e43f6bef7">&#9670;&#160;</a></span>ptr <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">XuMQ::ChannelManager::ptr</a> =  std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_channel_manager.html">ChannelManager</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>信道管理句柄 </p>
+
+</div>
+</div>
+<a id="a7249192cd9b829ab25fb020e43f6bef7" name="a7249192cd9b829ab25fb020e43f6bef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7249192cd9b829ab25fb020e43f6bef7">&#9670;&#160;</a></span>ptr <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -161,7 +192,34 @@ Private 属性</h2></td></tr>
 </div>
 <h2 class="groupheader">构造及析构函数说明</h2>
 <a id="a32fd116bf7e8707dd87aeffbd5b008dc" name="a32fd116bf7e8707dd87aeffbd5b008dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32fd116bf7e8707dd87aeffbd5b008dc">&#9670;&#160;</a></span>ChannelManager()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32fd116bf7e8707dd87aeffbd5b008dc">&#9670;&#160;</a></span>ChannelManager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::ChannelManager::ChannelManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>构造函数 </p>
+
+</div>
+</div>
+<a id="a32fd116bf7e8707dd87aeffbd5b008dc" name="a32fd116bf7e8707dd87aeffbd5b008dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32fd116bf7e8707dd87aeffbd5b008dc">&#9670;&#160;</a></span>ChannelManager() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,6 +277,87 @@ Private 属性</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a28590c67d7cc5b4610c296060c422b46" name="a28590c67d7cc5b4610c296060c422b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28590c67d7cc5b4610c296060c422b46">&#9670;&#160;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> XuMQ::ChannelManager::create </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>codec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>新建一个信道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接句柄 </td></tr>
+    <tr><td class="paramname">codec</td><td>协议解析句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>信道句柄 </dd></dl>
+
+</div>
+</div>
+<a id="a648eb01d17b056f404a56d7c13951bc9" name="a648eb01d17b056f404a56d7c13951bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648eb01d17b056f404a56d7c13951bc9">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> XuMQ::ChannelManager::get </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取一个信道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cid</td><td>信道id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>信道句柄 </dd></dl>
 
 </div>
 </div>
@@ -287,7 +426,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>codec</em>, </td>
         </tr>
         <tr>
@@ -331,9 +470,8 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a id="a7adb2687a8f5df60fe0c8c5670af662c" name="a7adb2687a8f5df60fe0c8c5670af662c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7adb2687a8f5df60fe0c8c5670af662c">&#9670;&#160;</a></span>_channels</h2>
+<a id="a78bbbf59c921e4592783782d6e20a855" name="a78bbbf59c921e4592783782d6e20a855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78bbbf59c921e4592783782d6e20a855">&#9670;&#160;</a></span>remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +480,42 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a>&gt; XuMQ::ChannelManager::_channels</td>
+          <td class="memname">void XuMQ::ChannelManager::remove </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>cid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>移除一个信道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cid</td><td>信道id </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">类成员变量说明</h2>
+<a id="a09e6df8afb3022510c588874a6e0b31d" name="a09e6df8afb3022510c588874a6e0b31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e6df8afb3022510c588874a6e0b31d">&#9670;&#160;</a></span>_channels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt; std::string, <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> &gt; XuMQ::ChannelManager::_channels</td>
         </tr>
       </table>
   </td>
@@ -352,6 +525,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>信道id和信道句柄的映射表 </p>
 <p>信道id到信道管理句柄的映射表 </p>
 
 </div>

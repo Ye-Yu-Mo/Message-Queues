@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "XuMQ", "namespace_xu_m_q.html", [
+      [ "AsyncWorker", "class_xu_m_q_1_1_async_worker.html", "class_xu_m_q_1_1_async_worker" ],
       [ "basicAckRequest", "class_xu_m_q_1_1basic_ack_request.html", "class_xu_m_q_1_1basic_ack_request" ],
       [ "basicAckRequestDefaultTypeInternal", "struct_xu_m_q_1_1basic_ack_request_default_type_internal.html", "struct_xu_m_q_1_1basic_ack_request_default_type_internal" ],
       [ "basicCancelRequest", "class_xu_m_q_1_1basic_cancel_request.html", "class_xu_m_q_1_1basic_cancel_request" ],

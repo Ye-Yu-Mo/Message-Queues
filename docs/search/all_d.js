@@ -12,7 +12,7 @@ var searchData=
   ['messagedefaulttypeinternal_9',['messagedefaulttypeinternal',['../struct_xu_m_q_1_1_message_default_type_internal.html',1,'XuMQ::MessageDefaultTypeInternal'],['../struct_xu_m_q_1_1_message_default_type_internal.html#a07de05fa49c54b80208350ff9950e86c',1,'XuMQ::MessageDefaultTypeInternal::MessageDefaultTypeInternal()']]],
   ['messagemanager_10',['messagemanager',['../class_xu_m_q_1_1_message_manager.html#a68232c4e094e4959b7daab9f39a2fa11',1,'XuMQ::MessageManager::MessageManager()'],['../class_xu_m_q_1_1_message_manager.html',1,'XuMQ::MessageManager']]],
   ['messagemapper_11',['messagemapper',['../class_xu_m_q_1_1_message_mapper.html#a2ffd4f5f07c10daa040773a4ec163deb',1,'XuMQ::MessageMapper::MessageMapper()'],['../class_xu_m_q_1_1_message_mapper.html',1,'XuMQ::MessageMapper']]],
-  ['messageptr_12',['messageptr',['../class_xu_m_q_1_1_server.html#ace0e4a2206eb6cadbe6be8953ffac1c7',1,'XuMQ::Server::MessagePtr'],['../namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47',1,'XuMQ::MessagePtr']]],
+  ['messageptr_12',['messageptr',['../class_xu_m_q_1_1_server.html#ace0e4a2206eb6cadbe6be8953ffac1c7',1,'XuMQ::Server::MessagePtr'],['../namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c',1,'XuMQ::MessagePtr']]],
   ['mmp_13',['mmp',['../mqmessagetest_8cpp.html#aeea3d8ffcd0ba18db2c944c1f8062548',1,'mqmessagetest.cpp']]],
   ['mo_20github_20io_20message_20queues_20项目文档_20a_14',['&lt;a href=&quot;https://ye-yu-mo.github.io/Message-Queues/&quot; &gt;项目文档&lt;/a&gt;',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]],
   ['mqbindingtest_2ecpp_15',['mqbindingtest.cpp',['../mqbindingtest_8cpp.html',1,'']]],

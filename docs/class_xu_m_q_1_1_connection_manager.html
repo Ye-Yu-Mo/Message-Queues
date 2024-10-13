@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('class_xu_m_q_1_1_connection_manager.ht
 <p>连接管理类  
  <a href="class_xu_m_q_1_1_connection_manager.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="connection_8hpp_source.html">connection.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="server_2connection_8hpp_source.html">connection.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
@@ -121,7 +121,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:aee965fc40bd853f9df455ebf235c2f6d" id="r_aee965fc40bd853f9df455ebf235c2f6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#aee965fc40bd853f9df455ebf235c2f6d">ConnectionManager</a> ()</td></tr>
 <tr class="memdesc:aee965fc40bd853f9df455ebf235c2f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">构造函数  <br /></td></tr>
 <tr class="separator:aee965fc40bd853f9df455ebf235c2f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b56b5a3e7940467657b89812c48ab42" id="r_a0b56b5a3e7940467657b89812c48ab42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">newConnection</a> (const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
+<tr class="memitem:a0b56b5a3e7940467657b89812c48ab42" id="r_a0b56b5a3e7940467657b89812c48ab42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">newConnection</a> (const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
 <tr class="memdesc:a0b56b5a3e7940467657b89812c48ab42"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建一个连接  <br /></td></tr>
 <tr class="separator:a0b56b5a3e7940467657b89812c48ab42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42ba69f2b3048a7e21dfa7d277a66cbb" id="r_a42ba69f2b3048a7e21dfa7d277a66cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html#a42ba69f2b3048a7e21dfa7d277a66cbb">deleteConnection</a> (const muduo::net::TcpConnectionPtr &amp;conn)</td></tr>
@@ -281,7 +281,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>codec</em>, </td>
         </tr>
         <tr>

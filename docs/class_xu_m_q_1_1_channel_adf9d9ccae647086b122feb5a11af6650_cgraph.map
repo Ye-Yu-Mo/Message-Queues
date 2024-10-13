@@ -1,0 +1,21 @@
+<map id="XuMQ::Channel::declareQueue" name="XuMQ::Channel::declareQueue">
+<area shape="rect" id="Node000001" title="声明消息队列" alt="" coords="5,269,225,294"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1declare_queue_request.html#a2b59d60d68a98d51d5848b7b9ba72cea" title=" " alt="" coords="278,5,490,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,267,139,226,171,169,216,108,242,80,272,55,281,49,284,54,275,59,246,84,220,111,176,172,143,229,124,270"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1declare_queue_request.html#a9ac6a56d90206745f98bdb068c2f22f5" title=" " alt="" coords="278,69,490,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="124,267,180,197,223,155,272,119,284,113,287,117,275,124,227,159,184,200,128,270"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1declare_queue_request.html#a529bffec5c30c1f76f1aafb09edaf636" title=" " alt="" coords="278,133,490,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="133,266,193,226,272,183,291,175,293,180,274,188,196,231,136,271"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1declare_queue_request.html#a7aa18d92463b329d4f857325e5b85fae" title=" " alt="" coords="278,197,490,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="169,266,285,238,287,243,170,271"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1declare_queue_request.html#a7bb5e483afefad81306a9034e7f0bd8d" title=" " alt="" coords="278,261,490,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="226,279,264,279,264,284,226,284"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1declare_queue_request.html#a01f61b140f799a012f8ebfc69dd72a13" title=" " alt="" coords="278,325,490,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="170,292,287,320,285,325,169,297"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1declare_queue_request.html#a871c09f84237d60c8ed844dc01c35a22" title=" " alt="" coords="278,389,490,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="136,292,196,332,274,375,293,382,291,387,272,380,193,337,133,296"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="293,454,475,479"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="127,292,183,363,226,404,275,439,291,447,289,452,272,444,222,408,179,366,123,296"/>
+<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="273,503,495,529"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="125,293,144,332,176,385,220,441,246,467,275,488,288,496,285,500,272,493,243,471,216,445,172,388,139,334,120,295"/>
+</map>

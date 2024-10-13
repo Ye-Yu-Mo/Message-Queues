@@ -1,8 +1,8 @@
 <map id="test/mqconnectiontest.cpp" name="test/mqconnectiontest.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="2226,5,2421,31"/>
-<area shape="rect" id="Node000002" href="$connection_8hpp.html" title="声明了连接类和连接管理类，主要用于管理连接的建立、维护与信道的操作。" alt="" coords="2234,79,2413,104"/>
+<area shape="rect" id="Node000002" href="$server_2connection_8hpp.html" title="声明了连接类和连接管理类，主要用于管理连接的建立、维护与信道的操作。" alt="" coords="2234,79,2413,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2326,31,2326,65,2321,65,2321,31"/>
-<area shape="rect" id="Node000003" href="$channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="2273,152,2374,177"/>
+<area shape="rect" id="Node000003" href="$server_2channel_8hpp.html" title="信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。" alt="" coords="2273,152,2374,177"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2326,104,2326,138,2321,138,2321,104"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="938,225,1141,251"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2273,170,1819,189,1493,206,1155,228,1155,223,1493,200,1819,184,2272,165"/>
@@ -26,7 +26,7 @@
 <area shape="poly" id="edge69_Node000003_Node000043" title=" " alt="" coords="2334,176,2428,293,2424,297,2330,179"/>
 <area shape="rect" id="Node000046" href="$threadpool_8hpp.html" title=" " alt="" coords="4148,306,4341,331"/>
 <area shape="poly" id="edge62_Node000003_Node000046" title=" " alt="" coords="2374,164,2732,167,3268,176,3785,193,3974,206,4041,214,4085,223,4125,237,4162,256,4221,295,4218,300,4159,261,4122,242,4084,228,4040,219,3974,212,3784,199,3268,181,2732,172,2374,169"/>
-<area shape="rect" id="Node000052" href="$consumer_8hpp.html" title="消费者管理模块" alt="" coords="3856,225,3969,251"/>
+<area shape="rect" id="Node000052" href="$server_2consumer_8hpp.html" title="消费者管理模块" alt="" coords="3856,225,3969,251"/>
 <area shape="poly" id="edge70_Node000003_Node000052" title=" " alt="" coords="2375,164,2601,167,2957,177,3383,194,3821,223,3842,225,3842,230,3820,228,3383,200,2957,182,2601,173,2374,169"/>
 <area shape="rect" id="Node000054" href="$host_8hpp.html" title="XuMQ 虚拟机模块定义" alt="" coords="3993,225,4072,251"/>
 <area shape="poly" id="edge78_Node000003_Node000054" title=" " alt="" coords="2374,164,2677,168,3137,179,3616,196,3821,208,3980,223,3979,228,3820,214,3616,202,3136,184,2677,174,2374,169"/>

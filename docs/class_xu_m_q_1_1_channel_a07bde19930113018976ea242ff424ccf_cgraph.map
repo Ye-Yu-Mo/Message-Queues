@@ -1,0 +1,11 @@
+<map id="XuMQ::Channel::closeChannel" name="XuMQ::Channel::closeChannel">
+<area shape="rect" id="Node000001" title="关闭信道请求" alt="" coords="5,106,223,131"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1close_channel_request.html#a6cee19f251c6c17a4ed48372fed72f4e" title=" " alt="" coords="277,5,486,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,103,270,55,294,47,296,52,272,60,146,108"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1close_channel_request.html#aceccb903d639228aa505da07258c89ab" title=" " alt="" coords="277,69,486,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,104,262,100,263,105,223,109"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="290,134,473,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="223,127,277,133,276,138,223,133"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="271,183,492,209"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="151,129,271,168,308,178,306,183,270,173,149,134"/>
+</map>

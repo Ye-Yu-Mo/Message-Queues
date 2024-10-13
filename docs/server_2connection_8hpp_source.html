@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: server/connection.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('server_2connection_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">connection.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="server_2connection_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="server_2channel_8hpp.html">channel.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">class </span>Connection</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">   20</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">ptr</a> = std::shared_ptr&lt;Connection&gt;; </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f">   27</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f">Connection</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, <span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="code hl_variable" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                   <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec, <span class="keyword">const</span> muduo::net::TcpConnectionPtr &amp;conn,</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                   <span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool) : <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">_conn</a>(conn), <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a>(codec), <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">_cmp</a>(<a class="code hl_variable" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>), <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#acfffddecd37b16ab610dd1b370275378">_host</a>(host), <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">_pool</a>(pool),</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                                                  <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a>(std::make_shared&lt;<a class="code hl_class" href="class_xu_m_q_1_1_channel_manager.html">ChannelManager</a>&gt;()) {}</div>
+</div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a3abe3e0c444bb3506935a2e61206e80e">   33</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a3abe3e0c444bb3506935a2e61206e80e">openChannel</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#a0b66ac6ad7a71679dd35a34684b5d622">openChannelRequestPtr</a> &amp;req)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="comment">// 判断信道id是否重复 创建信道</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordtype">bool</span> ret = <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a>-&gt;openChannel(req-&gt;rid(), <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#acfffddecd37b16ab610dd1b370275378">_host</a>, <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">_cmp</a>, <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a>, <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">_conn</a>, <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">_pool</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (ret == <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                error(<a class="code hl_variable" href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">logger</a>, <span class="stringliteral">&quot;创建信道时 信道id重复!&quot;</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">basicRespFunc</a>(<span class="keyword">false</span>, req-&gt;rid(), req-&gt;cid());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="comment">// 给客户端回复</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">basicRespFunc</a>(<span class="keyword">true</span>, req-&gt;rid(), req-&gt;cid());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#ae7a3136dccb26cfc3a7f06affd61a91f">   49</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#ae7a3136dccb26cfc3a7f06affd61a91f">closeChannel</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#a7f682f5c4b91edfd21ce5157d20a7389">closeChannelRequestPtr</a> &amp;req)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a>-&gt;closeChannel(req-&gt;cid());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">basicRespFunc</a>(<span class="keyword">true</span>, req-&gt;rid(), req-&gt;cid());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a65d8341ce11d9300eba55271ed5b6c89">   55</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a65d8341ce11d9300eba55271ed5b6c89">getChannel</a>(<span class="keyword">const</span> std::string &amp;cid)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a>-&gt;getChannel(cid);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">   65</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">basicRespFunc</a>(<span class="keywordtype">bool</span> ok, <span class="keyword">const</span> std::string &amp;rid, <span class="keyword">const</span> std::string &amp;cid)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <a class="code hl_class" href="class_xu_m_q_1_1basic_response.html">basicResponse</a> resp;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            resp.<a class="code hl_function" href="class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631">set_rid</a>(rid);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            resp.<a class="code hl_function" href="class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea">set_cid</a>(cid);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            resp.<a class="code hl_function" href="class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45">set_ok</a>(ok);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a>-&gt;send(<a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">_conn</a>, resp);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        muduo::net::TcpConnectionPtr <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">_conn</a>; </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a>;            </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">   77</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">_cmp</a>;          </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#acfffddecd37b16ab610dd1b370275378">   78</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#acfffddecd37b16ab610dd1b370275378">_host</a>;             </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">   79</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">_pool</a>;              </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ChannelManager::ptr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a>;      </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    };</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="};">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html">   85</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_connection_manager.html">ConnectionManager</a></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a487036eb08071ec5e7726f0e0c602f1f">   88</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_connection_manager.html#a487036eb08071ec5e7726f0e0c602f1f">ptr</a> = std::shared_ptr&lt;ConnectionManager&gt;; </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#aee965fc40bd853f9df455ebf235c2f6d">   90</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_connection_manager.html#aee965fc40bd853f9df455ebf235c2f6d">ConnectionManager</a>() {}</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">   97</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">newConnection</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, <span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="code hl_variable" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                           <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec, <span class="keyword">const</span> muduo::net::TcpConnectionPtr &amp;conn,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                           <span class="keyword">const</span> <a class="code hl_typedef" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            std::unique_lock lock(<a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">_mutex</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.find(conn);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">if</span> (it != <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.end())</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <a class="code hl_typedef" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a> self_conn = std::make_shared&lt;Connection&gt;(host, <a class="code hl_variable" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, codec, conn, pool);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.insert(std::make_pair(conn, self_conn));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a42ba69f2b3048a7e21dfa7d277a66cbb">  110</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_connection_manager.html#a42ba69f2b3048a7e21dfa7d277a66cbb">deleteConnection</a>(<span class="keyword">const</span> muduo::net::TcpConnectionPtr &amp;conn)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            std::unique_lock lock(<a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">_mutex</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.erase(conn);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a7bd5677aa84c95cb061b3ec336d46f19">  118</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_connection_manager.html#a7bd5677aa84c95cb061b3ec336d46f19">getConnection</a>(<span class="keyword">const</span> muduo::net::TcpConnectionPtr &amp;conn)</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            std::unique_lock lock(<a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">_mutex</a>);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.find(conn);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>.end())</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">Connection::ptr</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">  128</a></span>        std::mutex <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">_mutex</a>;                                                        </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">  129</a></span>        std::unordered_map&lt;muduo::net::TcpConnectionPtr, Connection::ptr&gt; <a class="code hl_variable" href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">_conns</a>; </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    };</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_channel_html_a4874d46653d8720a5cdab461678bcbb6"><div class="ttname"><a href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">XuMQ::Channel::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Channel &gt; ptr</div><div class="ttdoc">信道句柄</div><div class="ttdef"><b>Definition</b> channel.hpp:32</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_channel_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></div><div class="ttdoc">信道管理类</div><div class="ttdef"><b>Definition</b> channel.hpp:314</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_channel_manager_html_a7249192cd9b829ab25fb020e43f6bef7"><div class="ttname"><a href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">XuMQ::ChannelManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ChannelManager &gt; ptr</div><div class="ttdoc">信道管理句柄</div><div class="ttdef"><b>Definition</b> channel.hpp:316</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a1a5935cfa3981eb02e859cc8c3f64684"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">XuMQ::Connection::basicRespFunc</a></div><div class="ttdeci">void basicRespFunc(bool ok, const std::string &amp;rid, const std::string &amp;cid)</div><div class="ttdoc">基础响应发送函数</div><div class="ttdef"><b>Definition</b> connection.hpp:65</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a1c9a0c052398feb533d9b765c647256f"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f">XuMQ::Connection::Connection</a></div><div class="ttdeci">Connection(const VirtualHost::ptr &amp;host, const ConsumerManager::ptr &amp;cmp, const ProtobufCodecPtr &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const threadpool::ptr &amp;pool)</div><div class="ttdoc">连接构造函数</div><div class="ttdef"><b>Definition</b> connection.hpp:27</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a2cb8f919dc4086185e9869ad497251fc"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">XuMQ::Connection::_codec</a></div><div class="ttdeci">ProtobufCodecPtr _codec</div><div class="ttdoc">协议处理器</div><div class="ttdef"><b>Definition</b> connection.hpp:129</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a3abe3e0c444bb3506935a2e61206e80e"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a3abe3e0c444bb3506935a2e61206e80e">XuMQ::Connection::openChannel</a></div><div class="ttdeci">bool openChannel(const openChannelRequestPtr &amp;req)</div><div class="ttdoc">打开信道</div><div class="ttdef"><b>Definition</b> connection.hpp:33</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a3c82acb29261f39fdebf187531dad8dc"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">XuMQ::Connection::_cmp</a></div><div class="ttdeci">ConsumerManager::ptr _cmp</div><div class="ttdoc">消费者管理句柄</div><div class="ttdef"><b>Definition</b> connection.hpp:77</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a4ceca119a26c6603076e6f588b46c879"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">XuMQ::Connection::_pool</a></div><div class="ttdeci">threadpool::ptr _pool</div><div class="ttdoc">线程池</div><div class="ttdef"><b>Definition</b> connection.hpp:79</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a574d9ef68d7d1affb78c266eab1bf802"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802">XuMQ::Connection::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Connection &gt; ptr</div><div class="ttdoc">连接句柄</div><div class="ttdef"><b>Definition</b> connection.hpp:20</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a65d8341ce11d9300eba55271ed5b6c89"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a65d8341ce11d9300eba55271ed5b6c89">XuMQ::Connection::getChannel</a></div><div class="ttdeci">Channel::ptr getChannel(const std::string &amp;cid)</div><div class="ttdef"><b>Definition</b> connection.hpp:55</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_a949743ad2973b7923337726a7ba2b325"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">XuMQ::Connection::_channels</a></div><div class="ttdeci">ChannelManager::ptr _channels</div><div class="ttdoc">信道管理句柄</div><div class="ttdef"><b>Definition</b> connection.hpp:131</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_abd971243b55237cbf5daf59626e2ae06"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">XuMQ::Connection::_conn</a></div><div class="ttdeci">muduo::net::TcpConnectionPtr _conn</div><div class="ttdoc">客户端连接</div><div class="ttdef"><b>Definition</b> connection.hpp:126</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_acfffddecd37b16ab610dd1b370275378"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#acfffddecd37b16ab610dd1b370275378">XuMQ::Connection::_host</a></div><div class="ttdeci">VirtualHost::ptr _host</div><div class="ttdoc">虚拟机</div><div class="ttdef"><b>Definition</b> connection.hpp:78</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_html_ae7a3136dccb26cfc3a7f06affd61a91f"><div class="ttname"><a href="class_xu_m_q_1_1_connection.html#ae7a3136dccb26cfc3a7f06affd61a91f">XuMQ::Connection::closeChannel</a></div><div class="ttdeci">void closeChannel(const closeChannelRequestPtr &amp;req)</div><div class="ttdoc">关闭信道</div><div class="ttdef"><b>Definition</b> connection.hpp:49</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html">XuMQ::ConnectionManager</a></div><div class="ttdoc">连接管理类</div><div class="ttdef"><b>Definition</b> connection.hpp:86</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a0b56b5a3e7940467657b89812c48ab42"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a0b56b5a3e7940467657b89812c48ab42">XuMQ::ConnectionManager::newConnection</a></div><div class="ttdeci">void newConnection(const VirtualHost::ptr &amp;host, const ConsumerManager::ptr &amp;cmp, const ProtobufCodecPtr &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const threadpool::ptr &amp;pool)</div><div class="ttdoc">新建一个连接</div><div class="ttdef"><b>Definition</b> connection.hpp:97</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a20fcb1796e10a367a6bfa4b221021422"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a20fcb1796e10a367a6bfa4b221021422">XuMQ::ConnectionManager::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> connection.hpp:128</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a2e14f56ff72382fd3c1e9cb563402f8c"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a2e14f56ff72382fd3c1e9cb563402f8c">XuMQ::ConnectionManager::_conns</a></div><div class="ttdeci">std::unordered_map&lt; muduo::net::TcpConnectionPtr, Connection::ptr &gt; _conns</div><div class="ttdoc">一个从muduo连接管理句柄到连接管理句柄的映射表</div><div class="ttdef"><b>Definition</b> connection.hpp:129</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a42ba69f2b3048a7e21dfa7d277a66cbb"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a42ba69f2b3048a7e21dfa7d277a66cbb">XuMQ::ConnectionManager::deleteConnection</a></div><div class="ttdeci">void deleteConnection(const muduo::net::TcpConnectionPtr &amp;conn)</div><div class="ttdoc">删除一个连接</div><div class="ttdef"><b>Definition</b> connection.hpp:110</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a487036eb08071ec5e7726f0e0c602f1f"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a487036eb08071ec5e7726f0e0c602f1f">XuMQ::ConnectionManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ConnectionManager &gt; ptr</div><div class="ttdoc">连接管理句柄</div><div class="ttdef"><b>Definition</b> connection.hpp:88</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_a7bd5677aa84c95cb061b3ec336d46f19"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#a7bd5677aa84c95cb061b3ec336d46f19">XuMQ::ConnectionManager::getConnection</a></div><div class="ttdeci">Connection::ptr getConnection(const muduo::net::TcpConnectionPtr &amp;conn)</div><div class="ttdoc">获取一个连接</div><div class="ttdef"><b>Definition</b> connection.hpp:118</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_connection_manager_html_aee965fc40bd853f9df455ebf235c2f6d"><div class="ttname"><a href="class_xu_m_q_1_1_connection_manager.html#aee965fc40bd853f9df455ebf235c2f6d">XuMQ::ConnectionManager::ConnectionManager</a></div><div class="ttdeci">ConnectionManager()</div><div class="ttdoc">构造函数</div><div class="ttdef"><b>Definition</b> connection.hpp:90</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_consumer_manager_html_a8c1dba09ac3a05367def989b3f1a99dd"><div class="ttname"><a href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">XuMQ::ConsumerManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; ConsumerManager &gt; ptr</div><div class="ttdoc">消息队列管理器指针</div><div class="ttdef"><b>Definition</b> consumer.hpp:152</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_html_a612db1c724f663cc04ee7848917ed9ca"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">XuMQ::VirtualHost::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; VirtualHost &gt; ptr</div><div class="ttdef"><b>Definition</b> host.hpp:25</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1basic_response_html"><div class="ttname"><a href="class_xu_m_q_1_1basic_response.html">XuMQ::basicResponse</a></div><div class="ttdef"><b>Definition</b> protocol.pb.h:2834</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1basic_response_html_a368c6543fdcff677e68e6c7a3ad99b45"><div class="ttname"><a href="class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45">XuMQ::basicResponse::set_ok</a></div><div class="ttdeci">void set_ok(bool value)</div><div class="ttdef"><b>Definition</b> protocol.pb.h:5761</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1basic_response_html_a5ee690247442e4092ff5b2f99570fcea"><div class="ttname"><a href="class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea">XuMQ::basicResponse::set_cid</a></div><div class="ttdeci">void set_cid(ArgT0 &amp;&amp;arg0, ArgT... args)</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1basic_response_html_ae32654c02c9cbccd11ee8a3f42ede631"><div class="ttname"><a href="class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631">XuMQ::basicResponse::set_rid</a></div><div class="ttdeci">void set_rid(ArgT0 &amp;&amp;arg0, ArgT... args)</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1threadpool_html_a37674380071a23f5a7bb03eabe46bfb9"><div class="ttname"><a href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">XuMQ::threadpool::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; threadpool &gt; ptr</div><div class="ttdef"><b>Definition</b> threadpool.hpp:18</div></div>
+<div class="ttc" id="amqconsumer_8cpp_html_a2208261f885e26fd1553e0d857451689"><div class="ttname"><a href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a></div><div class="ttdeci">XuMQ::ConsumerManager::ptr cmp</div><div class="ttdef"><b>Definition</b> mqconsumer.cpp:4</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> channel.hpp:22</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a0b66ac6ad7a71679dd35a34684b5d622"><div class="ttname"><a href="namespace_xu_m_q.html#a0b66ac6ad7a71679dd35a34684b5d622">XuMQ::openChannelRequestPtr</a></div><div class="ttdeci">std::shared_ptr&lt; openChannelRequest &gt; openChannelRequestPtr</div><div class="ttdoc">打开信道请求</div><div class="ttdef"><b>Definition</b> channel.hpp:33</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a7f682f5c4b91edfd21ce5157d20a7389"><div class="ttname"><a href="namespace_xu_m_q.html#a7f682f5c4b91edfd21ce5157d20a7389">XuMQ::closeChannelRequestPtr</a></div><div class="ttdeci">std::shared_ptr&lt; closeChannelRequest &gt; closeChannelRequestPtr</div><div class="ttdoc">关闭信道请求</div><div class="ttdef"><b>Definition</b> channel.hpp:34</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a9db4520e3c100e6eee86b0f86ad281b0"><div class="ttname"><a href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">XuMQ::ProtobufCodecPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ProtobufCodec &gt; ProtobufCodecPtr</div><div class="ttdoc">协议处理句柄</div><div class="ttdef"><b>Definition</b> channel.hpp:24</div></div>
+<div class="ttc" id="aserver_2channel_8hpp_html"><div class="ttname"><a href="server_2channel_8hpp.html">channel.hpp</a></div><div class="ttdoc">信道与信道管理模块的头文件，包含了信道的声明和其管理类的定义。</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="server_2connection_8hpp.html">connection.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <map id="test/mqconsumer.cpp" name="test/mqconsumer.cpp">
 <area shape="rect" id="Node000001" title=" " alt="" coords="876,5,1039,31"/>
-<area shape="rect" id="Node000002" href="$consumer_8hpp.html" title="消费者管理模块" alt="" coords="792,79,963,104"/>
+<area shape="rect" id="Node000002" href="$server_2consumer_8hpp.html" title="消费者管理模块" alt="" coords="792,79,963,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="946,33,902,72,899,68,943,29"/>
 <area shape="rect" id="Node000039" title=" " alt="" coords="987,79,1091,104"/>
 <area shape="poly" id="edge43_Node000001_Node000039" title=" " alt="" coords="972,29,1017,68,1013,72,969,33"/>

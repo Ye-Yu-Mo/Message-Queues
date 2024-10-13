@@ -1,0 +1,17 @@
+<map id="XuMQ::Channel::~Channel" name="XuMQ::Channel::~Channel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,173,200,198"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a5cfb1837c0e3e06ddbc001734d6520eb" title="取消订阅" alt="" coords="248,173,456,198"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,183,234,183,234,188,200,188"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_cancel_request.html#af1b75571d9f83fb4e2e8c9dd0eb05fd1" title=" " alt="" coords="515,5,715,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,171,419,115,459,83,503,55,517,48,519,53,505,60,462,87,423,119,367,174"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_cancel_request.html#ac0f2efa9a7e8896f7ed1f6e900737100" title=" " alt="" coords="515,69,715,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="380,170,503,119,526,111,528,116,505,124,382,175"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_cancel_request.html#a55315bdac88732133f7a6544d847d5ff" title=" " alt="" coords="515,133,715,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="456,170,500,165,501,170,456,175"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1basic_cancel_request.html#ad22a2fa17c1231a5e44d4e5c2ab29a73" title=" " alt="" coords="515,197,715,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="456,195,501,201,500,206,456,201"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="523,262,706,287"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="381,196,437,221,505,247,537,256,536,261,503,252,435,226,378,201"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="504,311,725,337"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="368,196,425,245,463,273,505,296,527,305,525,310,503,301,460,277,421,249,364,200"/>
+</map>

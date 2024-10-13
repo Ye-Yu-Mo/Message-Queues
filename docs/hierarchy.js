@@ -17,6 +17,7 @@ var hierarchy =
     [ "XuMQ::openChannelRequest::_Internal", "class_xu_m_q_1_1open_channel_request_1_1___internal.html", null ],
     [ "XuMQ::queueBindRequest::_Internal", "class_xu_m_q_1_1queue_bind_request_1_1___internal.html", null ],
     [ "XuMQ::queueUnBindRequest::_Internal", "class_xu_m_q_1_1queue_un_bind_request_1_1___internal.html", null ],
+    [ "XuMQ::AsyncWorker", "class_xu_m_q_1_1_async_worker.html", null ],
     [ "XuMQ::basicAckRequestDefaultTypeInternal", "struct_xu_m_q_1_1basic_ack_request_default_type_internal.html", null ],
     [ "XuMQ::basicCancelRequestDefaultTypeInternal", "struct_xu_m_q_1_1basic_cancel_request_default_type_internal.html", null ],
     [ "XuMQ::basicConsumeRequestDefaultTypeInternal", "struct_xu_m_q_1_1basic_consume_request_default_type_internal.html", null ],

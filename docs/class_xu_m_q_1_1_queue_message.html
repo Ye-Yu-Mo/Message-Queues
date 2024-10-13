@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -137,7 +137,7 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a9a9bae0beae450d6a2e9ac089de87ecc" id="r_a9a9bae0beae450d6a2e9ac089de87ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a9a9bae0beae450d6a2e9ac089de87ecc">insert</a> (const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *bp, const std::string &amp;body, bool queue_id_durable)</td></tr>
 <tr class="memdesc:a9a9bae0beae450d6a2e9ac089de87ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">插入推送消息队列  <br /></td></tr>
 <tr class="separator:a9a9bae0beae450d6a2e9ac089de87ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ec4a3731dfd398fc819e72ef5a9a3d4" id="r_a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3ec4a3731dfd398fc819e72ef5a9a3d4">front</a> ()</td></tr>
+<tr class="memitem:a3ec4a3731dfd398fc819e72ef5a9a3d4" id="r_a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a3ec4a3731dfd398fc819e72ef5a9a3d4">front</a> ()</td></tr>
 <tr class="memdesc:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取队头消息  <br /></td></tr>
 <tr class="separator:a3ec4a3731dfd398fc819e72ef5a9a3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c9afb899ac5840d9de4e531bdbc6fa" id="r_ae2c9afb899ac5840d9de4e531bdbc6fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ae2c9afb899ac5840d9de4e531bdbc6fa">remove</a> (const std::string &amp;msg_id)</td></tr>
@@ -185,13 +185,13 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a34d3b57f38551de8dcd3df67caca1622" id="r_a34d3b57f38551de8dcd3df67caca1622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_message_mapper.html">MessageMapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a34d3b57f38551de8dcd3df67caca1622">_mapper</a></td></tr>
 <tr class="memdesc:a34d3b57f38551de8dcd3df67caca1622"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列持久化管理类  <br /></td></tr>
 <tr class="separator:a34d3b57f38551de8dcd3df67caca1622"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb1bb7719d110d094bd831f5388b5d41" id="r_abb1bb7719d110d094bd831f5388b5d41"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#abb1bb7719d110d094bd831f5388b5d41">_msgs</a></td></tr>
+<tr class="memitem:abb1bb7719d110d094bd831f5388b5d41" id="r_abb1bb7719d110d094bd831f5388b5d41"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#abb1bb7719d110d094bd831f5388b5d41">_msgs</a></td></tr>
 <tr class="memdesc:abb1bb7719d110d094bd831f5388b5d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">待推送消息列表  <br /></td></tr>
 <tr class="separator:abb1bb7719d110d094bd831f5388b5d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7bde3b7bf27d1acef3448d65d0d8328" id="r_ac7bde3b7bf27d1acef3448d65d0d8328"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ac7bde3b7bf27d1acef3448d65d0d8328">_durable_msgs</a></td></tr>
+<tr class="memitem:ac7bde3b7bf27d1acef3448d65d0d8328" id="r_ac7bde3b7bf27d1acef3448d65d0d8328"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#ac7bde3b7bf27d1acef3448d65d0d8328">_durable_msgs</a></td></tr>
 <tr class="memdesc:ac7bde3b7bf27d1acef3448d65d0d8328"><td class="mdescLeft">&#160;</td><td class="mdescRight">持久化消息映射表  <br /></td></tr>
 <tr class="separator:ac7bde3b7bf27d1acef3448d65d0d8328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c287ca72d5ed239fe8949a55959ae11" id="r_a1c287ca72d5ed239fe8949a55959ae11"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a1c287ca72d5ed239fe8949a55959ae11">_waitack_msgs</a></td></tr>
+<tr class="memitem:a1c287ca72d5ed239fe8949a55959ae11" id="r_a1c287ca72d5ed239fe8949a55959ae11"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_queue_message.html#a1c287ca72d5ed239fe8949a55959ae11">_waitack_msgs</a></td></tr>
 <tr class="memdesc:a1c287ca72d5ed239fe8949a55959ae11"><td class="mdescLeft">&#160;</td><td class="mdescRight">待确认消息映射表  <br /></td></tr>
 <tr class="separator:a1c287ca72d5ed239fe8949a55959ae11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -364,7 +364,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> XuMQ::QueueMessage::front </td>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> XuMQ::QueueMessage::front </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -755,7 +755,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_durable_msgs</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a>&gt; XuMQ::QueueMessage::_durable_msgs</td>
         </tr>
       </table>
   </td>
@@ -803,7 +803,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::list&lt;<a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_msgs</td>
+          <td class="memname">std::list&lt;<a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a>&gt; XuMQ::QueueMessage::_msgs</td>
         </tr>
       </table>
   </td>
@@ -923,7 +923,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a>&gt; XuMQ::QueueMessage::_waitack_msgs</td>
+          <td class="memname">std::unordered_map&lt;std::string, <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a>&gt; XuMQ::QueueMessage::_waitack_msgs</td>
         </tr>
       </table>
   </td>

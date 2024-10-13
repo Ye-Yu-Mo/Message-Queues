@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -221,7 +221,7 @@ $(document).ready(function(){initNavTree('host_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
 </div>
 <div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host.html#ac5bec493e185f208dbd0f3c069b80531">  158</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host.html#ac5bec493e185f208dbd0f3c069b80531">basicConsume</a>(<span class="keyword">const</span> std::string &amp;qname)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host.html#ac5bec493e185f208dbd0f3c069b80531">  158</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host.html#ac5bec493e185f208dbd0f3c069b80531">basicConsume</a>(<span class="keyword">const</span> std::string &amp;qname)</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host.html#a247d9bb21c462b6f0be89b265bf1ac78">_mmp</a>-&gt;front(qname);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
@@ -317,11 +317,11 @@ $(document).ready(function(){initNavTree('host_8hpp_source.html',''); initResiza
 <div class="ttc" id="aexchange_8hpp_html"><div class="ttname"><a href="exchange_8hpp.html">exchange.hpp</a></div><div class="ttdoc">交换机管理模块，定义了交换机的结构、持久化以及内存管理功能</div></div>
 <div class="ttc" id="amessage_8hpp_html"><div class="ttname"><a href="message_8hpp.html">message.hpp</a></div><div class="ttdoc">消息队列文件存储的实现</div></div>
 <div class="ttc" id="amqqueuetest_8cpp_html_abbd52a50dc838305e32464719ba095c5"><div class="ttname"><a href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a></div><div class="ttdeci">XuMQ::MsgQueueManager::ptr mqp</div><div class="ttdef"><b>Definition</b> mqqueuetest.cpp:4</div></div>
-<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> helper.hpp:44</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> channel.hpp:22</div></div>
 <div class="ttc" id="anamespace_xu_m_q_html_a1f0e7672a5105ab779a6abc4020cf31a"><div class="ttname"><a href="namespace_xu_m_q.html#a1f0e7672a5105ab779a6abc4020cf31a">XuMQ::logger</a></div><div class="ttdeci">Xulog::Logger::ptr logger</div><div class="ttdoc">日志器的智能指针类型</div><div class="ttdef"><b>Definition</b> logger.hpp:24</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_a204f831eee1caa49320850f9bb78bd3c"><div class="ttname"><a href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">XuMQ::MessagePtr</a></div><div class="ttdeci">std::shared_ptr&lt; google::protobuf::Message &gt; MessagePtr</div><div class="ttdoc">消息句柄</div><div class="ttdef"><b>Definition</b> channel.hpp:23</div></div>
 <div class="ttc" id="anamespace_xu_m_q_html_a4816a5c6a665a9846a019871c6310c7d"><div class="ttname"><a href="namespace_xu_m_q.html#a4816a5c6a665a9846a019871c6310c7d">XuMQ::ExchangeType</a></div><div class="ttdeci">ExchangeType</div><div class="ttdef"><b>Definition</b> msg.pb.h:66</div></div>
 <div class="ttc" id="anamespace_xu_m_q_html_a7d6eb557023012c069ab5ee39728a677"><div class="ttname"><a href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">XuMQ::MsgQueueBindingMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Binding::ptr &gt; MsgQueueBindingMap</div><div class="ttdoc">消息队列绑定映射表-—消息队列-&gt;绑定信息的映射表</div><div class="ttdef"><b>Definition</b> binding.hpp:43</div></div>
-<div class="ttc" id="anamespace_xu_m_q_html_aa7eae080046044daf7d76949d7b24c47"><div class="ttname"><a href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">XuMQ::MessagePtr</a></div><div class="ttdeci">std::shared_ptr&lt; XuMQ::Message &gt; MessagePtr</div><div class="ttdoc">proto生成的Message类型指针</div><div class="ttdef"><b>Definition</b> message.hpp:32</div></div>
 <div class="ttc" id="anamespace_xu_m_q_html_ade8f8bc46e29f4519c0cd10e79b0cbbb"><div class="ttname"><a href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">XuMQ::QueueMap</a></div><div class="ttdeci">std::unordered_map&lt; std::string, MsgQueue::ptr &gt; QueueMap</div><div class="ttdoc">消息队列映射表 消息队列名称-&gt;消息队列指针</div><div class="ttdef"><b>Definition</b> queue.hpp:82</div></div>
 <div class="ttc" id="aqueue_8hpp_html"><div class="ttname"><a href="queue_8hpp.html">queue.hpp</a></div><div class="ttdoc">消息队列模块的定义和实现</div></div>
 <div class="ttc" id="astruct_xu_m_q_1_1_exchange_html_a17e29f12a30254ded84236a4762dcdfa"><div class="ttname"><a href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">XuMQ::Exchange::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Exchange &gt; ptr</div><div class="ttdoc">使用智能指针管理交换机对象</div><div class="ttdef"><b>Definition</b> exchange.hpp:24</div></div>

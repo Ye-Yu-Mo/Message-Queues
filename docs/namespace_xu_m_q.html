@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -108,6 +108,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_async_worker.html">AsyncWorker</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步工作线程类  <a href="class_xu_m_q_1_1_async_worker.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1basic_ack_request.html">basicAckRequest</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1basic_ack_request_default_type_internal.html">basicAckRequestDefaultTypeInternal</a></td></tr>
@@ -146,7 +149,7 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定信息持久化管理类  <a href="class_xu_m_q_1_1_binding_mapper.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel.html">Channel</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道类  <a href="class_xu_m_q_1_1_channel.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端信道类  <a href="class_xu_m_q_1_1_channel.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">ChannelManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道管理类  <a href="class_xu_m_q_1_1_channel_manager.html#details">更多...</a><br /></td></tr>
@@ -156,7 +159,7 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_xu_m_q_1_1close_channel_request_default_type_internal.html">closeChannelRequestDefaultTypeInternal</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html">Connection</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接类  <a href="class_xu_m_q_1_1_connection.html#details">更多...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接管理模块  <a href="class_xu_m_q_1_1_connection.html#details">更多...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection_manager.html">ConnectionManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接管理类  <a href="class_xu_m_q_1_1_connection_manager.html#details">更多...</a><br /></td></tr>
@@ -269,15 +272,27 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 类型定义</h2></td></tr>
+<tr class="memitem:a204f831eee1caa49320850f9bb78bd3c" id="r_a204f831eee1caa49320850f9bb78bd3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> = std::shared_ptr&lt; google::protobuf::Message &gt;</td></tr>
+<tr class="memdesc:a204f831eee1caa49320850f9bb78bd3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息句柄  <br /></td></tr>
+<tr class="separator:a204f831eee1caa49320850f9bb78bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db4520e3c100e6eee86b0f86ad281b0" id="r_a9db4520e3c100e6eee86b0f86ad281b0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> = std::shared_ptr&lt; ProtobufCodec &gt;</td></tr>
+<tr class="memdesc:a9db4520e3c100e6eee86b0f86ad281b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议处理句柄  <br /></td></tr>
+<tr class="separator:a9db4520e3c100e6eee86b0f86ad281b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6766bf564e071e410564017f55981bc5" id="r_a6766bf564e071e410564017f55981bc5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a6766bf564e071e410564017f55981bc5">basicConsumeResponsePtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1basic_consume_response.html">basicConsumeResponse</a> &gt;</td></tr>
+<tr class="memdesc:a6766bf564e071e410564017f55981bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费响应句柄  <br /></td></tr>
+<tr class="separator:a6766bf564e071e410564017f55981bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249ad23a3c0d6bd527a9a97eaba9dc40" id="r_a249ad23a3c0d6bd527a9a97eaba9dc40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a249ad23a3c0d6bd527a9a97eaba9dc40">basicResponsePtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1basic_response.html">basicResponse</a> &gt;</td></tr>
+<tr class="memdesc:a249ad23a3c0d6bd527a9a97eaba9dc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">其他响应句柄  <br /></td></tr>
+<tr class="separator:a249ad23a3c0d6bd527a9a97eaba9dc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb52900698873027742f14cdf3eaca75" id="r_aeb52900698873027742f14cdf3eaca75"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">ConsumerCallback</a> = std::function&lt; void(const std::string &amp;, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string &amp;)&gt;</td></tr>
+<tr class="memdesc:aeb52900698873027742f14cdf3eaca75"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者回调函数  <br /></td></tr>
+<tr class="separator:aeb52900698873027742f14cdf3eaca75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d6eb557023012c069ab5ee39728a677" id="r_a7d6eb557023012c069ab5ee39728a677"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_binding.html#aeb3e04108a29b61334502b575c4b075e">Binding::ptr</a> &gt;</td></tr>
 <tr class="memdesc:a7d6eb557023012c069ab5ee39728a677"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列绑定映射表-&mdash;消息队列-&gt;绑定信息的映射表  <br /></td></tr>
 <tr class="separator:a7d6eb557023012c069ab5ee39728a677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4970cc87d0e344f2b27f072e7172cff7" id="r_a4970cc87d0e344f2b27f072e7172cff7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a4970cc87d0e344f2b27f072e7172cff7">BindingMap</a> = std::unordered_map&lt; std::string, <a class="el" href="namespace_xu_m_q.html#a7d6eb557023012c069ab5ee39728a677">MsgQueueBindingMap</a> &gt;</td></tr>
 <tr class="memdesc:a4970cc87d0e344f2b27f072e7172cff7"><td class="mdescLeft">&#160;</td><td class="mdescRight">绑定映射表-&mdash;交换机-&gt;消息队列绑定映射表的映射表  <br /></td></tr>
 <tr class="separator:a4970cc87d0e344f2b27f072e7172cff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4b72e6e83a257e7a28454920afc1022" id="r_ab4b72e6e83a257e7a28454920afc1022"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> = std::shared_ptr&lt; ProtobufCodec &gt;</td></tr>
-<tr class="memdesc:ab4b72e6e83a257e7a28454920afc1022"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议处理句柄  <br /></td></tr>
-<tr class="separator:ab4b72e6e83a257e7a28454920afc1022"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b66ac6ad7a71679dd35a34684b5d622" id="r_a0b66ac6ad7a71679dd35a34684b5d622"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a0b66ac6ad7a71679dd35a34684b5d622">openChannelRequestPtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1open_channel_request.html">openChannelRequest</a> &gt;</td></tr>
 <tr class="memdesc:a0b66ac6ad7a71679dd35a34684b5d622"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开信道请求  <br /></td></tr>
 <tr class="separator:a0b66ac6ad7a71679dd35a34684b5d622"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,15 +329,9 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 <tr class="memitem:a6ed6e4d88651201cb80e8663c126881a" id="r_a6ed6e4d88651201cb80e8663c126881a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a6ed6e4d88651201cb80e8663c126881a">basicConsumeRequestPtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1basic_consume_request.html">basicConsumeRequest</a> &gt;</td></tr>
 <tr class="memdesc:a6ed6e4d88651201cb80e8663c126881a"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消订阅请求  <br /></td></tr>
 <tr class="separator:a6ed6e4d88651201cb80e8663c126881a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3248f41d9cde04b45936e687dbec4e6d" id="r_a3248f41d9cde04b45936e687dbec4e6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a3248f41d9cde04b45936e687dbec4e6d">ConsumerCallback</a> = std::function&lt; void(const std::string &amp;, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string &amp;)&gt;</td></tr>
-<tr class="memdesc:a3248f41d9cde04b45936e687dbec4e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者回调函数  <br /></td></tr>
-<tr class="separator:a3248f41d9cde04b45936e687dbec4e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c80cb23e6fa300bd31a9226e982be18" id="r_a2c80cb23e6fa300bd31a9226e982be18"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#a2c80cb23e6fa300bd31a9226e982be18">ExchangeMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> &gt;</td></tr>
 <tr class="memdesc:a2c80cb23e6fa300bd31a9226e982be18"><td class="mdescLeft">&#160;</td><td class="mdescRight">交换机映射表 交换机名称-&gt;交换机对象指针  <br /></td></tr>
 <tr class="separator:a2c80cb23e6fa300bd31a9226e982be18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7eae080046044daf7d76949d7b24c47" id="r_aa7eae080046044daf7d76949d7b24c47"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">MessagePtr</a> = std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a> &gt;</td></tr>
-<tr class="memdesc:aa7eae080046044daf7d76949d7b24c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">proto生成的Message类型指针  <br /></td></tr>
-<tr class="separator:aa7eae080046044daf7d76949d7b24c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade8f8bc46e29f4519c0cd10e79b0cbbb" id="r_ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_xu_m_q.html#ade8f8bc46e29f4519c0cd10e79b0cbbb">QueueMap</a> = std::unordered_map&lt; std::string, <a class="el" href="struct_xu_m_q_1_1_msg_queue.html#a3b7e30539232ff0a5a8a68e281f3af06">MsgQueue::ptr</a> &gt;</td></tr>
 <tr class="memdesc:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列映射表 消息队列名称-&gt;消息队列指针  <br /></td></tr>
 <tr class="separator:ade8f8bc46e29f4519c0cd10e79b0cbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -498,6 +507,22 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 
 </div>
 </div>
+<a id="a6766bf564e071e410564017f55981bc5" name="a6766bf564e071e410564017f55981bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6766bf564e071e410564017f55981bc5">&#9670;&#160;</a></span>basicConsumeResponsePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#a6766bf564e071e410564017f55981bc5">XuMQ::basicConsumeResponsePtr</a> = typedef std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1basic_consume_response.html">basicConsumeResponse</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消费响应句柄 </p>
+
+</div>
+</div>
 <a id="a1c2d37f29b085bb039a66be850deb33a" name="a1c2d37f29b085bb039a66be850deb33a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c2d37f29b085bb039a66be850deb33a">&#9670;&#160;</a></span>basicPublishRequestPtr</h2>
 
@@ -511,6 +536,22 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 </div><div class="memdoc">
 
 <p>消息发布请求 </p>
+
+</div>
+</div>
+<a id="a249ad23a3c0d6bd527a9a97eaba9dc40" name="a249ad23a3c0d6bd527a9a97eaba9dc40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249ad23a3c0d6bd527a9a97eaba9dc40">&#9670;&#160;</a></span>basicResponsePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#a249ad23a3c0d6bd527a9a97eaba9dc40">XuMQ::basicResponsePtr</a> = typedef std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1basic_response.html">basicResponse</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>其他响应句柄 </p>
 
 </div>
 </div>
@@ -548,14 +589,14 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 
 </div>
 </div>
-<a id="a3248f41d9cde04b45936e687dbec4e6d" name="a3248f41d9cde04b45936e687dbec4e6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3248f41d9cde04b45936e687dbec4e6d">&#9670;&#160;</a></span>ConsumerCallback</h2>
+<a id="aeb52900698873027742f14cdf3eaca75" name="aeb52900698873027742f14cdf3eaca75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb52900698873027742f14cdf3eaca75">&#9670;&#160;</a></span>ConsumerCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#a3248f41d9cde04b45936e687dbec4e6d">XuMQ::ConsumerCallback</a> = typedef std::function&lt;void(const std::string&amp;, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string&amp;)&gt;</td>
+          <td class="memname">typedef std::function&lt; void(const std::string &amp;, const <a class="el" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, const std::string &amp;)&gt; <a class="el" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">XuMQ::ConsumerCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -644,18 +685,19 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 
 </div>
 </div>
-<a id="aa7eae080046044daf7d76949d7b24c47" name="aa7eae080046044daf7d76949d7b24c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7eae080046044daf7d76949d7b24c47">&#9670;&#160;</a></span>MessagePtr</h2>
+<a id="a204f831eee1caa49320850f9bb78bd3c" name="a204f831eee1caa49320850f9bb78bd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204f831eee1caa49320850f9bb78bd3c">&#9670;&#160;</a></span>MessagePtr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#aa7eae080046044daf7d76949d7b24c47">XuMQ::MessagePtr</a> = typedef std::shared_ptr&lt;<a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a>&gt;</td>
+          <td class="memname">typedef std::shared_ptr&lt; <a class="el" href="class_xu_m_q_1_1_message.html">XuMQ::Message</a> &gt; <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">XuMQ::MessagePtr</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>消息句柄 </p>
 <p>proto生成的Message类型指针 </p>
 
 </div>
@@ -693,14 +735,14 @@ $(document).ready(function(){initNavTree('namespace_xu_m_q.html',''); initResiza
 
 </div>
 </div>
-<a id="ab4b72e6e83a257e7a28454920afc1022" name="ab4b72e6e83a257e7a28454920afc1022"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4b72e6e83a257e7a28454920afc1022">&#9670;&#160;</a></span>ProtobufCodecPtr</h2>
+<a id="a9db4520e3c100e6eee86b0f86ad281b0" name="a9db4520e3c100e6eee86b0f86ad281b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db4520e3c100e6eee86b0f86ad281b0">&#9670;&#160;</a></span>ProtobufCodecPtr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">XuMQ::ProtobufCodecPtr</a> = typedef std::shared_ptr&lt;ProtobufCodec&gt;</td>
+          <td class="memname">typedef std::shared_ptr&lt; ProtobufCodec &gt; <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">XuMQ::ProtobufCodecPtr</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

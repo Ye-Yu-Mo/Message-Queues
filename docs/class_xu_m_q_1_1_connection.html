@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -106,10 +106,10 @@ $(document).ready(function(){initNavTree('class_xu_m_q_1_1_connection.html','');
 </div><!--header-->
 <div class="contents">
 
-<p>连接类  
+<p>连接管理模块  
  <a href="class_xu_m_q_1_1_connection.html#details">更多...</a></p>
 
-<p><code>#include &lt;<a class="el" href="connection_8hpp_source.html">connection.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="client_2connection_8hpp_source.html">connection.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public 类型</h2></td></tr>
@@ -119,7 +119,16 @@ Public 类型</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a1c9a0c052398feb533d9b765c647256f" id="r_a1c9a0c052398feb533d9b765c647256f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f">Connection</a> (const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
+<tr class="memitem:a354939813796d65bce0458a1b6ddeb0c" id="r_a354939813796d65bce0458a1b6ddeb0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a354939813796d65bce0458a1b6ddeb0c">Connection</a> (const std::string &amp;sip, int sport, const <a class="el" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">AsyncWorker::ptr</a> &amp;worker)</td></tr>
+<tr class="memdesc:a354939813796d65bce0458a1b6ddeb0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接构造函数  <br /></td></tr>
+<tr class="separator:a354939813796d65bce0458a1b6ddeb0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee89f237be921b9e7c79a5e53cc99de" id="r_a2ee89f237be921b9e7c79a5e53cc99de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a2ee89f237be921b9e7c79a5e53cc99de">openChannel</a> ()</td></tr>
+<tr class="memdesc:a2ee89f237be921b9e7c79a5e53cc99de"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建信道  <br /></td></tr>
+<tr class="separator:a2ee89f237be921b9e7c79a5e53cc99de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349644ab8dfbb0c04d3b507787a8c205" id="r_a349644ab8dfbb0c04d3b507787a8c205"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a349644ab8dfbb0c04d3b507787a8c205">closeChannel</a> (const <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> &amp;channel)</td></tr>
+<tr class="memdesc:a349644ab8dfbb0c04d3b507787a8c205"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭信道  <br /></td></tr>
+<tr class="separator:a349644ab8dfbb0c04d3b507787a8c205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c9a0c052398feb533d9b765c647256f" id="r_a1c9a0c052398feb533d9b765c647256f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f">Connection</a> (const <a class="el" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> &amp;host, const <a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a> &amp;<a class="el" href="mqconsumer_8cpp.html#a2208261f885e26fd1553e0d857451689">cmp</a>, const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a> &amp;pool)</td></tr>
 <tr class="memdesc:a1c9a0c052398feb533d9b765c647256f"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接构造函数  <br /></td></tr>
 <tr class="separator:a1c9a0c052398feb533d9b765c647256f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3abe3e0c444bb3506935a2e61206e80e" id="r_a3abe3e0c444bb3506935a2e61206e80e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a3abe3e0c444bb3506935a2e61206e80e">openChannel</a> (const <a class="el" href="namespace_xu_m_q.html#a0b66ac6ad7a71679dd35a34684b5d622">openChannelRequestPtr</a> &amp;req)</td></tr>
@@ -133,18 +142,45 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private 成员函数</h2></td></tr>
+<tr class="memitem:abb6d8660c9b96195799e100d7ef4d4ec" id="r_abb6d8660c9b96195799e100d7ef4d4ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#abb6d8660c9b96195799e100d7ef4d4ec">commonResponse</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a249ad23a3c0d6bd527a9a97eaba9dc40">basicResponsePtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:abb6d8660c9b96195799e100d7ef4d4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理一般响应的回调函数  <br /></td></tr>
+<tr class="separator:abb6d8660c9b96195799e100d7ef4d4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfbe86c4274c4eda545463cf35d24005" id="r_acfbe86c4274c4eda545463cf35d24005"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#acfbe86c4274c4eda545463cf35d24005">consumeResponse</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a6766bf564e071e410564017f55981bc5">basicConsumeResponsePtr</a> message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:acfbe86c4274c4eda545463cf35d24005"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理消费响应的回调函数  <br /></td></tr>
+<tr class="separator:acfbe86c4274c4eda545463cf35d24005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e1e9b036b4884350444801b24c5021" id="r_a67e1e9b036b4884350444801b24c5021"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a67e1e9b036b4884350444801b24c5021">onConnection</a> (const muduo::net::TcpConnectionPtr &amp;conn)</td></tr>
+<tr class="memdesc:a67e1e9b036b4884350444801b24c5021"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接回调函数  <br /></td></tr>
+<tr class="separator:a67e1e9b036b4884350444801b24c5021"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac170a0c01eed4d042c88c875f109b318" id="r_ac170a0c01eed4d042c88c875f109b318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#ac170a0c01eed4d042c88c875f109b318">onUnknowMessage</a> (const muduo::net::TcpConnectionPtr &amp;conn, const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;message, muduo::Timestamp)</td></tr>
+<tr class="memdesc:ac170a0c01eed4d042c88c875f109b318"><td class="mdescLeft">&#160;</td><td class="mdescRight">未知响应回调函数  <br /></td></tr>
+<tr class="separator:ac170a0c01eed4d042c88c875f109b318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a5935cfa3981eb02e859cc8c3f64684" id="r_a1a5935cfa3981eb02e859cc8c3f64684"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684">basicRespFunc</a> (bool ok, const std::string &amp;rid, const std::string &amp;cid)</td></tr>
 <tr class="memdesc:a1a5935cfa3981eb02e859cc8c3f64684"><td class="mdescLeft">&#160;</td><td class="mdescRight">基础响应发送函数  <br /></td></tr>
 <tr class="separator:a1a5935cfa3981eb02e859cc8c3f64684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private 属性</h2></td></tr>
+<tr class="memitem:a66cf3f5f2ffd583e5c61085d92c0c96b" id="r_a66cf3f5f2ffd583e5c61085d92c0c96b"><td class="memItemLeft" align="right" valign="top">muduo::CountDownLatch&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a66cf3f5f2ffd583e5c61085d92c0c96b">_latch</a></td></tr>
+<tr class="memdesc:a66cf3f5f2ffd583e5c61085d92c0c96b"><td class="mdescLeft">&#160;</td><td class="mdescRight">实现同步  <br /></td></tr>
+<tr class="separator:a66cf3f5f2ffd583e5c61085d92c0c96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd971243b55237cbf5daf59626e2ae06" id="r_abd971243b55237cbf5daf59626e2ae06"><td class="memItemLeft" align="right" valign="top">muduo::net::TcpConnectionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#abd971243b55237cbf5daf59626e2ae06">_conn</a></td></tr>
-<tr class="memdesc:abd971243b55237cbf5daf59626e2ae06"><td class="mdescLeft">&#160;</td><td class="mdescRight">muduo连接管理句柄  <br /></td></tr>
+<tr class="memdesc:abd971243b55237cbf5daf59626e2ae06"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端连接  <br /></td></tr>
 <tr class="separator:abd971243b55237cbf5daf59626e2ae06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cb8f919dc4086185e9869ad497251fc" id="r_a2cb8f919dc4086185e9869ad497251fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a></td></tr>
-<tr class="memdesc:a2cb8f919dc4086185e9869ad497251fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议处理句柄  <br /></td></tr>
+<tr class="memitem:a7287844b864bbeaa290334fe3639185e" id="r_a7287844b864bbeaa290334fe3639185e"><td class="memItemLeft" align="right" valign="top">muduo::net::TcpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a7287844b864bbeaa290334fe3639185e">_client</a></td></tr>
+<tr class="memdesc:a7287844b864bbeaa290334fe3639185e"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端句柄  <br /></td></tr>
+<tr class="separator:a7287844b864bbeaa290334fe3639185e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fce70b1dda79dbe0a4087d1b239ef04" id="r_a2fce70b1dda79dbe0a4087d1b239ef04"><td class="memItemLeft" align="right" valign="top">ProtobufDispatcher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a2fce70b1dda79dbe0a4087d1b239ef04">_dispatcher</a></td></tr>
+<tr class="memdesc:a2fce70b1dda79dbe0a4087d1b239ef04"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求分发器  <br /></td></tr>
+<tr class="separator:a2fce70b1dda79dbe0a4087d1b239ef04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cb8f919dc4086185e9869ad497251fc" id="r_a2cb8f919dc4086185e9869ad497251fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a2cb8f919dc4086185e9869ad497251fc">_codec</a></td></tr>
+<tr class="memdesc:a2cb8f919dc4086185e9869ad497251fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">协议处理器  <br /></td></tr>
 <tr class="separator:a2cb8f919dc4086185e9869ad497251fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa62412f82e96c213bbcc2f320a9232c2" id="r_aa62412f82e96c213bbcc2f320a9232c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">AsyncWorker::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#aa62412f82e96c213bbcc2f320a9232c2">_worker</a></td></tr>
+<tr class="memdesc:aa62412f82e96c213bbcc2f320a9232c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">异步线程工作器  <br /></td></tr>
+<tr class="separator:aa62412f82e96c213bbcc2f320a9232c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949743ad2973b7923337726a7ba2b325" id="r_a949743ad2973b7923337726a7ba2b325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ChannelManager::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a></td></tr>
+<tr class="memdesc:a949743ad2973b7923337726a7ba2b325"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道管理句柄  <br /></td></tr>
+<tr class="separator:a949743ad2973b7923337726a7ba2b325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c82acb29261f39fdebf187531dad8dc" id="r_a3c82acb29261f39fdebf187531dad8dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_consumer_manager.html#a8c1dba09ac3a05367def989b3f1a99dd">ConsumerManager::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a3c82acb29261f39fdebf187531dad8dc">_cmp</a></td></tr>
 <tr class="memdesc:a3c82acb29261f39fdebf187531dad8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">消费者管理句柄  <br /></td></tr>
 <tr class="separator:a3c82acb29261f39fdebf187531dad8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,12 +190,10 @@ Private 属性</h2></td></tr>
 <tr class="memitem:a4ceca119a26c6603076e6f588b46c879" id="r_a4ceca119a26c6603076e6f588b46c879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1threadpool.html#a37674380071a23f5a7bb03eabe46bfb9">threadpool::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a4ceca119a26c6603076e6f588b46c879">_pool</a></td></tr>
 <tr class="memdesc:a4ceca119a26c6603076e6f588b46c879"><td class="mdescLeft">&#160;</td><td class="mdescRight">线程池  <br /></td></tr>
 <tr class="separator:a4ceca119a26c6603076e6f588b46c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949743ad2973b7923337726a7ba2b325" id="r_a949743ad2973b7923337726a7ba2b325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ChannelManager::ptr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xu_m_q_1_1_connection.html#a949743ad2973b7923337726a7ba2b325">_channels</a></td></tr>
-<tr class="memdesc:a949743ad2973b7923337726a7ba2b325"><td class="mdescLeft">&#160;</td><td class="mdescRight">信道管理句柄  <br /></td></tr>
-<tr class="separator:a949743ad2973b7923337726a7ba2b325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>连接类 </p>
+<div class="textblock"><p>连接管理模块 </p>
+<p>连接类 </p>
 </div><h2 class="groupheader">成员类型定义说明</h2>
 <a id="a574d9ef68d7d1affb78c266eab1bf802" name="a574d9ef68d7d1affb78c266eab1bf802"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a574d9ef68d7d1affb78c266eab1bf802">&#9670;&#160;</a></span>ptr</h2>
@@ -178,8 +212,74 @@ Private 属性</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a354939813796d65bce0458a1b6ddeb0c" name="a354939813796d65bce0458a1b6ddeb0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354939813796d65bce0458a1b6ddeb0c">&#9670;&#160;</a></span>Connection() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">XuMQ::Connection::Connection </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sport</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">AsyncWorker::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>worker</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接构造函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sip</td><td>服务器ip </td></tr>
+    <tr><td class="paramname">sport</td><td>服务器端口号 </td></tr>
+    <tr><td class="paramname">worker</td><td>异步工作器句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_connection_a354939813796d65bce0458a1b6ddeb0c_cgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_connection_a354939813796d65bce0458a1b6ddeb0c_cgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_connection_a354939813796d65bce0458a1b6ddeb0c_cgraph" id="aclass_xu_m_q_1_1_connection_a354939813796d65bce0458a1b6ddeb0c_cgraph">
+<area shape="rect" title="连接构造函数" alt="" coords="5,77,228,102"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#abb6d8660c9b96195799e100d7ef4d4ec" title="处理一般响应的回调函数" alt="" coords="292,5,499,45"/>
+<area shape="poly" title=" " alt="" coords="173,74,294,46,295,51,174,79"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#acfbe86c4274c4eda545463cf35d24005" title="处理消费响应的回调函数" alt="" coords="291,69,500,109"/>
+<area shape="poly" title=" " alt="" coords="228,87,277,87,277,92,228,92"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#a67e1e9b036b4884350444801b24c5021" title="连接回调函数" alt="" coords="276,134,515,159"/>
+<area shape="poly" title=" " alt="" coords="180,99,320,129,319,134,179,105"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a1c9a0c052398feb533d9b765c647256f" name="a1c9a0c052398feb533d9b765c647256f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c9a0c052398feb533d9b765c647256f">&#9670;&#160;</a></span>Connection()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c9a0c052398feb533d9b765c647256f">&#9670;&#160;</a></span>Connection() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +302,7 @@ Private 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> &amp;&#160;</td>
           <td class="paramname"><em>codec</em>, </td>
         </tr>
         <tr>
@@ -323,8 +423,42 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a349644ab8dfbb0c04d3b507787a8c205" name="a349644ab8dfbb0c04d3b507787a8c205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349644ab8dfbb0c04d3b507787a8c205">&#9670;&#160;</a></span>closeChannel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Connection::closeChannel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> &amp;&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>关闭信道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>信道句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae7a3136dccb26cfc3a7f06affd61a91f" name="ae7a3136dccb26cfc3a7f06affd61a91f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7a3136dccb26cfc3a7f06affd61a91f">&#9670;&#160;</a></span>closeChannel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a3136dccb26cfc3a7f06affd61a91f">&#9670;&#160;</a></span>closeChannel() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,6 +507,130 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="abb6d8660c9b96195799e100d7ef4d4ec" name="abb6d8660c9b96195799e100d7ef4d4ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb6d8660c9b96195799e100d7ef4d4ec">&#9670;&#160;</a></span>commonResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Connection::commonResponse </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a249ad23a3c0d6bd527a9a97eaba9dc40">basicResponsePtr</a>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">muduo::Timestamp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理一般响应的回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接 </td></tr>
+    <tr><td class="paramname">message</td><td>响应句柄 </td></tr>
+    <tr><td class="paramname">时间戳</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_connection_abb6d8660c9b96195799e100d7ef4d4ec_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_connection_abb6d8660c9b96195799e100d7ef4d4ec_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_connection_abb6d8660c9b96195799e100d7ef4d4ec_icgraph" id="aclass_xu_m_q_1_1_connection_abb6d8660c9b96195799e100d7ef4d4ec_icgraph">
+<area shape="rect" title="处理一般响应的回调函数" alt="" coords="276,5,483,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#a354939813796d65bce0458a1b6ddeb0c" title="连接构造函数" alt="" coords="5,13,228,38"/>
+<area shape="poly" title=" " alt="" coords="262,28,228,28,228,23,262,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acfbe86c4274c4eda545463cf35d24005" name="acfbe86c4274c4eda545463cf35d24005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfbe86c4274c4eda545463cf35d24005">&#9670;&#160;</a></span>consumeResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Connection::consumeResponse </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a6766bf564e071e410564017f55981bc5">basicConsumeResponsePtr</a>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">muduo::Timestamp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>处理消费响应的回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接 </td></tr>
+    <tr><td class="paramname">message</td><td>消费响应 </td></tr>
+    <tr><td class="paramname">时间戳</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_connection_acfbe86c4274c4eda545463cf35d24005_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_connection_acfbe86c4274c4eda545463cf35d24005_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_connection_acfbe86c4274c4eda545463cf35d24005_icgraph" id="aclass_xu_m_q_1_1_connection_acfbe86c4274c4eda545463cf35d24005_icgraph">
+<area shape="rect" title="处理消费响应的回调函数" alt="" coords="276,5,485,45"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#a354939813796d65bce0458a1b6ddeb0c" title="连接构造函数" alt="" coords="5,13,228,38"/>
+<area shape="poly" title=" " alt="" coords="262,28,228,28,228,23,262,23"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a65d8341ce11d9300eba55271ed5b6c89" name="a65d8341ce11d9300eba55271ed5b6c89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65d8341ce11d9300eba55271ed5b6c89">&#9670;&#160;</a></span>getChannel()</h2>
 
@@ -399,8 +657,132 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a67e1e9b036b4884350444801b24c5021" name="a67e1e9b036b4884350444801b24c5021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e1e9b036b4884350444801b24c5021">&#9670;&#160;</a></span>onConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Connection::onConnection </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_xu_m_q_1_1_connection_a67e1e9b036b4884350444801b24c5021_icgraph.png" border="0" usemap="#aclass_xu_m_q_1_1_connection_a67e1e9b036b4884350444801b24c5021_icgraph" alt=""/></div>
+<map name="aclass_xu_m_q_1_1_connection_a67e1e9b036b4884350444801b24c5021_icgraph" id="aclass_xu_m_q_1_1_connection_a67e1e9b036b4884350444801b24c5021_icgraph">
+<area shape="rect" title="连接回调函数" alt="" coords="276,5,515,31"/>
+<area shape="rect" href="class_xu_m_q_1_1_connection.html#a354939813796d65bce0458a1b6ddeb0c" title="连接构造函数" alt="" coords="5,5,228,31"/>
+<area shape="poly" title=" " alt="" coords="262,21,228,21,228,15,262,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac170a0c01eed4d042c88c875f109b318" name="ac170a0c01eed4d042c88c875f109b318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac170a0c01eed4d042c88c875f109b318">&#9670;&#160;</a></span>onUnknowMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XuMQ::Connection::onUnknowMessage </td>
+          <td>(</td>
+          <td class="paramtype">const muduo::net::TcpConnectionPtr &amp;&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_xu_m_q.html#a204f831eee1caa49320850f9bb78bd3c">MessagePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">muduo::Timestamp&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>未知响应回调函数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>muduo连接 </td></tr>
+    <tr><td class="paramname">message</td><td>未知响应 </td></tr>
+    <tr><td class="paramname">时间戳</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2ee89f237be921b9e7c79a5e53cc99de" name="a2ee89f237be921b9e7c79a5e53cc99de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee89f237be921b9e7c79a5e53cc99de">&#9670;&#160;</a></span>openChannel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6">Channel::ptr</a> XuMQ::Connection::openChannel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建信道 </p>
+<dl class="section return"><dt>返回</dt><dd>信道句柄 </dd></dl>
+
+</div>
+</div>
 <a id="a3abe3e0c444bb3506935a2e61206e80e" name="a3abe3e0c444bb3506935a2e61206e80e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3abe3e0c444bb3506935a2e61206e80e">&#9670;&#160;</a></span>openChannel()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3abe3e0c444bb3506935a2e61206e80e">&#9670;&#160;</a></span>openChannel() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -474,6 +856,30 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a7287844b864bbeaa290334fe3639185e" name="a7287844b864bbeaa290334fe3639185e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7287844b864bbeaa290334fe3639185e">&#9670;&#160;</a></span>_client</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::net::TcpClient XuMQ::Connection::_client</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>客户端句柄 </p>
+
+</div>
+</div>
 <a id="a3c82acb29261f39fdebf187531dad8dc" name="a3c82acb29261f39fdebf187531dad8dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c82acb29261f39fdebf187531dad8dc">&#9670;&#160;</a></span>_cmp</h2>
 
@@ -508,7 +914,7 @@ Private 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespace_xu_m_q.html#ab4b72e6e83a257e7a28454920afc1022">ProtobufCodecPtr</a> XuMQ::Connection::_codec</td>
+          <td class="memname"><a class="el" href="namespace_xu_m_q.html#a9db4520e3c100e6eee86b0f86ad281b0">ProtobufCodecPtr</a> XuMQ::Connection::_codec</td>
         </tr>
       </table>
   </td>
@@ -518,6 +924,7 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>协议处理器 </p>
 <p>协议处理句柄 </p>
 
 </div>
@@ -542,7 +949,32 @@ Private 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>客户端连接 </p>
 <p>muduo连接管理句柄 </p>
+
+</div>
+</div>
+<a id="a2fce70b1dda79dbe0a4087d1b239ef04" name="a2fce70b1dda79dbe0a4087d1b239ef04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fce70b1dda79dbe0a4087d1b239ef04">&#9670;&#160;</a></span>_dispatcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ProtobufDispatcher XuMQ::Connection::_dispatcher</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>请求分发器 </p>
 
 </div>
 </div>
@@ -570,6 +1002,30 @@ Private 属性</h2></td></tr>
 
 </div>
 </div>
+<a id="a66cf3f5f2ffd583e5c61085d92c0c96b" name="a66cf3f5f2ffd583e5c61085d92c0c96b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66cf3f5f2ffd583e5c61085d92c0c96b">&#9670;&#160;</a></span>_latch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">muduo::CountDownLatch XuMQ::Connection::_latch</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>实现同步 </p>
+
+</div>
+</div>
 <a id="a4ceca119a26c6603076e6f588b46c879" name="a4ceca119a26c6603076e6f588b46c879"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ceca119a26c6603076e6f588b46c879">&#9670;&#160;</a></span>_pool</h2>
 
@@ -591,6 +1047,30 @@ Private 属性</h2></td></tr>
 </div><div class="memdoc">
 
 <p>线程池 </p>
+
+</div>
+</div>
+<a id="aa62412f82e96c213bbcc2f320a9232c2" name="aa62412f82e96c213bbcc2f320a9232c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa62412f82e96c213bbcc2f320a9232c2">&#9670;&#160;</a></span>_worker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">AsyncWorker::ptr</a> XuMQ::Connection::_worker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>异步线程工作器 </p>
 
 </div>
 </div>

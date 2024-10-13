@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: client/worker.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('worker_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">worker.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="worker_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#pragma</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;muduo/net/EventLoopThread.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;../common/logger.hpp&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../common/helper.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../common/threadpool.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_async_worker.html">   14</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_async_worker.html">AsyncWorker</a></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">   17</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">ptr</a> = std::shared_ptr&lt;AsyncWorker&gt;; </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_async_worker.html#a705c84b9b04752273b3bee8d5bde5ca8">   18</a></span>        muduo::net::EventLoopThread <a class="code hl_variable" href="class_xu_m_q_1_1_async_worker.html#a705c84b9b04752273b3bee8d5bde5ca8">_loopthread</a>;  </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_async_worker.html#aa4ae84137e6f91c91bf239c0b4890f14">   19</a></span>        <a class="code hl_class" href="class_xu_m_q_1_1threadpool.html">threadpool</a> <a class="code hl_variable" href="class_xu_m_q_1_1_async_worker.html#aa4ae84137e6f91c91bf239c0b4890f14">_threadpool</a>;                   </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    };</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_async_worker_html"><div class="ttname"><a href="class_xu_m_q_1_1_async_worker.html">XuMQ::AsyncWorker</a></div><div class="ttdoc">异步工作线程类</div><div class="ttdef"><b>Definition</b> worker.hpp:15</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_async_worker_html_a705c84b9b04752273b3bee8d5bde5ca8"><div class="ttname"><a href="class_xu_m_q_1_1_async_worker.html#a705c84b9b04752273b3bee8d5bde5ca8">XuMQ::AsyncWorker::_loopthread</a></div><div class="ttdeci">muduo::net::EventLoopThread _loopthread</div><div class="ttdoc">muduo循环线程</div><div class="ttdef"><b>Definition</b> worker.hpp:18</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_async_worker_html_aa4ae84137e6f91c91bf239c0b4890f14"><div class="ttname"><a href="class_xu_m_q_1_1_async_worker.html#aa4ae84137e6f91c91bf239c0b4890f14">XuMQ::AsyncWorker::_threadpool</a></div><div class="ttdeci">threadpool _threadpool</div><div class="ttdoc">线程池</div><div class="ttdef"><b>Definition</b> worker.hpp:19</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_async_worker_html_ac717a45b2c50145b8b909f5b4f6cdd73"><div class="ttname"><a href="class_xu_m_q_1_1_async_worker.html#ac717a45b2c50145b8b909f5b4f6cdd73">XuMQ::AsyncWorker::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; AsyncWorker &gt; ptr</div><div class="ttdoc">异步工作线程管理句柄</div><div class="ttdef"><b>Definition</b> worker.hpp:17</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1threadpool_html"><div class="ttname"><a href="class_xu_m_q_1_1threadpool.html">XuMQ::threadpool</a></div><div class="ttdef"><b>Definition</b> threadpool.hpp:16</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> channel.hpp:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="worker_8hpp.html">worker.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

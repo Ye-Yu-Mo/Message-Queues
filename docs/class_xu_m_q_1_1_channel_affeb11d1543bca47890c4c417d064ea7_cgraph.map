@@ -1,11 +1,13 @@
 <map id="XuMQ::Channel::basicAck" name="XuMQ::Channel::basicAck">
-<area shape="rect" id="Node000001" title="确认消息请求处理函数" alt="" coords="5,77,193,102"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="241,77,468,102"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,87,228,87,228,92,194,92"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="516,5,683,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="404,74,508,46,509,52,405,79"/>
-<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="516,69,683,109"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="468,87,502,87,502,92,468,92"/>
-<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="516,133,683,173"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="405,100,509,127,508,132,404,105"/>
+<area shape="rect" id="Node000001" title="确认消息请求处理函数" alt="" coords="5,95,193,120"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="241,95,468,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,105,228,105,228,110,194,110"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#aa3c8c79ba1e6a017fb302633894d2ba7" title=" " alt="" coords="525,5,674,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="385,92,515,41,540,32,542,37,517,46,387,97"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="516,55,683,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="452,92,502,85,502,91,452,97"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="516,119,683,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="452,117,502,124,502,129,452,123"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="516,183,683,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="389,118,517,169,534,176,532,181,515,174,387,123"/>
 </map>

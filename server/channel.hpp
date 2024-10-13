@@ -14,10 +14,8 @@
 #include "muduo/net/TcpConnection.h"
 #include "muduo/protobuf/codec.h"
 #include "muduo/protobuf/dispatcher.h"
-
 #include "muduo/base/Atomic.h"
 #include "muduo/base/Types.h"
-#include "muduo/net/TcpConnection.h"
 
 #include "../common/logger.hpp"
 #include "../common/helper.hpp"

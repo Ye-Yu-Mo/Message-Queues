@@ -1,0 +1,5 @@
+<map id="XuMQ::Channel::consume" name="XuMQ::Channel::consume">
+<area shape="rect" id="Node000001" title="连接收到推送消息 找到对应的消费者对象 通过回调函数进行消息处理" alt="" coords="264,5,453,31"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#afd0b2d0f7c207e201921899d89b2f24b" title="消息发布请求处理函数" alt="" coords="5,5,216,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="250,21,216,21,216,15,250,15"/>
+</map>

@@ -1,33 +1,35 @@
 <map id="XuMQ::Channel::basicConsume" name="XuMQ::Channel::basicConsume">
-<area shape="rect" id="Node000001" title="订阅消息请求处理函数" alt="" coords="5,294,231,319"/>
-<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="279,109,505,134"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,292,359,140,362,144,139,296"/>
-<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_channel.html#ac43307fec3c360dde235c6ad45b7338e" title="消费者回调函数" alt="" coords="300,447,484,473"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="143,317,357,438,355,443,141,322"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="583,5,750,45"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="422,106,552,55,577,47,579,52,554,60,423,111"/>
-<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="583,69,750,109"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="501,106,569,98,570,103,502,111"/>
-<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="583,133,750,173"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="502,131,570,139,569,145,501,137"/>
-<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="581,197,752,237"/>
-<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="397,446,417,407,451,353,496,296,523,270,552,247,568,238,570,243,555,252,526,274,500,300,455,357,422,410,402,449"/>
-<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_basic_properties.html#a72f608855c1f3cd1496ab75048b0571c" title=" " alt="" coords="571,262,762,287"/>
-<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="400,446,458,375,502,333,552,298,570,289,572,294,555,302,505,337,462,378,404,449"/>
-<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1basic_consume_response.html#a276fe824fe2909afab13263c74d3e63f" title=" " alt="" coords="553,312,780,352"/>
-<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="410,445,471,405,552,362,572,354,574,359,554,366,474,409,413,449"/>
-<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1_basic_properties.html#a778f5ac91b355081fc43120fe57ad2b0" title=" " alt="" coords="581,376,752,416"/>
-<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="447,445,567,416,568,422,448,450"/>
-<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1basic_consume_response.html#a2fae9ca3045abae427492d020516883b" title=" " alt="" coords="553,440,780,480"/>
-<area shape="poly" id="edge10_Node000006_Node000011" title=" " alt="" coords="484,457,540,457,540,463,484,463"/>
-<area shape="rect" id="Node000012" href="$class_xu_m_q_1_1basic_consume_response.html#a7c4fe3c2d3ea4839219bc9e1fd06105a" title=" " alt="" coords="553,504,780,544"/>
-<area shape="poly" id="edge11_Node000006_Node000012" title=" " alt="" coords="448,470,567,498,566,503,447,475"/>
-<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1basic_consume_response.html#a8a14aee13be53afc38fe4675b6b979a1" title=" " alt="" coords="553,568,780,608"/>
-<area shape="poly" id="edge12_Node000006_Node000013" title=" " alt="" coords="413,471,474,511,554,554,574,561,572,566,552,558,471,515,410,475"/>
-<area shape="rect" id="Node000014" href="$class_xu_m_q_1_1_basic_properties.html#a84109ac301f8a9d76fecd86f83c75712" title=" " alt="" coords="581,632,752,672"/>
-<area shape="poly" id="edge13_Node000006_Node000014" title=" " alt="" coords="405,471,463,541,506,582,555,618,570,625,567,630,552,622,502,586,459,545,401,475"/>
-<area shape="rect" id="Node000015" href="$class_xu_m_q_1_1_basic_properties.html#a40e8f25d33299fd579215c2d06d26729" title=" " alt="" coords="581,696,752,736"/>
-<area shape="poly" id="edge14_Node000006_Node000015" title=" " alt="" coords="401,472,421,513,454,570,499,630,526,658,555,682,570,691,568,696,552,686,522,662,495,634,449,573,416,515,396,474"/>
-<area shape="rect" id="Node000016" href="$class_xu_m_q_1_1_basic_properties.html#a260ec092c42f7b5c1b3e8f3f35627a8f" title=" " alt="" coords="581,760,752,800"/>
-<area shape="poly" id="edge15_Node000006_Node000016" title=" " alt="" coords="399,472,415,524,446,598,467,638,492,678,521,714,555,746,570,756,567,760,552,750,517,718,488,681,462,641,441,600,410,526,394,474"/>
+<area shape="rect" id="Node000001" title="订阅消息请求处理函数" alt="" coords="5,312,231,337"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="279,127,505,152"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,310,359,158,362,162,139,314"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_channel.html#ac43307fec3c360dde235c6ad45b7338e" title="消费者回调函数" alt="" coords="300,497,484,523"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="139,335,362,487,359,492,136,340"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#aa3c8c79ba1e6a017fb302633894d2ba7" title=" " alt="" coords="592,5,741,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="409,124,470,83,510,60,552,41,579,32,581,37,554,46,513,65,473,88,412,129"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_response.html#a5ee690247442e4092ff5b2f99570fcea" title=" " alt="" coords="583,55,750,95"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="447,124,569,95,571,100,448,129"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_response.html#a368c6543fdcff677e68e6c7a3ad99b45" title=" " alt="" coords="583,119,750,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="506,137,570,137,570,142,506,142"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1basic_response.html#ae32654c02c9cbccd11ee8a3f42ede631" title=" " alt="" coords="583,183,750,223"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="448,150,571,178,569,184,447,155"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="581,247,752,287"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="397,496,417,457,451,403,496,346,523,320,552,297,568,288,570,293,555,302,526,324,500,350,455,407,422,460,402,499"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1_basic_properties.html#a72f608855c1f3cd1496ab75048b0571c" title=" " alt="" coords="571,312,762,337"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="400,496,458,425,502,383,552,348,570,339,572,344,555,352,505,387,462,428,404,499"/>
+<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1basic_consume_response.html#a276fe824fe2909afab13263c74d3e63f" title=" " alt="" coords="553,362,780,402"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="410,495,471,455,552,412,572,404,574,409,554,416,474,459,413,499"/>
+<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1_basic_properties.html#a778f5ac91b355081fc43120fe57ad2b0" title=" " alt="" coords="581,426,752,466"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="447,495,567,466,568,472,448,500"/>
+<area shape="rect" id="Node000012" href="$class_xu_m_q_1_1basic_consume_response.html#a2fae9ca3045abae427492d020516883b" title=" " alt="" coords="553,490,780,530"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="484,507,540,507,540,513,484,513"/>
+<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1basic_consume_response.html#a7c4fe3c2d3ea4839219bc9e1fd06105a" title=" " alt="" coords="553,554,780,594"/>
+<area shape="poly" id="edge12_Node000007_Node000013" title=" " alt="" coords="448,520,567,548,566,553,447,525"/>
+<area shape="rect" id="Node000014" href="$class_xu_m_q_1_1basic_consume_response.html#a8a14aee13be53afc38fe4675b6b979a1" title=" " alt="" coords="553,618,780,658"/>
+<area shape="poly" id="edge13_Node000007_Node000014" title=" " alt="" coords="413,521,474,561,554,604,574,611,572,616,552,608,471,565,410,525"/>
+<area shape="rect" id="Node000015" href="$class_xu_m_q_1_1_basic_properties.html#a84109ac301f8a9d76fecd86f83c75712" title=" " alt="" coords="581,682,752,722"/>
+<area shape="poly" id="edge14_Node000007_Node000015" title=" " alt="" coords="405,521,463,591,506,632,555,668,570,675,567,680,552,672,502,636,459,595,401,525"/>
+<area shape="rect" id="Node000016" href="$class_xu_m_q_1_1_basic_properties.html#a40e8f25d33299fd579215c2d06d26729" title=" " alt="" coords="581,746,752,786"/>
+<area shape="poly" id="edge15_Node000007_Node000016" title=" " alt="" coords="401,522,421,563,454,620,499,680,526,708,555,732,570,741,568,746,552,736,522,712,495,684,449,623,416,565,396,524"/>
+<area shape="rect" id="Node000017" href="$class_xu_m_q_1_1_basic_properties.html#a260ec092c42f7b5c1b3e8f3f35627a8f" title=" " alt="" coords="581,810,752,850"/>
+<area shape="poly" id="edge16_Node000007_Node000017" title=" " alt="" coords="399,522,415,574,446,648,467,688,492,728,521,764,555,796,570,806,567,810,552,800,517,768,488,731,462,691,441,650,410,576,394,524"/>
 </map>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Message-Queues: client/consumer.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
+   </div>
+   <div id="projectbrief">A Message-Queues based Cpp</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('client_2consumer_8hpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">consumer.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="client_2consumer_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;../common/logger.hpp&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;../common/helper.hpp&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;../common/msg.pb.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_xu_m_q.html">XuMQ</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">   19</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">ConsumerCallback</a> = std::function&lt;void(<span class="keyword">const</span> std::string &amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_xu_m_q_1_1_basic_properties.html">BasicProperties</a> *, <span class="keyword">const</span> std::string &amp;)&gt;; </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html">   22</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_xu_m_q_1_1_consumer.html">Consumer</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">   24</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">ptr</a> = std::shared_ptr&lt;Consumer&gt;; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#aeb6b1acd346d9153b6e172f2c41cfdfb">   25</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#aeb6b1acd346d9153b6e172f2c41cfdfb">tag</a>;                       </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893">   26</a></span>        std::string <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893">qname</a>;                     </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#a9dbf0e71806eba259bd78daf3a489d23">   27</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a9dbf0e71806eba259bd78daf3a489d23">auto_ack</a>;                         </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#a66817e2cc21c7241d68d2746bce95b87">   28</a></span>        <a class="code hl_typedef" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">ConsumerCallback</a> <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a66817e2cc21c7241d68d2746bce95b87">callback</a>;             </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#af5c2ad2cde8e5c975037b8c1c7c6bb3f">   31</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_consumer.html#af5c2ad2cde8e5c975037b8c1c7c6bb3f">Consumer</a>() {}</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_xu_m_q_1_1_consumer.html#a66167776f83dc5520ab292baa71409e0">   37</a></span>        <a class="code hl_function" href="struct_xu_m_q_1_1_consumer.html#a66167776f83dc5520ab292baa71409e0">Consumer</a>(<span class="keyword">const</span> std::string &amp;ctag, <span class="keyword">const</span> std::string &amp;queue_name, <span class="keywordtype">bool</span> ack, <span class="keyword">const</span> <a class="code hl_typedef" href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">ConsumerCallback</a> &amp;cb)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            : <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#aeb6b1acd346d9153b6e172f2c41cfdfb">tag</a>(ctag), <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893">qname</a>(queue_name), <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a9dbf0e71806eba259bd78daf3a489d23">auto_ack</a>(ack), <a class="code hl_variable" href="struct_xu_m_q_1_1_consumer.html#a66817e2cc21c7241d68d2746bce95b87">callback</a>(cb) {}</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    };</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclass_xu_m_q_1_1_basic_properties_html"><div class="ttname"><a href="class_xu_m_q_1_1_basic_properties.html">XuMQ::BasicProperties</a></div><div class="ttdef"><b>Definition</b> msg.pb.h:122</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html"><div class="ttname"><a href="namespace_xu_m_q.html">XuMQ</a></div><div class="ttdef"><b>Definition</b> channel.hpp:22</div></div>
+<div class="ttc" id="anamespace_xu_m_q_html_aeb52900698873027742f14cdf3eaca75"><div class="ttname"><a href="namespace_xu_m_q.html#aeb52900698873027742f14cdf3eaca75">XuMQ::ConsumerCallback</a></div><div class="ttdeci">std::function&lt; void(const std::string &amp;, const BasicProperties *, const std::string &amp;)&gt; ConsumerCallback</div><div class="ttdoc">消费者回调函数</div><div class="ttdef"><b>Definition</b> consumer.hpp:19</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html">XuMQ::Consumer</a></div><div class="ttdoc">消费者对象结构</div><div class="ttdef"><b>Definition</b> consumer.hpp:23</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_a66167776f83dc5520ab292baa71409e0"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#a66167776f83dc5520ab292baa71409e0">XuMQ::Consumer::Consumer</a></div><div class="ttdeci">Consumer(const std::string &amp;ctag, const std::string &amp;queue_name, bool ack, const ConsumerCallback &amp;cb)</div><div class="ttdoc">消费者构造函数</div><div class="ttdef"><b>Definition</b> consumer.hpp:37</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_a66817e2cc21c7241d68d2746bce95b87"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#a66817e2cc21c7241d68d2746bce95b87">XuMQ::Consumer::callback</a></div><div class="ttdeci">ConsumerCallback callback</div><div class="ttdoc">消费者回调函数</div><div class="ttdef"><b>Definition</b> consumer.hpp:28</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_a812dda280fd787e8fa289cb4f8504893"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#a812dda280fd787e8fa289cb4f8504893">XuMQ::Consumer::qname</a></div><div class="ttdeci">std::string qname</div><div class="ttdoc">消费者订阅的队列名称</div><div class="ttdef"><b>Definition</b> consumer.hpp:26</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_a96abee0b78597323acbabb052dfcc403"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#a96abee0b78597323acbabb052dfcc403">XuMQ::Consumer::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; Consumer &gt; ptr</div><div class="ttdoc">消费者结构管理指针</div><div class="ttdef"><b>Definition</b> consumer.hpp:24</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_a9dbf0e71806eba259bd78daf3a489d23"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#a9dbf0e71806eba259bd78daf3a489d23">XuMQ::Consumer::auto_ack</a></div><div class="ttdeci">bool auto_ack</div><div class="ttdoc">自动确认标志</div><div class="ttdef"><b>Definition</b> consumer.hpp:27</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_aeb6b1acd346d9153b6e172f2c41cfdfb"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#aeb6b1acd346d9153b6e172f2c41cfdfb">XuMQ::Consumer::tag</a></div><div class="ttdeci">std::string tag</div><div class="ttdoc">消费者标识</div><div class="ttdef"><b>Definition</b> consumer.hpp:25</div></div>
+<div class="ttc" id="astruct_xu_m_q_1_1_consumer_html_af5c2ad2cde8e5c975037b8c1c7c6bb3f"><div class="ttname"><a href="struct_xu_m_q_1_1_consumer.html#af5c2ad2cde8e5c975037b8c1c7c6bb3f">XuMQ::Consumer::Consumer</a></div><div class="ttdeci">Consumer()</div><div class="ttdoc">无参构造函数</div><div class="ttdef"><b>Definition</b> consumer.hpp:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="client_2consumer_8hpp.html">consumer.hpp</a></li>
+    <li class="footer">制作者 <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

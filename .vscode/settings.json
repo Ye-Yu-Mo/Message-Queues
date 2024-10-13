@@ -137,7 +137,8 @@
     "span": "cpp",
     "stdfloat": "cpp",
     "*.ipp": "cpp",
-    "forward_list": "cpp"
+    "forward_list": "cpp",
+    "*.proto": "cpp"
   },
   "markdown-image.sm_ms.token": "hjuUPyezARQ4DIGupqlAYy0ssogquzMY",
   "markdown-image.base.uploadMethod": "SM.MS",
@@ -156,6 +157,7 @@
     "flase",
     "Gtest",
     "hname",
+    "loopthread",
     "mconn",
     "mqbm",
     "mqmp",

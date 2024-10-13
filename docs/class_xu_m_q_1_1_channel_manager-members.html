@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 0.02</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -102,13 +102,18 @@ $(document).ready(function(){initNavTree('class_xu_m_q_1_1_channel_manager.html'
 
 <p>成员的完整列表，这些成员属于 <a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a>,包括所有继承而来的类成员</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7adb2687a8f5df60fe0c8c5670af662c">_channels</a></td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a09e6df8afb3022510c588874a6e0b31d">_channels</a></td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#ac7f6f76fda2123b6ba771d4de7c09f18">_mutex</a></td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a32fd116bf7e8707dd87aeffbd5b008dc">ChannelManager</a>()</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a864c7599c6e053051b713e6417d7410c">closeChannel</a>(const std::string &amp;id)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aebc08fa6244871f6a7124545fed14f32">getChannel</a>(const std::string &amp;id)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aeedb8bdf848ecdb9daff2b17721746ee">openChannel</a>(const std::string &amp;id, const VirtualHost::ptr &amp;host, const ConsumerManager::ptr &amp;cmp, const ProtobufCodecPtr &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const threadpool::ptr &amp;pool)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a32fd116bf7e8707dd87aeffbd5b008dc">ChannelManager</a>()</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a864c7599c6e053051b713e6417d7410c">closeChannel</a>(const std::string &amp;id)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a28590c67d7cc5b4610c296060c422b46">create</a>(const muduo::net::TcpConnectionPtr &amp;conn, const ProtobufCodecPtr &amp;codec)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a648eb01d17b056f404a56d7c13951bc9">get</a>(const std::string &amp;cid)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aebc08fa6244871f6a7124545fed14f32">getChannel</a>(const std::string &amp;id)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#aeedb8bdf848ecdb9daff2b17721746ee">openChannel</a>(const std::string &amp;id, const VirtualHost::ptr &amp;host, const ConsumerManager::ptr &amp;cmp, const ProtobufCodecPtr &amp;codec, const muduo::net::TcpConnectionPtr &amp;conn, const threadpool::ptr &amp;pool)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ptr</a> typedef</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a7249192cd9b829ab25fb020e43f6bef7">ptr</a> typedef</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html#a78bbbf59c921e4592783782d6e20a855">remove</a>(const std::string &amp;cid)</td><td class="entry"><a class="el" href="class_xu_m_q_1_1_channel_manager.html">XuMQ::ChannelManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

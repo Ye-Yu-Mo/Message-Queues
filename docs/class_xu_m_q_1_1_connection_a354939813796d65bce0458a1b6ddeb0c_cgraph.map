@@ -1,0 +1,9 @@
+<map id="XuMQ::Connection::Connection" name="XuMQ::Connection::Connection">
+<area shape="rect" id="Node000001" title="连接构造函数" alt="" coords="5,77,228,102"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_connection.html#abb6d8660c9b96195799e100d7ef4d4ec" title="处理一般响应的回调函数" alt="" coords="292,5,499,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,74,294,46,295,51,174,79"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_connection.html#acfbe86c4274c4eda545463cf35d24005" title="处理消费响应的回调函数" alt="" coords="291,69,500,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,87,277,87,277,92,228,92"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_connection.html#a67e1e9b036b4884350444801b24c5021" title="连接回调函数" alt="" coords="276,134,515,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,99,320,129,319,134,179,105"/>
+</map>

@@ -1,0 +1,29 @@
+<map id="XuMQ::Channel::basicPublish" name="XuMQ::Channel::basicPublish">
+<area shape="rect" id="Node000001" title="向指定交换机发布消息" alt="" coords="5,383,216,409"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_basic_properties.html#a65fdb7fcd11e20f625dbc6fcd3d1ecaa" title=" " alt="" coords="289,5,460,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,383,123,324,149,236,169,187,194,139,225,94,262,55,275,46,279,50,266,59,229,98,199,142,174,189,154,238,128,325,116,384"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_basic_properties.html#a72f608855c1f3cd1496ab75048b0571c" title=" " alt="" coords="279,70,470,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,382,126,331,154,256,174,215,199,175,228,138,262,106,272,99,275,104,266,110,232,141,203,178,179,217,159,258,131,332,117,384"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_publish_request.html#ad90d468866d00a2c55e70af22f51fc7d" title=" " alt="" coords="273,120,476,160"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="115,382,133,341,164,284,207,223,233,194,262,170,270,165,273,169,266,174,237,198,211,226,169,286,138,343,119,384"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1_basic_properties.html#a778f5ac91b355081fc43120fe57ad2b0" title=" " alt="" coords="289,184,460,224"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="119,381,173,311,215,270,263,234,275,227,278,232,265,238,218,274,177,315,123,385"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1basic_publish_request.html#a7ebb0d49af63f6f570b18375229100eb" title=" " alt="" coords="273,248,476,288"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="127,381,186,341,263,298,281,290,283,295,265,302,188,345,130,385"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1basic_publish_request.html#af01c82606c779eb305ba6e00b7168f43" title=" " alt="" coords="273,312,476,352"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="164,381,277,353,279,358,165,386"/>
+<area shape="rect" id="Node000008" href="$class_xu_m_q_1_1_basic_properties.html#a84109ac301f8a9d76fecd86f83c75712" title=" " alt="" coords="289,376,460,416"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="216,393,275,393,275,399,216,399"/>
+<area shape="rect" id="Node000009" href="$class_xu_m_q_1_1basic_publish_request.html#a20e176c48cd1e72751b5ad17dad7f8a9" title=" " alt="" coords="273,440,476,480"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="165,406,279,434,277,439,164,411"/>
+<area shape="rect" id="Node000010" href="$class_xu_m_q_1_1_basic_properties.html#a40e8f25d33299fd579215c2d06d26729" title=" " alt="" coords="289,504,460,544"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="130,407,188,447,265,490,283,497,281,502,263,494,186,451,127,411"/>
+<area shape="rect" id="Node000011" href="$class_xu_m_q_1_1basic_publish_request.html#aba055d510c44b6d0d48cb9a710400844" title=" " alt="" coords="273,568,476,608"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="123,407,177,477,218,518,265,554,277,560,274,565,263,558,215,522,173,481,119,411"/>
+<area shape="rect" id="Node000012" href="$class_xu_m_q_1_1_basic_properties.html#a260ec092c42f7b5c1b3e8f3f35627a8f" title=" " alt="" coords="289,632,460,672"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="119,408,138,449,169,506,211,566,237,594,266,618,278,626,276,630,262,622,233,598,207,569,164,508,133,451,115,410"/>
+<area shape="rect" id="Node000013" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="283,697,466,722"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="117,408,131,460,159,534,179,575,203,614,232,651,266,682,275,688,272,693,262,686,228,654,199,617,174,577,154,536,126,461,112,410"/>
+<area shape="rect" id="Node000014" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="264,746,485,771"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="116,408,128,467,153,555,173,603,198,650,229,694,266,731,274,737,271,742,262,735,224,697,193,653,168,606,148,557,122,469,111,409"/>
+</map>
