@@ -1,5 +1,5 @@
 <map id="XuMQ::Channel::basicCancel" name="XuMQ::Channel::basicCancel">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,95,213,120"/>
+<area shape="rect" id="Node000001" title="取消订阅请求处理函数" alt="" coords="5,95,213,120"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#a0c5b4b9577ad19ece9eec54eec4ffa25" title="基础响应发送函数" alt="" coords="261,95,488,120"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,105,248,105,248,110,213,110"/>
 <area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#aa3c8c79ba1e6a017fb302633894d2ba7" title=" " alt="" coords="545,5,694,31"/>

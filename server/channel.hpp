@@ -87,6 +87,7 @@ namespace XuMQ
                                            req->exclusive(), req->auto_delete(), req->args());
             if (ret == false)
                 basicRespFunc(ret, req->rid(), req->cid());
+            debug(logger, "声明队列成功 队列名称为%s", req->queue_name().c_str());
             _cmp->initQueueConsumer(req->queue_name()); // 初始化队列消费者管理句柄
             basicRespFunc(ret, req->rid(), req->cid());
         }
@@ -163,8 +164,18 @@ namespace XuMQ
             auto cb = std::bind(&Channel::callback, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
             // 创建消费者之后 信道的角色就是消费者
             _consumer = _cmp->create(req->consumer_tag(), req->queue_name(), req->auto_ack(), cb);
+            if(_consumer==nullptr)
+            {
+                fatal(logger,"消费者创建失败！");
+            }
+            else
+            {
+                info(logger,"消费者创建成功！");
+            }
             basicRespFunc(true, req->rid(), req->cid());
         }
+        /// @brief 取消订阅请求处理函数
+        /// @param req 取消订阅请求
         void basicCancel(const basicCancelRequestPtr &req)
         {
             _cmp->remove(req->consumer_tag(), req->queue_name());

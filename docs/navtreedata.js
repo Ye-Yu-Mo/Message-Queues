@@ -99,7 +99,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_xu_m_q_1_1_channel.html#a4874d46653d8720a5cdab461678bcbb6",
+"class_xu_m_q_1_1_channel.html#a582ba8b361f33f6b8e4ada5d42a18fbf",
 "class_xu_m_q_1_1_file_helper.html#aa28a60ed49d638c6bd0b3944b934e329",
 "class_xu_m_q_1_1_message___payload.html#ac52adcde781e73c8c68f0bc5f3a84d03",
 "class_xu_m_q_1_1_server.html#a858a245d660cdf7fcc6aec350b0ed54f",
@@ -114,8 +114,8 @@ var NAVTREEINDEX =
 "class_xu_m_q_1_1queue_bind_request.html#af61f3194957f1314a88c33147762b7d6",
 "functions_func_p.html",
 "namespace_xu_m_q.html#a95aa4d1e125ff418c1889c4bfa8adebe",
-"struct_xu_m_q_1_1_message_default_type_internal.html#a98940485795b9a1c8cf82fbca8969ac2",
-"struct_xu_m_q_1_1delete_queue_request_1_1_impl__.html"
+"struct_xu_m_q_1_1_msg_queue.html",
+"struct_xu_m_q_1_1delete_queue_request_1_1_impl__.html#a50e691f07e69a820e624912da55792d9"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

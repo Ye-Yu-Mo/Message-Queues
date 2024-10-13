@@ -1,6 +1,7 @@
 var class_xu_m_q_1_1_connection =
 [
     [ "ptr", "class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802", null ],
+    [ "ptr", "class_xu_m_q_1_1_connection.html#a574d9ef68d7d1affb78c266eab1bf802", null ],
     [ "Connection", "class_xu_m_q_1_1_connection.html#a354939813796d65bce0458a1b6ddeb0c", null ],
     [ "Connection", "class_xu_m_q_1_1_connection.html#a1c9a0c052398feb533d9b765c647256f", null ],
     [ "basicRespFunc", "class_xu_m_q_1_1_connection.html#a1a5935cfa3981eb02e859cc8c3f64684", null ],

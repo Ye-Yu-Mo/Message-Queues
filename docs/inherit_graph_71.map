@@ -1,3 +1,3 @@
 <map id="类继承关系图" name="类继承关系图">
-<area shape="rect" id="Node000000" href="$class_xu_m_q_1_1_msg_queue_manager.html" title="消息队列数据内存管理类" alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000000" href="$class_xu_m_q_1_1_msg_queue_mapper.html" title="消息队列持久化管理类 将数据存储在sqlite数据库中" alt="" coords="5,5,192,31"/>
 </map>

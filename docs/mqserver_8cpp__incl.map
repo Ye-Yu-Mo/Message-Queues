@@ -1,5 +1,5 @@
-<map id="test/mqserver.cpp" name="test/mqserver.cpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="2988,5,3127,31"/>
+<map id="server/mqserver.cpp" name="server/mqserver.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2980,5,3135,31"/>
 <area shape="rect" id="Node000002" href="$broker_8hpp.html" title="XuMQ消息队列服务器类的声明文件。" alt="" coords="2984,79,3131,104"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3060,31,3060,65,3055,65,3055,31"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="2134,299,2314,324"/>

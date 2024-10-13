@@ -196,15 +196,19 @@ namespace XuMQ
             waitResponse(rid);
         }
         /// @brief 应答消息
-        /// @param qname 消息队列名称
         /// @param msg_id 消息id
-        void basicAck(const std::string &qname, const std::string &msg_id)
+        void basicAck(const std::string &msg_id)
         {
+            if (_consumer.get() == nullptr) // 消费者不存在 无法进行确认
+            {
+                error(logger, "消息确认时 当前信道未设置消费者!");
+                return;
+            }
             basicAckRequest req;
             std::string rid = UUIDHelper::uuid();
             req.set_rid(rid);
             req.set_cid(_cid);
-            req.set_queue_name(qname);
+            req.set_queue_name(_consumer->qname);
             req.set_msg_id(msg_id);
             _codec->send(_conn, req);
             waitResponse(rid);
@@ -215,13 +219,11 @@ namespace XuMQ
         /// @param auto_ack 自动应答标志
         /// @param cb 消费者回调函数
         /// @return 成功返回true 失败返回false
-        bool basicConsume(const std::string &tag, const std::string &qname, bool auto_ack, ConsumerCallback &cb)
+        bool basicConsume(const std::string &tag, const std::string &qname, bool auto_ack, const ConsumerCallback &cb)
         {
-            if (_consumer.get() != nullptr)
-            {
-                warn(logger, "当前信道已订阅其他消息!");
+            if (_consumer.get() != nullptr) // 不为空时 说明消费者已经存在 不需要再创建
                 return false;
-            }
+            
             basicConsumeRequest req;
             std::string rid = UUIDHelper::uuid();
             req.set_rid(rid);
@@ -231,6 +233,7 @@ namespace XuMQ
             req.set_auto_ack(auto_ack);
             _codec->send(_conn, req);
             basicResponsePtr resp = waitResponse(rid);
+            debug(logger,"请求创建一个消费者 消费者tag为%s 消费者所在队列是%s",tag.c_str(), qname.c_str());
             if (resp->ok() == false)
             {
                 error(logger, "添加订阅失败!");
@@ -242,7 +245,7 @@ namespace XuMQ
         /// @brief 取消订阅
         void basicCancel()
         {
-            if (_consumer.get() != nullptr)
+            if (_consumer.get() == nullptr) // 消费者为空 无法取消订阅
                 return;
             basicCancelRequest req;
             std::string rid = UUIDHelper::uuid();
@@ -342,7 +345,9 @@ namespace XuMQ
             std::unique_lock<std::mutex> lock(_mutex);
             auto it = _channels.find(cid);
             if (it == _channels.end())
+            {
                 return Channel::ptr();
+            }
             return it->second;
         }
 

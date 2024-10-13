@@ -1,0 +1,15 @@
+<map id="XuMQ::Channel::basicAck" name="XuMQ::Channel::basicAck">
+<area shape="rect" id="Node000001" title="应答消息" alt="" coords="5,173,193,198"/>
+<area shape="rect" id="Node000002" href="$class_xu_m_q_1_1basic_ack_request.html#adb4ce5ff4b6b8277567879e4f2dd6b0a" title=" " alt="" coords="262,5,442,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,171,162,115,199,83,240,55,254,48,256,53,243,60,202,87,165,119,113,174"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1basic_ack_request.html#a71b35e08826240f1ba04864f663fb4b0" title=" " alt="" coords="262,69,442,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,170,178,145,240,119,263,111,265,116,242,124,180,150,127,175"/>
+<area shape="rect" id="Node000004" href="$class_xu_m_q_1_1basic_ack_request.html#abe24232822600fd03b3ec16b7b05ed3b" title=" " alt="" coords="262,133,442,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="193,171,248,164,248,169,194,176"/>
+<area shape="rect" id="Node000005" href="$class_xu_m_q_1_1basic_ack_request.html#afcc18543d167f1880b897223c0e6bbf3" title=" " alt="" coords="262,197,442,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="194,195,248,202,248,207,193,200"/>
+<area shape="rect" id="Node000006" href="$class_xu_m_q_1_1_u_u_i_d_helper.html#a3a2f276cefd117e432757ac0943ccab6" title="生成一个随机 UUID。" alt="" coords="261,262,443,287"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="126,196,179,221,242,247,274,256,272,261,240,252,177,226,124,201"/>
+<area shape="rect" id="Node000007" href="$class_xu_m_q_1_1_channel.html#a6ee0ee771ac85a0ac832720e8dc8ec5a" title="等待处理响应" alt="" coords="241,311,463,337"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="114,196,167,245,203,273,243,296,263,305,261,310,240,301,200,277,163,249,111,200"/>
+</map>

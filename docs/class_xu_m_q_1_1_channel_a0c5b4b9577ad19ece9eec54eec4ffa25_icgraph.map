@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="基础响应发送函数" alt="" coords="295,228,521,253"/>
 <area shape="rect" id="Node000002" href="$class_xu_m_q_1_1_channel.html#affeb11d1543bca47890c4c417d064ea7" title="确认消息请求处理函数" alt="" coords="32,5,220,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="392,217,369,178,336,131,295,83,245,44,219,32,221,28,248,40,298,79,341,127,374,175,396,214"/>
-<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#a78f1093af1868e5c2343ba3896cc16bd" title=" " alt="" coords="22,55,230,80"/>
+<area shape="rect" id="Node000003" href="$class_xu_m_q_1_1_channel.html#a78f1093af1868e5c2343ba3896cc16bd" title="取消订阅请求处理函数" alt="" coords="22,55,230,80"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="387,219,329,155,289,122,245,94,217,83,219,78,248,89,292,117,332,151,391,215"/>
 <area shape="rect" id="Node000004" href="$class_xu_m_q_1_1_channel.html#ac57143674354b4a66457ee45b2594326" title="订阅消息请求处理函数" alt="" coords="13,104,239,129"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="378,222,319,181,283,161,246,143,210,132,211,127,248,138,286,156,322,177,381,217"/>

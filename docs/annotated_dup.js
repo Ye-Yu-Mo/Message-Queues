@@ -79,6 +79,5 @@ var annotated_dup =
     [ "QueueTest", "class_queue_test.html", "class_queue_test" ],
     [ "RouteTest", "class_route_test.html", "class_route_test" ],
     [ "TableStruct_msg_2eproto", "struct_table_struct__msg__2eproto.html", "struct_table_struct__msg__2eproto" ],
-    [ "TableStruct_protocol_2eproto", "struct_table_struct__protocol__2eproto.html", "struct_table_struct__protocol__2eproto" ],
-    [ "UUIDHelper", "class_u_u_i_d_helper.html", "class_u_u_i_d_helper" ]
+    [ "TableStruct_protocol_2eproto", "struct_table_struct__protocol__2eproto.html", "struct_table_struct__protocol__2eproto" ]
 ];

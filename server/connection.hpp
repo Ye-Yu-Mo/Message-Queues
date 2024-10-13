@@ -33,13 +33,14 @@ namespace XuMQ
         bool openChannel(const openChannelRequestPtr &req)
         {
             // 判断信道id是否重复 创建信道
-            bool ret = _channels->openChannel(req->rid(), _host, _cmp, _codec, _conn, _pool);
+            bool ret = _channels->openChannel(req->cid(), _host, _cmp, _codec, _conn, _pool);
             if (ret == false)
             {
                 error(logger, "创建信道时 信道id重复!");
                 basicRespFunc(false, req->rid(), req->cid());
                 return false;
             }
+            debug(logger, "信道创建成功！信道id为：%s", req->cid().c_str());
             // 给客户端回复
             basicRespFunc(true, req->rid(), req->cid());
             return true;

@@ -1,3 +1,11 @@
+/**
+ * @file connection.hpp
+ * @brief 该文件定义了 Connection 类，负责管理客户端连接、信道的创建与关闭以及消息处理。
+ *
+ * 包含了对 Muduo 网络库、Protobuf 协议编码与分发、异步工作器和日志模块的引用。
+ * 主要功能是通过 TcpClient 管理与服务器的连接，利用分发器处理不同类型的消息，并支持信道的创建与关闭。
+ * 信道用于消息队列中消息的发送与消费，异步工作器则管理多线程任务。
+ */
 #pragma once
 
 #include "muduo/protobuf/dispatcher.h"
@@ -20,6 +28,7 @@ namespace XuMQ
     class Connection
     {
     public:
+        using ptr = std::shared_ptr<Connection>; ///< 连接管理句柄
         /// @brief 连接构造函数
         /// @param sip 服务器ip
         /// @param sport 服务器端口号
