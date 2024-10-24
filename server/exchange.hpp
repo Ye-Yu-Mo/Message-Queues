@@ -261,7 +261,7 @@ namespace XuMQ
                 return false;
             return true;
         }
-        /// @brief 清除交换机数据
+        /// @brief 清除所有交换机数据
         void clear()
         {
             std::unique_lock<std::mutex> lock(_mutex);

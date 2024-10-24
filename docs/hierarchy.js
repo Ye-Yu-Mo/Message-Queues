@@ -114,6 +114,7 @@ var hierarchy =
     [ "TableStruct_msg_2eproto", "struct_table_struct__msg__2eproto.html", null ],
     [ "TableStruct_protocol_2eproto", "struct_table_struct__protocol__2eproto.html", null ],
     [ "testing::Test", null, [
+      [ "HostTest", "class_host_test.html", null ],
       [ "HostTest", "class_host_test.html", null ]
     ] ],
     [ "XuMQ::threadpool", "class_xu_m_q_1_1threadpool.html", null ],
@@ -122,5 +123,6 @@ var hierarchy =
       [ "is_proto_enum< ::XuMQ::ExchangeType >", "structis__proto__enum_3_01_1_1_xu_m_q_1_1_exchange_type_01_4.html", null ]
     ] ],
     [ "XuMQ::UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", null ],
-    [ "XuMQ::VirtualHost", "class_xu_m_q_1_1_virtual_host.html", null ]
+    [ "XuMQ::VirtualHost", "class_xu_m_q_1_1_virtual_host.html", null ],
+    [ "XuMQ::VirtualHostManager", "class_xu_m_q_1_1_virtual_host_manager.html", null ]
 ];

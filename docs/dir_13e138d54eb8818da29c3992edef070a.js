@@ -9,5 +9,6 @@ var dir_13e138d54eb8818da29c3992edef070a =
     [ "mqhosttest.cpp", "mqhosttest_8cpp.html", "mqhosttest_8cpp" ],
     [ "mqmessagetest.cpp", "mqmessagetest_8cpp.html", "mqmessagetest_8cpp" ],
     [ "mqqueuetest.cpp", "mqqueuetest_8cpp.html", "mqqueuetest_8cpp" ],
-    [ "mqroute.cpp", "mqroute_8cpp.html", "mqroute_8cpp" ]
+    [ "mqroute.cpp", "mqroute_8cpp.html", "mqroute_8cpp" ],
+    [ "mqvhostmanagertest.cpp", "mqvhostmanagertest_8cpp.html", "mqvhostmanagertest_8cpp" ]
 ];

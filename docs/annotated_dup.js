@@ -67,7 +67,8 @@ var annotated_dup =
       [ "StrHelper", "class_xu_m_q_1_1_str_helper.html", "class_xu_m_q_1_1_str_helper" ],
       [ "threadpool", "class_xu_m_q_1_1threadpool.html", "class_xu_m_q_1_1threadpool" ],
       [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
-      [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html", "class_xu_m_q_1_1_virtual_host" ]
+      [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html", "class_xu_m_q_1_1_virtual_host" ],
+      [ "VirtualHostManager", "class_xu_m_q_1_1_virtual_host_manager.html", "class_xu_m_q_1_1_virtual_host_manager" ]
     ] ],
     [ "BindingTest", "class_binding_test.html", "class_binding_test" ],
     [ "ConsumerTest", "class_consumer_test.html", "class_consumer_test" ],

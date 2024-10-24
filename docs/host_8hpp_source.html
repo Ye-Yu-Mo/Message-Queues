@@ -30,7 +30,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.0</span>
+   <div id="projectname">Message-Queues<span id="projectnumber">&#160;beta 1.1</span>
    </div>
    <div id="projectbrief">A Message-Queues based Cpp</div>
   </td>
@@ -234,7 +234,7 @@ $(document).ready(function(){initNavTree('host_8hpp_source.html',''); initResiza
 </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="foldopen" id="foldopen00173" data-start="{" data-end="}">
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host.html#acfa0ffebe43230e588301c80dab3ae7c">  173</a></span>        <a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host.html#acfa0ffebe43230e588301c80dab3ae7c">selectExchange</a>(<span class="keyword">const</span> std::string&amp; ename)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host.html#acfa0ffebe43230e588301c80dab3ae7c">  173</a></span>        <a class="code hl_typedef" href="struct_xu_m_q_1_1_exchange.html#a17e29f12a30254ded84236a4762dcdfa">Exchange::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host.html#acfa0ffebe43230e588301c80dab3ae7c">selectExchange</a>(<span class="keyword">const</span> std::string &amp;ename)</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        {</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host.html#aa8f379c36b03ce3b874f5874018f8b67">_emp</a>-&gt;selectExchange(ename);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
@@ -279,7 +279,83 @@ $(document).ready(function(){initNavTree('host_8hpp_source.html',''); initResiza
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host.html#a247d9bb21c462b6f0be89b265bf1ac78">  217</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_message_manager.html#a0715944b93de6c980c22f8ba1da69ef8">MessageManager::ptr</a> <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host.html#a247d9bb21c462b6f0be89b265bf1ac78">_mmp</a>;   </div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    };</div>
 </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="};">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html">  221</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_xu_m_q_1_1_virtual_host_manager.html">VirtualHostManager</a></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#aa50ba711713097b92ee530ac6cfc5945">  224</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host_manager.html#aa50ba711713097b92ee530ac6cfc5945">ptr</a> = std::shared_ptr&lt;VirtualHostManager&gt;; </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#a0780cb38e03f8b1466735917e9f925bb">  225</a></span>        <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#a0780cb38e03f8b1466735917e9f925bb">VirtualHostManager</a>() {}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        </div>
+<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#ad8f18031f5543355a4bd48d498b28e3a">  232</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#ad8f18031f5543355a4bd48d498b28e3a">declareVirtualHost</a>(<span class="keyword">const</span> std::string &amp;hname,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                                <span class="keyword">const</span> std::string &amp;basedir,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                                <span class="keyword">const</span> std::string &amp;dbfile)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.find(hname);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            <span class="keywordflow">if</span>(it!=<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.end())</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keyword">auto</span> host = std::make_shared&lt;VirtualHost&gt;(hname, basedir, dbfile);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.insert(std::make_pair(hname, host));</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
+</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="foldopen" id="foldopen00247" data-start="{" data-end="}">
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#acefdc860c95ac15a5009faee7a84cd32">  247</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#acefdc860c95ac15a5009faee7a84cd32">deleteVirtualHost</a>(<span class="keyword">const</span> std::string &amp;hname)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.find(hname);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <span class="keywordflow">if</span>(it == <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.end())</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.erase(hname);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#add8a8d41c51de11db2abf30bdc682ac6">  259</a></span>        <a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#add8a8d41c51de11db2abf30bdc682ac6">selectVirtualHost</a>(<span class="keyword">const</span> std::string &amp;hname)</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.find(hname);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordflow">if</span>(it == <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.end())</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <span class="keywordflow">return</span> <a class="code hl_typedef" href="class_xu_m_q_1_1_virtual_host.html#a612db1c724f663cc04ee7848917ed9ca">VirtualHost::ptr</a>();</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>            <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        }</div>
+</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="foldopen" id="foldopen00271" data-start="{" data-end="}">
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#ac48cfa723a359fd47916afe684ea2353">  271</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#ac48cfa723a359fd47916afe684ea2353">exists</a>(<span class="keyword">const</span> std::string &amp;hname)</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keyword">auto</span> it = <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.find(hname);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="keywordflow">if</span>(it == <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.end())</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        }</div>
+</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="foldopen" id="foldopen00281" data-start="{" data-end="}">
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#a96e9f1fe74a7274416c4b68b8de953c8">  281</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#a96e9f1fe74a7274416c4b68b8de953c8">clear</a>()</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.clear();</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
+</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="}">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#a99d7723169cc5fc663ffa7ca9437c2c2">  289</a></span>        <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_xu_m_q_1_1_virtual_host_manager.html#a99d7723169cc5fc663ffa7ca9437c2c2">size</a>()</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            std::unique_lock&lt;std::mutex&gt; lock(<a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>.size();</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        }</div>
+</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">  295</a></span>        std::mutex <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">_mutex</a>;                                         </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">  296</a></span>        std::unordered_map&lt;std::string, VirtualHost::ptr&gt; <a class="code hl_variable" href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">_vhosts</a>; </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    };</div>
+</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>}</div>
 <div class="ttc" id="abinding_8hpp_html"><div class="ttname"><a href="binding_8hpp.html">binding.hpp</a></div><div class="ttdoc">该文件包含消息队列绑定信息的管理类和结构体定义。</div></div>
 <div class="ttc" id="aclass_xu_m_q_1_1_basic_properties_html"><div class="ttname"><a href="class_xu_m_q_1_1_basic_properties.html">XuMQ::BasicProperties</a></div><div class="ttdef"><b>Definition</b> msg.pb.h:122</div></div>
 <div class="ttc" id="aclass_xu_m_q_1_1_binding_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_binding_manager.html">XuMQ::BindingManager</a></div><div class="ttdoc">绑定信息内存管理类</div><div class="ttdef"><b>Definition</b> binding.hpp:198</div></div>
@@ -314,6 +390,17 @@ $(document).ready(function(){initNavTree('host_8hpp_source.html',''); initResiza
 <div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_html_ae8a200995e7912b67fd928d19662cdf8"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host.html#ae8a200995e7912b67fd928d19662cdf8">XuMQ::VirtualHost::allQueues</a></div><div class="ttdeci">QueueMap allQueues()</div><div class="ttdoc">获取所有队列</div><div class="ttdef"><b>Definition</b> host.hpp:135</div></div>
 <div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_html_aecc9813f39ba030c9c0ed79d5aa45de1"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host.html#aecc9813f39ba030c9c0ed79d5aa45de1">XuMQ::VirtualHost::deleteExchange</a></div><div class="ttdeci">void deleteExchange(const std::string &amp;name)</div><div class="ttdoc">删除交换机</div><div class="ttdef"><b>Definition</b> host.hpp:60</div></div>
 <div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_html_aef5738e8e1dc4d1c1938403be667c8d2"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host.html#aef5738e8e1dc4d1c1938403be667c8d2">XuMQ::VirtualHost::basicPublish</a></div><div class="ttdeci">bool basicPublish(const std::string &amp;qname, BasicProperties *bp, const std::string &amp;body)</div><div class="ttdoc">向指定队列插入新消息</div><div class="ttdef"><b>Definition</b> host.hpp:145</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html">XuMQ::VirtualHostManager</a></div><div class="ttdoc">虚拟机管理类</div><div class="ttdef"><b>Definition</b> host.hpp:222</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_a0780cb38e03f8b1466735917e9f925bb"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#a0780cb38e03f8b1466735917e9f925bb">XuMQ::VirtualHostManager::VirtualHostManager</a></div><div class="ttdeci">VirtualHostManager()</div><div class="ttdef"><b>Definition</b> host.hpp:225</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_a2cfa7c0d0875884beefa3b8ea1fb6046"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#a2cfa7c0d0875884beefa3b8ea1fb6046">XuMQ::VirtualHostManager::_mutex</a></div><div class="ttdeci">std::mutex _mutex</div><div class="ttdoc">互斥锁</div><div class="ttdef"><b>Definition</b> host.hpp:295</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_a513e46ac869cd0d3d4963336af474f1e"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#a513e46ac869cd0d3d4963336af474f1e">XuMQ::VirtualHostManager::_vhosts</a></div><div class="ttdeci">std::unordered_map&lt; std::string, VirtualHost::ptr &gt; _vhosts</div><div class="ttdoc">虚拟机名称到虚拟机管理句柄的映射表</div><div class="ttdef"><b>Definition</b> host.hpp:296</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_a96e9f1fe74a7274416c4b68b8de953c8"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#a96e9f1fe74a7274416c4b68b8de953c8">XuMQ::VirtualHostManager::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">清除所有虚拟机数据</div><div class="ttdef"><b>Definition</b> host.hpp:281</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_a99d7723169cc5fc663ffa7ca9437c2c2"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#a99d7723169cc5fc663ffa7ca9437c2c2">XuMQ::VirtualHostManager::size</a></div><div class="ttdeci">size_t size()</div><div class="ttdoc">获取交换机个数</div><div class="ttdef"><b>Definition</b> host.hpp:289</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_aa50ba711713097b92ee530ac6cfc5945"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#aa50ba711713097b92ee530ac6cfc5945">XuMQ::VirtualHostManager::ptr</a></div><div class="ttdeci">std::shared_ptr&lt; VirtualHostManager &gt; ptr</div><div class="ttdoc">虚拟机管理类指针</div><div class="ttdef"><b>Definition</b> host.hpp:224</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_ac48cfa723a359fd47916afe684ea2353"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#ac48cfa723a359fd47916afe684ea2353">XuMQ::VirtualHostManager::exists</a></div><div class="ttdeci">bool exists(const std::string &amp;hname)</div><div class="ttdoc">判断虚拟机是否存在</div><div class="ttdef"><b>Definition</b> host.hpp:271</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_acefdc860c95ac15a5009faee7a84cd32"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#acefdc860c95ac15a5009faee7a84cd32">XuMQ::VirtualHostManager::deleteVirtualHost</a></div><div class="ttdeci">void deleteVirtualHost(const std::string &amp;hname)</div><div class="ttdoc">删除一个虚拟机</div><div class="ttdef"><b>Definition</b> host.hpp:247</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_ad8f18031f5543355a4bd48d498b28e3a"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#ad8f18031f5543355a4bd48d498b28e3a">XuMQ::VirtualHostManager::declareVirtualHost</a></div><div class="ttdeci">bool declareVirtualHost(const std::string &amp;hname, const std::string &amp;basedir, const std::string &amp;dbfile)</div><div class="ttdoc">声明一个虚拟机</div><div class="ttdef"><b>Definition</b> host.hpp:232</div></div>
+<div class="ttc" id="aclass_xu_m_q_1_1_virtual_host_manager_html_add8a8d41c51de11db2abf30bdc682ac6"><div class="ttname"><a href="class_xu_m_q_1_1_virtual_host_manager.html#add8a8d41c51de11db2abf30bdc682ac6">XuMQ::VirtualHostManager::selectVirtualHost</a></div><div class="ttdeci">VirtualHost::ptr selectVirtualHost(const std::string &amp;hname)</div><div class="ttdoc">获取一个虚拟机</div><div class="ttdef"><b>Definition</b> host.hpp:259</div></div>
 <div class="ttc" id="aexchange_8hpp_html"><div class="ttname"><a href="exchange_8hpp.html">exchange.hpp</a></div><div class="ttdoc">交换机管理模块，定义了交换机的结构、持久化以及内存管理功能</div></div>
 <div class="ttc" id="amessage_8hpp_html"><div class="ttname"><a href="message_8hpp.html">message.hpp</a></div><div class="ttdoc">消息队列文件存储的实现</div></div>
 <div class="ttc" id="amqqueuetest_8cpp_html_abbd52a50dc838305e32464719ba095c5"><div class="ttname"><a href="mqqueuetest_8cpp.html#abbd52a50dc838305e32464719ba095c5">mqp</a></div><div class="ttdeci">XuMQ::MsgQueueManager::ptr mqp</div><div class="ttdef"><b>Definition</b> mqqueuetest.cpp:4</div></div>

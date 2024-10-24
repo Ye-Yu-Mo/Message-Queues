@@ -64,7 +64,7 @@
 <area shape="poly" id="edge28_Node000028_Node000029" title=" " alt="" coords="255,860,211,860,211,855,255,855"/>
 <area shape="rect" id="Node000031" href="$class_xu_m_q_1_1_binding_manager.html#a76a1b50abcd8258267ec5141919401fb" title="清除绑定信息" alt="" coords="21,901,195,941"/>
 <area shape="poly" id="edge30_Node000030_Node000031" title=" " alt="" coords="261,924,195,924,195,919,261,919"/>
-<area shape="rect" id="Node000033" href="$class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594" title="清除交换机数据" alt="" coords="13,965,203,1005"/>
+<area shape="rect" id="Node000033" href="$class_xu_m_q_1_1_exchange_manager.html#a102211b74bac8f8af7089a542055e594" title="清除所有交换机数据" alt="" coords="13,965,203,1005"/>
 <area shape="poly" id="edge32_Node000032_Node000033" title=" " alt="" coords="254,988,203,988,203,983,254,983"/>
 <area shape="rect" id="Node000035" href="$class_xu_m_q_1_1_msg_queue_manager.html#a84de673463df8e2d2fd70003e718934d" title="清除消息队列" alt="" coords="11,1029,205,1069"/>
 <area shape="poly" id="edge34_Node000034_Node000035" title=" " alt="" coords="251,1052,206,1052,206,1047,251,1047"/>

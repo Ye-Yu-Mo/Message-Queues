@@ -170,7 +170,7 @@ namespace XuMQ
         /// @brief 获取指定交换机句柄
         /// @param ename 交换机名称
         /// @return 交换机句柄
-        Exchange::ptr selectExchange(const std::string& ename)
+        Exchange::ptr selectExchange(const std::string &ename)
         {
             return _emp->selectExchange(ename);
         }
@@ -215,5 +215,84 @@ namespace XuMQ
         MsgQueueManager::ptr _mqmp; ///<  消息队列管理指针
         BindingManager::ptr _bmp;   ///< 绑定信息管理指针
         MessageManager::ptr _mmp;   ///< 消息管理指针
+    };
+
+    /// @brief 虚拟机管理类
+    class VirtualHostManager
+    {
+    public:
+        using ptr = std::shared_ptr<VirtualHostManager>; ///< 虚拟机管理类指针
+        VirtualHostManager() {}
+        
+        /// @brief 声明一个虚拟机
+        /// @param hname 虚拟机名称
+        /// @param basedir 基础目录
+        /// @param dbfile 数据库目录
+        /// @return 成功返回true 失败返回false
+        bool declareVirtualHost(const std::string &hname,
+                                const std::string &basedir,
+                                const std::string &dbfile)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _vhosts.find(hname);
+            if(it!=_vhosts.end())
+                return true;
+            auto host = std::make_shared<VirtualHost>(hname, basedir, dbfile);
+            _vhosts.insert(std::make_pair(hname, host));
+            return true;
+        }
+
+        /// @brief 删除一个虚拟机
+        /// @param hname 虚拟机名称
+        void deleteVirtualHost(const std::string &hname)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _vhosts.find(hname);
+            if(it == _vhosts.end())
+                return;
+            _vhosts.erase(hname);
+        }
+
+        /// @brief 获取一个虚拟机
+        /// @param hname 虚拟机名称
+        /// @return 成功获取虚拟机句柄 失败返回空指针
+        VirtualHost::ptr selectVirtualHost(const std::string &hname)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _vhosts.find(hname);
+            if(it == _vhosts.end())
+                return VirtualHost::ptr();
+            return it->second;
+        }
+
+        /// @brief 判断虚拟机是否存在
+        /// @param hname 虚拟机名称
+        /// @return 存在返回true 失败返回false
+        bool exists(const std::string &hname)
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            auto it = _vhosts.find(hname);
+            if(it == _vhosts.end())
+                return false;
+            return true;
+        }
+
+        /// @brief 清除所有虚拟机数据
+        void clear()
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            _vhosts.clear();
+        }
+
+        /// @brief 获取交换机个数
+        /// @return 交换机个数
+        size_t size()
+        {
+            std::unique_lock<std::mutex> lock(_mutex);
+            return _vhosts.size();
+        }
+    private:
+        std::mutex _mutex;                                         ///< 互斥锁
+        std::unordered_map<std::string, VirtualHost::ptr> _vhosts; ///< 虚拟机名称到虚拟机管理句柄的映射表
     };
 }

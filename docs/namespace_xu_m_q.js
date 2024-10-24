@@ -67,6 +67,7 @@ var namespace_xu_m_q =
     [ "threadpool", "class_xu_m_q_1_1threadpool.html", "class_xu_m_q_1_1threadpool" ],
     [ "UUIDHelper", "class_xu_m_q_1_1_u_u_i_d_helper.html", "class_xu_m_q_1_1_u_u_i_d_helper" ],
     [ "VirtualHost", "class_xu_m_q_1_1_virtual_host.html", "class_xu_m_q_1_1_virtual_host" ],
+    [ "VirtualHostManager", "class_xu_m_q_1_1_virtual_host_manager.html", "class_xu_m_q_1_1_virtual_host_manager" ],
     [ "basicAckRequestPtr", "namespace_xu_m_q.html#ab39ce3e363d0099a96f5dbd6cc015a3a", null ],
     [ "basicCancelRequestPtr", "namespace_xu_m_q.html#ab41d3233970b8aebb9f6c3afacb7ae97", null ],
     [ "basicConsumeRequestPtr", "namespace_xu_m_q.html#a6ed6e4d88651201cb80e8663c126881a", null ],
