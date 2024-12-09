@@ -52,6 +52,7 @@ namespace XuMQ
                                                        _connection_manager(std::make_shared<ConnectionManager>()),
                                                        _threadpool(std::make_shared<threadpool>())
         {
+            debug(logger, "这里虚拟机已经初始化完毕了 开始初始化虚拟机里的消费者了");
             // 初始化队列的消费者管理结构
             QueueMap qm = _virtual_host->allQueues();
             for (auto &q : qm)
@@ -88,6 +89,7 @@ namespace XuMQ
         /// @brief 启动服务器，开始监听并处理客户端请求
         void start()
         {
+            debug(logger, "启动服务器，开始监听并处理客户端请求");
             _server.start();
             _baseloop.loop();
         }
@@ -109,6 +111,7 @@ namespace XuMQ
                 conn->shutdown();
                 return false;
             }
+            debug(logger, "处理打开信道的请求");
             return mconn->openChannel(message);
         }
         /**
@@ -126,6 +129,7 @@ namespace XuMQ
                 conn->shutdown();
                 return;
             }
+            debug(logger, "处理关闭信道的请求");
             return mconn->closeChannel(message);
         }
         /**
@@ -149,6 +153,7 @@ namespace XuMQ
                 error(logger, "声明交换机时 没有找到信道!");
                 return;
             }
+            debug(logger, "处理声明交换机的请求");
             return cp->declareExchange(message);
         }
         /**
@@ -172,6 +177,7 @@ namespace XuMQ
                 error(logger, "删除交换机时 没有找到信道!");
                 return;
             }
+            debug(logger, "处理删除交换机的请求");
             return cp->deleteExchange(message);
         }
         /**
@@ -195,6 +201,7 @@ namespace XuMQ
                 error(logger, "声明队列时 没有找到信道!");
                 return;
             }
+            debug(logger, "处理声明队列的请求");
             return cp->declareQueue(message);
         }
         /**
@@ -241,6 +248,7 @@ namespace XuMQ
                 error(logger, "队列绑定时 没有找到信道!");
                 return;
             }
+            debug(logger, "处理队列绑定的请求");
             return cp->queueBind(message);
         }
         /**
@@ -377,6 +385,7 @@ namespace XuMQ
         {
             if (conn->connected())
             {
+                debug(logger, "处理新连接的回调函数 这里就需要传入已经处理好的虚拟机了");
                 _connection_manager->newConnection(_virtual_host, _consumer_manager, _codec, conn, _threadpool);
             }
             else
